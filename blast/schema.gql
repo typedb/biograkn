@@ -1,0 +1,98 @@
+define
+
+  name sub attribute datatype string;
+  identifier sub attribute datatype string;
+  gi sub attribute datatype string;
+  sequence-identicality sub attribute datatype double;
+  sequence-positivity sub attribute datatype double;
+  sequence-gaps sub attribute datatype double;
+
+  ####################################################################################
+  # Protein, Sequence and Species
+  ####################################################################################
+  sequence sub attribute datatype string,
+      has gi,
+      plays sourced-information,
+      plays target-sequence,
+      plays matched-sequence;
+
+  protein sub entity,
+      has name,
+      has identifier,
+      has sequence,
+      plays sourced-information,
+      plays owned-protein,
+      plays target-protein,
+      plays matched-protein;
+
+  species sub entity,
+      has name,
+      plays species-owner;
+
+  ####################################################################################
+  # Alignment
+  ####################################################################################
+  alignment sub relationship,
+      relates aligning-element;
+
+  protein-protein-alignment sub alignment,
+      relates aligning-protein as aligning-element,
+      relates target-protein as aligning-protein,
+      relates matched-protein as aligning-protein,
+      has sequence-identicality,
+      has sequence-positivity,
+      has sequence-gaps;
+
+  sequence-sequence-alignment sub alignment,
+      relates aligning-sequence as aligning-element,
+      relates target-sequence as aligning-sequence,
+      relates matched-sequence as aligning-sequence,
+      has sequence-identicality,
+      has sequence-positivity,
+      has sequence-gaps;
+
+  sequence-alignment-implies-protein-alignment sub rule,
+      when {
+          (target-sequence: $ts, matched-sequence: $ms) isa sequence-sequence-alignment;
+          $tp isa protein, has sequence $ts;
+          $mp isa protein, has sequence $ms;
+      } then {
+          (target-protein: $tp, matched-protein: $mp) isa protein-protein-alignment;
+      };
+
+  ####################################################################################
+  # Database
+  ####################################################################################
+  database sub entity,
+      plays information-source,
+      has name;
+  sourcing-of-information sub relationship,
+      relates information-source,
+      relates sourced-information;
+
+  transitive-sourcing-of-information sub rule,
+      when {
+          (information-source: $db, sourced-information: $seq) isa sourcing-of-information;
+          $pr isa protein has sequence $seq;
+      } then {
+          (information-source: $db, sourced-information: $pr) isa sourcing-of-information;
+      };
+
+  ####################################################################################
+  # Ownership
+  ####################################################################################
+  ownership sub relationship,
+      relates owner,
+      relates property;
+
+  protein-ownership sub ownership,
+      relates species-owner as owner,
+      relates owned-protein as property;
+
+  transitive-ownership sub rule,
+      when {
+          (owner: $a, property: $b) isa ownership;
+          (owner: $b, property: $c) isa ownership;
+      } then {
+          (owner: $a, property: $c) isa ownership;
+      };
