@@ -11,6 +11,7 @@ import grakn
     :param insert_attributes_or_variable as string:
         - if item to be inserted has no attributes associeted with it: contains only the item's variable (example: '$sourcing')
         - otherwise: contains the variable and the attributes associated with it (example: '$sourcing has name "whatever";')
+    returns the id of the item that matched or inserted
 '''
 
 
@@ -24,14 +25,19 @@ def insert_if_non_existent(session, insert_minimal_query, insert_attributes_or_v
 
     exists = False
     with session.transaction(grakn.TxType.READ) as read_tx:
-        exists = len(read_tx.query(match_query).collect_concepts()) > 0
+        answers = read_tx.query(match_query).collect_concepts()
+        exists = len(answers) > 0
 
-    if not exists:
+    id = None
+    if exists:
+        id = answers[0].id
+    else:
         insert_query = insert_minimal_query
         # insert_attributes_or_variable contains attributes
         if insert_attributes_or_variable.count(";") > 0:
             insert_query += insert_attributes_or_variable
         print("Execute insert query: ", insert_query)
         with session.transaction(grakn.TxType.WRITE) as write_tx:
-            write_tx.query(insert_query)
+            id = write_tx.query(insert_query).collect_concepts()[0].id
             write_tx.commit()
+    return id

@@ -42,9 +42,9 @@ def insert_new_proteins_n_alignments(session, target_sequence, record):
     database = record.database
     # insert the database entity (if it doesn't already exist)
     q_insert_database = 'insert $db isa database has name "' + database + '";'
-    insert_if_non_existent(session,
-                           q_insert_database,
-                           "$db")
+    database_id = insert_if_non_existent(session,
+                                         q_insert_database,
+                                         "$db")
 
     for alignment in record.alignments:
         title_line = alignment.title
@@ -53,13 +53,13 @@ def insert_new_proteins_n_alignments(session, target_sequence, record):
         protein_name = title_line.split(" ", 1)[1].split(
             "[")[0].split(">")[0].replace(";", " -")
         q_insert_protein = 'insert $pr isa protein has name "' + protein_name + '";'
-        insert_if_non_existent(session,
-                               q_insert_protein,
-                               "$pr")
+        protein_id = insert_if_non_existent(session,
+                                            q_insert_protein,
+                                            "$pr")
 
         for hsp in alignment.hsps:
             # insert the sequence attribute for the protein entity (if doesn't exists already)
-            q_insert_sequence_for_protein = ('match $pr isa protein has name "' + protein_name + '"; ' +
+            q_insert_sequence_for_protein = ('match $pr id ' + protein_id + '; ' +
                                              'insert $seq isa sequence "' + hsp.sbjct + '"; $pr has sequence $seq;')
             insert_if_non_existent(session,
                                    q_insert_sequence_for_protein,
@@ -74,8 +74,8 @@ def insert_new_proteins_n_alignments(session, target_sequence, record):
                                    "$gi")
 
             # insert the sourcing-of-information relationship (if it doesn't already exist)
-            q_insert_sourcing = ('match $seq isa sequence has gi "' + gi + '"; ' +
-                                 '$db isa database has name "' + database + '"; ' +
+            q_insert_sourcing = ('match $seq isa sequence "' + hsp.sbjct + '"; ' +
+                                 '$db id ' + database_id + '; ' +
                                  "insert $sourcing (information-source: $db, sourced-information: $seq) isa sourcing-of-information;")
             insert_if_non_existent(session,
                                    q_insert_sourcing,
@@ -100,13 +100,13 @@ def insert_new_proteins_n_alignments(session, target_sequence, record):
         if (len(title_line.split(" ", 1)[1].split("[")) > 1):
             species = title_line.split(" ", 1)[1].split("[")[1].split("]")[0]
             q_insert_species = 'insert $species isa species has name "' + species + '"; '
-            insert_if_non_existent(session,
-                                   q_insert_species,
-                                   "$species")
+            species_id = insert_if_non_existent(session,
+                                                q_insert_species,
+                                                "$species")
 
             # insert protein-ownership relationship (if it doesn't already exist)
-            q_insert_protein_ownership = ('match $sp isa species has name "' + species + '"; ' +
-                                          '$pr isa protein has name "' + protein_name + '"; ' +
+            q_insert_protein_ownership = ('match $sp id "' + species_id + '"; ' +
+                                          '$pr id ' + protein_id + '; ' +
                                           "insert $pr-ownership (species-owner: $sp, owned-protein: $pr) isa protein-ownership;")
             insert_if_non_existent(session,
                                    q_insert_protein_ownership,
@@ -210,3 +210,7 @@ with client.session(keyspace="proteins") as session:
     print("Checking for duplicate proteins ...")
     print("- - - - - - - - - - - - - - - - - - - - -")
     clean_data(session)
+    # with session.transaction(grakn.TxType.READ) as read_tx:
+    #     query = 'match $pr isa protein has sequence "a"; get;'
+    #     answers = read_tx.query(query).collect_concepts()
+    #     print(answers[0].id)
