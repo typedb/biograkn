@@ -36,8 +36,16 @@ def insert_if_non_existent(session, insert_minimal_query, insert_attributes_or_v
         # insert_attributes_or_variable contains attributes
         if insert_attributes_or_variable.count(";") > 0:
             insert_query += insert_attributes_or_variable
-        print("Execute insert query: ", insert_query)
         with session.transaction(grakn.TxType.WRITE) as write_tx:
             id = write_tx.query(insert_query).collect_concepts()[0].id
+            print("Execute insert query: ", insert_query)
             write_tx.commit()
+    return id
+
+
+def insert_anyway(session, insert_query):
+    with session.transaction(grakn.TxType.WRITE) as write_tx:
+        id = write_tx.query(insert_query).collect_concepts()[0].id
+        print("Execute insert query: ", insert_query)
+        write_tx.commit()
     return id
