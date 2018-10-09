@@ -47,7 +47,7 @@ def insert_new_proteins_n_alignments(session, target_sequence, record):
 
     for alignment in record.alignments:
         # insert the protein entity (if it doesn't already exist)
-        protein_name = alignment.hit_def
+        protein_name = alignment.hit_def.split(" >")[0]
         q_insert_protein = 'insert $pr isa protein has name "' + protein_name + '";'
         protein_id = insert_if_non_existent(session,
                                             q_insert_protein,
@@ -158,17 +158,35 @@ def clean_data(session):
                         break
                 print("")
 
-                if not selection_to_delete == 0:
+                if not selection_to_delete == "0":
                     # delete selected proteins
                     for selection in selection_to_delete.strip().split(","):
                         protein_to_be_deleted = protein_names[int(
                             selection) - 1]
                         with session.transaction(grakn.TxType.WRITE) as write_tx:
+                            q_delete_alignment = ('match $pr isa protein has name "' + protein_to_be_deleted + '" ' +
+                                                  'has sequence $seq; $alignment ($seq) isa sequence-sequence-alignment; delete $alignment;')
+                            write_tx.query(q_delete_alignment)
+                            write_tx.commit()
+                            print("Execute delete query: ", q_delete_alignment)
+                        with session.transaction(grakn.TxType.WRITE) as write_tx:
+                            q_delete_ownership = ('match $pr isa protein has name "' + protein_to_be_deleted + '"; ' +
+                                                  '$ownership ($pr) isa protein-ownership; delete $ownership;')
+                            write_tx.query(q_delete_ownership)
+                            write_tx.commit()
+                            print("Execute delete query: ", q_delete_ownership)
+                        with session.transaction(grakn.TxType.WRITE) as write_tx:
+                            q_delete_sourcing = ('match $pr isa protein has name "' + protein_to_be_deleted + '"; ' +
+                                                 '$sourcing ($pr) isa sourcing-of-information; delete $sourcing;')
+                            write_tx.query(q_delete_sourcing)
+                            write_tx.commit()
+                            print("Execute delete query: ", q_delete_sourcing)
+                        with session.transaction(grakn.TxType.WRITE) as write_tx:
                             q_delete_protein = ('match $pr isa protein has name "' +
                                                 protein_to_be_deleted + '"; delete $pr;')
-                            print("Execute delete query: ", q_delete_protein)
                             write_tx.query(q_delete_protein)
                             write_tx.commit()
+                            print("Execute delete query: ", q_delete_protein)
 
     if is_data_clean:
         print("There are no duplicate proteins.")
@@ -193,12 +211,12 @@ with client.session(keyspace="proteins") as session:
         )
         print("Reading BLAST results")
         print("- - - - - - - - - - - - - - - - - - - - -")
-
         blast_record = NCBIXML.read(result_handle)
+        # blast_record = NCBIXML.read(open("temp.xml"))
         print("Inserting BLAST results into the proteins knowledge graph.")
         print("- - - - - - - - - - - - - - - - - - - - -")
         insert_new_proteins_n_alignments(session, sequence, blast_record)
 
     print("Checking for duplicate proteins ...")
     print("- - - - - - - - - - - - - - - - - - - - -")
-    clean_data(session)
+    # clean_data(session)
