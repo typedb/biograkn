@@ -1,19 +1,8 @@
 import grakn
-import pprint
+from util import print_to_log
 
-
-def print_to_log(title, content):
-    print(title)
-    print("")
-    pp.pprint(content)
-    print("\n")
-
-
-pp = pprint.PrettyPrinter(indent=4)
 
 # Which Homo Sepiens protein sequences are aligned with the sequence MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY?
-
-
 def execute_query_1(question, tx):
     print_to_log("Question: ", question)
 
@@ -31,18 +20,17 @@ def execute_query_1(question, tx):
     print_to_log("Query:", "\n".join(query))
     query = "".join(query)
 
-    iterator = tx.query(query)
-    result = []
-    while True:
-        structured_answer = next(iterator, None)
-        if structured_answer == None:
-            break
-        structured_answer = structured_answer.map()
-        structured_result = {var_name: answer.value()
-                             for var_name, answer in structured_answer.items()}
-        result.append(structured_result)
+    answers = tx.query(query)
 
-    print_to_log("Result:", result)
+    result = []
+    for structured_answer in answers:
+        var_map = structured_answer.map()
+        var_value_dict = {
+            var_name: var_map[var_name].value() for var_name in var_map
+        }
+        result.append(var_value_dict)
+
+    print_to_log("Result:", result, pretty=True)
 
 
 # Which proteins sequences are aligned with the sequence MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY and have an identicality of at lease 0.9 and a positivity of at least 0.85?
@@ -62,18 +50,17 @@ def execute_query_2(question, tx):
     print_to_log("Query:", "\n".join(query))
     query = "".join(query)
 
-    iterator = tx.query(query)
-    result = []
-    while True:
-        structured_answer = next(iterator, None)
-        if structured_answer == None:
-            break
-        structured_answer = structured_answer.map()
-        structured_result = {var_name: answer.value()
-                             for var_name, answer in structured_answer.items()}
-        result.append(structured_result)
+    answers = tx.query(query)
 
-    print_to_log("Result:", result)
+    result = []
+    for structured_answer in answers:
+        var_map = structured_answer.map()
+        var_value_dict = {
+            var_name: var_map[var_name].value() for var_name in var_map
+        }
+        result.append(var_value_dict)
+
+    print_to_log("Result:", result, pretty=True)
 
 
 # Which alignments with sequence MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY contain the subset GIGLLHII?
@@ -93,25 +80,24 @@ def execute_query_3(question, tx):
     print_to_log("Query:", "\n".join(query))
     query = "".join(query)
 
-    iterator = tx.query(query)
-    result = []
-    while True:
-        structured_answer = next(iterator, None)
-        if structured_answer == None:
-            break
-        structured_answer = structured_answer.map()
-        structured_result = {var_name: answer.value()
-                             for var_name, answer in structured_answer.items()}
-        result.append(structured_result)
+    answers = tx.query(query)
 
-    print_to_log("Result:", result)
+    result = []
+    for structured_answer in answers:
+        var_map = structured_answer.map()
+        var_value_dict = {
+            var_name: var_map[var_name].value() for var_name in var_map
+        }
+        result.append(var_value_dict)
+
+    print_to_log("Result:", result, pretty=True)
 
 
 def execute_query_all(tx):
     for qs_func in questions_n_functions:
-        qustion = qs_func["question"]
+        question = qs_func["question"]
         query_function = qs_func["query_function"]
-        query_function(qustion, tx)
+        query_function(question, tx)
         print("\n - - -  - - -  - - -  - - - \n")
 
 
@@ -136,7 +122,7 @@ questions_n_functions = [
     - creates a Grakn client > session > transaction connected to the phone_calls keyspace
     - runs the right function based on the user's selection
     - closes the session
-  '''
+'''
 
 # ask user which question to execute the query for
 print("")
@@ -148,8 +134,12 @@ print("")
 # get user's question selection
 qs_number = -1
 while qs_number < 0 or qs_number > len(questions_n_functions):
-    qs_number = int(
-        input("choose a number (0 for to answer all questions): "))
+    try:
+        qs_number = int(
+            input("choose a number (0 for to answer all questions): "))
+    except ValueError:
+        print("Please enter valid number")
+        continue
 print("")
 
 # create a transaction to talk to the phone_calls keyspace
@@ -160,7 +150,7 @@ with client.session(keyspace="proteins") as session:
         if qs_number == 0:
             execute_query_all(tx)
         else:
-            qustion = questions_n_functions[qs_number - 1]["question"]
+            question = questions_n_functions[qs_number - 1]["question"]
             query_function = questions_n_functions[qs_number -
                                                    1]["query_function"]
-            query_function(qustion, tx)
+            query_function(question, tx)

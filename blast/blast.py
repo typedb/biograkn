@@ -7,20 +7,20 @@ from util import insert_if_non_existent, insert_anyway
 
 
 '''
-    gets the sequences of tatget proteins
+    runs a match query to get the target protein sequences
     :param session as dict: used to talk to the proteins keyspace
+    returns the extracted sequences as a list of strings
 '''
 
 
 def query_target_sequences(session):
-    # with session.transaction(grakn.TxType.READ) as tx:
-    #     q_match_target_sequences = 'match $p isa protein has sequence $s; limit 1; get $s;'
-    #     print("Extracting target sequences: ", q_match_target_sequences)
-    #     print("- - - - - - - - - - - - - - - - - - - - -")
-    #     answers = tx.query(q_match_target_sequences).collect_concepts()
-    #     sequences = [answer.value() for answer in answers]
-        # return sequences
-    return ["MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY"]
+    with session.transaction(grakn.TxType.READ) as tx:
+        q_match_target_sequences = 'match $p isa protein has sequence $s; limit 1; get $s;'
+        print("Extracting target sequences: ", q_match_target_sequences)
+        print("- - - - - - - - - - - - - - - - - - - - -")
+        answers = tx.query(q_match_target_sequences).collect_concepts()
+        sequences = [answer.value() for answer in answers]
+        return sequences
 
 
 '''
@@ -89,7 +89,7 @@ def insert_new_proteins_n_alignments(session, target_sequence, record):
 
         # insert the species entity (if it doesn't already exist)
         if (len(alignment.hit_def.split("[")) > 1):
-            species = alignment.hit_def.split("[")[1][:-1]
+            species = alignment.hit_def.split("[")[1].split("]")[0]
             q_insert_species = 'insert $species isa species has name "' + species + '"; '
             species_id = insert_if_non_existent(session,
                                                 q_insert_species,
@@ -128,8 +128,8 @@ def clean_data(session):
 
         # check for duplicate proteins
         for sequence in sequences:
-            q_match_proteins_of_sequence = 'match $pr isa protein has sequence "' + \
-                sequence + '" has name $name ; get $name;'
+            q_match_proteins_of_sequence = ('match $pr isa protein has sequence "' +
+                                            sequence + '" has name $name ; get $name;')
             protein_answers = read_tx.query(
                 q_match_proteins_of_sequence).collect_concepts()
             protein_names = [protein_answer.value()
@@ -151,7 +151,12 @@ def clean_data(session):
                         "Enter the number of proteins to be deleted, seperated by comma. (enter 0 to keep all): ")
                     are_selections_valid = True
                     for selection in selection_to_delete.strip().split(","):
-                        if int(selection) < 0 or int(selection) > len(protein_names):
+                        try:
+                            if int(selection) < 0 or int(selection) > len(protein_names):
+                                are_selections_valid = False
+                                break
+                        except ValueError:
+                            print("Please enter valid number")
                             are_selections_valid = False
                             break
                     if are_selections_valid:
@@ -219,4 +224,4 @@ with client.session(keyspace="proteins") as session:
 
     print("Checking for duplicate proteins ...")
     print("- - - - - - - - - - - - - - - - - - - - -")
-    # clean_data(session)
+    clean_data(session)
