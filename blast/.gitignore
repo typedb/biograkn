@@ -1,0 +1,8 @@
+# text-editor
+.vscode
+
+# misc
+.DS_Store
+
+# for fast debugging
+temp.xml
