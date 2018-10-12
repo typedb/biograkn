@@ -106,99 +106,6 @@ def insert_new_proteins_n_alignments(session, target_sequence, record):
         print("- - - - - - - - - - - - - - - - - - - - -")
 
 
-'''
-    1. for each sequence in the proteins knowledge graph:
-        - if the sequence is attached to more than one protein:
-            a. prints the proteins names as list
-            b. asks the user for the one that need to be eleted
-            c. deletes the selected proteins
-    :param session as dict: used to talk to the proteins keyspace
-'''
-
-
-def clean_data(session):
-    with session.transaction(grakn.TxType.READ) as read_tx:
-        # get all sequences
-        q_match_all_sequences = 'match $seq isa sequence; get $seq;'
-        sequence_answers = read_tx.query(
-            q_match_all_sequences).collect_concepts()
-        sequences = [sequence_answer.value()
-                     for sequence_answer in sequence_answers]
-        is_data_clean = True
-
-        # check for duplicate proteins
-        for sequence in sequences:
-            q_match_proteins_of_sequence = ('match $pr isa protein has sequence "' +
-                                            sequence + '" has name $name ; get $name;')
-            protein_answers = read_tx.query(
-                q_match_proteins_of_sequence).collect_concepts()
-            protein_names = [protein_answer.value()
-                             for protein_answer in protein_answers]
-            may_be_dirty = len(protein_names) > 1
-
-            if may_be_dirty:
-                is_data_clean = False
-                # list duplicate proteins
-                print(
-                    "These proteins all have the same sequence:")
-                for index, protein_name in enumerate(protein_names):
-                    print(str(index + 1) + ". " + protein_name + ".")
-
-                # get user's selection
-                selection_to_delete = -1
-                while True:
-                    selection_to_delete = input(
-                        "Enter the number of proteins to be deleted, seperated by comma. (enter 0 to keep all): ")
-                    are_selections_valid = True
-                    for selection in selection_to_delete.strip().split(","):
-                        try:
-                            if int(selection) < 0 or int(selection) > len(protein_names):
-                                are_selections_valid = False
-                                break
-                        except ValueError:
-                            print("Please enter valid number")
-                            are_selections_valid = False
-                            break
-                    if are_selections_valid:
-                        break
-                print("")
-
-                if not selection_to_delete == "0":
-                    # delete selected proteins
-                    for selection in selection_to_delete.strip().split(","):
-                        protein_to_be_deleted = protein_names[int(
-                            selection) - 1]
-                        with session.transaction(grakn.TxType.WRITE) as write_tx:
-                            q_delete_alignment = ('match $pr isa protein has name "' + protein_to_be_deleted + '" ' +
-                                                  'has sequence $seq; $alignment ($seq) isa sequence-sequence-alignment; delete $alignment;')
-                            write_tx.query(q_delete_alignment)
-                            write_tx.commit()
-                            print("Execute delete query: ", q_delete_alignment)
-                        with session.transaction(grakn.TxType.WRITE) as write_tx:
-                            q_delete_ownership = ('match $pr isa protein has name "' + protein_to_be_deleted + '"; ' +
-                                                  '$ownership ($pr) isa protein-ownership; delete $ownership;')
-                            write_tx.query(q_delete_ownership)
-                            write_tx.commit()
-                            print("Execute delete query: ", q_delete_ownership)
-                        with session.transaction(grakn.TxType.WRITE) as write_tx:
-                            q_delete_sourcing = ('match $pr isa protein has name "' + protein_to_be_deleted + '"; ' +
-                                                 '$sourcing ($pr) isa sourcing-of-information; delete $sourcing;')
-                            write_tx.query(q_delete_sourcing)
-                            write_tx.commit()
-                            print("Execute delete query: ", q_delete_sourcing)
-                        with session.transaction(grakn.TxType.WRITE) as write_tx:
-                            q_delete_protein = ('match $pr isa protein has name "' +
-                                                protein_to_be_deleted + '"; delete $pr;')
-                            write_tx.query(q_delete_protein)
-                            write_tx.commit()
-                            print("Execute delete query: ", q_delete_protein)
-
-    if is_data_clean:
-        print("There are no duplicate proteins.")
-    else:
-        print("There are no more duplicate proteins.")
-
-
 client = grakn.Grakn(uri="localhost:48555")
 with client.session(keyspace="proteins") as session:
     print("Connected to the proteins knowledge graph.")
@@ -221,7 +128,3 @@ with client.session(keyspace="proteins") as session:
         print("Inserting BLAST results into the proteins knowledge graph.")
         print("- - - - - - - - - - - - - - - - - - - - -")
         insert_new_proteins_n_alignments(session, sequence, blast_record)
-
-    print("Checking for duplicate proteins ...")
-    print("- - - - - - - - - - - - - - - - - - - - -")
-    clean_data(session)
