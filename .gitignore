@@ -102,3 +102,9 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Eclise project dirs
+.classpath
+.project
+.settings/
+target/

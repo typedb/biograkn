@@ -1,0 +1,12 @@
+ftp://ftp.ncbi.nlm.nih.gov/gene/DATA/GENE_INFO/Mammalia/Homo_sapiens.gene_info.gz
+ftp://ftp.uniprot.org/pub/databases/uniprot/current_release/knowledgebase/complete/uniprot_sprot.xml.gz
+http://archive.geneontology.org/latest-termdb/go_daily-termdb.obo-xml.gz
+ftp://ftp.ncbi.nlm.nih.gov/gene/DATA/gene2go.gz
+ftp://mirbase.org/pub/mirbase/CURRENT/miRNA.dat.gz
+http://www.reactome.org/download/current/pathway2summation.txt
+http://www.reactome.org/download/current/gene_association.reactome
+http://www.reactome.org/download/current/miRBase2Reactome_All_Levels.txt
+https://reactome.org/download/current/UniProt2Reactome.txt
+http://mircancer.ecu.edu/downloads/miRCancerOctober2017.txt
+http://bioinfo.life.hust.edu.cn/miRNASNP2/download/snp_in_human_miRNA_seed_region.txt
+http://mirtarbase.mbc.nctu.edu.tw/cache/download/6.1/hsa_MTI.xlsx
