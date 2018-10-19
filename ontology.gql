@@ -1,0 +1,375 @@
+define
+
+#
+# Entities
+#
+
+# NCBI Entrez Gene
+gene sub entity,
+	has geneId,
+    has chromosome,
+    has location,
+    has description,
+    has type,
+    has symbol,
+    has fullName,
+    plays encoding-gene,
+    plays analysed-gene,
+    plays associated-gene,
+    plays target-gene,
+    plays differentially-expressed-gene,    
+	plays annotated,
+	plays interacting-gene,
+	plays contained;
+
+# Gene Ontology
+go sub entity,
+	has goId,
+	has name,
+	has namespace,
+	has definition,
+	has comment,
+	plays annotation;
+
+# UniProtKB SwissProt
+protein sub entity,
+	has accession,
+	has name,
+	has fullName,
+	has alternativeName,
+	has sequence,
+	has sequenceLength,
+	has sequenceMass,
+	has proteinGene,
+	has function,
+	has proteinPathway,
+	has subunit,
+	has tissue,
+	has ptm,
+	has similarity,
+	plays encoded-protein, 
+    plays expressed-protein,
+    plays associated-protein,
+    plays interacting-protein,
+    plays participating-protein,
+    plays target-protein,
+    plays similar-protein,
+	plays annotated,
+	plays contained;
+
+# Pathways from Reactome (old way)
+pathway sub entity,
+	has pathwayId,
+	has name,
+	has disease,
+	has summation,
+	plays annotated,
+	plays container;
+
+# Pathways (new way)
+#pathway sub relationship,
+#    has pathway-name,
+#    has pathway-id,
+#    relates participating-protein;
+
+# MiRBase    
+mirna sub entity,
+	has accession,
+	has name,
+	has description,
+	has comment,
+	has sequence,
+	plays precursor,
+	plays up-regulator,
+	plays down-regulator,
+	plays contained;
+	
+mirna-mature sub mirna,
+	has product,
+	has location,
+	plays mature,
+	plays mutated-mature,
+	plays interacting-mirna;
+
+# MiRNA-SNP
+mirna-snp sub entity,
+	has snpId,
+	has chr,
+	has mirStart,
+	has mirEnd,
+	has lostNum,
+	has gainNum,
+	plays snip;
+
+# MiRCancer
+cancer sub entity,
+	has name,
+	plays up-regulated,
+	plays down-regulated,
+	plays byCancer;
+
+# MiRTarBase (old way)
+#interaction sub entity,
+#	has database,
+#	has experiments,
+#	has supportType,
+#	plays interacting;
+
+# MiRTarBase (new way)
+interaction sub relationship,
+	has database,
+	has experiments,
+	has supportType,
+	relates interacting-mirna,
+	relates interacting-gene;
+
+# DisGeNET Association Type Ontology
+# DisGeNET
+disease sub entity,
+	has doId,
+	has name,
+	has definition,
+	has synonym,
+	#plays is_a,
+	plays associated-disease,
+    plays affected-disease;
+
+# DGIdb (http://www.dgidb.org/data/drugs.tsv)
+drug sub entity,
+    has drug-name,
+    has drug-chembl-id,
+    plays inhibitor,
+    plays antagonist,
+    plays blocker,
+    plays therapeutic,
+    plays interacted-drug; 
+
+# Human Protein Atlas (https://www.proteinatlas.org/download/normal_tissue.tsv.zip)
+tissue sub entity,
+    has tissue-name,
+    plays enhanced-tissue,
+    plays tissue-context,
+    plays associated-tissue; 
+        
+#
+# Relations
+#
+
+functional-annotation sub relationship,
+	has evidence,
+	has qualifier,
+	has category,
+	relates annotation,
+	relates annotated;
+
+containing sub relationship,
+	relates container,
+	relates contained;
+	
+precursor-of sub relationship,
+	relates precursor,
+	relates mature;
+
+regulation sub relationship is-abstract,
+	relates regulator,
+	relates regulated;
+
+up-regulation sub regulation,
+	relates up-regulator,
+	relates up-regulated;
+
+down-regulation sub regulation,
+	relates down-regulator,
+	relates down-regulated;
+
+snip-mutation sub relationship,
+	relates mutated-mature,
+	relates snip;
+
+gene-protein-encoding sub relationship,
+	relates encoded-protein, 
+	relates encoding-gene;
+
+protein-similarity sub relationship,
+    relates similar-protein;
+    
+molecular-interaction sub relationship,
+    relates interacting-molecule;
+
+# IntAct PPIs (or STRING instead?) 
+protein-protein-interaction sub molecular-interaction,
+    relates interacting-protein as interacting-molecule,
+    plays biomolecular-process;
+
+# Kaneko
+protein-disease-association sub relationship,
+    relates associated-protein,
+    relates associated-disease,
+    has score;
+    
+# DisGeNET (http://www.disgenet.org/ds/DisGeNET/results/curated_gene_disease_associations.tsv.gz)
+gene-disease-association sub relationship,
+    relates associated-gene,
+    relates associated-disease,
+    has score,
+    has evidence-index;
+
+gene-tissue-association sub relationship,
+	relates associated-tissue,
+	relates associated-gene;
+	
+tissue-enhancement sub relationship,
+    relates enhanced-tissue,
+    relates expressed-protein;
+    
+process-localisation sub relationship,
+    relates biomolecular-process,
+    relates tissue-context;
+
+drug-protein-interaction sub relationship,
+    relates target-protein,
+    relates interacted-drug;
+
+# DGIdb (http://www.dgidb.org/data/interactions.tsv)
+drug-gene-interaction sub relationship,
+    relates target-gene,
+    relates inhibitor,
+    relates antagonist,
+    relates blocker;
+
+#
+# attributes
+#
+
+ID sub attribute datatype string is-abstract;
+
+# common attributes
+location sub attribute datatype string;
+description sub attribute datatype string;
+symbol sub attribute datatype string;
+name sub attribute datatype string;
+fullName sub attribute datatype string;
+comment sub attribute datatype string;
+accession sub attribute datatype string;
+
+# gene
+geneId sub ID;
+chromosome sub attribute datatype string;
+type sub attribute datatype string;
+
+# go
+goId sub ID;
+namespace sub attribute datatype string;
+definition sub attribute datatype string;
+
+# protein
+alternativeName sub name;
+proteinGene sub attribute datatype string;
+function sub attribute datatype string;
+proteinPathway sub attribute datatype string;
+subunit sub attribute datatype string;
+tissue sub attribute datatype string;
+ptm sub attribute datatype string;
+similarity sub attribute datatype string;
+sequenceLength sub attribute datatype long;
+sequenceMass sub attribute datatype long;
+
+# pathway
+pathwayId sub ID;
+disease sub attribute datatype string;
+summation sub attribute datatype string;
+
+# annotation
+evidence sub attribute datatype string;
+qualifier sub attribute datatype string;
+category sub attribute datatype string;
+
+# mirna
+product sub attribute datatype string;
+sequence sub attribute datatype string;
+
+# mirnaSNP
+snpId sub ID;
+chr sub attribute datatype string;
+mirStart sub attribute datatype long;
+mirEnd sub attribute datatype long;
+lostNum sub attribute datatype long;
+gainNum sub attribute datatype long;
+
+# interaction
+database sub attribute datatype string;
+experiments sub attribute datatype string;
+supportType sub attribute datatype string;
+
+
+#
+# rules
+#
+
+genesInPathways sub rule,
+when {
+    $gene isa gene;
+    $protein isa protein;
+    (encoding-gene: $gene, encoded-protein: $protein) isa gene-protein-encoding; 
+    (container: $pathway, contained: $protein) isa containing;
+} then {
+    (container: $pathway, contained: $gene) isa containing;
+};
+
+when-p-value-sufficient-then-gene-differentially-expressed sub rule,
+when {
+    $gc(conducted-analysis: $a) isa geo-comparison;
+    $a(analysed-gene: $gene) isa genetic-analysis, has p-value $v;
+    $v <= 0.1;
+    $gene isa gene;
+} then {
+    $gc(differentially-expressed-gene: $gene, conducted-analysis: $a) isa geo-comparison;
+};
+
+when-gene-associated-disease-then-protein-disease-association sub rule,
+when {
+    $g isa gene; 
+    $pr isa protein; 
+    $di isa disease; 
+    (associated-disease: $di, associated-gene: $g) isa gene-disease-association;
+    (encoding-gene: $g, encoded-protein: $pr) isa gene-protein-encoding; 
+} then {
+    (associated-protein: $pr, associated-disease: $di) isa protein-disease-association;
+};
+
+when-gene-associated-tissue-then-protein-tissue-association sub rule,
+when {
+    $g isa gene; 
+    $pr isa protein; 
+    $ti isa tissue; 
+    (associated-tissue: $ti, associated-gene: $g) isa gene-tissue-association;
+    (encoding-gene: $g, encoded-protein: $pr) isa gene-protein-encoding; 
+} then {
+    (expressed-protein: $pr, enhanced-tissue: $ti) isa tissue-enhancement;
+};
+
+when-gene-interacts-drug-then-protein-drug-interaction sub rule,
+when {
+    $g isa gene; 
+    $pr isa protein; 
+    $dr isa drug; 
+    ($dr, target-gene: $g) isa drug-gene-interaction;
+    (encoding-gene: $g, encoded-protein: $pr) isa gene-protein-encoding; 
+} then {
+    (target-protein: $pr, interacted-drug: $dr) isa drug-protein-interaction;
+};
+
+when-sequence-similarity-then-drug-disease-relationship
+when {
+	$di isa disease;
+	$pr isa protein;
+	$pr2 isa protein; 
+	$pr != $pr2;
+	$dr isa drug;
+	(associated-disease: $di, associated-protein: $pr) isa protein-disease-association; 
+	(similar-protein: $pr, similar-protein: $pr2) isa protein-similarity; 
+	(target-protein: $pr2, interacted-drug: $dr) isa drug-protein-interaction; 
+} then {
+	(affected-disease: $di, therapeutic: $dr) isa drug-disease-association;
+};
+
