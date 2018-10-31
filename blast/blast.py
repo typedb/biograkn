@@ -12,7 +12,6 @@ from util import insert_if_non_existent, insert_anyway
     returns the extracted sequences as a list of strings
 '''
 
-
 def query_target_sequences(session):
     with session.transaction(grakn.TxType.READ) as tx:
         q_match_target_sequences = 'match $p isa protein has sequence $s; limit 1; get $s;'
@@ -47,7 +46,7 @@ def insert_new_proteins_n_alignments(session, target_sequence, record):
 
     for alignment in record.alignments:
         # insert the protein entity (if it doesn't already exist)
-        protein_name = alignment.hit_def.split(" >")[0]
+        protein_name = alignment.hit_def.split(" >")[0].split(";")[0]
         q_insert_protein = 'insert $pr isa protein has name "' + protein_name + '";'
         protein_id = insert_if_non_existent(session,
                                             q_insert_protein,

@@ -39,7 +39,6 @@ This examples illustrates how a Grakn Knowledge Graph can be used to simplify a 
   - Type in `pip3 install biopython`, press enter and wait for the installation to complete.
   - Type in `python3 migrate.py`, press enter and wait for the migration to complete.
   - Type in `python3 blast.py`, press enter and wait for the BLAST search to complete. This can take a few minutes.
-  - Attend to the (possible) duplicates to ensure the data imported into the knowledge graph is clean
 
 ## Adcanced Usage
 
