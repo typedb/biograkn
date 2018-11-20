@@ -31,7 +31,7 @@ The schema for the BioGrakn knowledge graph defines how the knowledge graph is m
 
 ## An example Query
 
-### What are diseases that are associated with protein interactions taking place in the liver?
+### What are the diseases that are associated with protein interactions taking place in the liver?
 
 ```
 match
