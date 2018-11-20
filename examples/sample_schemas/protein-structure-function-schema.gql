@@ -1,0 +1,51 @@
+define
+
+    sequence-sequence-alignment sub relationship,
+        relates target-sequence,
+        relates matched-sequence,
+        has identicality,
+        has positivity;
+
+    sequence-structure-mapping sub relationship,
+        relates mapped-structure,
+        relates mapping-sequence;
+
+    structure-function-mapping sub relationship,
+        relates mapping-structure,
+        relates mapped-function;
+
+    sequence sub attribute datatype string,
+        plays target-sequence,
+        plays matched-sequence,
+        plays mapping-sequence;
+
+    structure sub entity,
+        plays mapped-structure,
+        # plays mapping-structure,
+        has pdb-id;
+
+    function sub attribute datatype string,
+        plays mapped-function;
+
+    identicality sub attribute datatype double;
+    positivity sub attribute datatype double;
+    pdb-id sub attribute datatype string;
+
+    ###########################
+    ## IMPLIED RELATIONSHIPS ##
+    ###########################
+
+    sequence-function-mapping sub relationship,
+        relates mapping-sequence,
+        relates mapped-function;
+
+    implied-sequence-function-mapping sub rule,
+        when {
+            $seq isa sequence;
+            $struct isa structure;
+            $func isa function;
+            (mapping-sequence: $seq, mapped-structure: $struct) isa sequence-structure-mapping;
+            (mapping-structure: $struct, mapped-function: $func) isa structure-function-mapping;
+        } then {
+            (mapping-sequence: $seq, mapped-function: $func) isa sequence-function-mapping;
+        };
