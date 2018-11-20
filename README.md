@@ -2,7 +2,7 @@
 
 BioGrakn is a single knowledge graph of biomedical data ingested from [Uniprot](https://www.uniprot.org/), [Reactome](https://reactome.org/), [DGIdb](http://www.dgidb.org/), [DisGeNET](http://www.disgenet.org/web/DisGeNET/menu;jsessionid=np5qutaldora6gql80xqhmen), [HPA-Tissue](https://www.proteinatlas.org/humanproteome/tissue+specific), [EBI IntAct](https://www.ebi.ac.uk/intact/), [Kaneko](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3558318/), [Gene Expression Omnibus](https://www.ncbi.nlm.nih.gov/geo/) and [TissueNet](http://netbio.bgu.ac.il/tissuenet/).
 
-BioGrakn provides an intuitive way to query interconnected and heterogeneous biomedical data in one single place. The schema that models the underlying knowledge graph alongside the descriptive query language - Graql - makes writing queries an extremely straightforward and intuitive process. Furthermore, the automated reasoning capability of Grakn, allows BioGrakn to become an intelligent database of biomedical data that infers implicit knowledge based on the explicitly stored data. BioGrakn can understand biological facts, infer based on new findings and enforce research constraints, all at query(run) time.
+BioGrakn provides an intuitive way to query interconnected and heterogeneous biomedical data in one single place. The schema that models the underlying knowledge graph alongside the descriptive query language, Graql, makes writing complex queries an extremely straightforward and intuitive process. Furthermore, the automated reasoning capability of Grakn, allows BioGrakn to become an intelligent database of biomedical data that infers implicit knowledge based on the explicitly stored data. BioGrakn can understand biological facts, infer based on new findings and enforce research constraints, all at query(run) time.
 
 ## Quickstart
 
@@ -15,8 +15,7 @@ BioGrakn provides an intuitive way to query interconnected and heterogeneous bio
 Queries can be run over BioGrakn, via Graql Console, Grakn Clients and Grakn Workbase.
 
 ### Via Graql Console
-While inside the unzipped folder, via terminal or command prompt, run: `./graql console -k biograkn_v2`
-The console is now ready to answer your queries.
+While inside the unzipped folder, via terminal or command prompt, run: `./graql console -k biograkn_v2`. The console is now ready to answer your queries.
 
 ### Via Grakn Clients
 Grakn Clients are available for [Java](https://github.com/graknlabs/grakn/tree/master/client-java), [Node.js](https://github.com/graknlabs/grakn/tree/master/client-nodejs) and [Python](https://github.com/graknlabs/grakn/tree/master/client_python). Through these clients, you will be able to perform read and write operations over BioGrakn.
@@ -24,7 +23,8 @@ See an example of how this is done in the [Grakn <> BLAST integration example](.
 
 ### Via Grakn Workbase
 Download the [latest release of Grakn Workbase](https://github.com/graknlabs/grakn/releases), install and run it.
-Read the documentation on Workbase or watch a short series of videos on how it's used with the [Grakn <> BLAST integration example](https://www.youtube.com/watch?v=PZoG-M_hY30&index=4&list=UUtZKw0RFof3x23KqGtW3yDA).
+
+Read the [documentation on Workbase](http://dev.grakn.ai/docs/workbase/visualiser) or watch a short series of videos about [using workbase with the Grakn <> BLAST integration example](https://www.youtube.com/watch?v=PZoG-M_hY30&index=4&list=UUtZKw0RFof3x23KqGtW3yDA).
 
 ## Understanding the Schema
 The schema for the BioGrakn knowledge graph defines how the knowledge graph is modeled to represent the reality of its dataset. To understand the the underlying ontology, you may read through the [`schema.gql`](./schema.gql) or view the [visualised schema](./visualised-schema.png).
