@@ -30,7 +30,6 @@ Read the [documentation on Workbase](http://dev.grakn.ai/docs/workbase/visualise
 The schema for the BioGrakn knowledge graph defines how the knowledge graph is modelled to represent the reality of its dataset. To understand the underlying ontology, you may read through the [`schema.gql`](./schema.gql) or view the [visualised schema](./visualised-schema.png).
 
 ## An example Query
-Below are a few examples of the queries ran over BioGrakn via workbase.
 
 ### What are diseases that are associated with protein interactions taking place in the liver?
 
