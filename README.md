@@ -27,12 +27,12 @@ Download the [latest release of Grakn Workbase](https://github.com/graknlabs/gra
 Read the [documentation on Workbase](http://dev.grakn.ai/docs/workbase/visualiser) or watch a short series of videos about [using workbase with the Grakn <> BLAST integration example](https://www.youtube.com/watch?v=PZoG-M_hY30&index=4&list=UUtZKw0RFof3x23KqGtW3yDA).
 
 ## Understanding the Schema
-The schema for the BioGrakn knowledge graph defines how the knowledge graph is modeled to represent the reality of its dataset. To understand the the underlying ontology, you may read through the [`schema.gql`](./schema.gql) or view the [visualised schema](./visualised-schema.png).
+The schema for the BioGrakn knowledge graph defines how the knowledge graph is modelled to represent the reality of its dataset. To understand the underlying ontology, you may read through the [`schema.gql`](./schema.gql) or view the [visualised schema](./visualised-schema.png).
 
-## Example Queries
+## An example Query
 Below are a few examples of the queries ran over BioGrakn via workbase.
 
-### What are diseases that are associated to protein interactions taking place in the liver?
+### What are diseases that are associated with protein interactions taking place in the liver?
 
 ```
 match
