@@ -46,7 +46,7 @@ match
 offset 0; limit 30; get;
 ```
 
-![Diseases associated to protein interactions taking place in liver](./example-queries/q-1.png)
+![Diseases associated to protein interactions taking place in liver](./examples/biograkn-queries/q-1.png)
 
 
 ## References
