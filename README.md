@@ -29,7 +29,7 @@ Read the [documentation on Workbase](http://dev.grakn.ai/docs/workbase/visualise
 ## Understanding the Schema
 The schema for the BioGrakn knowledge graph defines how the knowledge graph is modelled to represent the reality of its dataset. To understand the underlying ontology, you may read through the [`schema.gql`](./schema.gql) or view the [visualised schema](./visualised-schema.png).
 
-## An example Query
+## Example Queries
 
 ### What are the diseases that are associated with protein interactions taking place in the liver?
 
@@ -47,6 +47,19 @@ offset 0; limit 30; get;
 ```
 
 ![Diseases associated to protein interactions taking place in liver](./examples/biograkn-queries/q-1.png)
+
+### What are the proteins associated with Asthma?
+Note that the data to answer this question is not explicitly stored in the knowledge graph. It's through the [`when-gene-associated-disease-then-protein-disease-association Rule`](./schema.gql#L162) that the inference is made to enable use to ask this question.
+
+```
+match
+  $di isa disease has disease-name "Asthma";
+  $dda (associated-protein: $pr, associated-disease: $di) isa protein-disease-association; 
+offset 0; limit 10; get;
+```
+
+![Proteins associated with Asthma](./examples/biograkn-queries/q-2.png)
+
 
 
 ## References
