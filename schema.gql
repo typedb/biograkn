@@ -36,7 +36,8 @@ drug sub entity,
     plays antagonist,
     plays blocker,
     plays therapeutic,
-    plays interacted-drug;
+    plays interacted-drug
+    plays associated-drug;
 tissue sub entity,
     has tissue-name,
     plays enhanced-tissue,
@@ -117,6 +118,12 @@ drug-disease-association sub relationship,
 pathway-participation sub relationship,
 	relates participating-protein,
 	relates participated-pathway;
+disease-tissue-association sub relationship,
+    relates associated-disease,
+    relates associated-tissue;
+drug-tissue-association sub relationship,
+    relates associated-drug,
+    relates associated-tissue;
 
 ##########################
 # Attributes
@@ -159,7 +166,7 @@ when {
     (differentially-expressed-gene: $g, conducted-analysis: $gc) isa differentially-expressed-finding;
 };
 
-when-gene-associated-disease-then-protein-disease-association sub rule,
+gene-disease-association-and-gene-protein-encoding-protein-disease-association sub rule,
 when {
     $g isa gene;
     $pr isa protein;
@@ -170,7 +177,7 @@ when {
     (associated-protein: $pr, associated-disease: $di) isa protein-disease-association;
 };
 
-when-gene-associated-tissue-then-protein-tissue-association sub rule,
+gene-tissue-association-gene-protein-encoding-implies-tissue-enhancement sub rule,
 when {
     $g isa gene;
     $pr isa protein;
@@ -181,7 +188,7 @@ when {
     (expressed-protein: $pr, enhanced-tissue: $ti) isa tissue-enhancement;
 };
 
-when-gene-interacts-drug-then-protein-drug-interaction sub rule,
+drug-gene-interaction-and-gene-protein-encoding-implies-drug-protein-interaction sub rule,
 when {
     $g isa gene;
     $pr isa protein;
@@ -192,7 +199,7 @@ when {
     (target-protein: $pr, inhibitor: $dr) isa drug-protein-interaction;
 };
 
-when-sequence-similarity-then-drug-disease-relationship sub rule,
+protein-disease-association-and-protein-sequence-similarity-implies-drug-disease-association sub rule,
 when {
 	$di isa disease;
 	$pr isa protein;
@@ -204,4 +211,26 @@ when {
 	(target-protein: $pr2, $dr) isa drug-protein-interaction;
 } then {
 	(affected-disease: $di, therapeutic: $dr) isa drug-disease-association;
+};
+
+protein-disease-association-and-tissue-enhancement-implies-disease-tissue-association sub rule,
+when {
+   $di isa disease;
+   $pr isa protein;
+   $ti isa tissue;
+   (associated-disease: $di, associated-protein: $pr) isa protein-disease-association;
+   (expressed-protein: $pr, enhanced-tissue: $ti) isa tissue-enhancement;
+} then {
+   (associated-disease: $di, associated-tissue: $ti) isa disease-tissue-association;
+};
+
+drug-gene-interaction-and-gene-tissue-association-implies-drug-tissue-association sub rule,
+when {
+   $dr isa drug;
+   $ti isa tissue;
+   $ge isa gene;
+   (interacted-drug: $dr, target-gene: $ge) isa drug-gene-interaction;
+   (associated-gene: $ge, associated-tissue: $ti) isa gene-tissue-association;
+} then {
+   (associated-drug: $dr, associated-tissue: $ti) isa drug-tissue-association;
 };

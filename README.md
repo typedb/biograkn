@@ -31,7 +31,44 @@ The schema for the BioGrakn knowledge graph defines how the knowledge graph is m
 
 ## Example Queries
 
+### Which protein(s) are encoded by the gene with entrez-id of 100137049?
+
+```
+match
+  $gpe (encoding-gene: $ge, encoded-protein: $pr) isa gene-protein-encoding;
+  $ge isa gene has entrez-id "100137049";
+limit 10; get;
+```
+
+![Proteins encoded by gene with entrez-id of 100137049](./examples/biograkn-queries/q-1.png)
+
+### Which diseases affect the appendix tissue?
+Note that the data to answer this question is not explicitly stored in the knowledge graph. The [`protein-disease-association-and-tissue-enhancement-implies-disease-tissue-association Rule`](./schema.gql#L216) enables us to get the answer to this question using the following query.
+
+```
+match
+  $ti isa tissue has tissue-name "appendix";
+  $dta (associated-disease: $di, associated-tissue: $ti) isa disease-tissue-association;
+limit 10; get;
+```
+
+![Disease that affect appendix tissue](./examples/biograkn-queries/q-2.png)
+
+### What are the proteins associated with Asthma?
+Note that the data to answer this question is not explicitly stored in the knowledge graph. The [`gene-disease-association-and-gene-protein-encoding-protein-disease-association Rule`](./schema.gql#L169) enables us to get the answer to this question using the following query.
+
+```
+match
+  $di isa disease has disease-name "Asthma";
+  $dda (associated-protein: $pr, associated-disease: $di) isa protein-disease-association;
+limit 10; get;
+```
+
+![Proteins associated with Asthma](./examples/biograkn-queries/q-3.png)
+
+
 ### What are the diseases that are associated with protein interactions taking place in the liver?
+This query also makes use of the [`gene-disease-association-and-gene-protein-encoding-protein-disease-association Rule`](./schema.gql#L169).
 
 ```
 match
@@ -43,23 +80,25 @@ match
   $pl (tissue-context: $ti, biomolecular-process: $ppi) isa process-localisation;
   $ppi (interacting-protein: $pr, interacting-protein: $pr2) isa protein-protein-interaction;
   $pda (associated-protein: $pr, associated-disease: $di) isa protein-disease-association;
-offset 0; limit 30; get;
+limit 30; get;
 ```
 
-![Diseases associated to protein interactions taking place in liver](./examples/biograkn-queries/q-1.png)
+![Diseases associated to protein interactions taking place in liver](./examples/biograkn-queries/q-4.png)
 
-### What are the proteins associated with Asthma?
-Note that the data to answer this question is not explicitly stored in the knowledge graph. It's through the [`when-gene-associated-disease-then-protein-disease-association Rule`](./schema.gql#L162) that the inference is made to enable use to ask this question.
+
+### Which drugs and diseases are associated with the same differentially expressed gene from comparisons made in geo-series with id of GSE27876?
 
 ```
 match
-  $di isa disease has disease-name "Asthma";
-  $dda (associated-protein: $pr, associated-disease: $di) isa protein-disease-association; 
-offset 0; limit 10; get;
+  $geo-se isa geo-series has GEOStudy-id "GSE27876";
+  $comp (compared-groups: $geo-comp, containing-study: $geo-se) isa comparison;
+  $def (conducted-analysis: $geo-comp, differentially-expressed-gene: $ge) isa differentially-expressed-finding;
+  $dgi (target-gene: $ge, interacted-drug: $dr) isa drug-gene-interaction;
+  $gda (associated-gene: $ge, associated-disease: $di) isa gene-disease-association;
+limit 10; get;
 ```
 
-![Proteins associated with Asthma](./examples/biograkn-queries/q-2.png)
-
+![Diseases and drugs associated with differentially expressed gene from comparisons made in geo-series with id of GSE27876](./examples/biograkn-queries/q-5.png)
 
 
 ## References
