@@ -1,8 +1,12 @@
-# BioGrakn
+# BioGrakn - Disease Networks (DN)
 
-BioGrakn is a single knowledge graph of biomedical data ingested from [Uniprot](https://www.uniprot.org/), [Reactome](https://reactome.org/), [DGIdb](http://www.dgidb.org/), [DisGeNET](http://www.disgenet.org/web/DisGeNET/menu;jsessionid=np5qutaldora6gql80xqhmen), [HPA-Tissue](https://www.proteinatlas.org/humanproteome/tissue+specific), [EBI IntAct](https://www.ebi.ac.uk/intact/), [Kaneko](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3558318/), [Gene Expression Omnibus](https://www.ncbi.nlm.nih.gov/geo/) and [TissueNet](http://netbio.bgu.ac.il/tissuenet/).
+BioGrakn DN is a single knowledge graph of biomedical data describing disease networks, ingested from [Uniprot](https://www.uniprot.org/), [Reactome](https://reactome.org/), [DGIdb](http://www.dgidb.org/), [DisGeNET](http://www.disgenet.org/web/DisGeNET/menu;jsessionid=np5qutaldora6gql80xqhmen), [HPA-Tissue](https://www.proteinatlas.org/humanproteome/tissue+specific), [EBI IntAct](https://www.ebi.ac.uk/intact/), [Kaneko](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3558318/), [Gene Expression Omnibus](https://www.ncbi.nlm.nih.gov/geo/) and [TissueNet](http://netbio.bgu.ac.il/tissuenet/).
 
-BioGrakn provides an intuitive way to query interconnected and heterogeneous biomedical data in one single place. The schema that models the underlying knowledge graph alongside the descriptive query language, Graql, makes writing complex queries an extremely straightforward and intuitive process. Furthermore, the automated reasoning capability of Grakn, allows BioGrakn to become an intelligent database of biomedical data that infers implicit knowledge based on the explicitly stored data. BioGrakn can understand biological facts, infer based on new findings and enforce research constraints, all at query(run) time.
+BioGrakn DN provides an intuitive way to query interconnected and heterogeneous biomedical data in one single place. The schema that models the underlying knowledge graph alongside the descriptive query language, Graql, makes writing complex queries an extremJames Fletcher is introducing GRAKN.AI and #KnowledgeGraph #ConvolutionalNetworks to Paris. Watch live!
+
+
+
+https://www.youtube.com/watch?v=Yptv4dfhiJs&feature=shareely straightforward and intuitive process. Furthermore, the automated reasoning capability of Grakn, allows BioGrakn DN to become an intelligent database of biomedical data that infers implicit knowledge based on the explicitly stored data. BioGrakn DN can understand biological facts, infer based on new findings and enforce research constraints, all at query(run) time.
 
 ## Quickstart
 
@@ -11,23 +15,23 @@ BioGrakn provides an intuitive way to query interconnected and heterogeneous bio
 3. `cd` into the unzipped folder, via terminal or command prompt.
 4. run `./grakn start server`
 
-## Interacting With BioGrakn
-Queries can be run over BioGrakn, via Graql Console, Grakn Clients and Grakn Workbase.
+## Interacting With BioGrakn DN
+Queries can be run over BioGrakn DN, via Graql Console, Grakn Clients and Grakn Workbase.
 
 ### Via Graql Console
-While inside the unzipped folder, via terminal or command prompt, run: `./graql console -k biograkn_v2`. The console is now ready to answer your queries.
+While inside the unzipped folder, via terminal or command prompt, run: `./graql console -k BioGrakn DN_v2`. The console is now ready to answer your queries.
 
 ### Via Grakn Clients
-Grakn Clients are available for [Java](https://github.com/graknlabs/grakn/tree/master/client-java), [Node.js](https://github.com/graknlabs/grakn/tree/master/client-nodejs) and [Python](https://github.com/graknlabs/grakn/tree/master/client_python). Through these clients, you will be able to perform read and write operations over BioGrakn.
-See an example of how this is done in the [Grakn <> BLAST integration example](./examples/blast/analysis.py).
+Grakn Clients are available for [Java](https://github.com/graknlabs/grakn/tree/master/client-java), [Node.js](https://github.com/graknlabs/grakn/tree/master/client-nodejs) and [Python](https://github.com/graknlabs/grakn/tree/master/client_python). Through these clients, you will be able to perform read and write operations over BioGrakn DN.
+See an example of how this is done in the [Grakn <> BLAST integration example](./examples/blast/analysis.py), using the [Python](https://github.com/graknlabs/grakn/tree/master/client_python) client.
 
 ### Via Grakn Workbase
 Download the [latest release of Grakn Workbase](https://github.com/graknlabs/grakn/releases), install and run it.
 
-Read the [documentation on Workbase](http://dev.grakn.ai/docs/workbase/visualiser) or watch a short series of videos about [using workbase with the Grakn <> BLAST integration example](https://www.youtube.com/watch?v=PZoG-M_hY30&index=4&list=UUtZKw0RFof3x23KqGtW3yDA).
+Read the [documentation on Workbase](http://dev.grakn.ai/docs/workbase/visualiser) or watch a short series of videos about [using workbase with the Grakn <> BLAST integration example](https://www.youtube.com/watch?v=pHIer5roF4c&list=PLtEF8_xCPklaTR4RaB3ng9V3Ov7n980cQ).
 
 ## Understanding the Schema
-The schema for the BioGrakn knowledge graph defines how the knowledge graph is modelled to represent the reality of its dataset. To understand the underlying ontology, you may read through the [`schema.gql`](./schema.gql) or view the [visualised schema](./visualised-schema.png).
+The schema for the BioGrakn DN knowledge graph defines how the knowledge graph is modelled to represent the reality of its dataset. To understand the underlying data structure, you may read through the [`schema.gql`](./schema.gql) or view the [visualised schema](./visualised-schema.png).
 
 ## Example Queries
 
@@ -40,7 +44,7 @@ match
 limit 10; get;
 ```
 
-![Proteins encoded by gene with entrez-id of 100137049](./examples/biograkn-queries/q-1.png)
+![Proteins encoded by gene with entrez-id of 100137049](./examples/BioGrakn DN-queries/q-1.png)
 
 ### Which diseases affect the appendix tissue?
 Note that the data to answer this question is not explicitly stored in the knowledge graph. The [`protein-disease-association-and-tissue-enhancement-implies-disease-tissue-association Rule`](./schema.gql#L216) enables us to get the answer to this question using the following query.
@@ -52,7 +56,7 @@ match
 limit 10; get;
 ```
 
-![Disease that affect appendix tissue](./examples/biograkn-queries/q-2.png)
+![Disease that affect appendix tissue](./examples/BioGrakn DN-queries/q-2.png)
 
 ### What are the proteins associated with Asthma?
 Note that the data to answer this question is not explicitly stored in the knowledge graph. The [`gene-disease-association-and-gene-protein-encoding-protein-disease-association Rule`](./schema.gql#L169) enables us to get the answer to this question using the following query.
@@ -64,10 +68,10 @@ match
 limit 10; get;
 ```
 
-![Proteins associated with Asthma](./examples/biograkn-queries/q-3.png)
+![Proteins associated with Asthma](./examples/BioGrakn DN-queries/q-3.png)
 
 
-### What are the diseases that are associated with protein interactions taking place in the liver?
+### Which diseases are associated with protein interactions taking place in the liver?
 This query also makes use of the [`gene-disease-association-and-gene-protein-encoding-protein-disease-association Rule`](./schema.gql#L169).
 
 ```
@@ -83,7 +87,7 @@ match
 limit 30; get;
 ```
 
-![Diseases associated to protein interactions taking place in liver](./examples/biograkn-queries/q-4.png)
+![Diseases associated to protein interactions taking place in liver](./examples/BioGrakn DN-queries/q-4.png)
 
 
 ### Which drugs and diseases are associated with the same differentially expressed gene from comparisons made in geo-series with id of GSE27876?
@@ -98,9 +102,9 @@ match
 limit 10; get;
 ```
 
-![Diseases and drugs associated with differentially expressed gene from comparisons made in geo-series with id of GSE27876](./examples/biograkn-queries/q-5.png)
+![Diseases and drugs associated with differentially expressed gene from comparisons made in geo-series with id of GSE27876](./examples/BioGrakn DN-queries/q-5.png)
 
 
 ## References
-- **[BioGrakn: Accelerating Biomedical Knowledge Discovery with a Grakn Knowledge Graph](https://blog.grakn.ai/biograkn-accelerating-biomedical-knowledge-discovery-with-a-grakn-knowledge-graph-84706768d7d4)**
-- **[BioGrakn: A Knowledge Graph-Based Semantic Database for Biomedical Sciences](https://link.springer.com/chapter/10.1007/978-3-319-61566-0_28)**
+- **[BioGrakn DN: Accelerating Biomedical Knowledge Discovery with a Grakn Knowledge Graph](https://blog.grakn.ai/BioGrakn DN-accelerating-biomedical-knowledge-discovery-with-a-grakn-knowledge-graph-84706768d7d4)**
+- **[BioGrakn DN: A Knowledge Graph-Based Semantic Database for Biomedical Sciences](https://link.springer.com/chapter/10.1007/978-3-319-61566-0_28)**
