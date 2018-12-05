@@ -1,12 +1,8 @@
-# BioGrakn - Disease Networks (DN)
+# BioGrakn DN - Disease Networks (DN)
 
 BioGrakn DN is a single knowledge graph of biomedical data describing disease networks, ingested from [Uniprot](https://www.uniprot.org/), [Reactome](https://reactome.org/), [DGIdb](http://www.dgidb.org/), [DisGeNET](http://www.disgenet.org/web/DisGeNET/menu;jsessionid=np5qutaldora6gql80xqhmen), [HPA-Tissue](https://www.proteinatlas.org/humanproteome/tissue+specific), [EBI IntAct](https://www.ebi.ac.uk/intact/), [Kaneko](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3558318/), [Gene Expression Omnibus](https://www.ncbi.nlm.nih.gov/geo/) and [TissueNet](http://netbio.bgu.ac.il/tissuenet/).
 
-BioGrakn DN provides an intuitive way to query interconnected and heterogeneous biomedical data in one single place. The schema that models the underlying knowledge graph alongside the descriptive query language, Graql, makes writing complex queries an extremJames Fletcher is introducing GRAKN.AI and #KnowledgeGraph #ConvolutionalNetworks to Paris. Watch live!
-
-
-
-https://www.youtube.com/watch?v=Yptv4dfhiJs&feature=shareely straightforward and intuitive process. Furthermore, the automated reasoning capability of Grakn, allows BioGrakn DN to become an intelligent database of biomedical data that infers implicit knowledge based on the explicitly stored data. BioGrakn DN can understand biological facts, infer based on new findings and enforce research constraints, all at query(run) time.
+BioGrakn DN provides an intuitive way to query interconnected and heterogeneous biomedical data in one single place. The schema that models the underlying knowledge graph alongside the descriptive query language, Graql, makes writing complex queries an extremely straightforward and intuitive process. Furthermore, the automated reasoning capability of Grakn, allows BioGrakn DN to become an intelligent database of biomedical data that infers implicit knowledge based on the explicitly stored data. BioGrakn DN can understand biological facts, infer based on new findings and enforce research constraints, all at query (run) time.
 
 ## Quickstart
 
@@ -18,11 +14,11 @@ https://www.youtube.com/watch?v=Yptv4dfhiJs&feature=shareely straightforward and
 ## Interacting With BioGrakn DN
 Queries can be run over BioGrakn DN, via Graql Console, Grakn Clients and Grakn Workbase.
 
-### Via Graql Console
-While inside the unzipped folder, via terminal or command prompt, run: `./graql console -k BioGrakn DN_v2`. The console is now ready to answer your queries.
+### Via Grakn Console
+While inside the unzipped folder, via terminal or command prompt, run: `./grakn console -k BioGrakn_v2`. The console is now ready to answer your queries.
 
 ### Via Grakn Clients
-Grakn Clients are available for [Java](https://github.com/graknlabs/grakn/tree/master/client-java), [Node.js](https://github.com/graknlabs/grakn/tree/master/client-nodejs) and [Python](https://github.com/graknlabs/grakn/tree/master/client_python). Through these clients, you will be able to perform read and write operations over BioGrakn DN.
+Grakn Clients are available for [Java](https://github.com/graknlabs/grakn/tree/master/client-java), [Node.js](https://github.com/graknlabs/grakn/tree/master/client-nodejs) and [Python](https://github.com/graknlabs/grakn/tree/master/client_python). Using these clients, you will be able to perform read and write operations over BioGrakn DN.
 See an example of how this is done in the [Grakn <> BLAST integration example](./examples/blast/analysis.py), using the [Python](https://github.com/graknlabs/grakn/tree/master/client_python) client.
 
 ### Via Grakn Workbase
