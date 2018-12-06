@@ -40,7 +40,7 @@ match
 limit 10; get;
 ```
 
-![Proteins encoded by gene with entrez-id of 100137049](./examples/BioGrakn DN-queries/q-1.png)
+![Proteins encoded by gene with entrez-id of 100137049](./examples/biograkn-queries/q-1.png)
 
 ### Which diseases affect the appendix tissue?
 Note that the data to answer this question is not explicitly stored in the knowledge graph. The [`protein-disease-association-and-tissue-enhancement-implies-disease-tissue-association Rule`](./schema.gql#L216) enables us to get the answer to this question using the following query.
@@ -52,7 +52,7 @@ match
 limit 10; get;
 ```
 
-![Disease that affect appendix tissue](./examples/BioGrakn DN-queries/q-2.png)
+![Disease that affect appendix tissue](./examples/biograkn-queries/q-2.png)
 
 ### What are the proteins associated with Asthma?
 Note that the data to answer this question is not explicitly stored in the knowledge graph. The [`gene-disease-association-and-gene-protein-encoding-protein-disease-association Rule`](./schema.gql#L169) enables us to get the answer to this question using the following query.
@@ -83,7 +83,7 @@ match
 limit 30; get;
 ```
 
-![Diseases associated to protein interactions taking place in liver](./examples/BioGrakn DN-queries/q-4.png)
+![Diseases associated to protein interactions taking place in liver](./examples/biograkn-queries/q-4.png)
 
 
 ### Which drugs and diseases are associated with the same differentially expressed gene from comparisons made in geo-series with id of GSE27876?
@@ -98,7 +98,7 @@ match
 limit 10; get;
 ```
 
-![Diseases and drugs associated with differentially expressed gene from comparisons made in geo-series with id of GSE27876](./examples/BioGrakn DN-queries/q-5.png)
+![Diseases and drugs associated with differentially expressed gene from comparisons made in geo-series with id of GSE27876](./examples/biograkn-queries/q-5.png)
 
 
 ## References
