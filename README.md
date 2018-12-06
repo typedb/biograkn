@@ -64,7 +64,7 @@ match
 limit 10; get;
 ```
 
-![Proteins associated with Asthma](./examples/BioGrakn DN-queries/q-3.png)
+![Proteins associated with Asthma](./examples/biograkn-queries/q-3.png)
 
 
 ### Which diseases are associated with protein interactions taking place in the liver?
