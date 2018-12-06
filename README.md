@@ -6,16 +6,16 @@ BioGrakn DN provides an intuitive way to query interconnected and heterogeneous 
 
 ## Quickstart
 
-1. Download the latest release.
+1. Download [the latest release](https://www.dropbox.com/s/5y0lhcjf6p0qgl9/grakn-core-1.4.3-biograkn_dn.zip?dl=1).
 2. Unzip the downloaded file.
 3. `cd` into the unzipped folder, via terminal or command prompt.
-4. run `./grakn start server`
+4. run `./grakn server start`
 
 ## Interacting With BioGrakn DN
 Queries can be run over BioGrakn DN, via Graql Console, Grakn Clients and Grakn Workbase.
 
 ### Via Grakn Console
-While inside the unzipped folder, via terminal or command prompt, run: `./grakn console -k BioGrakn_v2`. The console is now ready to answer your queries.
+While inside the unzipped folder, via terminal or command prompt, run: `./grakn console -k biograkn_dn`. The console is now ready to answer your queries.
 
 ### Via Grakn Clients
 Grakn Clients are available for [Java](https://github.com/graknlabs/grakn/tree/master/client-java), [Node.js](https://github.com/graknlabs/grakn/tree/master/client-nodejs) and [Python](https://github.com/graknlabs/grakn/tree/master/client_python). Using these clients, you will be able to perform read and write operations over BioGrakn DN.
