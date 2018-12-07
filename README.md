@@ -6,7 +6,7 @@ BioGrakn DN provides an intuitive way to query interconnected and heterogeneous 
 
 ## Quickstart
 
-1. Download [the latest release](https://www.dropbox.com/s/5y0lhcjf6p0qgl9/grakn-core-1.4.3-biograkn_dn.zip?dl=1).
+1. Download [the latest release ](https://www.dropbox.com/s/5y0lhcjf6p0qgl9/grakn-core-1.4.3-biograkn_dn.zip?dl=1) (size: 2.7 GB).
 2. Unzip the downloaded file.
 3. `cd` into the unzipped folder, via terminal or command prompt.
 4. run `./grakn server start`
