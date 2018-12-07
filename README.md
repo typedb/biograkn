@@ -6,7 +6,7 @@ BioGrakn DN provides an intuitive way to query interconnected and heterogeneous 
 
 ## Quickstart
 
-1. Download [the latest release ](https://www.dropbox.com/s/5y0lhcjf6p0qgl9/grakn-core-1.4.3-biograkn_dn.zip?dl=1) (size: 2.7 GB).
+1. Download [the latest release](https://www.dropbox.com/s/tn6ney3nc0vwm6f/grakn-core-1.4.2-biograkn_dn-0.1.zip?dl=1) (size: 2.5 GB).
 2. Unzip the downloaded file.
 3. `cd` into the unzipped folder, via terminal or command prompt.
 4. run `./grakn server start`
@@ -14,17 +14,17 @@ BioGrakn DN provides an intuitive way to query interconnected and heterogeneous 
 ## Interacting With BioGrakn DN
 Queries can be run over BioGrakn DN, via Graql Console, Grakn Clients and Grakn Workbase.
 
-### Via Grakn Console
-While inside the unzipped folder, via terminal or command prompt, run: `./grakn console -k biograkn_dn`. The console is now ready to answer your queries.
-
-### Via Grakn Clients
-Grakn Clients are available for [Java](https://github.com/graknlabs/grakn/tree/master/client-java), [Node.js](https://github.com/graknlabs/grakn/tree/master/client-nodejs) and [Python](https://github.com/graknlabs/grakn/tree/master/client_python). Using these clients, you will be able to perform read and write operations over BioGrakn DN.
-See an example of how this is done in the [Grakn <> BLAST integration example](./examples/blast/analysis.py), using the [Python](https://github.com/graknlabs/grakn/tree/master/client_python) client.
-
 ### Via Grakn Workbase
 Download the [latest release of Grakn Workbase](https://github.com/graknlabs/grakn/releases), install and run it.
 
 Read the [documentation on Workbase](http://dev.grakn.ai/docs/workbase/visualiser) or watch a short series of videos about [using workbase with the Grakn <> BLAST integration example](https://www.youtube.com/watch?v=pHIer5roF4c&list=PLtEF8_xCPklaTR4RaB3ng9V3Ov7n980cQ).
+
+### Via Grakn Console
+While inside the unzipped folder, via terminal or command prompt, run: `./graql console -k biograkn_dn`. The console is now ready to answer your queries.
+
+### Via Grakn Clients
+Grakn Clients are available for [Java](https://github.com/graknlabs/grakn/tree/master/client-java), [Node.js](https://github.com/graknlabs/grakn/tree/master/client-nodejs) and [Python](https://github.com/graknlabs/grakn/tree/master/client_python). Using these clients, you will be able to perform read and write operations over BioGrakn DN.
+See an example of how this is done in the [Grakn <> BLAST integration example](./examples/blast/analysis.py), using the [Python](https://github.com/graknlabs/grakn/tree/master/client_python) client.
 
 ## Understanding the Schema
 The schema for the BioGrakn DN knowledge graph defines how the knowledge graph is modelled to represent the reality of its dataset. To understand the underlying data structure, you may read through the [`schema.gql`](./schema.gql) or view the [visualised schema](./visualised-schema.png).
