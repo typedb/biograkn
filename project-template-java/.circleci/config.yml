@@ -1,0 +1,172 @@
+version: 2.1
+
+workflows:
+  ci-pipeline-pr:
+    jobs:
+      - tests:
+          filters:
+            branches:
+              ignore: /master/
+      - test-dists-ubuntu:
+          filters:
+            branches:
+              ignore: /master/
+          requires:
+            - tests
+      - test-dists-fedora:
+          filters:
+            branches:
+              ignore: /master/
+          requires:
+            - tests
+  ci-pipeline-master:
+    jobs:
+      - tests:
+          filters:
+            branches:
+              only: /master/
+      - test-dists-ubuntu:
+          filters:
+            branches:
+              only: /master/
+          requires:
+            - tests
+      - test-dists-fedora:
+          filters:
+            branches:
+              only: /master/
+          requires:
+            - tests
+      - approve-deploy-github:
+          filters:
+            branches:
+              only: /master/
+          type: approval
+          requires:
+            - test-dists-ubuntu
+            - test-dists-fedora
+      - deploy-github:
+          filters:
+            branches:
+              only: /master/
+          requires:
+            - approve-deploy-github
+      - approve-deploy-all:
+          filters:
+            branches:
+              only: /master/
+          type: approval
+          requires:
+            - deploy-github
+      - deploy-all:
+          filters:
+            branches:
+              only: /master/
+          requires:
+            - approve-deploy-all
+
+jobs:
+  tests:
+    machine: true
+    steps:
+      - checkout
+      - bazel_install
+      - bazel_add_rbe_credential
+      - bazel:
+          command: bazel test //...
+  test-dists:
+    machine: true
+    steps:
+      - checkout
+      - bazel_install
+      - bazel_add_rbe_credential
+      - bazel:
+          command: bazel build //...
+  test-dists-ubuntu:
+    docker:
+      - image: ubuntu:16.04
+        environment:
+          _JAVA_OPTIONS: -Xmx2g
+    steps:
+      - run: apt-get update
+      - run: apt-get install -y software-properties-common
+      - run: add-apt-repository ppa:openjdk-r/ppa
+      - run: apt-get update
+      - run: apt-get install -y sudo gcc build-essential openjdk-8-jdk python-dev unzip curl git
+
+      - checkout
+      - bazel_install
+      - bazel_add_rbe_credential
+      - bazel:
+          command: bazel build //...
+
+  test-dists-fedora:
+    docker:
+      - image: fedora:29
+        environment:
+          _JAVA_OPTIONS: -Xmx2g
+    steps:
+      - run: yum install -y http://opensource.wandisco.com/centos/7/git/x86_64/wandisco-git-release-7-2.noarch.rpm
+      - run: yum update -y
+      - run: yum install -y sudo procps which gcc gcc-c++ java-1.8.0-openjdk-devel python-devel unzip git
+      - checkout
+      - bazel_install
+      - bazel_add_rbe_credential
+      - bazel:
+          command: bazel build //...
+
+  deploy-github:
+    machine: true
+    steps:
+      - checkout
+      - bazel_install
+      - bazel_add_rbe_credential
+      - run: echo test succeeded.
+  deploy-all:
+    machine: true
+    steps:
+      - checkout
+      - bazel_install
+      - bazel_add_rbe_credential
+      - run: echo test succeeded.
+
+commands:
+  bazel_install:
+    steps:
+      - run:
+          name: Bazel - Install
+          command: |
+            curl -OL https://github.com/bazelbuild/bazel/releases/download/0.20.0/bazel-0.20.0-installer-linux-x86_64.sh
+            chmod +x bazel-0.20.0-installer-linux-x86_64.sh
+            sudo ./bazel-0.20.0-installer-linux-x86_64.sh
+  bazel_add_rbe_credential:
+    steps:
+      - run:
+          name: Bazel - Add RBE Credential
+          command: |
+            if [[ -n "$BAZEL_RBE_CREDENTIAL" ]]; then
+              BAZEL_RBE_CREDENTIAL_LOCATION=~/.config/gcloud/application_default_credentials.json
+              echo "An RBE credential is found and will be saved to $BAZEL_RBE_CREDENTIAL_LOCATION. Bazel will be executed with RBE support."
+              mkdir -p ~/.config/gcloud/
+              echo $BAZEL_RBE_CREDENTIAL > "$BAZEL_RBE_CREDENTIAL_LOCATION"
+            else
+              echo "No RBE credential found. Bazel will be executed locally without RBE support."
+            fi
+
+  bazel:
+    parameters:
+      command:
+          type: string
+    steps:
+      - run:
+          name: Bazel - Execute
+          command: |
+            if [[ -f ~/.config/gcloud/application_default_credentials.json ]]; then
+              echo "Bazel will be executed with RBE support. This means the build is remotely executed and the cache will be re-used by subsequent CI jobs."
+              CMD="<< parameters.command >> --config=rbe"
+            else
+              echo "Bazel will be executed locally (without RBE support)."
+              CMD="<< parameters.command >>"
+            fi
+            echo "Executing $CMD"
+            $CMD
