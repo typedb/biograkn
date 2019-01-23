@@ -1,7 +1,7 @@
 java_library(
-    name = "xz",
+    name = "xmlbeans",
     exports = [
-        "//external:jar/org/tukaani/xz"
+        "//external:jar/org/apache/xmlbeans/xmlbeans"
     ],
     visibility = [
         "//dependencies/maven/artifacts:__subpackages__"

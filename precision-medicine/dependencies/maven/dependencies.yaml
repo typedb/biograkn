@@ -19,6 +19,7 @@ dependencies:
       version: "23.0"
       lang: java
 
+
   ai.grakn:
     client-java:
       version: "1.4.3"
@@ -32,3 +33,13 @@ dependencies:
       version: "1.4.3"
       lang: java
 
+
+  org.apache.poi:
+    poi-ooxml:
+      version: "4.0.1"
+      lang: java
+
+  org.apache.commons:
+    commons-csv:
+      version: "1.5"
+      lang: java

@@ -1,10 +1,19 @@
 java_library(
+    name = "commons-collections4",
+    exports = [
+        "//external:jar/org/apache/commons/commons-collections4"
+    ],
+    visibility = [
+        "//dependencies/maven/artifacts:__subpackages__"
+    ]
+)
+
+
+
+java_library(
     name = "commons-compress",
     exports = [
         "//external:jar/org/apache/commons/commons-compress"
-    ],
-    runtime_deps = [
-        "//dependencies/maven/artifacts/org/tukaani:xz"
     ],
     visibility = [
         "//dependencies/maven/artifacts:__subpackages__"
@@ -20,6 +29,18 @@ java_library(
     ],
     visibility = [
         "//dependencies/maven/artifacts:__subpackages__"
+    ]
+)
+
+
+
+java_library(
+    name = "commons-csv",
+    exports = [
+        "//external:jar/org/apache/commons/commons-csv"
+    ],
+    visibility = [
+        "//visibility:public"
     ]
 )
 

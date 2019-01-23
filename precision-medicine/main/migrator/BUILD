@@ -5,7 +5,10 @@ java_library(
     deps = [
         "//dependencies/maven/artifacts/ai/grakn:client-java",
         "//dependencies/maven/artifacts/ai/grakn:grakn-core",
-        "//dependencies/maven/artifacts/ai/grakn:grakn-graql"
+        "//dependencies/maven/artifacts/ai/grakn:grakn-graql",
+
+        "//dependencies/maven/artifacts/org/apache/poi:poi-ooxml",
+        "//dependencies/maven/artifacts/org/apache/commons:commons-csv"
     ]
 )
 
