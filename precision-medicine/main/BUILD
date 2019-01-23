@@ -2,8 +2,8 @@ java_library(
     name = "main",
     srcs = glob(["*.java"]),
     deps = [
-        "//common",
-        "//main/migrator:migrator",
+        "//precision-medicine/common",
+        "//precision-medicine/main/migrator:migrator",
         "//dependencies/maven/artifacts/com/google/guava",
 
         "//dependencies/maven/artifacts/ai/grakn:client-java",
@@ -17,8 +17,8 @@ java_test(
     name = "main-test",
     test_class = "grakn.template.java.MainTest",
     srcs = ["test/MainTest.java"],
-    deps = ["//main"],
-    data = ["//:distribution"]
+    deps = ["//precision-medicine/main"],
+    data = ["//precision-medicine:distribution"]
 )
 
 java_binary(

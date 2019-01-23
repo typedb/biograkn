@@ -14,8 +14,8 @@ java_library(
 
 java_test(
     name = "migrator-test",
-    test_class = "grakn.template.java.MigratorTest",
+    test_class = "grakn.template.java.migrator.test.MigratorTest",
     srcs = glob(["test/MigratorTest.java"]),
-    deps = [ "//main/migrator:migrator" ],
+    deps = [ "//precision-medicine/main/migrator:migrator" ],
     visibility = [ "//visibility:public" ]
 )

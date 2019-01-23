@@ -3,10 +3,10 @@ load("@graknlabs_rules_deployment//distribution:rules.bzl", "distribution_struct
 distribution_structure(
     name="distribution-structure",
     targets = {
-        "//main": "services/lib/"
+        "//precision-medicine/main": "services/lib/"
     },
     additional_files = {
-        "//:run": "run",
+        "//precision-medicine:run": "run",
     },
     permissions = {
       "server/services/cassandra/cassandra.yaml": "0755",
