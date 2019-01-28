@@ -73,7 +73,7 @@ jobs:
       - bazel_install
       - bazel_add_rbe_credential
       - bazel:
-          command: bazel test //...
+          command: bazel test //... --test_output=streamed
   test-dists:
     machine: true
     steps:
