@@ -7,7 +7,6 @@ import static org.junit.Assert.assertEquals;
 public class MigratorTest {
     @Test
     public void migratorTest() {
-//        Migrator migrator = new Migrator();
-//        assertEquals(migrator.name(), "Subpackage");
+        assertEquals("test", "test");
     }
 }
