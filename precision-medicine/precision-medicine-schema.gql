@@ -1,0 +1,126 @@
+define
+
+person-id sub attribute datatype double;
+age sub attribute datatype double;
+gender sub attribute datatype string;
+disease-id sub attribute datatype string;
+source sub attribute datatype string;
+gene-id sub attribute datatype string;
+snp-id sub attribute datatype string;
+pm-id sub attribute datatype double;
+abstract sub attribute datatype string;
+score sub attribute datatype double;
+url sub attribute datatype string;
+min-age sub attribute datatype double;
+max-age sub attribute datatype double;
+allele-symbol sub attribute datatype string;
+gene-symbol sub attribute datatype string;
+nct-id sub attribute datatype string;
+status sub attribute datatype string;
+results sub attribute datatype boolean;
+intervention-type sub attribute datatype string;
+mesh-id sub attribute datatype string;
+drug-bank-id sub attribute datatype string;
+pub-chem-cid sub attribute datatype string;
+participants-gender sub attribute datatype string;
+
+name sub attribute datatype string;
+disease-name sub name;
+drug-name sub name;
+
+title sub attribute datatype string;
+article-title sub title;
+clinical-trial-title sub title;
+
+person sub entity, 
+    has person-id,
+    has age,
+    has gender,
+    plays diagnosed-patient,
+    plays genome-owner;
+
+disease sub entity,
+    has disease-name,
+    has disease-id,
+    has source,
+    plays diagnosed-disease,
+    plays associated-disease,
+    plays targeted-disease,
+    plays mentioned-disease,
+    plays relevant-person;
+
+gene sub entity,
+    has gene-id,
+    has gene-symbol,
+    plays varied-gene,
+    plays identified-gene,
+    plays mentioned-gene;
+
+allele sub entity,
+    has allele-symbol,
+    has snp-id,
+    plays mentioned-allele,
+    plays identified-allele,
+    plays genetic-variant;
+
+pubmed-article sub entity,
+    has pm-id,
+    has article-title,
+    has abstract,
+    plays mined-pubmed-article
+    plays relevant-literation;
+
+clinical-trial sub relationship,
+    has nct-id,
+    has status,
+    has results,
+    has intervention-type,
+    has url,
+    has clinical-trial-title,
+    has min-age,
+    has max-age,
+    has participants-gender,
+    relates targeted-disease
+    plays relevant-clinical-trial;
+
+drug sub entity,
+    has drug-name,
+    has mesh-id,
+    has drug-bank-id,
+    has pub-chem-cid,
+    plays associated-drug,
+    plays relevant-therapeutic;
+
+diagnosis sub relationship,
+    relates diagnosed-patient,
+    relates diagnosed-disease;
+
+gene-identification sub relationship,
+    relates identified-gene,
+    relates genome-owner;
+
+allele-identification sub relationship,
+    relates identified-allele,
+    relates genome-owner;  
+
+genetic-variation sub relationship,
+    relates genetic-variant,
+    relates varied-gene;
+
+text-mined-analysis sub relationship,
+    has score,
+    relates mined-pubmed-article,
+    relates mentioned-disease,
+    relates mentioned-gene,
+    relates mentioned-allele;
+
+disease-drug-association sub relationship,
+    relates associated-disease,
+    relates associated-drug;
+
+theraputic-relevance sub relationship,
+    relates relevant-person,
+    relates relevant-therapeutic,
+    relates relevant-clinical-trial,
+    relates relevant-literation;
+

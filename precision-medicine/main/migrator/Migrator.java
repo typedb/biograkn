@@ -2,12 +2,9 @@ package grakn.template.java.migrator;
 
 import ai.grakn.GraknTxType;
 import ai.grakn.client.Grakn;
-import ai.grakn.graql.GetQuery;
-import ai.grakn.graql.Graql;
-import ai.grakn.graql.InsertQuery;
+import ai.grakn.concept.ConceptId;
+import ai.grakn.graql.*;
 import ai.grakn.graql.answer.ConceptMap;
-
-import java.util.ArrayList;
 import java.util.List;
 import static ai.grakn.graql.Graql.var;
 import java.io.*;
@@ -17,88 +14,72 @@ import java.nio.file.Paths;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
-import javax.xml.stream.XMLEventReader;
-import javax.xml.stream.XMLInputFactory;
-import javax.xml.stream.events.StartElement;
-import javax.xml.stream.events.XMLEvent;
 
 public class Migrator {
 
-    public void migratePatients(Grakn.Session session) {
+    public void migratePersons(Grakn.Session session) {
         try {
-            // First, create a new XMLInputFactory
-            XMLInputFactory inputFactory = XMLInputFactory.newInstance();
+            BufferedReader reader = Files.newBufferedReader(Paths.get("precision-medicine/datasets/persons.csv"));
+            CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
-            // Setup a new eventReader
-            InputStream in = new FileInputStream("/Users/syedirtazaraza/Desktop/datasets/topics2018.xml");
-            XMLEventReader eventReader = inputFactory.createXMLEventReader(in);
+            for (CSVRecord csvRecord: csvParser) {
 
-            double patient_id = 1;
-            double age;
-            String gender;
-
-            // read the XML document
-            while (eventReader.hasNext()) {
-                Grakn.Transaction writeTransaction = session.transaction(GraknTxType.WRITE);
-
-                XMLEvent event = eventReader.nextEvent();
-
-                if (event.isStartElement()) {
-                    StartElement startElement = event.asStartElement();
-
-                    if (startElement.getName().getLocalPart().equals("demographic")) {
-                        event = eventReader.nextEvent();
-
-                        String demographic = event.asCharacters().getData();
-                        age = Double.parseDouble(demographic.substring(0, demographic.indexOf("-")));
-                        gender = demographic.substring(demographic.indexOf(" ") + 1);
-
-                        InsertQuery insertQuery = Graql.insert(var("p").isa("patient")
-                                .has("patient_id", patient_id)
-                                .has("age", age)
-                                .has("gender", gender));
-                        List<ConceptMap> insertedId = insertQuery.withTx(writeTransaction).execute();
-                        System.out.println("Inserted a patient with ID: " + insertedId.get(0).get("p").id());
-
-                        patient_id++;
-                    }
+                // skip header
+                if (csvRecord.getRecordNumber() == 1) {
+                    continue;
                 }
+
+                double personId = Double.parseDouble(csvRecord.get(0));
+                double age = Double.parseDouble(csvRecord.get(1));
+                String gender = csvRecord.get(2);
+
+
+                InsertQuery insertQuery = Graql.insert(var("p").isa("person")
+                        .has("person-id", personId)
+                        .has("age", age)
+                        .has("gender", gender));
+
+                Grakn.Transaction writeTransaction = session.transaction(GraknTxType.WRITE);
+                List<ConceptMap> insertedId = insertQuery.withTx(writeTransaction).execute();
+                System.out.println("Inserted a person with ID: " + insertedId.get(0).get("p").id());
                 writeTransaction.commit();
             }
 
-            System.out.println("-----patients have been loaded-----");
-        } catch (Exception e) {
+            System.out.println("-----persons have been migrated-----");
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public void migrateDiseases(Grakn.Session session) {
         try {
-            BufferedReader reader = Files.newBufferedReader(Paths.get("/Users/syedirtazaraza/Desktop/datasets/diseases.csv"));
+            BufferedReader reader = Files.newBufferedReader(Paths.get("precision-medicine/datasets/diseases.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
             for (CSVRecord csvRecord: csvParser) {
-                Grakn.Transaction writeTransaction = session.transaction(GraknTxType.WRITE);
 
+                // skip header
                 if (csvRecord.getRecordNumber() == 1) {
                     continue;
                 }
 
-                String disease_name = csvRecord.get(0);
+                String diseaseName = csvRecord.get(0);
                 String source = csvRecord.get(1);
-                String disease_id = csvRecord.get(2);
+                String diseaseId = csvRecord.get(2);
+
 
                 InsertQuery insertQuery = Graql.insert(var("d").isa("disease")
-                        .has("disease_name", disease_name)
+                        .has("disease-name", diseaseName)
                         .has("source", source)
-                        .has("disease_id", disease_id));
+                        .has("disease-id", diseaseId));
 
+                Grakn.Transaction writeTransaction = session.transaction(GraknTxType.WRITE);
                 List<ConceptMap> insertedId = insertQuery.withTx(writeTransaction).execute();
                 System.out.println("Inserted a disease with ID: " + insertedId.get(0).get("d").id());
                 writeTransaction.commit();
             }
 
-            System.out.println("-----diseases have been loaded-----");
+            System.out.println("-----diseases have been migrated-----");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -106,325 +87,324 @@ public class Migrator {
 
     public void migrateGenes(Grakn.Session session) {
         try {
-            BufferedReader reader = Files.newBufferedReader(Paths.get("/Users/syedirtazaraza/Desktop/datasets/genes.csv"));
+            BufferedReader reader = Files.newBufferedReader(Paths.get("precision-medicine/datasets/genes.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
             for (CSVRecord csvRecord: csvParser) {
-                Grakn.Transaction writeTransaction = session.transaction(GraknTxType.WRITE);
 
+                // skip header
                 if (csvRecord.getRecordNumber() == 1) {
                     continue;
                 }
 
-                String gene_id = csvRecord.get(0);
-                String gene_symbol = csvRecord.get(1);
+                String geneId = csvRecord.get(0);
+                String geneSymbol = csvRecord.get(1);
 
                 InsertQuery insertQuery = Graql.insert(var("g").isa("gene")
-                        .has("gene_id", gene_id)
-                        .has("gene_symbol", gene_symbol));
+                        .has("gene-id", geneId)
+                        .has("gene-symbol", geneSymbol));
 
+                Grakn.Transaction writeTransaction = session.transaction(GraknTxType.WRITE);
                 List<ConceptMap> insertedId = insertQuery.withTx(writeTransaction).execute();
                 System.out.println("Inserted a gene with ID: " + insertedId.get(0).get("g").id());
                 writeTransaction.commit();
             }
 
-            System.out.println("-----genes have been loaded-----");
+            System.out.println("-----genes have been migrated-----");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    public void migrateGeneDiseaseAssociations(Grakn.Session session) {
-        try {
-
-            BufferedReader reader = Files.newBufferedReader(Paths.get("/Users/syedirtazaraza/Desktop/datasets/gene_disease_associations.csv"));
-            CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
-
-            for (CSVRecord csvRecord: csvParser) {
-                Grakn.Transaction writeTransaction = session.transaction(GraknTxType.WRITE);
-
-
-                if (csvRecord.getRecordNumber() == 1) {
-                    continue;
-                }
-
-                String gene_id = csvRecord.get(0);
-                String disease_id = csvRecord.get(2);
-                Double score = Double.parseDouble(csvRecord.get(4));
-                String no_of_pmids = csvRecord.get(5);
-                String no_of_snps = csvRecord.get(6);
-                String source = csvRecord.get(7);
-
-                InsertQuery insertQuery = Graql.match(
-                        var("g").isa("gene").has("gene_id", gene_id),
-                        var("d").isa("disease").has("disease_id", disease_id))
-                        .insert(var("gda").isa("gene_disease_association")
-                                .rel("associated_gene", "g")
-                                .rel("associated_disease", "d")
-                                .has("score", score)
-                                .has("no_of_pmids", no_of_pmids)
-                                .has("no_of_snps", no_of_snps)
-                                .has("source", source));
-
-                List<ConceptMap> insertedId = insertQuery.withTx(writeTransaction).execute();
-                System.out.println("Inserted a gene_disease_association at: " + csvRecord.getRecordNumber());
-                writeTransaction.commit();
-            }
-
-            System.out.println("-----gene disease associations have been loaded-----");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     public void migrateVariants(Grakn.Session session) {
         try {
-            BufferedReader reader = Files.newBufferedReader(Paths.get("/Users/syedirtazaraza/Desktop/datasets/variants.csv"));
+            BufferedReader reader = Files.newBufferedReader(Paths.get("precision-medicine/datasets/variants.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
             for (CSVRecord csvRecord: csvParser) {
-                Grakn.Transaction writeTransaction = session.transaction(GraknTxType.WRITE);
 
+                // skip header
                 if (csvRecord.getRecordNumber() == 1) {
                     continue;
                 }
 
-                String snp_id = csvRecord.get(0);
+                String snpId = csvRecord.get(0);
+                String alleleSymbol = csvRecord.get(1);
 
-                InsertQuery insertQuery = Graql.insert(var("v").isa("variant")
-                        .has("snp_id", snp_id));
+                InsertQuery insertQuery = Graql.insert(var("v").isa("allele")
+                        .has("snp-id", snpId)
+                        .has("allele-symbol", alleleSymbol));
 
-                List<ConceptMap> insertedId = insertQuery.withTx(writeTransaction).execute();
-                System.out.println("Inserted a variant with ID: " + insertedId.get(0).get("v").id());
-                writeTransaction.commit();
-            }
-
-            System.out.println("-----variants have been loaded-----");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void migrateVariantDiseaseAssociations(Grakn.Session session) {
-        try {
-
-            BufferedReader reader = Files.newBufferedReader(Paths.get("/Users/syedirtazaraza/Desktop/datasets/variant_disease_associations.csv"));
-            CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
-
-            for (CSVRecord csvRecord: csvParser) {
                 Grakn.Transaction writeTransaction = session.transaction(GraknTxType.WRITE);
-
-                if (csvRecord.getRecordNumber() == 1) {
-                    continue;
-                }
-
-                String snp_id = csvRecord.get(0);
-                String disease_id = csvRecord.get(2);
-                Double score = Double.parseDouble(csvRecord.get(3));
-                String no_of_pmids = csvRecord.get(4);
-                String source = csvRecord.get(5);
-
-                InsertQuery insertQuery = Graql.match(
-                        var("v").isa("variant").has("snp_id", snp_id),
-                        var("d").isa("disease").has("disease_id", disease_id))
-                        .insert(var("vda").isa("variant_disease_association")
-                                .rel("associated_variant", "v")
-                                .rel("associated_disease", "d")
-                                .has("score", score)
-                                .has("no_of_pmids", no_of_pmids)
-                                .has("source", source));
-
                 List<ConceptMap> insertedId = insertQuery.withTx(writeTransaction).execute();
-                System.out.println("Inserted a variant_disease_association at: " + csvRecord.getRecordNumber());
+                System.out.println("Inserted a allele with ID: " + insertedId.get(0).get("v").id());
                 writeTransaction.commit();
             }
 
-            System.out.println("-----variant disease associations have been loaded-----");
+            System.out.println("-----alleles have been migrated-----");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public void migrateClinicalTrials(Grakn.Session session) {
+        try {
+            BufferedReader reader = Files.newBufferedReader(Paths.get("precision-medicine/datasets/clinical_trials_melanoma.csv"));
+            CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
-        File dir = new File("/Users/syedirtazaraza/Desktop/datasets/clinical_trials");
-        File[] directoryListing = dir.listFiles();
+            for (CSVRecord csvRecord: csvParser) {
 
-//        GetQuery query = Graql.match(var("d").isa("disease").has("disease_name", var("n"))).get("n");
-//
-//        Grakn.Transaction readTransaction = session.transaction(GraknTxType.READ);
-//
-//        List<ConceptMap> answers = query.withTx(readTransaction).execute();
-//
-//        String diseaseNames = "";
-//
-//        for (ConceptMap conceptMap : answers) {
-//            diseaseNames += (String) conceptMap.get("n").asAttribute().value() + " ";
-//        }
-
-        for (File subDir : directoryListing) {
-            File[] clinicalTrials = subDir.listFiles();
-            for (File clinicalTrial : clinicalTrials) {
-
-
-                try {
-                    // First, create a new XMLInputFactory
-                    XMLInputFactory inputFactory = XMLInputFactory.newInstance();
-
-                    // Setup a new eventReader
-                    InputStream in = new FileInputStream(clinicalTrial);
-                    XMLEventReader eventReader = inputFactory.createXMLEventReader(in);
-
-                    String url = "";
-                    String title = "";
-                    double min_age = -2;
-                    double max_age = -2;
-                    String gender = "";
-
-                    // read the XML document
-                    while (eventReader.hasNext()) {
-
-                        XMLEvent event = eventReader.nextEvent();
-
-                        if (event.isStartElement()) {
-                            StartElement startElement = event.asStartElement();
-
-                            if (startElement.getName().getLocalPart().equals("url")) {
-                                event = eventReader.nextEvent();
-                                if (event.asCharacters().getData().contains("clinicaltrials.gov")) {
-                                    url = event.asCharacters().getData();
-                                }
-                            }
-
-                            if (startElement.getName().getLocalPart().equals("brief_title")) {
-                                event = eventReader.nextEvent();
-                                title = event.asCharacters().getData();
-                            }
-
-                            if (startElement.getName().getLocalPart().equals("minimum_age")) {
-                                event = eventReader.nextEvent();
-                                String minimum_age = event.asCharacters().getData();
-
-                                if (minimum_age.equals("N/A")) {
-                                    min_age = -1;
-                                } else if (minimum_age.contains("Years")) {
-                                    min_age = Double.parseDouble(minimum_age.substring(0, minimum_age.indexOf(" ")));
-                                } else if (minimum_age.contains("Months")) {
-                                    min_age = Double.parseDouble(minimum_age.substring(0, minimum_age.indexOf(" "))) / 12;
-                                } else if (minimum_age.contains("Weeks")) {
-                                    min_age = Double.parseDouble(minimum_age.substring(0, minimum_age.indexOf(" "))) / 52;
-                                } else {
-                                    min_age = Double.parseDouble(minimum_age.substring(0, minimum_age.indexOf(" "))) / 365;
-                                }
-                            }
-                            if (startElement.getName().getLocalPart().equals("maximum_age")) {
-                                event = eventReader.nextEvent();
-                                String maximum_age = event.asCharacters().getData();
-
-                                if (maximum_age.equals("N/A")) {
-                                    max_age = -1;
-                                } else if (maximum_age.contains("Years")) {
-                                    max_age = Double.parseDouble(maximum_age.substring(0, maximum_age.indexOf(" ")));
-                                } else if (maximum_age.contains("Months")) {
-                                    max_age = Double.parseDouble(maximum_age.substring(0, maximum_age.indexOf(" "))) / 12;
-                                } else if (maximum_age.contains("Weeks")) {
-                                    max_age = Double.parseDouble(maximum_age.substring(0, maximum_age.indexOf(" "))) / 52;
-                                } else {
-                                    max_age = Double.parseDouble(maximum_age.substring(0, maximum_age.indexOf(" "))) / 365;
-                                }
-                            }
-
-                            if (startElement.getName().getLocalPart().equals("gender")) {
-                                event = eventReader.nextEvent();
-                                gender = event.asCharacters().getData();
-                            }
-                        }
-                    }
-
-                    if(!url.equals("") && !title.equals("") && min_age != -2 & max_age != -2 && !gender.equals("")) {
-                        Grakn.Transaction writeTransaction = session.transaction(GraknTxType.WRITE);
-
-                        InsertQuery insertQuery = Graql.insert(var("ct").isa("clinical_trial")
-                                .has("url", url)
-                                .has("title", title)
-                                .has("min_age", min_age)
-                                .has("max_age", max_age)
-                                .has("gender", gender));
-
-                        List<ConceptMap> insertedId = insertQuery.withTx(writeTransaction).execute();
-                        System.out.println("Inserted a clinical trial with ID: " + insertedId.get(0).get("ct").id());
-
-                        writeTransaction.commit();
-                    }
-
-                } catch (Exception e) {
-                    e.printStackTrace();
+                // skip header
+                if (csvRecord.getRecordNumber() == 1) {
+                    continue;
                 }
+
+                String nctId = csvRecord.get(0);
+                String clinicalTrialTitle = csvRecord.get(1);
+                String status = csvRecord.get(2);
+                boolean results;
+                if (csvRecord.get(3).equals("Has Results")) {
+                    results = true;
+                } else {
+                    results = false;
+                }
+
+                String interventionType = csvRecord.get(4);
+                String participantsGender = csvRecord.get(5);
+
+                String[] ages = csvRecord.get(6).split("(and|to)");
+
+                double minAge;
+                double maxAge;
+
+                if (ages[0].contains("up")) {
+                    minAge = 0;
+                } else if (ages[0].contains("Years")) {
+                    minAge = Double.parseDouble(ages[0].replaceAll("\\D+",""));
+                } else {
+                    minAge = Double.parseDouble(ages[0].replaceAll("\\D+",""))/12;
+                }
+
+                if (ages[1].contains("older")) {
+                    maxAge = 130;
+                } else if (ages[1].contains("Years")) {
+                    maxAge = Double.parseDouble(ages[1].replaceAll("\\D+",""));
+                } else {
+                    maxAge = Double.parseDouble(ages[1].replaceAll("\\D+",""))/12;
+                }
+
+                String url = csvRecord.get(7);
+
+                InsertQuery insertQuery = Graql.match(
+                        var("d").isa("disease").has("disease-id", "C0025202"))
+                        .insert(var("c").isa("clinical-trial")
+                        .has("nct-id", nctId)
+                        .has("clinical-trial-title", clinicalTrialTitle)
+                        .has("status", status)
+                        .has("results", results)
+                        .has("intervention-type", interventionType)
+                        .has("participants-gender", participantsGender)
+                        .has("min-age", minAge)
+                        .has("max-age", maxAge)
+                        .has("url", url)
+                        .rel("targeted-disease", "d"));
+
+                Grakn.Transaction writeTransaction = session.transaction(GraknTxType.WRITE);
+                List<ConceptMap> insertedId = insertQuery.withTx(writeTransaction).execute();
+                System.out.println("Inserted a clinical trial with ID: " + insertedId.get(0).get("c").id());
+                writeTransaction.commit();
             }
+
+            System.out.println("-----clinical trials have been migrated-----");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        System.out.println("-----clinical trials have been loaded-----");
     }
 
-//    private boolean compareConditions(String diseaseNames, String condition) {
-//
-//        String[] words = condition.split("\\s+");
-//
-//
-//        System.out.println("asdsd");
-//
-//        return true;
-//    }
+    public void migrateDiagnoses(Grakn.Session session) {
+        try {
+            BufferedReader reader = Files.newBufferedReader(Paths.get("precision-medicine/datasets/diagnoses.csv"));
+            CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
+            for (CSVRecord csvRecord: csvParser) {
 
-//    public void migrateGene2Accession(Grakn.Transaction writeTransaction) {
-//
-//        try {
-//
-//            BufferedReader reader = Files.newBufferedReader(Paths.get("/Users/syedirtazaraza/Desktop/Datasets/gene/gene2accession.csv"));
-//            CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
-//
-//            for (CSVRecord csvRecord: csvParser) {
-//
-//                if (csvRecord.getRecordNumber() == 1) {
-//                    continue;
-//                }
-//
-//                Double tax_id = Double.parseDouble(csvRecord.get(0));
-//                Double gene_id = Double.parseDouble(csvRecord.get(1));
-//                String status = csvRecord.get(2);
-//                String protein_accession_version = csvRecord.get(3);
-//                String protein_gi = csvRecord.get(4);
-//                String genomic_nucleotide_accession_version = csvRecord.get(5);
-//                String genomic_nucleotide_gi = csvRecord.get(6);
-//                String start_position = csvRecord.get(7);
-//                String end_position = csvRecord.get(8);
-//                String orientation = csvRecord.get(9);
-//                String symbol = csvRecord.get(10);
-//
-//
-//                InsertQuery insertQuery = Graql.insert(var("g").isa("gene")
-//                        .has("tax_id", tax_id)
-//                        .has("gene_id", gene_id)
-//                        .has("status", status)
-//                        .has("protein_accession_version", protein_accession_version)
-//                        .has("protein_gi", protein_gi)
-//                        .has("genomic_nucleotide_accession_version", genomic_nucleotide_accession_version)
-//                        .has("genomic_nucleotide_gi", genomic_nucleotide_gi)
-//                        .has("start_position", start_position)
-//                        .has("end_position", end_position)
-//                        .has("orientation", orientation)
-//                        .has("symbol", symbol));
-//
-//                List<ConceptMap> insertedId = insertQuery.withTx(writeTransaction).execute();
-//                System.out.println("Inserted a gene with ID: " + insertedId.get(0).get("g").id());
-//            }
-//
-//            writeTransaction.commit();
-//
-//            System.out.println("gene2accession dataset has been loaded");
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
+                // skip header
+                if (csvRecord.getRecordNumber() == 1) {
+                    continue;
+                }
+
+                double personId = Double.parseDouble(csvRecord.get(0));
+                String diseaseId = csvRecord.get(1);
+
+                InsertQuery insertQuery = Graql.match(
+                        var("p").isa("person").has("person-id", personId),
+                        var("d").isa("disease").has("disease-id", diseaseId))
+                        .insert(var("dia").isa("diagnosis").rel("diagnosed-patient", "p").rel("diagnosed-disease", "d"));
+
+                Grakn.Transaction writeTransaction = session.transaction(GraknTxType.WRITE);
+                List<ConceptMap> insertedId = insertQuery.withTx(writeTransaction).execute();
+                System.out.println("Inserted a diagnosis with ID: " + insertedId.get(0).get("dia").id());
+                writeTransaction.commit();
+            }
+
+            System.out.println("-----diagnoses have been migrated-----");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void migrateGeneIdentifications(Grakn.Session session) {
+        try {
+            BufferedReader reader = Files.newBufferedReader(Paths.get("precision-medicine/datasets/gene_identification.csv"));
+            CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
+
+            for (CSVRecord csvRecord: csvParser) {
+
+                // skip header
+                if (csvRecord.getRecordNumber() == 1) {
+                    continue;
+                }
+
+                double personId = Double.parseDouble(csvRecord.get(0));
+                String geneSymbol = csvRecord.get(1);
+
+                InsertQuery insertQuery = Graql.match(
+                        var("p").isa("person").has("person-id", personId),
+                        var("g").isa("gene").has("gene-symbol", geneSymbol))
+                        .insert(var("gi").isa("gene-identification").rel("genome-owner", "p").rel("identified-gene", "g"));
+
+                Grakn.Transaction writeTransaction = session.transaction(GraknTxType.WRITE);
+                List<ConceptMap> insertedId = insertQuery.withTx(writeTransaction).execute();
+                System.out.println("Inserted a gene identification with ID: " + insertedId.get(0).get("gi").id());
+                writeTransaction.commit();
+            }
+
+            System.out.println("-----gene identifications have been migrated-----");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void migrateVariantIdentifications(Grakn.Session session) {
+        try {
+            BufferedReader reader = Files.newBufferedReader(Paths.get("precision-medicine/datasets/variant_identification.csv"));
+            CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
+
+            for (CSVRecord csvRecord: csvParser) {
+
+                // skip header
+                if (csvRecord.getRecordNumber() == 1) {
+                    continue;
+                }
+
+                double personId = Double.parseDouble(csvRecord.get(0));
+                String snpId = csvRecord.get(1);
+
+                InsertQuery insertQuery = Graql.match(
+                        var("p").isa("person").has("person-id", personId),
+                        var("a").isa("allele").has("snp-id", snpId))
+                        .insert(var("vi").isa("allele-identification").rel("genome-owner", "p").rel("identified-allele", "a"));
+
+                Grakn.Transaction writeTransaction = session.transaction(GraknTxType.WRITE);
+                List<ConceptMap> insertedId = insertQuery.withTx(writeTransaction).execute();
+                System.out.println("Inserted a variant identification with ID: " + insertedId.get(0).get("vi").id());
+                writeTransaction.commit();
+            }
+
+            System.out.println("-----variant identifications have been migrated-----");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void migrateGeneticVariations(Grakn.Session session) {
+        try {
+            BufferedReader reader = Files.newBufferedReader(Paths.get("precision-medicine/datasets/geneticVariations.csv"));
+            CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
+
+            for (CSVRecord csvRecord: csvParser) {
+
+                // skip header
+                if (csvRecord.getRecordNumber() == 1) {
+                    continue;
+                }
+
+                String geneSymbol = csvRecord.get(0);
+                String snpId = csvRecord.get(1);
+
+                InsertQuery insertQuery = Graql.match(
+                        var("g").isa("gene").has("gene-symbol", geneSymbol),
+                        var("a").isa("allele").has("snp-id", snpId))
+                        .insert(var("gv").isa("genetic-variation").rel("varied-gene", "g").rel("genetic-variant", "a"));
+
+                Grakn.Transaction writeTransaction = session.transaction(GraknTxType.WRITE);
+                List<ConceptMap> insertedId = insertQuery.withTx(writeTransaction).execute();
+                System.out.println("Inserted a genetic variation with ID: " + insertedId.get(0).get("gv").id());
+                writeTransaction.commit();
+            }
+
+            System.out.println("-----genetic variations have been migrated-----");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void migrateDrugs(Grakn.Session session) {
+        try {
+            BufferedReader reader = Files.newBufferedReader(Paths.get("precision-medicine/datasets/drugs_melanoma.csv"));
+            CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
+
+            for (CSVRecord csvRecord: csvParser) {
+
+                // skip header
+                if (csvRecord.getRecordNumber() == 1) {
+                    continue;
+                }
+
+                String drugName = csvRecord.get(0);
+                String meshId = csvRecord.get(1);
+                String drugBankId = csvRecord.get(2);
+                String pubChemCid = csvRecord.get(3);
+
+                InsertQuery insertQuery = Graql.insert(var("dr").isa("drug")
+                        .has("drug-name", drugName)
+                        .has("mesh-id", meshId)
+                        .has("drug-bank-id", drugBankId)
+                        .has("pub-chem-cid", pubChemCid));
+
+                Grakn.Transaction writeTransaction = session.transaction(GraknTxType.WRITE);
+                List<ConceptMap> insertedId = insertQuery.withTx(writeTransaction).execute();
+                System.out.println("Inserted a drug with ID: " + insertedId.get(0).get("dr").id());
+                writeTransaction.commit();
+            }
+
+            System.out.println("-----drugs have been migrated-----");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void migrateDiseaseDrugAssociations(Grakn.Session session) {
+
+        Grakn.Transaction readTransaction = session.transaction(GraknTxType.READ);
+
+        GetQuery getQuery = Graql.match(Graql.var("dr").isa("drug")).get();
+        List<ConceptMap> clinicalTrials = getQuery.withTx(readTransaction).execute();
+
+        for (ConceptMap map: clinicalTrials) {
+            String conceptId = map.get("dr").id().getValue();
+
+            InsertQuery insertQuery = Graql.match(
+                    var("d").isa("disease").has("disease-id", "C0025202"),
+                    var("dr").isa("drug").id(ConceptId.of(conceptId)))
+                    .insert(var("dda").isa("disease-drug-association").rel("associated-disease", "d").rel("associated-drug", "dr"));
+
+            Grakn.Transaction writeTransaction = session.transaction(GraknTxType.WRITE);
+            List<ConceptMap> insertedId = insertQuery.withTx(writeTransaction).execute();
+            System.out.println("Inserted a disease drug association with ID: " + insertedId.get(0).get("dda").id());
+            writeTransaction.commit();
+        }
+        System.out.println("-----disease drug associations have been migrated-----");
+    }
 }

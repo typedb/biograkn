@@ -9,7 +9,8 @@ java_library(
 
         "//dependencies/maven/artifacts/org/apache/poi:poi-ooxml",
         "//dependencies/maven/artifacts/org/apache/commons:commons-csv"
-    ]
+    ],
+    data = ["//precision-medicine/datasets"]
 )
 
 java_test(

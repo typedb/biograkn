@@ -8,24 +8,29 @@ import grakn.template.java.migrator.Migrator;
 public class Main {
     public static void main(String[] args) {
 
-//        Migrator migrator = new Migrator();
-//
-//        SimpleURI localGrakn = new SimpleURI("127.0.0.1", 48555);
-//        Keyspace keyspace = Keyspace.of("precision_medicine");
-//        Grakn grakn = new Grakn(localGrakn);
-//        Grakn.Session session = grakn.session(keyspace);
+        System.out.println("~~~~~~~~~~Starting Migration~~~~~~~~~~");
 
-//        migrator.migratePatients(session);
-//        migrator.migrateDiseases(session);
-//        migrator.migrateGenes(session);
-//        migrator.migrateGeneDiseaseAssociations(session);
-//        migrator.migrateVariants(session);
-//        migrator.migrateVariantDiseaseAssociations(session);
+        SimpleURI localGrakn = new SimpleURI("127.0.0.1", 48555);
+        Keyspace keyspace = Keyspace.of("precision_medicine");
+        Grakn grakn = new Grakn(localGrakn);
+        Grakn.Session session = grakn.session(keyspace);
 
-//        migrator.migrateClinicalTrials(session);
+        Migrator migrator = new Migrator();
 
+        migrator.migratePersons(session);
+        migrator.migrateDiseases(session);
+        migrator.migrateGenes(session);
+        migrator.migrateVariants(session);
+        migrator.migrateClinicalTrials(session);
+        migrator.migrateDiagnoses(session);
+        migrator.migrateGeneIdentifications(session);
+        migrator.migrateVariantIdentifications(session);
+        migrator.migrateGeneticVariations(session);
+        migrator.migrateDrugs(session);
+        migrator.migrateDiseaseDrugAssociations(session);
 
+        session.close();
 
-//        session.close();
+        System.out.println("~~~~~~~~~~Migration Completed~~~~~~~~~~");
     }
 }
