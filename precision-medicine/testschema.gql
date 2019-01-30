@@ -1,0 +1,62 @@
+define
+
+disease sub entity,
+    plays treated-disease,
+    plays associated-disease;
+
+drug sub entity,
+    plays theraputic-drug,
+    plays targeting-drug;
+
+gene sub entity,
+    plays targeted-gene,
+    plays varied-gene,
+    plays associated-gene;
+
+variant sub entity,
+    plays targeted-variant,
+    plays genetic-variant,
+    plays associated-variant;
+
+therapy sub relationship,
+    relates theraputic-drug,
+    relates treated-disease;
+
+clinical-trial sub relationship,
+    relates targeted-disease,
+    relates theraputic-drug;
+
+drug-gene-association sub relationship,
+    relates targeted-gene,
+    relates targeting-drug;
+
+drug-variant-association sub relationship,
+    relates targeted-variant,
+    relates targeting-drug;
+
+genetic-variation sub relationship,
+    relates genetic-variant,
+    relates varied-gene;
+
+gene-disease-association sub relationship,
+    relates associated-disease,
+    relates associated-gene;
+
+variant-disease-association sub relationship,
+    relates associated-disease,
+    relates associated-variant
+
+
+rule1 sub rule
+when {
+    $p isa person;
+    $di isa disease;
+    $dr isa drug;
+    $pte isa personalised-therapy-relevance;
+    (diagnosed-patient: $p, diagnosed-disease: $di) isa diagnosis;
+    (associated-disease: $di, associated-drug: $dr) isa disease-drug-association;
+    (target-patient: $p, personalised-therapy-evidence: ) isa personalised-therapeutic-relevance
+}
+then {
+
+};

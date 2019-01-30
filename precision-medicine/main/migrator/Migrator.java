@@ -5,7 +5,12 @@ import ai.grakn.client.Grakn;
 import ai.grakn.concept.ConceptId;
 import ai.grakn.graql.*;
 import ai.grakn.graql.answer.ConceptMap;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+
+import static ai.grakn.graql.Graql.insert;
 import static ai.grakn.graql.Graql.var;
 import java.io.*;
 import java.io.IOException;
@@ -243,8 +248,15 @@ public class Migrator {
                         .insert(var("dia").isa("diagnosis").rel("diagnosed-patient", "p").rel("diagnosed-disease", "d"));
 
                 Grakn.Transaction writeTransaction = session.transaction(GraknTxType.WRITE);
-                List<ConceptMap> insertedId = insertQuery.withTx(writeTransaction).execute();
-                System.out.println("Inserted a diagnosis with ID: " + insertedId.get(0).get("dia").id());
+                List<ConceptMap> insertedIDs = insertQuery.withTx(writeTransaction).execute();
+
+//                if (insertedIDs.isEmpty()) {
+//                    List<Class> prereqs = Arrays.asList(Migrator.class, Gene.class, );
+//                    throw new IllegalStateException("Nothing was inserted for: " + insertQuery.toString() +
+//                            "\nA prerequisite dataset may have not been loaded. This dataset requires: " + prereqs.toString());
+//                }
+
+                System.out.println("Inserted a diagnosis with ID: " + insertedIDs.get(0).get("dia").id());
                 writeTransaction.commit();
             }
 
@@ -308,6 +320,7 @@ public class Migrator {
 
                 Grakn.Transaction writeTransaction = session.transaction(GraknTxType.WRITE);
                 List<ConceptMap> insertedId = insertQuery.withTx(writeTransaction).execute();
+
                 System.out.println("Inserted a variant identification with ID: " + insertedId.get(0).get("vi").id());
                 writeTransaction.commit();
             }
@@ -407,4 +420,38 @@ public class Migrator {
         }
         System.out.println("-----disease drug associations have been migrated-----");
     }
+
+//    public void migrateTextMinedAnalysis(Grakn.Session session) {
+//        try {
+//            BufferedReader reader = Files.newBufferedReader(Paths.get("precision-medicine/datasets/gene_disease_pmid_association.csv"));
+//            CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
+//
+//            for (CSVRecord csvRecord: csvParser) {
+//
+//                // skip header
+//                if (csvRecord.getRecordNumber() == 1) {
+//                    continue;
+//                }
+//
+//                String geneid = csvRecord.get(0);
+//                String diseaseId = csvRecord.get(1);
+//                String diseaseId = csvRecord.get(1);
+//
+//
+//                InsertQuery insertQuery = Graql.match(
+//                        var("g").isa("gene").has("gene-symbol", geneSymbol),
+//                        var("a").isa("allele").has("snp-id", snpId))
+//                        .insert(var("gv").isa("genetic-variation").rel("varied-gene", "g").rel("genetic-variant", "a"));
+//
+//                Grakn.Transaction writeTransaction = session.transaction(GraknTxType.WRITE);
+//                List<ConceptMap> insertedId = insertQuery.withTx(writeTransaction).execute();
+//                System.out.println("Inserted a genetic variation with ID: " + insertedId.get(0).get("gv").id());
+//                writeTransaction.commit();
+//            }
+//
+//            System.out.println("-----genetic variations have been migrated-----");
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 }

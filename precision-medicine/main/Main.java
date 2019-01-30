@@ -17,17 +17,28 @@ public class Main {
 
         Migrator migrator = new Migrator();
 
+        //common
+
+
+        // precision-medicine
+
         migrator.migratePersons(session);
         migrator.migrateDiseases(session);
+        migrator.migrateDiagnoses(session);
+
         migrator.migrateGenes(session);
         migrator.migrateVariants(session);
         migrator.migrateClinicalTrials(session);
-        migrator.migrateDiagnoses(session);
+
         migrator.migrateGeneIdentifications(session);
         migrator.migrateVariantIdentifications(session);
         migrator.migrateGeneticVariations(session);
         migrator.migrateDrugs(session);
         migrator.migrateDiseaseDrugAssociations(session);
+
+        // text mining
+
+
 
         session.close();
 

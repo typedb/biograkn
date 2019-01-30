@@ -37,7 +37,8 @@ person sub entity,
     has age,
     has gender,
     plays diagnosed-patient,
-    plays genome-owner;
+    plays genome-owner,
+    plays relevant-person;
 
 disease sub entity,
     has disease-name,
@@ -46,8 +47,7 @@ disease sub entity,
     plays diagnosed-disease,
     plays associated-disease,
     plays targeted-disease,
-    plays mentioned-disease,
-    plays relevant-person;
+    plays mentioned-disease;
 
 gene sub entity,
     has gene-id,
@@ -80,7 +80,7 @@ clinical-trial sub relationship,
     has min-age,
     has max-age,
     has participants-gender,
-    relates targeted-disease
+    relates targeted-disease,
     plays relevant-clinical-trial;
 
 drug sub entity,
@@ -124,3 +124,16 @@ theraputic-relevance sub relationship,
     relates relevant-clinical-trial,
     relates relevant-literation;
 
+rule1 sub rule
+when {
+    $p isa person;
+    $di isa disease;
+    $c isa clinical-trial;
+    $dr isa drug;
+    (diagnosed-patient: $p, diagnosed-disease: $di) isa diagnosis;
+    (targeted-disease: $di) isa clinical-trial;
+    (associated-disease: $di, associated-drug: $dr) isa disease-drug-association;
+}
+then {
+    (relevant-clinical-trial: $c, relevant-person: $p, relevant-therapeutic: $dr) isa theraputic-relevance;
+};
