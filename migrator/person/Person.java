@@ -20,7 +20,7 @@ import static ai.grakn.graql.Graql.var;
 public class Person {
     public static void migrate(Grakn.Session session) {
         try {
-            BufferedReader reader = Files.newBufferedReader(Paths.get("dataset/persons.csv"));
+            BufferedReader reader = Files.newBufferedReader(Paths.get("dataset/disgenet/persons.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
             for (CSVRecord csvRecord: csvParser) {

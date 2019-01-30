@@ -21,7 +21,7 @@ public class VariantIdentification {
 
     public static void migrate(Grakn.Session session) {
         try {
-            BufferedReader reader = Files.newBufferedReader(Paths.get("dataset/variant_identification.csv"));
+            BufferedReader reader = Files.newBufferedReader(Paths.get("dataset/disgenet/variant_identification.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
             for (CSVRecord csvRecord: csvParser) {

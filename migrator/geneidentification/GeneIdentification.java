@@ -21,7 +21,7 @@ public class GeneIdentification {
 
     public static void migrate(Grakn.Session session) {
         try {
-            BufferedReader reader = Files.newBufferedReader(Paths.get("dataset/gene_identification.csv"));
+            BufferedReader reader = Files.newBufferedReader(Paths.get("dataset/disgenet/gene_identification.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
             for (CSVRecord csvRecord: csvParser) {

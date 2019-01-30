@@ -21,7 +21,7 @@ public class Drug {
 
     public static void migrate(Grakn.Session session) {
         try {
-            BufferedReader reader = Files.newBufferedReader(Paths.get("dataset/drugs_melanoma.csv"));
+            BufferedReader reader = Files.newBufferedReader(Paths.get("dataset/disgenet/drugs_melanoma.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
             for (CSVRecord csvRecord: csvParser) {

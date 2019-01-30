@@ -21,7 +21,7 @@ public class Diagnosis {
 
     public static void migrate(Grakn.Session session) {
         try {
-            BufferedReader reader = Files.newBufferedReader(Paths.get("dataset/diagnoses.csv"));
+            BufferedReader reader = Files.newBufferedReader(Paths.get("dataset/disgenet/diagnoses.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
             for (CSVRecord csvRecord: csvParser) {

@@ -22,7 +22,7 @@ public class ClinicalTrial {
 
     public static void migrate(Grakn.Session session) {
         try {
-            BufferedReader reader = Files.newBufferedReader(Paths.get("dataset/clinical_trials_melanoma.csv"));
+            BufferedReader reader = Files.newBufferedReader(Paths.get("dataset/disgenet/clinical_trials_melanoma.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
             for (CSVRecord csvRecord : csvParser) {

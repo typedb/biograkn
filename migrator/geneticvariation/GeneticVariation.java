@@ -21,7 +21,7 @@ public class GeneticVariation {
 
     public static void migrate(Grakn.Session session) {
         try {
-            BufferedReader reader = Files.newBufferedReader(Paths.get("dataset/geneticVariations.csv"));
+            BufferedReader reader = Files.newBufferedReader(Paths.get("dataset/disgenet/geneticVariations.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
             for (CSVRecord csvRecord: csvParser) {
