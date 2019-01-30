@@ -34,7 +34,7 @@ exit_code=0
 pushd "$WORKING_DIR" > /dev/null
 
 CLASSPATH="${WORKING_DIR}/${LIB_CLASSPATH}"
-java -cp "${CLASSPATH}" grakn.template.java.Main $@
+java -cp "${CLASSPATH}" grakn.biograkn.migrator.Migrator $@
 
 exit_code=$?
 

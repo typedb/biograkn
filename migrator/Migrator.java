@@ -1,4 +1,4 @@
-package grakn.template.java;
+package grakn.biograkn.migrator;
 
 import ai.grakn.Keyspace;
 import ai.grakn.client.Grakn;
@@ -15,7 +15,7 @@ import grakn.biograkn.migrator.person.Person;
 import grakn.biograkn.migrator.variant.Variant;
 import grakn.biograkn.migrator.variantidentification.VariantIdentification;
 
-public class Main {
+public class Migrator {
     public static void main(String[] args) {
 
         System.out.println("~~~~~~~~~~Starting Migration~~~~~~~~~~");
@@ -24,9 +24,6 @@ public class Main {
         Keyspace keyspace = Keyspace.of("precision_medicine");
         Grakn grakn = new Grakn(localGrakn);
         Grakn.Session session = grakn.session(keyspace);
-
-        //common
-
 
         // precision-medicine
 

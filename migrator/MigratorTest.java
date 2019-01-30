@@ -1,12 +1,12 @@
-package grakn.biograkn.migrator.person.test;
+package grakn.biograkn.migrator;
 
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class PersonTest {
+public class MigratorTest {
     @Test
-    public void migratorTest() {
+    public void exampleTest() {
         assertEquals("migrator/test", "migrator/test");
     }
 }
