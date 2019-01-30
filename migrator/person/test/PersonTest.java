@@ -1,10 +1,10 @@
-package grakn.template.java.migrator.test;
+package grakn.biograkn.migrator.person.test;
 
-import grakn.template.java.migrator.Migrator;
 import org.junit.Test;
+
 import static org.junit.Assert.assertEquals;
 
-public class MigratorTest {
+public class PersonTest {
     @Test
     public void migratorTest() {
         assertEquals("test", "test");

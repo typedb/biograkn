@@ -3,7 +3,17 @@ package grakn.template.java;
 import ai.grakn.Keyspace;
 import ai.grakn.client.Grakn;
 import ai.grakn.util.SimpleURI;
-import grakn.template.java.migrator.Migrator;
+import grakn.biograkn.migrator.clinicaltrial.ClinicalTrial;
+import grakn.biograkn.migrator.diagnosis.Diagnosis;
+import grakn.biograkn.migrator.disease.Disease;
+import grakn.biograkn.migrator.diseasedrug.DiseaseDrugAssociation;
+import grakn.biograkn.migrator.drug.Drug;
+import grakn.biograkn.migrator.gene.Gene;
+import grakn.biograkn.migrator.geneidentification.GeneIdentification;
+import grakn.biograkn.migrator.geneticvariation.GeneticVariation;
+import grakn.biograkn.migrator.person.Person;
+import grakn.biograkn.migrator.variant.Variant;
+import grakn.biograkn.migrator.variantidentification.VariantIdentification;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,26 +25,24 @@ public class Main {
         Grakn grakn = new Grakn(localGrakn);
         Grakn.Session session = grakn.session(keyspace);
 
-        Migrator migrator = new Migrator();
-
         //common
 
 
         // precision-medicine
 
-        migrator.migratePersons(session);
-        migrator.migrateDiseases(session);
-        migrator.migrateDiagnoses(session);
+        Person.migrate(session);
+        Disease.migrate(session);
+        Diagnosis.migrate(session);
 
-        migrator.migrateGenes(session);
-        migrator.migrateVariants(session);
-        migrator.migrateClinicalTrials(session);
+        Gene.migrate(session);
+        Variant.migate(session);
+        ClinicalTrial.migrate(session);
 
-        migrator.migrateGeneIdentifications(session);
-        migrator.migrateVariantIdentifications(session);
-        migrator.migrateGeneticVariations(session);
-        migrator.migrateDrugs(session);
-        migrator.migrateDiseaseDrugAssociations(session);
+        GeneIdentification.migrate(session);
+        VariantIdentification.migrate(session);
+        GeneticVariation.migrate(session);
+        Drug.migrate(session);
+        DiseaseDrugAssociation.migrate(session);
 
         // text mining
 

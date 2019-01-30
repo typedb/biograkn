@@ -2,8 +2,7 @@ java_library(
     name = "main",
     srcs = glob(["*.java"]),
     deps = [
-        "//precision-medicine/common",
-        "//precision-medicine/main/migrator:migrator",
+        "//migrator:migrator",
         "//dependencies/maven/artifacts/com/google/guava",
 
         "//dependencies/maven/artifacts/ai/grakn:client-java",

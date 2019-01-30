@@ -1,7 +1,9 @@
+
+package(default_visibility = [ "//visibility:public" ])
+
 java_library(
     name = "migrator",
-    srcs = glob(["*.java"]),
-    visibility = [ "//visibility:public" ],
+    srcs = glob(["**/*.java"], exclude = ["**/test/**"]),
     deps = [
         "//dependencies/maven/artifacts/ai/grakn:client-java",
         "//dependencies/maven/artifacts/ai/grakn:grakn-core",
@@ -10,13 +12,12 @@ java_library(
         "//dependencies/maven/artifacts/org/apache/poi:poi-ooxml",
         "//dependencies/maven/artifacts/org/apache/commons:commons-csv"
     ],
-    data = ["//precision-medicine/datasets"]
+    data = ["//dataset"]
 )
 
 java_test(
-    name = "migrator-test",
-    test_class = "grakn.template.java.migrator.test.MigratorTest",
-    srcs = glob(["test/MigratorTest.java"]),
-    deps = [ "//precision-medicine/main/migrator:migrator" ],
-    visibility = [ "//visibility:public" ]
+    name = "person-test",
+    test_class = "grakn.biograkn.migrator.person.test.PersonTest",
+    srcs = glob(["person/test/PersonTest.java"]),
+    deps = [ ":migrator" ],
 )
