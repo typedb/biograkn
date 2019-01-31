@@ -13,7 +13,7 @@ score sub attribute datatype double;
 url sub attribute datatype string;
 min-age sub attribute datatype double;
 max-age sub attribute datatype double;
-allele-symbol sub attribute datatype string;
+variant-symbol sub attribute datatype string;
 gene-symbol sub attribute datatype string;
 nct-id sub attribute datatype string;
 status sub attribute datatype string;
@@ -23,22 +23,20 @@ mesh-id sub attribute datatype string;
 drug-bank-id sub attribute datatype string;
 pub-chem-cid sub attribute datatype string;
 participants-gender sub attribute datatype string;
+title sub attribute datatype string;
 
 name sub attribute datatype string;
 disease-name sub name;
 drug-name sub name;
 
-title sub attribute datatype string;
-article-title sub title;
-clinical-trial-title sub title;
 
-person sub entity, 
+
+person sub entity,
     has person-id,
     has age,
     has gender,
-    plays diagnosed-patient,
-    plays genome-owner,
-    plays relevant-person;
+    plays patient,
+    plays genome-owner;
 
 disease sub entity,
     has disease-name,
@@ -46,7 +44,7 @@ disease sub entity,
     has source,
     plays diagnosed-disease,
     plays associated-disease,
-    plays targeted-disease,
+    plays treatment-subject,
     plays mentioned-disease;
 
 gene sub entity,
@@ -56,52 +54,58 @@ gene sub entity,
     plays identified-gene,
     plays mentioned-gene;
 
-allele sub entity,
-    has allele-symbol,
+variant sub entity,
+    has variant-symbol,
     has snp-id,
-    plays mentioned-allele,
-    plays identified-allele,
+    plays mentioned-variant,
+    plays identified-variant,
     plays genetic-variant;
 
 pubmed-article sub entity,
     has pm-id,
-    has article-title,
+    has title,
     has abstract,
     plays mined-pubmed-article
-    plays relevant-literation;
-
-clinical-trial sub relationship,
-    has nct-id,
-    has status,
-    has results,
-    has intervention-type,
-    has url,
-    has clinical-trial-title,
-    has min-age,
-    has max-age,
-    has participants-gender,
-    relates targeted-disease,
-    plays relevant-clinical-trial;
+    plays relevant-therapeutic;
 
 drug sub entity,
     has drug-name,
     has mesh-id,
     has drug-bank-id,
     has pub-chem-cid,
-    plays associated-drug,
-    plays relevant-therapeutic;
+    plays associated-drug
+    plays relevant-therapeutic
+    plays used;
+
+clinical-trial sub entity,
+    has nct-id,
+    has status,
+    has results,
+    has intervention-type,
+    has url,
+    has title,
+    has min-age,
+    has max-age,
+    has participants-gender,
+    plays relevant-therapeutic,
+    plays treatment-method
+    plays user;
+
+experimental-treatment sub relationship,
+    relates treatment-subject,
+    relates treatment-method;
 
 diagnosis sub relationship,
-    relates diagnosed-patient,
+    relates patient,
     relates diagnosed-disease;
 
 gene-identification sub relationship,
     relates identified-gene,
     relates genome-owner;
 
-allele-identification sub relationship,
-    relates identified-allele,
-    relates genome-owner;  
+variant-identification sub relationship,
+    relates identified-variant,
+    relates genome-owner;
 
 genetic-variation sub relationship,
     relates genetic-variant,
@@ -112,28 +116,73 @@ text-mined-analysis sub relationship,
     relates mined-pubmed-article,
     relates mentioned-disease,
     relates mentioned-gene,
-    relates mentioned-allele;
+    relates mentioned-variant;
 
-disease-drug-association sub relationship,
+drug-disease-association sub relationship,
     relates associated-disease,
     relates associated-drug;
 
-theraputic-relevance sub relationship,
-    relates relevant-person,
-    relates relevant-therapeutic,
-    relates relevant-clinical-trial,
-    relates relevant-literation;
+personalised-therapy sub relationship,
+    relates patient,
+    relates relevant-therapeutic;
 
-rule1 sub rule
+append-relevant-therapeutic-drug sub rule,
 when {
     $p isa person;
     $di isa disease;
-    $c isa clinical-trial;
     $dr isa drug;
-    (diagnosed-patient: $p, diagnosed-disease: $di) isa diagnosis;
-    (targeted-disease: $di) isa clinical-trial;
-    (associated-disease: $di, associated-drug: $dr) isa disease-drug-association;
+    (patient: $p, diagnosed-disease: $di) isa diagnosis;
+    (associated-disease: $di, associated-drug: $dr) isa drug-disease-association;
+},
+then {
+    (patient: $p, relevant-therapeutic: $dr) isa personalised-therapy;
+};
+
+append-relevant-therapeutic-clinical-trial sub rule
+when {
+    $p isa person has age $a, has gender $gen;
+    $g isa gene has gene-symbol $gs;
+    $di isa disease;
+    $ct isa clinical-trial has min-age $min, has max-age $max, has participants-gender $pgen, has title $t;
+    (genome-owner: $p, identified-gene: $g) isa gene-identification;
+    (patient: $p, diagnosed-disease: $di) isa diagnosis;
+    (treatment-method: $ct, treatment-subject: $di) isa experimental-treatment;
+    $a >= $min;
+    $a <= $max;
+    $gen == $pgen;
+    $t contains $gs;
 }
 then {
-    (relevant-clinical-trial: $c, relevant-person: $p, relevant-therapeutic: $dr) isa theraputic-relevance;
+    (patient: $p, relevant-therapeutic: $ct) isa personalised-therapy;
+};
+
+append-relevant-therapeutic-clinical-trial-all-genders sub rule
+when {
+    $p isa person has age $a, has gender $gen;
+    $di isa disease;
+    $g isa gene has gene-symbol $gs;
+    $ct isa clinical-trial has min-age $min, has max-age $max, has participants-gender "All", has title $t;
+    (patient: $p, diagnosed-disease: $di) isa diagnosis;
+    (genome-owner: $p, identified-gene: $g) isa gene-identification;
+    (treatment-method: $ct, treatment-subject: $di) isa experimental-treatment;
+    $a >= $min;
+    $a <= $max;
+    $t contains $gs;
+}
+then {
+    (patient: $p, relevant-therapeutic: $ct) isa personalised-therapy;
+};
+
+use sub relationship,
+    relates user,
+    relates used;
+
+test sub rule
+when {
+    $d isa drug has drug-name $dn;
+    $c isa clinical-trial has intervention-type $i;
+    $i contains $dn;
+}
+then {
+    (user: $c, used: $d) isa use;
 };

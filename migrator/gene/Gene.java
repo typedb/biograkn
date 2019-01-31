@@ -38,8 +38,8 @@ public class Gene {
                         .has("gene-symbol", geneSymbol));
 
                 Grakn.Transaction writeTransaction = session.transaction(GraknTxType.WRITE);
-                List<ConceptMap> insertedId = insertQuery.withTx(writeTransaction).execute();
-                System.out.println("Inserted a gene with ID: " + insertedId.get(0).get("g").id());
+                List<ConceptMap> insertedIds = insertQuery.withTx(writeTransaction).execute();
+                System.out.println("Inserted a gene with ID: " + insertedIds.get(0).get("g").id());
                 writeTransaction.commit();
             }
 

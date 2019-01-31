@@ -1,6 +1,3 @@
-﻿person_id,gene
+﻿person-id,gene-symbol
 1,BRAF
-2,BRAF
-3,BRAF
-4,KIT
-5,KIT
+2,KIT

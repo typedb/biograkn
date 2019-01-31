@@ -41,8 +41,8 @@ public class Person {
                         .has("gender", gender));
 
                 Grakn.Transaction writeTransaction = session.transaction(GraknTxType.WRITE);
-                List<ConceptMap> insertedId = insertQuery.withTx(writeTransaction).execute();
-                System.out.println("Inserted a person with ID: " + insertedId.get(0).get("p").id());
+                List<ConceptMap> insertedIds = insertQuery.withTx(writeTransaction).execute();
+                System.out.println("Inserted a person with ID: " + insertedIds.get(0).get("p").id());
                 writeTransaction.commit();
             }
 

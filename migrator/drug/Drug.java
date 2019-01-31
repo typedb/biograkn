@@ -43,8 +43,8 @@ public class Drug {
                         .has("pub-chem-cid", pubChemCid));
 
                 Grakn.Transaction writeTransaction = session.transaction(GraknTxType.WRITE);
-                List<ConceptMap> insertedId = insertQuery.withTx(writeTransaction).execute();
-                System.out.println("Inserted a drug with ID: " + insertedId.get(0).get("dr").id());
+                List<ConceptMap> insertedIds = insertQuery.withTx(writeTransaction).execute();
+                System.out.println("Inserted a drug with ID: " + insertedIds.get(0).get("dr").id());
                 writeTransaction.commit();
             }
 

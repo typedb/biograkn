@@ -18,7 +18,7 @@ import java.util.List;
 import static ai.grakn.graql.Graql.var;
 
 public class Variant {
-    public static void migate(Grakn.Session session) {
+    public static void migrate(Grakn.Session session) {
         try {
             BufferedReader reader = Files.newBufferedReader(Paths.get("dataset/disgenet/variants.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
@@ -31,19 +31,19 @@ public class Variant {
                 }
 
                 String snpId = csvRecord.get(0);
-                String alleleSymbol = csvRecord.get(1);
+                String variantSymbol = csvRecord.get(1);
 
-                InsertQuery insertQuery = Graql.insert(var("v").isa("allele")
+                InsertQuery insertQuery = Graql.insert(var("v").isa("variant")
                         .has("snp-id", snpId)
-                        .has("allele-symbol", alleleSymbol));
+                        .has("variant-symbol", variantSymbol));
 
                 Grakn.Transaction writeTransaction = session.transaction(GraknTxType.WRITE);
-                List<ConceptMap> insertedId = insertQuery.withTx(writeTransaction).execute();
-                System.out.println("Inserted a allele with ID: " + insertedId.get(0).get("v").id());
+                List<ConceptMap> insertedIds = insertQuery.withTx(writeTransaction).execute();
+                System.out.println("Inserted a variant with ID: " + insertedIds.get(0).get("v").id());
                 writeTransaction.commit();
             }
 
-            System.out.println("-----alleles have been migrated-----");
+            System.out.println("-----variants have been migrated-----");
         } catch (IOException e) {
             e.printStackTrace();
         }

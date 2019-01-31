@@ -5,6 +5,8 @@ import ai.grakn.client.Grakn;
 import ai.grakn.graql.Graql;
 import ai.grakn.graql.InsertQuery;
 import ai.grakn.graql.answer.ConceptMap;
+import grakn.biograkn.migrator.disease.Disease;
+import grakn.biograkn.migrator.person.Person;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
@@ -13,6 +15,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.List;
 
 import static ai.grakn.graql.Graql.var;
@@ -33,7 +36,7 @@ public class ClinicalTrial {
                 }
 
                 String nctId = csvRecord.get(0);
-                String clinicalTrialTitle = csvRecord.get(1);
+                String title = csvRecord.get(1);
                 String status = csvRecord.get(2);
                 boolean results;
                 if (csvRecord.get(3).equals("Has Results")) {
@@ -68,23 +71,20 @@ public class ClinicalTrial {
 
                 String url = csvRecord.get(7);
 
-                InsertQuery insertQuery = Graql.match(
-                        var("d").isa("disease").has("disease-id", "C0025202"))
-                        .insert(var("c").isa("clinical-trial")
+                InsertQuery insertQuery = Graql.insert(var("c").isa("clinical-trial")
                                 .has("nct-id", nctId)
-                                .has("clinical-trial-title", clinicalTrialTitle)
+                                .has("title", title)
                                 .has("status", status)
                                 .has("results", results)
                                 .has("intervention-type", interventionType)
                                 .has("participants-gender", participantsGender)
                                 .has("min-age", minAge)
                                 .has("max-age", maxAge)
-                                .has("url", url)
-                                .rel("targeted-disease", "d"));
+                                .has("url", url));
 
                 Grakn.Transaction writeTransaction = session.transaction(GraknTxType.WRITE);
-                List<ConceptMap> insertedId = insertQuery.withTx(writeTransaction).execute();
-                System.out.println("Inserted a clinical trial with ID: " + insertedId.get(0).get("c").id());
+                List<ConceptMap> insertedIds = insertQuery.withTx(writeTransaction).execute();
+                System.out.println("Inserted a clinical trial with ID: " + insertedIds.get(0).get("c").id());
                 writeTransaction.commit();
             }
 

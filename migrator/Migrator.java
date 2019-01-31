@@ -8,6 +8,7 @@ import grakn.biograkn.migrator.diagnosis.Diagnosis;
 import grakn.biograkn.migrator.disease.Disease;
 import grakn.biograkn.migrator.diseasedrug.DiseaseDrugAssociation;
 import grakn.biograkn.migrator.drug.Drug;
+import grakn.biograkn.migrator.experimentaltreatement.ExperimentalTreatment;
 import grakn.biograkn.migrator.gene.Gene;
 import grakn.biograkn.migrator.geneidentification.GeneIdentification;
 import grakn.biograkn.migrator.geneticvariation.GeneticVariation;
@@ -25,25 +26,18 @@ public class Migrator {
         Grakn grakn = new Grakn(localGrakn);
         Grakn.Session session = grakn.session(keyspace);
 
-        // precision-medicine
-
         Person.migrate(session);
         Disease.migrate(session);
         Diagnosis.migrate(session);
-
         Gene.migrate(session);
-        Variant.migate(session);
+        Variant.migrate(session);
         ClinicalTrial.migrate(session);
-
         GeneIdentification.migrate(session);
         VariantIdentification.migrate(session);
         GeneticVariation.migrate(session);
         Drug.migrate(session);
         DiseaseDrugAssociation.migrate(session);
-
-        // text mining
-
-
+        ExperimentalTreatment.migrate(session);
 
         session.close();
 
