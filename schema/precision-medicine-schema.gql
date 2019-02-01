@@ -29,8 +29,6 @@ name sub attribute datatype string;
 disease-name sub name;
 drug-name sub name;
 
-
-
 person sub entity,
     has person-id,
     has age,
