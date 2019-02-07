@@ -39,16 +39,16 @@ distribution_zip(
     output_filename = "biograkn-migrator",
 )
 
-java_test(
-    name = "migrator-test",
-    test_class = "grakn.biograkn.migrator.MigratorTest",
-    srcs = ["MigratorTest.java"],
-    deps = [":migrator"],
-)
-
-java_test(
-    name = "person-test",
-    test_class = "grakn.biograkn.migrator.person.test.PersonTest",
-    srcs = glob(["person/test/PersonTest.java"]),
-    deps = [ ":migrator" ],
-)
+#java_test(
+  ##    name = "migrator-test",
+  ##    test_class = "grakn.biograkn.migrator.MigratorTest",
+  ##    srcs = ["MigratorTest.java"],
+  ##    deps = [":migrator"],
+  ##)
+  ##
+  ##java_test(
+  ##    name = "person-test",
+  ##    test_class = "grakn.biograkn.migrator.person.test.PersonTest",
+  ##    srcs = glob(["person/test/PersonTest.java"]),
+  ##    deps = [ ":migrator" ],
+  ##)
