@@ -17,3 +17,6 @@
 
 # Python files
 **/__pycache__
+
+# Bazel
+bazel-*

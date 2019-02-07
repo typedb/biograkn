@@ -8,11 +8,13 @@ import grakn.biograkn.migrator.diagnosis.Diagnosis;
 import grakn.biograkn.migrator.disease.Disease;
 import grakn.biograkn.migrator.diseasedrug.DiseaseDrugAssociation;
 import grakn.biograkn.migrator.drug.Drug;
+import grakn.biograkn.migrator.drugvariant.DrugVariantAssociation;
 import grakn.biograkn.migrator.experimentaltreatement.ExperimentalTreatment;
 import grakn.biograkn.migrator.gene.Gene;
 import grakn.biograkn.migrator.geneidentification.GeneIdentification;
 import grakn.biograkn.migrator.geneticvariation.GeneticVariation;
 import grakn.biograkn.migrator.person.Person;
+import grakn.biograkn.migrator.pubmedarticle.PubmedArticle;
 import grakn.biograkn.migrator.variant.Variant;
 import grakn.biograkn.migrator.variantidentification.VariantIdentification;
 
@@ -35,9 +37,11 @@ public class Migrator {
         GeneIdentification.migrate(session);
         VariantIdentification.migrate(session);
         GeneticVariation.migrate(session);
-        Drug.migrate(session);
-        DiseaseDrugAssociation.migrate(session);
+//        Drug.migrate(session);
+//        DiseaseDrugAssociation.migrate(session);
+//        DrugVariantAssociation.migrate(session);
         ExperimentalTreatment.migrate(session);
+//        PubmedArticle.migrate(session);
 
         session.close();
 
