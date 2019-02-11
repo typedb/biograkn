@@ -1,0 +1,45 @@
+options:
+  languages: ["java"]
+  resolverType: coursier
+  resolvers:
+  - id: mavencentral
+    type: default
+    url: https://repo.maven.apache.org/maven2/
+  - id: mavengraknai
+    url: http://maven.grakn.ai/nexus/content/repositories/snapshots/
+  strictVisibility: true
+  transitivity: runtime_deps
+  versionConflictPolicy: highest
+  thirdPartyDirectory: dependencies/maven/artifacts
+
+
+dependencies:
+  com.google.guava:
+    guava:
+      version: "23.0"
+      lang: java
+
+
+  ai.grakn:
+    client-java:
+      version: "1.4.3"
+      lang: java
+
+    grakn-core:
+      version: "1.4.3"
+      lang: java
+
+    grakn-graql:
+      version: "1.4.3"
+      lang: java
+
+
+  org.apache.poi:
+    poi-ooxml:
+      version: "4.0.1"
+      lang: java
+
+  org.apache.commons:
+    commons-csv:
+      version: "1.5"
+      lang: java
