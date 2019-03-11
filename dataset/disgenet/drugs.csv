@@ -1,7 +1,3 @@
-﻿drug-name,drug-bank-id,url
-Dabrafenib,DB08912,https://www.drugbank.ca/drugs/DB08912
-Trametinib,DB08911,https://www.drugbank.ca/drugs/DB08911
-Vemurafenib,DB08881,https://www.drugbank.ca/drugs/DB08881
-Cobimetinib,DB05239,https://www.drugbank.ca/drugs/DB05239
-Binimetinib,DB11967,https://www.drugbank.ca/drugs/DB11967
-Encorafenib,DB11718,https://www.drugbank.ca/drugs/DB11718
+version https://git-lfs.github.com/spec/v1
+oid sha256:4b793954c607241bbbae50614558f4d6277360ed9502a2d1afc1f4cbff4b3649
+size 381
