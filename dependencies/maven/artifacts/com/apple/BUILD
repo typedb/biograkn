@@ -1,7 +1,7 @@
 java_library(
-    name = "slf4j-api",
+    name = "AppleJavaExtensions",
     exports = [
-        "//external:jar/org/slf4j/slf4j-api"
+        "//external:jar/com/apple/AppleJavaExtensions"
     ],
     visibility = [
         "//dependencies/maven/artifacts:__subpackages__"

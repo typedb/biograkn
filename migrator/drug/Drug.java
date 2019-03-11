@@ -1,10 +1,12 @@
 package grakn.biograkn.migrator.drug;
 
-import ai.grakn.GraknTxType;
-import ai.grakn.client.Grakn;
-import ai.grakn.graql.Graql;
-import ai.grakn.graql.InsertQuery;
-import ai.grakn.graql.answer.ConceptMap;
+import grakn.core.client.GraknClient;
+import grakn.core.concept.answer.ConceptMap;
+import graql.lang.Graql;
+import graql.lang.query.GraqlGet;
+import graql.lang.query.GraqlInsert;
+import static graql.lang.Graql.var;
+
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
@@ -15,13 +17,20 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
-import static ai.grakn.graql.Graql.var;
 
+@SuppressWarnings("Duplicates")
 public class Drug {
 
-    public static void migrate(Grakn.Session session) {
+    public static void migrate(GraknClient.Session session) {
+        migrateFromDrugsAtFda(session);
+        migrateFromPharmgkb(session);
+        migrateFromCtdbase(session);
+        System.out.println("-----drugs have been migrated-----");
+    }
+
+    private static void migrateFromDrugsAtFda(GraknClient.Session session) {
         try {
-            BufferedReader reader = Files.newBufferedReader(Paths.get("dataset/disgenet/drugs.csv"));
+            BufferedReader reader = Files.newBufferedReader(Paths.get("dataset/drugsatfda/Products.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
             for (CSVRecord csvRecord: csvParser) {
@@ -31,22 +40,109 @@ public class Drug {
                     continue;
                 }
 
-                String drugName = csvRecord.get(0);
-                String drugBankId = csvRecord.get(1);
-                String url = csvRecord.get(2);
+                String applNo = csvRecord.get(0);
+                String productNo = csvRecord.get(1);
+                String form = csvRecord.get(2);
+                String strength = csvRecord.get(3);
+                String name = csvRecord.get(5);
+                String activeIngredient = csvRecord.get(6);
 
-                InsertQuery insertQuery = Graql.insert(var("dr").isa("drug")
-                        .has("drug-name", drugName)
-                        .has("drug-bank-id", drugBankId)
-                        .has("url", url));
+                GraqlInsert GraqlInsert = Graql.insert(var("dr").isa("drug")
+                        .has("appl-no", applNo)
+                        .has("product-no", productNo)
+                        .has("form", form)
+                        .has("strength", strength)
+                        .has("name", name)
+                        .has("active-ingredient", activeIngredient));
 
-                Grakn.Transaction writeTransaction = session.transaction(GraknTxType.WRITE);
-                List<ConceptMap> insertedIds = insertQuery.withTx(writeTransaction).execute();
-                System.out.println("Inserted a drug with ID: " + insertedIds.get(0).get("dr").id());
+                GraknClient.Transaction writeTransaction = session.transaction().write();
+                List<ConceptMap> insertedIds = writeTransaction.execute(GraqlInsert);
+                System.out.println("Inserted a drug at record number: " + csvRecord.getRecordNumber() + " of drugsatfda");
                 writeTransaction.commit();
             }
 
-            System.out.println("-----drugs have been migrated-----");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void migrateFromPharmgkb(GraknClient.Session session) {
+        try {
+            BufferedReader reader = Files.newBufferedReader(Paths.get("dataset/pharmgkb/drugs.csv"));
+            CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
+
+            for (CSVRecord csvRecord: csvParser) {
+
+                // skip header
+                if (csvRecord.getRecordNumber() == 1) {
+                    continue;
+                }
+
+                String pharmgkbId = csvRecord.get(0);
+                String name = csvRecord.get(1);
+
+                GraknClient.Transaction readTransaction = session.transaction().read();
+
+                GraqlGet graqlGet = Graql.match(
+                        var("dr").isa("drug").has("name", name)).get();
+
+                List<ConceptMap> getIds = readTransaction.execute(graqlGet);
+
+                readTransaction.close();
+
+                if (getIds.size() == 0) {
+                    GraqlInsert GraqlInsert = Graql.insert(var("dr").isa("drug")
+                            .has("pharmgkb-id", pharmgkbId)
+                            .has("name", name));
+
+                    GraknClient.Transaction writeTransaction = session.transaction().write();
+                    List<ConceptMap> insertedIds = writeTransaction.execute(GraqlInsert);
+
+                    System.out.println("Inserted a drug at record number: " + csvRecord.getRecordNumber() + " of pharmgkb");
+                    writeTransaction.commit();
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void migrateFromCtdbase(GraknClient.Session session) {
+        try {
+            BufferedReader reader = Files.newBufferedReader(Paths.get("dataset/ctdbase/CTD_chemicals.csv"));
+            CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
+
+            for (CSVRecord csvRecord: csvParser) {
+
+                // skip header
+                if (csvRecord.getRecordNumber() < 30) {
+                    continue;
+                }
+
+                String name = csvRecord.get(0);
+                String meshId = csvRecord.get(1).substring(5);
+
+                GraknClient.Transaction readTransaction = session.transaction().read();
+
+                GraqlGet graqlGet = Graql.match(
+                        var("dr").isa("drug").has("name", name)).get();
+
+                List<ConceptMap> getIds = readTransaction.execute(graqlGet);
+
+                readTransaction.close();
+
+                if (getIds.size() == 0) {
+                    GraqlInsert GraqlInsert = Graql.insert(var("dr").isa("drug")
+                            .has("name", name)
+                            .has("mesh-id", meshId));
+
+                    GraknClient.Transaction writeTransaction = session.transaction().write();
+                    List<ConceptMap> insertedIds = writeTransaction.execute(GraqlInsert);
+
+                    System.out.println("Inserted a drug at record number: " + csvRecord.getRecordNumber() + " of ctdbase");
+                    writeTransaction.commit();
+                }
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }

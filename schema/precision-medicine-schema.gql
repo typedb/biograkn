@@ -1,263 +1,260 @@
 define
 
-person-id sub attribute datatype double;
-age sub attribute datatype double;
-gender sub attribute datatype string;
-disease-id sub attribute datatype string;
-source sub attribute datatype string;
-gene-id sub attribute datatype string;
-snp-id sub attribute datatype string;
-pm-id sub attribute datatype double;
-abstract sub attribute datatype string;
-score sub attribute datatype double;
-url sub attribute datatype string;
-min-age sub attribute datatype double;
-max-age sub attribute datatype double;
-variant-symbol sub attribute datatype string;
-gene-symbol sub attribute datatype string;
-nct-id sub attribute datatype string;
-status sub attribute datatype string;
-results sub attribute datatype boolean;
-intervention-type sub attribute datatype string;
-drug-bank-id sub attribute datatype string;
-participants-gender sub attribute datatype string;
-title sub attribute datatype string;
-disease-name sub attribute datatype string;
-drug-name sub attribute datatype string;
+#common attributes
+name sub attribute, datatype string,
+    plays contained;
+gender sub attribute, datatype string;
+pharmgkb-id sub attribute, datatype string;
+mesh-id sub attribute, datatype string;
 
 person sub entity,
     has person-id,
     has age,
     has gender,
     plays patient,
-    plays genome-owner
+    plays genome-owner,
     plays eligible-participant,
     plays relevant-participant;
 
+person-id sub attribute, datatype string;
+age sub attribute, datatype double;
+
 disease sub entity,
-    has disease-name,
+    has name,
     has disease-id,
-    has source,
+    has source-name,
+    has source-id,
+    has category,
+    has mesh-id,
     plays diagnosed-disease,
-    plays associated-disease,
-    plays treatment-subject,
-    plays mentioned-disease;
+    plays associated-disease;
+
+disease-id sub attribute, datatype string;
+source-name sub attribute, datatype string;
+source-id sub attribute, datatype string;
+category sub attribute, datatype string;
 
 gene sub entity,
-    has gene-id,
-    has gene-symbol,
+    has symbol,
+    has name,
+    has chromosome,
+    has locus-type,
+    has locus-group,
+    has ncbi-id,
+    has ensembl-id,
     plays varied-gene,
     plays identified-gene,
-    plays mentioned-gene;
+    plays associated-gene;
+
+symbol sub attribute, datatype string,
+    plays contained;
+
+chromosome sub attribute, datatype string;
+locus-type sub attribute, datatype string;
+locus-group sub attribute, datatype string;
+ncbi-id sub attribute, datatype string;
+ensembl-id sub attribute, datatype string;
 
 variant sub entity,
-    has variant-symbol,
+    has pharmgkb-id,
     has snp-id,
-    plays mentioned-variant,
+    has gene-symbols,
+    has location,
     plays identified-variant,
     plays genetic-variant,
     plays associated-variant;
 
-pubmed-article sub entity,
-    has pm-id,
-    has title,
-    has abstract,
-    has url,
-    plays mentioning-pubmed-article,
-    plays relevant-therapeutic;
+snp-id sub attribute, datatype string;
+gene-symbols sub attribute, datatype string;
+location sub attribute, datatype string;
 
 drug sub entity,
-    has drug-name,
-    has drug-bank-id,
-    has url,
-    plays associated-drug
-    plays relevant-therapeutic
-    plays used;
+    has appl-no,
+    has product-no,
+    has form,
+    has strength,
+    has name,
+    has active-ingredient,
+    has pharmgkb-id,
+    has mesh-id,
+    plays associated-drug,
+    plays relevant-therapeutic;
+
+appl-no sub attribute, datatype string;
+product-no sub attribute, datatype string;
+form sub attribute, datatype string;
+strength sub attribute, datatype string;
+active-ingredient sub attribute, datatype string;
+
 
 clinical-trial sub entity,
     has nct-id,
     has status,
-    has results,
     has intervention-type,
+    has intervention-name,
     has url,
-    has title,
+    has condition,
+    has brief-title,
+    has official-title,
     has min-age,
     has max-age,
-    has participants-gender,
+    has gender,
     plays relevant-therapeutic,
-    plays treatment-method,
-    plays user,
     plays eligible-trial,
+    plays associated-trial,
     plays relevant-trial;
 
-experimental-treatment sub relationship,
-    relates treatment-subject,
-    relates treatment-method;
+nct-id sub attribute, datatype string;
+status sub attribute, datatype string;
+intervention-type sub attribute, datatype string;
+intervention-name sub attribute, datatype string,
+    plays container;
 
-diagnosis sub relationship,
+url sub attribute, datatype string;
+condition sub attribute, datatype string,
+    plays container;
+
+brief-title sub attribute, datatype string,
+    plays container;
+
+official-title sub attribute, datatype string,
+    plays container;
+
+min-age sub attribute, datatype double;
+max-age sub attribute, datatype double;
+
+gene-disease-association sub relation,
+    has score,
+    relates associated-disease,
+    relates associated-gene;
+
+variant-disease-association sub relation,
+    has score,
+    relates associated-disease,
+    relates associated-variant;
+
+score sub attribute, datatype double;
+
+diagnosis sub relation,
     relates patient,
     relates diagnosed-disease;
 
-gene-identification sub relationship,
+gene-identification sub relation,
     relates identified-gene,
     relates genome-owner;
 
-variant-identification sub relationship,
+variant-identification sub relation,
     relates identified-variant,
     relates genome-owner;
 
-genetic-variation sub relationship,
+genetic-variation sub relation,
     relates genetic-variant,
     relates varied-gene;
 
-text-mined-analysis sub relationship,
-    has score,
-    relates mentioning-pubmed-article,
-    relates mentioned-disease,
-    relates mentioned-gene,
-    relates mentioned-variant;
-
-drug-disease-association sub relationship,
+drug-disease-association sub relation,
     relates associated-disease,
     relates associated-drug;
 
-drug-variant-association sub relationship,
-    relates associated-drug,
-    relates associated-variant;
-
-personalised-therapy sub relationship,
+personalised-therapy sub relation,
     relates patient,
     relates relevant-therapeutic;
 
-
-#personalised-therapy-level-1 sub personalised-therapy,
-#    relates patient,
-#    relates relevant-therapeutic;
-#
-#personalised-therapy-level-2 sub personalised-therapy,
-#    relates patient,
-#    relates relevant-therapeutic;
-#
-#personalised-therapy-level-3 sub personalised-therapy,
-#    relates patient,
-#    relates relevant-therapeutic;
-
-
-use sub relationship,
-    relates user,
-    relates used;
-
-text-mined-analysis-gene sub rule
-when {
-    $p isa pubmed-article has title $t, has abstract $a;
-    $g isa gene has gene-symbol $gs;
-    $t contains $gs;
-    $a contains $gs;
-}
-then {
-    (mentioned-gene: $g, mentioning-pubmed-article: $p) isa text-mined-analysis;
-};
-
-text-mined-analysis-variant sub rule
-when {
-    $p isa pubmed-article has title $t, has abstract $a;
-    $v isa variant has variant-symbol $vs;
-    $t contains $vs;
-    $a contains $vs;
-}
-then {
-    (mentioned-variant: $v, mentioning-pubmed-article: $p) isa text-mined-analysis;
-};
-
-
-text-mined-analysis-disease sub rule
-when {
-    $d isa disease has disease-name $dn;
-    $p isa pubmed-article has title $t, has abstract $a;
-}
-then {
-    (mentioned-disease: $d, mentioning-pubmed-article: $p) isa text-mined-analysis;
-};
-
-
-# sub rule
-#when {
-#    $p isa pubmed-article has title $t, has abstract $a;
-#    $d isa disease has disease-name $n;
-#    $t contains $n;
-#    $a contains $n;
-#}
-#then {
-#    (mentioned-disease: $d, mentioning-pubmed-article: $p) isa text-mined-analysis;
-#};
-
-########
-
-
-########
-
-
-#drug-relevant-therapeutic-variant-disease sub rule,
-#    when {
-#        $p isa person;
-#        $di isa disease;
-#        $dr isa drug;
-#        $v isa variant;
-#        (genome-owner: $p, identified-variant: $v) isa variant-identification;
-#        (patient: $p, diagnosed-disease: $di) isa diagnosis;
-#        (associated-disease: $di, associated-drug: $dr) isa drug-disease-association;
-#        (associated-variant: $v, associated-drug: $dr) isa drug-variant-association;
-#    },
-#    then {
-#        (patient: $p, relevant-therapeutic: $dr) isa personalised-therapy;
-#    };
-
-########
-
-#pubmed-relevant-therapeutic-gene-variant-disease sub rule
-#when {
-#    $p isa person;
-#    $g isa gene;
-#    $v isa variant;
-#    $d isa disease;
-#    $pa isa pubmed-article;
-#    (genome-owner: $p, identified-gene: $g) isa gene-identification;
-#    (genome-owner: $p, identified-variant: $v) isa variant-identification;
-#    (patient: $p, diagnosed-disease: $d) isa diagnosis;
-#    (mentioned-gene: $g, mentioning-pubmed-article: $pa) isa text-mined-analysis;
-#    (mentioned-variant: $v, mentioning-pubmed-article: $pa) isa text-mined-analysis;
-#    (mentioned-disease: $d, mentioning-pubmed-article: $pa) isa text-mined-analysis;
-#}
-#then {
-#    (patient: $p, relevant-therapeutic: $pa) isa personalised-therapy;
-#};
-
-
-########
-
-eligible-trial-participant sub relationship,
+eligible-trial-participant sub relation,
     relates eligible-trial,
     relates eligible-participant;
 
-relevant-trial-participant sub relationship,
+relevant-trial-participant sub relation,
     relates relevant-trial,
     relates relevant-participant;
 
+containing sub relation,
+    relates container,
+    relates contained;
 
-personalised-patient-therapy sub rule
+trial-drug-association sub relation,
+    relates associated-drug,
+    relates associated-trial;
+
+trial-disease-association sub relation,
+    relates associated-disease,
+    relates associated-trial;
+
+trial-gene-association sub relation,
+    relates associated-gene,
+    relates associated-trial;
+
+trial-drug sub rule,
+when {
+    $d isa drug, has name $n;
+    $c isa clinical-trial, has intervention-name $in;
+    ($n, $in) isa containing;
+},
+then {
+    (associated-drug: $d, associated-trial: $c) isa trial-drug-association;
+};
+
+trial-disease sub rule,
+when {
+    $d isa disease, has name $n;
+    $c isa clinical-trial, has condition $co;
+    ($n, $co) isa containing;
+},
+then {
+    (associated-disease: $d, associated-trial: $c) isa trial-disease-association;
+};
+
+trial-gene-1 sub rule,
+when {
+    $g isa gene, has symbol $s;
+    $c isa clinical-trial, has brief-title $b;
+    ($s, $b) isa containing;
+},
+then {
+    (associated-gene: $g, associated-trial: $c) isa trial-gene-association;
+};
+
+trial-drug-2 sub rule,
+when {
+    $g isa gene, has symbol $s;
+    $c isa clinical-trial, has official-title $o;
+    ($s, $o) isa containing;
+},
+then {
+    (associated-gene: $g, associated-trial: $c) isa trial-gene-association;
+};
+
+
+####################
+
+personalised-patient-therapy sub rule,
 when {
     ($person, $trial) isa eligible-trial-participant;
     ($person, $trial) isa relevant-trial-participant;
-}
+},
 then {
     (patient: $person, relevant-therapeutic: $trial) isa personalised-therapy;
 };
 
-trial-participant-elibility sub rule,
+trial-participant-elibility-1 sub rule,
 when {
     $person isa person, has age $age, has gender $gender;
-    $trial isa clinical-trial, has min-age <= $age, has max-age >= $age, has participants-gender == $gender;
-    $disease isa disease; ($disease, $person); ($disease, $trial);
+    $trial isa clinical-trial, has min-age <= $age, has max-age >= $age, has gender == $gender;
+    $disease isa disease;
+    ($disease, $person);
+    ($disease, $trial);
+},
+then {
+    (eligible-participant: $person, eligible-trial: $trial) isa eligible-trial-participant;
+};
+
+
+trial-participant-elibility-2 sub rule,
+when {
+    $person isa person, has age $age;
+    $trial isa clinical-trial, has min-age <= $age, has max-age >= $age, has gender "All";
+    $disease isa disease;
+    ($disease, $person);
+    ($disease, $trial);
 },
 then {
     (eligible-participant: $person, eligible-trial: $trial) isa eligible-trial-participant;
@@ -265,55 +262,9 @@ then {
 
 trial-participant-relevance sub rule,
 when {
-    $person isa person;
-    ($person, $gene); $gene isa gene, has gene-symbol $gs;
-    ($person, $variant); $variant isa variant, has variant-symbol $vs;
-    $trial isa clinical-trial, has title contains $gs, has title contains $vs;
+    ($person, $gene) isa gene-identification;
+    ($trial, $gene) isa trial-gene-association;
 },
 then {
     (relevant-participant: $person, relevant-trial: $trial) isa relevant-trial-participant;
 };
-
-
-#######
-
-#clinical-trial-relevant-therapeutic-gene-variant-disease sub rule
-#when {
-#    $p isa person has age $a, has gender $gen;
-#    $g isa gene has gene-symbol $gs;
-#    $v isa variant has variant-symbol $vs;
-#    $d isa disease;
-#    $ct isa clinical-trial has min-age $min, has max-age $max, has participants-gender $pgen, has title $t;
-#    (genome-owner: $p, identified-gene: $g) isa gene-identification;
-#    (genome-owner: $p, identified-variant: $v) isa variant-identification;
-#    (patient: $p, diagnosed-disease: $d) isa diagnosis;
-#    (treatment-method: $ct, treatment-subject: $d) isa experimental-treatment;
-#    $a >= $min;
-#    $a <= $max;
-#    $gen == $pgen;
-#    $t contains $gs;
-#    $t contains $vs;
-#}
-#then {
-#    (patient: $p, relevant-therapeutic: $ct) isa personalised-therapy;
-#};
-#
-#clinical-trial-relevant-therapeutic-gene-variant-disease-All sub rule
-#when {
-#    $p isa person has age $a, has gender $gen;
-#    $g isa gene has gene-symbol $gs;
-#    $v isa variant has variant-symbol $vs;
-#    $d isa disease;
-#    $ct isa clinical-trial has min-age $min, has max-age $max, has participants-gender "All", has title $t;
-#    (genome-owner: $p, identified-gene: $g) isa gene-identification;
-#    (genome-owner: $p, identified-variant: $v) isa variant-identification;
-#    (patient: $p, diagnosed-disease: $d) isa diagnosis;
-#    (treatment-method: $ct, treatment-subject: $d) isa experimental-treatment;
-#    $a >= $min;
-#    $a <= $max;
-#    $t contains $gs;
-#    $t contains $vs;
-#}
-#then {
-#    (patient: $p, relevant-therapeutic: $ct) isa personalised-therapy;
-#};

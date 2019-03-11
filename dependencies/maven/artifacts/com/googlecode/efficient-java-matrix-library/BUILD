@@ -1,7 +1,7 @@
 java_library(
-    name = "slf4j-api",
+    name = "ejml",
     exports = [
-        "//external:jar/org/slf4j/slf4j-api"
+        "//external:jar/com/googlecode/efficient-java-matrix-library/ejml"
     ],
     visibility = [
         "//dependencies/maven/artifacts:__subpackages__"

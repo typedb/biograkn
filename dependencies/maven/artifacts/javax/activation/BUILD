@@ -1,7 +1,7 @@
 java_library(
-    name = "activation",
+    name = "javax-activation-api",
     exports = [
-        "//external:jar/javax/activation/activation"
+        "//external:jar/javax/activation/javax-activation-api"
     ],
     visibility = [
         "//dependencies/maven/artifacts:__subpackages__"

@@ -6,20 +6,26 @@ java_library(
     name = "migrator",
     srcs = glob(["**/*.java"], exclude = ["**/test/**", "*Test.java"]),
     deps = [
-        "//dependencies/maven/artifacts/ai/grakn:client-java",
-        "//dependencies/maven/artifacts/ai/grakn:grakn-core",
-        "//dependencies/maven/artifacts/ai/grakn:grakn-graql",
+        "@graknlabs_grakn_core//client-java:client-java",
+        "@graknlabs_grakn_core//concept:concept",
+        "@graknlabs_grakn_core//common:common",
+        "@graknlabs_graql//java:graql",
 
         "//dependencies/maven/artifacts/org/apache/poi:poi-ooxml",
-        "//dependencies/maven/artifacts/org/apache/commons:commons-csv"
+        "//dependencies/maven/artifacts/org/apache/commons:commons-csv",
+        "//dependencies/maven/artifacts/edu/stanford/nlp:stanford-corenlp",
+        "//dependencies/maven/artifacts/edu/stanford/nlp:stanford-corenlp-java-models"
     ],
-    data = ["//dataset"]
+#    data = ["//dataset"],
 )
+
+
 
 java_binary(
     name = "migrator-bin",
     runtime_deps = [":migrator"],
-    main_class = "grakn.biograkn.migrator.Migrator"
+    main_class = "grakn.biograkn.migrator.Migrator",
+    classpath_resources = ["//conf:logback"]
 )
 
 

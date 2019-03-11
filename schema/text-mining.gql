@@ -1,0 +1,80 @@
+define
+
+# common attributes
+confidence sub attribute, datatype double;
+
+pubmed-article sub entity,
+  has pmid,
+  has title,
+  has annotated-abstract;
+
+pmid sub attribute, datatype string;
+title sub attribute, datatype string;
+annotated-abstract sub attribute, datatype string,
+  plays abstract-container,
+  plays owner;
+
+sentence sub entity,
+  has sentiment,
+  has text,
+  plays contained-sentence,
+  plays sentence-container,
+  plays mentioning-sentence;
+
+sentiment sub attribute, datatype string;
+text sub attribute, datatype string;
+
+token sub entity,
+  has start-position,
+  has end-position,
+  has tag,
+  has ner,
+  has lemma,
+  plays contained-token,
+  plays object,
+  plays subject;
+
+start-position sub attribute, datatype double;
+end-position sub attribute, datatype double;
+tag sub attribute, datatype string;
+ner sub attribute, datatype string,
+    has confidence;
+lemma sub attribute, datatype string;
+
+relationship sub relation,
+    has relationship-type,
+    has confidence,
+    relates object,
+    relates subject,
+    relates mentioning-sentence;
+
+relationship-type sub attribute, datatype string;
+
+entity-mention sub entity,
+    has value,
+    plays mentioned-entity;
+
+value sub attribute, datatype string;
+
+mention sub relation,
+    relates mentioned-entity,
+    relates mentioning-sentence,
+    plays owned,
+    plays representative;
+
+coref-chain sub relation,
+    has chain-id,
+    relates owner,
+    relates owned,
+    relates representative;
+
+chain-id sub attribute, datatype string;
+
+
+abstract-containing-sentence sub relation,
+    relates abstract-container,
+    relates contained-sentence;
+
+sentence-containing-token sub relation,
+    relates sentence-container,
+    relates contained-token;

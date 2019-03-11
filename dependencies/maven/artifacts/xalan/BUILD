@@ -1,10 +1,10 @@
 java_library(
-    name = "jaxb-api",
+    name = "xalan",
     exports = [
-        "//external:jar/javax/xml/bind/jaxb-api"
+        "//external:jar/xalan/xalan"
     ],
     runtime_deps = [
-        "//dependencies/maven/artifacts/javax/activation:javax-activation-api"
+        "//dependencies/maven/artifacts/xml-apis:xml-apis"
     ],
     visibility = [
         "//dependencies/maven/artifacts:__subpackages__"
