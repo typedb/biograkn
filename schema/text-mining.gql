@@ -41,19 +41,22 @@ ner sub attribute, datatype string,
     has confidence;
 lemma sub attribute, datatype string;
 
-relationship sub relation,
-    has relationship-type,
+mined-relation sub relation,
+    has relation-type,
     has confidence,
     relates object,
     relates subject,
     relates mentioning-sentence;
 
-relationship-type sub attribute, datatype string;
+relation-type sub attribute, datatype string;
 
 entity-mention sub entity,
     has value,
-    plays mentioned-entity;
+    has entity-type,
+    plays mentioned-entity,
+    plays containing-entity;
 
+entity-type sub attribute, datatype string;
 value sub attribute, datatype string;
 
 mention sub relation,
@@ -68,7 +71,7 @@ coref-chain sub relation,
     relates owned,
     relates representative;
 
-chain-id sub attribute, datatype string;
+chain-id sub attribute, datatype double;
 
 
 abstract-containing-sentence sub relation,
@@ -78,3 +81,51 @@ abstract-containing-sentence sub relation,
 sentence-containing-token sub relation,
     relates sentence-container,
     relates contained-token;
+
+entity-containing-token sub relation,
+    relates containing-entity,
+    relates contained-token;
+
+test1 sub rule,
+when {
+    (representative: $r, owned: $o) isa coref-chain;
+    $o (mentioned-entity: $e) isa mention;
+    (containing-entity: $e, contained-token: $t) isa entity-containing-token;
+    (subject: $t, mentioning-sentence: $s, object: $ob) isa mined-relation, has confidence $c, has relation-type $rt;
+
+    $r (mentioned-entity: $e2) isa mention;
+    ($e2, $t2) isa entity-containing-token;
+},
+then {
+    (subject: $t2, mentioning-sentence: $s, object: $ob) isa mined-relation;
+};
+
+test2 sub rule,
+  when {
+      (representative: $r, owned: $o) isa coref-chain;
+      $o (mentioned-entity: $e) isa mention;
+      (containing-entity: $e, contained-token: $t) isa entity-containing-token;
+      (subject: $t, mentioning-sentence: $s, object: $ob) isa mined-relation, has confidence $c, has relation-type $rt;
+
+      $r (mentioned-entity: $e2) isa mention;
+      ($e2, $t2) isa entity-containing-token;
+      $mr2 (subject: $t2, mentioning-sentence: $s, object: $ob) isa mined-relation;
+  },
+  then {
+      $mr2 has confidence $c;
+  };
+
+ test3 sub rule,
+ when {
+     (representative: $r, owned: $o) isa coref-chain;
+     $o (mentioned-entity: $e) isa mention;
+     (containing-entity: $e, contained-token: $t) isa entity-containing-token;
+     (subject: $t, mentioning-sentence: $s, object: $ob) isa mined-relation, has confidence $c, has relation-type $rt;
+
+     $r (mentioned-entity: $e2) isa mention;
+     ($e2, $t2) isa entity-containing-token;
+     $mr2 (subject: $t2, mentioning-sentence: $s, object: $ob) isa mined-relation;
+ },
+ then {
+     $mr2 has relation-type $rt;
+ };
