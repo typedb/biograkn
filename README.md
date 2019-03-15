@@ -9,7 +9,7 @@ BioGrakn DN provides an intuitive way to query interconnected and heterogeneous 
 1. Download the latest release.
 2. Unzip the downloaded file.
 3. `cd` into the unzipped folder, via terminal or command prompt.
-4. run `./grakn start server`
+4. run `./grakn server start`
 
 ## Interacting With BioGrakn DN
 Queries can be run over BioGrakn DN, via Graql Console, Grakn Clients and Grakn Workbase.
