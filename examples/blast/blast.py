@@ -14,12 +14,13 @@ from util import insert_if_non_existent, insert_anyway
 
 def query_target_sequences(session):
     with session.transaction().read() as transaction:
-        q_match_target_sequences = 'match $p isa protein, has sequence $s; get $s; limit 1;'
-        print("Extracting target sequences: ", q_match_target_sequences)
-        print("- - - - - - - - - - - - - - - - - - - - -")
-        answers = transaction.query(q_match_target_sequences).collect_concepts()
-        sequences = [answer.value() for answer in answers]
-        return sequences
+        # q_match_target_sequences = 'match $p isa protein, has sequence $s; get $s; limit 1;'
+        # print("Extracting target sequences: ", q_match_target_sequences)
+        # print("- - - - - - - - - - - - - - - - - - - - -")
+        # answers = transaction.query(q_match_target_sequences).collect_concepts()
+        # sequences = [answer.value() for answer in answers]
+        # return sequences
+        return ["MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKYc"]
 
 
 '''
