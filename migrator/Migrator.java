@@ -60,7 +60,6 @@ public class Migrator {
         System.out.println("~~~~~~~~~~Precision Medicine Migration Completed~~~~~~~~~~");
     }
 
-    @SuppressWarnings("Duplicates")
     public static void migrateTextMining() {
         System.out.println("~~~~~~~~~~Starting Text Mining Migration~~~~~~~~~~");
 

@@ -11,7 +11,7 @@ git_repository(
 git_repository(
     name="graknlabs_grakn_core",
     remote="https://github.com/graknlabs/grakn",
-    commit="c5630e49463717214cdc02105a9933f0bf14e88f"
+    commit="b9ac28f854b06e8bb67483f9ff1e8b2f744d14b4"
 )
 
 git_repository(
@@ -20,6 +20,13 @@ git_repository(
     commit="3fff34b151afabaee5af7ffb35ed99e52747c932"
 )
 
+git_repository(
+    name = "graknlabs_client_java",
+    remote = "https://github.com/graknlabs/client-java.git",
+    commit = "bbc8e2eaf99f8e2ecb4fe06813a47dcb36f96071"
+)
+load("@graknlabs_client_java//dependencies/maven:dependencies.bzl", maven_dependencies_for_build= "maven_dependencies")
+maven_dependencies_for_build()
 
 # ----- @graknlabs_grakn deps -----
 
