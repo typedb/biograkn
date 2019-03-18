@@ -46,7 +46,7 @@ If you have already gone through the **Quick Start** section, first you need to 
 - 1. Enter the keyspace via Grakn Console: `path-to-grakn-dist-directory(the unzipped folder)/grakn console --keyspace proteins`
 - 2. Remove both the schema definitions and data instances: `clean`
 - 3. `confirm`
-- 4. Reload the schema: `path-to-grakn-dist-directory(the unzipped folder)/graql console --keyspace proteins --file path-to-cloned-biograkn-repository/examples/blast/schema.gql`
+- 4. Reload the schema: `path-to-grakn-dist-directory(the unzipped folder)/grakn console --keyspace proteins --file path-to-cloned-biograkn-repository/examples/blast/schema.gql`
 
 Next, you need to modify the `migrate.py` file to specify the title the file that contains the proteins and their sequences. The current code reads from a `.fasta` file exported from UniProt.
 For migrating data in a different format, check out the [migration examples](http://github.com/graknlabs/examples)
