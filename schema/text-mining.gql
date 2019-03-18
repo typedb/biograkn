@@ -12,7 +12,8 @@ pmid sub attribute, datatype string;
 title sub attribute, datatype string;
 annotated-abstract sub attribute, datatype string,
   plays abstract-container,
-  plays owner;
+  plays owner,
+  plays mined-text;
 
 sentence sub entity,
   has sentiment,
@@ -85,6 +86,14 @@ sentence-containing-token sub relation,
 entity-containing-token sub relation,
     relates containing-entity,
     relates contained-token;
+
+entity-extraction sub relation,
+    relates extracted-entity,
+    relates mined-text;
+
+relation-extraction sub relation,
+    relates extracted-relation,
+    relates mined-text;
 
 test1 sub rule,
 when {

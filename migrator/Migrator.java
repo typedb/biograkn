@@ -1,13 +1,13 @@
 package grakn.biograkn.migrator;
 
 
-
 import edu.stanford.nlp.coref.data.CorefChain;
 import edu.stanford.nlp.ie.util.RelationTriple;
 import edu.stanford.nlp.ling.CoreLabel;
-import edu.stanford.nlp.pipeline.*;
-import edu.stanford.nlp.semgraph.SemanticGraph;
-import edu.stanford.nlp.trees.Tree;
+import edu.stanford.nlp.pipeline.CoreDocument;
+import edu.stanford.nlp.pipeline.CoreEntityMention;
+import edu.stanford.nlp.pipeline.CoreSentence;
+import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import grakn.biograkn.migrator.clinicaltrial.ClinicalTrial;
 import grakn.biograkn.migrator.clinicaltrialrelationships.ClinicalTrialRelationship;
 import grakn.biograkn.migrator.disease.Disease;
@@ -20,6 +20,7 @@ import grakn.biograkn.migrator.variantdisease.VariantDiseaseAssociation;
 import grakn.core.client.GraknClient;
 import grakn.core.concept.answer.ConceptMap;
 import graql.lang.Graql;
+import graql.lang.query.GraqlDefine;
 import graql.lang.query.GraqlGet;
 import graql.lang.query.GraqlInsert;
 
@@ -27,6 +28,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
+import static graql.lang.Graql.type;
 import static graql.lang.Graql.var;
 
 @SuppressWarnings("Duplicates")
@@ -68,7 +70,7 @@ public class Migrator {
 
         try {
             String abstractText = "Joe Smith was born in California. In 2017, he went to Paris, France in the summer. His flight left at 3:00pm on July 10th, 2017. " +
-                    "After eating some escargot for the first time, Joe said, He sent a postcard to his sister Jane Smith. After hearing about Joe's trip, Jane decided she might go to France one day.";
+                    "After eating some escargot for the first time, Joe said, He sent a postcard to his sister Jane Smith. After hearing about Joe's trip, Jane decided she might go to France one day. Joe has a phone. It is blue.";
 
             GraknClient.Transaction writeTransaction = session.transaction().write();
             GraqlInsert graqlInsert = Graql.insert(var("a").isa("annotated-abstract").val(abstractText));
@@ -106,14 +108,19 @@ public class Migrator {
                     var("a").id(abstractId))
                     .insert(var("acs").isa("abstract-containing-sentence").rel("contained-sentence", "s").rel("abstract-container", "a"));
 
-            writeTransaction.execute(graqlInsert);
+            List<ConceptMap> insertedIds = writeTransaction.execute(graqlInsert);
+
+            if (insertedIds.isEmpty()) {
+                throw new IllegalStateException("abstract-containing-sentence insertion failed");
+            }
+
             writeTransaction.commit();
 
             migrateTokens(sentence, insertedSentenceId, session);
 
             migrateMinedRelations(sentence, insertedSentenceId, session);
 
-            migrateMentions(sentence, insertedSentenceId, session);
+            migrateMentions(sentence, insertedSentenceId, session, abstractId);
         }
         System.out.println("inserted sentences");
     }
@@ -140,7 +147,11 @@ public class Migrator {
                                     .has("ner", ner),
                             var("sct").isa("sentence-containing-token").rel("sentence-container", "s").rel("contained-token", "t"));
 
-            writeTransaction.execute(graqlInsert);
+            List<ConceptMap> insertedIds = writeTransaction.execute(graqlInsert);
+
+            if (insertedIds.isEmpty()) {
+                throw new IllegalStateException("sentence-containing-token insertion failed");
+            }
         }
         writeTransaction.commit();
         System.out.println("Inserted tokens");
@@ -188,13 +199,17 @@ public class Migrator {
             query += ") isa mined-relation, has confidence " + relationConfidence + ", has relation-type '" + relationType + "';";
 
             GraqlInsert graqlInsert = Graql.parse(query);
-            writeTransaction.execute(graqlInsert);
+            List<ConceptMap> insertedIds = writeTransaction.execute(graqlInsert);
+
+            if (insertedIds.isEmpty()) {
+                throw new IllegalStateException("mined-relation insertion failed");
+            }
         }
         writeTransaction.commit();
         System.out.println("Inserted mined-relations");
     }
 
-    public static void migrateMentions(CoreSentence sentence, String sentenceId, GraknClient.Session session) {
+    public static void migrateMentions(CoreSentence sentence, String sentenceId, GraknClient.Session session, String abstractId) {
         List<CoreEntityMention> entityMentions = sentence.entityMentions();
 
         for (CoreEntityMention entityMention : entityMentions) {
@@ -207,8 +222,50 @@ public class Migrator {
                     var("s").id(sentenceId))
                     .insert(var("e").isa("entity-mention").has("value", entityMentioned).has("entity-type", entityType),
                             var("m").isa("mention").rel("mentioned-entity", "e").rel("mentioning-sentence", "s"));
-            writeTransaction.execute(graqlInsert);
+
+            List<ConceptMap> insertedIds = writeTransaction.execute(graqlInsert);
+
+            if (insertedIds.isEmpty()) {
+                throw new IllegalStateException("entity-mention and mention insertion failed");
+            }
+
+            GraqlGet getMentionedEntityType = Graql.match(var("x").type(entityType)).get();
+
+            List<ConceptMap> getEntityType = writeTransaction.execute(getMentionedEntityType);
+
+            if (getEntityType.isEmpty()) {
+                GraqlDefine defineType = Graql.define(type(entityType).sub("entity").has("value").plays("extracted-entity"));
+                 writeTransaction.execute(defineType);
+            }
+
+            GraqlGet getMentionedEntity = Graql.match(var("x").isa(entityType).has("value", entityMentioned)).get();
+
+            List<ConceptMap> getEntity = writeTransaction.execute(getMentionedEntity);
+
+            if (getEntity.isEmpty()) {
+                graqlInsert = Graql.insert(var("e").isa(entityType).has("value", entityMentioned));
+                writeTransaction.execute(graqlInsert);
+            }
+
+            getMentionedEntity = Graql.match(
+                    var("e").isa(entityType).has("value", entityMentioned),
+                    var("a").id(abstractId),
+                    var("ee").isa("entity-extraction").rel("extracted-entity", "e").rel("mined-text", "a")).get();
+
+            getEntity = writeTransaction.execute(getMentionedEntity);
+
+            if (getEntity.isEmpty()) {
+
+                GraqlInsert insert = Graql.match(var("e").isa(entityType).has("value", entityMentioned),var("a").id(abstractId))
+                        .insert(var("ee").isa("entity-extraction").rel("extracted-entity", "e").rel("mined-text", "a"));
+                insertedIds = writeTransaction.execute(insert);
+                if (insertedIds.isEmpty()) {
+                    throw new IllegalStateException("entity-extraction insertion failed");
+                }
+            }
+
             writeTransaction.commit();
+
 
             writeTransaction = session.transaction().write();
 
@@ -223,7 +280,12 @@ public class Migrator {
                         var("e").isa("entity-mention").has("value", entityMentioned),
                         var("t").isa("token").has("lemma", lemma).has("start-position", startPostion).has("end-position", endPosition))
                         .insert(var("ect").isa("entity-containing-token").rel("containing-entity", "e").rel("contained-token", "t"));
-                writeTransaction.execute(graqlInsert);
+
+                insertedIds = writeTransaction.execute(graqlInsert);
+
+                if (insertedIds.isEmpty()) {
+                    throw new IllegalStateException("entity-containing-token insertion failed");
+                }
             }
             writeTransaction.commit();
         }
@@ -260,7 +322,12 @@ public class Migrator {
                             .insert(var("e").isa("entity-mention").has("value", mentionedEntity),
                                     var("m").isa("mention").rel("mentioned-entity", "e").rel("mentioning-sentence", "s"));
 
-                    writeTx.execute(ins);
+                    List<ConceptMap> insertedIds = writeTx.execute(ins);
+
+                    if (insertedIds.isEmpty()) {
+                        throw new IllegalStateException("entity-mention and mention insertion failed in coref-chain");
+                    }
+
                     writeTx.commit();
                     writeTx = session.transaction().write();
                 } else {
@@ -274,7 +341,12 @@ public class Migrator {
                         GraqlInsert ins = Graql.match(var("s").isa("sentence").has("text", sentenceText),var("e").isa("entity-mention").has("value", mentionedEntity))
                                 .insert(var("m").isa("mention").rel("mentioned-entity", "e").rel("mentioning-sentence", "s"));
 
-                        writeTx.execute(ins);
+                        List<ConceptMap> insertedIds = writeTx.execute(ins);
+
+                        if (insertedIds.isEmpty()) {
+                            throw new IllegalStateException("mention insertion failed in coref-chain");
+                        }
+
                         writeTx.commit();
                         writeTx = session.transaction().write();
                     }
@@ -297,7 +369,11 @@ public class Migrator {
 
             GraqlInsert insert = Graql.parse(query);
 
-            writeTx.execute(insert);
+            List<ConceptMap> insertedIds = writeTx.execute(insert);
+
+            if (insertedIds.isEmpty()) {
+                throw new IllegalStateException("coref-chain insertion failed");
+            }
 
             writeTx.commit();
         });
