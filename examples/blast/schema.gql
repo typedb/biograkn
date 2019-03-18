@@ -1,16 +1,24 @@
 define
 
-    name sub attribute datatype string;
-    identifier sub attribute datatype string;
-    sequence-identicality sub attribute datatype double;
-    sequence-positivity sub attribute datatype double;
-    sequence-gaps sub attribute datatype double;
-    sequence-midline sub attribute datatype string;
+    name sub attribute,
+        datatype string;
+    identifier sub attribute,
+        datatype string;
+    sequence-identicality sub attribute,
+        datatype double;
+    sequence-positivity sub attribute,
+        datatype double;
+    sequence-gaps sub attribute,
+        datatype double;
+    sequence-midline sub attribute,
+        datatype string;
 
-    ####################################################################################
-    # Protein, Sequence and Species
-    ####################################################################################
-    sequence sub attribute datatype string,
+    #################################
+    # Protein, Sequence and Species #
+    #################################
+
+    sequence sub attribute,
+        datatype string,
         plays sourced-information,
         plays target-sequence,
         plays matched-sequence;
@@ -28,40 +36,42 @@ define
         has name,
         plays species-owner;
 
-    ####################################################################################
-    # Alignment
-    ####################################################################################
-    alignment sub relationship,
+    #############
+    # Alignment #
+    #############
+
+    alignment sub relation,
         relates aligning-element;
 
     protein-protein-alignment sub alignment,
+        has sequence-identicality,
+        has sequence-positivity,
+        has sequence-gaps,
+        has sequence-midline,
+        has identifier,
         relates aligning-protein as aligning-element,
         relates target-protein as aligning-protein,
-        relates matched-protein as aligning-protein,
-        has sequence-identicality,
-        has sequence-positivity,
-        has sequence-gaps,
-        has sequence-midline,
-        has identifier;
+        relates matched-protein as aligning-protein;
 
     sequence-sequence-alignment sub alignment,
-        relates aligning-sequence as aligning-element,
-        relates target-sequence as aligning-sequence,
-        relates matched-sequence as aligning-sequence,
         has sequence-identicality,
         has sequence-positivity,
         has sequence-gaps,
         has sequence-midline,
-        has identifier;
+        has identifier,
+        relates aligning-sequence as aligning-element,
+        relates target-sequence as aligning-sequence,
+        relates matched-sequence as aligning-sequence;
 
     sequence-alignment-implies-protein-alignment sub rule,
         when {
             (target-sequence: $ts, matched-sequence: $ms) isa sequence-sequence-alignment;
             $tp isa protein, has sequence $ts;
             $mp isa protein, has sequence $ms;
-        } then {
+        }, then {
             (target-protein: $tp, matched-protein: $mp) isa protein-protein-alignment;
         };
+
     prtein-alignment-has-identicality sub rule,
         when {
             $ssa (target-sequence: $ts, matched-sequence: $ms) isa sequence-sequence-alignment;
@@ -69,9 +79,10 @@ define
             $tp isa protein, has sequence $ts;
             $mp isa protein, has sequence $ms;
             $ppa (target-protein: $tp, matched-protein: $mp) isa protein-protein-alignment;
-        } then {
+        }, then {
             $ppa has sequence-identicality $si;
         };
+
     prtein-alignment-has-positivity sub rule,
         when {
             $ssa (target-sequence: $ts, matched-sequence: $ms) isa sequence-sequence-alignment;
@@ -79,9 +90,10 @@ define
             $tp isa protein, has sequence $ts;
             $mp isa protein, has sequence $ms;
             $ppa (target-protein: $tp, matched-protein: $mp) isa protein-protein-alignment;
-        } then {
+        }, then {
             $ppa has sequence-positivity $sp;
         };
+
     prtein-alignment-has-gaps sub rule,
         when {
             $ssa (target-sequence: $ts, matched-sequence: $ms) isa sequence-sequence-alignment;
@@ -89,9 +101,10 @@ define
             $tp isa protein, has sequence $ts;
             $mp isa protein, has sequence $ms;
             $ppa (target-protein: $tp, matched-protein: $mp) isa protein-protein-alignment;
-        } then {
+        }, then {
             $ppa has sequence-gaps $sg;
         };
+
     prtein-alignment-has-midline sub rule,
         when {
             $ssa (target-sequence: $ts, matched-sequence: $ms) isa sequence-sequence-alignment;
@@ -99,9 +112,10 @@ define
             $tp isa protein, has sequence $ts;
             $mp isa protein, has sequence $ms;
             $ppa (target-protein: $tp, matched-protein: $mp) isa protein-protein-alignment;
-        } then {
+        }, then {
             $ppa has sequence-midline $sm;
         };
+
     prtein-alignment-has-identifier sub rule,
         when {
             $ssa (target-sequence: $ts, matched-sequence: $ms) isa sequence-sequence-alignment;
@@ -109,32 +123,34 @@ define
             $tp isa protein, has sequence $ts;
             $mp isa protein, has sequence $ms;
             $ppa (target-protein: $tp, matched-protein: $mp) isa protein-protein-alignment;
-        } then {
+        }, then {
             $ppa has identifier $id;
         };
 
-    ####################################################################################
-    # Database
-    ####################################################################################
+    ############
+    # Database #
+    ############
+
     database sub entity,
         plays information-source,
         has name;
-    sourcing-of-information sub relationship,
+    sourcing-of-information sub relation,
         relates information-source,
         relates sourced-information;
 
     transitive-sourcing-of-information sub rule,
         when {
             (information-source: $db, sourced-information: $seq) isa sourcing-of-information;
-            $pr isa protein has sequence $seq;
-        } then {
+            $pr isa protein, has sequence $seq;
+        }, then {
             (information-source: $db, sourced-information: $pr) isa sourcing-of-information;
         };
 
-    ####################################################################################
-    # Ownership
-    ####################################################################################
-    ownership sub relationship,
+    #############
+    # Ownership #
+    #############
+
+    ownership sub relation,
         relates owner,
         relates property;
 
@@ -146,6 +162,6 @@ define
         when {
             (owner: $a, property: $b) isa ownership;
             (owner: $b, property: $c) isa ownership;
-        } then {
+        }, then {
             (owner: $a, property: $c) isa ownership;
         };

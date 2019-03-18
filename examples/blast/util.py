@@ -25,8 +25,8 @@ def insert_if_non_existent(session, insert_minimal_query, insert_attributes_or_v
     match_query += " get " + insert_attributes_or_variable.split(" ")[0] + ";"
 
     exists = False
-    with session.transaction(grakn.TxType.READ) as read_tx:
-        answers = read_tx.query(match_query).collect_concepts()
+    with session.transaction().read() as read_transaction:
+        answers = read_transaction.query(match_query).collect_concepts()
         exists = len(answers) > 0
 
     id = None
@@ -37,10 +37,10 @@ def insert_if_non_existent(session, insert_minimal_query, insert_attributes_or_v
         # insert_attributes_or_variable contains attributes
         if insert_attributes_or_variable.count(";") > 0:
             insert_query += insert_attributes_or_variable
-        with session.transaction(grakn.TxType.WRITE) as write_tx:
-            id = write_tx.query(insert_query).collect_concepts()[0].id
+        with session.transaction().write() as write_transaction:
+            id = write_transaction.query(insert_query).collect_concepts()[0].id
             print("Execute insert query: ", insert_query)
-            write_tx.commit()
+            write_transaction.commit()
     return id
 
 
@@ -53,10 +53,10 @@ def insert_if_non_existent(session, insert_minimal_query, insert_attributes_or_v
 
 
 def insert_anyway(session, insert_query):
-    with session.transaction(grakn.TxType.WRITE) as write_tx:
-        id = write_tx.query(insert_query).collect_concepts()[0].id
+    with session.transaction().write() as write_transaction:
+        id = write_transaction.query(insert_query).collect_concepts()[0].id
         print("Execute insert query: ", insert_query)
-        write_tx.commit()
+        write_transaction.commit()
     return id
 
 
