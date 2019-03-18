@@ -2,6 +2,9 @@ workspace(name = "grakn_biograkn")
 
 load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
+# ----- @graknlabs_grakn -----
+
+
 git_repository(
     name="graknlabs_rules_deployment",
     remote="https://github.com/graknlabs/deployment",
@@ -19,14 +22,6 @@ git_repository(
     remote="https://github.com/graknlabs/bazel-distribution",
     commit="3fff34b151afabaee5af7ffb35ed99e52747c932"
 )
-
-git_repository(
-    name = "graknlabs_client_java",
-    remote = "https://github.com/graknlabs/client-java.git",
-    commit = "bbc8e2eaf99f8e2ecb4fe06813a47dcb36f96071"
-)
-load("@graknlabs_client_java//dependencies/maven:dependencies.bzl", maven_dependencies_for_build= "maven_dependencies")
-maven_dependencies_for_build()
 
 # ----- @graknlabs_grakn deps -----
 
@@ -89,3 +84,17 @@ http_archive(
     "https://github.com/bazelbuild/bazel-toolchains/archive/31b5dc8c4e9c7fd3f5f4d04c6714f2ce87b126c1.tar.gz",
   ],
 )
+
+
+# ----- @graknlabs_client_java -----
+
+git_repository(
+    name = "graknlabs_client_java",
+    remote = "https://github.com/graknlabs/client-java.git",
+    commit = "bbc8e2eaf99f8e2ecb4fe06813a47dcb36f96071"
+)
+
+# ----- @graknlabs_client_java deps-----
+
+load("@graknlabs_client_java//dependencies/maven:dependencies.bzl", maven_dependencies_for_build= "maven_dependencies")
+maven_dependencies_for_build()
