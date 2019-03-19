@@ -6,7 +6,7 @@ BioGrakn DN provides an intuitive way to query interconnected and heterogeneous 
 
 ## Quickstart
 
-1. Download the latest release.
+1. Download the latest release. -> https://github.com/graknlabs/biograkn/releases
 2. Unzip the downloaded file.
 3. `cd` into the unzipped folder, via terminal or command prompt.
 4. run `./grakn server start`
