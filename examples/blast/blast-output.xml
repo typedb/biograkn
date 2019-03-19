@@ -1,0 +1,1441 @@
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastp</BlastOutput_program>
+  <BlastOutput_version>BLASTP 2.9.0+</BlastOutput_version>
+  <BlastOutput_reference>Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&amp;auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), &quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search programs&quot;, Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+  <BlastOutput_db>nr</BlastOutput_db>
+  <BlastOutput_query-ID>Query_185009</BlastOutput_query-ID>
+  <BlastOutput_query-def>unnamed protein product</BlastOutput_query-def>
+  <BlastOutput_query-len>153</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_matrix>BLOSUM62</Parameters_matrix>
+      <Parameters_expect>10</Parameters_expect>
+      <Parameters_gap-open>11</Parameters_gap-open>
+      <Parameters_gap-extend>1</Parameters_gap-extend>
+      <Parameters_filter>F</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+<BlastOutput_iterations>
+<Iteration>
+  <Iteration_iter-num>1</Iteration_iter-num>
+  <Iteration_query-ID>Query_185009</Iteration_query-ID>
+  <Iteration_query-def>unnamed protein product</Iteration_query-def>
+  <Iteration_query-len>153</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|1099271791|ref|XP_004041789.2|</Hit_id>
+  <Hit_def>PREDICTED: ORM1-like protein 3 isoform X1 [Gorilla gorilla gorilla] &gt;gi|1367201444|ref|XP_003315508.4| ORM1-like protein 3 isoform X1 [Pan troglodytes]</Hit_def>
+  <Hit_accession>XP_004041789</Hit_accession>
+  <Hit_len>171</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>312.768</Hsp_bit-score>
+      <Hsp_score>800</Hsp_score>
+      <Hsp_evalue>1.67754e-107</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>19</Hsp_hit-from>
+      <Hsp_hit-to>171</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>153</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>2</Hit_num>
+  <Hit_id>gi|795582501|ref|XP_011723585.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 isoform X2 [Macaca nemestrina]</Hit_def>
+  <Hit_accession>XP_011723585</Hit_accession>
+  <Hit_len>172</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>312.768</Hsp_bit-score>
+      <Hsp_score>800</Hsp_score>
+      <Hsp_evalue>1.79499e-107</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>20</Hsp_hit-from>
+      <Hsp_hit-to>172</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>152</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>3</Hit_num>
+  <Hit_id>gi|27544927|ref|NP_644809.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 [Homo sapiens] &gt;gi|1003088699|ref|NP_001307731.1| ORM1-like protein 3 [Homo sapiens] &gt;gi|1003088797|ref|NP_001307732.1| ORM1-like protein 3 [Homo sapiens] &gt;gi|1003088803|ref|NP_001307730.1| ORM1-like protein 3 [Homo sapiens] &gt;gi|397522896|ref|XP_003831484.1| ORM1-like protein 3 [Pan paniscus] &gt;gi|426348325|ref|XP_004041787.1| PREDICTED: ORM1-like protein 3 isoform X2 [Gorilla gorilla gorilla] &gt;gi|675797396|ref|XP_008955036.1| ORM1-like protein 3 [Pan paniscus] &gt;gi|1099271799|ref|XP_018883802.1| PREDICTED: ORM1-like protein 3 isoform X2 [Gorilla gorilla gorilla] &gt;gi|1099271803|ref|XP_018883803.1| PREDICTED: ORM1-like protein 3 isoform X2 [Gorilla gorilla gorilla] &gt;gi|1367201448|ref|XP_001171486.3| ORM1-like protein 3 isoform X2 [Pan troglodytes] &gt;gi|1367201452|ref|XP_009430520.3| ORM1-like protein 3 isoform X2 [Pan troglodytes] &gt;gi|1367201456|ref|XP_016787367.2| ORM1-like protein 3 isoform X2 [Pan troglodytes] &gt;gi|1384956896|ref|XP_003831487.3| ORM1-like protein 3 [Pan paniscus] &gt;gi|74728486|sp|Q8N138.1|ORML3_HUMAN RecName: Full=ORM1-like protein 3 &gt;gi|21165608|gb|AAM43507.1|AF395708_1 ORMDL3 [Homo sapiens] &gt;gi|25990418|gb|AAN76522.1|AF373102_1 unknown [Homo sapiens] &gt;gi|22760500|dbj|BAC11223.1| unnamed protein product [Homo sapiens] &gt;gi|22761156|dbj|BAC11476.1| unnamed protein product [Homo sapiens] &gt;gi|25990416|gb|AAN76521.1| unknown [Homo sapiens] &gt;gi|45708790|gb|AAH17087.1| ORM1-like 3 (S. cerevisiae) [Homo sapiens] &gt;gi|47940568|gb|AAH71833.1| ORM1-like 3 (S. cerevisiae) [Homo sapiens] &gt;gi|119581021|gb|EAW60617.1| ORM1-like 3 (S. cerevisiae), isoform CRA_b [Homo sapiens] &gt;gi|119581022|gb|EAW60618.1| ORM1-like 3 (S. cerevisiae), isoform CRA_b [Homo sapiens] &gt;gi|119581023|gb|EAW60619.1| ORM1-like 3 (S. cerevisiae), isoform CRA_b [Homo sapiens] &gt;gi|119581024|gb|EAW60620.1| ORM1-like 3 (S. cerevisiae), isoform CRA_b [Homo sapiens] &gt;gi|193787439|dbj|BAG52645.1| unnamed protein product [Homo sapiens] &gt;gi|312150916|gb|ADQ31970.1| ORM1-like 3 (S. cerevisiae), partial [synthetic construct] &gt;gi|649113493|gb|AIC52803.1| ORMDL3, partial [synthetic construct] &gt;gi|1147688148|emb|SJX36484.1| unnamed protein product, partial [Human ORFeome Gateway entry vector] &gt;gi|1331774546|gb|PNI34236.1| ORMDL3 isoform 1 [Pan troglodytes] &gt;gi|1331774547|gb|PNI34237.1| ORMDL3 isoform 2 [Pan troglodytes] &gt;gi|1331774549|gb|PNI34239.1| ORMDL3 isoform 5 [Pan troglodytes]</Hit_def>
+  <Hit_accession>NP_644809</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>311.997</Hsp_bit-score>
+      <Hsp_score>798</Hsp_score>
+      <Hsp_evalue>2.09195e-107</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>153</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>4</Hit_num>
+  <Hit_id>gi|1327791443|ref|XP_023366972.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 isoform X1 [Otolemur garnettii]</Hit_def>
+  <Hit_accession>XP_023366972</Hit_accession>
+  <Hit_len>189</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>313.153</Hsp_bit-score>
+      <Hsp_score>801</Hsp_score>
+      <Hsp_evalue>2.54672e-107</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>37</Hsp_hit-from>
+      <Hsp_hit-to>189</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>151</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFILNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHF+LNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>5</Hit_num>
+  <Hit_id>gi|686754063|ref|XP_009250106.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 isoform X1 [Pongo abelii]</Hit_def>
+  <Hit_accession>XP_009250106</Hit_accession>
+  <Hit_len>171</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>312.383</Hsp_bit-score>
+      <Hsp_score>799</Hsp_score>
+      <Hsp_evalue>3.00086e-107</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>19</Hsp_hit-from>
+      <Hsp_hit-to>171</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>152</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>6</Hit_num>
+  <Hit_id>gi|197101707|ref|NP_001126832.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 [Pongo abelii] &gt;gi|302563955|ref|NP_001180744.1| ORM1-like protein 3 [Macaca mulatta] &gt;gi|297272880|ref|XP_002800501.1| PREDICTED: ORM1-like protein 3 isoform X1 [Macaca mulatta] &gt;gi|332258420|ref|XP_003278298.1| PREDICTED: ORM1-like protein 3 [Nomascus leucogenys] &gt;gi|332258424|ref|XP_003278300.1| PREDICTED: ORM1-like protein 3 [Nomascus leucogenys] &gt;gi|332258426|ref|XP_003278301.1| PREDICTED: ORM1-like protein 3 [Nomascus leucogenys] &gt;gi|332258428|ref|XP_003278302.1| PREDICTED: ORM1-like protein 3 [Nomascus leucogenys] &gt;gi|344286001|ref|XP_003414748.1| ORM1-like protein 3 [Loxodonta africana] &gt;gi|402900058|ref|XP_003912997.1| ORM1-like protein 3 [Papio anubis] &gt;gi|441660657|ref|XP_004091441.1| PREDICTED: ORM1-like protein 3 [Nomascus leucogenys] &gt;gi|471380621|ref|XP_004378106.1| ORM1-like protein 3 [Trichechus manatus latirostris] &gt;gi|512995881|ref|XP_004859534.1| ORM1-like protein 3 [Heterocephalus glaber] &gt;gi|533161081|ref|XP_005394386.1| PREDICTED: ORM1-like protein 3 [Chinchilla lanigera] &gt;gi|544499724|ref|XP_005584110.1| PREDICTED: ORM1-like protein 3 [Macaca fascicularis] &gt;gi|544499726|ref|XP_005584111.1| PREDICTED: ORM1-like protein 3 [Macaca fascicularis] &gt;gi|586448893|ref|XP_006832627.1| PREDICTED: ORM1-like protein 3 isoform X1 [Chrysochloris asiatica] &gt;gi|634851498|ref|XP_007940241.1| PREDICTED: ORM1-like protein 3 isoform X1 [Orycteropus afer afer] &gt;gi|635092651|ref|XP_008011020.1| PREDICTED: ORM1-like protein 3 [Chlorocebus sabaeus] &gt;gi|635092653|ref|XP_008011021.1| PREDICTED: ORM1-like protein 3 [Chlorocebus sabaeus] &gt;gi|670977886|ref|XP_008687588.1| PREDICTED: ORM1-like protein 3 isoform X2 [Ursus maritimus] &gt;gi|685598006|ref|XP_009188789.1| ORM1-like protein 3 [Papio anubis] &gt;gi|685598008|ref|XP_009188790.1| ORM1-like protein 3 [Papio anubis] &gt;gi|686754069|ref|XP_009250108.1| ORM1-like protein 3 isoform X3 [Pongo abelii] &gt;gi|724885098|ref|XP_010373822.1| PREDICTED: ORM1-like protein 3 [Rhinopithecus roxellana] &gt;gi|724885102|ref|XP_010373823.1| PREDICTED: ORM1-like protein 3 [Rhinopithecus roxellana] &gt;gi|795248032|ref|XP_011854368.1| PREDICTED: ORM1-like protein 3 [Mandrillus leucophaeus] &gt;gi|795248039|ref|XP_011854369.1| PREDICTED: ORM1-like protein 3 [Mandrillus leucophaeus] &gt;gi|795248046|ref|XP_011854370.1| PREDICTED: ORM1-like protein 3 [Mandrillus leucophaeus] &gt;gi|795248054|ref|XP_011854371.1| PREDICTED: ORM1-like protein 3 [Mandrillus leucophaeus] &gt;gi|795248061|ref|XP_011854372.1| PREDICTED: ORM1-like protein 3 [Mandrillus leucophaeus] &gt;gi|795356342|ref|XP_011785258.1| PREDICTED: ORM1-like protein 3 isoform X2 [Colobus angolensis palliatus] &gt;gi|795356348|ref|XP_011785259.1| PREDICTED: ORM1-like protein 3 isoform X2 [Colobus angolensis palliatus] &gt;gi|795527155|ref|XP_011901854.1| PREDICTED: ORM1-like protein 3 [Cercocebus atys] &gt;gi|795527160|ref|XP_011901855.1| PREDICTED: ORM1-like protein 3 [Cercocebus atys] &gt;gi|795527165|ref|XP_011901856.1| PREDICTED: ORM1-like protein 3 [Cercocebus atys] &gt;gi|795582496|ref|XP_011723583.1| ORM1-like protein 3 isoform X1 [Macaca nemestrina] &gt;gi|795582506|ref|XP_011723586.1| ORM1-like protein 3 isoform X1 [Macaca nemestrina] &gt;gi|795582509|ref|XP_011723587.1| ORM1-like protein 3 isoform X1 [Macaca nemestrina] &gt;gi|795582514|ref|XP_011723588.1| ORM1-like protein 3 isoform X1 [Macaca nemestrina] &gt;gi|795582519|ref|XP_011723589.1| ORM1-like protein 3 isoform X1 [Macaca nemestrina] &gt;gi|817274668|ref|XP_012307408.1| ORM1-like protein 3 isoform X2 [Aotus nancymaae] &gt;gi|817274670|ref|XP_012307409.1| ORM1-like protein 3 isoform X2 [Aotus nancymaae] &gt;gi|817274672|ref|XP_012307410.1| ORM1-like protein 3 isoform X2 [Aotus nancymaae] &gt;gi|821026574|ref|XP_012353209.1| PREDICTED: ORM1-like protein 3 [Nomascus leucogenys] &gt;gi|918613995|ref|XP_005394384.2| PREDICTED: ORM1-like protein 3 [Chinchilla lanigera] &gt;gi|967105789|ref|XP_014975005.1| PREDICTED: ORM1-like protein 3 isoform X1 [Macaca mulatta] &gt;gi|982305589|ref|XP_015293924.1| PREDICTED: ORM1-like protein 3 [Macaca fascicularis] &gt;gi|982305591|ref|XP_015293925.1| PREDICTED: ORM1-like protein 3 [Macaca fascicularis] &gt;gi|982305593|ref|XP_015293926.1| PREDICTED: ORM1-like protein 3 [Macaca fascicularis] &gt;gi|1059102970|ref|XP_017724752.1| PREDICTED: ORM1-like protein 3 [Rhinopithecus bieti] &gt;gi|1059102972|ref|XP_017724753.1| PREDICTED: ORM1-like protein 3 [Rhinopithecus bieti] &gt;gi|1060542068|ref|XP_017806196.1| ORM1-like protein 3 [Papio anubis] &gt;gi|1196763343|ref|XP_021095738.1| ORM1-like protein 3 [Heterocephalus glaber] &gt;gi|1411119993|ref|XP_025218561.1| ORM1-like protein 3 isoform X1 [Theropithecus gelada] &gt;gi|1411119995|ref|XP_025218562.1| ORM1-like protein 3 isoform X1 [Theropithecus gelada] &gt;gi|1411119997|ref|XP_025218563.1| ORM1-like protein 3 isoform X1 [Theropithecus gelada] &gt;gi|1411119999|ref|XP_025218564.1| ORM1-like protein 3 isoform X1 [Theropithecus gelada] &gt;gi|1411120001|ref|XP_025218565.1| ORM1-like protein 3 isoform X1 [Theropithecus gelada] &gt;gi|1483790678|ref|XP_026368711.1| ORM1-like protein 3 [Ursus arctos horribilis] &gt;gi|1483790680|ref|XP_026368713.1| ORM1-like protein 3 [Ursus arctos horribilis] &gt;gi|75041068|sp|Q5R570.1|ORML3_PONAB RecName: Full=ORM1-like protein 3 &gt;gi|55732798|emb|CAH93096.1| hypothetical protein [Pongo abelii] &gt;gi|351709115|gb|EHB12034.1| ORM1-like protein 3 [Heterocephalus glaber] &gt;gi|355568624|gb|EHH24905.1| ORM1-like protein 3 [Macaca mulatta] &gt;gi|355754113|gb|EHH58078.1| ORM1-like protein 3 [Macaca fascicularis] &gt;gi|1331918724|gb|PNJ66644.1| ORMDL3 isoform 1 [Pongo abelii] &gt;gi|1331918725|gb|PNJ66645.1| ORMDL3 isoform 2 [Pongo abelii] &gt;gi|1331918727|gb|PNJ66647.1| ORMDL3 isoform 5 [Pongo abelii]</Hit_def>
+  <Hit_accession>NP_001126832</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>311.612</Hsp_bit-score>
+      <Hsp_score>797</Hsp_score>
+      <Hsp_evalue>3.13991e-107</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>152</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>7</Hit_num>
+  <Hit_id>gi|431890678|gb|ELK01557.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 [Pteropus alecto]</Hit_def>
+  <Hit_accession>ELK01557</Hit_accession>
+  <Hit_len>185</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>312.383</Hsp_bit-score>
+      <Hsp_score>799</Hsp_score>
+      <Hsp_evalue>3.83519e-107</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>33</Hsp_hit-from>
+      <Hsp_hit-to>185</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>151</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFILNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHF+LNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>8</Hit_num>
+  <Hit_id>gi|817274666|ref|XP_012307407.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 isoform X1 [Aotus nancymaae]</Hit_def>
+  <Hit_accession>XP_012307407</Hit_accession>
+  <Hit_len>171</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>311.612</Hsp_bit-score>
+      <Hsp_score>797</Hsp_score>
+      <Hsp_evalue>5.30948e-107</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>19</Hsp_hit-from>
+      <Hsp_hit-to>171</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>152</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>9</Hit_num>
+  <Hit_id>gi|115496746|ref|NP_001069835.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 [Bos taurus] &gt;gi|73966055|ref|XP_851310.1| ORM1-like protein 3 [Canis lupus familiaris] &gt;gi|311267402|ref|XP_003131546.1| ORM1-like protein 3 [Sus scrofa] &gt;gi|395826504|ref|XP_003786458.1| ORM1-like protein 3 isoform X2 [Otolemur garnettii] &gt;gi|403304607|ref|XP_003942885.1| PREDICTED: ORM1-like protein 3 isoform X1 [Saimiri boliviensis boliviensis] &gt;gi|410980953|ref|XP_003996838.1| ORM1-like protein 3 [Felis catus] &gt;gi|410980955|ref|XP_003996839.1| ORM1-like protein 3 [Felis catus] &gt;gi|426237911|ref|XP_004012901.1| ORM1-like protein 3 [Ovis aries] &gt;gi|466072797|ref|XP_004282789.1| PREDICTED: ORM1-like protein 3 [Orcinus orca] &gt;gi|472350816|ref|XP_004395093.1| PREDICTED: ORM1-like protein 3 isoform X1 [Odobenus rosmarus divergens] &gt;gi|488516254|ref|XP_004450120.1| ORM1-like protein 3 [Dasypus novemcinctus] &gt;gi|488516256|ref|XP_004450121.1| ORM1-like protein 3 [Dasypus novemcinctus] &gt;gi|488516258|ref|XP_004450122.1| ORM1-like protein 3 [Dasypus novemcinctus] &gt;gi|488516260|ref|XP_004450123.1| ORM1-like protein 3 [Dasypus novemcinctus] &gt;gi|488516262|ref|XP_004450124.1| ORM1-like protein 3 [Dasypus novemcinctus] &gt;gi|504159952|ref|XP_004591213.1| PREDICTED: ORM1-like protein 3 isoform X1 [Ochotona princeps] &gt;gi|507952609|ref|XP_004684295.1| PREDICTED: ORM1-like protein 3 [Condylura cristata] &gt;gi|511889945|ref|XP_004764685.1| PREDICTED: ORM1-like protein 3 [Mustela putorius furo] &gt;gi|511889947|ref|XP_004764686.1| PREDICTED: ORM1-like protein 3 [Mustela putorius furo] &gt;gi|511889951|ref|XP_004764688.1| PREDICTED: ORM1-like protein 3 [Mustela putorius furo] &gt;gi|528996153|ref|XP_005220811.1| ORM1-like protein 3 isoform X1 [Bos taurus] &gt;gi|528996155|ref|XP_005220812.1| ORM1-like protein 3 isoform X1 [Bos taurus] &gt;gi|532072067|ref|XP_005321852.1| ORM1-like protein 3 [Ictidomys tridecemlineatus] &gt;gi|532072069|ref|XP_005321853.1| ORM1-like protein 3 [Ictidomys tridecemlineatus] &gt;gi|532072071|ref|XP_005321854.1| ORM1-like protein 3 [Ictidomys tridecemlineatus] &gt;gi|545510861|ref|XP_005624602.1| ORM1-like protein 3 [Canis lupus familiaris] &gt;gi|545510863|ref|XP_005624603.1| ORM1-like protein 3 [Canis lupus familiaris] &gt;gi|545510866|ref|XP_005624604.1| ORM1-like protein 3 [Canis lupus familiaris] &gt;gi|545858245|ref|XP_005653978.1| ORM1-like protein 3 [Sus scrofa] &gt;gi|554534405|ref|XP_005861938.1| PREDICTED: ORM1-like protein 3 [Myotis brandtii] &gt;gi|554534407|ref|XP_005861939.1| PREDICTED: ORM1-like protein 3 [Myotis brandtii] &gt;gi|554534411|ref|XP_005861941.1| PREDICTED: ORM1-like protein 3 [Myotis brandtii] &gt;gi|555972145|ref|XP_005898080.1| PREDICTED: ORM1-like protein 3 isoform X1 [Bos mutus] &gt;gi|555972147|ref|XP_005898081.1| PREDICTED: ORM1-like protein 3 isoform X1 [Bos mutus] &gt;gi|556738500|ref|XP_005964822.1| PREDICTED: ORM1-like protein 3 isoform X1 [Pantholops hodgsonii] &gt;gi|556738502|ref|XP_005964823.1| PREDICTED: ORM1-like protein 3 isoform X2 [Pantholops hodgsonii] &gt;gi|556738504|ref|XP_005964824.1| PREDICTED: ORM1-like protein 3 isoform X3 [Pantholops hodgsonii] &gt;gi|558179147|ref|XP_006100858.1| ORM1-like protein 3 [Myotis lucifugus] &gt;gi|558179151|ref|XP_006100859.1| ORM1-like protein 3 [Myotis lucifugus] &gt;gi|560899955|ref|XP_006176399.1| PREDICTED: ORM1-like protein 3 [Camelus ferus] &gt;gi|560984225|ref|XP_006214326.1| PREDICTED: ORM1-like protein 3 [Vicugna pacos] &gt;gi|562854765|ref|XP_006155977.1| ORM1-like protein 3 [Tupaia chinensis] &gt;gi|562854767|ref|XP_006155978.1| ORM1-like protein 3 [Tupaia chinensis] &gt;gi|562854769|ref|XP_006155979.1| ORM1-like protein 3 [Tupaia chinensis] &gt;gi|562854771|ref|XP_006155980.1| ORM1-like protein 3 [Tupaia chinensis] &gt;gi|584059806|ref|XP_006774378.1| PREDICTED: ORM1-like protein 3 [Myotis davidii] &gt;gi|584059808|ref|XP_006774379.1| PREDICTED: ORM1-like protein 3 [Myotis davidii] &gt;gi|584059813|ref|XP_006774381.1| PREDICTED: ORM1-like protein 3 [Myotis davidii] &gt;gi|584059821|ref|XP_006774385.1| PREDICTED: ORM1-like protein 3 [Myotis davidii] &gt;gi|586539830|ref|XP_006924752.1| ORM1-like protein 3 [Pteropus alecto] &gt;gi|586539832|ref|XP_006924753.1| ORM1-like protein 3 [Pteropus alecto] &gt;gi|586539834|ref|XP_006924754.1| ORM1-like protein 3 [Pteropus alecto] &gt;gi|587011493|ref|XP_006940367.1| ORM1-like protein 3 [Felis catus] &gt;gi|587011496|ref|XP_006940368.1| ORM1-like protein 3 [Felis catus] &gt;gi|591319242|ref|XP_007085854.1| PREDICTED: ORM1-like protein 3 [Panthera tigris altaica] &gt;gi|591319244|ref|XP_007085855.1| PREDICTED: ORM1-like protein 3 [Panthera tigris altaica] &gt;gi|594090489|ref|XP_006068647.1| ORM1-like protein 3 [Bubalus bubalis] &gt;gi|594090491|ref|XP_006068648.1| ORM1-like protein 3 [Bubalus bubalis] &gt;gi|594090493|ref|XP_006068649.1| ORM1-like protein 3 [Bubalus bubalis] &gt;gi|602709974|ref|XP_007465239.1| PREDICTED: ORM1-like protein 3 isoform X1 [Lipotes vexillifer] &gt;gi|640813346|ref|XP_008063365.1| ORM1-like protein 3 [Carlito syrichta] &gt;gi|641724318|ref|XP_008152046.1| ORM1-like protein 3 isoform X1 [Eptesicus fuscus] &gt;gi|664720173|ref|XP_008517124.1| PREDICTED: ORM1-like protein 3 isoform X2 [Equus przewalskii] &gt;gi|675660642|ref|XP_008995753.1| PREDICTED: ORM1-like protein 3 [Callithrix jacchus] &gt;gi|675660644|ref|XP_008995754.1| PREDICTED: ORM1-like protein 3 [Callithrix jacchus] &gt;gi|675660646|ref|XP_008995755.1| PREDICTED: ORM1-like protein 3 [Callithrix jacchus] &gt;gi|725604507|ref|XP_010328962.1| PREDICTED: ORM1-like protein 3 isoform X1 [Saimiri boliviensis boliviensis] &gt;gi|725604510|ref|XP_010328963.1| PREDICTED: ORM1-like protein 3 isoform X1 [Saimiri boliviensis boliviensis] &gt;gi|742135524|ref|XP_010840933.1| PREDICTED: ORM1-like protein 3 [Bison bison bison] &gt;gi|742135528|ref|XP_010840934.1| PREDICTED: ORM1-like protein 3 [Bison bison bison] &gt;gi|742135530|ref|XP_010840935.1| PREDICTED: ORM1-like protein 3 [Bison bison bison] &gt;gi|742135534|ref|XP_010840936.1| PREDICTED: ORM1-like protein 3 [Bison bison bison] &gt;gi|743729342|ref|XP_010958763.1| PREDICTED: ORM1-like protein 3 [Camelus bactrianus] &gt;gi|744599719|ref|XP_010990109.1| PREDICTED: ORM1-like protein 3 [Camelus dromedarius] &gt;gi|759186702|ref|XP_011381338.1| ORM1-like protein 3 [Pteropus vampyrus] &gt;gi|759186705|ref|XP_011381339.1| ORM1-like protein 3 [Pteropus vampyrus] &gt;gi|759186708|ref|XP_011381340.1| ORM1-like protein 3 [Pteropus vampyrus] &gt;gi|803275121|ref|XP_011997237.1| PREDICTED: ORM1-like protein 3 isoform X2 [Ovis aries musimon] &gt;gi|803275123|ref|XP_011997238.1| PREDICTED: ORM1-like protein 3 isoform X2 [Ovis aries musimon] &gt;gi|823397070|ref|XP_012416031.1| PREDICTED: ORM1-like protein 3 isoform X1 [Odobenus rosmarus divergens] &gt;gi|826272690|ref|XP_012518391.1| PREDICTED: ORM1-like protein 3 [Propithecus coquereli] &gt;gi|826272693|ref|XP_012518400.1| PREDICTED: ORM1-like protein 3 [Propithecus coquereli] &gt;gi|831220566|ref|XP_012658682.1| ORM1-like protein 3 isoform X2 [Otolemur garnettii] &gt;gi|831220568|ref|XP_012658683.1| ORM1-like protein 3 isoform X2 [Otolemur garnettii] &gt;gi|831220570|ref|XP_012658684.1| ORM1-like protein 3 isoform X2 [Otolemur garnettii] &gt;gi|927195972|ref|XP_013835139.1| ORM1-like protein 3 [Sus scrofa] &gt;gi|927195979|ref|XP_013835142.1| ORM1-like protein 3 [Sus scrofa] &gt;gi|940762592|ref|XP_014321711.1| ORM1-like protein 3 [Myotis lucifugus] &gt;gi|942060362|ref|XP_014334372.1| PREDICTED: ORM1-like protein 3 isoform X1 [Bos mutus] &gt;gi|946611066|ref|XP_014407552.1| PREDICTED: ORM1-like protein 3 [Camelus ferus] &gt;gi|946753010|ref|XP_014391637.1| PREDICTED: ORM1-like protein 3 [Myotis brandtii] &gt;gi|946753012|ref|XP_014391638.1| PREDICTED: ORM1-like protein 3 [Myotis brandtii] &gt;gi|947284060|ref|XP_014446186.1| ORM1-like protein 3 [Tupaia chinensis] &gt;gi|958818201|ref|XP_014689333.1| PREDICTED: ORM1-like protein 3 [Equus asinus] &gt;gi|958818204|ref|XP_014689334.1| PREDICTED: ORM1-like protein 3 [Equus asinus] &gt;gi|958818207|ref|XP_014689335.1| PREDICTED: ORM1-like protein 3 [Equus asinus] &gt;gi|958818210|ref|XP_014689336.1| PREDICTED: ORM1-like protein 3 [Equus asinus] &gt;gi|961746685|ref|XP_014934049.1| ORM1-like protein 3 [Acinonyx jubatus] &gt;gi|970738105|ref|XP_015103373.1| PREDICTED: ORM1-like protein 3 [Vicugna pacos] &gt;gi|970738107|ref|XP_015103374.1| PREDICTED: ORM1-like protein 3 [Vicugna pacos] &gt;gi|984140187|ref|XP_015362156.1| PREDICTED: ORM1-like protein 3 [Marmota marmota marmota] &gt;gi|984140189|ref|XP_015362157.1| PREDICTED: ORM1-like protein 3 [Marmota marmota marmota] &gt;gi|984140191|ref|XP_015362158.1| PREDICTED: ORM1-like protein 3 [Marmota marmota marmota] &gt;gi|987967068|ref|XP_015426380.1| PREDICTED: ORM1-like protein 3 [Myotis davidii] &gt;gi|987967072|ref|XP_015426381.1| PREDICTED: ORM1-like protein 3 [Myotis davidii] &gt;gi|987967074|ref|XP_015426382.1| PREDICTED: ORM1-like protein 3 [Myotis davidii] &gt;gi|1012229845|ref|XP_016020139.1| PREDICTED: ORM1-like protein 3 [Rousettus aegyptiacus] &gt;gi|1012229849|ref|XP_016020140.1| PREDICTED: ORM1-like protein 3 [Rousettus aegyptiacus] &gt;gi|1012229853|ref|XP_016020141.1| PREDICTED: ORM1-like protein 3 [Rousettus aegyptiacus] &gt;gi|1012229857|ref|XP_016020142.1| PREDICTED: ORM1-like protein 3 [Rousettus aegyptiacus] &gt;gi|1016661084|ref|XP_016057753.1| PREDICTED: ORM1-like protein 3 [Miniopterus natalensis] &gt;gi|1044401758|ref|XP_017352588.1| PREDICTED: ORM1-like protein 3 isoform X1 [Cebus capucinus imitator] &gt;gi|1044401760|ref|XP_017352589.1| PREDICTED: ORM1-like protein 3 isoform X1 [Cebus capucinus imitator] &gt;gi|1044401762|ref|XP_017352590.1| PREDICTED: ORM1-like protein 3 isoform X1 [Cebus capucinus imitator] &gt;gi|1048452049|ref|XP_017497975.1| PREDICTED: ORM1-like protein 3 [Manis javanica] &gt;gi|1048452051|ref|XP_017497976.1| PREDICTED: ORM1-like protein 3 [Manis javanica] &gt;gi|1048452053|ref|XP_017497977.1| PREDICTED: ORM1-like protein 3 [Manis javanica] &gt;gi|1060998295|ref|XP_002748577.3| PREDICTED: ORM1-like protein 3 [Callithrix jacchus] &gt;gi|1062938832|ref|XP_017920504.1| PREDICTED: ORM1-like protein 3 [Capra hircus] &gt;gi|1062938836|ref|XP_017920505.1| PREDICTED: ORM1-like protein 3 [Capra hircus] &gt;gi|1111191373|ref|XP_019271579.1| PREDICTED: ORM1-like protein 3 [Panthera pardus] &gt;gi|1111191375|ref|XP_019271581.1| PREDICTED: ORM1-like protein 3 [Panthera pardus] &gt;gi|1111191377|ref|XP_019271582.1| PREDICTED: ORM1-like protein 3 [Panthera pardus] &gt;gi|1111191379|ref|XP_019271583.1| PREDICTED: ORM1-like protein 3 [Panthera pardus] &gt;gi|1121774425|ref|XP_019494190.1| PREDICTED: ORM1-like protein 3 isoform X1 [Hipposideros armiger] &gt;gi|1121774429|ref|XP_019494192.1| PREDICTED: ORM1-like protein 3 isoform X1 [Hipposideros armiger] &gt;gi|1121774431|ref|XP_019494193.1| PREDICTED: ORM1-like protein 3 isoform X1 [Hipposideros armiger] &gt;gi|1121774433|ref|XP_019494194.1| PREDICTED: ORM1-like protein 3 isoform X1 [Hipposideros armiger] &gt;gi|1131204931|ref|XP_019836963.1| PREDICTED: ORM1-like protein 3 [Bos indicus] &gt;gi|1131204935|ref|XP_019836964.1| PREDICTED: ORM1-like protein 3 [Bos indicus] &gt;gi|1131204939|ref|XP_019836965.1| PREDICTED: ORM1-like protein 3 [Bos indicus] &gt;gi|1131218928|ref|XP_019794906.1| PREDICTED: ORM1-like protein 3 [Tursiops truncatus] &gt;gi|1147365624|ref|XP_020031914.1| ORM1-like protein 3 [Castor canadensis] &gt;gi|1147365626|ref|XP_020031915.1| ORM1-like protein 3 [Castor canadensis] &gt;gi|1187585996|ref|XP_020745723.1| ORM1-like protein 3 [Odocoileus virginianus texanus] &gt;gi|1187585998|ref|XP_020745724.1| ORM1-like protein 3 [Odocoileus virginianus texanus] &gt;gi|1187586000|ref|XP_020745725.1| ORM1-like protein 3 [Odocoileus virginianus texanus] &gt;gi|1191821237|ref|XP_020922690.1| ORM1-like protein 3 [Sus scrofa] &gt;gi|1191821239|ref|XP_020922691.1| ORM1-like protein 3 [Sus scrofa] &gt;gi|1191821241|ref|XP_020922692.1| ORM1-like protein 3 [Sus scrofa] &gt;gi|1212219914|ref|XP_021559767.1| ORM1-like protein 3 [Neomonachus schauinslandi] &gt;gi|1212219916|ref|XP_021559768.1| ORM1-like protein 3 [Neomonachus schauinslandi] &gt;gi|1212219918|ref|XP_021559769.1| ORM1-like protein 3 [Neomonachus schauinslandi] &gt;gi|1212219920|ref|XP_021559770.1| ORM1-like protein 3 [Neomonachus schauinslandi] &gt;gi|1214039310|ref|XP_021571786.1| ORM1-like protein 3 [Carlito syrichta] &gt;gi|1214039312|ref|XP_021571787.1| ORM1-like protein 3 [Carlito syrichta] &gt;gi|1214039314|ref|XP_021571788.1| ORM1-like protein 3 [Carlito syrichta] &gt;gi|1244109479|ref|XP_022365718.1| ORM1-like protein 3 isoform X2 [Enhydra lutris kenyoni] &gt;gi|1244109481|ref|XP_022365719.1| ORM1-like protein 3 isoform X2 [Enhydra lutris kenyoni] &gt;gi|1246233431|ref|XP_022413701.1| ORM1-like protein 3 [Delphinapterus leucas] &gt;gi|1246233433|ref|XP_022413702.1| ORM1-like protein 3 [Delphinapterus leucas] &gt;gi|1330134891|ref|XP_023441798.1| ORM1-like protein 3 [Dasypus novemcinctus] &gt;gi|1333561847|ref|XP_023508347.1| ORM1-like protein 3 [Equus caballus] &gt;gi|1333561849|ref|XP_023508348.1| ORM1-like protein 3 [Equus caballus] &gt;gi|1333561851|ref|XP_023508349.1| ORM1-like protein 3 [Equus caballus] &gt;gi|1333561853|ref|XP_023508350.1| ORM1-like protein 3 [Equus caballus] &gt;gi|1375000655|ref|XP_024429191.1| ORM1-like protein 3 [Desmodus rotundus] &gt;gi|1375000657|ref|XP_024429192.1| ORM1-like protein 3 [Desmodus rotundus] &gt;gi|1375000659|ref|XP_024429193.1| ORM1-like protein 3 [Desmodus rotundus] &gt;gi|1378810750|ref|XP_024599297.1| ORM1-like protein 3 [Neophocaena asiaeorientalis asiaeorientalis] &gt;gi|1378810752|ref|XP_024599306.1| ORM1-like protein 3 [Neophocaena asiaeorientalis asiaeorientalis] &gt;gi|1378810754|ref|XP_024599313.1| ORM1-like protein 3 [Neophocaena asiaeorientalis asiaeorientalis] &gt;gi|1387224876|ref|XP_024836193.1| ORM1-like protein 3 isoform X1 [Bos taurus] &gt;gi|1418338447|ref|XP_025295902.1| ORM1-like protein 3 [Canis lupus dingo] &gt;gi|1418338449|ref|XP_025295903.1| ORM1-like protein 3 [Canis lupus dingo] &gt;gi|1418338451|ref|XP_025295905.1| ORM1-like protein 3 [Canis lupus dingo] &gt;gi|1418338453|ref|XP_025295906.1| ORM1-like protein 3 [Canis lupus dingo] &gt;gi|1432346145|ref|XP_025715159.1| ORM1-like protein 3 [Callorhinus ursinus] &gt;gi|1432346147|ref|XP_025715160.1| ORM1-like protein 3 [Callorhinus ursinus] &gt;gi|1432346149|ref|XP_025715161.1| ORM1-like protein 3 [Callorhinus ursinus] &gt;gi|1432346151|ref|XP_025715162.1| ORM1-like protein 3 [Callorhinus ursinus] &gt;gi|1435014248|ref|XP_025773469.1| ORM1-like protein 3 [Puma concolor] &gt;gi|1435014250|ref|XP_025773471.1| ORM1-like protein 3 [Puma concolor] &gt;gi|1435558106|ref|XP_025851533.1| ORM1-like protein 3 [Vulpes vulpes] &gt;gi|1435558108|ref|XP_025851534.1| ORM1-like protein 3 [Vulpes vulpes] &gt;gi|1435558110|ref|XP_025851535.1| ORM1-like protein 3 [Vulpes vulpes] &gt;gi|1435558112|ref|XP_025851536.1| ORM1-like protein 3 [Vulpes vulpes] &gt;gi|1435558114|ref|XP_025851537.1| ORM1-like protein 3 [Vulpes vulpes] &gt;gi|1512028288|ref|XP_026889648.1| ORM1-like protein 3 [Acinonyx jubatus] &gt;gi|1512028290|ref|XP_026889649.1| ORM1-like protein 3 [Acinonyx jubatus] &gt;gi|1512028292|ref|XP_026889650.1| ORM1-like protein 3 [Acinonyx jubatus] &gt;gi|1516180421|ref|XP_026950148.1| ORM1-like protein 3 [Lagenorhynchus obliquidens] &gt;gi|1542901161|ref|XP_027372626.1| ORM1-like protein 3 [Bos indicus x Bos taurus] &gt;gi|1542901163|ref|XP_027372627.1| ORM1-like protein 3 [Bos indicus x Bos taurus] &gt;gi|1542901165|ref|XP_027372628.1| ORM1-like protein 3 [Bos indicus x Bos taurus] &gt;gi|1543797743|ref|XP_027423921.1| ORM1-like protein 3 [Zalophus californianus] &gt;gi|1543797745|ref|XP_027423922.1| ORM1-like protein 3 [Zalophus californianus] &gt;gi|1543797747|ref|XP_027423923.1| ORM1-like protein 3 [Zalophus californianus] &gt;gi|1543797749|ref|XP_027423924.1| ORM1-like protein 3 [Zalophus californianus] &gt;gi|1561612066|ref|XP_027630560.1| ORM1-like protein 3 [Tupaia chinensis] &gt;gi|1561612080|ref|XP_027630561.1| ORM1-like protein 3 [Tupaia chinensis] &gt;gi|1561612094|ref|XP_027630562.1| ORM1-like protein 3 [Tupaia chinensis] &gt;gi|1562471288|ref|XP_027778929.1| ORM1-like protein 3 [Marmota flaviventris] &gt;gi|1562471290|ref|XP_027778930.1| ORM1-like protein 3 [Marmota flaviventris] &gt;gi|1570538855|ref|XP_027945706.1| ORM1-like protein 3 [Eumetopias jubatus] &gt;gi|1570538859|ref|XP_027945707.1| ORM1-like protein 3 [Eumetopias jubatus] &gt;gi|1570538863|ref|XP_027945708.1| ORM1-like protein 3 [Eumetopias jubatus] &gt;gi|1570538867|ref|XP_027945709.1| ORM1-like protein 3 [Eumetopias jubatus] &gt;gi|1572000743|ref|XP_027984598.1| ORM1-like protein 3 isoform X1 [Eptesicus fuscus] &gt;gi|1572000745|ref|XP_027984599.1| ORM1-like protein 3 isoform X1 [Eptesicus fuscus] &gt;gi|1572000747|ref|XP_027984600.1| ORM1-like protein 3 isoform X1 [Eptesicus fuscus] &gt;gi|1572000749|ref|XP_027984601.1| ORM1-like protein 3 isoform X1 [Eptesicus fuscus] &gt;gi|1572000751|ref|XP_027984602.1| ORM1-like protein 3 isoform X1 [Eptesicus fuscus] &gt;gi|1572000753|ref|XP_027984603.1| ORM1-like protein 3 isoform X1 [Eptesicus fuscus] &gt;gi|122142444|sp|Q0VD15.1|ORML3_BOVIN RecName: Full=ORM1-like protein 3 &gt;gi|111304562|gb|AAI19889.1| ORM1-like 3 (S. cerevisiae) [Bos taurus] &gt;gi|296476372|tpg|DAA18487.1| TPA: ORM1-like 3 [Bos taurus] &gt;gi|440904246|gb|ELR54785.1| ORM1-like protein 3 [Bos mutus] &gt;gi|1530892359|emb|VCW67394.1| unnamed protein product [Gulo gulo]</Hit_def>
+  <Hit_accession>NP_001069835</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>310.842</Hsp_bit-score>
+      <Hsp_score>795</Hsp_score>
+      <Hsp_evalue>5.49559e-107</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>151</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFILNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHF+LNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>10</Hit_num>
+  <Hit_id>gi|507655060|ref|XP_004633771.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 [Octodon degus] &gt;gi|507664839|ref|XP_004707182.1| PREDICTED: ORM1-like protein 3 isoform X1 [Echinops telfairi] &gt;gi|585672095|ref|XP_006889459.1| PREDICTED: ORM1-like protein 3 isoform X1 [Elephantulus edwardii] &gt;gi|731207051|ref|XP_010618321.1| PREDICTED: ORM1-like protein 3 [Fukomys damarensis] &gt;gi|731207053|ref|XP_010618322.1| PREDICTED: ORM1-like protein 3 [Fukomys damarensis] &gt;gi|1334038706|ref|XP_023573960.1| ORM1-like protein 3 [Octodon degus]</Hit_def>
+  <Hit_accession>XP_004633771</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>310.842</Hsp_bit-score>
+      <Hsp_score>795</Hsp_score>
+      <Hsp_evalue>5.61756e-107</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>151</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQVHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQ+HFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>11</Hit_num>
+  <Hit_id>gi|1121774427|ref|XP_019494191.1|</Hit_id>
+  <Hit_def>PREDICTED: ORM1-like protein 3 isoform X2 [Hipposideros armiger]</Hit_def>
+  <Hit_accession>XP_019494191</Hit_accession>
+  <Hit_len>206</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>312.768</Hsp_bit-score>
+      <Hsp_score>800</Hsp_score>
+      <Hsp_evalue>6.11496e-107</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>54</Hsp_hit-from>
+      <Hsp_hit-to>206</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>151</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFILNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHF+LNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>12</Hit_num>
+  <Hit_id>gi|664720171|ref|XP_008517123.1|</Hit_id>
+  <Hit_def>PREDICTED: ORM1-like protein 3 isoform X1 [Equus przewalskii]</Hit_def>
+  <Hit_accession>XP_008517123</Hit_accession>
+  <Hit_len>179</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>311.227</Hsp_bit-score>
+      <Hsp_score>796</Hsp_score>
+      <Hsp_evalue>8.35641e-107</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>27</Hsp_hit-from>
+      <Hsp_hit-to>179</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>151</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFILNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHF+LNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>13</Hit_num>
+  <Hit_id>gi|670977884|ref|XP_008687583.1|</Hit_id>
+  <Hit_def>PREDICTED: ORM1-like protein 3 isoform X1 [Ursus maritimus]</Hit_def>
+  <Hit_accession>XP_008687583</Hit_accession>
+  <Hit_len>167</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>310.842</Hsp_bit-score>
+      <Hsp_score>795</Hsp_score>
+      <Hsp_evalue>8.35754e-107</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>15</Hsp_hit-from>
+      <Hsp_hit-to>167</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>152</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>14</Hit_num>
+  <Hit_id>gi|507543059|ref|XP_004655521.1|</Hit_id>
+  <Hit_def>PREDICTED: ORM1-like protein 3 isoform X1 [Jaculus jaculus] &gt;gi|593734275|ref|XP_007112592.1| ORM1-like protein 3 [Physeter catodon] &gt;gi|593734277|ref|XP_007112593.1| ORM1-like protein 3 [Physeter catodon] &gt;gi|674072707|ref|XP_008843549.1| PREDICTED: ORM1-like protein 3 [Nannospalax galili]</Hit_def>
+  <Hit_accession>XP_004655521</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>310.457</Hsp_bit-score>
+      <Hsp_score>794</Hsp_score>
+      <Hsp_evalue>8.43164e-107</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>150</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQVHFILNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQ+HF+LNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>15</Hit_num>
+  <Hit_id>gi|795356336|ref|XP_011785256.1|</Hit_id>
+  <Hit_def>PREDICTED: ORM1-like protein 3 isoform X1 [Colobus angolensis palliatus]</Hit_def>
+  <Hit_accession>XP_011785256</Hit_accession>
+  <Hit_len>200</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>311.997</Hsp_bit-score>
+      <Hsp_score>798</Hsp_score>
+      <Hsp_evalue>8.49791e-107</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>48</Hsp_hit-from>
+      <Hsp_hit-to>200</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>152</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>16</Hit_num>
+  <Hit_id>gi|955526131|ref|XP_014646214.1|</Hit_id>
+  <Hit_def>PREDICTED: ORM1-like protein 3 [Ceratotherium simum simum] &gt;gi|955526133|ref|XP_014646215.1| PREDICTED: ORM1-like protein 3 [Ceratotherium simum simum] &gt;gi|955526135|ref|XP_014646216.1| PREDICTED: ORM1-like protein 3 [Ceratotherium simum simum]</Hit_def>
+  <Hit_accession>XP_014646214</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>310.457</Hsp_bit-score>
+      <Hsp_score>794</Hsp_score>
+      <Hsp_evalue>9.00558e-107</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>151</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFILNTLSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHF+LNT+SLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>17</Hit_num>
+  <Hit_id>gi|965854626|ref|XP_014963570.1|</Hit_id>
+  <Hit_def>PREDICTED: ORM1-like protein 3 isoform X1 [Ovis aries musimon]</Hit_def>
+  <Hit_accession>XP_014963570</Hit_accession>
+  <Hit_len>226</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>313.153</Hsp_bit-score>
+      <Hsp_score>801</Hsp_score>
+      <Hsp_evalue>9.39624e-107</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>74</Hsp_hit-from>
+      <Hsp_hit-to>226</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>151</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFILNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHF+LNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>18</Hit_num>
+  <Hit_id>gi|1190405903|ref|XP_020853126.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 isoform X2 [Phascolarctos cinereus]</Hit_def>
+  <Hit_accession>XP_020853126</Hit_accession>
+  <Hit_len>168</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>310.457</Hsp_bit-score>
+      <Hsp_score>794</Hsp_score>
+      <Hsp_evalue>1.27043e-106</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>16</Hsp_hit-from>
+      <Hsp_hit-to>168</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>150</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQLHFILNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQ+HF+LNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>19</Hit_num>
+  <Hit_id>gi|594658651|ref|XP_007177633.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 [Balaenoptera acutorostrata scammoni] &gt;gi|594658653|ref|XP_007177634.1| ORM1-like protein 3 [Balaenoptera acutorostrata scammoni] &gt;gi|594658655|ref|XP_007177635.1| ORM1-like protein 3 [Balaenoptera acutorostrata scammoni] &gt;gi|594658657|ref|XP_007177636.1| ORM1-like protein 3 [Balaenoptera acutorostrata scammoni] &gt;gi|594658659|ref|XP_007177637.1| ORM1-like protein 3 [Balaenoptera acutorostrata scammoni] &gt;gi|594658661|ref|XP_007177638.1| ORM1-like protein 3 [Balaenoptera acutorostrata scammoni] &gt;gi|1571886111|ref|XP_028021115.1| ORM1-like protein 3 [Balaenoptera acutorostrata scammoni] &gt;gi|1571886114|ref|XP_028021116.1| ORM1-like protein 3 [Balaenoptera acutorostrata scammoni]</Hit_def>
+  <Hit_accession>XP_007177633</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>310.071</Hsp_bit-score>
+      <Hsp_score>793</Hsp_score>
+      <Hsp_evalue>1.33693e-106</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>150</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQMHFILNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQ+HF+LNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>20</Hit_num>
+  <Hit_id>gi|611992035|ref|XP_007482356.1|</Hit_id>
+  <Hit_def>PREDICTED: ORM1-like protein 3 [Monodelphis domestica] &gt;gi|821481507|ref|XP_012403807.1| ORM1-like protein 3 isoform X2 [Sarcophilus harrisii] &gt;gi|1190405905|ref|XP_020853127.1| ORM1-like protein 3 isoform X3 [Phascolarctos cinereus] &gt;gi|1190405907|ref|XP_020853128.1| ORM1-like protein 3 isoform X3 [Phascolarctos cinereus] &gt;gi|1561903012|ref|XP_027728971.1| ORM1-like protein 3 isoform X2 [Vombatus ursinus]</Hit_def>
+  <Hit_accession>XP_007482356</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>310.071</Hsp_bit-score>
+      <Hsp_score>793</Hsp_score>
+      <Hsp_evalue>1.33693e-106</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>150</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQLHFILNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQ+HF+LNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>21</Hit_num>
+  <Hit_id>gi|514455606|ref|XP_005002473.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 [Cavia porcellus] &gt;gi|514455608|ref|XP_003467128.2| ORM1-like protein 3 [Cavia porcellus] &gt;gi|884902294|ref|XP_013005074.1| ORM1-like protein 3 [Cavia porcellus] &gt;gi|884902296|ref|XP_013005075.1| ORM1-like protein 3 [Cavia porcellus] &gt;gi|884902298|ref|XP_013005076.1| ORM1-like protein 3 [Cavia porcellus] &gt;gi|1331438014|ref|XP_023419655.1| ORM1-like protein 3 [Cavia porcellus]</Hit_def>
+  <Hit_accession>XP_005002473</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>309.686</Hsp_bit-score>
+      <Hsp_score>792</Hsp_score>
+      <Hsp_evalue>1.41235e-106</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>150</Hsp_identity>
+      <Hsp_positive>152</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQVHFVLNTASLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQ+HFVLNT SLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>22</Hit_num>
+  <Hit_id>gi|667298290|ref|XP_008580235.1|</Hit_id>
+  <Hit_def>PREDICTED: ORM1-like protein 3 [Galeopterus variegatus] &gt;gi|667298293|ref|XP_008580236.1| PREDICTED: ORM1-like protein 3 [Galeopterus variegatus]</Hit_def>
+  <Hit_accession>XP_008580235</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>309.686</Hsp_bit-score>
+      <Hsp_score>792</Hsp_score>
+      <Hsp_evalue>1.50848e-106</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>151</Hsp_identity>
+      <Hsp_positive>152</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHAVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFILNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHF+LNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>23</Hit_num>
+  <Hit_id>gi|1244109475|ref|XP_022365716.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 isoform X1 [Enhydra lutris kenyoni] &gt;gi|1244109477|ref|XP_022365717.1| ORM1-like protein 3 isoform X1 [Enhydra lutris kenyoni]</Hit_def>
+  <Hit_accession>XP_022365716</Hit_accession>
+  <Hit_len>213</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>311.997</Hsp_bit-score>
+      <Hsp_score>798</Hsp_score>
+      <Hsp_evalue>1.55545e-106</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>61</Hsp_hit-from>
+      <Hsp_hit-to>213</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>151</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFILNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHF+LNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>24</Hit_num>
+  <Hit_id>gi|1211446349|ref|XP_021509117.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 isoform X2 [Meriones unguiculatus]</Hit_def>
+  <Hit_accession>XP_021509117</Hit_accession>
+  <Hit_len>164</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>310.071</Hsp_bit-score>
+      <Hsp_score>793</Hsp_score>
+      <Hsp_evalue>1.57105e-106</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>12</Hsp_hit-from>
+      <Hsp_hit-to>164</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>150</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNLGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQVHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHN+GMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQ+HFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>25</Hit_num>
+  <Hit_id>gi|1211446351|ref|XP_021509118.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 isoform X3 [Meriones unguiculatus] &gt;gi|1211446353|ref|XP_021509119.1| ORM1-like protein 3 isoform X3 [Meriones unguiculatus] &gt;gi|1211446355|ref|XP_021509120.1| ORM1-like protein 3 isoform X3 [Meriones unguiculatus] &gt;gi|1211446357|ref|XP_021509121.1| ORM1-like protein 3 isoform X3 [Meriones unguiculatus] &gt;gi|1211446359|ref|XP_021509122.1| ORM1-like protein 3 isoform X3 [Meriones unguiculatus] &gt;gi|1211446361|ref|XP_021509123.1| ORM1-like protein 3 isoform X3 [Meriones unguiculatus]</Hit_def>
+  <Hit_accession>XP_021509118</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>309.686</Hsp_bit-score>
+      <Hsp_score>792</Hsp_score>
+      <Hsp_evalue>1.79806e-106</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>150</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNLGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQVHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHN+GMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQ+HFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>26</Hit_num>
+  <Hit_id>gi|821481503|ref|XP_012403803.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 isoform X1 [Sarcophilus harrisii]</Hit_def>
+  <Hit_accession>XP_012403803</Hit_accession>
+  <Hit_len>162</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>310.071</Hsp_bit-score>
+      <Hsp_score>793</Hsp_score>
+      <Hsp_evalue>1.82557e-106</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>10</Hsp_hit-from>
+      <Hsp_hit-to>162</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>150</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQLHFILNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQ+HF+LNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>27</Hit_num>
+  <Hit_id>gi|1561903010|ref|XP_027728970.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 isoform X1 [Vombatus ursinus]</Hit_def>
+  <Hit_accession>XP_027728970</Hit_accession>
+  <Hit_len>165</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>310.071</Hsp_bit-score>
+      <Hsp_score>793</Hsp_score>
+      <Hsp_evalue>1.96006e-106</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>13</Hsp_hit-from>
+      <Hsp_hit-to>165</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>150</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQLHFILNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQ+HF+LNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>28</Hit_num>
+  <Hit_id>gi|1195678985|ref|XP_021032962.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 isoform X1 [Mus caroli]</Hit_def>
+  <Hit_accession>XP_021032962</Hit_accession>
+  <Hit_len>197</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>311.227</Hsp_bit-score>
+      <Hsp_score>796</Hsp_score>
+      <Hsp_evalue>2.0548e-106</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>45</Hsp_hit-from>
+      <Hsp_hit-to>197</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>149</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNLGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQVHFILNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHN+GMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQ+HF+LNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>29</Hit_num>
+  <Hit_id>gi|829771965|ref|XP_012621336.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 [Microcebus murinus] &gt;gi|829771969|ref|XP_012621337.1| ORM1-like protein 3 [Microcebus murinus]</Hit_def>
+  <Hit_accession>XP_012621336</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>309.301</Hsp_bit-score>
+      <Hsp_score>791</Hsp_score>
+      <Hsp_evalue>2.1908e-106</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>150</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNLGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFILNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHN+GMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHF+LNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>30</Hit_num>
+  <Hit_id>gi|752436516|ref|XP_011235675.1|</Hit_id>
+  <Hit_def>PREDICTED: ORM1-like protein 3 [Ailuropoda melanoleuca] &gt;gi|752436518|ref|XP_011235676.1| PREDICTED: ORM1-like protein 3 [Ailuropoda melanoleuca] &gt;gi|1297611391|ref|XP_023060011.1| ORM1-like protein 3 [Piliocolobus tephrosceles] &gt;gi|1297611397|ref|XP_023060012.1| ORM1-like protein 3 [Piliocolobus tephrosceles] &gt;gi|296439685|sp|D2I2F3.1|ORML3_AILME RecName: Full=ORM1-like protein 3 &gt;gi|281347801|gb|EFB23385.1| hypothetical protein PANDA_019568, partial [Ailuropoda melanoleuca]</Hit_def>
+  <Hit_accession>XP_011235675</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>309.301</Hsp_bit-score>
+      <Hsp_score>791</Hsp_score>
+      <Hsp_evalue>2.61137e-106</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>151</Hsp_identity>
+      <Hsp_positive>152</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNTGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHN GMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>31</Hit_num>
+  <Hit_id>gi|1190405901|ref|XP_020853125.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 isoform X1 [Phascolarctos cinereus]</Hit_def>
+  <Hit_accession>XP_020853125</Hit_accession>
+  <Hit_len>199</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>310.842</Hsp_bit-score>
+      <Hsp_score>795</Hsp_score>
+      <Hsp_evalue>2.65403e-106</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>47</Hsp_hit-from>
+      <Hsp_hit-to>199</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>150</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQLHFILNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQ+HF+LNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>32</Hit_num>
+  <Hit_id>gi|532051149|ref|XP_005368333.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 [Microtus ochrogaster] &gt;gi|564374284|ref|XP_006247407.1| PREDICTED: ORM1-like protein 3 isoform X1 [Rattus norvegicus] &gt;gi|564374286|ref|XP_006247408.1| PREDICTED: ORM1-like protein 3 isoform X1 [Rattus norvegicus] &gt;gi|589917159|ref|XP_006971894.1| PREDICTED: ORM1-like protein 3 [Peromyscus maniculatus bairdii] &gt;gi|625229735|ref|XP_007606150.1| ORM1-like protein 3 [Cricetulus griseus] &gt;gi|625229737|ref|XP_007606151.1| ORM1-like protein 3 [Cricetulus griseus] &gt;gi|880914603|ref|XP_012973163.1| ORM1-like protein 3 [Mesocricetus auratus] &gt;gi|880914607|ref|XP_012973164.1| ORM1-like protein 3 [Mesocricetus auratus] &gt;gi|880914611|ref|XP_012973165.1| ORM1-like protein 3 [Mesocricetus auratus] &gt;gi|880914616|ref|XP_012973166.1| ORM1-like protein 3 [Mesocricetus auratus] &gt;gi|1008707360|ref|XP_015862595.1| PREDICTED: ORM1-like protein 3 [Peromyscus maniculatus bairdii] &gt;gi|1195511235|ref|XP_021068322.1| ORM1-like protein 3 isoform X1 [Mus pahari] &gt;gi|1195678987|ref|XP_021032963.1| ORM1-like protein 3 isoform X2 [Mus caroli] &gt;gi|1195678989|ref|XP_021032964.1| ORM1-like protein 3 isoform X2 [Mus caroli] &gt;gi|1195678991|ref|XP_021032965.1| ORM1-like protein 3 isoform X2 [Mus caroli] &gt;gi|1196051312|ref|XP_021086242.1| ORM1-like protein 3 [Mesocricetus auratus] &gt;gi|1196051316|ref|XP_021086243.1| ORM1-like protein 3 [Mesocricetus auratus] &gt;gi|1537984956|ref|XP_027279928.1| ORM1-like protein 3 [Cricetulus griseus] &gt;gi|1537984958|ref|XP_027279930.1| ORM1-like protein 3 [Cricetulus griseus] &gt;gi|81174973|sp|Q6QI25.2|ORML3_RAT RecName: Full=ORM1-like protein 3; AltName: Full=Liver regeneration-related protein LRRGT00183 &gt;gi|344235478|gb|EGV91581.1| ORM1-like protein 3 [Cricetulus griseus] &gt;gi|1040273939|gb|OBS78729.1| hypothetical protein A6R68_18880 [Neotoma lepida]</Hit_def>
+  <Hit_accession>XP_005368333</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>309.301</Hsp_bit-score>
+      <Hsp_score>791</Hsp_score>
+      <Hsp_evalue>2.69878e-106</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>149</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNLGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQVHFILNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHN+GMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQ+HF+LNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>33</Hit_num>
+  <Hit_id>gi|1494129854|gb|RLQ63348.1|</Hit_id>
+  <Hit_def>ORMDL3 [Cricetulus griseus]</Hit_def>
+  <Hit_accession>RLQ63348</Hit_accession>
+  <Hit_len>163</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>309.301</Hsp_bit-score>
+      <Hsp_score>791</Hsp_score>
+      <Hsp_evalue>2.80559e-106</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>11</Hsp_hit-from>
+      <Hsp_hit-to>163</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>149</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNLGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQVHFILNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHN+GMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQ+HF+LNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>34</Hit_num>
+  <Hit_id>gi|676281116|gb|KFO34885.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 [Fukomys damarensis]</Hit_def>
+  <Hit_accession>KFO34885</Hit_accession>
+  <Hit_len>292</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>314.309</Hsp_bit-score>
+      <Hsp_score>804</Hsp_score>
+      <Hsp_evalue>2.86134e-106</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>152</Hsp_query-to>
+      <Hsp_hit-from>65</Hsp_hit-from>
+      <Hsp_hit-to>216</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>150</Hsp_identity>
+      <Hsp_positive>152</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>152</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINK</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQVHFVLNTVSLMSVLIPKLPQLHGVRIFGINK</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQ+HFVLNTVSLMSVLIPKLPQLHGVRIFGINK</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>35</Hit_num>
+  <Hit_id>gi|114145802|ref|NP_001041362.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 [Rattus norvegicus] &gt;gi|45478206|gb|AAS66274.1| LRRGT00183 [Rattus norvegicus]</Hit_def>
+  <Hit_accession>NP_001041362</Hit_accession>
+  <Hit_len>180</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>309.686</Hsp_bit-score>
+      <Hsp_score>792</Hsp_score>
+      <Hsp_evalue>4.53519e-106</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>28</Hsp_hit-from>
+      <Hsp_hit-to>180</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>149</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNLGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQVHFILNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHN+GMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQ+HF+LNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>36</Hit_num>
+  <Hit_id>gi|291405964|ref|XP_002719392.1|</Hit_id>
+  <Hit_def>PREDICTED: ORM1-like protein 3 [Oryctolagus cuniculus] &gt;gi|655871096|ref|XP_008269643.1| PREDICTED: ORM1-like protein 3 [Oryctolagus cuniculus] &gt;gi|655871104|ref|XP_008269646.1| PREDICTED: ORM1-like protein 3 [Oryctolagus cuniculus] &gt;gi|852733134|ref|XP_012893514.1| PREDICTED: ORM1-like protein 3 [Dipodomys ordii] &gt;gi|852733136|ref|XP_012893516.1| PREDICTED: ORM1-like protein 3 [Dipodomys ordii] &gt;gi|852733138|ref|XP_012893517.1| PREDICTED: ORM1-like protein 3 [Dipodomys ordii]</Hit_def>
+  <Hit_accession>XP_002719392</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>308.531</Hsp_bit-score>
+      <Hsp_score>789</Hsp_score>
+      <Hsp_evalue>4.6209e-106</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>150</Hsp_identity>
+      <Hsp_positive>152</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDHIHFILNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYD IHF+LNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>37</Hit_num>
+  <Hit_id>gi|528767560|gb|EPY87219.1|</Hit_id>
+  <Hit_def>ORM1-like protein [Camelus ferus]</Hit_def>
+  <Hit_accession>EPY87219</Hit_accession>
+  <Hit_len>218</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>310.842</Hsp_bit-score>
+      <Hsp_score>795</Hsp_score>
+      <Hsp_evalue>5.97789e-106</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>152</Hsp_query-to>
+      <Hsp_hit-from>16</Hsp_hit-from>
+      <Hsp_hit-to>167</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>150</Hsp_identity>
+      <Hsp_positive>152</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>152</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINK</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFILNTVSLMSVLIPKLPQLHGVRIFGINK</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHF+LNTVSLMSVLIPKLPQLHGVRIFGINK</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>38</Hit_num>
+  <Hit_id>gi|13385128|ref|NP_079937.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 [Mus musculus] &gt;gi|81174972|sp|Q9CPZ6.1|ORML3_MOUSE RecName: Full=ORM1-like protein 3 &gt;gi|12844527|dbj|BAB26397.1| unnamed protein product [Mus musculus] &gt;gi|12849654|dbj|BAB28432.1| unnamed protein product [Mus musculus] &gt;gi|28302258|gb|AAH46594.1| ORM1-like 3 (S. cerevisiae) [Mus musculus] &gt;gi|74180403|dbj|BAE32363.1| unnamed protein product [Mus musculus] &gt;gi|148684204|gb|EDL16151.1| ORM1-like 3 (S. cerevisiae) [Mus musculus]</Hit_def>
+  <Hit_accession>NP_079937</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>308.145</Hsp_bit-score>
+      <Hsp_score>788</Hsp_score>
+      <Hsp_evalue>7.57214e-106</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>148</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNLGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQVHFILNTVSLMTVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHN+GMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQ+HF+LNTVSLM+VLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>39</Hit_num>
+  <Hit_id>gi|1211446347|ref|XP_021509116.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 isoform X1 [Meriones unguiculatus]</Hit_def>
+  <Hit_accession>XP_021509116</Hit_accession>
+  <Hit_len>198</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>309.686</Hsp_bit-score>
+      <Hsp_score>792</Hsp_score>
+      <Hsp_evalue>9.04926e-106</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>46</Hsp_hit-from>
+      <Hsp_hit-to>198</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>150</Hsp_identity>
+      <Hsp_positive>153</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNLGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQVHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHN+GMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQ+HFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>40</Hit_num>
+  <Hit_id>gi|537142067|gb|ERE68317.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 [Cricetulus griseus]</Hit_def>
+  <Hit_accession>ERE68317</Hit_accession>
+  <Hit_len>410</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>316.62</Hsp_bit-score>
+      <Hsp_score>810</Hsp_score>
+      <Hsp_evalue>1.53742e-105</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>152</Hsp_query-to>
+      <Hsp_hit-from>26</Hsp_hit-from>
+      <Hsp_hit-to>177</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>148</Hsp_identity>
+      <Hsp_positive>152</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>152</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINK</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNLGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQVHFILNTVSLMSVLIPKLPQLHGVRIFGINK</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHN+GMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQ+HF+LNTVSLMSVLIPKLPQLHGVRIFGINK</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>41</Hit_num>
+  <Hit_id>gi|505802935|ref|XP_004608795.1|</Hit_id>
+  <Hit_def>PREDICTED: ORM1-like protein 3 isoform X1 [Sorex araneus]</Hit_def>
+  <Hit_accession>XP_004608795</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>307.375</Hsp_bit-score>
+      <Hsp_score>786</Hsp_score>
+      <Hsp_evalue>1.57969e-105</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>148</Hsp_identity>
+      <Hsp_positive>152</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFASVPVVWTLTNLIHNLGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQVHFVVNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPF SVPVVWTLTNLIHN+GMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQ+HFV+NTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>42</Hit_num>
+  <Hit_id>gi|26352536|dbj|BAC39898.1|</Hit_id>
+  <Hit_def>unnamed protein product [Mus musculus]</Hit_def>
+  <Hit_accession>BAC39898</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>306.99</Hsp_bit-score>
+      <Hsp_score>785</Hsp_score>
+      <Hsp_evalue>1.6688e-105</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>148</Hsp_identity>
+      <Hsp_positive>152</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNQGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQVHFILNTVSLMTVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHN GMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQ+HF+LNTVSLM+VLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>43</Hit_num>
+  <Hit_id>gi|617638048|ref|XP_007531079.1|</Hit_id>
+  <Hit_def>PREDICTED: ORM1-like protein 3 [Erinaceus europaeus] &gt;gi|1016680768|ref|XP_016047174.1| PREDICTED: ORM1-like protein 3 [Erinaceus europaeus] &gt;gi|1016680772|ref|XP_016047176.1| PREDICTED: ORM1-like protein 3 [Erinaceus europaeus]</Hit_def>
+  <Hit_accession>XP_007531079</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>306.99</Hsp_bit-score>
+      <Hsp_score>785</Hsp_score>
+      <Hsp_evalue>1.70583e-105</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>149</Hsp_identity>
+      <Hsp_positive>152</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNLGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDHIHFILNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHN+GMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYD IHF+LNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>44</Hit_num>
+  <Hit_id>gi|444714007|gb|ELW54895.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 [Tupaia chinensis]</Hit_def>
+  <Hit_accession>ELW54895</Hit_accession>
+  <Hit_len>257</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>310.457</Hsp_bit-score>
+      <Hsp_score>794</Hsp_score>
+      <Hsp_evalue>3.20767e-105</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>152</Hsp_query-to>
+      <Hsp_hit-from>27</Hsp_hit-from>
+      <Hsp_hit-to>178</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>150</Hsp_identity>
+      <Hsp_positive>152</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>152</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINK</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFILNTVSLMSVLIPKLPQLHGVRIFGINK</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHF+LNTVSLMSVLIPKLPQLHGVRIFGINK</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>45</Hit_num>
+  <Hit_id>gi|1474824541|ref|XP_026242653.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 [Urocitellus parryii] &gt;gi|1474824543|ref|XP_026242654.1| ORM1-like protein 3 [Urocitellus parryii]</Hit_def>
+  <Hit_accession>XP_026242653</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>305.834</Hsp_bit-score>
+      <Hsp_score>782</Hsp_score>
+      <Hsp_evalue>5.05603e-105</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>149</Hsp_identity>
+      <Hsp_positive>151</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHVVLLSIVFVRVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFILNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLH+VLLSI FV VPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHF+LNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>46</Hit_num>
+  <Hit_id>gi|1160097623|ref|XP_020377234.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 [Rhincodon typus] &gt;gi|1160097625|ref|XP_020377235.1| ORM1-like protein 3 [Rhincodon typus]</Hit_def>
+  <Hit_accession>XP_020377234</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>301.982</Hsp_bit-score>
+      <Hsp_score>772</Hsp_score>
+      <Hsp_evalue>2.06448e-103</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>144</Hsp_identity>
+      <Hsp_positive>151</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYILGIGLLHIILLSIPFFSVPVVWTLTNVIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIILYFLTSFYTKYDKLHFVINTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSY+L IGLLHI+LLSIPF SVPVVWTLTN+IHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPI+LYFLTSFYTKYD++HFV+NTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>47</Hit_num>
+  <Hit_id>gi|558136049|ref|XP_006117467.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 isoform X1 [Pelodiscus sinensis] &gt;gi|1394689665|ref|XP_025037621.1| ORM1-like protein 3 isoform X1 [Pelodiscus sinensis]</Hit_def>
+  <Hit_accession>XP_006117467</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>301.597</Hsp_bit-score>
+      <Hsp_score>771</Hsp_score>
+      <Hsp_evalue>2.62825e-103</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>145</Hsp_identity>
+      <Hsp_positive>150</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLGIGLLHVVLLSIPFFSVPVVWTLTNLIHNMSMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDRIHFIINTISLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVL IGLLH+VLLSIPF SVPVVWTLTNLIHNM MYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYD+IHF++NT+SLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>48</Hit_num>
+  <Hit_id>gi|632982299|ref|XP_007908061.1|</Hit_id>
+  <Hit_def>PREDICTED: ORM1-like protein 3 [Callorhinchus milii] &gt;gi|632982301|ref|XP_007908062.1| PREDICTED: ORM1-like protein 3 [Callorhinchus milii]</Hit_def>
+  <Hit_accession>XP_007908061</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>301.597</Hsp_bit-score>
+      <Hsp_score>771</Hsp_score>
+      <Hsp_evalue>2.80713e-103</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>143</Hsp_identity>
+      <Hsp_positive>151</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYILGIGLLHIILLSIPFFSVPVVWTLTNIIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIILYFLTSFYTKYDKLHFVINTISLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSY+L IGLLHI+LLSIPF SVPVVWTLTN+IHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPI+LYFLTSFYTKYD++HFV+NT+SLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>49</Hit_num>
+  <Hit_id>gi|1338748237|ref|XP_023670140.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 [Paramormyrops kingsleyae] &gt;gi|1338748239|ref|XP_023670142.1| ORM1-like protein 3 [Paramormyrops kingsleyae]</Hit_def>
+  <Hit_accession>XP_023670140</Hit_accession>
+  <Hit_len>153</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>301.212</Hsp_bit-score>
+      <Hsp_score>770</Hsp_score>
+      <Hsp_evalue>3.45796e-103</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>145</Hsp_identity>
+      <Hsp_positive>151</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLGIGLLHVVLLSIPFVSVPVVWTLTNIIHNMCMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDRIHFVINTVSLLTVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVL IGLLH+VLLSIPFVSVPVVWTLTN+IHNM MYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYD+IHFV+NTVSL++VLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>50</Hit_num>
+  <Hit_id>gi|465974437|gb|EMP33838.1|</Hit_id>
+  <Hit_def>ORM1-like protein 3 [Chelonia mydas]</Hit_def>
+  <Hit_accession>EMP33838</Hit_accession>
+  <Hit_len>176</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>301.982</Hsp_bit-score>
+      <Hsp_score>772</Hsp_score>
+      <Hsp_evalue>3.83526e-103</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>24</Hsp_hit-from>
+      <Hsp_hit-to>176</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>144</Hsp_identity>
+      <Hsp_positive>150</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>153</Hsp_align-len>
+      <Hsp_qseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLAIGLLHIVLLSIPFVSVPVVWTLTNLIHNMGMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDQIHFVLNTVSLMSVLIPKLPQLHGVRIFGINKY</Hsp_qseq>
+      <Hsp_hseq>MNVGTAHSEVNPNTRVMNSRGIWLSYVLGIGLLHVVLLSIPFFSVPVVWTLTNIIHNMSMYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYDRIHFIINTISLMSVLIPKLPQLHGVRIFGINKY</Hsp_hseq>
+      <Hsp_midline>MNVGTAHSEVNPNTRVMNSRGIWLSYVL IGLLH+VLLSIPF SVPVVWTLTN+IHNM MYIFLHTVKGTPFETPDQGKARLLTHWEQMDYGVQFTASRKFLTITPIVLYFLTSFYTKYD+IHF++NT+SLMSVLIPKLPQLHGVRIFGINKY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>194611632</Statistics_db-num>
+      <Statistics_db-len>2104817704</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+</BlastOutput_iterations>
+</BlastOutput>

@@ -1,18 +1,23 @@
 # Mac files
-**/.DS_Store
+.DS_Store
 
-# IDE files
-**/.idea
-**/*.iml
-
-# VS Code files
-**/.vscode/
-**/.settings/
-**/.project
-**/.classpath
-
-# For debigging
-**/temp.xml
+# IDE
+.idea
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
 
 # Python files
-**/__pycache__
+__pycache__/
+
+
+## bazel directories
+bazel-bin
+bazel-docs
+bazel-genfiles
+bazel-out
+bazel-testlogs
+.ijwb
+.idea
