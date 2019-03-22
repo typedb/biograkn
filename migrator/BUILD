@@ -17,7 +17,7 @@ java_library(
         "//dependencies/maven/artifacts/edu/stanford/nlp:stanford-corenlp",
         "//dependencies/maven/artifacts/edu/stanford/nlp:stanford-corenlp-java-models"
     ],
-#    data = ["//dataset"],
+    data = ["//dataset"],
 )
 
 

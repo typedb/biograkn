@@ -8,6 +8,7 @@ import edu.stanford.nlp.pipeline.CoreDocument;
 import edu.stanford.nlp.pipeline.CoreEntityMention;
 import edu.stanford.nlp.pipeline.CoreSentence;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
+
 import grakn.biograkn.migrator.clinicaltrial.ClinicalTrial;
 import grakn.biograkn.migrator.clinicaltrialrelationships.ClinicalTrialRelationship;
 import grakn.biograkn.migrator.disease.Disease;
@@ -37,6 +38,7 @@ public class Migrator {
     public static void main(String[] args) {
 //        migratePrecisionMedicine();
         migrateTextMining();
+
     }
 
     public static void migratePrecisionMedicine() {
@@ -411,5 +413,7 @@ public class Migrator {
         // annnotate the document
         pipeline.annotate(document);
         return document;
+
+
     }
 }
