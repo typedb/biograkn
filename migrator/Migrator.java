@@ -69,8 +69,17 @@ public class Migrator {
         GraknClient.Session session = graknClient.session("text_mining");
 
         try {
-            String abstractText = "Joe Smith was born in California. In 2017, he went to Paris, France in the summer. His flight left at 3:00pm on July 10th, 2017. " +
-                    "After eating some escargot for the first time, Joe said, He sent a postcard to his sister Jane Smith. After hearing about Joe's trip, Jane decided she might go to France one day. Joe has a phone. It is blue.";
+
+            String abstractText = "The BRAF inhibitor dabrafenib (Tafinlar(®)) and the MEK inhibitor trametinib (Mekinist(®)) are indicated, as monotherapy or in combination with each other, " +
+                    "for the treatment of patients with unresectable or metastatic melanoma with a BRAF (V600) mutation. This article reviews the therapeutic efficacy and tolerability of " +
+                    "combination treatment with dabrafenib and trametinib in this indication and summarizes relevant pharmacological data. Dabrafenib plus trametinib significantly prolonged " +
+                    "progression-free survival (PFS) and overall survival (OS), improved objective response rates (ORRs) and preserved health-related quality of life (HR-QOL) to a greater extent " +
+                    "than dabrafenib (in the double-blind COMBI-d study) and vemurafenib (in the open-label COMBI-v study) in two large, randomized, phase III studies in treatment-naïve patients " +
+                    "with unresectable or metastatic melanoma with BRAF (V600E/K) mutation. Limited treatment benefit with the combination was also seen in patients who had progressed on prior BRAF " +
+                    "inhibitor therapy, as indicated by ORRs of ≤ 15 % and stable disease in ≤ 50 % of patients in small phase I and II studies. Combination therapy did not increase overall toxicity " +
+                    "relative to dabrafenib or vemurafenib monotherapy, with most adverse events (AEs) mild or moderate in severity and generally manageable. Fewer skin-related AEs (e.g. cutaneous " +
+                    "malignancies, hyperkeratinosis and hand-foot syndrome) were reported with combination therapy than with dabrafenib or vemurafenib, probably because of reduced paradoxical activation " +
+                    "of the MAPK pathway. Thus, dabrafenib plus trametinib provides an important treatment option for patients with BRAF (V600) mutation-positive unresectable or metastatic melanoma.";
 
             GraknClient.Transaction writeTransaction = session.transaction().write();
             GraqlInsert graqlInsert = Graql.insert(var("a").isa("annotated-abstract").val(abstractText));
@@ -82,7 +91,7 @@ public class Migrator {
 
             migrateSentences(document, insertedAbstractId, session);
 
-            migrateCorefChains(document, insertedAbstractId, session);
+//            migrateCorefChains(document, insertedAbstractId, session);
 
             System.out.println("~~~~~~~~~~Text Mining Migration Completed~~~~~~~~~~");
             session.close();
@@ -118,12 +127,13 @@ public class Migrator {
 
             migrateTokens(sentence, insertedSentenceId, session);
 
-            migrateMinedRelations(sentence, insertedSentenceId, session);
+//            migrateMinedRelations(sentence, insertedSentenceId, session);
 
-            migrateMentions(sentence, insertedSentenceId, session, abstractId);
+//            migrateMentions(sentence, insertedSentenceId, session, abstractId);
         }
         System.out.println("inserted sentences");
     }
+
 
     public static void migrateTokens(CoreSentence sentence, String sentenceId, GraknClient.Session session) {
         List<CoreLabel> tokens = sentence.tokens();
@@ -229,40 +239,41 @@ public class Migrator {
                 throw new IllegalStateException("entity-mention and mention insertion failed");
             }
 
-            GraqlGet getMentionedEntityType = Graql.match(var("x").type(entityType)).get();
-
-            List<ConceptMap> getEntityType = writeTransaction.execute(getMentionedEntityType);
-
-            if (getEntityType.isEmpty()) {
-                GraqlDefine defineType = Graql.define(type(entityType).sub("entity").has("value").plays("extracted-entity"));
-                 writeTransaction.execute(defineType);
-            }
-
-            GraqlGet getMentionedEntity = Graql.match(var("x").isa(entityType).has("value", entityMentioned)).get();
-
-            List<ConceptMap> getEntity = writeTransaction.execute(getMentionedEntity);
-
-            if (getEntity.isEmpty()) {
-                graqlInsert = Graql.insert(var("e").isa(entityType).has("value", entityMentioned));
-                writeTransaction.execute(graqlInsert);
-            }
-
-            getMentionedEntity = Graql.match(
-                    var("e").isa(entityType).has("value", entityMentioned),
-                    var("a").id(abstractId),
-                    var("ee").isa("entity-extraction").rel("extracted-entity", "e").rel("mined-text", "a")).get();
-
-            getEntity = writeTransaction.execute(getMentionedEntity);
-
-            if (getEntity.isEmpty()) {
-
-                GraqlInsert insert = Graql.match(var("e").isa(entityType).has("value", entityMentioned),var("a").id(abstractId))
-                        .insert(var("ee").isa("entity-extraction").rel("extracted-entity", "e").rel("mined-text", "a"));
-                insertedIds = writeTransaction.execute(insert);
-                if (insertedIds.isEmpty()) {
-                    throw new IllegalStateException("entity-extraction insertion failed");
-                }
-            }
+            // extracted entities
+//            GraqlGet getMentionedEntityType = Graql.match(var("x").type(entityType)).get();
+//
+//            List<ConceptMap> getEntityType = writeTransaction.execute(getMentionedEntityType);
+//
+//            if (getEntityType.isEmpty()) {
+//                GraqlDefine defineType = Graql.define(type(entityType).sub("entity").has("value").plays("extracted-entity"));
+//                 writeTransaction.execute(defineType);
+//            }
+//
+//            GraqlGet getMentionedEntity = Graql.match(var("x").isa(entityType).has("value", entityMentioned)).get();
+//
+//            List<ConceptMap> getEntity = writeTransaction.execute(getMentionedEntity);
+//
+//            if (getEntity.isEmpty()) {
+//                graqlInsert = Graql.insert(var("e").isa(entityType).has("value", entityMentioned));
+//                writeTransaction.execute(graqlInsert);
+//            }
+//
+//            getMentionedEntity = Graql.match(
+//                    var("e").isa(entityType).has("value", entityMentioned),
+//                    var("a").id(abstractId),
+//                    var("ee").isa("entity-extraction").rel("extracted-entity", "e").rel("mined-text", "a")).get();
+//
+//            getEntity = writeTransaction.execute(getMentionedEntity);
+//
+//            if (getEntity.isEmpty()) {
+//
+//                GraqlInsert insert = Graql.match(var("e").isa(entityType).has("value", entityMentioned),var("a").id(abstractId))
+//                        .insert(var("ee").isa("entity-extraction").rel("extracted-entity", "e").rel("mined-text", "a"));
+//                insertedIds = writeTransaction.execute(insert);
+//                if (insertedIds.isEmpty()) {
+//                    throw new IllegalStateException("entity-extraction insertion failed");
+//                }
+//            }
 
             writeTransaction.commit();
 

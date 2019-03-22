@@ -6,14 +6,14 @@ confidence sub attribute, datatype double;
 pubmed-article sub entity,
   has pmid,
   has title,
-  has annotated-abstract;
+  has annotated-abstract,
+  plays mined-text;
 
 pmid sub attribute, datatype string;
 title sub attribute, datatype string;
 annotated-abstract sub attribute, datatype string,
   plays abstract-container,
-  plays owner,
-  plays mined-text;
+  plays owner;
 
 sentence sub entity,
   has sentiment,
@@ -47,7 +47,9 @@ mined-relation sub relation,
     has confidence,
     relates object,
     relates subject,
-    relates mentioning-sentence;
+    relates mentioning-sentence,
+    plays extracted-relation,
+    plays extracted-knowledge;
 
 relation-type sub attribute, datatype string;
 
@@ -95,46 +97,98 @@ relation-extraction sub relation,
     relates extracted-relation,
     relates mined-text;
 
-test1 sub rule,
-when {
-    (representative: $r, owned: $o) isa coref-chain;
-    $o (mentioned-entity: $e) isa mention;
-    (containing-entity: $e, contained-token: $t) isa entity-containing-token;
-    (subject: $t, mentioning-sentence: $s, object: $ob) isa mined-relation, has confidence $c, has relation-type $rt;
+#test1 sub rule,
+#when {
+#    (representative: $r, owned: $o) isa coref-chain;
+#    $o (mentioned-entity: $e) isa mention;
+#    (containing-entity: $e, contained-token: $t) isa entity-containing-token;
+#    (subject: $t, mentioning-sentence: $s, object: $ob) isa mined-relation, has confidence $c, has relation-type $rt;
+#
+#    $r (mentioned-entity: $e2) isa mention;
+#    ($e2, $t2) isa entity-containing-token;
+#},
+#then {
+#    (subject: $t2, mentioning-sentence: $s, object: $ob) isa mined-relation;
+#};
+#
+#test2 sub rule,
+#  when {
+#      (representative: $r, owned: $o) isa coref-chain;
+#      $o (mentioned-entity: $e) isa mention;
+#      (containing-entity: $e, contained-token: $t) isa entity-containing-token;
+#      (subject: $t, mentioning-sentence: $s, object: $ob) isa mined-relation, has confidence $c, has relation-type $rt;
+#
+#      $r (mentioned-entity: $e2) isa mention;
+#      ($e2, $t2) isa entity-containing-token;
+#      $mr2 (subject: $t2, mentioning-sentence: $s, object: $ob) isa mined-relation;
+#  },
+#  then {
+#      $mr2 has confidence $c;
+#  };
+#
+# test3 sub rule,
+# when {
+#     (representative: $r, owned: $o) isa coref-chain;
+#     $o (mentioned-entity: $e) isa mention;
+#     (containing-entity: $e, contained-token: $t) isa entity-containing-token;
+#     (subject: $t, mentioning-sentence: $s, object: $ob) isa mined-relation, has confidence $c, has relation-type $rt;
+#
+#     $r (mentioned-entity: $e2) isa mention;
+#     ($e2, $t2) isa entity-containing-token;
+#     $mr2 (subject: $t2, mentioning-sentence: $s, object: $ob) isa mined-relation;
+# },
+# then {
+#     $mr2 has relation-type $rt;
+# };
 
-    $r (mentioned-entity: $e2) isa mention;
-    ($e2, $t2) isa entity-containing-token;
+
+
+
+knowledge-extraction sub relation,
+    relates extracted-knowledge,
+    relates mined-text;
+## extracted entityies
+
+
+
+
+#test1 sub rule,
+#when {
+#   $p isa pubmed-article, has annotated-abstract $a;
+#   ($a, $s) isa abstract-containing-sentence;
+#   ($s, $e) isa mention;
+#},
+#then {
+#  (extracted-entity: $e, mined-text: $p) isa entity-extraction;
+#};
+
+#test2 sub rule,
+#when {
+#   $p isa pubmed-article, has annotated-abstract $a;
+#   ($a, $s) isa abstract-containing-sentence;
+#   $mr ($s, $o, $su) isa mined-relation;
+#},
+#then {
+#  (extracted-relation: $mr, mined-text: $p) isa relation-extraction;
+#};
+
+
+treatment-rule sub rule,
+when {
+  $p isa pubmed-article, has annotated-abstract $a;
+  $s isa sentence;
+  ($a, $s) isa abstract-containing-sentence;
+  ($s, $object, $subject) isa mined-relation, has relation-type "treatment";
+  $object has lemma $l1;
+  $subject has lemma $l2;
+  $object has ner $n1;
+  $subject has ner $n2;
+  $drug isa drug, has name $drug-name;
+  $drug-name == $l1;
+  $disease isa disease, has name $disease-name;
+  $disease-name == $l2;
 },
 then {
-    (subject: $t2, mentioning-sentence: $s, object: $ob) isa mined-relation;
+   (therapeutic: $drug, treated-condition: $disease) isa treatment;
 };
 
-test2 sub rule,
-  when {
-      (representative: $r, owned: $o) isa coref-chain;
-      $o (mentioned-entity: $e) isa mention;
-      (containing-entity: $e, contained-token: $t) isa entity-containing-token;
-      (subject: $t, mentioning-sentence: $s, object: $ob) isa mined-relation, has confidence $c, has relation-type $rt;
-
-      $r (mentioned-entity: $e2) isa mention;
-      ($e2, $t2) isa entity-containing-token;
-      $mr2 (subject: $t2, mentioning-sentence: $s, object: $ob) isa mined-relation;
-  },
-  then {
-      $mr2 has confidence $c;
-  };
-
- test3 sub rule,
- when {
-     (representative: $r, owned: $o) isa coref-chain;
-     $o (mentioned-entity: $e) isa mention;
-     (containing-entity: $e, contained-token: $t) isa entity-containing-token;
-     (subject: $t, mentioning-sentence: $s, object: $ob) isa mined-relation, has confidence $c, has relation-type $rt;
-
-     $r (mentioned-entity: $e2) isa mention;
-     ($e2, $t2) isa entity-containing-token;
-     $mr2 (subject: $t2, mentioning-sentence: $s, object: $ob) isa mined-relation;
- },
- then {
-     $mr2 has relation-type $rt;
- };
