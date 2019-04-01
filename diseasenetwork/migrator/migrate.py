@@ -6,16 +6,16 @@ client = GraknClient(uri="localhost:48555")
 session = client.session(keyspace="disease_network")
 
 # Parameters to set how much data to load from each dataset
-nUni = 10000000
-nInt = 10000000
-nRea = 10000000
-nDis = 10000000
-nHPA = 10000000
-nKan = 10000000
-nGEO = 10000000
-nDGI = 10000000
-nTis = 10000000
-sim = 10000000
+nUni = 1
+nInt = 1
+nRea = 1
+nDis = 1
+nHPA = 0
+nKan = 0
+nGEO = 0
+nDGI = 0
+nTis = 0
+sim = 0
 
 # -------
 # 1. START UniProt
@@ -221,12 +221,22 @@ if nDis is not 0:
 		counter = counter + 1
 		uniprotid = i[2].decode("utf-8")
 		entrez = i[0].decode("utf-8")
-		q = 'match $a isa protein, has uniprot-id "' + uniprotid + '"; insert $g isa gene, has entrez-id "' + entrez + '";(encoding-gene:$g, encoded-protein: $a) isa gene-protein-encoding;'
-		tx.query(q)
-		if counter % 200 == 0:
-			tx.commit()
-			tx = session.transaction().write()
-			print(counter)
+
+		# check if gene has already been inserted
+		geneQuery = 'match $g isa gene, has entrez-id "' + entrez + '"; get;'
+		result = tx.query(geneQuery)
+
+		try: 
+			next(result)
+			# If no exception, then gene symbol exists, do nothing.
+		except StopIteration:
+			# Gene-symbol doesn't exist, insert.
+			q = 'match $a isa protein, has uniprot-id "' + uniprotid + '"; insert $g isa gene, has entrez-id "' + entrez + '";(encoding-gene:$g, encoded-protein: $a) isa gene-protein-encoding;'
+			tx.query(q)
+			if counter % 200 == 0:
+				tx.commit()
+				tx = session.transaction().write()
+				print(counter)
 	tx.commit()
 
 	print('4. DisGeNET (ENTREZ) - Inserting gene-symbol to genes.')
@@ -577,10 +587,18 @@ if nGEO is not 0:
 		counter = counter + 1
 		entrez = i[0]
 		uniprotid = i[1][1:]
-		q = 'match $a isa gene, has entrez-id "' + entrez + '"; get;'
-		a = tx.query(q)
-		q = 'match $p isa protein, has uniprot-id "' + uniprotid + '"; insert $g isa gene, has entrez-id "' + entrez + '";(encoded-protein: $p, encoding-gene: $g) isa gene-protein-encoding;'
-		b = tx.query(q)
+
+		# check if gene has already been inserted
+		geneQuery = 'match $g isa gene, has entrez-id "' + entrez + '"; get;'
+		result = tx.query(geneQuery)
+
+		try: 
+			next(result)
+			# If no exception, then gene symbol exists, do nothing.
+		except StopIteration:
+			# Gene-symbol doesn't exist, insert.
+			q = 'match $p isa protein, has uniprot-id "' + uniprotid + '"; insert $g isa gene, has entrez-id "' + entrez + '";(encoded-protein: $p, encoding-gene: $g) isa gene-protein-encoding;'
+			b = tx.query(q)
 
 		print('Inserting genes (entrez-id) <> protein relationships: ' + str(counter) + '/' + str(len(raw_file)))
 		if counter % 100 == 0:
