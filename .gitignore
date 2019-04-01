@@ -1,0 +1,22 @@
+# Mac files
+**/.DS_Store
+
+# IDE files
+.idea/
+*.iml
+.ijwb/
+
+# VS Code files
+**/.vscode/
+**/.settings/
+**/.project
+**/.classpath
+
+# For debigging
+**/temp.xml
+
+# Python files
+**/__pycache__
+
+# Bazel
+bazel-*

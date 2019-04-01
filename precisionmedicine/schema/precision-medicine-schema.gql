@@ -1,0 +1,270 @@
+define
+
+#common attributes
+name sub attribute, datatype string,
+    plays contained;
+gender sub attribute, datatype string;
+pharmgkb-id sub attribute, datatype string;
+mesh-id sub attribute, datatype string;
+
+person sub entity,
+    has person-id,
+    has age,
+    has gender,
+    plays patient,
+    plays genome-owner,
+    plays eligible-participant,
+    plays relevant-participant;
+
+person-id sub attribute, datatype string;
+age sub attribute, datatype double;
+
+disease sub entity,
+    has name,
+    has disease-id,
+    has source-name,
+    has source-id,
+    has category,
+    has mesh-id,
+    plays diagnosed-disease,
+    plays associated-disease;
+
+disease-id sub attribute, datatype string;
+source-name sub attribute, datatype string;
+source-id sub attribute, datatype string;
+category sub attribute, datatype string;
+
+gene sub entity,
+    has symbol,
+    has name,
+    has chromosome,
+    has locus-type,
+    has locus-group,
+    has ncbi-id,
+    has ensembl-id,
+    plays varied-gene,
+    plays identified-gene,
+    plays associated-gene;
+
+symbol sub attribute, datatype string,
+    plays contained;
+
+chromosome sub attribute, datatype string;
+locus-type sub attribute, datatype string;
+locus-group sub attribute, datatype string;
+ncbi-id sub attribute, datatype string;
+ensembl-id sub attribute, datatype string;
+
+variant sub entity,
+    has pharmgkb-id,
+    has snp-id,
+    has gene-symbols,
+    has location,
+    plays identified-variant,
+    plays genetic-variant,
+    plays associated-variant;
+
+snp-id sub attribute, datatype string;
+gene-symbols sub attribute, datatype string;
+location sub attribute, datatype string;
+
+drug sub entity,
+    has appl-no,
+    has product-no,
+    has form,
+    has strength,
+    has name,
+    has active-ingredient,
+    has pharmgkb-id,
+    has mesh-id,
+    plays associated-drug,
+    plays relevant-therapeutic;
+
+appl-no sub attribute, datatype string;
+product-no sub attribute, datatype string;
+form sub attribute, datatype string;
+strength sub attribute, datatype string;
+active-ingredient sub attribute, datatype string;
+
+
+clinical-trial sub entity,
+    has nct-id,
+    has status,
+    has intervention-type,
+    has intervention-name,
+    has url,
+    has condition,
+    has brief-title,
+    has official-title,
+    has min-age,
+    has max-age,
+    has gender,
+    plays relevant-therapeutic,
+    plays eligible-trial,
+    plays associated-trial,
+    plays relevant-trial;
+
+nct-id sub attribute, datatype string;
+status sub attribute, datatype string;
+intervention-type sub attribute, datatype string;
+intervention-name sub attribute, datatype string,
+    plays container;
+
+url sub attribute, datatype string;
+condition sub attribute, datatype string,
+    plays container;
+
+brief-title sub attribute, datatype string,
+    plays container;
+
+official-title sub attribute, datatype string,
+    plays container;
+
+min-age sub attribute, datatype double;
+max-age sub attribute, datatype double;
+
+gene-disease-association sub relation,
+    has score,
+    relates associated-disease,
+    relates associated-gene;
+
+variant-disease-association sub relation,
+    has score,
+    relates associated-disease,
+    relates associated-variant;
+
+score sub attribute, datatype double;
+
+diagnosis sub relation,
+    relates patient,
+    relates diagnosed-disease;
+
+gene-identification sub relation,
+    relates identified-gene,
+    relates genome-owner;
+
+variant-identification sub relation,
+    relates identified-variant,
+    relates genome-owner;
+
+genetic-variation sub relation,
+    relates genetic-variant,
+    relates varied-gene;
+
+drug-disease-association sub relation,
+    relates associated-disease,
+    relates associated-drug;
+
+personalised-therapy sub relation,
+    relates patient,
+    relates relevant-therapeutic;
+
+eligible-trial-participant sub relation,
+    relates eligible-trial,
+    relates eligible-participant;
+
+relevant-trial-participant sub relation,
+    relates relevant-trial,
+    relates relevant-participant;
+
+containing sub relation,
+    relates container,
+    relates contained;
+
+trial-drug-association sub relation,
+    relates associated-drug,
+    relates associated-trial;
+
+trial-disease-association sub relation,
+    relates associated-disease,
+    relates associated-trial;
+
+trial-gene-association sub relation,
+    relates associated-gene,
+    relates associated-trial;
+
+trial-drug sub rule,
+when {
+    $d isa drug, has name $n;
+    $c isa clinical-trial, has intervention-name $in;
+    ($n, $in) isa containing;
+},
+then {
+    (associated-drug: $d, associated-trial: $c) isa trial-drug-association;
+};
+
+trial-disease sub rule,
+when {
+    $d isa disease, has name $n;
+    $c isa clinical-trial, has condition $co;
+    ($n, $co) isa containing;
+},
+then {
+    (associated-disease: $d, associated-trial: $c) isa trial-disease-association;
+};
+
+trial-gene-1 sub rule,
+when {
+    $g isa gene, has symbol $s;
+    $c isa clinical-trial, has brief-title $b;
+    ($s, $b) isa containing;
+},
+then {
+    (associated-gene: $g, associated-trial: $c) isa trial-gene-association;
+};
+
+trial-drug-2 sub rule,
+when {
+    $g isa gene, has symbol $s;
+    $c isa clinical-trial, has official-title $o;
+    ($s, $o) isa containing;
+},
+then {
+    (associated-gene: $g, associated-trial: $c) isa trial-gene-association;
+};
+
+
+####################
+
+personalised-patient-therapy sub rule,
+when {
+    ($person, $trial) isa eligible-trial-participant;
+    ($person, $trial) isa relevant-trial-participant;
+},
+then {
+    (patient: $person, relevant-therapeutic: $trial) isa personalised-therapy;
+};
+
+trial-participant-elibility-1 sub rule,
+when {
+    $person isa person, has age $age, has gender $gender;
+    $trial isa clinical-trial, has min-age <= $age, has max-age >= $age, has gender == $gender;
+    $disease isa disease;
+    ($disease, $person);
+    ($disease, $trial);
+},
+then {
+    (eligible-participant: $person, eligible-trial: $trial) isa eligible-trial-participant;
+};
+
+
+trial-participant-elibility-2 sub rule,
+when {
+    $person isa person, has age $age;
+    $trial isa clinical-trial, has min-age <= $age, has max-age >= $age, has gender "All";
+    $disease isa disease;
+    ($disease, $person);
+    ($disease, $trial);
+},
+then {
+    (eligible-participant: $person, eligible-trial: $trial) isa eligible-trial-participant;
+};
+
+trial-participant-relevance sub rule,
+when {
+    ($person, $gene) isa gene-identification;
+    ($trial, $gene) isa trial-gene-association;
+},
+then {
+    (relevant-participant: $person, relevant-trial: $trial) isa relevant-trial-participant;
+};

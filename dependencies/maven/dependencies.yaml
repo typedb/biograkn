@@ -1,0 +1,39 @@
+options:
+  languages: ["java"]
+  resolverType: coursier
+  resolvers:
+    - id: mavencentral
+      type: default
+      url: https://repo.maven.apache.org/maven2/
+    - id: mavengraknai
+      url: http://maven.grakn.ai/nexus/content/repositories/snapshots/
+  strictVisibility: true
+  transitivity: runtime_deps
+  versionConflictPolicy: highest
+  thirdPartyDirectory: dependencies/maven/artifacts
+
+
+dependencies:
+
+  org.apache.poi:
+    poi-ooxml:
+      version: "4.0.1"
+      lang: java
+
+  org.apache.commons:
+    commons-csv:
+      version: "1.5"
+      lang: java
+
+  edu.stanford.nlp:
+    stanford-corenlp:java:models:
+      version: "3.9.2"
+      lang: java
+    stanford-corenlp:
+      version: "3.9.2"
+      lang: java
+
+  xml-apis:
+    xml-apis:
+      lang: "java"
+      version: "1.4.01"

@@ -1,0 +1,8 @@
+BRAF  gene
+dabrafenib  drug
+MEK protein
+trametinib  drug
+melanoma  disease
+vemurafenib drug
+braf  gene
+V600  variant
