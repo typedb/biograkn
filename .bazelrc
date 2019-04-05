@@ -33,3 +33,5 @@ build:rbe --experimental_strict_action_env=true
 # (you can look at what actions are produced when a target is executed by adding -s: bazel build -s //target:name).
 # Here we configure Bazel to execute "MakeRpm" actions locally:
 build:rbe --strategy_regexp=MakeRpm=local
+
+startup: --host_jvm_args=-Xmx6g
