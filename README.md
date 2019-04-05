@@ -23,7 +23,7 @@ BioGrakn provides an intuitive way to query interconnected and heterogeneous bio
 
 ## Quickstart
 
-1. Download the latest release. -> https://github.com/graknlabs/biograkn/releases
+1. Download the latest release. -> {TO BE ADDED SOON}
 2. Unzip the downloaded file.
 3. `cd` into the unzipped folder, via terminal or command prompt.
 4. run `./grakn server start`
