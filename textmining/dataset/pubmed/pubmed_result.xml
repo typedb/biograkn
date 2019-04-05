@@ -1,0 +1,444 @@
+<?xml version="1.0"?>
+<!DOCTYPE PubmedArticleSet PUBLIC "-//NLM//DTD PubMedArticle, 1st January 2019//EN" "https://dtd.nlm.nih.gov/ncbi/pubmed/out/pubmed_190101.dtd">
+<PubmedArticleSet>
+
+<PubmedArticle>
+    <MedlineCitation Status="MEDLINE" Owner="NLM">
+        <PMID Version="1">27246822</PMID>
+        <DateCompleted>
+            <Year>2017</Year>
+            <Month>10</Month>
+            <Day>30</Day>
+        </DateCompleted>
+        <DateRevised>
+            <Year>2018</Year>
+            <Month>11</Month>
+            <Day>13</Day>
+        </DateRevised>
+        <Article PubModel="Print">
+            <Journal>
+                <ISSN IssnType="Electronic">1776-260X</ISSN>
+                <JournalIssue CitedMedium="Internet">
+                    <Volume>11</Volume>
+                    <Issue>3</Issue>
+                    <PubDate>
+                        <Year>2016</Year>
+                        <Month>06</Month>
+                    </PubDate>
+                </JournalIssue>
+                <Title>Targeted oncology</Title>
+                <ISOAbbreviation>Target Oncol</ISOAbbreviation>
+            </Journal>
+            <ArticleTitle>Dabrafenib plus Trametinib: a Review in Advanced Melanoma with a BRAF (V600) Mutation.</ArticleTitle>
+            <Pagination>
+                <MedlinePgn>417-28</MedlinePgn>
+            </Pagination>
+            <ELocationID EIdType="doi" ValidYN="Y">10.1007/s11523-016-0443-8</ELocationID>
+            <Abstract>
+                <AbstractText>The BRAF inhibitor dabrafenib (Tafinlar(®)) and the MEK inhibitor trametinib (Mekinist(®)) are indicated, as monotherapy or in combination with each other, for the treatment of patients with unresectable or metastatic melanoma with a BRAF (V600) mutation. This article reviews the therapeutic efficacy and tolerability of combination treatment with dabrafenib and trametinib in this indication and summarizes relevant pharmacological data. Dabrafenib plus trametinib significantly prolonged progression-free survival (PFS) and overall survival (OS), improved objective response rates (ORRs) and preserved health-related quality of life (HR-QOL) to a greater extent than dabrafenib (in the double-blind COMBI-d study) and vemurafenib (in the open-label COMBI-v study) in two large, randomized, phase III studies in treatment-naïve patients with unresectable or metastatic melanoma with BRAF (V600E/K) mutation. Limited treatment benefit with the combination was also seen in patients who had progressed on prior BRAF inhibitor therapy, as indicated by ORRs of ≤ 15 % and stable disease in ≤ 50 % of patients in small phase I and II studies. Combination therapy did not increase overall toxicity relative to dabrafenib or vemurafenib monotherapy, with most adverse events (AEs) mild or moderate in severity and generally manageable. Fewer skin-related AEs (e.g. cutaneous malignancies, hyperkeratinosis and hand-foot syndrome) were reported with combination therapy than with dabrafenib or vemurafenib, probably because of reduced paradoxical activation of the MAPK pathway. Thus, dabrafenib plus trametinib provides an important treatment option for patients with BRAF (V600) mutation-positive unresectable or metastatic melanoma.</AbstractText>
+            </Abstract>
+            <AuthorList CompleteYN="Y">
+                <Author ValidYN="Y">
+                    <LastName>Dhillon</LastName>
+                    <ForeName>Sohita</ForeName>
+                    <Initials>S</Initials>
+                    <AffiliationInfo>
+                        <Affiliation>Springer, Private Bag 65901, Mairangi Bay, 0754, Auckland, New Zealand. demail@springer.com.</Affiliation>
+                    </AffiliationInfo>
+                </Author>
+            </AuthorList>
+            <Language>eng</Language>
+            <PublicationTypeList>
+                <PublicationType UI="D016428">Journal Article</PublicationType>
+                <PublicationType UI="D016454">Review</PublicationType>
+            </PublicationTypeList>
+        </Article>
+        <MedlineJournalInfo>
+            <Country>France</Country>
+            <MedlineTA>Target Oncol</MedlineTA>
+            <NlmUniqueID>101270595</NlmUniqueID>
+            <ISSNLinking>1776-2596</ISSNLinking>
+        </MedlineJournalInfo>
+        <ChemicalList>
+            <Chemical>
+                <RegistryNumber>0</RegistryNumber>
+                <NameOfSubstance UI="D000970">Antineoplastic Agents</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>0</RegistryNumber>
+                <NameOfSubstance UI="D007093">Imidazoles</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>0</RegistryNumber>
+                <NameOfSubstance UI="D010091">Oximes</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>0</RegistryNumber>
+                <NameOfSubstance UI="D011728">Pyridones</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>0</RegistryNumber>
+                <NameOfSubstance UI="D011744">Pyrimidinones</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>33E86K87QN</RegistryNumber>
+                <NameOfSubstance UI="C560077">trametinib</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>EC 2.7.11.1</RegistryNumber>
+                <NameOfSubstance UI="D048493">Proto-Oncogene Proteins B-raf</NameOfSubstance>
+            </Chemical>
+            <Chemical>
+                <RegistryNumber>QGP4HA4G1B</RegistryNumber>
+                <NameOfSubstance UI="C561627">dabrafenib</NameOfSubstance>
+            </Chemical>
+        </ChemicalList>
+        <CitationSubset>IM</CitationSubset>
+        <MeshHeadingList>
+            <MeshHeading>
+                <DescriptorName UI="D000970" MajorTopicYN="N">Antineoplastic Agents</DescriptorName>
+                <QualifierName UI="Q000008" MajorTopicYN="N">administration &amp; dosage</QualifierName>
+                <QualifierName UI="Q000494" MajorTopicYN="N">pharmacology</QualifierName>
+                <QualifierName UI="Q000627" MajorTopicYN="Y">therapeutic use</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName UI="D006801" MajorTopicYN="N">Humans</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName UI="D007093" MajorTopicYN="N">Imidazoles</DescriptorName>
+                <QualifierName UI="Q000008" MajorTopicYN="N">administration &amp; dosage</QualifierName>
+                <QualifierName UI="Q000494" MajorTopicYN="N">pharmacology</QualifierName>
+                <QualifierName UI="Q000627" MajorTopicYN="Y">therapeutic use</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName UI="D008545" MajorTopicYN="N">Melanoma</DescriptorName>
+                <QualifierName UI="Q000188" MajorTopicYN="Y">drug therapy</QualifierName>
+                <QualifierName UI="Q000473" MajorTopicYN="N">pathology</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName UI="D009154" MajorTopicYN="N">Mutation</DescriptorName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName UI="D010091" MajorTopicYN="N">Oximes</DescriptorName>
+                <QualifierName UI="Q000008" MajorTopicYN="N">administration &amp; dosage</QualifierName>
+                <QualifierName UI="Q000494" MajorTopicYN="N">pharmacology</QualifierName>
+                <QualifierName UI="Q000627" MajorTopicYN="Y">therapeutic use</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName UI="D048493" MajorTopicYN="N">Proto-Oncogene Proteins B-raf</DescriptorName>
+                <QualifierName UI="Q000235" MajorTopicYN="Y">genetics</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName UI="D011728" MajorTopicYN="N">Pyridones</DescriptorName>
+                <QualifierName UI="Q000008" MajorTopicYN="N">administration &amp; dosage</QualifierName>
+                <QualifierName UI="Q000494" MajorTopicYN="N">pharmacology</QualifierName>
+                <QualifierName UI="Q000627" MajorTopicYN="Y">therapeutic use</QualifierName>
+            </MeshHeading>
+            <MeshHeading>
+                <DescriptorName UI="D011744" MajorTopicYN="N">Pyrimidinones</DescriptorName>
+                <QualifierName UI="Q000008" MajorTopicYN="N">administration &amp; dosage</QualifierName>
+                <QualifierName UI="Q000494" MajorTopicYN="N">pharmacology</QualifierName>
+                <QualifierName UI="Q000627" MajorTopicYN="Y">therapeutic use</QualifierName>
+            </MeshHeading>
+        </MeshHeadingList>
+    </MedlineCitation>
+    <PubmedData>
+        <History>
+            <PubMedPubDate PubStatus="entrez">
+                <Year>2016</Year>
+                <Month>6</Month>
+                <Day>2</Day>
+                <Hour>6</Hour>
+                <Minute>0</Minute>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="pubmed">
+                <Year>2016</Year>
+                <Month>6</Month>
+                <Day>2</Day>
+                <Hour>6</Hour>
+                <Minute>0</Minute>
+            </PubMedPubDate>
+            <PubMedPubDate PubStatus="medline">
+                <Year>2017</Year>
+                <Month>10</Month>
+                <Day>31</Day>
+                <Hour>6</Hour>
+                <Minute>0</Minute>
+            </PubMedPubDate>
+        </History>
+        <PublicationStatus>ppublish</PublicationStatus>
+        <ArticleIdList>
+            <ArticleId IdType="pubmed">27246822</ArticleId>
+            <ArticleId IdType="doi">10.1007/s11523-016-0443-8</ArticleId>
+            <ArticleId IdType="pii">10.1007/s11523-016-0443-8</ArticleId>
+        </ArticleIdList>
+        <ReferenceList>
+            <Reference>
+                <Citation>N Engl J Med. 2015 Jan 1;372(1):30-9</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">25399551</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>PLoS One. 2013 Jul 03;8(7):e67583</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">23844038</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Lancet Oncol. 2015 Oct;16(13):1389-98</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">26433819</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>J Clin Oncol. 2014 Nov 20;32(33):3697-704</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">25287827</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>N Engl J Med. 2012 Jul 12;367 (2):107-14</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">22663011</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Mol Cell Pharmacol. 2014;6(3):228</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">25745537</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Lancet Oncol. 2012 Nov;13(11):1087-95</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">23051966</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>N Engl J Med. 2012 Jan 19;366(3):207-15</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">22256804</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Drug Metab Dispos. 2013 Dec;41(12):2215-24</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">24097902</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>J Clin Pharmacol. 2014 Jun;54(6):696-706</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">24408395</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>J Am Acad Dermatol. 2015 Feb;72(2):221-36; quiz 237-8</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">25592339</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>J Clin Pharmacol. 2013 Sep;53(9):955-61</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">23846776</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Cancer. 2014 Jun 1;120(11):1695-701</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">24577748</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>J Clin Pharmacol. 2013 Sep;53(9):946-54</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">23893461</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>N Engl J Med. 2014 Nov 13;371(20):1877-88</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">25265492</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Lancet. 2015 Aug 1;386(9992):444-51</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">26037941</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Br J Cancer. 2010 Jun 8;102(12):1724-30</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">20531415</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Drug Metab Dispos. 2014 Jul;42(7):1180-90</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">24748562</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Xenobiotica. 2014 Apr;44(4):352-68</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">23971497</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>J Pharm Sci. 2013 Sep;102(9):3100-9</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">23608920</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Nat Rev Cancer. 2014 Jul;14(7):455-67</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">24957944</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Eur J Cancer. 2015 May;51(7):833-40</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">25794603</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>J Clin Oncol. 2013 Feb 1;31(4):482-9</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">23248257</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>J Clin Oncol. 2016 Mar 10;34(8):871-8</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">26811525</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Clin Adv Hematol Oncol. 2015 Jul;13(7):451-8</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">26353041</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Curr Opin Oncol. 2015 Mar;27(2):134-40</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">25602684</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>J Manag Care Spec Pharm. 2014 Apr;20(4):346-56</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">24684639</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Cancer Biol Med. 2014 Dec;11(4):237-46</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">25610709</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Lancet Oncol. 2015 Aug;16(8):908-18</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">26115796</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Lancet. 2012 Jul 28;380(9839):358-65</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">22735384</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Cancer Invest. 2014 May;32(4):144-9</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">24484235</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Ther Adv Med Oncol. 2016 Jan;8(1):48-56</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">26753005</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Dermatol Ther (Heidelb). 2015 Sep;5(3):151-69</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">26387031</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Lancet. 2012 May 19;379(9829):1893-901</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">22608338</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Clin Cancer Res. 2011 Mar 1;17(5):989-1000</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">21245089</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>N Engl J Med. 2014 Nov 13;371(20):1867-76</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">25265494</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Br J Clin Pharmacol. 2014 Sep;78(3):524-32</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">24606567</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Nat Commun. 2014 Dec 02;5:5694</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">25452114</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>J Clin Oncol. 2013 Sep 10;31(26):3205-11</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">23918947</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Ann Oncol. 2015 Sep;26 Suppl 5:v126-32</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">26314774</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>N Engl J Med. 2012 Nov;367 (18):1694-703</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">23020132</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Cancer Cell. 2012 Nov 13;22(5):668-82</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">23153539</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Lancet Oncol. 2012 Aug;13(8):773-81</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">22805291</ArticleId>
+                </ArticleIdList>
+            </Reference>
+            <Reference>
+                <Citation>Oncotarget. 2012 Dec;3(12 ):1533-45</Citation>
+                <ArticleIdList>
+                    <ArticleId IdType="pubmed">23237773</ArticleId>
+                </ArticleIdList>
+            </Reference>
+        </ReferenceList>
+    </PubmedData>
+</PubmedArticle>
+
+</PubmedArticleSet>

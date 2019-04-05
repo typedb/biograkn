@@ -1,0 +1,23 @@
+# location of the training file
+trainFile = ./training_file.txt
+# location where you would like to save (serialize) your
+# classifier; adding .gz at the end automatically gzips the file,
+# making it smaller, and faster to load
+serializeTo = ner-model.ser.gz
+# structure of your training file; this tells the classifier that
+# the word is in column 0 and the correct answer is in column 1
+map = word=0,answer=1
+# This specifies the order of the CRF: order 1 means that features
+# apply at most to a class pair of previous class and current class
+# or current class and next class.
+maxLeft=1
+# these are the features we'd like to train with
+# some are discussed below, the rest can be
+# understood by looking at NERFeatureFactory
+useClassFeature=false
+useWord=true
+# word character ngrams will be included up to length 6 as prefixes
+# and suffixes only
+useNGrams=false
+noMidNGrams=true
+maxNGramLeng=12

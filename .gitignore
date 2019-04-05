@@ -2,8 +2,9 @@
 **/.DS_Store
 
 # IDE files
-**/.idea
-**/*.iml
+.idea/
+*.iml
+.ijwb/
 
 # VS Code files
 **/.vscode/
@@ -16,3 +17,6 @@
 
 # Python files
 **/__pycache__
+
+# Bazel
+bazel-*
