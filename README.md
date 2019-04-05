@@ -11,12 +11,12 @@
 
 BioGrakn is a collection of knowledge graphs of biomedical data demonstrating the following use-cases:
 
-| Use Case | keyspace name |
-|:------------|:--------------|
-| 1. Precision Medicine | precision_medicine |
-| 2. Text Mining | text_mining |
-| 3. BLAST | blast |
-| 4. Disease Network | disease_network |
+| Use Case | keyspace name | Datasets
+|:------------|:--------------|:--------------|
+| 1. Precision Medicine | precision_medicine | [ClinicalTrials.gov](https://clinicaltrials.gov/ct2/home), [ClinVar](https://www.ncbi.nlm.nih.gov/clinvar/), [CTDBase](http://ctdbase.org/), [DisGeNet](http://www.disgenet.org/), [Drugs@FDA](https://www.accessdata.fda.gov/scripts/cder/daf/index.cfm), [HGNC](https://www.genenames.org/), and [PharmGKB](https://www.pharmgkb.org/) |
+| 2. Text Mining | text_mining | [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/) |
+| 3. BLAST | blast | N/A
+| 4. Disease Network | disease_network | [Uniprot](https://www.uniprot.org/), [Reactome](https://reactome.org/), [DGIdb](http://www.dgidb.org/), [DisGeNET](http://www.disgenet.org/web/DisGeNET/menu;jsessionid=np5qutaldora6gql80xqhmen), [HPA-Tissue](https://www.proteinatlas.org/humanproteome/tissue+specific), [EBI IntAct](https://www.ebi.ac.uk/intact/), [Kaneko](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3558318/), [Gene Expression Omnibus](https://www.ncbi.nlm.nih.gov/geo/) and [TissueNet](http://netbio.bgu.ac.il/tissuenet/) |
 
 
 BioGrakn provides an intuitive way to query interconnected and heterogeneous biomedical data in one single place. The schema that models the underlying knowledge graph alongside the descriptive query language, Graql, makes writing complex queries an extremely straightforward and intuitive process. Furthermore, the automated reasoning capability of Grakn, allows BioGrakn to become an intelligent database of biomedical data that infers implicit knowledge based on the explicitly stored data. BioGrakn can understand biological facts, infer based on new findings and enforce research constraints, all at query (run) time.
