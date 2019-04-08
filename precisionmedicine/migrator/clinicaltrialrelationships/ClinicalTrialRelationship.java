@@ -24,31 +24,21 @@ public class ClinicalTrialRelationship {
 
             System.out.println("loaded clinical-trials");
 
-            readTransaction.close();
-            readTransaction = session.transaction().read();
-
             graqlGet = Graql.match(var("d").isa("drug").has("name", var("n"))).get("n");
             List<ConceptMap> drugNameConcepts = readTransaction.execute(graqlGet);
 
             System.out.println("loaded drugs");
-
-            readTransaction.close();
-            readTransaction = session.transaction().read();
 
             graqlGet = Graql.match(var("d").isa("disease").has("name", var("n"))).get("n");
             List<ConceptMap> diseaseNameConcepts = readTransaction.execute(graqlGet);
 
             System.out.println("loaded diseases");
 
-            readTransaction.close();
-//            readTransaction = session.transaction().read();
 //
 //            graqlGet = Graql.match(var("g").isa("gene").has("symbol", var("s"))).get("s");
 //            List<ConceptMap> geneSymbolConcepts = readTransaction.execute(graqlGet);
 //
 //            System.out.println("loaded genes");
-//
-//            readTransaction.close();
 
 
             for (ConceptMap clinicalTrial : clinicalTrialConcepts) {
@@ -126,5 +116,6 @@ public class ClinicalTrialRelationship {
 //                }
             }
             System.out.println("inserted trial relationships");
+            readTransaction.close();
         }
 }
