@@ -4,7 +4,7 @@ java_library(
         "//external:jar/xml-apis/xml-apis"
     ],
     visibility = [
-        "//dependencies/maven/artifacts:__subpackages__"
+        "//visibility:public"
     ]
 )
 

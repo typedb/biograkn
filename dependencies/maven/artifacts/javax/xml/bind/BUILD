@@ -4,8 +4,7 @@ java_library(
         "//external:jar/javax/xml/bind/jaxb-api"
     ],
     runtime_deps = [
-        "//dependencies/maven/artifacts/javax/activation:activation",
-        "//dependencies/maven/artifacts/javax/xml/stream:stax-api"
+        "//dependencies/maven/artifacts/javax/activation:javax-activation-api"
     ],
     visibility = [
         "//dependencies/maven/artifacts:__subpackages__"
