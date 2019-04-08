@@ -41,14 +41,14 @@ public class ClinicalTrialRelationship {
             System.out.println("loaded diseases");
 
             readTransaction.close();
-            readTransaction = session.transaction().read();
-
-            graqlGet = Graql.match(var("g").isa("gene").has("symbol", var("s"))).get("s");
-            List<ConceptMap> geneSymbolConcepts = readTransaction.execute(graqlGet);
-
-            System.out.println("loaded genes");
-
-            readTransaction.close();
+//            readTransaction = session.transaction().read();
+//
+//            graqlGet = Graql.match(var("g").isa("gene").has("symbol", var("s"))).get("s");
+//            List<ConceptMap> geneSymbolConcepts = readTransaction.execute(graqlGet);
+//
+//            System.out.println("loaded genes");
+//
+//            readTransaction.close();
 
 
             for (ConceptMap clinicalTrial : clinicalTrialConcepts) {
@@ -95,35 +95,35 @@ public class ClinicalTrialRelationship {
                     }
                 }
 
-                if (briefTitle.length() > 0 || officialTitle.length() > 0) {
-                    for (ConceptMap map : geneSymbolConcepts) {
-                        String geneSymbol = map.get("s").asAttribute().value().toString();
-
-                        if (geneSymbol.length() > 0 && (briefTitle.contains(geneSymbol))) {
-
-                            GraqlInsert GraqlInsert = Graql.match(
-                                    var("s").isa("symbol").id(map.get("s").id().toString()),
-                                    var("bt").isa("brief-title").val(briefTitle))
-                                    .insert(var("con").isa("containing").rel("contained", "s").rel("container", "bt"));
-
-                            GraknClient.Transaction writeTransaction = session.transaction().write();
-                            List<ConceptMap> insertedIds = writeTransaction.execute(GraqlInsert);
-
-                            writeTransaction.commit();
-                        } else if (geneSymbol.length() > 0 && officialTitle.contains(geneSymbol)) {
-
-                            GraqlInsert GraqlInsert = Graql.match(
-                                    var("s").isa("symbol").id(map.get("s").id().toString()),
-                                    var("ot").isa("official-title").val(officialTitle))
-                                    .insert(var("con").isa("containing").rel("contained", "s").rel("container", "ot"));
-
-                            GraknClient.Transaction writeTransaction = session.transaction().write();
-                            List<ConceptMap> insertedIds = writeTransaction.execute(GraqlInsert);
-
-                            writeTransaction.commit();
-                        }
-                    }
-                }
+//                if (briefTitle.length() > 0 || officialTitle.length() > 0) {
+//                    for (ConceptMap map : geneSymbolConcepts) {
+//                        String geneSymbol = map.get("s").asAttribute().value().toString();
+//
+//                        if (geneSymbol.length() > 0 && (briefTitle.contains(geneSymbol))) {
+//
+//                            GraqlInsert GraqlInsert = Graql.match(
+//                                    var("s").isa("symbol").id(map.get("s").id().toString()),
+//                                    var("bt").isa("brief-title").val(briefTitle))
+//                                    .insert(var("con").isa("containing").rel("contained", "s").rel("container", "bt"));
+//
+//                            GraknClient.Transaction writeTransaction = session.transaction().write();
+//                            List<ConceptMap> insertedIds = writeTransaction.execute(GraqlInsert);
+//
+//                            writeTransaction.commit();
+//                        } else if (geneSymbol.length() > 0 && officialTitle.contains(geneSymbol)) {
+//
+//                            GraqlInsert GraqlInsert = Graql.match(
+//                                    var("s").isa("symbol").id(map.get("s").id().toString()),
+//                                    var("ot").isa("official-title").val(officialTitle))
+//                                    .insert(var("con").isa("containing").rel("contained", "s").rel("container", "ot"));
+//
+//                            GraknClient.Transaction writeTransaction = session.transaction().write();
+//                            List<ConceptMap> insertedIds = writeTransaction.execute(GraqlInsert);
+//
+//                            writeTransaction.commit();
+//                        }
+//                    }
+//                }
             }
             System.out.println("inserted trial relationships");
         }

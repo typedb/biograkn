@@ -13,12 +13,6 @@ workflows:
               ignore: /master/
           requires:
             - tests
-      - test-dists-fedora:
-          filters:
-            branches:
-              ignore: /master/
-          requires:
-            - tests
   ci-pipeline-master:
     jobs:
       - tests:
@@ -31,12 +25,6 @@ workflows:
               only: /master/
           requires:
             - tests
-      - test-dists-fedora:
-          filters:
-            branches:
-              only: /master/
-          requires:
-            - tests
       - approve-deploy-github:
           filters:
             branches:
@@ -44,7 +32,6 @@ workflows:
           type: approval
           requires:
             - test-dists-ubuntu
-            - test-dists-fedora
       - deploy-github:
           filters:
             branches:
@@ -83,10 +70,7 @@ jobs:
       - bazel:
           command: bazel build //...
   test-dists-ubuntu:
-    docker:
-      - image: ubuntu:16.04
-        environment:
-          _JAVA_OPTIONS: -Xmx2g
+    machine: true
     steps:
       - run: apt-get update
       - run: apt-get install -y software-properties-common
@@ -94,21 +78,6 @@ jobs:
       - run: apt-get update
       - run: apt-get install -y sudo gcc build-essential openjdk-8-jdk python-dev unzip curl git
 
-      - checkout
-      - bazel_install
-      - bazel_add_rbe_credential
-      - bazel:
-          command: bazel build //...
-
-  test-dists-fedora:
-    docker:
-      - image: fedora:29
-        environment:
-          _JAVA_OPTIONS: -Xmx2g
-    steps:
-      - run: yum install -y http://opensource.wandisco.com/centos/7/git/x86_64/wandisco-git-release-7-2.noarch.rpm
-      - run: yum update -y
-      - run: yum install -y sudo procps which gcc gcc-c++ java-1.8.0-openjdk-devel python-devel unzip git
       - checkout
       - bazel_install
       - bazel_add_rbe_credential
