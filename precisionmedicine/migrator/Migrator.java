@@ -28,7 +28,7 @@ public class Migrator {
         GraknClient graknClient = new GraknClient("127.0.0.1:48555");
         GraknClient.Session session = graknClient.session("precision_medicine");
 
-        loadSchema(session);
+//        loadSchema(session);
 
         // entities
         // Gene.migrate(session);
