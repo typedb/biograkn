@@ -13,7 +13,7 @@ session = client.session(keyspace="blast")
 class Test(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        with open('examples/blast/schema.gql', 'r') as schema:
+        with open('blast/schema.gql', 'r') as schema:
             define_query = schema.read()
             with session.transaction().write() as transaction:
                 transaction.query(define_query)
@@ -21,7 +21,7 @@ class Test(unittest.TestCase):
                 print("Loaded the blast schema")
 
     def test_a_migration(self):
-        migrate.init("examples/blast/uniprot-asthma-proteins.fasta")
+        migrate.init("blast/uniprot-asthma-proteins.fasta")
 
         with session.transaction().read() as transaction:
             number_of_proteins = transaction.query("match $x isa protein; get $x; count;").next().number()
@@ -37,7 +37,7 @@ class Test(unittest.TestCase):
             self.assertEqual(number_of_ownership, 12)
 
     def test_b_blast(self):
-        blast.init("examples/blast/blast-output.xml")
+        blast.init("blast/blast-output.xml")
 
     def test_c_queries(self):
         with session.transaction().read() as transaction:

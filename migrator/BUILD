@@ -50,6 +50,6 @@ java_test(
       name = "migrator-test",
       test_class = "grakn.biograkn.migrator.MigratorTest",
       srcs = ["MigratorTest.java"],
-      deps = [":migrator"],
+#      deps = [":migrator"],
   )
 
