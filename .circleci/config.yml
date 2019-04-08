@@ -81,8 +81,7 @@ jobs:
       - checkout
       - bazel_install
       - bazel_add_rbe_credential
-      - bazel:
-          command: bazel --host_jvm_args=-Xmx16g build //...
+      - run: bazel --host_jvm_args=-Xmx16g build //...
 
   deploy-github:
     machine: true
