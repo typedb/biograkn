@@ -31,16 +31,16 @@ public class Migrator {
         loadSchema(session);
 
         // entities
-        Gene.migrate(session);
-        Variant.migrate(session);
-        Disease.migrate(session);
-        Drug.migrate(session);
-        ClinicalTrial.migrate(session);
+        // Gene.migrate(session);
+        // Variant.migrate(session);
+        // Disease.migrate(session);
+        // Drug.migrate(session);
+        // ClinicalTrial.migrate(session);
 
         // relationships
-        GeneDiseaseAssociation.migrate(session);
-        VariantDiseaseAssociation.migrate(session);
-        DrugDiseaseAssociation.migrate(session);
+        // GeneDiseaseAssociation.migrate(session);
+        // VariantDiseaseAssociation.migrate(session);
+        // DrugDiseaseAssociation.migrate(session);
         ClinicalTrialRelationship.migrate(session);
 
         session.close();
@@ -58,6 +58,6 @@ public class Migrator {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("-----text mining schema loaded-----");
+        System.out.println("-----precision medicine schema loaded-----");
     }
 }

@@ -44,11 +44,11 @@ public class DrugDiseaseAssociation {
                 GraknClient.Transaction writeTransaction = session.transaction().write();
                 List<ConceptMap> insertedIds = writeTransaction.execute(GraqlInsert);
 
-                if (insertedIds.isEmpty()) {
-                    List<Class> prereqs = Arrays.asList(Drug.class, Disease.class);
-                    throw new IllegalStateException("Nothing was inserted for: " + GraqlInsert.toString() +
-                            "\nA prerequisite dataset may have not been loaded. This dataset requires: " + prereqs.toString());
-                }
+                // if (insertedIds.isEmpty()) {
+                //     List<Class> prereqs = Arrays.asList(Drug.class, Disease.class);
+                //     throw new IllegalStateException("Nothing was inserted for: " + GraqlInsert.toString() +
+                //             "\nA prerequisite dataset may have not been loaded. This dataset requires: " + prereqs.toString());
+                // }
 
                 System.out.println("Inserted a drug disease association at record number: " + csvRecord.getRecordNumber());
                 writeTransaction.commit();

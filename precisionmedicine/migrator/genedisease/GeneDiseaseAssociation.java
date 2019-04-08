@@ -53,11 +53,11 @@ public class GeneDiseaseAssociation {
                 GraknClient.Transaction writeTransaction = session.transaction().write();
                 List<ConceptMap> insertedIds = writeTransaction.execute(GraqlInsert);
 
-                if (insertedIds.isEmpty()) {
-                    List<Class> prereqs = Arrays.asList(Gene.class, Disease.class);
-                    throw new IllegalStateException("Nothing was inserted for: " + GraqlInsert.toString() +
-                            "\nA prerequisite dataset may have not been loaded. This dataset requires: " + prereqs.toString());
-                }
+                // if (insertedIds.isEmpty()) {
+                //     List<Class> prereqs = Arrays.asList(Gene.class, Disease.class);
+                //     throw new IllegalStateException("Nothing was inserted for: " + GraqlInsert.toString() +
+                //             "\nA prerequisite dataset may have not been loaded. This dataset requires: " + prereqs.toString());
+                // }
 
                 System.out.println("Inserted a gene disease association at record number: " + csvRecord.getRecordNumber() + " of disgenet");
                 writeTransaction.commit();
@@ -104,11 +104,11 @@ public class GeneDiseaseAssociation {
                     GraknClient.Transaction writeTransaction = session.transaction().write();
                     List<ConceptMap> insertedIds = writeTransaction.execute(GraqlInsert);
 
-                    if (insertedIds.isEmpty()) {
-                        List<Class> prereqs = Arrays.asList(Gene.class, Disease.class);
-                        throw new IllegalStateException("Nothing was inserted for: " + GraqlInsert.toString() +
-                                "\nA prerequisite dataset may have not been loaded. This dataset requires: " + prereqs.toString());
-                    }
+                    // if (insertedIds.isEmpty()) {
+                    //     List<Class> prereqs = Arrays.asList(Gene.class, Disease.class);
+                    //     throw new IllegalStateException("Nothing was inserted for: " + GraqlInsert.toString() +
+                    //             "\nA prerequisite dataset may have not been loaded. This dataset requires: " + prereqs.toString());
+                    // }
 
                     System.out.println("Inserted a gene disease association at record number: " + csvRecord.getRecordNumber() + " of clinvar");
                     writeTransaction.commit();
