@@ -28,19 +28,19 @@ public class Migrator {
         GraknClient graknClient = new GraknClient("127.0.0.1:48555");
         GraknClient.Session session = graknClient.session("precision_medicine");
 
-//        loadSchema(session);
+        loadSchema(session);
 
         // entities
-        // Gene.migrate(session);
-        // Variant.migrate(session);
-        // Disease.migrate(session);
-        // Drug.migrate(session);
-        // ClinicalTrial.migrate(session);
+        Gene.migrate(session);
+        Variant.migrate(session);
+        Disease.migrate(session);
+        Drug.migrate(session);
+        ClinicalTrial.migrate(session);
 
         // relationships
-        // GeneDiseaseAssociation.migrate(session);
-        // VariantDiseaseAssociation.migrate(session);
-        // DrugDiseaseAssociation.migrate(session);
+        GeneDiseaseAssociation.migrate(session);
+        VariantDiseaseAssociation.migrate(session);
+        DrugDiseaseAssociation.migrate(session);
         ClinicalTrialRelationship.migrate(session);
 
         session.close();
