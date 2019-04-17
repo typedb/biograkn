@@ -32,7 +32,7 @@ BioGrakn provides an intuitive way to query interconnected and heterogeneous bio
 Queries can be run over BioGrakn, via Graql Console, Grakn Clients and Grakn Workbase.
 
 ### Via Graql Console
-While inside the unzipped folder, via terminal or command prompt, run: `./graql console -k keyspace_name`. The console is now ready to answer your queries.
+While inside the unzipped folder, via terminal or command prompt, run: `./grakn console -k keyspace_name`. The console is now ready to answer your queries.
 
 ### Via Grakn Clients
 Grakn Clients are available for [Java](https://github.com/graknlabs/grakn/tree/master/client-java), [Node.js](https://github.com/graknlabs/grakn/tree/master/client-nodejs) and [Python](https://github.com/graknlabs/grakn/tree/master/client_python). Using these clients, you will be able to perform read and write operations over BioGrakn.
