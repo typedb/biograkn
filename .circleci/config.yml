@@ -48,7 +48,7 @@ jobs:
       - checkout
 #      - run: bazel run @graknlabs_build_tools//checkstyle:test-coverage
       - run-bazel-rbe:
-          command: bazel build //...
+          command: bazel --host_jvm_args=-Xmx16g build //...
 
   test:
     machine: true
@@ -57,7 +57,7 @@ jobs:
       - install-bazel-linux-rbe
       - checkout
       - run-bazel-rbe:
-          command: bazel test //... --test_output=errors
+          command: bazel test //migrator:migrator-test --test_output=errors
 
   release-approval:
     machine: true
