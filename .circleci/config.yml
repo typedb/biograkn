@@ -1,140 +1,126 @@
-version: 2.1
+#
+# GRAKN.AI - THE KNOWLEDGE GRAPH
+# Copyright (C) 2018 Grakn Labs Ltd
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+#
 
-workflows:
-  ci-pipeline-pr:
-    jobs:
-      - tests:
-          filters:
-            branches:
-              ignore: /master/
-      - test-dists-ubuntu:
-          filters:
-            branches:
-              ignore: /master/
-          requires:
-            - tests
-  ci-pipeline-master:
-    jobs:
-      - tests:
-          filters:
-            branches:
-              only: /master/
-      - test-dists-ubuntu:
-          filters:
-            branches:
-              only: /master/
-          requires:
-            - tests
-      - approve-deploy-github:
-          filters:
-            branches:
-              only: /master/
-          type: approval
-          requires:
-            - test-dists-ubuntu
-      - deploy-github:
-          filters:
-            branches:
-              only: /master/
-          requires:
-            - approve-deploy-github
-      - approve-deploy-all:
-          filters:
-            branches:
-              only: /master/
-          type: approval
-          requires:
-            - deploy-github
-      - deploy-all:
-          filters:
-            branches:
-              only: /master/
-          requires:
-            - approve-deploy-all
+version: 2.1
+commands:
+  install-bazel-linux-rbe:
+    steps:
+      - run: curl -OL https://raw.githubusercontent.com/graknlabs/build-tools/master/ci/install-bazel-linux.sh
+      - run: bash ./install-bazel-linux.sh && rm ./install-bazel-linux.sh
+      - run: curl -OL https://raw.githubusercontent.com/graknlabs/build-tools/master/ci/install-bazel-rbe.sh
+      - run: bash ./install-bazel-rbe.sh && rm ./install-bazel-rbe.sh
+
+  run-bazel-rbe:
+    parameters:
+      command:
+        type: string
+    steps:
+      - run: bazel run @graknlabs_build_tools//ci:run-bazel-rbe -- << parameters.command >>
+
+  run-grakn-server:
+    steps:
+      - run-bazel-rbe:
+          command: bazel build @graknlabs_grakn_core//:assemble-linux-targz
+      - run: mkdir dist && tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C ./dist/
+      - run: nohup ./dist/grakn-core-all-linux/grakn server start
 
 jobs:
-  tests:
+  build:
     machine: true
+    working_directory: ~/biograkn
     steps:
+      - install-bazel-linux-rbe
       - checkout
-      - bazel_install
-      - bazel_add_rbe_credential
-      - bazel:
-          command: bazel test //migrator:migrator-test --test_output=streamed
-  test-dists:
-    machine: true
-    steps:
-      - checkout
-      - bazel_install
-      - bazel_add_rbe_credential
-      - bazel:
+#      - run: bazel run @graknlabs_build_tools//checkstyle:test-coverage
+      - run-bazel-rbe:
           command: bazel build //...
-  test-dists-ubuntu:
+
+  test:
+    machine: true
+    working_directory: ~/biograkn
+    steps:
+      - install-bazel-linux-rbe
+      - checkout
+      - run-bazel-rbe:
+          command: bazel test //... --test_output=errors
+
+  release-approval:
     machine: true
     steps:
-      - run: sudo apt-get update
-      - run: sudo apt-get install -y software-properties-common
-      - run: sudo add-apt-repository ppa:openjdk-r/ppa -y
-      - run: sudo apt-get update
-      - run: sudo apt-get install -y sudo gcc build-essential openjdk-8-jdk python-dev unzip curl git
-
+      - install-bazel-linux-rbe
       - checkout
-      - bazel_install
-      - bazel_add_rbe_credential
-      - run: bazel --host_jvm_args=-Xmx16g build //...
+      - run: |
+          export RELEASE_APPROVAL_TOKEN=$REPO_GITHUB_TOKEN_GRABL
+          bazel run @graknlabs_build_tools//ci:release-approval
+
+  deploy-gcp:
+    machine: true
+    working_directory: ~/biograkn
+    steps:
+      - run: echo 'CI job placeholder'
 
   deploy-github:
     machine: true
+    working_directory: ~/biograkn
     steps:
+      - install-bazel-linux-rbe
       - checkout
-      - bazel_install
-      - bazel_add_rbe_credential
-      - run: echo test succeeded.
-  deploy-all:
+      - run: echo 'CI job placeholder'
+
+  release-cleanup:
     machine: true
     steps:
       - checkout
-      - bazel_install
-      - bazel_add_rbe_credential
-      - run: echo test succeeded.
+      - run: echo 'CI job placeholder'
 
-commands:
-  bazel_install:
-    steps:
-      - run:
-          name: Bazel - Install
-          command: |
-            curl -OL https://github.com/bazelbuild/bazel/releases/download/0.20.0/bazel-0.20.0-installer-linux-x86_64.sh
-            chmod +x bazel-0.20.0-installer-linux-x86_64.sh
-            sudo ./bazel-0.20.0-installer-linux-x86_64.sh
-  bazel_add_rbe_credential:
-    steps:
-      - run:
-          name: Bazel - Add RBE Credential
-          command: |
-            if [[ -n "$BAZEL_RBE_CREDENTIAL" ]]; then
-              BAZEL_RBE_CREDENTIAL_LOCATION=~/.config/gcloud/application_default_credentials.json
-              echo "An RBE credential is found and will be saved to $BAZEL_RBE_CREDENTIAL_LOCATION. Bazel will be executed with RBE support."
-              mkdir -p ~/.config/gcloud/
-              echo $BAZEL_RBE_CREDENTIAL > "$BAZEL_RBE_CREDENTIAL_LOCATION"
-            else
-              echo "No RBE credential found. Bazel will be executed locally without RBE support."
-            fi
-
-  bazel:
-    parameters:
-      command:
-          type: string
-    steps:
-      - run:
-          name: Bazel - Execute
-          command: |
-            if [[ -f ~/.config/gcloud/application_default_credentials.json ]]; then
-              echo "Bazel will be executed with RBE support. This means the build is remotely executed and the cache will be re-used by subsequent CI jobs."
-              CMD="<< parameters.command >> --config=rbe"
-            else
-              echo "Bazel will be executed locally (without RBE support)."
-              CMD="<< parameters.command >>"
-            fi
-            echo "Executing $CMD"
-            $CMD
+workflows:
+  biograkn:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore: biograkn-release-branch
+      - test:
+          filters:
+            branches:
+              ignore: biograkn-release-branch
+      - release-approval:
+          filters:
+            branches:
+              only: master
+          requires:
+            - build
+            - test
+  biograkn-release:
+    jobs:
+      - deploy-gcp:
+          filters:
+            branches:
+              only: biograkn-release-branch
+      - deploy-github:
+          filters:
+            branches:
+              only: biograkn-release-branch
+          requires:
+            - deploy-gcp
+      - release-cleanup:
+          filters:
+            branches:
+              only: biograkn-release-branch
+          requires:
+            - deploy-github
