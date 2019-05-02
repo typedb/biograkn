@@ -3,7 +3,7 @@ package grakn.biograkn.textmining.migrator;
 
 import grakn.biograkn.textmining.migrator.corenlp.CoreNLP;
 import grakn.biograkn.textmining.migrator.pubmedarticle.PubmedArticle;
-import grakn.core.client.GraknClient;
+import grakn.client.GraknClient;
 import graql.lang.Graql;
 import graql.lang.query.GraqlQuery;
 

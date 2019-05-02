@@ -5,7 +5,6 @@ java_library(
     ],
     runtime_deps = [
         "//dependencies/maven/artifacts/com/apple:AppleJavaExtensions",
-        "//dependencies/maven/artifacts/com/google/protobuf:protobuf-java",
         "//dependencies/maven/artifacts/com/googlecode/efficient-java-matrix-library:ejml",
         "//dependencies/maven/artifacts/com/io7m/xom:xom",
         "//dependencies/maven/artifacts/com/sun/xml/bind:jaxb-core",
@@ -37,7 +36,6 @@ java_library(
     ],
     runtime_deps = [
         "//dependencies/maven/artifacts/com/apple:AppleJavaExtensions",
-        "//dependencies/maven/artifacts/com/google/protobuf:protobuf-java",
         "//dependencies/maven/artifacts/com/googlecode/efficient-java-matrix-library:ejml",
         "//dependencies/maven/artifacts/com/io7m/xom:xom",
         "//dependencies/maven/artifacts/com/sun/xml/bind:jaxb-core",

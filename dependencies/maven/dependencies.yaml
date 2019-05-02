@@ -29,9 +29,13 @@ dependencies:
     stanford-corenlp:java:models:
       version: "3.9.2"
       lang: java
+      exclude:
+        - "com.google.protobuf:protobuf-java"
     stanford-corenlp:
       version: "3.9.2"
       lang: java
+      exclude:
+        - "com.google.protobuf:protobuf-java"
 
   xml-apis:
     xml-apis:

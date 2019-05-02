@@ -1,6 +1,5 @@
 
 package(default_visibility = [ "//visibility:public" ])
-load("@graknlabs_rules_deployment//distribution:rules.bzl", "distribution_structure", "distribution_zip")
 
 java_library(
     name = "migrator",
@@ -15,20 +14,10 @@ java_library(
         "//dependencies/maven/artifacts/org/apache/poi:poi-ooxml",
         "//dependencies/maven/artifacts/org/apache/commons:commons-csv",
         "//dependencies/maven/artifacts/edu/stanford/nlp:stanford-corenlp",
-        "//dependencies/maven/artifacts/edu/stanford/nlp:stanford-corenlp-java-models"
+        "//dependencies/maven/artifacts/edu/stanford/nlp:stanford-corenlp-java-models",
     ],
     data = [
         "//precisionmedicine/dataset",
         "//precisionmedicine/schema"
     ],
 )
-
-
-#
-#java_test(
-#      name = "migrator-test",
-#      test_class = "grakn.biograkn.migrator.MigratorTest",
-#      srcs = ["MigratorTest.java"],
-#      deps = [":migrator"],
-#  )
-
