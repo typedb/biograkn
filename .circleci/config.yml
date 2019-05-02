@@ -101,7 +101,7 @@ workflows:
       - release-approval:
           filters:
             branches:
-              only: master
+              only: cicleci-pipeline #TODO revert back to master branch
           requires:
             - build
             - test
@@ -110,16 +110,16 @@ workflows:
       - deploy-gcp:
           filters:
             branches:
-              only: biograkn-release-branch
+              only: cicleci-pipeline #TODO revert back to release branch
       - deploy-github:
           filters:
             branches:
-              only: biograkn-release-branch
+              only: cicleci-pipeline #TODO revert back to release branch
           requires:
             - deploy-gcp
       - release-cleanup:
           filters:
             branches:
-              only: biograkn-release-branch
+              only: cicleci-pipeline #TODO revert back to release branch
           requires:
             - deploy-github
