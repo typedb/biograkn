@@ -1,6 +1,6 @@
 package grakn.biograkn.precisionmedicine.migrator.variant;
 
-import grakn.core.client.GraknClient;import graql.lang.Graql;
+import grakn.client.GraknClient;import graql.lang.Graql;
 import graql.lang.query.GraqlInsert;
 import grakn.core.concept.answer.ConceptMap;
 

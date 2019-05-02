@@ -1,6 +1,5 @@
 
 package(default_visibility = [ "//visibility:public" ])
-load("@graknlabs_rules_deployment//distribution:rules.bzl", "distribution_structure", "distribution_zip")
 
 java_library(
     name = "migrator",
