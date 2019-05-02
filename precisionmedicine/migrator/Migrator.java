@@ -10,7 +10,7 @@ import grakn.biograkn.precisionmedicine.migrator.gene.Gene;
 import grakn.biograkn.precisionmedicine.migrator.genedisease.GeneDiseaseAssociation;
 import grakn.biograkn.precisionmedicine.migrator.variant.Variant;
 import grakn.biograkn.precisionmedicine.migrator.variantdisease.VariantDiseaseAssociation;
-import grakn.core.client.GraknClient;
+import grakn.client.GraknClient;
 import graql.lang.Graql;
 import graql.lang.query.GraqlQuery;
 

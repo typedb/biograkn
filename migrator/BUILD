@@ -1,6 +1,6 @@
 
 package(default_visibility = [ "//visibility:public" ])
-load("@graknlabs_rules_deployment//distribution:rules.bzl", "distribution_structure", "distribution_zip")
+load("@graknlabs_bazel_distribution//common:rules.bzl", "java_deps", "assemble_zip")
 
 java_library(
     name = "migrator",
@@ -20,8 +20,6 @@ java_library(
     ],
 )
 
-
-
 java_binary(
     name = "migrator-bin",
     runtime_deps = [":migrator"],
@@ -29,20 +27,19 @@ java_binary(
     classpath_resources = ["//conf:logback"]
 )
 
-
-distribution_structure(
+java_deps(
     name = "distribution-structure",
-    targets = {
-        "//migrator:migrator": "services/lib/",
-    },
-    additional_files = {
-        "//migrator:migrate": "migrate",
-    }
+    target = ":migrator-bin",
+    java_deps_root = "services/lib/",
+    version_file = "//:VERSION"
 )
 
-distribution_zip(
-    name = "distribution",
-    distribution_structures = [":distribution-structure"],
+assemble_zip(
+    name = "assemble-mac-zip",
+    targets = [":distribution-structure"],
+    additional_files = {
+        "//migrator:migrate": "migrate",
+    },
     output_filename = "biograkn-migrator",
 )
 

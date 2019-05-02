@@ -1,6 +1,6 @@
 package grakn.biograkn.precisionmedicine.migrator.disease;
 
-import grakn.core.client.GraknClient;
+import grakn.client.GraknClient;
 import graql.lang.Graql;
 import graql.lang.query.GraqlInsert;
 import graql.lang.query.GraqlGet;
