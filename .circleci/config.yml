@@ -88,38 +88,54 @@ jobs:
       - run: echo 'CI job placeholder'
 
 workflows:
-  biograkn:
+  biograkn-PR:
     jobs:
       - build:
           filters:
             branches:
-              ignore: biograkn-release-branch
+              ignore: cicleci-pipeline #TODO: change to PR branch
       - test:
           filters:
             branches:
-              ignore: biograkn-release-branch
+              ignore: cicleci-pipeline #TODO:  change to PR branch
+
+  biograkn-master:
+    jobs:
+      - test-assembly-linux:
+          filters:
+            branches:
+              ignore: cicleci-pipeline #TODO:  change to master
+      - test-assembly-mac:
+          filters:
+            branches:
+              ignore: cicleci-pipeline #TODO:  change to master
+      - test-assembly-windows:
+          filters:
+            branches:
+              ignore: cicleci-pipeline #TODO:  change to master
+      - test-deployment-gcp:
+          filters:
+            branches:
+              only: cicleci-pipeline #TODO: change to master
       - release-approval:
           filters:
             branches:
-              only: cicleci-pipeline #TODO revert back to master branch
-          requires:
-            - build
-            - test
+              only: cicleci-pipeline #TODO: change to master
+
   biograkn-release:
     jobs:
       - deploy-gcp:
           filters:
             branches:
-              only: cicleci-pipeline #TODO revert back to release branch
+              only: cicleci-pipeline #TODO: change to master
       - deploy-github:
           filters:
             branches:
-              only: cicleci-pipeline #TODO revert back to release branch
-          requires:
-            - deploy-gcp
+              only: cicleci-pipeline #TODO: change to master
       - release-cleanup:
           filters:
             branches:
-              only: cicleci-pipeline #TODO revert back to release branch
+              only: cicleci-pipeline #TODO: change to master
           requires:
+            - deploy-gcp
             - deploy-github
