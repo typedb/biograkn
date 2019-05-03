@@ -125,8 +125,6 @@ jobs:
     steps:
       - run: echo 'CI job placeholder'
 
-
-
   release-cleanup:
     machine: true
     steps:
@@ -220,7 +218,7 @@ workflows:
             branches:
               only: cicleci-pipeline #TODO: change to biograkn-release-branch
           requires:
-            - deploy-github
+            - deploy-approval
             - test-assembly-linux-full
 
       - release-cleanup:
