@@ -193,21 +193,27 @@ workflows:
             branches:
               only: cicleci-pipeline #TODO:  change to biograkn-release-branch
 
-      - deploy-gcp:
-          filters:
-            branches:
-              only: cicleci-pipeline #TODO: change to biograkn-release-branch
-          requires:
-            - test-assembly-linux-full
       - deploy-github:
           filters:
             branches:
               only: cicleci-pipeline #TODO: change to biograkn-release-branch
           requires:
-            - deploy-gcp
             - test-assembly-linux-full
             - test-assembly-mac-full
             - test-assembly-windows-full
+      - deploy-approval:
+          filters:
+            branches:
+              only: cicleci-pipeline #TODO: change to biograkn-release-branch
+          requires:
+            - deploy-github
+      - deploy-gcp:
+          filters:
+            branches:
+              only: cicleci-pipeline #TODO: change to biograkn-release-branch
+          requires:
+            - deploy-github
+            - test-assembly-linux-full
 
       - release-cleanup:
           filters:
