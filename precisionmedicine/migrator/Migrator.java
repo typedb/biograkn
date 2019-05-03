@@ -19,6 +19,8 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+import static grakn.biograkn.utils.Utils.loadSchema;
+
 @SuppressWarnings("Duplicates")
 public class Migrator {
 
@@ -28,7 +30,7 @@ public class Migrator {
         GraknClient graknClient = new GraknClient("127.0.0.1:48555");
         GraknClient.Session session = graknClient.session("precision_medicine");
 
-        loadSchema(session);
+        loadSchema("precisionmedicine/schema/precision-medicine-schema.gql", session);
 
         // entities
 //        Gene.migrate(session);
@@ -44,21 +46,5 @@ public class Migrator {
 //        ClinicalTrialRelationship.migrate(session);
 
         session.close();
-    }
-
-    private static void loadSchema(GraknClient.Session session) {
-        System.out.print("\tMigrating Schema");
-
-        GraknClient.Transaction transaction = session.transaction().write();
-
-        try {
-            byte[] encoded = Files.readAllBytes(Paths.get("precisionmedicine/schema/precision-medicine-schema.gql"));
-            String query = new String(encoded, StandardCharsets.UTF_8);
-            transaction.execute((GraqlQuery) Graql.parse(query));
-            transaction.commit();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.println(" - [DONE]");
     }
 }

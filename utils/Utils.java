@@ -2,8 +2,14 @@ package grakn.biograkn.utils;
 
 import grakn.client.GraknClient;
 import grakn.core.concept.answer.ConceptMap;
+import graql.lang.Graql;
 import graql.lang.query.GraqlInsert;
+import graql.lang.query.GraqlQuery;
 
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -41,7 +47,7 @@ public class Utils {
         }
     }
 
-    public static <T> List<List<T>> splitList(List<T> list, final int L) {
+    private static <T> List<List<T>> splitList(List<T> list, final int L) {
         List<List<T>> parts = new ArrayList<>();
         final int N = list.size();
         for (int i = 0; i < N; i += L) {
@@ -50,5 +56,21 @@ public class Utils {
             );
         }
         return parts;
+    }
+
+    public static void loadSchema(String path, GraknClient.Session session) {
+        System.out.print("\tMigrating Schema");
+
+        GraknClient.Transaction transaction = session.transaction().write();
+
+        try {
+            byte[] encoded = Files.readAllBytes(Paths.get(path));
+            String query = new String(encoded, StandardCharsets.UTF_8);
+            transaction.execute((GraqlQuery) Graql.parse(query));
+            transaction.commit();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println(" - [DONE]");
     }
 }

@@ -3,7 +3,7 @@ package(default_visibility = [ "//visibility:public" ])
 
 java_library(
     name = "migrator",
-    srcs = glob(["**/*.java"], exclude = ["**/test/**", "*Test.java"]),
+    srcs = glob(["**/*.java"], exclude = ["**/*Test.java"]),
     deps = [
         "@graknlabs_client_java//:client-java",
         "@graknlabs_grakn_core//concept:concept",
@@ -23,3 +23,21 @@ java_library(
         "//precisionmedicine/schema"
     ],
 )
+
+java_test(
+      name = "preicionmedicine-migrator-test",
+      test_class = "grakn.biograkn.precisionmedicine.migrator.gene.GeneTest",
+      srcs = ["gene/GeneTest.java"],
+      deps = [
+          "@graknlabs_client_java//:client-java",
+          "@graknlabs_grakn_core//concept:concept",
+          "@graknlabs_grakn_core//common:common",
+          "@graknlabs_graql//java:graql",
+          "@graknlabs_grakn_core//api:api",
+
+          "migrator",
+
+          "//utils:utils"
+      ]
+  )
+

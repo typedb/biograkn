@@ -25,15 +25,15 @@ public class Gene {
     public static void migrate(GraknClient.Session session) {
         System.out.print("\tMigrating Genes");
 
-        migrateFromHgnc(session);
-        migrateFromCtdbase(session);
+        migrateFromHgnc(session, "precisionmedicine/dataset/hgnc/custom.csv");
+        migrateFromCtdbase(session, "precisionmedicine/dataset/ctdbase/CTD_genes.csv");
 
         System.out.println(" - [DONE]");
     }
 
-    private static void migrateFromHgnc(GraknClient.Session session) {
+    static void migrateFromHgnc(GraknClient.Session session, String path) {
         try {
-            BufferedReader reader = Files.newBufferedReader(Paths.get("precisionmedicine/dataset/hgnc/custom.csv"));
+            BufferedReader reader = Files.newBufferedReader(Paths.get(path));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
             List<GraqlInsert> insertQueries = new ArrayList<>();
@@ -71,9 +71,9 @@ public class Gene {
         }
     }
 
-    private static void migrateFromCtdbase(GraknClient.Session session) {
+     static void migrateFromCtdbase(GraknClient.Session session, String path) {
         try {
-            BufferedReader reader = Files.newBufferedReader(Paths.get("precisionmedicine/dataset/ctdbase/CTD_genes.csv"));
+            BufferedReader reader = Files.newBufferedReader(Paths.get(path));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
             List<GraqlInsert> insertQueries = new ArrayList<>();
