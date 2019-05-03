@@ -28,7 +28,6 @@ public class VariantDiseaseAssociation {
         try {
             System.out.print("\tMigrating Variant Disease Association");
 
-
             BufferedReader reader = Files.newBufferedReader(Paths.get("precisionmedicine/dataset/disgenet/curated_variant_disease_associations.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 

@@ -26,8 +26,8 @@ public class Drug {
     public static void migrate(GraknClient.Session session) {
         System.out.print("\tMigrating Drugs");
 
-//        migrateFromDrugsAtFda(session);
-//        migrateFromPharmgkb(session);
+        migrateFromDrugsAtFda(session);
+        migrateFromPharmgkb(session);
         migrateFromCtdbase(session);
 
         System.out.println(" - [DONE]");
