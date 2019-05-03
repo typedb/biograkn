@@ -1,4 +1,4 @@
-package grakn.biograkn.precisionmedicine.migrator.gene;
+package grakn.biograkn.precisionmedicine.migrator.drug;
 
 import grakn.client.GraknClient;
 import grakn.core.concept.answer.ConceptMap;
@@ -8,33 +8,33 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static grakn.biograkn.precisionmedicine.migrator.gene.Gene.migrateFromCtdbase;
-import static grakn.biograkn.precisionmedicine.migrator.gene.Gene.migrateFromHgnc;
+import static grakn.biograkn.precisionmedicine.migrator.drug.Drug.*;
 import static grakn.biograkn.utils.Utils.loadSchema;
 import static graql.lang.Graql.var;
 import static org.junit.Assert.assertEquals;
 
-public class GeneTest {
+public class DrugTest {
 
     @Test
-    public void geneTest() {
+    public void drugTest() {
         GraknClient graknClient = new GraknClient("127.0.0.1:48555");
-        GraknClient.Session session = graknClient.session("gene_test");
+        GraknClient.Session session = graknClient.session("drug_test");
 
         loadSchema("precisionmedicine/schema/precision-medicine-schema.gql", session);
 
-        migrateFromHgnc(session, "precisionmedicine/dataset/hgnc/custom_mock.csv");
-        migrateFromCtdbase(session, "precisionmedicine/dataset/ctdbase/CTD_genes_mock.csv");
+        migrateFromDrugsAtFda(session, "precisionmedicine/dataset/drugsatfda/Products_mock.csv");
+        migrateFromPharmgkb(session, "precisionmedicine/dataset/pharmgkb/drugs_mock.csv");
+        migrateFromCtdbase(session, "precisionmedicine/dataset/ctdbase/CTD_chemicals_mock.csv");
 
         GraknClient.Transaction readTransaction = session.transaction().read();
 
-        GraqlGet graqlGet = Graql.match(var("g").isa("gene")).get();
+        GraqlGet graqlGet = Graql.match(var("d").isa("drug")).get();
 
         List<ConceptMap> getIds = readTransaction.execute(graqlGet);
 
-        assertEquals(getIds.size(), 200);
+        assertEquals(getIds.size(), 300);
 
-        graknClient.keyspaces().delete("gene_test");
+        graknClient.keyspaces().delete("drug_test");
 
         readTransaction.close();
         session.close();

@@ -26,16 +26,16 @@ public class Drug {
     public static void migrate(GraknClient.Session session) {
         System.out.print("\tMigrating Drugs");
 
-        migrateFromDrugsAtFda(session);
-        migrateFromPharmgkb(session);
-        migrateFromCtdbase(session);
+        migrateFromDrugsAtFda(session, "precisionmedicine/dataset/drugsatfda/Products.csv");
+        migrateFromPharmgkb(session, "precisionmedicine/dataset/pharmgkb/drugs.csv");
+        migrateFromCtdbase(session, "precisionmedicine/dataset/ctdbase/CTD_chemicals.csv");
 
         System.out.println(" - [DONE]");
     }
 
-    private static void migrateFromDrugsAtFda(GraknClient.Session session) {
+     static void migrateFromDrugsAtFda(GraknClient.Session session, String path) {
         try {
-            BufferedReader reader = Files.newBufferedReader(Paths.get("precisionmedicine/dataset/drugsatfda/Products.csv"));
+            BufferedReader reader = Files.newBufferedReader(Paths.get(path));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
             List<GraqlInsert> insertQueries = new ArrayList<>();
@@ -72,9 +72,9 @@ public class Drug {
         }
     }
 
-    private static void migrateFromPharmgkb(GraknClient.Session session) {
+     static void migrateFromPharmgkb(GraknClient.Session session, String path) {
         try {
-            BufferedReader reader = Files.newBufferedReader(Paths.get("precisionmedicine/dataset/pharmgkb/drugs.csv"));
+            BufferedReader reader = Files.newBufferedReader(Paths.get(path));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
             List<GraqlInsert> insertQueries = new ArrayList<>();
@@ -113,9 +113,9 @@ public class Drug {
         }
     }
 
-    private static void migrateFromCtdbase(GraknClient.Session session) {
+     static void migrateFromCtdbase(GraknClient.Session session, String path) {
         try {
-            BufferedReader reader = Files.newBufferedReader(Paths.get("precisionmedicine/dataset/ctdbase/CTD_chemicals.csv"));
+            BufferedReader reader = Files.newBufferedReader(Paths.get(path));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
             List<GraqlInsert> insertQueries = new ArrayList<>();

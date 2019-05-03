@@ -14,7 +14,9 @@ java_library(
         "//dependencies/maven/artifacts/org/apache/poi:poi-ooxml",
         "//dependencies/maven/artifacts/org/apache/commons:commons-csv",
         "//dependencies/maven/artifacts/edu/stanford/nlp:stanford-corenlp",
-        "//dependencies/maven/artifacts/edu/stanford/nlp:stanford-corenlp-java-models"
+        "//dependencies/maven/artifacts/edu/stanford/nlp:stanford-corenlp-java-models",
+
+        "//utils:utils"
     ],
     data = [
         "//textmining/dataset",
