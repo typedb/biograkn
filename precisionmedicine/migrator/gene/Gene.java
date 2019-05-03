@@ -5,8 +5,6 @@ import grakn.core.concept.answer.ConceptMap;
 import graql.lang.Graql;
 import graql.lang.query.GraqlGet;
 import graql.lang.query.GraqlInsert;
-import static graql.lang.Graql.var;
-
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
@@ -15,16 +13,22 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
+import grakn.biograkn.utils.Utils;
+import static graql.lang.Graql.var;
 
 
 @SuppressWarnings("Duplicates")
 public class Gene {
     public static void migrate(GraknClient.Session session) {
+        System.out.print("\tMigrating Genes");
+
         migrateFromHgnc(session);
         migrateFromCtdbase(session);
-        System.out.println("-----genes have been migrated-----");
+
+        System.out.println(" - [DONE]");
     }
 
     private static void migrateFromHgnc(GraknClient.Session session) {
@@ -32,7 +36,9 @@ public class Gene {
             BufferedReader reader = Files.newBufferedReader(Paths.get("precisionmedicine/dataset/hgnc/custom.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
-            for (CSVRecord csvRecord: csvParser) {
+            List<GraqlInsert> insertQueries = new ArrayList<>();
+
+            for (CSVRecord csvRecord : csvParser) {
 
                 // skip header
                 if (csvRecord.getRecordNumber() == 1) {
@@ -56,12 +62,10 @@ public class Gene {
                         .has("ensembl-id", ensemblId)
                         .has("ncbi-id", ncbiId));
 
-                GraknClient.Transaction writeTransaction = session.transaction().write();
-                List<ConceptMap> insertedIds = writeTransaction.execute(graqlInsert);
-                System.out.println("Inserted a gene at record number: " + csvRecord.getRecordNumber() + " of hgnc");
-                writeTransaction.commit();
+                insertQueries.add(graqlInsert);
             }
 
+            Utils.executeQueriesConcurrently(session, insertQueries);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -72,7 +76,9 @@ public class Gene {
             BufferedReader reader = Files.newBufferedReader(Paths.get("precisionmedicine/dataset/ctdbase/CTD_genes.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
-            for (CSVRecord csvRecord: csvParser) {
+            List<GraqlInsert> insertQueries = new ArrayList<>();
+
+            for (CSVRecord csvRecord : csvParser) {
 
                 // skip header
                 if (csvRecord.getRecordNumber() < 30) {
@@ -94,20 +100,19 @@ public class Gene {
 
                 // check if the gene has already been inserted
                 if(getIds.size() == 0){
-                    GraqlInsert GraqlInsert = Graql.insert(var("g").isa("gene")
+                    GraqlInsert graqlInsert = Graql.insert(var("g").isa("gene")
                             .has("symbol", symbol)
                             .has("name", name)
                             .has("ncbi-id", ncbiId));
 
-                    GraknClient.Transaction writeTransaction = session.transaction().write();
-                    List<ConceptMap> insertedIds = writeTransaction.execute(GraqlInsert);
-
-                    System.out.println("Inserted a gene at record number: " + csvRecord.getRecordNumber() + " of ctdbase");
-                    writeTransaction.commit();
+                    insertQueries.add(graqlInsert);
                 }
             }
+
+            Utils.executeQueriesConcurrently(session, insertQueries);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 }
+

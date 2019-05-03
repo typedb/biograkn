@@ -1,5 +1,6 @@
 package grakn.biograkn.precisionmedicine.migrator.drug;
 
+import grakn.biograkn.utils.Utils;
 import grakn.client.GraknClient;
 import grakn.core.concept.answer.ConceptMap;
 import graql.lang.Graql;
@@ -15,6 +16,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -22,10 +24,13 @@ import java.util.List;
 public class Drug {
 
     public static void migrate(GraknClient.Session session) {
-        migrateFromDrugsAtFda(session);
-        migrateFromPharmgkb(session);
+        System.out.print("\tMigrating Drugs");
+
+//        migrateFromDrugsAtFda(session);
+//        migrateFromPharmgkb(session);
         migrateFromCtdbase(session);
-        System.out.println("-----drugs have been migrated-----");
+
+        System.out.println(" - [DONE]");
     }
 
     private static void migrateFromDrugsAtFda(GraknClient.Session session) {
@@ -33,21 +38,24 @@ public class Drug {
             BufferedReader reader = Files.newBufferedReader(Paths.get("precisionmedicine/dataset/drugsatfda/Products.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
-            for (CSVRecord csvRecord: csvParser) {
+            List<GraqlInsert> insertQueries = new ArrayList<>();
+
+            for (CSVRecord csvRecord : csvParser) {
 
                 // skip header
                 if (csvRecord.getRecordNumber() == 1) {
                     continue;
                 }
 
+
                 String applNo = csvRecord.get(0);
                 String productNo = csvRecord.get(1);
                 String form = csvRecord.get(2);
                 String strength = csvRecord.get(3);
-                String name = csvRecord.get(5);
+                String name = csvRecord.get(5).replace("\"", "'");
                 String activeIngredient = csvRecord.get(6);
 
-                GraqlInsert GraqlInsert = Graql.insert(var("dr").isa("drug")
+                GraqlInsert graqlInsert = Graql.insert(var("dr").isa("drug")
                         .has("appl-no", applNo)
                         .has("product-no", productNo)
                         .has("form", form)
@@ -55,12 +63,10 @@ public class Drug {
                         .has("name", name)
                         .has("active-ingredient", activeIngredient));
 
-                GraknClient.Transaction writeTransaction = session.transaction().write();
-                List<ConceptMap> insertedIds = writeTransaction.execute(GraqlInsert);
-                System.out.println("Inserted a drug at record number: " + csvRecord.getRecordNumber() + " of drugsatfda");
-                writeTransaction.commit();
+                insertQueries.add(graqlInsert);
             }
 
+            Utils.executeQueriesConcurrently(session, insertQueries);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -71,7 +77,9 @@ public class Drug {
             BufferedReader reader = Files.newBufferedReader(Paths.get("precisionmedicine/dataset/pharmgkb/drugs.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
-            for (CSVRecord csvRecord: csvParser) {
+            List<GraqlInsert> insertQueries = new ArrayList<>();
+
+            for (CSVRecord csvRecord : csvParser) {
 
                 // skip header
                 if (csvRecord.getRecordNumber() == 1) {
@@ -91,17 +99,15 @@ public class Drug {
                 readTransaction.close();
 
                 if (getIds.size() == 0) {
-                    GraqlInsert GraqlInsert = Graql.insert(var("dr").isa("drug")
+                    GraqlInsert graqlInsert = Graql.insert(var("dr").isa("drug")
                             .has("pharmgkb-id", pharmgkbId)
                             .has("name", name));
 
-                    GraknClient.Transaction writeTransaction = session.transaction().write();
-                    List<ConceptMap> insertedIds = writeTransaction.execute(GraqlInsert);
-
-                    System.out.println("Inserted a drug at record number: " + csvRecord.getRecordNumber() + " of pharmgkb");
-                    writeTransaction.commit();
+                    insertQueries.add(graqlInsert);
                 }
             }
+
+            Utils.executeQueriesConcurrently(session, insertQueries);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -109,10 +115,12 @@ public class Drug {
 
     private static void migrateFromCtdbase(GraknClient.Session session) {
         try {
-            BufferedReader reader = Files.newBufferedReader(Paths.get("dataset/ctdbase/CTD_chemicals.csv"));
+            BufferedReader reader = Files.newBufferedReader(Paths.get("precisionmedicine/dataset/ctdbase/CTD_chemicals.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
-            for (CSVRecord csvRecord: csvParser) {
+            List<GraqlInsert> insertQueries = new ArrayList<>();
+
+            for (CSVRecord csvRecord : csvParser) {
 
                 // skip header
                 if (csvRecord.getRecordNumber() < 30) {
@@ -132,17 +140,15 @@ public class Drug {
                 readTransaction.close();
 
                 if (getIds.size() == 0) {
-                    GraqlInsert GraqlInsert = Graql.insert(var("dr").isa("drug")
+                    GraqlInsert graqlInsert = Graql.insert(var("dr").isa("drug")
                             .has("name", name)
                             .has("mesh-id", meshId));
 
-                    GraknClient.Transaction writeTransaction = session.transaction().write();
-                    List<ConceptMap> insertedIds = writeTransaction.execute(GraqlInsert);
-
-                    System.out.println("Inserted a drug at record number: " + csvRecord.getRecordNumber() + " of ctdbase");
-                    writeTransaction.commit();
+                    insertQueries.add(graqlInsert);
                 }
             }
+
+            Utils.executeQueriesConcurrently(session, insertQueries);
         } catch (IOException e) {
             e.printStackTrace();
         }

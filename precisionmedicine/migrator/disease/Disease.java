@@ -1,5 +1,6 @@
 package grakn.biograkn.precisionmedicine.migrator.disease;
 
+import grakn.biograkn.utils.Utils;
 import grakn.client.GraknClient;
 import graql.lang.Graql;
 import graql.lang.query.GraqlInsert;
@@ -16,15 +17,19 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 @SuppressWarnings("Duplicates")
 public class Disease {
 
     public static void migrate(GraknClient.Session session) {
+        System.out.print("\tMigrating Diseases");
+
         migrateFromClinvar(session);
         migrateFromCtdbase(session);
-        System.out.println("-----diseases have been migrated-----");
+
+        System.out.println(" - [DONE]");
     }
 
     private static void migrateFromClinvar(GraknClient.Session session) {
@@ -32,7 +37,9 @@ public class Disease {
             BufferedReader reader = Files.newBufferedReader(Paths.get("precisionmedicine/dataset/clinvar/disease_names.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
-            for (CSVRecord csvRecord: csvParser) {
+            List<GraqlInsert> insertQueries = new ArrayList<>();
+
+            for (CSVRecord csvRecord : csvParser) {
 
                 // skip header
                 if (csvRecord.getRecordNumber() == 1) {
@@ -45,19 +52,17 @@ public class Disease {
                 String sourceId = csvRecord.get(3);
                 String category = csvRecord.get(6);
 
-                GraqlInsert GraqlInsert = Graql.insert(var("d").isa("disease")
+                GraqlInsert graqlInsert = Graql.insert(var("d").isa("disease")
                         .has("name", name)
                         .has("source-name", sourceName)
                         .has("disease-id", diseaseId)
                         .has("source-id", sourceId)
                         .has("category", category));
 
-                GraknClient.Transaction writeTransaction = session.transaction().write();
-                List<ConceptMap> insertedIds = writeTransaction.execute(GraqlInsert);
-                System.out.println("Inserted a disease at record number: " + csvRecord.getRecordNumber() + " of clinvar");
-                writeTransaction.commit();
+                insertQueries.add(graqlInsert);
             }
 
+            Utils.executeQueriesConcurrently(session, insertQueries);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -68,7 +73,9 @@ public class Disease {
             BufferedReader reader = Files.newBufferedReader(Paths.get("precisionmedicine/dataset/ctdbase/CTD_diseases.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
-            for (CSVRecord csvRecord: csvParser) {
+            List<GraqlInsert> insertQueries = new ArrayList<>();
+
+            for (CSVRecord csvRecord : csvParser) {
 
                 // skip header
                 if (csvRecord.getRecordNumber() < 30) {
@@ -88,17 +95,15 @@ public class Disease {
                 readTransaction.close();
 
                 if (getIds.size() == 0) {
-                    GraqlInsert GraqlInsert = Graql.insert(var("d").isa("disease")
+                    GraqlInsert graqlInsert = Graql.insert(var("d").isa("disease")
                             .has("name", name)
                             .has("mesh-id", meshId));
 
-                    GraknClient.Transaction writeTransaction = session.transaction().write();
-                    List<ConceptMap> insertedIds = writeTransaction.execute(GraqlInsert);
-
-                    System.out.println("Inserted a disease at record number: " + csvRecord.getRecordNumber() + " of ctdbase");
-                    writeTransaction.commit();
+                    insertQueries.add(graqlInsert);
                 }
             }
+
+            Utils.executeQueriesConcurrently(session, insertQueries);
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -1,5 +1,6 @@
 package grakn.biograkn.precisionmedicine.migrator.variant;
 
+import grakn.biograkn.utils.Utils;
 import grakn.client.GraknClient;import graql.lang.Graql;
 import graql.lang.query.GraqlInsert;
 import grakn.core.concept.answer.ConceptMap;
@@ -14,18 +15,28 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 
 @SuppressWarnings("Duplicates")
 public class Variant {
     public static void migrate(GraknClient.Session session) {
+        System.out.print("\tMigrating Variants");
+
+        migrateFromPharmgkb(session);
+
+        System.out.println(" - [DONE]");
+    }
+
+    private static void migrateFromPharmgkb(GraknClient.Session session) {
         try {
             BufferedReader reader = Files.newBufferedReader(Paths.get("precisionmedicine/dataset/pharmgkb/variants.csv"));
-
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
-            for (CSVRecord csvRecord: csvParser) {
+            List<GraqlInsert> insertQueries = new ArrayList<>();
+
+            for (CSVRecord csvRecord : csvParser) {
 
                 // skip header
                 if (csvRecord.getRecordNumber() == 1) {
@@ -37,19 +48,17 @@ public class Variant {
                 String geneSymbols = csvRecord.get(4);
                 String location = csvRecord.get(5);
 
-                GraqlInsert GraqlInsert = Graql.insert(var("v").isa("variant")
+
+                GraqlInsert graqlInsert = Graql.insert(var("v").isa("variant")
                         .has("pharmgkb-id", pharmgkbId)
                         .has("snp-id", snpId)
                         .has("gene-symbols", geneSymbols)
                         .has("location", location));
 
-                GraknClient.Transaction writeTransaction = session.transaction().write();
-                List<ConceptMap> insertedIds = writeTransaction.execute(GraqlInsert);
-                System.out.println("Inserted a variant at record number: " + csvRecord.getRecordNumber());
-                writeTransaction.commit();
+                insertQueries.add(graqlInsert);
             }
 
-            System.out.println("-----variants have been migrated-----");
+            Utils.executeQueriesConcurrently(session, insertQueries);
         } catch (IOException e) {
             e.printStackTrace();
         }
