@@ -21,9 +21,12 @@ BioGrakn is a collection of knowledge graphs of biomedical data demonstrating th
 
 BioGrakn provides an intuitive way to query interconnected and heterogeneous biomedical data in one single place. The schema that models the underlying knowledge graph alongside the descriptive query language, Graql, makes writing complex queries an extremely straightforward and intuitive process. Furthermore, the automated reasoning capability of Grakn, allows BioGrakn to become an intelligent database of biomedical data that infers implicit knowledge based on the explicitly stored data. BioGrakn can understand biological facts, infer based on new findings and enforce research constraints, all at query (run) time.
 
+## Download
+[Download BioGrakn](https://storage.googleapis.com/biograkn/grakn-core-1.5.0-biograkn-0.2.zip)
+
 ## Quickstart
 
-1. Download the latest release. -> https://storage.googleapis.com/biograkn/grakn-core-1.5.0-biograkn-0.2.zip
+1. [Download](#download) BioGrakn
 2. Unzip the downloaded file.
 3. `cd` into the unzipped folder, via terminal or command prompt.
 4. run `./grakn server start`
