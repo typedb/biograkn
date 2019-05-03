@@ -58,6 +58,44 @@ jobs:
       - run-bazel-rbe:
           command: bazel test //migrator:migrator-test --test_output=errors
 
+  test-assembly-linux-mock:
+    machine: true
+    working_directory: ~/biograkn
+    steps:
+      - run: echo 'CI job placeholder'
+  test-assembly-mac-mock:
+    machine: true
+    working_directory: ~/biograkn
+    steps:
+      - run: echo 'CI job placeholder'
+  test-assembly-windows-mock:
+    machine: true
+    working_directory: ~/biograkn
+    steps:
+      - run: echo 'CI job placeholder'
+
+  test-assembly-linux-full:
+    machine: true
+    working_directory: ~/biograkn
+    steps:
+      - run: echo 'CI job placeholder'
+  test-assembly-mac-full:
+    machine: true
+    working_directory: ~/biograkn
+    steps:
+      - run: echo 'CI job placeholder'
+  test-assembly-windows-full:
+    machine: true
+    working_directory: ~/biograkn
+    steps:
+      - run: echo 'CI job placeholder'
+
+  test-deployment-gcp:
+    machine: true
+    working_directory: ~/biograkn
+    steps:
+      - run: echo 'CI job placeholder'
+
   release-approval:
     machine: true
     steps:
@@ -88,54 +126,96 @@ jobs:
       - run: echo 'CI job placeholder'
 
 workflows:
-  biograkn-PR:
+  biograkn:
     jobs:
       - build:
           filters:
             branches:
-              ignore: cicleci-pipeline #TODO: change to PR branch
+              ignore: biograkn-release-branch
       - test:
           filters:
             branches:
-              ignore: cicleci-pipeline #TODO:  change to PR branch
+              ignore: biograkn-release-branch
 
-  biograkn-master:
-    jobs:
-      - test-assembly-linux:
+      - test-assembly-linux-mock:
           filters:
             branches:
-              ignore: cicleci-pipeline #TODO:  change to master
-      - test-assembly-mac:
+              only: cicleci-pipeline #TODO:  change to master
+      - test-assembly-mac-mock:
           filters:
             branches:
-              ignore: cicleci-pipeline #TODO:  change to master
-      - test-assembly-windows:
+              only: cicleci-pipeline #TODO:  change to master
+      - test-assembly-windows-mock:
           filters:
             branches:
-              ignore: cicleci-pipeline #TODO:  change to master
+              only: cicleci-pipeline #TODO:  change to master
+
+      - test-assembly-linux-full:
+          filters:
+            branches:
+              only: cicleci-pipeline #TODO:  change to master
+      - test-assembly-mac-full:
+          filters:
+            branches:
+              only: cicleci-pipeline #TODO:  change to master
+      - test-assembly-windows-full:
+          filters:
+            branches:
+              only: cicleci-pipeline #TODO:  change to master
+
       - test-deployment-gcp:
           filters:
             branches:
               only: cicleci-pipeline #TODO: change to master
+          requires:
+            - test-assembly-linux-full
       - release-approval:
           filters:
             branches:
               only: cicleci-pipeline #TODO: change to master
+          requires:
+            - test-deployment-gcp
+            - test-assembly-mac-full
+            - test-assembly-windows-full
 
   biograkn-release:
     jobs:
+      - test-assembly-linux-full:
+          filters:
+            branches:
+              only: cicleci-pipeline #TODO:  change to biograkn-release-branch
+      - test-assembly-mac-full:
+          filters:
+            branches:
+              only: cicleci-pipeline #TODO:  change to biograkn-release-branch
+      - test-assembly-windows-full:
+          filters:
+            branches:
+              only: cicleci-pipeline #TODO:  change to biograkn-release-branch
+
       - deploy-gcp:
           filters:
             branches:
-              only: cicleci-pipeline #TODO: change to master
+              only: cicleci-pipeline #TODO: change to biograkn-release-branch
+          requires:
+            - test-assembly-linux-full
       - deploy-github:
           filters:
             branches:
-              only: cicleci-pipeline #TODO: change to master
+              only: cicleci-pipeline #TODO: change to biograkn-release-branch
+          requires:
+            - deploy-gcp
+            - test-assembly-linux-full
+            - test-assembly-mac-full
+            - test-assembly-windows-full
+
       - release-cleanup:
           filters:
             branches:
-              only: cicleci-pipeline #TODO: change to master
+              only: cicleci-pipeline #TODO: change to biograkn-release-branch
           requires:
+            - test-assembly-linux-full
+            - test-assembly-mac-full
+            - test-assembly-windows-full
             - deploy-gcp
             - deploy-github
