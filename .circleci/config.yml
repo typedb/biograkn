@@ -138,13 +138,9 @@ jobs:
     steps:
       - install-bazel-linux-rbe
       - checkout
-      - run: echo 'CI job placeholder'
-
-  deploy-approval:
-    machine: true
-    working_directory: ~/biograkn
-    steps:
-      - run: echo 'CI job placeholder'
+      - run: |
+          export DEPLOY_GITHUB_TOKEN=$REPO_GITHUB_TOKEN
+          bazel run //:deploy-github -- $CIRCLE_SHA1
 
   deploy-gcp:
     machine: true
@@ -242,10 +238,10 @@ workflows:
           filters:
             branches:
               only: cicleci-pipeline #TODO:  change to biograkn-release-branch
-      - test-assembly-windows-full:
-          filters:
-            branches:
-              only: cicleci-pipeline #TODO:  change to biograkn-release-branch
+#      - test-assembly-windows-full:
+#          filters:
+#            branches:
+#              only: cicleci-pipeline #TODO:  change to biograkn-release-branch
 
       - deploy-github:
           filters:
@@ -254,8 +250,9 @@ workflows:
           requires:
             - test-assembly-linux-full
             - test-assembly-mac-full
-            - test-assembly-windows-full
+#            - test-assembly-windows-full
       - deploy-approval:
+          type: approval
           filters:
             branches:
               only: cicleci-pipeline #TODO: change to biograkn-release-branch
