@@ -68,7 +68,7 @@ jobs:
       - run: mkdir dist && tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C ./dist/
       - run: nohup ./dist/grakn-core-all-linux/grakn server start
 #      - run: bazel test test-assembly-linux-mock
-      - run: nohup ./dist/grakn-core-all-linux/grakn server stop
+      - run: ./dist/grakn-core-all-linux/grakn server stop
   test-assembly-mac-mock:
     machine: true
     working_directory: ~/biograkn
@@ -76,12 +76,10 @@ jobs:
       - install-bazel-linux-rbe
       - checkout
       - run: bazel build @graknlabs_grakn_core//:assemble-mac-zip
-      - run: unzip bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac.zip
+      - run: unzip bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac.zip -d bazel-genfiles/external/graknlabs_grakn_core/
       - run: nohup bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server start
 #      - run: bazel test test-assembly-mac-mock
-      - run: nohup bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server stop
-
-
+      - run: bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server stop
   test-assembly-windows-mock:
     machine: true
     working_directory: ~/biograkn
@@ -98,12 +96,18 @@ jobs:
       - run: mkdir dist && tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C ./dist/
       - run: nohup ./dist/grakn-core-all-linux/grakn server start
       #      - run: bazel test test-assembly-linux-full
-      - run: nohup ./dist/grakn-core-all-linux/grakn server stop
+      - run: ./dist/grakn-core-all-linux/grakn server stop
   test-assembly-mac-full:
     machine: true
     working_directory: ~/biograkn
     steps:
-      - run: echo 'CI job placeholder'
+      - install-bazel-linux-rbe
+      - checkout
+      - run: bazel build @graknlabs_grakn_core//:assemble-mac-zip
+      - run: unzip bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac.zip -d bazel-genfiles/external/graknlabs_grakn_core/
+      - run: nohup bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server start
+      #      - run: bazel test test-assembly-mac-full
+      - run: bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server stop
   test-assembly-windows-full:
     machine: true
     working_directory: ~/biograkn
@@ -184,18 +188,18 @@ workflows:
 #          requires:
 #            - build
 #            - test
-#
-#      - test-assembly-linux-full:
-#          filters:
-#            branches:
-#              only: cicleci-pipeline #TODO:  change to master
+
+      - test-assembly-linux-full:
+          filters:
+            branches:
+              only: cicleci-pipeline #TODO:  change to master
 #          requires:
 #            - build
 #            - test
-#      - test-assembly-mac-full:
-#          filters:
-#            branches:
-#              only: cicleci-pipeline #TODO:  change to master
+      - test-assembly-mac-full:
+          filters:
+            branches:
+              only: cicleci-pipeline #TODO:  change to master
 #          requires:
 #            - build
 #            - test
