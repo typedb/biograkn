@@ -196,9 +196,9 @@ if __name__ == "__main__":
         client = GCPClient(os.getenv('GCP_DEPLOY_KEY'), write_ssh_key())
 
         logger.debug('Creating deployment')
-        client.create_deployment('test-grakn-kgms')
+        client.create_deployment('test-biograkn')
 
-        instances = client.instances_in_deployment('test-grakn-kgms')
+        instances = client.instances_in_deployment('test-biograkn')
         logger.debug('Instances: %s', instances)
 
         logger.debug('Waiting until all nodes are up...')
@@ -248,4 +248,4 @@ if __name__ == "__main__":
     finally:
         logger.debug('Removing deployment')
         if client:
-            client.delete_deployment('test-grakn-kgms')
+            client.delete_deployment('test-biograkn')
