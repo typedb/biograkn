@@ -245,6 +245,8 @@ if __name__ == "__main__":
             #     ],
             #     env=env)
             # logger.debug('Took %0.2f seconds', time.time() - start_time)
+    except Exception as e:
+        logger.exception(e)
     finally:
         logger.debug('Removing deployment')
         if client:
