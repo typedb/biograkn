@@ -273,6 +273,6 @@ workflows:
           requires:
             - test-assembly-linux-full
             - test-assembly-mac-full
-            - test-assembly-windows-full
+#            - test-assembly-windows-full
             - deploy-gcp
             - deploy-github
