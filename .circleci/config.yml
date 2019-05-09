@@ -47,7 +47,7 @@ jobs:
       - install-bazel-linux-rbe
       - checkout
 #      - run: bazel run @graknlabs_build_tools//checkstyle:test-coverage
-      - run: bazel --host_jvm_args=-Xmx16g build //...
+#      - run: bazel --host_jvm_args=-Xmx16g build //... TODO: uncomment later
 
   test:
     machine: true
@@ -145,10 +145,10 @@ jobs:
 workflows:
   biograkn:
     jobs:
-#      - build: TODO: uncomment this
-#          filters:
-#            branches:
-#              ignore: biograkn-release-branch
+      - build: TODO: uncomment this
+          filters:
+            branches:
+              ignore: biograkn-release-branch
 #      - test:  TODO: uncomment this
 #          filters:
 #            branches:
@@ -158,15 +158,15 @@ workflows:
           filters:
             branches:
               only: cicleci-pipeline #TODO:  change to master
-#          requires:
-#            - build
+          requires:
+            - build
 #            - test
       - test-assembly-mac-mock:
           filters:
             branches:
               only: cicleci-pipeline #TODO:  change to master
-#          requires:
-#            - build
+          requires:
+            - build
 #            - test
 #      - test-assembly-windows-mock:
 #          filters:
