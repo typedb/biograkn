@@ -1,6 +1,8 @@
 
 exports_files(["VERSION"])
 
+load("@graknlabs_bazel_distribution//github:rules.bzl", "deploy_github")
+
 deploy_github(
     name = "deploy-github",
     deployment_properties = "//:deployment.properties",
