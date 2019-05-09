@@ -118,7 +118,10 @@ jobs:
     machine: true
     working_directory: ~/biograkn
     steps:
-      - run: echo 'CI job placeholder'
+      - install-bazel-linux-rbe
+      - checkout
+      - run: bazel build @graknlabs_grakn_core//:assemble-linux-targz
+      - run: mkdir dist && tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C ./dist/
 
   release-approval:
     machine: true
@@ -158,29 +161,29 @@ jobs:
 workflows:
   biograkn:
     jobs:
-#      - build: TODO: uncomment this
-#          filters:
-#            branches:
-#              ignore: biograkn-release-branch
-#      - test:  TODO: uncomment this
-#          filters:
-#            branches:
-#              ignore: biograkn-release-branch
+      - build:
+          filters:
+            branches:
+              ignore: biograkn-release-branch
+      - test:
+          filters:
+            branches:
+              ignore: biograkn-release-branch
 
       - test-assembly-linux-mock:
           filters:
             branches:
               only: cicleci-pipeline #TODO:  change to master
-#          requires:
-#            - build
-#            - test
+          requires:
+            - build
+            - test
       - test-assembly-mac-mock:
           filters:
             branches:
               only: cicleci-pipeline #TODO:  change to master
-#          requires:
-#            - build
-#            - test
+          requires:
+            - build
+            - test
 #      - test-assembly-windows-mock:
 #          filters:
 #            branches:
@@ -193,16 +196,16 @@ workflows:
           filters:
             branches:
               only: cicleci-pipeline #TODO:  change to master
-#          requires:
-#            - build
-#            - test
+          requires:
+            - build
+            - test
       - test-assembly-mac-full:
           filters:
             branches:
               only: cicleci-pipeline #TODO:  change to master
-#          requires:
-#            - build
-#            - test
+          requires:
+            - build
+            - test
 #      - test-assembly-windows-full:
 #          filters:
 #            branches:
@@ -210,7 +213,7 @@ workflows:
 #          requires:
 #            - build
 #            - test
-#
+
 #      - test-deployment-gcp:
 #          filters:
 #            branches:
