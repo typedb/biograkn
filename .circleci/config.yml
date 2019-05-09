@@ -76,10 +76,10 @@ jobs:
       - install-bazel-linux-rbe
       - checkout
       - run: bazel build @graknlabs_grakn_core//:assemble-mac-zip
-      - run: unzip bazel-genfiles/grakn-core-all-mac.zip -d bazel-genfiles/
+      - run: unzip bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac.zip
       - run: nohup bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server start
 #      - run: bazel test test-assembly-mac-mock
-      - run: nohup bazel-genfiles/grakn-core-all-mac/grakn server stop
+      - run: nohup bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server stop
 
 
   test-assembly-windows-mock:
@@ -92,7 +92,13 @@ jobs:
     machine: true
     working_directory: ~/biograkn
     steps:
-      - run: echo 'CI job placeholder'
+      - install-bazel-linux-rbe
+      - checkout
+      - run: bazel build @graknlabs_grakn_core//:assemble-linux-targz
+      - run: mkdir dist && tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C ./dist/
+      - run: nohup ./dist/grakn-core-all-linux/grakn server start
+      #      - run: bazel test test-assembly-linux-full
+      - run: nohup ./dist/grakn-core-all-linux/grakn server stop
   test-assembly-mac-full:
     machine: true
     working_directory: ~/biograkn
