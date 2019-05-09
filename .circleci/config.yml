@@ -221,10 +221,10 @@ workflows:
           requires:
             - test-assembly-linux-mock
             - test-assembly-mac-mock
-            - test-assembly-windows-mock
+#            - test-assembly-windows-mock
             - test-assembly-linux-full
             - test-assembly-mac-full
-            - test-assembly-windows-full
+#            - test-assembly-windows-full
       - release-approval:
           filters:
             branches:
