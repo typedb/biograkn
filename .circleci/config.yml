@@ -161,29 +161,29 @@ jobs:
 workflows:
   biograkn:
     jobs:
-#      - build:
-#          filters:
-#            branches:
-#              ignore: biograkn-release-branch
-#      - test:
-#          filters:
-#            branches:
-#              ignore: biograkn-release-branch
-#
-#      - test-assembly-linux-mock:
-#          filters:
-#            branches:
-#              only: cicleci-pipeline #TODO:  change to master
-#          requires:
-#            - build
-#            - test
-#      - test-assembly-mac-mock:
-#          filters:
-#            branches:
-#              only: cicleci-pipeline #TODO:  change to master
-#          requires:
-#            - build
-#            - test
+      - build:
+          filters:
+            branches:
+              ignore: biograkn-release-branch
+      - test:
+          filters:
+            branches:
+              ignore: biograkn-release-branch
+
+      - test-assembly-linux-mock:
+          filters:
+            branches:
+              only: cicleci-pipeline #TODO:  change to master
+          requires:
+            - build
+            - test
+      - test-assembly-mac-mock:
+          filters:
+            branches:
+              only: cicleci-pipeline #TODO:  change to master
+          requires:
+            - build
+            - test
 #      - test-assembly-windows-mock:
 #          filters:
 #            branches:
@@ -192,20 +192,20 @@ workflows:
 #            - build
 #            - test
 
-#      - test-assembly-linux-full:
-#          filters:
-#            branches:
-#              only: cicleci-pipeline #TODO:  change to master
-#          requires:
-#            - build
-#            - test
-#      - test-assembly-mac-full:
-#          filters:
-#            branches:
-#              only: cicleci-pipeline #TODO:  change to master
-#          requires:
-#            - build
-#            - test
+      - test-assembly-linux-full:
+          filters:
+            branches:
+              only: cicleci-pipeline #TODO:  change to master
+          requires:
+            - build
+            - test
+      - test-assembly-mac-full:
+          filters:
+            branches:
+              only: cicleci-pipeline #TODO:  change to master
+          requires:
+            - build
+            - test
 #      - test-assembly-windows-full:
 #          filters:
 #            branches:
@@ -218,19 +218,19 @@ workflows:
           filters:
             branches:
               only: cicleci-pipeline #TODO: change to master
-#          requires:
-#            - test-assembly-linux-mock
-#            - test-assembly-mac-mock
-#            - test-assembly-windows-mock
-#            - test-assembly-linux-full
-#            - test-assembly-mac-full
-#            - test-assembly-windows-full
-#      - release-approval:
-#          filters:
-#            branches:
-#              only: cicleci-pipeline #TODO: change to master
-#          requires:
-#            - test-deployment-gcp
+          requires:
+            - test-assembly-linux-mock
+            - test-assembly-mac-mock
+            - test-assembly-windows-mock
+            - test-assembly-linux-full
+            - test-assembly-mac-full
+            - test-assembly-windows-full
+      - release-approval:
+          filters:
+            branches:
+              only: cicleci-pipeline #TODO: change to master
+          requires:
+            - test-deployment-gcp
 
   biograkn-release:
     jobs:
