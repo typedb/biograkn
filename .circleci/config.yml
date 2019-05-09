@@ -158,16 +158,16 @@ workflows:
           filters:
             branches:
               only: cicleci-pipeline #TODO:  change to master
-          requires:
-            - build
-            - test
+#          requires:
+#            - build
+#            - test
       - test-assembly-mac-mock:
           filters:
             branches:
               only: cicleci-pipeline #TODO:  change to master
-          requires:
-            - build
-            - test
+#          requires:
+#            - build
+#            - test
       - test-assembly-windows-mock:
           filters:
             branches:
