@@ -47,7 +47,7 @@ jobs:
       - install-bazel-linux-rbe
       - checkout
 #      - run: bazel run @graknlabs_build_tools//checkstyle:test-coverage
-#      - run: bazel --host_jvm_args=-Xmx16g build //... TODO: uncomment later
+      - run: bazel --host_jvm_args=-Xmx16g build //...
 
   test:
     machine: true
@@ -62,6 +62,8 @@ jobs:
     machine: true
     working_directory: ~/biograkn
     steps:
+      - install-bazel-linux-rbe
+      - checkout
       - run: bazel build @graknlabs_grakn_core//:assemble-linux-targz
       - run: mkdir dist && tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C ./dist/
       - run: nohup ./dist/grakn-core-all-linux/grakn server start
@@ -72,6 +74,8 @@ jobs:
     machine: true
     working_directory: ~/biograkn
     steps:
+      - install-bazel-linux-rbe
+      - checkout
       - run: bazel build @graknlabs_grakn_core//:assemble-mac-zip
       - run: unzip bazel-genfiles/grakn-core-all-mac.zip -d bazel-genfiles/external/graknlabs_grakn_core/
       - run: nohup bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server start
@@ -145,10 +149,10 @@ jobs:
 workflows:
   biograkn:
     jobs:
-      - build:
-          filters:
-            branches:
-              ignore: biograkn-release-branch
+#      - build: TODO: uncomment this
+#          filters:
+#            branches:
+#              ignore: biograkn-release-branch
 #      - test:  TODO: uncomment this
 #          filters:
 #            branches:
