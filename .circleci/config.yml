@@ -145,7 +145,7 @@ jobs:
 workflows:
   biograkn:
     jobs:
-      - build: TODO: uncomment this
+      - build:
           filters:
             branches:
               ignore: biograkn-release-branch
