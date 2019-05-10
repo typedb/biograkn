@@ -12,6 +12,7 @@ import grakn.core.concept.answer.ConceptMap;
 import graql.lang.query.GraqlCompute;
 
 import grakn.core.concept.answer.Numeric;
+import static org.junit.Assert.assertEquals;
 
 
 
