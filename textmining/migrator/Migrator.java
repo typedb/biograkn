@@ -12,6 +12,8 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+import static grakn.biograkn.utils.Utils.loadSchema;
+
 @SuppressWarnings("Duplicates")
 public class Migrator {
 
@@ -22,7 +24,7 @@ public class Migrator {
         GraknClient.Session session = graknClient.session("text_mining");
 
         try {
-            loadSchema(session);
+            loadSchema("textmining/schema/text-mining-schema.gql", session);
             PubmedArticle.migrate(session);
             CoreNLP.migrate(session);
         } catch (Exception e) {
@@ -31,19 +33,5 @@ public class Migrator {
         }
         session.close();
         System.out.println("~~~~~~~~~~Text Mining Migration Completed~~~~~~~~~~");
-    }
-
-    private static void loadSchema(GraknClient.Session session) {
-        GraknClient.Transaction transaction = session.transaction().write();
-
-        try {
-            byte[] encoded = Files.readAllBytes(Paths.get("textmining/schema/text-mining-schema.gql"));
-            String query = new String(encoded, StandardCharsets.UTF_8);
-            transaction.execute((GraqlQuery) Graql.parse(query));
-            transaction.commit();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.println("-----text mining schema loaded-----");
     }
 }

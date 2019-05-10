@@ -1,5 +1,6 @@
 package grakn.biograkn.precisionmedicine.migrator.drugdisease;
 
+import grakn.biograkn.utils.Utils;
 import grakn.client.GraknClient;
 import graql.lang.Graql;
 import graql.lang.query.GraqlInsert;
@@ -16,6 +17,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -23,8 +25,12 @@ import java.util.List;
 public class DrugDiseaseAssociation {
     public static void migrate(GraknClient.Session session) {
         try {
+            System.out.print("\tMigrating Drug Disease Associations");
+
             BufferedReader reader = Files.newBufferedReader(Paths.get("precisionmedicine/dataset/ctdbase/CTD_chemicals_diseases.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
+
+            List<GraqlInsert> insertQueries = new ArrayList<>();
 
             for (CSVRecord csvRecord : csvParser) {
 
@@ -36,25 +42,21 @@ public class DrugDiseaseAssociation {
                 String drugMeshId = csvRecord.get(1);
                 String diseaseMeshId = csvRecord.get(4).substring(5);
 
-                GraqlInsert GraqlInsert = Graql.match(
+                GraqlInsert graqlInsert = Graql.match(
                         var("dr").isa("drug").has("mesh-id", drugMeshId),
                         var("di").isa("disease").has("mesh-id", diseaseMeshId))
                         .insert(var("dda").isa("drug-disease-association").rel("associated-drug", "dr").rel("associated-disease", "di"));
 
-                GraknClient.Transaction writeTransaction = session.transaction().write();
-                List<ConceptMap> insertedIds = writeTransaction.execute(GraqlInsert);
+                insertQueries.add(graqlInsert);
 
-                // if (insertedIds.isEmpty()) {
-                //     List<Class> prereqs = Arrays.asList(Drug.class, Disease.class);
-                //     throw new IllegalStateException("Nothing was inserted for: " + GraqlInsert.toString() +
-                //             "\nA prerequisite dataset may have not been loaded. This dataset requires: " + prereqs.toString());
-                // }
-
-                System.out.println("Inserted a drug disease association at record number: " + csvRecord.getRecordNumber());
-                writeTransaction.commit();
+//                 if (insertedIds.isEmpty()) {
+//                     List<Class> prereqs = Arrays.asList(Drug.class, Disease.class);
+//                     throw new IllegalStateException("Nothing was inserted for: " + GraqlInsert.toString() +
+//                             "\nA prerequisite dataset may have not been loaded. This dataset requires: " + prereqs.toString());
+//                 }
             }
-
-            System.out.println("-----drug disease associations have been migrated-----");
+            Utils.executeQueriesConcurrently(session, insertQueries);
+            System.out.println(" - [DONE]");
         } catch (IOException e) {
             e.printStackTrace();
         }

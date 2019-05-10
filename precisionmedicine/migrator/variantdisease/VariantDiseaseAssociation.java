@@ -1,5 +1,6 @@
 package grakn.biograkn.precisionmedicine.migrator.variantdisease;
 
+import grakn.biograkn.utils.Utils;
 import grakn.client.GraknClient;import graql.lang.Graql;
 import graql.lang.query.GraqlInsert;
 import grakn.core.concept.answer.ConceptMap;
@@ -16,6 +17,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -24,8 +26,12 @@ import java.util.List;
 public class VariantDiseaseAssociation {
     public static void migrate(GraknClient.Session session) {
         try {
+            System.out.print("\tMigrating Variant Disease Association");
+
             BufferedReader reader = Files.newBufferedReader(Paths.get("precisionmedicine/dataset/disgenet/curated_variant_disease_associations.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
+
+            List<GraqlInsert> insertQueries = new ArrayList<>();
 
             for (CSVRecord csvRecord: csvParser) {
 
@@ -38,13 +44,10 @@ public class VariantDiseaseAssociation {
                 String diseaseId = csvRecord.get(5);
                 double score = Double.parseDouble(csvRecord.get(10));
 
-                GraqlInsert GraqlInsert = Graql.match(
+                GraqlInsert graqlInsert = Graql.match(
                         var("v").isa("variant").has("snp-id", snpId),
                         var("d").isa("disease").has("disease-id", diseaseId))
                         .insert(var("vda").isa("variant-disease-association").rel("associated-variant", "v").rel("associated-disease", "d").has("score", score));
-
-                GraknClient.Transaction writeTransaction = session.transaction().write();
-                List<ConceptMap> insertedIds = writeTransaction.execute(GraqlInsert);
 
                 // if (insertedIds.isEmpty()) {
                 //     List<Class> prereqs = Arrays.asList(Variant.class, Disease.class);
@@ -52,9 +55,11 @@ public class VariantDiseaseAssociation {
                 //             "\nA prerequisite dataset may have not been loaded. This dataset requires: " + prereqs.toString());
                 // }
 
-                System.out.println("Inserted a variant disease association at record number: " + csvRecord.getRecordNumber());
-                writeTransaction.commit();
+                insertQueries.add(graqlInsert);
+
+                System.out.println(" - [DONE]");
             }
+            Utils.executeQueriesConcurrently(session, insertQueries);
         } catch (IOException e) {
             e.printStackTrace();
         }

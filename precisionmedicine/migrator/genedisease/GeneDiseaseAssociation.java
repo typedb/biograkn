@@ -1,5 +1,6 @@
 package grakn.biograkn.precisionmedicine.migrator.genedisease;
 
+import grakn.biograkn.utils.Utils;
 import grakn.client.GraknClient;import graql.lang.Graql;
 import graql.lang.query.GraqlInsert;
 import graql.lang.query.GraqlGet;
@@ -17,6 +18,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -24,15 +26,20 @@ import java.util.List;
 @SuppressWarnings("Duplicates")
 public class GeneDiseaseAssociation {
     public static void migrate(GraknClient.Session session) {
+        System.out.print("\tMigrating Gene Disease Associations");
+
         migrateFromDisgenet(session);
         migrateFromClinvar(session);
-        System.out.println("-----gene disease associations have been migrated-----");
+
+        System.out.println(" - [DONE]");
     }
 
     private static void migrateFromDisgenet(GraknClient.Session session) {
         try {
             BufferedReader reader = Files.newBufferedReader(Paths.get("precisionmedicine/dataset/disgenet/curated_gene_disease_associations.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
+
+            List<GraqlInsert> insertQueries = new ArrayList<>();
 
             for (CSVRecord csvRecord: csvParser) {
 
@@ -45,13 +52,11 @@ public class GeneDiseaseAssociation {
                 String diseaseId = csvRecord.get(4);
                 double score = Double.parseDouble(csvRecord.get(9));
 
-                GraqlInsert GraqlInsert = Graql.match(
+                GraqlInsert graqlInsert = Graql.match(
                         var("g").isa("gene").has("symbol", symbol),
                         var("d").isa("disease").has("disease-id", diseaseId))
                         .insert(var("gda").isa("gene-disease-association").rel("associated-gene", "g").rel("associated-disease", "d").has("score", score));
 
-                GraknClient.Transaction writeTransaction = session.transaction().write();
-                List<ConceptMap> insertedIds = writeTransaction.execute(GraqlInsert);
 
                 // if (insertedIds.isEmpty()) {
                 //     List<Class> prereqs = Arrays.asList(Gene.class, Disease.class);
@@ -59,10 +64,9 @@ public class GeneDiseaseAssociation {
                 //             "\nA prerequisite dataset may have not been loaded. This dataset requires: " + prereqs.toString());
                 // }
 
-                System.out.println("Inserted a gene disease association at record number: " + csvRecord.getRecordNumber() + " of disgenet");
-                writeTransaction.commit();
+                insertQueries.add(graqlInsert);
             }
-
+            Utils.executeQueriesConcurrently(session, insertQueries);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -72,6 +76,8 @@ public class GeneDiseaseAssociation {
         try {
             BufferedReader reader = Files.newBufferedReader(Paths.get("precisionmedicine/dataset/clinvar/gene_condition_source_id.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
+
+            List<GraqlInsert> insertQueries = new ArrayList<>();
 
             for (CSVRecord csvRecord: csvParser) {
 
@@ -96,13 +102,10 @@ public class GeneDiseaseAssociation {
 
 //                if relationship does not exist already create it
                 if(getIds.size() == 0) {
-                    GraqlInsert GraqlInsert =  Graql.match(
+                    GraqlInsert graqlInsert =  Graql.match(
                             var("g").isa("gene").has("symbol", symbol),
                             var("d").isa("disease").has("disease-id", diseaseId))
                             .insert(var("gda").isa("gene-disease-association").rel("associated-gene", "g").rel("associated-disease", "d"));
-
-                    GraknClient.Transaction writeTransaction = session.transaction().write();
-                    List<ConceptMap> insertedIds = writeTransaction.execute(GraqlInsert);
 
                     // if (insertedIds.isEmpty()) {
                     //     List<Class> prereqs = Arrays.asList(Gene.class, Disease.class);
@@ -110,10 +113,10 @@ public class GeneDiseaseAssociation {
                     //             "\nA prerequisite dataset may have not been loaded. This dataset requires: " + prereqs.toString());
                     // }
 
-                    System.out.println("Inserted a gene disease association at record number: " + csvRecord.getRecordNumber() + " of clinvar");
-                    writeTransaction.commit();
+                    insertQueries.add(graqlInsert);
                 }
             }
+            Utils.executeQueriesConcurrently(session, insertQueries);
         } catch (IOException e) {
             e.printStackTrace();
         }
