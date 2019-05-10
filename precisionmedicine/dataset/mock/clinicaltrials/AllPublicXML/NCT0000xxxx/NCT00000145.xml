@@ -1,0 +1,289 @@
+<clinical_study>
+  <!-- This xml conforms to an XML Schema at:
+    https://clinicaltrials.gov/ct2/html/images/info/public.xsd -->
+  <required_header>
+    <download_date>ClinicalTrials.gov processed this data on February 12, 2019</download_date>
+    <link_text>Link to the current ClinicalTrials.gov record.</link_text>
+    <url>https://clinicaltrials.gov/show/NCT00000145</url>
+  </required_header>
+  <id_info>
+    <org_study_id>NEI-44</org_study_id>
+    <nct_id>NCT00000145</nct_id>
+    <nct_alias>NCT00001312</nct_alias>
+  </id_info>
+  <brief_title>Age-Related Eye Disease Study (AREDS)</brief_title>
+  <official_title>Age-Related Eye Disease Study (AREDS)</official_title>
+  <sponsors>
+    <lead_sponsor>
+      <agency>National Eye Institute (NEI)</agency>
+      <agency_class>NIH</agency_class>
+    </lead_sponsor>
+    <collaborator>
+      <agency>Bausch &amp; Lomb Incorporated</agency>
+      <agency_class>Industry</agency_class>
+    </collaborator>
+  </sponsors>
+  <source>National Eye Institute (NEI)</source>
+  <oversight_info>
+    <has_dmc>Yes</has_dmc>
+  </oversight_info>
+  <brief_summary>
+    <textblock>
+      To assess the clinical course, prognosis, and risk factors of age-related macular
+      degeneration (AMD) and cataract.
+
+      To evaluate, in randomized clinical trials, the effects of pharmacologic doses of (1)
+      antioxidants and zinc on the progression of AMD and (2) antioxidants on the development and
+      progression of lens opacities.
+    </textblock>
+  </brief_summary>
+  <detailed_description>
+    <textblock>
+      AMD and cataract are the leading causes of visual impairment and blindness in the United
+      States. Based on many clinical studies, it is apparent that the frequency of both diseases
+      increases dramatically after age 60. Although excellent treatments for cataract are
+      available, there are no equivalent treatments for AMD. As the average lifespan of our
+      population increases, the number of people who develop AMD will increase dramatically in the
+      years ahead. Unless successful means of prevention or treatment are developed, blindness from
+      AMD -- and its importance as a public health problem -- will increase.
+
+      Neither the etiology nor the natural history of AMD or cataract is known. Epidemiologic
+      studies suggest that a number of risk factors may be associated with AMD and cataract, but
+      the strength of the evidence in support of these hypotheses varies. Possibly associated with
+      AMD are personal characteristics, such as age, race, height, family history, and strength of
+      hand grip; ocular characteristics, such as hyperopia and color of iris; and cardiovascular
+      diseases, smoking, lung infections, and chemical exposures. Clinical and laboratory studies
+      suggest the following factors may be associated with progression of AMD: drusen type,
+      choroidal vascular diseases, and photic injury.
+
+      Epidemiologic studies of cataract suggest that associated risk factors may include personal
+      characteristics, such as age, sex, race, occupation, and educational status; ocular
+      characteristics, such as iris color; and diabetes mellitus, hypertension, drug exposure,
+      smoking, and sunlight exposure. Animal studies and observational epidemiologic studies
+      suggest that deficiencies in vitamins C and E, carotenoids, and the trace elements zinc and
+      selenium also may be associated with the development of the two diseases, especially
+      cataract. Although surgical treatment to remove cataract is very effective, cataract surgery
+      carries risks, as does any other surgery. Therefore, many research efforts focus on
+      preventing or slowing cataract development, as well as on determining the causes of cataract
+      formation.
+
+      The Age-Related Eye Disease Study (AREDS) is a major research program to improve our
+      understanding of the predisposing factors, clinical course, and prognostic factors of AMD and
+      cataract. Eligible patients are randomized to treatment with placebo, antioxidants, zinc, or
+      antioxidants plus zinc, and are followed for a minimum of 5 years.
+    </textblock>
+  </detailed_description>
+  <overall_status>Completed</overall_status>
+  <start_date>September 1990</start_date>
+  <completion_date type="Actual">December 2006</completion_date>
+  <primary_completion_date type="Actual">October 2001</primary_completion_date>
+  <phase>Phase 3</phase>
+  <study_type>Interventional</study_type>
+  <has_expanded_access>No</has_expanded_access>
+  <study_design_info>
+    <allocation>Randomized</allocation>
+    <intervention_model>Factorial Assignment</intervention_model>
+    <primary_purpose>Treatment</primary_purpose>
+    <masking>Quadruple (Participant, Care Provider, Investigator, Outcomes Assessor)</masking>
+  </study_design_info>
+  <primary_outcome>
+    <measure>Progression of age-related macular degeneration</measure>
+  </primary_outcome>
+  <primary_outcome>
+    <measure>Progression of lens opacity (cataract)</measure>
+  </primary_outcome>
+  <number_of_arms>4</number_of_arms>
+  <enrollment type="Actual">4757</enrollment>
+  <condition>Macular Degeneration</condition>
+  <condition>Cataract</condition>
+  <condition>Lens Opacities</condition>
+  <arm_group>
+    <arm_group_label>1</arm_group_label>
+    <arm_group_type>Experimental</arm_group_type>
+    <description>Antioxidants</description>
+  </arm_group>
+  <arm_group>
+    <arm_group_label>2</arm_group_label>
+    <arm_group_type>Experimental</arm_group_type>
+    <description>Zinc</description>
+  </arm_group>
+  <arm_group>
+    <arm_group_label>3</arm_group_label>
+    <arm_group_type>Experimental</arm_group_type>
+    <description>Antioxidants and zinc</description>
+  </arm_group>
+  <arm_group>
+    <arm_group_label>4</arm_group_label>
+    <arm_group_type>No Intervention</arm_group_type>
+  </arm_group>
+  <intervention>
+    <intervention_type>Dietary Supplement</intervention_type>
+    <intervention_name>Antioxidants</intervention_name>
+    <description>500 milligrams vitamin C; 400 IUs vitamin E; 15 milligrams beta-carotene</description>
+    <arm_group_label>1</arm_group_label>
+  </intervention>
+  <intervention>
+    <intervention_type>Dietary Supplement</intervention_type>
+    <intervention_name>Zinc</intervention_name>
+    <description>80 milligrams zinc oxide; 2 milligrams of cupric oxide</description>
+    <arm_group_label>2</arm_group_label>
+  </intervention>
+  <intervention>
+    <intervention_type>Dietary Supplement</intervention_type>
+    <intervention_name>Antioxidants and zinc</intervention_name>
+    <description>500 milligrams vitamin C; 400 IUs vitamin E; 15 milligrams beta-carotene; 80 milligrams zinc oxide; 2 milligrams of cupric oxide</description>
+    <arm_group_label>3</arm_group_label>
+  </intervention>
+  <eligibility>
+    <criteria>
+      <textblock>
+        Men and women between the ages of 55 and 80 years whose macular status ranges from no
+        evidence of AMD in either eye to relatively severe disease with vision loss in one eye but
+        good vision in the fellow eye (20/30 or better) are eligible for the study provided that
+        their ocular media are clear enough to allow good fundus photography.
+      </textblock>
+    </criteria>
+    <gender>All</gender>
+    <minimum_age>55 Years</minimum_age>
+    <maximum_age>80 Years</maximum_age>
+    <healthy_volunteers>No</healthy_volunteers>
+  </eligibility>
+  <overall_official>
+    <last_name>Emily Y. Chew, MD</last_name>
+    <role>Principal Investigator</role>
+    <affiliation>National Eye Institute (NEI)</affiliation>
+  </overall_official>
+  <reference>
+    <citation>Age-Related Eye Disease Study Research Group. The Age-Related Eye Disease Study system for classifying age-related macular degeneration from stereoscopic color fundus photographs: the Age-Related Eye Disease Study Report Number 6. Am J Ophthalmol. 2001 Nov;132(5):668-81.</citation>
+    <PMID>11704028</PMID>
+  </reference>
+  <reference>
+    <citation>Age-Related Eye Disease Study Research Group. The age-related eye disease study (AREDS) system for classifying cataracts from photographs: AREDS report no. 4. Am J Ophthalmol. 2001 Feb;131(2):167-75.</citation>
+    <PMID>11228291</PMID>
+  </reference>
+  <reference>
+    <citation>Age-Related Eye Disease Study Research Group. The Age-Related Eye Disease Study (AREDS): design implications. AREDS report no. 1. Control Clin Trials. 1999 Dec;20(6):573-600.</citation>
+    <PMID>10588299</PMID>
+  </reference>
+  <reference>
+    <citation>Clemons TE, Chew EY, Bressler SB, McBee W; Age-Related Eye Disease Study Research Group. National Eye Institute Visual Function Questionnaire in the Age-Related Eye Disease Study (AREDS): AREDS Report No. 10. Arch Ophthalmol. 2003 Feb;121(2):211-7.</citation>
+    <PMID>12583787</PMID>
+  </reference>
+  <reference>
+    <citation>Bressler NM, Bressler SB, Congdon NG, Ferris FL 3rd, Friedman DS, Klein R, Lindblad AS, Milton RC, Seddon JM; Age-Related Eye Disease Study Research Group. Potential public health impact of Age-Related Eye Disease Study results: AREDS report no. 11. Arch Ophthalmol. 2003 Nov;121(11):1621-4.</citation>
+    <PMID>14609922</PMID>
+  </reference>
+  <reference>
+    <citation>Lindblad AS, Clemons TE. Responsiveness of the National Eye Institute Visual Function Questionnaire to progression to advanced age-related macular degeneration, vision loss, and lens opacity: AREDS Report no. 14. Arch Ophthalmol. 2005 Sep;123(9):1207-14.</citation>
+    <PMID>16157800</PMID>
+  </reference>
+  <reference>
+    <citation>Rankin MW, Clemons TE, McBee WL. Correlation analysis of the in-clinic and telephone batteries from the AREDS cognitive function ancillary study. AREDS Report No. 15. Ophthalmic Epidemiol. 2005 Aug;12(4):271-7.</citation>
+    <PMID>16033748</PMID>
+  </reference>
+  <reference>
+    <citation>Davis MD, Gangnon RE, Lee LY, Hubbard LD, Klein BE, Klein R, Ferris FL, Bressler SB, Milton RC; Age-Related Eye Disease Study Group. The Age-Related Eye Disease Study severity scale for age-related macular degeneration: AREDS Report No. 17. Arch Ophthalmol. 2005 Nov;123(11):1484-98. Erratum in: Arch Ophthalmol. 2006 Feb;124(2):289-90.</citation>
+    <PMID>16286610</PMID>
+  </reference>
+  <reference>
+    <citation>Ferris FL, Davis MD, Clemons TE, Lee LY, Chew EY, Lindblad AS, Milton RC, Bressler SB, Klein R; Age-Related Eye Disease Study (AREDS) Research Group. A simplified severity scale for age-related macular degeneration: AREDS Report No. 18. Arch Ophthalmol. 2005 Nov;123(11):1570-4.</citation>
+    <PMID>16286620</PMID>
+  </reference>
+  <reference>
+    <citation>Sperduto RD, Ferris FL 3rd, Kurinij N. Do we have a nutritional treatment for age-related cataract or macular degeneration? Arch Ophthalmol. 1990 Oct;108(10):1403-5.</citation>
+    <PMID>2222272</PMID>
+  </reference>
+  <results_reference>
+    <citation>Age-Related Eye Disease Study Research Group. The effect of five-year zinc supplementation on serum zinc, serum cholesterol and hematocrit in persons randomly assigned to treatment group in the age-related eye disease study: AREDS Report No. 7. J Nutr. 2002 Apr;132(4):697-702.</citation>
+    <PMID>11925463</PMID>
+  </results_reference>
+  <results_reference>
+    <citation>Age-Related Eye Disease Study Research Group. Risk factors associated with age-related nuclear and cortical cataract : a case-control study in the Age-Related Eye Disease Study, AREDS Report No. 5. Ophthalmology. 2001 Aug;108(8):1400-8.</citation>
+    <PMID>11470690</PMID>
+  </results_reference>
+  <results_reference>
+    <citation>Age-Related Eye Disease Study Research Group. Risk factors associated with age-related macular degeneration. A case-control study in the age-related eye disease study: Age-Related Eye Disease Study Report Number 3. Ophthalmology. 2000 Dec;107(12):2224-32.</citation>
+    <PMID>11097601</PMID>
+  </results_reference>
+  <results_reference>
+    <citation>Age-Related Eye Disease Study Research Group. The Age-Related Eye Disease Study: a clinical trial of zinc and antioxidants--Age-Related Eye Disease Study Report No. 2. J Nutr. 2000 May;130(5S Suppl):1516S-9S. doi: 10.1093/jn/130.5.1516S.</citation>
+    <PMID>10801969</PMID>
+  </results_reference>
+  <results_reference>
+    <citation>Age-Related Eye Disease Study Research Group. A randomized, placebo-controlled, clinical trial of high-dose supplementation with vitamins C and E and beta carotene for age-related cataract and vision loss: AREDS report no. 9. Arch Ophthalmol. 2001 Oct;119(10):1439-52. Erratum in: Arch Ophthalmol. 2008 Sep;126(9):1251.</citation>
+    <PMID>11594943</PMID>
+  </results_reference>
+  <results_reference>
+    <citation>Age-Related Eye Disease Study Research Group. A randomized, placebo-controlled, clinical trial of high-dose supplementation with vitamins C and E, beta carotene, and zinc for age-related macular degeneration and vision loss: AREDS report no. 8. Arch Ophthalmol. 2001 Oct;119(10):1417-36. Erratum in: Arch Ophthalmol. 2008 Sep;126(9):1251.</citation>
+    <PMID>11594942</PMID>
+  </results_reference>
+  <results_reference>
+    <citation>Yaffe K, Clemons TE, McBee WL, Lindblad AS; Age-Related Eye Disease Study Research Group. Impact of antioxidants, zinc, and copper on cognition in the elderly: a randomized, controlled trial. Neurology. 2004 Nov 9;63(9):1705-7.</citation>
+    <PMID>15534261</PMID>
+  </results_reference>
+  <results_reference>
+    <citation>Clemons TE, Kurinij N, Sperduto RD; AREDS Research Group. Associations of mortality with ocular disorders and an intervention of high-dose antioxidants and zinc in the Age-Related Eye Disease Study: AREDS Report No. 13. Arch Ophthalmol. 2004 May;122(5):716-26.</citation>
+    <PMID>15136320</PMID>
+  </results_reference>
+  <results_reference>
+    <citation>Clemons TE, Rankin MW, McBee WL; Age-Related Eye Disease Study Research Group. Cognitive impairment in the Age-Related Eye Disease Study: AREDS report no. 16. Arch Ophthalmol. 2006 Apr;124(4):537-43.</citation>
+    <PMID>16606880</PMID>
+  </results_reference>
+  <results_reference>
+    <citation>Clemons TE, Milton RC, Klein R, Seddon JM, Ferris FL 3rd; Age-Related Eye Disease Study Research Group. Risk factors for the incidence of Advanced Age-Related Macular Degeneration in the Age-Related Eye Disease Study (AREDS) AREDS report no. 19. Ophthalmology. 2005 Apr;112(4):533-9.</citation>
+    <PMID>15808240</PMID>
+  </results_reference>
+  <results_reference>
+    <citation>SanGiovanni JP, Chew EY, Clemons TE, Davis MD, Ferris FL 3rd, Gensler GR, Kurinij N, Lindblad AS, Milton RC, Seddon JM, Sperduto RD; Age-Related Eye Disease Study Research Group. The relationship of dietary lipid intake and age-related macular degeneration in a case-control study: AREDS Report No. 20. Arch Ophthalmol. 2007 May;125(5):671-9.</citation>
+    <PMID>17502507</PMID>
+  </results_reference>
+  <results_reference>
+    <citation>Milton RC, Sperduto RD, Clemons TE, Ferris FL 3rd; Age-Related Eye Disease Study Research Group. Centrum use and progression of age-related cataract in the Age-Related Eye Disease Study: a propensity score approach. AREDS report No. 21. Ophthalmology. 2006 Aug;113(8):1264-70.</citation>
+    <PMID>16877067</PMID>
+  </results_reference>
+  <results_reference>
+    <citation>Age-Related Eye Disease Study Research Group, SanGiovanni JP, Chew EY, Clemons TE, Ferris FL 3rd, Gensler G, Lindblad AS, Milton RC, Seddon JM, Sperduto RD. The relationship of dietary carotenoid and vitamin A, E, and C intake with age-related macular degeneration in a case-control study: AREDS Report No. 22. Arch Ophthalmol. 2007 Sep;125(9):1225-32.</citation>
+    <PMID>17846363</PMID>
+  </results_reference>
+  <results_reference>
+    <citation>SanGiovanni JP, Chew EY, Agrón E, Clemons TE, Ferris FL 3rd, Gensler G, Lindblad AS, Milton RC, Seddon JM, Klein R, Sperduto RD; Age-Related Eye Disease Study Research Group. The relationship of dietary omega-3 long-chain polyunsaturated fatty acid intake with incident age-related macular degeneration: AREDS report no. 23. Arch Ophthalmol. 2008 Sep;126(9):1274-9. doi: 10.1001/archopht.126.9.1274.</citation>
+    <PMID>18779490</PMID>
+  </results_reference>
+  <results_reference>
+    <citation>Sperduto RD, Clemons TE, Lindblad AS, Ferris FL 3rd; Age-Related Eye Disease Study Research Group. Cataract classification using serial examinations in the age-related eye disease study: age-related eye disease study report no. 24. Am J Ophthalmol. 2008 Mar;145(3):504-8. doi: 10.1016/j.ajo.2007.10.024. Epub 2008 Jan 16.</citation>
+    <PMID>18201681</PMID>
+  </results_reference>
+  <verification_date>January 2009</verification_date>
+  <!-- For several months we've had both old and new date name tags                             -->
+  <!-- Now, the old date names have been dropped.                                               -->
+  <!-- The new date name replacements are:                                                      -->
+  <!--     OLD (gone)                                        NEW (in use)                       -->
+  <!--   lastchanged_date                         becomes   last_update_submitted               -->
+  <!--   firstreceived_date                       becomes   study_first_submitted               -->
+  <!--   firstreceived_results_date               becomes   results_first_submitted             -->
+  <!--   firstreceived_results_disposition_date   becomes   disposition_first_submitted         -->
+  <study_first_submitted>September 23, 1999</study_first_submitted>
+  <study_first_submitted_qc>September 23, 1999</study_first_submitted_qc>
+  <study_first_posted type="Estimate">September 24, 1999</study_first_posted>
+  <last_update_submitted>January 21, 2009</last_update_submitted>
+  <last_update_submitted_qc>January 21, 2009</last_update_submitted_qc>
+  <last_update_posted type="Estimate">January 23, 2009</last_update_posted>
+  <responsible_party>
+    <name_title>John Paul SanGiovanni, Sc.D.</name_title>
+    <organization>National Eye Institute</organization>
+  </responsible_party>
+  <keyword>Age-Related Macular Degeneration</keyword>
+  <condition_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Macular Degeneration</mesh_term>
+    <mesh_term>Cataract</mesh_term>
+    <mesh_term>Eye Diseases</mesh_term>
+  </condition_browse>
+  <intervention_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Zinc</mesh_term>
+    <mesh_term>Antioxidants</mesh_term>
+  </intervention_browse>
+  <!-- Results have not yet been posted for this study                                          -->
+</clinical_study>
+

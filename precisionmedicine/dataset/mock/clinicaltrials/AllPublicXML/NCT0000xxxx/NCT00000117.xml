@@ -1,0 +1,192 @@
+<clinical_study>
+  <!-- This xml conforms to an XML Schema at:
+    https://clinicaltrials.gov/ct2/html/images/info/public.xsd -->
+  <required_header>
+    <download_date>ClinicalTrials.gov processed this data on February 12, 2019</download_date>
+    <link_text>Link to the current ClinicalTrials.gov record.</link_text>
+    <url>https://clinicaltrials.gov/show/NCT00000117</url>
+  </required_header>
+  <id_info>
+    <org_study_id>NEI-13</org_study_id>
+    <nct_id>NCT00000117</nct_id>
+  </id_info>
+  <brief_title>Intravenous Immunoglobulin Therapy in Optic Neuritis</brief_title>
+  <sponsors>
+    <lead_sponsor>
+      <agency>National Eye Institute (NEI)</agency>
+      <agency_class>NIH</agency_class>
+    </lead_sponsor>
+  </sponsors>
+  <source>National Eye Institute (NEI)</source>
+  <brief_summary>
+    <textblock>
+      To determine whether high-dose intravenous immunoglobulin (IVIg) is more effective than
+      placebo in restoring lost visual function (visual acuity) in optic neuritis (ON).
+
+      To determine the time course of recovery following IVIg administration. If the reports of
+      IVIg-associated clinical improvement occurring within 3 to 6 months following treatment can
+      be confirmed, this would provide indirect evidence that IVIg may promote central nervous
+      system (CNS) remyelination in optic neuritis and multiple sclerosis (MS).
+    </textblock>
+  </brief_summary>
+  <detailed_description>
+    <textblock>
+      Optic neuritis is the leading cause of transient, spontaneous, reversible visual loss in
+      young adults. Characteristically, patients present with central visual loss that peaks within
+      a few days and is often associated with eye pain. Visual loss may be complete. Spontaneous
+      recovery usually begins within 4 weeks, and marked recovery occurs within 1 to 3 months in
+      most patients. Although clinical improvement is the rule, not all patients recover fully, and
+      many are left with residual symptoms. Although there are limited pathological studies in
+      inflammatory ON, the pathological changes are thought to be virtually identical with those
+      seen in MS, with disruption of the blood-nerve (brain) barrier; primary demyelination with
+      axonal sparing; variable degrees of lymphocytic infiltration; an abundance of macrophages
+      around the inflammatory demyelination lesion; various degrees of remyelination; and, later,
+      oligodendrocyte loss, axonal loss, and gliosis.
+
+      Remyelination by oligodendrocytes occurs early in the MS lesion, as documented by myelin
+      sheaths that are abnormally thin relative to axon diameter. These thin myelin sheaths are
+      often seen prominently at the edge of demyelinated plaques. A recent series of studies has
+      shown that within weeks of the initial event, there is extensive oligodendrocyte regeneration
+      and remyelination. These immature oligodendrocytes express a series of developmentally
+      restricted antigens. This finding has been interpreted to suggest that the cells that
+      repopulate the acute plaque and that affect remyelination are newly generated and not
+      residual, mature oligodendrocytes. These observations support the possibility that factors
+      that promote remyelination could be used to improve clinical recovery in ON and MS.
+
+      Work at the Mayo Clinic, has shown that both immunoglobulin G (IgG) directed against spinal
+      cord antigens and purified polyclonal mouse IgG administered systemically promote extensive
+      remyelination in SJL mice chronically infected with Theiler's virus. In addition, tissue
+      culture studies suggest that IgG directed against CNS components may promote oligodendroglial
+      proliferation and differentiation. Thus, experimental evidence exists for the concept that
+      immunoglobulins may stimulate the proliferation and differentiation of oligodendrocytes. It
+      is possible that myelin components on the surface of oligodendrocytes could function as
+      receptors or components of receptors. Antibodies could mimic endogenous ligands, thereby
+      inducing the proliferation or differentiation of these cells.
+
+      In a preliminary, open-label pilot study of patients with chronic, steroid-unresponsive ON,
+      Drs. van Engelen, Hommes, and colleagues suggested that improvement in visual recovery could
+      be seen following IgG treatment in patients with chronic, stable ON. These encouraging but
+      preliminary basic and clinical studies have prompted us to design a double-blind and
+      placebo-controlled clinical trial of IVIg in patients with recently acquired but apparently
+      permanent muscle paralysis from MS (NS31506) and to develop this NEI-funded ON study
+      (U10EY1096301).
+
+      In this randomized, placebo-controlled, double-blind clinical trial, 60 patients were
+      assigned to receive either IVIg or a placebo over a period of 3 months. In order to be
+      eligible, patients who meet the inclusion criteria needed to have a stable loss of visual
+      function (unchanged between the pre-enrollment screening visit and the enrollment visit). All
+      patients wre re-examined at 3, 6, 9, and 12 months, with the primary outcome being the impact
+      of treatment on visual acuity at 6 months as determined by measurements on a retroilluminated
+      Early Treatment Diabetic Retinopathy Study chart at 4 meters.
+
+      One group of patients received 0.4 g/kg Gammimmune N intravenously daily for 5 days, and
+      thereafter once a month for 3 months (total: eight infusions). The other group of patients
+      received infusions of 0.1 percent human serum albumin in 10 percent maltose (placebo)
+      according to the identical protocol used for Gammimmune N.
+
+      The primary outcome measure was improvement in Logmar visual acuity by an average of 0.2 at 6
+      months. The secondary outcome measures included change in visual acuity at 3, 9, and 12
+      months, as determined on a retroilluminated ETDRS chart at 4 meters; change in visual fields
+      at 6 and 12 months; change in visual evoked responses at 3, 6, and 12 months; and change in
+      neurological examination (EDSS, FS, AI) at 3, 6, 9, and 12 months.
+    </textblock>
+  </detailed_description>
+  <overall_status>Completed</overall_status>
+  <start_date>August 1995</start_date>
+  <completion_date type="Actual">December 1997</completion_date>
+  <phase>Phase 3</phase>
+  <study_type>Interventional</study_type>
+  <has_expanded_access>No</has_expanded_access>
+  <study_design_info>
+    <allocation>Randomized</allocation>
+    <primary_purpose>Treatment</primary_purpose>
+    <masking>Double</masking>
+  </study_design_info>
+  <condition>Optic Neuritis</condition>
+  <intervention>
+    <intervention_type>Drug</intervention_type>
+    <intervention_name>Immunoglobulin</intervention_name>
+  </intervention>
+  <eligibility>
+    <criteria>
+      <textblock>
+        To be eligible, patients must have a history of one or more episodes of previous
+        demyelinating optic neuritis occurring in the setting of classic, adult-onset definite MS
+        (clinically definite or laboratory-supported definite MS, or cranial MRI changes consistent
+        with MS). In most cases, onset of MS will have occurred between the ages of 18 and 45.
+        Patients must be younger than 50 years and must have apparently irreversible loss of visual
+        acuity that meets the following criteria:
+
+        Visual acuity must be worse than 20/40 for at least 6 months. Patients must be able to read
+        at least one letter on the 1-meter eye chart. Patients with no light perception or hand
+        movement vision only are not eligible.
+
+        The above level of visual dysfunction must be observed on at least two serial examinations
+        (separated by at least 1 month) in the Department of Ophthalmology at the Mayo Clinic.
+
+        Optic disc pallor must be present.
+
+        Patients must have impairment in the affected eye(s) on perimetry consistent with optic
+        nerve dysfunction and must have a visual field mean deviation of less than -4.00.
+
+        Patients must not have received ACTH or corticosteroids within the preceding 2 months.
+      </textblock>
+    </criteria>
+    <gender>All</gender>
+    <minimum_age>N/A</minimum_age>
+    <maximum_age>50 Years</maximum_age>
+  </eligibility>
+  <location>
+    <facility>
+      <name>Mayo Clinic, Department of Neurology</name>
+      <address>
+        <city>Rochester</city>
+        <state>Minnesota</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Mayo Clinic</name>
+      <address>
+        <city>Rochester</city>
+        <state>Minnesota</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location_countries>
+    <country>United States</country>
+  </location_countries>
+  <verification_date>September 2009</verification_date>
+  <!-- For several months we've had both old and new date name tags                             -->
+  <!-- Now, the old date names have been dropped.                                               -->
+  <!-- The new date name replacements are:                                                      -->
+  <!--     OLD (gone)                                        NEW (in use)                       -->
+  <!--   lastchanged_date                         becomes   last_update_submitted               -->
+  <!--   firstreceived_date                       becomes   study_first_submitted               -->
+  <!--   firstreceived_results_date               becomes   results_first_submitted             -->
+  <!--   firstreceived_results_disposition_date   becomes   disposition_first_submitted         -->
+  <study_first_submitted>September 23, 1999</study_first_submitted>
+  <study_first_submitted_qc>September 23, 1999</study_first_submitted_qc>
+  <study_first_posted type="Estimate">September 24, 1999</study_first_posted>
+  <last_update_submitted>September 16, 2009</last_update_submitted>
+  <last_update_submitted_qc>September 16, 2009</last_update_submitted_qc>
+  <last_update_posted type="Estimate">September 17, 2009</last_update_posted>
+  <condition_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Neuritis</mesh_term>
+    <mesh_term>Optic Neuritis</mesh_term>
+  </condition_browse>
+  <intervention_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Immunoglobulins</mesh_term>
+    <mesh_term>Antibodies</mesh_term>
+    <mesh_term>Immunoglobulins, Intravenous</mesh_term>
+    <mesh_term>gamma-Globulins</mesh_term>
+    <mesh_term>Rho(D) Immune Globulin</mesh_term>
+  </intervention_browse>
+  <!-- Results have not yet been posted for this study                                          -->
+</clinical_study>
+

@@ -1,0 +1,101 @@
+﻿Approved symbol,Approved name,Chromosome,Locus type,Locus group,Ensembl gene ID,NCBI Gene ID
+A1BG,alpha-1-B glycoprotein,19q13.43,gene with protein product,protein-coding gene,ENSG00000121410,1
+A1BG-AS1,A1BG antisense RNA 1,19q13.43,"RNA, long non-coding",non-coding RNA,ENSG00000268895,503538
+A1CF,APOBEC1 complementation factor,10q11.23,gene with protein product,protein-coding gene,ENSG00000148584,29974
+A2M,alpha-2-macroglobulin,12p13.31,gene with protein product,protein-coding gene,ENSG00000175899,2
+A2M-AS1,A2M antisense RNA 1,12p13.31,"RNA, long non-coding",non-coding RNA,ENSG00000245105,144571
+A2ML1,alpha-2-macroglobulin like 1,12p13.31,gene with protein product,protein-coding gene,ENSG00000166535,144568
+A2ML1-AS1,A2ML1 antisense RNA 1,12p13.31,"RNA, long non-coding",non-coding RNA,ENSG00000256661,
+A2ML1-AS2,A2ML1 antisense RNA 2,12p13.31,"RNA, long non-coding",non-coding RNA,ENSG00000256904,
+A2MP1,alpha-2-macroglobulin pseudogene 1,12p13.31,pseudogene,pseudogene,ENSG00000256069,3
+A3GALT2,"alpha 1,3-galactosyltransferase 2",1p35.1,gene with protein product,protein-coding gene,ENSG00000184389,127550
+A4GALT,"alpha 1,4-galactosyltransferase (P blood group)",22q13.2,gene with protein product,protein-coding gene,ENSG00000128274,53947
+A4GNT,"alpha-1,4-N-acetylglucosaminyltransferase",3q22.3,gene with protein product,protein-coding gene,ENSG00000118017,51146
+AAAS,aladin WD repeat nucleoporin,12q13.13,gene with protein product,protein-coding gene,ENSG00000094914,8086
+AACS,acetoacetyl-CoA synthetase,12q24.31,gene with protein product,protein-coding gene,ENSG00000081760,65985
+AACSP1,acetoacetyl-CoA synthetase pseudogene 1,5q35.3,pseudogene,pseudogene,ENSG00000250420,729522
+AADAC,arylacetamide deacetylase,3q25.1,gene with protein product,protein-coding gene,ENSG00000114771,13
+AADACL2,arylacetamide deacetylase like 2,3q25.1,gene with protein product,protein-coding gene,ENSG00000197953,344752
+AADACL2-AS1,AADACL2 antisense RNA 1,3q25.1,"RNA, long non-coding",non-coding RNA,ENSG00000242908,101928142
+AADACL3,arylacetamide deacetylase like 3,1p36.21,gene with protein product,protein-coding gene,ENSG00000188984,126767
+AADACL4,arylacetamide deacetylase like 4,1p36.21,gene with protein product,protein-coding gene,ENSG00000204518,343066
+AADACP1,arylacetamide deacetylase pseudogene 1,3q25.1,pseudogene,pseudogene,ENSG00000240602,201651
+AADAT,aminoadipate aminotransferase,4q33,gene with protein product,protein-coding gene,ENSG00000109576,51166
+AAGAB,alpha and gamma adaptin binding protein,15q23,gene with protein product,protein-coding gene,ENSG00000103591,79719
+AAK1,AP2 associated kinase 1,2p13.3,gene with protein product,protein-coding gene,ENSG00000115977,22848
+AAMDC,adipogenesis associated Mth938 domain containing,11q14.1,gene with protein product,protein-coding gene,ENSG00000087884,28971
+AAMP,angio associated migratory cell protein,2q35,gene with protein product,protein-coding gene,ENSG00000127837,14
+AANAT,aralkylamine N-acetyltransferase,17q25.1,gene with protein product,protein-coding gene,ENSG00000129673,15
+AAR2,AAR2 splicing factor homolog,20q11.23,gene with protein product,protein-coding gene,ENSG00000131043,25980
+AARD,alanine and arginine rich domain containing protein,8q24.11,gene with protein product,protein-coding gene,ENSG00000205002,441376
+AARS,alanyl-tRNA synthetase,16q22.1,gene with protein product,protein-coding gene,ENSG00000090861,16
+AARS2,"alanyl-tRNA synthetase 2, mitochondrial",6p21.1,gene with protein product,protein-coding gene,ENSG00000124608,57505
+AARSD1,alanyl-tRNA synthetase domain containing 1,17q21.31,gene with protein product,protein-coding gene,ENSG00000266967,80755
+AARSP1,alanyl-tRNA synthetase pseudogene 1,4q28.3,pseudogene,pseudogene,ENSG00000249038,
+AASDH,aminoadipate-semialdehyde dehydrogenase,4q12,gene with protein product,protein-coding gene,ENSG00000157426,132949
+AASDHPPT,aminoadipate-semialdehyde dehydrogenase-phosphopantetheinyl transferase,11q22.3,gene with protein product,protein-coding gene,ENSG00000149313,60496
+AASS,aminoadipate-semialdehyde synthase,7q31.32,gene with protein product,protein-coding gene,ENSG00000008311,10157
+AATBC,apoptosis associated transcript in bladder cancer,21q22.3,"RNA, long non-coding",non-coding RNA,ENSG00000215458,284837
+AATF,apoptosis antagonizing transcription factor,17q12,gene with protein product,protein-coding gene,ENSG00000275700,26574
+AATK,apoptosis associated tyrosine kinase,17q25.3,gene with protein product,protein-coding gene,ENSG00000181409,9625
+AAVS1,adeno-associated virus integration site 1,19q13,virus integration site,other,,17
+ABALON,apoptotic BCL2L1-antisense long non-coding RNA,20q11.21,"RNA, long non-coding",non-coding RNA,ENSG00000281376,103021294
+ABAT,4-aminobutyrate aminotransferase,16p13.2,gene with protein product,protein-coding gene,ENSG00000183044,18
+ABCA1,ATP binding cassette subfamily A member 1,9q31.1,gene with protein product,protein-coding gene,ENSG00000165029,19
+ABCA2,ATP binding cassette subfamily A member 2,9q34.3,gene with protein product,protein-coding gene,ENSG00000107331,20
+ABCA3,ATP binding cassette subfamily A member 3,16p13.3,gene with protein product,protein-coding gene,ENSG00000167972,21
+ABCA4,ATP binding cassette subfamily A member 4,1p22.1,gene with protein product,protein-coding gene,ENSG00000198691,24
+ABCA5,ATP binding cassette subfamily A member 5,17q24.3,gene with protein product,protein-coding gene,ENSG00000154265,23461
+ABCA6,ATP binding cassette subfamily A member 6,17q24.2-q24.3,gene with protein product,protein-coding gene,ENSG00000154262,23460
+ABCA7,ATP binding cassette subfamily A member 7,19p13.3,gene with protein product,protein-coding gene,ENSG00000064687,10347
+ABCA8,ATP binding cassette subfamily A member 8,17q24.2,gene with protein product,protein-coding gene,ENSG00000141338,10351
+ABCA9,ATP binding cassette subfamily A member 9,17q24.2,gene with protein product,protein-coding gene,ENSG00000154258,10350
+ABCA9-AS1,ABCA9 antisense RNA 1,17q24.2,"RNA, long non-coding",non-coding RNA,ENSG00000231749,
+ABCA10,ATP binding cassette subfamily A member 10,17q24.3,gene with protein product,protein-coding gene,ENSG00000154263,10349
+ABCA11P,"ATP binding cassette subfamily A member 11, pseudogene",4p16.3,pseudogene,pseudogene,ENSG00000251595,79963
+ABCA12,ATP binding cassette subfamily A member 12,2q35,gene with protein product,protein-coding gene,ENSG00000144452,26154
+ABCA13,ATP binding cassette subfamily A member 13,7p12.3,gene with protein product,protein-coding gene,ENSG00000179869,154664
+ABCA17P,"ATP binding cassette subfamily A member 17, pseudogene",16p13.3,pseudogene,pseudogene,ENSG00000238098,650655
+ABCB1,ATP binding cassette subfamily B member 1,7q21.12,gene with protein product,protein-coding gene,ENSG00000085563,5243
+ABCB4,ATP binding cassette subfamily B member 4,7q21.12,gene with protein product,protein-coding gene,ENSG00000005471,5244
+ABCB5,ATP binding cassette subfamily B member 5,7p21.1,gene with protein product,protein-coding gene,ENSG00000004846,340273
+ABCB6,ATP binding cassette subfamily B member 6 (Langereis blood group),2q35,gene with protein product,protein-coding gene,ENSG00000115657,10058
+ABCB7,ATP binding cassette subfamily B member 7,Xq13.3,gene with protein product,protein-coding gene,ENSG00000131269,22
+ABCB8,ATP binding cassette subfamily B member 8,7q36.1,gene with protein product,protein-coding gene,ENSG00000197150,11194
+ABCB9,ATP binding cassette subfamily B member 9,12q24.31,gene with protein product,protein-coding gene,ENSG00000150967,23457
+ABCB10,ATP binding cassette subfamily B member 10,1q42.13,gene with protein product,protein-coding gene,ENSG00000135776,23456
+ABCB10P1,ABCB10 pseudogene 1,15q11.2,pseudogene,pseudogene,ENSG00000274099,56476
+ABCB10P3,ABCB10 pseudogene 3,15q13.1,pseudogene,pseudogene,ENSG00000261524,728248
+ABCB10P4,ABCB10 pseudogene 4,15q13.1,pseudogene,pseudogene,ENSG00000260053,100132289
+ABCB11,ATP binding cassette subfamily B member 11,2q31.1,gene with protein product,protein-coding gene,ENSG00000073734,8647
+ABCC1,ATP binding cassette subfamily C member 1,16p13.11,gene with protein product,protein-coding gene,ENSG00000103222,4363
+ABCC2,ATP binding cassette subfamily C member 2,10q24.2,gene with protein product,protein-coding gene,ENSG00000023839,1244
+ABCC3,ATP binding cassette subfamily C member 3,17q21.33,gene with protein product,protein-coding gene,ENSG00000108846,8714
+ABCC4,ATP binding cassette subfamily C member 4,13q32.1,gene with protein product,protein-coding gene,ENSG00000125257,10257
+ABCC5,ATP binding cassette subfamily C member 5,3q27.1,gene with protein product,protein-coding gene,ENSG00000114770,10057
+ABCC5-AS1,ABCC5 antisense RNA 1,3q27.1,"RNA, long non-coding",non-coding RNA,ENSG00000223882,
+ABCC6,ATP binding cassette subfamily C member 6,16p13.11,gene with protein product,protein-coding gene,ENSG00000091262,368
+ABCC6P1,ATP binding cassette subfamily C member 6 pseudogene 1,16p12.3,pseudogene,pseudogene,ENSG00000256340,653190
+ABCC6P2,ATP binding cassette subfamily C member 6 pseudogene 2,16p13.11,pseudogene,pseudogene,ENSG00000255277,730013
+ABCC8,ATP binding cassette subfamily C member 8,11p15.1,gene with protein product,protein-coding gene,ENSG00000006071,6833
+ABCC9,ATP binding cassette subfamily C member 9,12p12.1,gene with protein product,protein-coding gene,ENSG00000069431,10060
+ABCC10,ATP binding cassette subfamily C member 10,6p21.1,gene with protein product,protein-coding gene,ENSG00000124574,89845
+ABCC11,ATP binding cassette subfamily C member 11,16q12.1,gene with protein product,protein-coding gene,ENSG00000121270,85320
+ABCC12,ATP binding cassette subfamily C member 12,16q12.1,gene with protein product,protein-coding gene,ENSG00000140798,94160
+ABCC13,ATP binding cassette subfamily C member 13 (pseudogene),21q11.2,pseudogene,pseudogene,ENSG00000243064,150000
+ABCD1,ATP binding cassette subfamily D member 1,Xq28,gene with protein product,protein-coding gene,ENSG00000101986,215
+ABCD1P1,ATP binding cassette subfamily D member 1 pseudogene 1,2p11.2,pseudogene,pseudogene,,23785
+ABCD1P2,ATP binding cassette subfamily D member 1 pseudogene 2,10p11.1,pseudogene,pseudogene,ENSG00000215151,26983
+ABCD1P3,ATP binding cassette subfamily D member 1 pseudogene 3,16p11.2,pseudogene,pseudogene,ENSG00000261233,26982
+ABCD1P4,ATP binding cassette subfamily D member 1 pseudogene 4,22q11.1,pseudogene,pseudogene,ENSG00000225293,26957
+ABCD1P5,ATP binding cassette subfamily D member 1 pseudogene 5,2p11.1,pseudogene,pseudogene,ENSG00000214330,642762
+ABCD2,ATP binding cassette subfamily D member 2,12q12,gene with protein product,protein-coding gene,ENSG00000173208,225
+ABCD3,ATP binding cassette subfamily D member 3,1p21.3,gene with protein product,protein-coding gene,ENSG00000117528,5825
+ABCD4,ATP binding cassette subfamily D member 4,14q24.3,gene with protein product,protein-coding gene,ENSG00000119688,5826
+ABCE1,ATP binding cassette subfamily E member 1,4q31.21,gene with protein product,protein-coding gene,ENSG00000164163,6059
+ABCF1,ATP binding cassette subfamily F member 1,6p21.33,gene with protein product,protein-coding gene,ENSG00000204574,23
+ABCF1-DT,ABCF1 divergent transcript,6p21.33,"RNA, long non-coding",non-coding RNA,,107986587
+ABCF2,ATP binding cassette subfamily F member 2,7q36.1,gene with protein product,protein-coding gene,ENSG00000033050,10061
+ABCF2P1,ATP binding cassette subfamily F member 2 pseudogene 1,3p11.1,pseudogene,pseudogene,ENSG00000242159,344653
+ABCF2P2,ATP binding cassette subfamily F member 2 pseudogene 2,7q11.22,pseudogene,pseudogene,ENSG00000228769,100422059
+ABCF3,ATP binding cassette subfamily F member 3,3q27.1,gene with protein product,protein-coding gene,ENSG00000161204,55324

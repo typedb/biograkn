@@ -44,9 +44,16 @@ assemble_zip(
 )
 
 java_test(
-      name = "migrator-test",
-      test_class = "grakn.biograkn.migrator.MigratorTest",
-      srcs = ["MigratorTest.java"],
-#      deps = [":migrator"],
+    name = "migrator-test",
+    test_class = "grakn.biograkn.migrator.AssembleMockTest",
+    srcs = ["AssembleMockTest.java"],
+    deps = [
+        "//precisionmedicine/migrator",
+        "@graknlabs_client_java//:client-java",
+        "@graknlabs_grakn_core//concept:concept",
+        "@graknlabs_grakn_core//common:common",
+        "@graknlabs_graql//java:graql",
+        "@graknlabs_grakn_core//api:api",
+    ],
   )
 

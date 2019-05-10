@@ -1,0 +1,101 @@
+﻿snpId,chromosome,position,DSI,DPI,diseaseId,diseaseName,diseaseType,diseaseClass,diseaseSemanticType,score,EI,YearInitial,YearFinal,NofPmids,source
+rs1000005,21,33060745,,,C0200638,Eosinophil count procedure,phenotype,,Laboratory Procedure,0.7,,2017,2017,1,GWASCAT
+rs1000005,21,33060745,,,C0750879,Eosinophil count result,phenotype,,Laboratory or Test Result,0.7,,2017,2017,1,GWASCAT
+rs10001106,4,10125817,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2009,2013,4,GWASDB
+rs1000113,5,150860514,0.923,0.036,C0010346,Crohn Disease,disease,C06,Disease or Syndrome,0.84,1,2007,2016,1,GWASCAT;GWASDB
+rs10001632,4,10520247,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2013,2013,1,GWASDB
+rs10001964,4,9957651,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2009,2013,3,GWASDB
+rs10002082,4,164159753,,,C0018810,heart rate,phenotype,,Clinical Attribute,0.7,,2018,2018,1,GWASCAT
+rs10002268,4,55653725,1,0.071,C0152018,Esophageal carcinoma,disease,,Neoplastic Process,0.7,,2011,2011,1,GWASDB
+rs1000291485,2,43844563,1,0.107,C0342907,Sitosterolemia,disease,C06;C16;C18,Congenital Abnormality,0.7,,,,0,CLINVAR
+rs10002984,4,9679109,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2011,2013,2,GWASDB
+rs10003001,4,9982851,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2009,2013,4,GWASDB
+rs10003864,4,10435767,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2009,2013,3,GWASDB
+rs10004195,4,38783103,0.801,0.214,C0020517,Hypersensitivity,group,C20,Pathologic Function,0.7,,2013,2013,1,GWASDB
+rs10005067,4,87931491,,,C0005938,Bone Density,phenotype,,Clinical Attribute,0.7,,2018,2018,1,GWASCAT
+rs10005684,4,9625273,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2011,2013,2,GWASDB
+rs1000579,4,4717767,1,0.071,C0001973,"Alcoholic Intoxication, Chronic",disease,C25;F03,Mental or Behavioral Dysfunction,0.8,,2012,2017,2,GWASCAT;GWASDB
+rs1000597,7,30897563,0.923,0.107,C0392525,Nephrolithiasis,disease,C12;C13,Disease or Syndrome,0.82,1,2012,2014,1,GWASCAT;GWASDB
+rs10006397,4,10034516,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2009,2013,4,GWASDB
+rs1000662,11,64466347,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2011,2013,2,GWASDB
+rs1000668,9,72790943,1,0.036,C0007137,Squamous cell carcinoma,disease,C04,Neoplastic Process,0.7,,2012,2012,1,GWASDB
+rs10007052,4,141084419,1,0.036,C0024117,Chronic Obstructive Airway Disease,disease,C08,Disease or Syndrome,0.71,1,2013,2015,1,GWASCAT
+rs10007052,4,141084419,1,0.036,C3536958,Surfactant protein D measurement,phenotype,,Laboratory Procedure,0.7,,2013,2013,1,GWASDB
+rs10007186,4,78667891,,,C0202202,Protein measurement,group,,Laboratory Procedure,0.7,,2012,2012,1,GWASDB
+rs10007469,4,9731119,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2011,2011,1,GWASDB
+rs10007754,4,103706285,,,C1314691,Age at menarche,phenotype,,Finding,0.7,,2010,2010,1,GWASDB
+rs1000778,11,61887833,,,C0202177,Phospholipid measurement,phenotype,,Laboratory Procedure,0.7,,2011,2011,1,GWASDB
+rs1000778,11,61887833,,,C1611184,Calcification of coronary artery,phenotype,,Pathologic Function,0.7,,2012,2012,1,GWASDB
+rs1000791,17,79269796,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2016,2016,1,GWASCAT
+rs10008035,4,9997711,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2009,2013,3,GWASDB
+rs10008492,4,38764099,1,0.107,C0020517,Hypersensitivity,group,C20,Pathologic Function,0.7,,2013,2013,1,GWASDB
+rs1000879,2,218439407,,,C0202236,Triglycerides measurement,phenotype,,Laboratory Procedure,0.7,,2012,2012,1,GWASDB
+rs1000879,2,218439407,,,C0392885,High density lipoprotein measurement,phenotype,,Laboratory Procedure,0.7,,2012,2012,1,GWASDB
+rs10009124,4,136173594,,,C1955260,Female fertility,phenotype,,Clinical Attribute,0.7,,2015,2015,1,GWASCAT
+rs1000940,17,5379957,,,C0578022,Finding of body mass index,phenotype,,Finding,0.7,,2015,2015,1,GWASCAT
+rs1000940,17,5379957,,,C1305855,Body mass index,phenotype,,Clinical Attribute,0.7,,2015,2015,1,GWASCAT
+rs10009409,4,72989536,1,0.071,C0600139,Prostate carcinoma,disease,,Neoplastic Process,0.7,,2014,2014,1,GWASCAT
+rs10009493,4,10130423,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2009,2013,3,GWASDB
+rs10009618,4,88172856,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2009,2013,4,GWASDB
+rs1000990130,12,76346999,1,0.071,C1859568,BARDET-BIEDL SYNDROME 10,disease,C10;C16,Disease or Syndrome,0.7,,2006,2010,2,UNIPROT
+rs1001007,3,46387167,0.821,0.107,C0008313,"Cholangitis, Sclerosing",disease,C06,Disease or Syndrome,0.7,,2017,2017,1,GWASCAT
+rs1001007,3,46387167,0.821,0.107,C0009324,Ulcerative Colitis,disease,C06,Disease or Syndrome,0.7,,2017,2017,1,GWASCAT
+rs1001007,3,46387167,0.821,0.107,C0010346,Crohn Disease,disease,C06,Disease or Syndrome,0.7,,2017,2017,1,GWASCAT
+rs1001007,3,46387167,0.821,0.107,C0033860,Psoriasis,disease,C17,Disease or Syndrome,0.7,,2017,2017,1,GWASCAT
+rs1001007,3,46387167,0.821,0.107,C0038013,Ankylosing spondylitis,disease,C05,Disease or Syndrome,0.7,,2017,2017,1,GWASCAT
+rs10010325,4,105185196,1,0.036,C0005890,Body Height,phenotype,,Organism Attribute,0.8,,2010,2010,1,GWASCAT;GWASDB
+rs10010325,4,105185196,1,0.036,C0009324,Ulcerative Colitis,disease,C06,Disease or Syndrome,0.7,,2016,2016,1,GWASCAT
+rs10010325,4,105185196,1,0.036,C0021704,Intelligence,phenotype,F01,Mental Process,0.7,,2018,2018,1,GWASCAT
+rs10010656,4,10244703,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2009,2013,3,GWASDB
+rs10011206,4,9990331,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2009,2013,3,GWASDB
+rs1001159,9,36728588,,,C1611184,Calcification of coronary artery,phenotype,,Pathologic Function,0.7,,2013,2013,1,GWASDB
+rs10011621,4,9758615,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2011,2013,2,GWASDB
+rs10011796,4,88169725,1,0.107,C0018099,Gout,disease,C05;C16;C18,Disease or Syndrome,0.7,,2015,2015,1,GWASCAT
+rs10011796,4,88169725,1,0.107,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.8,,2009,2015,5,GWASCAT;GWASDB
+rs1001216,4,10167225,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2009,2013,3,GWASDB
+rs1001217,4,10167375,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2009,2013,3,GWASDB
+rs10012282,4,176155096,,,C0917801,Sleeplessness,phenotype,C10;F03,Sign or Symptom,0.7,,2018,2018,1,GWASCAT
+rs10012288,4,10139329,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2009,2013,3,GWASDB
+rs10012779,4,10036488,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2009,2013,3,GWASDB
+rs10013288,4,9557597,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2011,2013,2,GWASDB
+rs10013443,4,168685769,1,0.071,C0027404,Narcolepsy,disease,C10;F03,Disease or Syndrome,0.7,,2009,2009,1,GWASDB
+rs1001494,1,112567997,,,C0200665,Platelet mean volume determination (procedure),phenotype,,Laboratory Procedure,0.7,,2017,2017,1,GWASCAT
+rs1001528,15,40421575,,,C0206062,"Lung Diseases, Interstitial",group,C08,Disease or Syndrome,0.7,,2013,2013,1,GWASDB
+rs10015415,4,89007052,,,C0016529,Forced expiratory volume function,phenotype,,Organ or Tissue Function,0.7,,2016,2016,1,GWASCAT
+rs10015494,4,10140366,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2009,2013,3,GWASDB
+rs10015639,4,86970413,,,C0369183,Erythrocyte Mean Corpuscular Hemoglobin Test,phenotype,,Laboratory Procedure,0.7,,2012,2012,1,GWASDB
+rs10015639,4,86970413,,,C1261502,Finding of Mean Corpuscular Hemoglobin,phenotype,,Finding,0.7,,2012,2012,1,GWASDB
+rs10015872,4,10140786,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2009,2013,3,GWASDB
+rs10015979,4,3107715,1,0.107,C0020179,Huntington Disease,disease,C10;C16;F03,Disease or Syndrome,0.7,,2012,2012,1,GWASDB
+rs10016022,4,10445282,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2009,2013,3,GWASDB
+rs10016702,4,10446016,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2011,2013,2,GWASDB
+rs1001684,5,40810324,1,0.036,C0036341,Schizophrenia,disease,F03,Mental or Behavioral Dysfunction,0.7,,2012,2012,1,GWASDB
+rs10017305,4,10399599,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2009,2013,3,GWASDB
+rs10017447,4,10173912,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2009,2011,2,GWASDB
+rs10017674,4,9965429,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2009,2013,3,GWASDB
+rs10018204,4,9962946,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2009,2013,3,GWASDB
+rs10018448,4,88304019,,,C1611184,Calcification of coronary artery,phenotype,,Pathologic Function,0.7,,2012,2012,1,GWASDB
+rs10019555,4,103694124,,,C1314691,Age at menarche,phenotype,,Finding,0.7,,2010,2010,1,GWASDB
+rs10019658,4,34423326,1,0.036,C0017601,Glaucoma,disease,C11,Disease or Syndrome,0.7,,2012,2012,1,GWASDB
+rs10019681,4,88911381,,,C0016529,Forced expiratory volume function,phenotype,,Organ or Tissue Function,0.7,,2016,2016,1,GWASCAT
+rs10019835,4,155712034,1,0.107,C0011881,Diabetic Nephropathy,disease,C12;C13;C19,Disease or Syndrome,0.7,,2016,2016,1,GWASCAT
+rs10019888,4,26061368,,,C0392885,High density lipoprotein measurement,phenotype,,Laboratory Procedure,0.8,,2014,2014,1,GWASCAT;GWASDB
+rs10020053,4,9820024,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2011,2011,1,GWASDB
+rs1002054,14,55062195,,,C0202202,Protein measurement,group,,Laboratory Procedure,0.7,,2012,2012,1,GWASDB
+rs10020887,4,10139127,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2009,2013,3,GWASDB
+rs1002088882,16,16219834,1,0.143,C0033847,Pseudoxanthoma Elasticum,disease,C14;C15;C16;C17,Disease or Syndrome,0.7,,,,0,CLINVAR
+rs10021465,4,88829210,,,C0016529,Forced expiratory volume function,phenotype,,Organ or Tissue Function,0.7,,2010,2010,1,GWASDB
+rs10022012,4,9691558,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2011,2013,2,GWASDB
+rs10022462,4,88322666,1,0.071,C0678222,Breast Carcinoma,disease,C04;C17,Neoplastic Process,0.7,,2018,2018,1,GWASCAT
+rs10022499,4,10004913,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2009,2013,4,GWASDB
+rs10022911,4,10138927,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2009,2013,3,GWASDB
+rs10023020,4,121803449,,,C0369183,Erythrocyte Mean Corpuscular Hemoglobin Test,phenotype,,Laboratory Procedure,0.7,,2012,2012,1,GWASDB
+rs10023020,4,121803449,,,C1261502,Finding of Mean Corpuscular Hemoglobin,phenotype,,Finding,0.7,,2012,2012,1,GWASDB
+rs10023050,4,87143279,,,C0369183,Erythrocyte Mean Corpuscular Hemoglobin Test,phenotype,,Laboratory Procedure,0.7,,2012,2012,1,GWASDB
+rs10023050,4,87143279,,,C1261502,Finding of Mean Corpuscular Hemoglobin,phenotype,,Finding,0.7,,2012,2012,1,GWASDB
+rs10023056,4,87143314,,,C0369183,Erythrocyte Mean Corpuscular Hemoglobin Test,phenotype,,Laboratory Procedure,0.7,,2012,2012,1,GWASDB
+rs10023056,4,87143314,,,C1261502,Finding of Mean Corpuscular Hemoglobin,phenotype,,Finding,0.7,,2012,2012,1,GWASDB
+rs10023068,4,10003208,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2009,2013,4,GWASDB
+rs10023113,4,113625548,1,0.071,C0007131,Non-Small Cell Lung Carcinoma,disease,C04;C08,Neoplastic Process,0.71,1,2015,2015,1,GWASCAT
+rs10023177,4,10243331,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2009,2013,3,GWASDB
+rs10023457,4,88213552,,,C0202239,Uric acid measurement (procedure),phenotype,,Laboratory Procedure,0.7,,2013,2013,1,GWASDB

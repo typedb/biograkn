@@ -1,0 +1,147 @@
+<clinical_study>
+  <!-- This xml conforms to an XML Schema at:
+    https://clinicaltrials.gov/ct2/html/images/info/public.xsd -->
+  <required_header>
+    <download_date>ClinicalTrials.gov processed this data on February 12, 2019</download_date>
+    <link_text>Link to the current ClinicalTrials.gov record.</link_text>
+    <url>https://clinicaltrials.gov/show/NCT00000152</url>
+  </required_header>
+  <id_info>
+    <org_study_id>NEI-54</org_study_id>
+    <nct_id>NCT00000152</nct_id>
+  </id_info>
+  <brief_title>Randomized Trial of Beta-Carotene and Macular Degeneration</brief_title>
+  <sponsors>
+    <lead_sponsor>
+      <agency>National Eye Institute (NEI)</agency>
+      <agency_class>NIH</agency_class>
+    </lead_sponsor>
+  </sponsors>
+  <source>National Eye Institute (NEI)</source>
+  <brief_summary>
+    <textblock>
+      To determine whether 50 mg of beta-carotene taken every other day reduces the risk of
+      developing age-related macular degeneration (AMD) among male U.S. physicians who were aged 40
+      to 84 in 1982.
+
+      To investigate the possible relationship of AMD with other antioxidants, including selenium
+      and vitamins A, C, and E.
+
+      To identify potential risk factors for development of AMD. Possible risk factors include
+      height, systemic hypertension, cardiovascular disease, blood cholesterol, cigarette smoking,
+      iris and skin color, sunlight exposure, body mass index, diabetes, and alcohol intake.
+    </textblock>
+  </brief_summary>
+  <detailed_description>
+    <textblock>
+      Macular degeneration, a major cause of blindness in the United States, is the leading cause
+      of new cases of blindness in people aged 65 and older. The National Eye Institute estimates
+      that each year an additional 165,000 people, mainly in the older age groups, develop macular
+      disease. Among all people with macular degeneration, approximately 116,000 are affected by
+      the neovascular form of the disease. Although laser treatment is an effective treatment for
+      patients with certain forms of neovascular membranes (exudative AMD), for most patients there
+      is no available treatment.
+
+      The pathogenesis of AMD is only partly understood, and its etiology remains obscure. The
+      Retinal and Choroidal Diseases Panel of the National Advisory Eye Council has stated that
+      &quot;none of the fundamental causes of any type of macular disease is known, and none can be
+      prevented.&quot; Thus, this panel recommended that one of the NEI's program development priorities
+      should be to &quot;initiate epidemiologic studies of macular diseases to identify possible
+      causative, protective, or aggravating factors.&quot;
+
+      This trial is part of the Physicians Health Study, sponsored by the National Heart, Lung, and
+      Blood Institute (NHLBI) of the National Institutes of Health, with funding for eye
+      epidemiologic data evaluations provided by the NEI. It is an ongoing, randomized,
+      placebo-controlled trial of aspirin in the prevention of cardiovascular mortality and of
+      beta-carotene in the prevention of cancer. Following randomization, each of the 22,071
+      physicians enrolled was assigned to one of four groups to take either aspirin or its placebo
+      and beta-carotene or its placebo. Followup questionnaires are sent 6 and 12 months after
+      randomization and every 12 months thereafter. The average length of followup is now greater
+      than 12 years.
+
+      The hypothesis that beta-carotene levels are inversely related to AMD is supported by
+      experimental studies on the relationship between antioxidants and retinal morphology and
+      function. There is increasing evidence that visible and ultraviolet light can damage the
+      retina through production of superoxide radicals. Antioxidants (including beta-carotene,
+      vitamins A, E, and C, and selenium) protect against oxidative damage by acting as scavengers
+      for the superoxide radicals.
+
+      Epidemiologic data from the first National Health and Nutrition Examination Survey (NHANES-1)
+      are also consistent with a link between antioxidants and AMD; the frequency of consumption of
+      fruits and vegetables rich in vitamin A (beta-carotene) was negatively correlated with AMD
+      after adjustment for demographic and medical factors.
+
+      Data from this study will determine whether one 50-mg beta-carotene capsule taken on
+      alternate days protects against the development of AMD and whether additional risk factors
+      emerge after simultaneous controlling for other potential confounding factors.
+
+      Reported diagnoses of AMD are confirmed by medical record review. The primary analysis will
+      be a comparison of incidence of reported AMD in the beta-carotene and placebo groups. The Cox
+      proportional hazards model will also be used to determine whether there is a difference in
+      time to diagnosis of AMD between the two groups.
+    </textblock>
+  </detailed_description>
+  <overall_status>Unknown status</overall_status>
+  <last_known_status>Active, not recruiting</last_known_status>
+  <start_date>April 1982</start_date>
+  <phase>Phase 3</phase>
+  <study_type>Interventional</study_type>
+  <has_expanded_access>No</has_expanded_access>
+  <study_design_info>
+    <allocation>Randomized</allocation>
+    <primary_purpose>Prevention</primary_purpose>
+  </study_design_info>
+  <condition>Macular Degeneration</condition>
+  <intervention>
+    <intervention_type>Drug</intervention_type>
+    <intervention_name>Aspirin</intervention_name>
+  </intervention>
+  <intervention>
+    <intervention_type>Drug</intervention_type>
+    <intervention_name>Beta-Carotene</intervention_name>
+  </intervention>
+  <eligibility>
+    <criteria>
+      <textblock>
+        When the Physicians Health Study was established in the early 1980s by the NHLBI to collect
+        data on a stable population at risk for heart attack, only male physicians were studied
+        because males were thought to be at higher risk than females for ischemic heart problems.
+        The study population consists of 22,071 male U.S. physicians who were aged 40 to 84 years
+        in 1982. The subjects have no history of myocardial infarction, cancer, kidney disease,
+        renal disease, or any other contraindication to the use of aspirin or beta-carotene,
+        including regular use of corticosteroids.
+      </textblock>
+    </criteria>
+    <gender>Male</gender>
+    <minimum_age>40 Years</minimum_age>
+    <maximum_age>84 Years</maximum_age>
+    <healthy_volunteers>Accepts Healthy Volunteers</healthy_volunteers>
+  </eligibility>
+  <verification_date>September 2001</verification_date>
+  <!-- For several months we've had both old and new date name tags                             -->
+  <!-- Now, the old date names have been dropped.                                               -->
+  <!-- The new date name replacements are:                                                      -->
+  <!--     OLD (gone)                                        NEW (in use)                       -->
+  <!--   lastchanged_date                         becomes   last_update_submitted               -->
+  <!--   firstreceived_date                       becomes   study_first_submitted               -->
+  <!--   firstreceived_results_date               becomes   results_first_submitted             -->
+  <!--   firstreceived_results_disposition_date   becomes   disposition_first_submitted         -->
+  <study_first_submitted>September 23, 1999</study_first_submitted>
+  <study_first_submitted_qc>September 23, 1999</study_first_submitted_qc>
+  <study_first_posted type="Estimate">September 24, 1999</study_first_posted>
+  <last_update_submitted>June 23, 2005</last_update_submitted>
+  <last_update_submitted_qc>June 23, 2005</last_update_submitted_qc>
+  <last_update_posted type="Estimate">June 24, 2005</last_update_posted>
+  <keyword>Age-Related Macular Degeneration</keyword>
+  <condition_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Macular Degeneration</mesh_term>
+  </condition_browse>
+  <intervention_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Carotenoids</mesh_term>
+    <mesh_term>Beta Carotene</mesh_term>
+  </intervention_browse>
+  <!-- Results have not yet been posted for this study                                          -->
+</clinical_study>
+

@@ -1,0 +1,132 @@
+<clinical_study>
+  <!-- This xml conforms to an XML Schema at:
+    https://clinicaltrials.gov/ct2/html/images/info/public.xsd -->
+  <required_header>
+    <download_date>ClinicalTrials.gov processed this data on February 12, 2019</download_date>
+    <link_text>Link to the current ClinicalTrials.gov record.</link_text>
+    <url>https://clinicaltrials.gov/show/NCT00000119</url>
+  </required_header>
+  <id_info>
+    <org_study_id>NEI-15</org_study_id>
+    <nct_id>NCT00000119</nct_id>
+  </id_info>
+  <brief_title>Safety and Efficacy of a Heparin-Coated Intraocular Lens in Uveitis</brief_title>
+  <sponsors>
+    <lead_sponsor>
+      <agency>National Eye Institute (NEI)</agency>
+      <agency_class>NIH</agency_class>
+    </lead_sponsor>
+  </sponsors>
+  <source>National Eye Institute (NEI)</source>
+  <brief_summary>
+    <textblock>
+      To investigate the safety and efficacy of a heparin surface-modified intraocular lens in
+      patients with uveitis undergoing cataract surgery.
+
+      To evaluate the safety and efficacy of intraocular lens implantation in patients with severe
+      uveitis.
+    </textblock>
+  </brief_summary>
+  <detailed_description>
+    <textblock>
+      Patients with uveitis are at high risk for significant complications following cataract
+      surgery with intraocular lens implantation. Complications may result from the surgery itself
+      or may develop after surgery as a result of the intraocular lens. Complications related to
+      intraocular lens implantation include iris adhesions to the intraocular lens, which can
+      result in lens capture; cellular deposits on the surface of the lens that can obscure vision;
+      and uveitis. Recent studies have identified giant cells on the anterior surface of
+      intraocular lenses in some patients with uveitis, appearing to indicate an intraocular
+      lens-induced inflammatory response. Some of these patients have required multiple YAG laser
+      procedures to remove these deposits.
+
+      Modification of the surface of the intraocular lens with a layer of heparin may provide a
+      more biocompatible surface. Preclinical studies have shown a reduction in the degree of
+      postoperative complications with the heparin surface-modified intraocular lens compared with
+      an unmodified lens. Although retrospective case series have examined the use of heparin
+      surface-modified intraocular lenses in patients with uveitis, a randomized, controlled
+      clinical trial has not been performed.
+
+      This is a randomized clinical trial examining the safety and efficacy of the heparin
+      surface-modified intraocular lens in patients with uveitis. Eighty patients with a history of
+      uveitis in an eye requiring cataract surgery will be randomized to receive a heparin
+      surface-modified intraocular lens or the same model of intraocular lens without surface
+      modification. The primary end point of the study will be the development of cellular deposits
+      on the anterior surface of the intraocular lens 1 year after surgery. These cellular deposits
+      will be assessed by a masked grader using standard photographs. Secondary end points will
+      include visual acuity, intraocular inflammation, development of anterior and posterior
+      synechiae, and corneal endothelial cell counts.
+    </textblock>
+  </detailed_description>
+  <overall_status>Unknown status</overall_status>
+  <last_known_status>Active, not recruiting</last_known_status>
+  <start_date>March 1994</start_date>
+  <phase>Phase 2</phase>
+  <study_type>Interventional</study_type>
+  <has_expanded_access>No</has_expanded_access>
+  <study_design_info>
+    <allocation>Randomized</allocation>
+    <primary_purpose>Treatment</primary_purpose>
+  </study_design_info>
+  <condition>Cataract</condition>
+  <condition>Uveitis</condition>
+  <intervention>
+    <intervention_type>Device</intervention_type>
+    <intervention_name>Heparin Surface-Modified Intraocular Lens</intervention_name>
+  </intervention>
+  <eligibility>
+    <criteria>
+      <textblock>
+        Women and men 18 years or older with a documented history of uveitis in an eye requiring
+        cataract surgery are eligible for the study. In all patients, the eye must be free of
+        active inflammation for at least 3 months before surgery, with or without anti-inflammatory
+        medications. Exclusion criteria include corneal pathology or hazy media that preclude
+        evaluation of the intraocular lens, uncontrolled glaucoma, and diabetes mellitus. Monocular
+        patients and patients who cannot be followed for at least 1 year are also excluded.
+      </textblock>
+    </criteria>
+    <gender>All</gender>
+    <minimum_age>18 Years</minimum_age>
+    <maximum_age>N/A</maximum_age>
+  </eligibility>
+  <location>
+    <facility>
+      <name>National Institutes of Health</name>
+      <address>
+        <city>Bethesda</city>
+        <state>Maryland</state>
+        <zip>20892-1858</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location_countries>
+    <country>United States</country>
+  </location_countries>
+  <verification_date>September 1999</verification_date>
+  <!-- For several months we've had both old and new date name tags                             -->
+  <!-- Now, the old date names have been dropped.                                               -->
+  <!-- The new date name replacements are:                                                      -->
+  <!--     OLD (gone)                                        NEW (in use)                       -->
+  <!--   lastchanged_date                         becomes   last_update_submitted               -->
+  <!--   firstreceived_date                       becomes   study_first_submitted               -->
+  <!--   firstreceived_results_date               becomes   results_first_submitted             -->
+  <!--   firstreceived_results_disposition_date   becomes   disposition_first_submitted         -->
+  <study_first_submitted>September 23, 1999</study_first_submitted>
+  <study_first_submitted_qc>September 23, 1999</study_first_submitted_qc>
+  <study_first_posted type="Estimate">September 24, 1999</study_first_posted>
+  <last_update_submitted>June 23, 2005</last_update_submitted>
+  <last_update_submitted_qc>June 23, 2005</last_update_submitted_qc>
+  <last_update_posted type="Estimate">June 24, 2005</last_update_posted>
+  <condition_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Cataract</mesh_term>
+    <mesh_term>Uveitis</mesh_term>
+  </condition_browse>
+  <intervention_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Calcium heparin</mesh_term>
+    <mesh_term>Heparin</mesh_term>
+  </intervention_browse>
+  <!-- Results have not yet been posted for this study                                          -->
+</clinical_study>
+

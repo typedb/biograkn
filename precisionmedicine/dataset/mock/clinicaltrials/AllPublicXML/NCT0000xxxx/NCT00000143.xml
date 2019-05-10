@@ -1,0 +1,709 @@
+<clinical_study>
+  <!-- This xml conforms to an XML Schema at:
+    https://clinicaltrials.gov/ct2/html/images/info/public.xsd -->
+  <required_header>
+    <download_date>ClinicalTrials.gov processed this data on February 12, 2019</download_date>
+    <link_text>Link to the current ClinicalTrials.gov record.</link_text>
+    <url>https://clinicaltrials.gov/show/NCT00000143</url>
+  </required_header>
+  <id_info>
+    <org_study_id>NEI-42</org_study_id>
+    <nct_id>NCT00000143</nct_id>
+  </id_info>
+  <brief_title>Studies of Ocular Complications of AIDS (SOCA)--Ganciclovir-Cidofovir CMV Retinitis Trial (GCCRT)</brief_title>
+  <acronym>GCCRT</acronym>
+  <official_title>Studies of Ocular Complications of AIDS (SOCA)--Ganciclovir-Cidofovir CMV Retinitis Trial (GCCRT)</official_title>
+  <sponsors>
+    <lead_sponsor>
+      <agency>Johns Hopkins Bloomberg School of Public Health</agency>
+      <agency_class>Other</agency_class>
+    </lead_sponsor>
+  </sponsors>
+  <source>Johns Hopkins Bloomberg School of Public Health</source>
+  <oversight_info>
+    <has_dmc>Yes</has_dmc>
+  </oversight_info>
+  <brief_summary>
+    <textblock>
+      To compare the newest CMV retinitis drug, cidofovir, with a regimen of the ganciclovir
+      intraocular device plus oral ganciclovir with respect to efficacy in preventing vision loss.
+
+      To compare a treatment regimen that incorporates highly active local therapy (ganciclovir
+      device) with a treatment regimen that does not.
+    </textblock>
+  </brief_summary>
+  <detailed_description>
+    <textblock>
+      Cytomegalovirus (CMV) is among the most frequently encountered opportunistic infections in
+      patients with AIDS. In the era of prophylaxis for pneumocystic pneumonia, CMV disease is
+      estimated to affect 45 percent of patients with AIDS sometime between the diagnosis of AIDS
+      and death. Retinitis has been estimated to account for up to 85 percent of CMV disease in
+      these patients, making CMV retinitis the most common ocular infection encountered. CMV
+      retinitis is a relatively late-stage manifestation, associated with cluster of
+      differentiation 4 (CD4) + T-cell counts &lt; 100 cells/µL and often &lt; 50 cells/µL.
+
+      All currently available treatments for CMV suppress viral replication but do not eliminate
+      the virus from the body. Discontinuation of therapy is associated with a prompt relapse of
+      the retinitis. Despite the use of chronic suppressive therapy, relapse of the retinitis
+      generally occurs, at least with systemically administered anti-CMV drugs.
+
+      The first two treatments approved for CMV retinitis were intravenous ganciclovir and
+      intravenous foscarnet. Both are given by daily intravenous infusions and therefore require
+      central venous catheters. The development of newer treatments has focused not only on
+      efficacious treatments, but also on treatments that do not require central venous catheters.
+      Available treatments now include oral ganciclovir, the ganciclovir intraocular device, and
+      intravenous cidofovir.
+
+      In vitro data suggest that combination therapies are synergistic in inhibiting viral
+      replication; these therapies include a foscarnet-ganciclovir combination and a
+      cidofovir-ganciclovir combination. In the SOCA--CMV Retinitis Retreatment Trial, the
+      combination of intravenous ganciclovir and foscarnet was more effective than either drug
+      alone for the treatment of relapsed retinitis. Therefore, the combination of intermittent
+      intravenous cidofovir and daily oral ganciclovir may be an attractive therapy for relapsed
+      disease because it may provide synergy for controlling both ocular and visceral disease while
+      not necessitating either a central venous catheter or an intraocular surgical procedure.
+
+      The Ganciclovir-Cidofovir CMV Retinitis Trial (GCCRT) is a randomized, multicenter clinical
+      trial. Patients will be assigned to receive one of two regimens: (1) ganciclovir intraocular
+      device plus oral ganciclovir or (2) intravenous cidofovir. The intraocular device will be
+      surgically implanted at baseline and again every 6 to 8 months in eyes with CMV retinitis.
+      Oral ganciclovir is taken at a dose of 1 gram three times daily. Cidofovir will be
+      administered intravenously at 5 mg/kg once weekly for 2 consecutive weeks and once every 2
+      weeks thereafter. If disease progression occurs in patients receiving cidofovir, patients
+      will be given reinduction therapy, and oral ganciclovir at a dose of 1 gram three times per
+      day will be added to the treatment. If patients assigned to cidofovir are unable to tolerate
+      that regimen, an alternative systemic regimen will be recommended.
+
+      Study outcome variables include a decrease of three or more lines from baseline in best
+      corrected visual acuity and rate of visual field loss. The study will also assess other
+      variables including mortality, blood CMV and HIV load, quality of life, and medical costs.
+
+      Treatment assignment will not be masked to either patients or clinicians; however, reading of
+      fundus photographs to determine both change in retinal involvement and progression will be
+      masked.
+    </textblock>
+  </detailed_description>
+  <overall_status>Completed</overall_status>
+  <start_date>May 1997</start_date>
+  <completion_date type="Actual">June 2000</completion_date>
+  <primary_completion_date type="Actual">June 2000</primary_completion_date>
+  <phase>Phase 3</phase>
+  <study_type>Interventional</study_type>
+  <has_expanded_access>No</has_expanded_access>
+  <study_design_info>
+    <allocation>Randomized</allocation>
+    <intervention_model>Parallel Assignment</intervention_model>
+    <primary_purpose>Treatment</primary_purpose>
+    <masking>None (Open Label)</masking>
+  </study_design_info>
+  <primary_outcome>
+    <measure>Survival</measure>
+    <time_frame>3 years</time_frame>
+  </primary_outcome>
+  <number_of_arms>2</number_of_arms>
+  <enrollment type="Actual">61</enrollment>
+  <condition>Cytomegalovirus Retinitis</condition>
+  <condition>HIV Infections</condition>
+  <arm_group>
+    <arm_group_label>Ganciclovir implant and oral ganciclovir</arm_group_label>
+    <arm_group_type>Experimental</arm_group_type>
+    <description>Ganciclovir device and oral dose of Ganciclovir 1 gm three times daily</description>
+  </arm_group>
+  <arm_group>
+    <arm_group_label>Cidofovir IV (Intravenous)</arm_group_label>
+    <arm_group_type>Experimental</arm_group_type>
+    <description>cidofovir intravenous (IV) start off with 5 mg/kg once weekly for two doses then followed by 5 mg/kg every other week</description>
+  </arm_group>
+  <intervention>
+    <intervention_type>Device</intervention_type>
+    <intervention_name>Ganciclovir implant and oral ganciclovir</intervention_name>
+    <description>oral ganciclovir, 1 gm three times daily</description>
+    <arm_group_label>Ganciclovir implant and oral ganciclovir</arm_group_label>
+    <other_name>Vitraset</other_name>
+  </intervention>
+  <intervention>
+    <intervention_type>Drug</intervention_type>
+    <intervention_name>Cidofovir intravenous</intervention_name>
+    <description>intravenous, 5 mg/kg once weekly for two doses, followed by 5 mg/kg every other week</description>
+    <arm_group_label>Cidofovir IV (Intravenous)</arm_group_label>
+    <other_name>Vistide</other_name>
+  </intervention>
+  <eligibility>
+    <criteria>
+      <textblock>
+        Inclusion criteria:
+
+          -  Age 13 years or older
+
+          -  Diagnosis of AIDS according to current Centers for Disease Control and Prevention
+             (CDC) definition
+
+          -  Diagnosis of active CMV retinitis by a SOCA-certified ophthalmologist (involvement of
+             any zone or amount of retina is allowed)
+
+          -  Best corrected visual acuity of 20/100 or better in at least one eye
+
+          -  At least one lesion 750 cells/µL or greater
+
+          -  Platelet count 50,000 cells/µL or greater
+
+          -  Willingness and ability, with the assistance of a caregiver if necessary to comply
+             with treatment and follow up procedures
+
+          -  Willingness of all men and women of childbearing potential to practice adequate birth
+             control to prevent pregnancies during the study and for 3 months afterwards
+
+          -  Collection of all baseline data within 5 days prior to randomization
+
+          -  Signed consent statement
+
+        Exclusion criteria:
+
+          -  Media opacities that preclude visualization of the fundus of all otherwise eligible
+             eyes
+
+          -  Treatment for CMV retinitis with the ganciclovir intraocular implant within 9 months
+             of study entry
+
+          -  Medical problems or drug or alcohol abuse sufficient to hinder adherence to treatment
+             or follow up procedures
+
+          -  Unwillingness to refrain from breast-feeding during the study and for 3 months
+             afterwards
+      </textblock>
+    </criteria>
+    <gender>All</gender>
+    <minimum_age>13 Years</minimum_age>
+    <maximum_age>N/A</maximum_age>
+    <healthy_volunteers>No</healthy_volunteers>
+  </eligibility>
+  <overall_official>
+    <last_name>Douglas Jabs, MD</last_name>
+    <role>Study Chair</role>
+    <affiliation>SOCA Chairman's Office</affiliation>
+  </overall_official>
+  <location>
+    <facility>
+      <name>Department of Ophthalmology, University of California, Irvine</name>
+      <address>
+        <city>Irvine</city>
+        <state>California</state>
+        <zip>92697-4375</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Shiley Eye Center Center, 0946, University of California, San Diego</name>
+      <address>
+        <city>La Jolla</city>
+        <state>California</state>
+        <zip>92093-0946</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>LAC/USC Medical Center, 5P21 Rand Schrader Clinic</name>
+      <address>
+        <city>Los Angeles</city>
+        <state>California</state>
+        <zip>90033</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Jules Stein Eye Institute, University of California, Los Angeles</name>
+      <address>
+        <city>Los Angeles</city>
+        <state>California</state>
+        <zip>90095-7003</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Beckman Vision Center, University of California, San Francisco</name>
+      <address>
+        <city>San Francisco</city>
+        <state>California</state>
+        <zip>94143</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Bascom Palmer Eye Institute, University of Miami</name>
+      <address>
+        <city>Miami</city>
+        <state>Florida</state>
+        <zip>33136</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of South Florida, MDC Box 21</name>
+      <address>
+        <city>Tampa</city>
+        <state>Florida</state>
+        <zip>33612-4799</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>The Emory Clinic, Emory University</name>
+      <address>
+        <city>Atlanta</city>
+        <state>Georgia</state>
+        <zip>30322</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Department of Ophthalmology, Northwestern University</name>
+      <address>
+        <city>Chicago</city>
+        <state>Illinois</state>
+        <zip>60611</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Division of Infectious Diseases, Indiana University, Indianapolis</name>
+      <address>
+        <city>Indianapolis</city>
+        <state>Indiana</state>
+        <zip>46202-2879</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>LSU Eye Center, Louisiana State University Medical Center</name>
+      <address>
+        <city>New Orleans</city>
+        <state>Louisiana</state>
+        <zip>70112</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>The Wilmer Ophthalmological Institute, The Johns Hopkins University School of Medicine</name>
+      <address>
+        <city>Baltimore</city>
+        <state>Maryland</state>
+        <zip>21287-9217</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Harvard/BCH AIDS Clinical Trials Unit, Massachusetts General Hospital</name>
+      <address>
+        <city>Boston</city>
+        <state>Massachusetts</state>
+        <zip>02114</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>UMDNJ-New Jersey Medical School</name>
+      <address>
+        <city>Newark</city>
+        <state>New Jersey</state>
+        <zip>07103-2499</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Department of Ophthalmology, New York University Medical Center</name>
+      <address>
+        <city>New York</city>
+        <state>New York</state>
+        <zip>10016</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Department of Ophthalmology, New York Hospital-Cornell Medical Center</name>
+      <address>
+        <city>New York</city>
+        <state>New York</state>
+        <zip>10021</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Department of Ophthalmology, Mount Sinai School of Medicine</name>
+      <address>
+        <city>New York</city>
+        <state>New York</state>
+        <zip>10029-6574</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of North Carolina at Chapel Hill</name>
+      <address>
+        <city>Chapel Hill</city>
+        <state>North Carolina</state>
+        <zip>27599-7030</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Cullen Eye Institute, Baylor College of Medicine</name>
+      <address>
+        <city>Houston</city>
+        <state>Texas</state>
+        <zip>77030</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location_countries>
+    <country>United States</country>
+  </location_countries>
+  <link>
+    <url>http://www.jhucct.com/soca/default.htm</url>
+    <description>Other Studies of the Ocular Complications of AIDS (SOCA)]</description>
+  </link>
+  <reference>
+    <citation>Studies of Ocular Complications of AIDS Research Group. The AIDS Clinical Trials Group. The ganciclovir implant plus oral ganciclovir versus parenteral cidofovir for the treatment of cytomegalovirus retinitis in patients with acquired immunodeficiency syndrome: The Ganciclovir Cidofovir Cytomegalovirus Retinitis Trial. Am J Ophthalmol. 2001 Apr;131(4):457-67.</citation>
+    <PMID>11292409</PMID>
+  </reference>
+  <reference>
+    <citation>Dunn JP, Van Natta M, Foster G, Kuppermann BD, Martin DF, Zong A, Jabs DA; Studies of Ocular Complications of AIDS Research Group. Complications of ganciclovir implant surgery in patients with cytomegalovirus retinitis: the Ganciclovir Cidofovir Cytomegalovirus Retinitis Trial. Retina. 2004 Feb;24(1):41-50.</citation>
+    <PMID>15076943</PMID>
+  </reference>
+  <verification_date>July 2015</verification_date>
+  <!-- For several months we've had both old and new date name tags                             -->
+  <!-- Now, the old date names have been dropped.                                               -->
+  <!-- The new date name replacements are:                                                      -->
+  <!--     OLD (gone)                                        NEW (in use)                       -->
+  <!--   lastchanged_date                         becomes   last_update_submitted               -->
+  <!--   firstreceived_date                       becomes   study_first_submitted               -->
+  <!--   firstreceived_results_date               becomes   results_first_submitted             -->
+  <!--   firstreceived_results_disposition_date   becomes   disposition_first_submitted         -->
+  <study_first_submitted>September 23, 1999</study_first_submitted>
+  <study_first_submitted_qc>September 23, 1999</study_first_submitted_qc>
+  <study_first_posted type="Estimate">September 24, 1999</study_first_posted>
+  <results_first_submitted>July 1, 2015</results_first_submitted>
+  <results_first_submitted_qc>February 18, 2016</results_first_submitted_qc>
+  <results_first_posted type="Estimate">March 14, 2016</results_first_posted>
+  <last_update_submitted>February 18, 2016</last_update_submitted>
+  <last_update_submitted_qc>February 18, 2016</last_update_submitted_qc>
+  <last_update_posted type="Estimate">March 14, 2016</last_update_posted>
+  <responsible_party>
+    <responsible_party_type>Sponsor</responsible_party_type>
+  </responsible_party>
+  <condition_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>HIV Infections</mesh_term>
+    <mesh_term>Retinitis</mesh_term>
+    <mesh_term>Cytomegalovirus Retinitis</mesh_term>
+  </condition_browse>
+  <intervention_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Ganciclovir</mesh_term>
+    <mesh_term>Cidofovir</mesh_term>
+    <mesh_term>Ganciclovir triphosphate</mesh_term>
+  </intervention_browse>
+  <patient_data>
+    <sharing_ipd>Yes</sharing_ipd>
+  </patient_data>
+
+  <clinical_results>
+
+    <participant_flow>
+      <recruitment_details>June 1997</recruitment_details>
+      <group_list>
+        <group group_id="P1">
+          <title>Ganciclovir Implant and Oral Ganciclovir</title>
+          <description>Ganciclovir device and oral dose of Ganciclovir 1 gm three times daily
+Ganciclovir implant and oral ganciclovir: oral ganciclovir, 1 gm three times daily</description>
+        </group>
+        <group group_id="P2">
+          <title>Cidofovir IV (Intravenous)</title>
+          <description>cidofovir intravenous (IV) start off with 5 mg/kg once weekly for two doses then followed by 5 mg/kg every other week
+Cidofovir intravenous: intravenous, 5 mg/kg once weekly for two doses, followed by 5 mg/kg every other week</description>
+        </group>
+      </group_list>
+      <period_list>
+        <period>
+          <title>Overall Study</title>
+          <milestone_list>
+            <milestone>
+              <title>STARTED</title>
+              <participants_list>
+                <participants group_id="P1" count="31"/>
+                <participants group_id="P2" count="30"/>
+              </participants_list>
+            </milestone>
+            <milestone>
+              <title>COMPLETED</title>
+              <participants_list>
+                <participants group_id="P1" count="31"/>
+                <participants group_id="P2" count="30"/>
+              </participants_list>
+            </milestone>
+            <milestone>
+              <title>NOT COMPLETED</title>
+              <participants_list>
+                <participants group_id="P1" count="0"/>
+                <participants group_id="P2" count="0"/>
+              </participants_list>
+            </milestone>
+          </milestone_list>
+        </period>
+      </period_list>
+    </participant_flow>
+
+    <baseline>
+      <group_list>
+        <group group_id="B1">
+          <title>Ganciclovir Implant and Oral Ganciclovir</title>
+          <description>Ganciclovir device and oral dose of Ganciclovir 1 gm three times daily
+Ganciclovir implant and oral ganciclovir: oral ganciclovir, 1 gm three times daily</description>
+        </group>
+        <group group_id="B2">
+          <title>Cidofovir IV (Intravenous)</title>
+          <description>cidofovir intravenous (IV) start off with 5 mg/kg once weekly for two doses then followed by 5 mg/kg every other week
+Cidofovir intravenous: intravenous, 5 mg/kg once weekly for two doses, followed by 5 mg/kg every other week</description>
+        </group>
+        <group group_id="B3">
+          <title>Total</title>
+          <description>Total of all reporting groups</description>
+        </group>
+      </group_list>
+      <analyzed_list>
+        <analyzed>
+          <units>Participants</units>
+          <scope>Overall</scope>
+          <count_list>
+            <count group_id="B1" value="31"/>
+            <count group_id="B2" value="30"/>
+            <count group_id="B3" value="61"/>
+          </count_list>
+        </analyzed>
+      </analyzed_list>
+      <measure_list>
+        <measure>
+          <title>Age</title>
+          <units>Participants</units>
+          <param>Count of Participants</param>
+          <class_list>
+            <class>
+              <category_list>
+                <category>
+                  <title>&lt;=18 years</title>
+                  <measurement_list>
+                    <measurement group_id="B1" value="0"/>
+                    <measurement group_id="B2" value="0"/>
+                    <measurement group_id="B3" value="0"/>
+                  </measurement_list>
+                </category>
+                <category>
+                  <title>Between 18 and 65 years</title>
+                  <measurement_list>
+                    <measurement group_id="B1" value="31"/>
+                    <measurement group_id="B2" value="30"/>
+                    <measurement group_id="B3" value="61"/>
+                  </measurement_list>
+                </category>
+                <category>
+                  <title>&gt;=65 years</title>
+                  <measurement_list>
+                    <measurement group_id="B1" value="0"/>
+                    <measurement group_id="B2" value="0"/>
+                    <measurement group_id="B3" value="0"/>
+                  </measurement_list>
+                </category>
+              </category_list>
+            </class>
+          </class_list>
+        </measure>
+        <measure>
+          <title>Sex: Female, Male</title>
+          <units>Participants</units>
+          <param>Count of Participants</param>
+          <class_list>
+            <class>
+              <category_list>
+                <category>
+                  <title>Female</title>
+                  <measurement_list>
+                    <measurement group_id="B1" value="7"/>
+                    <measurement group_id="B2" value="5"/>
+                    <measurement group_id="B3" value="12"/>
+                  </measurement_list>
+                </category>
+                <category>
+                  <title>Male</title>
+                  <measurement_list>
+                    <measurement group_id="B1" value="24"/>
+                    <measurement group_id="B2" value="25"/>
+                    <measurement group_id="B3" value="49"/>
+                  </measurement_list>
+                </category>
+              </category_list>
+            </class>
+          </class_list>
+        </measure>
+        <measure>
+          <title>Region of Enrollment</title>
+          <units>participants</units>
+          <param>Number</param>
+          <class_list>
+            <class>
+              <title>United States</title>
+              <category_list>
+                <category>
+                  <measurement_list>
+                    <measurement group_id="B1" value="31"/>
+                    <measurement group_id="B2" value="30"/>
+                    <measurement group_id="B3" value="61"/>
+                  </measurement_list>
+                </category>
+              </category_list>
+            </class>
+          </class_list>
+        </measure>
+      </measure_list>
+    </baseline>
+
+    <outcome_list>
+      <outcome>
+        <type>Primary</type>
+        <title>Survival</title>
+        <time_frame>3 years</time_frame>
+        <group_list>
+          <group group_id="O1">
+            <title>Ganciclovir Implant and Oral Ganciclovir</title>
+            <description>Ganciclovir device and oral dose of Ganciclovir 1 gm three times daily
+Ganciclovir implant and oral ganciclovir: oral ganciclovir, 1 gm three times daily</description>
+          </group>
+          <group group_id="O2">
+            <title>Cidofovir IV (Intravenous)</title>
+            <description>cidofovir intravenous (IV) start off with 5 mg/kg once weekly for two doses then followed by 5 mg/kg every other week
+Cidofovir intravenous: intravenous, 5 mg/kg once weekly for two doses, followed by 5 mg/kg every other week</description>
+          </group>
+        </group_list>
+        <measure>
+          <title>Survival</title>
+          <units>participants</units>
+          <param>Number</param>
+          <analyzed_list>
+            <analyzed>
+              <units>Participants</units>
+              <scope>Measure</scope>
+              <count_list>
+                <count group_id="O1" value="31"/>
+                <count group_id="O2" value="30"/>
+              </count_list>
+            </analyzed>
+          </analyzed_list>
+          <class_list>
+            <class>
+              <category_list>
+                <category>
+                  <measurement_list>
+                    <measurement group_id="O1" value="31"/>
+                    <measurement group_id="O2" value="30"/>
+                  </measurement_list>
+                </category>
+              </category_list>
+            </class>
+          </class_list>
+        </measure>
+      </outcome>
+    </outcome_list>
+
+    <reported_events>
+      <time_frame>3 years</time_frame>
+      <group_list>
+        <group group_id="E1">
+          <title>Ganciclovir Implant and Oral Ganciclovir</title>
+          <description>Ganciclovir device and oral dose of Ganciclovir 1 gm three times daily
+Ganciclovir implant and oral ganciclovir: oral ganciclovir, 1 gm three times daily</description>
+        </group>
+        <group group_id="E2">
+          <title>Cidofovir IV (Intravenous)</title>
+          <description>cidofovir intravenous (IV) start off with 5 mg/kg once weekly for two doses then followed by 5 mg/kg every other week
+Cidofovir intravenous: intravenous, 5 mg/kg once weekly for two doses, followed by 5 mg/kg every other week</description>
+        </group>
+      </group_list>
+      <serious_events>
+        <category_list>
+          <category>
+            <title>Total</title>
+            <event_list>
+              <event>
+                <sub_title>Total, serious adverse events</sub_title>
+                <counts group_id="E1" subjects_affected="0" subjects_at_risk="31"/>
+                <counts group_id="E2" subjects_affected="0" subjects_at_risk="30"/>
+              </event>
+            </event_list>
+          </category>
+        </category_list>
+      </serious_events>
+      <other_events>
+        <frequency_threshold>0</frequency_threshold>
+        <category_list>
+          <category>
+            <title>Total</title>
+            <event_list>
+              <event>
+                <sub_title>Total, other adverse events</sub_title>
+                <counts group_id="E1" subjects_affected="0" subjects_at_risk="31"/>
+                <counts group_id="E2" subjects_affected="0" subjects_at_risk="30"/>
+              </event>
+            </event_list>
+          </category>
+        </category_list>
+      </other_events>
+    </reported_events>
+
+    <certain_agreements>
+      <pi_employee>Principal Investigators are NOT employed by the organization sponsoring the study.</pi_employee>
+      <restrictive_agreement>There is NOT an agreement between Principal Investigators and the Sponsor (or its agents) that restricts the PI's rights to discuss or publish trial results after the trial is completed. </restrictive_agreement>
+    </certain_agreements>
+    <point_of_contact>
+      <name_or_title>Curtis Meinert, PhD</name_or_title>
+      <organization>Johns Hopkins School of Public Health</organization>
+      <phone>410-955-8198</phone>
+      <email>cmeinert@jhsph.edu</email>
+    </point_of_contact>
+  </clinical_results>
+</clinical_study>
+

@@ -1,0 +1,668 @@
+<clinical_study>
+  <!-- This xml conforms to an XML Schema at:
+    https://clinicaltrials.gov/ct2/html/images/info/public.xsd -->
+  <required_header>
+    <download_date>ClinicalTrials.gov processed this data on February 12, 2019</download_date>
+    <link_text>Link to the current ClinicalTrials.gov record.</link_text>
+    <url>https://clinicaltrials.gov/show/NCT00000142</url>
+  </required_header>
+  <id_info>
+    <org_study_id>NEI-41</org_study_id>
+    <nct_id>NCT00000142</nct_id>
+  </id_info>
+  <brief_title>Studies of the Ocular Complications of AIDS (SOCA)--HPMPC Peripheral CMV Retinitis Trial (HPCRT)</brief_title>
+  <acronym>HPCRT</acronym>
+  <official_title>Studies of the Ocular Complications of AIDS (SOCA)--HPMPC Peripheral CMV Retinitis Trial (HPCRT)</official_title>
+  <sponsors>
+    <lead_sponsor>
+      <agency>Johns Hopkins Bloomberg School of Public Health</agency>
+      <agency_class>Other</agency_class>
+    </lead_sponsor>
+    <collaborator>
+      <agency>Baylor College of Medicine</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+    <collaborator>
+      <agency>Johns Hopkins University</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+    <collaborator>
+      <agency>Louisiana State University Health Sciences Center in New Orleans</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+    <collaborator>
+      <agency>Icahn School of Medicine at Mount Sinai</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+    <collaborator>
+      <agency>New Jersey Medical School</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+    <collaborator>
+      <agency>New York University School of Medicine</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+    <collaborator>
+      <agency>Northwestern University</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+    <collaborator>
+      <agency>University of California, Los Angeles</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+    <collaborator>
+      <agency>University of California, San Diego</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+    <collaborator>
+      <agency>University of California, San Francisco</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+    <collaborator>
+      <agency>University of Miami</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+    <collaborator>
+      <agency>University of North Carolina, Chapel Hill</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+    <collaborator>
+      <agency>University of South Florida</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+  </sponsors>
+  <source>Johns Hopkins Bloomberg School of Public Health</source>
+  <oversight_info>
+    <has_dmc>Yes</has_dmc>
+  </oversight_info>
+  <brief_summary>
+    <textblock>
+      To test and evaluate the efficacy and safety of intravenous cidofovir (Vistide, previously
+      known as HPMPC) for the treatment of retinitis.
+    </textblock>
+  </brief_summary>
+  <detailed_description>
+    <textblock>
+      CMV (cytomegalovirus) retinitis is the most common intraocular infection in patients with
+      AIDS and is estimated to affect 35 percent to 40 percent of patients with AIDS. Untreated CMV
+      (cytomegalovirus) retinitis is a progressive disorder, the end result of which is total
+      retinal destruction and blindness. As of September 1997, drugs approved by the United States
+      Food and Drug Administration (FDA) for the treatment of CMV (cytomegalovirus)retinitis were
+      ganciclovir (Cytovene), foscarnet (Foscavir), and cidofovir (Vistide). Cidofovir has a
+      prolonged duration of effect permitting intermittent administration. All systemically
+      administered anti-CMV drugs are given in a similar fashion consisting of initial 2-week
+      high-dose treatment (induction) to control the infection followed by long-term lower dose
+      treatment (maintenance) to prevent relapse. Cidofovir is administered as an intravenous
+      infusion once weekly for induction therapy and once every 2 weeks as maintenance therapy. The
+      HPCRT evaluated the efficacy and safety of cidofovir therapy.
+
+      The HPCRT was a multicenter, randomized, controlled clinical trial of cidofovir for the
+      treatment of CMV (cytomegalovirus) retinitis. Patients with small peripheral CMV
+      (cytomegalovirus) retinitis lesions (i.e., not at risk of immediate loss of visual acuity)
+      were randomized to immediate treatment with cidofovir or deferred therapy until the retinitis
+      had progressed. Patients randomized to immediate therapy received either 1) low-dose
+      cidofovir at 5 mg/kg once weekly induction for 2 weeks, followed by 3 mg/kg once every 2
+      weeks for maintenance or 2) high-dose cidofovir at 5 mg/kg once weekly induction for 2 weeks
+      followed by 5 mg/kg once every 2 weeks for maintenance. Patients whose retinitis progressed
+      were given treatment according to best medical judgement, and those assigned to deferral were
+      generally treated with cidofovir.
+
+      Outcomes in this trial included retinitis progression, loss of retinal area, and morbidity.
+    </textblock>
+  </detailed_description>
+  <overall_status>Completed</overall_status>
+  <start_date>April 1994</start_date>
+  <completion_date type="Actual">February 1996</completion_date>
+  <primary_completion_date type="Actual">February 1996</primary_completion_date>
+  <phase>Phase 2/Phase 3</phase>
+  <study_type>Interventional</study_type>
+  <has_expanded_access>No</has_expanded_access>
+  <study_design_info>
+    <allocation>Randomized</allocation>
+    <intervention_model>Parallel Assignment</intervention_model>
+    <primary_purpose>Treatment</primary_purpose>
+    <masking>None (Open Label)</masking>
+  </study_design_info>
+  <primary_outcome>
+    <measure>Survival</measure>
+    <time_frame>All patients enrolled will be followed until a common study closing date</time_frame>
+  </primary_outcome>
+  <number_of_arms>3</number_of_arms>
+  <enrollment type="Actual">64</enrollment>
+  <condition>HIV Infections</condition>
+  <condition>CMV Cytomegalovirus Retinitis</condition>
+  <arm_group>
+    <arm_group_label>treatment deferral</arm_group_label>
+    <arm_group_type>Experimental</arm_group_type>
+    <description>IV (in the vein) treatment deferred until retinitis progressed, either:
+5 mg/kg IV (in the vein) of body weight once weekly for two weeks, then maintenance therapy with cidofovir, 3mg/kg once every 2 weeks, or
+5mg/kg IV (in the vein) once weekly for 2 weeks, then maintenance therapy with cidofovir, 5mg/kg once every two weeks.</description>
+  </arm_group>
+  <arm_group>
+    <arm_group_label>Cidofovir (low dose)</arm_group_label>
+    <arm_group_type>Experimental</arm_group_type>
+    <description>5 mg/kg IV (in the vein) of body weight once weekly for two weeks, then maintenance therapy with cidofovir, 3mg/kg once every 2 weeks</description>
+  </arm_group>
+  <arm_group>
+    <arm_group_label>Cidofovir (high dose)</arm_group_label>
+    <arm_group_type>Experimental</arm_group_type>
+    <description>5mg/kg IV (in the vein) once weekly for 2 weeks, then maintenance therapy with cidofovir, 5mg/kg once every two weeks.</description>
+  </arm_group>
+  <intervention>
+    <intervention_type>Drug</intervention_type>
+    <intervention_name>Cidofovir</intervention_name>
+    <description>Three groups:
+the deferral group, treatment deferred until retinitis progressed
+Low-dose cidofovir group, 5 mg/kg of body weight once weekly for two weeks, then maintenance therapy with cidofovir, 3mg/kg once every 2 weeks.
+High-dose cidofovir group, 5mg/kg once weekly for 2 weeks, then maintenance therapy with cidofovir, 5mg/kg once every two weeks.</description>
+    <arm_group_label>treatment deferral</arm_group_label>
+    <arm_group_label>Cidofovir (low dose)</arm_group_label>
+    <arm_group_label>Cidofovir (high dose)</arm_group_label>
+    <other_name>Vistide</other_name>
+  </intervention>
+  <eligibility>
+    <criteria>
+      <textblock>
+        Inclusion criteria:
+
+          -  diagnosis of AIDS according to the Centers for Disease Control and Prevention (CDC)
+
+          -  13 years or older
+
+          -  Diagnosis of CMV (cytomegalovirus) retinitis as determined by a SOCA-certified
+             Ophthalmologist.
+
+          -  At least one lesion whose size is one-quarter disc area or more that can be
+             photographed.
+
+          -  Visual acuity in an affected eye of 3 or more lines on the (ETDRS) Early Treatment
+             Diabetic Retinopathy Study chart at 1 meter distance (Snellen equivalent 8/200).
+
+          -  score of 60 or more on the Karnofsky scale.
+
+          -  Serum creatinine of 1.5mg/dL or less
+
+          -  less than 1+ proteinuria on urinalysis
+
+          -  Total bilirubin of 3.0 mg/dL or less
+
+          -  Hepatic transaminase levels that do not exceed 5 times the normal levels
+
+          -  Absolute neutrophil count of 750 cells/µL or greater
+
+          -  Platelet count of 50,000 cells/µL or greater
+
+          -  Hemoglobin of 7.5 g/dL or greater
+
+          -  Negative pregnancy test (females of childbearing potential)
+
+          -  All men/women of childbearing potential should practice birth control to prevent
+             pregnancy while on study and for 3 months afterwards
+
+          -  Willingness/ability, with the assistance of a caregiver if necessary to comply with
+             treatment and follow-up procedures
+
+          -  Signed consent statement
+
+        Exclusion criteria:
+
+          -  Evidence of a CMV (cytomegalovirus) retinitis lesion within zone 1. A lesion less than
+             1,500 µ from the margin of the optic disc or less than 3,000 µ from the center of the
+             fovea in either eye excludes a patient.
+
+          -  Evidence of a CMV retinitis lesions that involves 25% or more of the retinal area
+             regardless of location.
+
+          -  Previous or ongoing therapy for CMV (cytomegalovirus) disease with ganciclovir,
+             foscarnet, CMV hyperimmune immunoglobulin, or other investigational agents solely as
+             prophylaxis are eligible for enrollment.
+
+          -  Retinal detachment(s) in the affected eye(s)
+
+          -  media opacity that precludes visualization of the fundus of both eyes.
+
+          -  patients with a diagnosis of extraocular CMV (cytomegalovirus) disease.
+
+          -  Patients with history of clinically significant renal disease or renal dialysis.
+
+          -  Patients with history of clinically significant cardiac disease, including symptoms of
+             ischemia, congestive heart failure, or arrhythmia.
+
+          -  pregnant or lactating
+
+          -  patients with active medical problems including drug or alcohol abuse which could
+             hinder compliance with treatment or follow-up procedures.
+
+          -  patients receiving therapy within the previous 7 days with nephrotoxic drugs,
+             including: Amphotericin B, Vidarabine, Aminoglycoside antibiotics, Intravenous
+             pentamidine. Patients receiving any of these drugs must discontinue the drug(s) at
+             least one week prior to the time of enrollment, and for the duration of the trial
+             period.
+
+          -  history of clinically significant probenecid allergy.
+      </textblock>
+    </criteria>
+    <gender>All</gender>
+    <minimum_age>13 Years</minimum_age>
+    <maximum_age>N/A</maximum_age>
+    <healthy_volunteers>No</healthy_volunteers>
+  </eligibility>
+  <overall_official>
+    <last_name>Douglas Jabs, MD</last_name>
+    <role>Study Chair</role>
+    <affiliation>Icahn School of Medicine at Mount Sinai</affiliation>
+  </overall_official>
+  <reference>
+    <citation>Parenteral cidofovir for cytomegalovirus retinitis in patients with AIDS: the HPMPC peripheral cytomegalovirus retinitis trial. A randomized, controlled trial. Studies of Ocular complications of AIDS Research Group in Collaboration with the AIDS Clinical Trials Group. Ann Intern Med. 1997 Feb 15;126(4):264-74.</citation>
+    <PMID>9036798</PMID>
+  </reference>
+  <reference>
+    <citation>Long-term follow-up of patients with AIDS treated with parenteral cidofovir for cytomegalovirus retinitis: the HPMPC Peripheral Cytomegalovirus Retinitis Trial. The Studies of Ocular Complications of AIDS Research Group in collaboration with the AIDS Clinical Trials Group. AIDS. 2000 Jul 28;14(11):1571-81.</citation>
+    <PMID>10983644</PMID>
+  </reference>
+  <reference>
+    <citation>Jabs DA, Meinert CL, Lalezari JP. Letter to the Editor (response) regarding cidofovir for cytomegalovirus retinitis (HPCRT). Ann Int Med. 1997;127:490-491.</citation>
+  </reference>
+  <verification_date>July 2015</verification_date>
+  <!-- For several months we've had both old and new date name tags                             -->
+  <!-- Now, the old date names have been dropped.                                               -->
+  <!-- The new date name replacements are:                                                      -->
+  <!--     OLD (gone)                                        NEW (in use)                       -->
+  <!--   lastchanged_date                         becomes   last_update_submitted               -->
+  <!--   firstreceived_date                       becomes   study_first_submitted               -->
+  <!--   firstreceived_results_date               becomes   results_first_submitted             -->
+  <!--   firstreceived_results_disposition_date   becomes   disposition_first_submitted         -->
+  <study_first_submitted>September 23, 1999</study_first_submitted>
+  <study_first_submitted_qc>September 23, 1999</study_first_submitted_qc>
+  <study_first_posted type="Estimate">September 24, 1999</study_first_posted>
+  <results_first_submitted>June 2, 2015</results_first_submitted>
+  <results_first_submitted_qc>October 14, 2015</results_first_submitted_qc>
+  <results_first_posted type="Estimate">November 17, 2015</results_first_posted>
+  <last_update_submitted>October 14, 2015</last_update_submitted>
+  <last_update_submitted_qc>October 14, 2015</last_update_submitted_qc>
+  <last_update_posted type="Estimate">November 17, 2015</last_update_posted>
+  <responsible_party>
+    <responsible_party_type>Sponsor</responsible_party_type>
+  </responsible_party>
+  <condition_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>HIV Infections</mesh_term>
+    <mesh_term>Retinitis</mesh_term>
+    <mesh_term>Cytomegalovirus Retinitis</mesh_term>
+  </condition_browse>
+  <intervention_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Cidofovir</mesh_term>
+  </intervention_browse>
+
+  <clinical_results>
+
+    <participant_flow>
+      <recruitment_details>April 1994</recruitment_details>
+      <group_list>
+        <group group_id="P1">
+          <title>Treatment Deferral</title>
+          <description>IV (in the vein) treatment deferred until retinitis progressed, either:
+5 mg/kg IV (in the vein) of body weight once weekly for two weeks, then maintenance therapy with cidofovir, 3mg/kg once every 2 weeks, or
+5mg/kg IV (in the vein) once weekly for 2 weeks, then maintenance therapy with cidofovir, 5mg/kg once every two weeks.
+Cidofovir: Three groups:
+the deferral group, treatment deferred until retinitis progressed
+Low-dose cidofovir group, 5 mg/kg of body weight once weekly for two weeks, then maintenance therapy with cidofovir, 3mg/kg once every 2 weeks.
+High-dose cidofovir group, 5mg/kg once weekly for 2 weeks, then maintenance therapy with cidofovir, 5mg/kg once every two weeks.</description>
+        </group>
+        <group group_id="P2">
+          <title>Cidofovir (Low Dose)</title>
+          <description>5 mg/kg IV (in the vein) of body weight once weekly for two weeks, then maintenance therapy with cidofovir, 3mg/kg once every 2 weeks
+Cidofovir: Three groups:
+the deferral group, treatment deferred until retinitis progressed
+Low-dose cidofovir group, 5 mg/kg of body weight once weekly for two weeks, then maintenance therapy with cidofovir, 3mg/kg once every 2 weeks.
+High-dose cidofovir group, 5mg/kg once weekly for 2 weeks, then maintenance therapy with cidofovir, 5mg/kg once every two weeks.</description>
+        </group>
+        <group group_id="P3">
+          <title>Cidofovir (High Dose)</title>
+          <description>5mg/kg IV (in the vein) once weekly for 2 weeks, then maintenance therapy with cidofovir, 5mg/kg once every two weeks.
+Cidofovir: Three groups:
+the deferral group, treatment deferred until retinitis progressed
+Low-dose cidofovir group, 5 mg/kg of body weight once weekly for two weeks, then maintenance therapy with cidofovir, 3mg/kg once every 2 weeks.
+High-dose cidofovir group, 5mg/kg once weekly for 2 weeks, then maintenance therapy with cidofovir, 5mg/kg once every two weeks.</description>
+        </group>
+      </group_list>
+      <period_list>
+        <period>
+          <title>Overall Study</title>
+          <milestone_list>
+            <milestone>
+              <title>STARTED</title>
+              <participants_list>
+                <participants group_id="P1" count="26"/>
+                <participants group_id="P2" count="26"/>
+                <participants group_id="P3" count="12"/>
+              </participants_list>
+            </milestone>
+            <milestone>
+              <title>COMPLETED</title>
+              <participants_list>
+                <participants group_id="P1" count="26"/>
+                <participants group_id="P2" count="26"/>
+                <participants group_id="P3" count="12"/>
+              </participants_list>
+            </milestone>
+            <milestone>
+              <title>NOT COMPLETED</title>
+              <participants_list>
+                <participants group_id="P1" count="0"/>
+                <participants group_id="P2" count="0"/>
+                <participants group_id="P3" count="0"/>
+              </participants_list>
+            </milestone>
+          </milestone_list>
+        </period>
+      </period_list>
+    </participant_flow>
+
+    <baseline>
+      <group_list>
+        <group group_id="B1">
+          <title>Treatment Deferral</title>
+          <description>IV (in the vein) treatment deferred until retinitis progressed, either:
+5 mg/kg IV (in the vein) of body weight once weekly for two weeks, then maintenance therapy with cidofovir, 3mg/kg once every 2 weeks, or
+5mg/kg IV (in the vein) once weekly for 2 weeks, then maintenance therapy with cidofovir, 5mg/kg once every two weeks.
+Cidofovir: Three groups:
+the deferral group, treatment deferred until retinitis progressed
+Low-dose cidofovir group, 5 mg/kg of body weight once weekly for two weeks, then maintenance therapy with cidofovir, 3mg/kg once every 2 weeks.
+High-dose cidofovir group, 5mg/kg once weekly for 2 weeks, then maintenance therapy with cidofovir, 5mg/kg once every two weeks.</description>
+        </group>
+        <group group_id="B2">
+          <title>Cidofovir (Low Dose)</title>
+          <description>5 mg/kg IV (in the vein) of body weight once weekly for two weeks, then maintenance therapy with cidofovir, 3mg/kg once every 2 weeks
+Cidofovir: Three groups:
+the deferral group, treatment deferred until retinitis progressed
+Low-dose cidofovir group, 5 mg/kg of body weight once weekly for two weeks, then maintenance therapy with cidofovir, 3mg/kg once every 2 weeks.
+High-dose cidofovir group, 5mg/kg once weekly for 2 weeks, then maintenance therapy with cidofovir, 5mg/kg once every two weeks.</description>
+        </group>
+        <group group_id="B3">
+          <title>Cidofovir (High Dose)</title>
+          <description>5mg/kg IV (in the vein) once weekly for 2 weeks, then maintenance therapy with cidofovir, 5mg/kg once every two weeks.
+Cidofovir: Three groups:
+the deferral group, treatment deferred until retinitis progressed
+Low-dose cidofovir group, 5 mg/kg of body weight once weekly for two weeks, then maintenance therapy with cidofovir, 3mg/kg once every 2 weeks.
+High-dose cidofovir group, 5mg/kg once weekly for 2 weeks, then maintenance therapy with cidofovir, 5mg/kg once every two weeks.</description>
+        </group>
+        <group group_id="B4">
+          <title>Total</title>
+          <description>Total of all reporting groups</description>
+        </group>
+      </group_list>
+      <analyzed_list>
+        <analyzed>
+          <units>Participants</units>
+          <scope>Overall</scope>
+          <count_list>
+            <count group_id="B1" value="26"/>
+            <count group_id="B2" value="26"/>
+            <count group_id="B3" value="12"/>
+            <count group_id="B4" value="64"/>
+          </count_list>
+        </analyzed>
+      </analyzed_list>
+      <measure_list>
+        <measure>
+          <title>Age</title>
+          <units>Participants</units>
+          <param>Count of Participants</param>
+          <class_list>
+            <class>
+              <category_list>
+                <category>
+                  <title>&lt;=18 years</title>
+                  <measurement_list>
+                    <measurement group_id="B1" value="0"/>
+                    <measurement group_id="B2" value="0"/>
+                    <measurement group_id="B3" value="0"/>
+                    <measurement group_id="B4" value="0"/>
+                  </measurement_list>
+                </category>
+                <category>
+                  <title>Between 18 and 65 years</title>
+                  <measurement_list>
+                    <measurement group_id="B1" value="26"/>
+                    <measurement group_id="B2" value="26"/>
+                    <measurement group_id="B3" value="12"/>
+                    <measurement group_id="B4" value="64"/>
+                  </measurement_list>
+                </category>
+                <category>
+                  <title>&gt;=65 years</title>
+                  <measurement_list>
+                    <measurement group_id="B1" value="0"/>
+                    <measurement group_id="B2" value="0"/>
+                    <measurement group_id="B3" value="0"/>
+                    <measurement group_id="B4" value="0"/>
+                  </measurement_list>
+                </category>
+              </category_list>
+            </class>
+          </class_list>
+        </measure>
+        <measure>
+          <title>Sex: Female, Male</title>
+          <units>Participants</units>
+          <param>Count of Participants</param>
+          <class_list>
+            <class>
+              <category_list>
+                <category>
+                  <title>Female</title>
+                  <measurement_list>
+                    <measurement group_id="B1" value="2"/>
+                    <measurement group_id="B2" value="2"/>
+                    <measurement group_id="B3" value="1"/>
+                    <measurement group_id="B4" value="5"/>
+                  </measurement_list>
+                </category>
+                <category>
+                  <title>Male</title>
+                  <measurement_list>
+                    <measurement group_id="B1" value="24"/>
+                    <measurement group_id="B2" value="24"/>
+                    <measurement group_id="B3" value="11"/>
+                    <measurement group_id="B4" value="59"/>
+                  </measurement_list>
+                </category>
+              </category_list>
+            </class>
+          </class_list>
+        </measure>
+      </measure_list>
+    </baseline>
+
+    <outcome_list>
+      <outcome>
+        <type>Primary</type>
+        <title>Survival</title>
+        <time_frame>All patients enrolled will be followed until a common study closing date</time_frame>
+        <group_list>
+          <group group_id="O1">
+            <title>Treatment Deferral</title>
+            <description>IV (in the vein) treatment deferred until retinitis progressed, either:
+5 mg/kg IV (in the vein) of body weight once weekly for two weeks, then maintenance therapy with cidofovir, 3mg/kg once every 2 weeks, or
+5mg/kg IV (in the vein) once weekly for 2 weeks, then maintenance therapy with cidofovir, 5mg/kg once every two weeks.
+Cidofovir: Three groups:
+the deferral group, treatment deferred until retinitis progressed
+Low-dose cidofovir group, 5 mg/kg of body weight once weekly for two weeks, then maintenance therapy with cidofovir, 3mg/kg once every 2 weeks.
+High-dose cidofovir group, 5mg/kg once weekly for 2 weeks, then maintenance therapy with cidofovir, 5mg/kg once every two weeks.</description>
+          </group>
+          <group group_id="O2">
+            <title>Cidofovir (Low Dose)</title>
+            <description>5 mg/kg IV (in the vein) of body weight once weekly for two weeks, then maintenance therapy with cidofovir, 3mg/kg once every 2 weeks
+Cidofovir: Three groups:
+the deferral group, treatment deferred until retinitis progressed
+Low-dose cidofovir group, 5 mg/kg of body weight once weekly for two weeks, then maintenance therapy with cidofovir, 3mg/kg once every 2 weeks.
+High-dose cidofovir group, 5mg/kg once weekly for 2 weeks, then maintenance therapy with cidofovir, 5mg/kg once every two weeks.</description>
+          </group>
+          <group group_id="O3">
+            <title>Cidofovir (High Dose)</title>
+            <description>5mg/kg IV (in the vein) once weekly for 2 weeks, then maintenance therapy with cidofovir, 5mg/kg once every two weeks.
+Cidofovir: Three groups:
+the deferral group, treatment deferred until retinitis progressed
+Low-dose cidofovir group, 5 mg/kg of body weight once weekly for two weeks, then maintenance therapy with cidofovir, 3mg/kg once every 2 weeks.
+High-dose cidofovir group, 5mg/kg once weekly for 2 weeks, then maintenance therapy with cidofovir, 5mg/kg once every two weeks.</description>
+          </group>
+        </group_list>
+        <measure>
+          <title>Survival</title>
+          <units>participants</units>
+          <param>Number</param>
+          <analyzed_list>
+            <analyzed>
+              <units>Participants</units>
+              <scope>Measure</scope>
+              <count_list>
+                <count group_id="O1" value="26"/>
+                <count group_id="O2" value="26"/>
+                <count group_id="O3" value="12"/>
+              </count_list>
+            </analyzed>
+          </analyzed_list>
+          <class_list>
+            <class>
+              <title>mortality</title>
+              <category_list>
+                <category>
+                  <measurement_list>
+                    <measurement group_id="O1" value="6"/>
+                    <measurement group_id="O2" value="7"/>
+                    <measurement group_id="O3" value="3"/>
+                  </measurement_list>
+                </category>
+              </category_list>
+            </class>
+            <class>
+              <title>progression</title>
+              <category_list>
+                <category>
+                  <measurement_list>
+                    <measurement group_id="O1" value="20"/>
+                    <measurement group_id="O2" value="17"/>
+                    <measurement group_id="O3" value="5"/>
+                  </measurement_list>
+                </category>
+              </category_list>
+            </class>
+            <class>
+              <title>va loss of 15 letters</title>
+              <category_list>
+                <category>
+                  <measurement_list>
+                    <measurement group_id="O1" value="4"/>
+                    <measurement group_id="O2" value="6"/>
+                    <measurement group_id="O3" value="2"/>
+                  </measurement_list>
+                </category>
+              </category_list>
+            </class>
+          </class_list>
+        </measure>
+      </outcome>
+    </outcome_list>
+
+    <reported_events>
+      <time_frame>1 year, 10 months</time_frame>
+      <group_list>
+        <group group_id="E1">
+          <title>Treatment Deferral</title>
+          <description>IV (in the vein) treatment deferred until retinitis progressed, either:
+5 mg/kg IV (in the vein) of body weight once weekly for two weeks, then maintenance therapy with cidofovir, 3mg/kg once every 2 weeks, or
+5mg/kg IV (in the vein) once weekly for 2 weeks, then maintenance therapy with cidofovir, 5mg/kg once every two weeks.
+Cidofovir: Three groups:
+the deferral group, treatment deferred until retinitis progressed
+Low-dose cidofovir group, 5 mg/kg of body weight once weekly for two weeks, then maintenance therapy with cidofovir, 3mg/kg once every 2 weeks.
+High-dose cidofovir group, 5mg/kg once weekly for 2 weeks, then maintenance therapy with cidofovir, 5mg/kg once every two weeks.</description>
+        </group>
+        <group group_id="E2">
+          <title>Cidofovir (Low Dose)</title>
+          <description>5 mg/kg IV (in the vein) of body weight once weekly for two weeks, then maintenance therapy with cidofovir, 3mg/kg once every 2 weeks
+Cidofovir: Three groups:
+the deferral group, treatment deferred until retinitis progressed
+Low-dose cidofovir group, 5 mg/kg of body weight once weekly for two weeks, then maintenance therapy with cidofovir, 3mg/kg once every 2 weeks.
+High-dose cidofovir group, 5mg/kg once weekly for 2 weeks, then maintenance therapy with cidofovir, 5mg/kg once every two weeks.</description>
+        </group>
+        <group group_id="E3">
+          <title>Cidofovir (High Dose)</title>
+          <description>5mg/kg IV (in the vein) once weekly for 2 weeks, then maintenance therapy with cidofovir, 5mg/kg once every two weeks.
+Cidofovir: Three groups:
+the deferral group, treatment deferred until retinitis progressed
+Low-dose cidofovir group, 5 mg/kg of body weight once weekly for two weeks, then maintenance therapy with cidofovir, 3mg/kg once every 2 weeks.
+High-dose cidofovir group, 5mg/kg once weekly for 2 weeks, then maintenance therapy with cidofovir, 5mg/kg once every two weeks.</description>
+        </group>
+      </group_list>
+      <serious_events>
+        <default_assessment>Non-systematic Assessment</default_assessment>
+        <category_list>
+          <category>
+            <title>Total</title>
+            <event_list>
+              <event>
+                <sub_title>Total, serious adverse events</sub_title>
+                <counts group_id="E1" subjects_affected="3" subjects_at_risk="26"/>
+                <counts group_id="E2" subjects_affected="13" subjects_at_risk="26"/>
+                <counts group_id="E3" subjects_affected="8" subjects_at_risk="12"/>
+              </event>
+            </event_list>
+          </category>
+          <category>
+            <title>Blood and lymphatic system disorders</title>
+            <event_list>
+              <event>
+                <sub_title>Proteinuria 2+</sub_title>
+                <counts group_id="E1" events="4" subjects_affected="3" subjects_at_risk="26"/>
+                <counts group_id="E2" events="21" subjects_affected="13" subjects_at_risk="26"/>
+                <counts group_id="E3" events="25" subjects_affected="8" subjects_at_risk="12"/>
+              </event>
+            </event_list>
+          </category>
+        </category_list>
+      </serious_events>
+      <other_events>
+        <frequency_threshold>5</frequency_threshold>
+        <default_assessment>Non-systematic Assessment</default_assessment>
+        <category_list>
+          <category>
+            <title>Total</title>
+            <event_list>
+              <event>
+                <sub_title>Total, other adverse events</sub_title>
+                <counts group_id="E1" subjects_affected="0" subjects_at_risk="26"/>
+                <counts group_id="E2" subjects_affected="2" subjects_at_risk="26"/>
+                <counts group_id="E3" subjects_affected="2" subjects_at_risk="12"/>
+              </event>
+            </event_list>
+          </category>
+          <category>
+            <title>Blood and lymphatic system disorders</title>
+            <event_list>
+              <event>
+                <sub_title>Serum creatinine level &gt;= 133 umol/L (1.5 mg/dL)</sub_title>
+                <counts group_id="E1" events="0" subjects_affected="0" subjects_at_risk="26"/>
+                <counts group_id="E2" events="2" subjects_affected="2" subjects_at_risk="26"/>
+                <counts group_id="E3" events="2" subjects_affected="2" subjects_at_risk="12"/>
+              </event>
+            </event_list>
+          </category>
+        </category_list>
+      </other_events>
+    </reported_events>
+
+    <certain_agreements>
+      <pi_employee>Principal Investigators are NOT employed by the organization sponsoring the study.</pi_employee>
+      <restrictive_agreement>The only disclosure restriction on the PI is that the sponsor can review results communications prior to public release and can embargo communications regarding trial results for a period that is less than or equal to 60 days. The sponsor cannot require changes to the communication and cannot extend the embargo.</restrictive_agreement>
+    </certain_agreements>
+    <point_of_contact>
+      <name_or_title>Dr. Curtis Meinert</name_or_title>
+      <organization>Johns Hopkins Bloomberg School of Public Health</organization>
+      <phone>410-955-8175</phone>
+      <email>cmeinert@jhsph.edu</email>
+    </point_of_contact>
+  </clinical_results>
+</clinical_study>
+

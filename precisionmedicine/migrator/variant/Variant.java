@@ -21,17 +21,17 @@ import java.util.List;
 
 @SuppressWarnings("Duplicates")
 public class Variant {
-    public static void migrate(GraknClient.Session session) {
+    public static void migrate(GraknClient.Session session, String dataset) {
         System.out.print("\tMigrating Variants");
 
-        migrateFromPharmgkb(session);
+        migrateFromPharmgkb(session, "precisionmedicine/dataset/" + dataset + "/pharmgkb/variants.csv");
 
         System.out.println(" - [DONE]");
     }
 
-    private static void migrateFromPharmgkb(GraknClient.Session session) {
+    private static void migrateFromPharmgkb(GraknClient.Session session, String path) {
         try {
-            BufferedReader reader = Files.newBufferedReader(Paths.get("precisionmedicine/dataset/pharmgkb/variants.csv"));
+            BufferedReader reader = Files.newBufferedReader(Paths.get(path));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
             List<GraqlInsert> insertQueries = new ArrayList<>();

@@ -1,0 +1,146 @@
+<clinical_study>
+  <!-- This xml conforms to an XML Schema at:
+    https://clinicaltrials.gov/ct2/html/images/info/public.xsd -->
+  <required_header>
+    <download_date>ClinicalTrials.gov processed this data on February 12, 2019</download_date>
+    <link_text>Link to the current ClinicalTrials.gov record.</link_text>
+    <url>https://clinicaltrials.gov/show/NCT00000118</url>
+  </required_header>
+  <id_info>
+    <org_study_id>NEI-14</org_study_id>
+    <nct_id>NCT00000118</nct_id>
+  </id_info>
+  <brief_title>Ganciclovir Implant Study for Cytomegalovirus Retinitis</brief_title>
+  <sponsors>
+    <lead_sponsor>
+      <agency>National Eye Institute (NEI)</agency>
+      <agency_class>NIH</agency_class>
+    </lead_sponsor>
+  </sponsors>
+  <source>National Eye Institute (NEI)</source>
+  <brief_summary>
+    <textblock>
+      To determine the therapeutic efficacy of a sustained-release intraocular drug delivery system
+      for ganciclovir therapy of cytomegalovirus (CMV) retinitis in patients with acquired
+      immunodeficiency syndrome (AIDS).
+    </textblock>
+  </brief_summary>
+  <detailed_description>
+    <textblock>
+      CMV retinitis occurs in 20 to 30 percent of patients with AIDS and is the leading cause of
+      visual loss in these patients. At present, ganciclovir and foscarnet are the only drugs that
+      have been approved by the U.S. Food and Drug Administration for the treatment of CMV
+      retinitis. The therapeutic regimen for each drug consists of a 2-week induction period
+      followed by daily maintenance intravenous infusions. Unfortunately, CMV retinitis usually
+      progresses despite daily maintenance therapy, and both drugs are associated with significant
+      systemic toxicity that often limits their therapeutic usefulness. As an alternative to
+      intravenous administration, direct intravitreal injections of ganciclovir have been studied
+      and have been shown to be effective in delaying the progression of CMV retinitis. The short
+      half-life of the drug, however, necessitates one to two intraocular injections a week to
+      maintain therapeutic levels. Widespread adoption of this technique has been limited because
+      of the logistical difficulties and inherent risks associated with numerous intravitreal
+      injections.
+
+      A drug delivery system capable of continuous delivery of ganciclovir into the vitreous cavity
+      has been developed. The device consists of a 6-mg pellet of ganciclovir that is coated with a
+      series of polymers with variable permeability to ganciclovir. The device is surgically
+      implanted through the pars plana.
+
+      Thirty eyes of 26 patients with unilateral non-sight-threatening CMV retinitis were randomly
+      assigned to one of two groups: (1) immediate therapy with a device designed to release
+      ganciclovir into the vitreous cavity a over approximately a 4-month period or (2) deferred
+      treatment. In patients with bilateral non-sight-threatening CMV retinitis, one eye was
+      randomly assigned to receive a ganciclovir implant with the other eye assigned to deferred
+      treatment. (Note: The original trial design included a third randomized arm using a 2 ug/hour
+      device. This arm was dropped for logistical reasons after enrolling two patients.)
+
+      Patients assigned to immediate treatment underwent surgery to implant the ganciclovir device
+      within 48 hours of enrollment and baseline photographs. Postoperatively, patients were
+      evaluated the next day, weekly for 2 weeks, and then every 2 weeks until progression of CMV
+      retinitis occurred. At each examination, in both eyes, visual acuity with current correction
+      and best correction was determined using Early Treatment Diabetic Retinopathy Study eye
+      charts; intraocular pressure was determined; evidence of inflammation or cataract was
+      evaluated; and all retinal findings were documented. Any adverse event considered even
+      possibly related to the device or to the implantation procedure was documented. Standardized
+      nine-field fundus photographs were taken at each 2-week visit. The ganciclovir implant was
+      exchanged at 32 weeks or earlier if progression of CMV retinitis occurred.
+
+      The primary end point was time to CMV retinitis progression, defined as the time (days) from
+      initiating therapy until the advancement of 750-um over a 750 um front of any border of any
+      lesion was observed. Standardized nine-field photographs were taken at 2-week intervals and
+      analyzed in a masked fashion by the Fundus Photograph Reading Center to determine evidence of
+      CMV retinitis progression.
+
+      Secondary end points included time to development of CMV retinitis in the contralateral eye,
+      time to development of visceral CMV, and time to death.
+    </textblock>
+  </detailed_description>
+  <overall_status>Completed</overall_status>
+  <start_date>October 1992</start_date>
+  <completion_date type="Actual">December 1993</completion_date>
+  <phase>Phase 3</phase>
+  <study_type>Interventional</study_type>
+  <has_expanded_access>No</has_expanded_access>
+  <study_design_info>
+    <allocation>Randomized</allocation>
+    <primary_purpose>Treatment</primary_purpose>
+  </study_design_info>
+  <condition>HIV Infections</condition>
+  <condition>Acquired Immunodeficiency Syndrome</condition>
+  <condition>Cytomegalovirus Retinitis</condition>
+  <intervention>
+    <intervention_type>Device</intervention_type>
+    <intervention_name>Sustained-Release Intraocular Drug Delivery System</intervention_name>
+  </intervention>
+  <eligibility>
+    <criteria>
+      <textblock>
+        All patients must have had AIDS as defined by the Centers for Disease Control and
+        Prevention and non-sight-threatening CMV retinitis Patients could not have been previously
+        treated with systemic ganciclovir or foscarnet and must not have had evidence of other
+        organ involvement with CMV. Patients must have had an absolute neutrophil count (ANC)
+        greater than 1,000 cells/mL and a platelet count greater than 25,000/mm3
+      </textblock>
+    </criteria>
+    <gender>All</gender>
+    <minimum_age>N/A</minimum_age>
+    <maximum_age>N/A</maximum_age>
+  </eligibility>
+  <link>
+    <url>http://www.nei.nih.gov/news/clinicalalerts/alert-soca-fgcrt.asp</url>
+    <description>Clinical Alert To Physicians And Others Who Treat Patients With AIDS</description>
+  </link>
+  <link>
+    <url>http://www.nei.nih.gov/news/pressreleases/gipressrelease.asp</url>
+    <description>NEI Press Release-Eye Implant Effective in Treating CMV Retinitis</description>
+  </link>
+  <reference>
+    <citation>Martin DF, Parks DJ, Mellow SD, Ferris FL, Walton RC, Remaley NA, Chew EY, Ashton P, Davis MD, Nussenblatt RB. Treatment of cytomegalovirus retinitis with an intraocular sustained-release ganciclovir implant. A randomized controlled clinical trial. Arch Ophthalmol. 1994 Dec;112(12):1531-9.</citation>
+    <PMID>7993207</PMID>
+  </reference>
+  <verification_date>September 2009</verification_date>
+  <!-- For several months we've had both old and new date name tags                             -->
+  <!-- Now, the old date names have been dropped.                                               -->
+  <!-- The new date name replacements are:                                                      -->
+  <!--     OLD (gone)                                        NEW (in use)                       -->
+  <!--   lastchanged_date                         becomes   last_update_submitted               -->
+  <!--   firstreceived_date                       becomes   study_first_submitted               -->
+  <!--   firstreceived_results_date               becomes   results_first_submitted             -->
+  <!--   firstreceived_results_disposition_date   becomes   disposition_first_submitted         -->
+  <study_first_submitted>September 23, 1999</study_first_submitted>
+  <study_first_submitted_qc>September 23, 1999</study_first_submitted_qc>
+  <study_first_posted type="Estimate">September 24, 1999</study_first_posted>
+  <last_update_submitted>September 16, 2009</last_update_submitted>
+  <last_update_submitted_qc>September 16, 2009</last_update_submitted_qc>
+  <last_update_posted type="Estimate">September 17, 2009</last_update_posted>
+  <condition_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>HIV Infections</mesh_term>
+    <mesh_term>Immunologic Deficiency Syndromes</mesh_term>
+    <mesh_term>Acquired Immunodeficiency Syndrome</mesh_term>
+    <mesh_term>Retinitis</mesh_term>
+    <mesh_term>Cytomegalovirus Retinitis</mesh_term>
+  </condition_browse>
+  <!-- Results have not yet been posted for this study                                          -->
+</clinical_study>
+

@@ -1,0 +1,419 @@
+<clinical_study>
+  <!-- This xml conforms to an XML Schema at:
+    https://clinicaltrials.gov/ct2/html/images/info/public.xsd -->
+  <required_header>
+    <download_date>ClinicalTrials.gov processed this data on February 12, 2019</download_date>
+    <link_text>Link to the current ClinicalTrials.gov record.</link_text>
+    <url>https://clinicaltrials.gov/show/NCT00000147</url>
+  </required_header>
+  <id_info>
+    <org_study_id>NEI-48</org_study_id>
+    <nct_id>NCT00000147</nct_id>
+  </id_info>
+  <brief_title>Longitudinal Optic Neuritis Study (LONS)</brief_title>
+  <sponsors>
+    <lead_sponsor>
+      <agency>National Eye Institute (NEI)</agency>
+      <agency_class>NIH</agency_class>
+    </lead_sponsor>
+  </sponsors>
+  <source>National Eye Institute (NEI)</source>
+  <brief_summary>
+    <textblock>
+      To assess the beneficial and adverse effects of corticosteroid treatment for optic neuritis.
+
+      To determine the natural history of vision in patients who suffer optic neuritis.
+
+      To identify risk factors for the development of multiple sclerosis in patients with optic
+      neuritis.
+    </textblock>
+  </brief_summary>
+  <detailed_description>
+    <textblock>
+      Optic neuritis is an inflammatory disease of the optic nerve that typically affects young
+      adults. Women are affected more often than men. It is second only to glaucoma as the most
+      common acquired optic nerve disorder in persons younger than age 50.
+
+      In this disorder, closely linked to multiple sclerosis, prognosis for visual recovery is
+      generally good. However, return of visual function is almost never complete. After resolution
+      of optic neuritis, virtually all patients show some signs of optic nerve damage, and most are
+      symptomatic. Even when a patient's acuity recovers to 20/20, abnormalities frequently remain
+      in other measures such as contrast sensitivity, color vision, and visual field.
+
+      Prior to the Optic Neuritis Treatment Trial (ONTT), well-established guidelines for treating
+      optic neuritis did not exist. Although corticosteroids had been used to treat this disease,
+      studies to demonstrate their effectiveness had not been satisfactory. Some experts advocated
+      treatment with oral prednisone while others recommended no treatment. Anecdotal reports
+      suggested that high-dose intravenous corticosteroids might be effective.
+
+      The association between optic neuritis and multiple sclerosis is well established. Optic
+      neuritis may be the first manifestation of multiple sclerosis, or it may occur later in its
+      course. A strong case can be made for &quot;isolated&quot; optic neuritis being a forme fruste of
+      multiple sclerosis, based on similarities between the two in such epidemiologic factors as
+      gender, age, geographic distributions, cerebrospinal fluid changes, histocompatibility data,
+      magnetic resonance imaging (MRI) changes, and family history. The magnitude of the risk of
+      multiple sclerosis after optic neuritis is uncertain. Previous studies have reported very
+      disparate results, with the risk being reported to be as low as 13 percent and as high as 88
+      percent. The importance of risk factors such as age, gender, and MRI changes in predicting
+      which patients with optic neuritis are most likely to develop multiple sclerosis also is
+      unclear.
+
+      The treatment phase of the study was called the Optic Neuritis Treatment Trial (ONTT),
+      whereas the current long-term followup phase is called the Longitudinal Optic Neuritis Study
+      (LONS). The study is being conducted at 15 clinical centers in the United States. Resource
+      centers include a data coordinating center and a visual field reading center.
+
+      Patients were randomized to one of the three following treatment groups at 15 clinical
+      centers:
+
+        -  Oral prednisone (1 mg/kg/day) for 14 days
+
+        -  Intravenous methylprednisolone (250 mg every 6 hours) for 3 days, followed by oral
+           prednisone (1 mg/kg/day) for 11 days
+
+        -  Oral placebo for 14 days.
+
+      Each regimen was followed by a short oral taper. The oral prednisone and placebo groups were
+      double masked, whereas the intravenous methylprednisolone group was single masked.
+
+      Baseline testing included blood tests to evaluate for syphilis and systemic lupus
+      erythematosus, a chest x-ray to evaluate for sarcoidosis, and a brain MRI scan to evaluate
+      for changes suggestive of multiple sclerosis.
+
+      The rate of visual recovery and the long-term visual outcome were both assessed by measures
+      of visual acuity, contrast sensitivity, color vision, and visual field at baseline, at seven
+      followup visits during the first 6 months, and then yearly. A standardized neurologic
+      examination with an assessment of multiple sclerosis status was made at baseline, after 6
+      months, and then yearly.
+    </textblock>
+  </detailed_description>
+  <overall_status>Unknown status</overall_status>
+  <last_known_status>Active, not recruiting</last_known_status>
+  <start_date>July 1988</start_date>
+  <phase>N/A</phase>
+  <study_type>Interventional</study_type>
+  <has_expanded_access>No</has_expanded_access>
+  <study_design_info>
+    <primary_purpose>Treatment</primary_purpose>
+    <masking>Single</masking>
+  </study_design_info>
+  <condition>Multiple Sclerosis</condition>
+  <condition>Optic Neuritis</condition>
+  <intervention>
+    <intervention_type>Drug</intervention_type>
+    <intervention_name>Methylprednisolone</intervention_name>
+  </intervention>
+  <intervention>
+    <intervention_type>Drug</intervention_type>
+    <intervention_name>Prednisone</intervention_name>
+  </intervention>
+  <eligibility>
+    <criteria>
+      <textblock>
+        The major eligibility criteria for enrollment into the ONTT included the following:
+
+        Age range of 18 to 46 years
+
+        Acute unilateral optic neuritis with visual symptoms for 8 days or less
+
+        A relative afferent pupillary defect and a visual field defect in the affected eye
+
+        No previous episodes of optic neuritis in the affected eye
+
+        No previous corticosteroid treatment for optic neuritis or multiple sclerosis
+
+        No systemic disease other than multiple sclerosis that might be the cause of the optic
+        neuritis
+      </textblock>
+    </criteria>
+    <gender>All</gender>
+    <minimum_age>18 Years</minimum_age>
+    <maximum_age>46 Years</maximum_age>
+    <healthy_volunteers>No</healthy_volunteers>
+  </eligibility>
+  <location>
+    <facility>
+      <name>University of Arkansas</name>
+      <address>
+        <city>Little Rock</city>
+        <state>Arkansas</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>California Pacific Medical Center</name>
+      <address>
+        <city>San Francisco</city>
+        <state>California</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Georgetown University</name>
+      <address>
+        <city>Washington</city>
+        <state>District of Columbia</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Florida</name>
+      <address>
+        <city>Gainesville</city>
+        <state>Florida</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Illinois</name>
+      <address>
+        <city>Chicago</city>
+        <state>Illinois</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Iowa</name>
+      <address>
+        <city>Iowa City</city>
+        <state>Iowa</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Johns Hopkins University</name>
+      <address>
+        <city>Baltimore</city>
+        <state>Maryland</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Michigan</name>
+      <address>
+        <city>Ann Arbor</city>
+        <state>Michigan</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Michigan State University</name>
+      <address>
+        <city>East Lansing</city>
+        <state>Michigan</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>New York University</name>
+      <address>
+        <city>New York</city>
+        <state>New York</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Duke University</name>
+      <address>
+        <city>Durham</city>
+        <state>North Carolina</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Devers Eye Institute</name>
+      <address>
+        <city>Portland</city>
+        <state>Oregon</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Wills Eye Hospital</name>
+      <address>
+        <city>Philadelphia</city>
+        <state>Pennsylvania</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Baylor College of Medicine</name>
+      <address>
+        <city>Houston</city>
+        <state>Texas</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Swedish Medical Center</name>
+      <address>
+        <city>Seattle</city>
+        <state>Washington</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location_countries>
+    <country>United States</country>
+  </location_countries>
+  <reference>
+    <citation>Beck RW; Diehl L; Cleary PA; Optic Neuritis Study Group; The Pelli-Robson Letter Chart: Normative data for young adults., Clin Vis Sci 1993;8:207-210</citation>
+  </reference>
+  <reference>
+    <citation>Cleary PA, Beck RW, Anderson MM Jr, Kenny DJ, Backlund JY, Gilbert PR. Design, methods, and conduct of the Optic Neuritis Treatment Trial. Control Clin Trials. 1993 Apr;14(2):123-42.</citation>
+    <PMID>8500302</PMID>
+  </reference>
+  <reference>
+    <citation>Keltner JL, Johnson CA, Beck RW, Cleary PA, Spurr JO. Quality control functions of the Visual Field Reading Center (VFRC) for the Optic Neuritis Treatment Trial (ONTT). Control Clin Trials. 1993 Apr;14(2):143-59.</citation>
+    <PMID>8500303</PMID>
+  </reference>
+  <reference>
+    <citation>Anderson MM Jr, Boly LD, Beck RW. Remote clinic/patient monitoring for multicenter trials. Optic Neuritis Study Group. Control Clin Trials. 1996 Oct;17(5):407-14.</citation>
+    <PMID>8932973</PMID>
+  </reference>
+  <reference>
+    <citation>Optic Neuritis Study Group; The five-year risk of multiple sclerosis after optic neuritis. Experience of the Optic Neuritis Treatment Trial., Neurology (in press)</citation>
+  </reference>
+  <reference>
+    <citation>Visual function 5 years after optic neuritis: experience of the Optic Neuritis Treatment Trial. The Optic Neuritis Study Group. Arch Ophthalmol. 1997 Dec;115(12):1545-52.</citation>
+    <PMID>9400788</PMID>
+  </reference>
+  <reference>
+    <citation>The clinical profile of optic neuritis. Experience of the Optic Neuritis Treatment Trial. Optic Neuritis Study Group. Arch Ophthalmol. 1991 Dec;109(12):1673-8.</citation>
+    <PMID>1841573</PMID>
+  </reference>
+  <reference>
+    <citation>Beck RW, Cleary PA, Anderson MM Jr, Keltner JL, Shults WT, Kaufman DI, Buckley EG, Corbett JJ, Kupersmith MJ, Miller NR, et al. A randomized, controlled trial of corticosteroids in the treatment of acute optic neuritis. The Optic Neuritis Study Group. N Engl J Med. 1992 Feb 27;326(9):581-8.</citation>
+    <PMID>1734247</PMID>
+  </reference>
+  <reference>
+    <citation>Beck RW. Corticosteroid treatment of optic neuritis: a need to change treatment practices. The Optic Neuritis Study Group. Neurology. 1992 Jun;42(6):1133-5.</citation>
+    <PMID>1318520</PMID>
+  </reference>
+  <reference>
+    <citation>Beck RW. The optic neuritis treatment trial. Implications for clinical practice. Optic Neuritis Study Group. Arch Ophthalmol. 1992 Mar;110(3):331-2.</citation>
+    <PMID>1543448</PMID>
+  </reference>
+  <reference>
+    <citation>Beck RW, Arrington J, Murtagh FR, Cleary PA, Kaufman DI. Brain magnetic resonance imaging in acute optic neuritis. Experience of the Optic Neuritis Study Group. Arch Neurol. 1993 Aug;50(8):841-6.</citation>
+    <PMID>8352671</PMID>
+  </reference>
+  <reference>
+    <citation>Beck RW, Cleary PA. Optic neuritis treatment trial. One-year follow-up results. Arch Ophthalmol. 1993 Jun;111(6):773-5.</citation>
+    <PMID>8512477</PMID>
+  </reference>
+  <reference>
+    <citation>Beck RW, Cleary PA. Recovery from severe visual loss in optic neuritis. Arch Ophthalmol. 1993 Mar;111(3):300.</citation>
+    <PMID>8447730</PMID>
+  </reference>
+  <reference>
+    <citation>Beck RW, Cleary PA, Trobe JD, Kaufman DI, Kupersmith MJ, Paty DW, Brown CH. The effect of corticosteroids for acute optic neuritis on the subsequent development of multiple sclerosis. The Optic Neuritis Study Group. N Engl J Med. 1993 Dec 9;329(24):1764-9.</citation>
+    <PMID>8232485</PMID>
+  </reference>
+  <reference>
+    <citation>Beck RW, Kupersmith MJ, Cleary PA, Katz B. Fellow eye abnormalities in acute unilateral optic neuritis. Experience of the optic neuritis treatment trial. Ophthalmology. 1993 May;100(5):691-7; discussion 697-8.</citation>
+    <PMID>8493012</PMID>
+  </reference>
+  <reference>
+    <citation>Chrousos GA, Kattah JC, Beck RW, Cleary PA. Side effects of glucocorticoid treatment. Experience of the Optic Neuritis Treatment Trial. JAMA. 1993 Apr 28;269(16):2110-2.</citation>
+    <PMID>8468765</PMID>
+  </reference>
+  <reference>
+    <citation>Keltner JL, Johnson CA, Spurr JO, Beck RW. Baseline visual field profile of optic neuritis. The experience of the optic neuritis treatment trial. Optic Neuritis Study Group. Arch Ophthalmol. 1993 Feb;111(2):231-4.</citation>
+    <PMID>8431161</PMID>
+  </reference>
+  <reference>
+    <citation>Beck RW, Cleary PA, Backlund JC. The course of visual recovery after optic neuritis. Experience of the Optic Neuritis Treatment Trial. Ophthalmology. 1994 Nov;101(11):1771-8.</citation>
+    <PMID>7800355</PMID>
+  </reference>
+  <reference>
+    <citation>Keltner JL, Johnson CA, Spurr JO, Beck RW. Visual field profile of optic neuritis. One-year follow-up in the Optic Neuritis Treatment Trial. Arch Ophthalmol. 1994 Jul;112(7):946-53.</citation>
+    <PMID>8031275</PMID>
+  </reference>
+  <reference>
+    <citation>Beck RW. The optic neuritis treatment trial: three-year follow-up results. Arch Ophthalmol. 1995 Feb;113(2):136-7.</citation>
+    <PMID>7864737</PMID>
+  </reference>
+  <reference>
+    <citation>Beck RW, Trobe JD. The Optic Neuritis Treatment Trial. Putting the results in perspective. The Optic Neuritis Study Group. J Neuroophthalmol. 1995 Sep;15(3):131-5.</citation>
+    <PMID>8574355</PMID>
+  </reference>
+  <reference>
+    <citation>Beck RW, Trobe JD. What we have learned from the Optic Neuritis Treatment Trial. Ophthalmology. 1995 Oct;102(10):1504-8.</citation>
+    <PMID>9097798</PMID>
+  </reference>
+  <reference>
+    <citation>Rolak LA, Beck RW, Paty DW, Tourtellotte WW, Whitaker JN, Rudick RA. Cerebrospinal fluid in acute optic neuritis: experience of the optic neuritis treatment trial. Neurology. 1996 Feb;46(2):368-72.</citation>
+    <PMID>8614496</PMID>
+  </reference>
+  <reference>
+    <citation>Trobe JD, Beck RW, Moke PS, Cleary PA. Contrast sensitivity and other vision tests in the optic neuritis treatment trial. Am J Ophthalmol. 1996 May;121(5):547-53.</citation>
+    <PMID>8610798</PMID>
+  </reference>
+  <reference>
+    <citation>Cleary PA, Beck RW, Bourque LB, Backlund JC, Miskala PH. Visual symptoms after optic neuritis. Results from the Optic Neuritis Treatment Trial. J Neuroophthalmol. 1997 Mar;17(1):18-23; quiz 24-8.</citation>
+    <PMID>9093956</PMID>
+  </reference>
+  <verification_date>October 1999</verification_date>
+  <!-- For several months we've had both old and new date name tags                             -->
+  <!-- Now, the old date names have been dropped.                                               -->
+  <!-- The new date name replacements are:                                                      -->
+  <!--     OLD (gone)                                        NEW (in use)                       -->
+  <!--   lastchanged_date                         becomes   last_update_submitted               -->
+  <!--   firstreceived_date                       becomes   study_first_submitted               -->
+  <!--   firstreceived_results_date               becomes   results_first_submitted             -->
+  <!--   firstreceived_results_disposition_date   becomes   disposition_first_submitted         -->
+  <study_first_submitted>September 23, 1999</study_first_submitted>
+  <study_first_submitted_qc>September 23, 1999</study_first_submitted_qc>
+  <study_first_posted type="Estimate">September 24, 1999</study_first_posted>
+  <last_update_submitted>May 26, 2006</last_update_submitted>
+  <last_update_submitted_qc>May 26, 2006</last_update_submitted_qc>
+  <last_update_posted type="Estimate">May 29, 2006</last_update_posted>
+  <condition_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Multiple Sclerosis</mesh_term>
+    <mesh_term>Neuritis</mesh_term>
+    <mesh_term>Optic Neuritis</mesh_term>
+  </condition_browse>
+  <intervention_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Prednisolone acetate</mesh_term>
+    <mesh_term>Methylprednisolone acetate</mesh_term>
+    <mesh_term>Prednisone</mesh_term>
+    <mesh_term>Methylprednisolone</mesh_term>
+    <mesh_term>Methylprednisolone Hemisuccinate</mesh_term>
+    <mesh_term>Prednisolone</mesh_term>
+    <mesh_term>Prednisolone hemisuccinate</mesh_term>
+    <mesh_term>Prednisolone phosphate</mesh_term>
+  </intervention_browse>
+  <!-- Results have not yet been posted for this study                                          -->
+</clinical_study>
+

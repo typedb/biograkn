@@ -1,0 +1,374 @@
+<clinical_study>
+  <!-- This xml conforms to an XML Schema at:
+    https://clinicaltrials.gov/ct2/html/images/info/public.xsd -->
+  <required_header>
+    <download_date>ClinicalTrials.gov processed this data on February 12, 2019</download_date>
+    <link_text>Link to the current ClinicalTrials.gov record.</link_text>
+    <url>https://clinicaltrials.gov/show/NCT00000176</url>
+  </required_header>
+  <id_info>
+    <org_study_id>IA0018</org_study_id>
+    <secondary_id>RO 1AG15922-01</secondary_id>
+    <nct_id>NCT00000176</nct_id>
+  </id_info>
+  <brief_title>Alzheimer's Disease Prevention Trial</brief_title>
+  <official_title>Alzheimer's Disease Prevention Trial. A Multi-center, Randomized, Double-blind Placebo Controlled Trial of Estrogens to Prevent Alzheimer's Disease and Loss of Memory in Women.</official_title>
+  <sponsors>
+    <lead_sponsor>
+      <agency>National Institute on Aging (NIA)</agency>
+      <agency_class>NIH</agency_class>
+    </lead_sponsor>
+  </sponsors>
+  <source>National Institute on Aging (NIA)</source>
+  <brief_summary>
+    <textblock>
+      This is a three-year study to determine if estrogens can prevent memory loss and Alzheimer's
+      disease in women with a family history of Alzheimer's disease.
+    </textblock>
+  </brief_summary>
+  <detailed_description>
+    <textblock>
+      PREventing Postmenopausal memory loss and Alzheimer's with Replacement Estrogens (PREPARE) is
+      a double-blind-placebo controlled trial to determine whether estrogen (or estrogen and
+      progesterone) can delay the onset of memory loss or Alzheimer's Disease in elderly women with
+      a family history of the disease.
+    </textblock>
+  </detailed_description>
+  <overall_status>Completed</overall_status>
+  <completion_date type="Actual">September 2007</completion_date>
+  <primary_completion_date type="Actual">September 2007</primary_completion_date>
+  <phase>Phase 3</phase>
+  <study_type>Interventional</study_type>
+  <has_expanded_access>No</has_expanded_access>
+  <study_design_info>
+    <allocation>Randomized</allocation>
+    <primary_purpose>Prevention</primary_purpose>
+    <masking>Double</masking>
+  </study_design_info>
+  <condition>Alzheimer Disease</condition>
+  <condition>Memory Disorders</condition>
+  <intervention>
+    <intervention_type>Drug</intervention_type>
+    <intervention_name>Estrogen</intervention_name>
+  </intervention>
+  <intervention>
+    <intervention_type>Drug</intervention_type>
+    <intervention_name>Estrogen and Progesterone</intervention_name>
+  </intervention>
+  <eligibility>
+    <criteria>
+      <textblock>
+        Inclusion Criteria:
+
+          -  Healthy women 65 or older with a family history of memory problems not currently on
+             estrogen.
+
+        Exclusion Criteria:
+
+          -  Significant neurological impairment
+
+          -  Current estrogen use
+
+          -  History of breast cancer
+      </textblock>
+    </criteria>
+    <gender>Female</gender>
+    <minimum_age>65 Years</minimum_age>
+    <maximum_age>N/A</maximum_age>
+    <healthy_volunteers>Accepts Healthy Volunteers</healthy_volunteers>
+  </eligibility>
+  <overall_official>
+    <last_name>Mary Sano, PhD</last_name>
+    <role>Principal Investigator</role>
+    <affiliation>Icahn School of Medicine at Mount Sinai</affiliation>
+  </overall_official>
+  <location>
+    <facility>
+      <name>University of Alabama</name>
+      <address>
+        <city>Birmingham</city>
+        <state>Alabama</state>
+        <zip>35294</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of California, Irvine</name>
+      <address>
+        <city>Irvine</city>
+        <state>California</state>
+        <zip>29697-4540</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>New England Center for Headache</name>
+      <address>
+        <city>Stamford</city>
+        <state>Connecticut</state>
+        <zip>06902-1249</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Howard University</name>
+      <address>
+        <city>Washington</city>
+        <state>District of Columbia</state>
+        <zip>20060</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Lee Memorial Health System</name>
+      <address>
+        <city>Fort Myers</city>
+        <state>Florida</state>
+        <zip>33901</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Mayo Clinic Jacksonville</name>
+      <address>
+        <city>Jacksonville</city>
+        <state>Florida</state>
+        <zip>32225</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Wein Center</name>
+      <address>
+        <city>Miami Beach</city>
+        <state>Florida</state>
+        <zip>33140</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>West Florida Regional Medical Center</name>
+      <address>
+        <city>Pensacola</city>
+        <state>Florida</state>
+        <zip>32514</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>North Broward Medical Center</name>
+      <address>
+        <city>Pompano Beach</city>
+        <state>Florida</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Tallahassee Memorial Health Center</name>
+      <address>
+        <city>Tallahassee</city>
+        <state>Florida</state>
+        <zip>32308</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>St. Mary's Medical Center</name>
+      <address>
+        <city>West Palm Beach</city>
+        <state>Florida</state>
+        <zip>33407</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Johns Hopkins Bayview Medical Center</name>
+      <address>
+        <city>Baltimore</city>
+        <state>Maryland</state>
+        <zip>21224</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Neurology Group of Bergen County</name>
+      <address>
+        <city>Ridgewood</city>
+        <state>New Jersey</state>
+        <zip>07450</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Columbia University</name>
+      <address>
+        <city>New York</city>
+        <state>New York</state>
+        <zip>10032</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Cornell Medical Center, New York Presbyterian Medical Center</name>
+      <address>
+        <city>New York</city>
+        <state>New York</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>New York United Hospital Medical Center</name>
+      <address>
+        <city>Port Chester</city>
+        <state>New York</state>
+        <zip>10573</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Burke Medical Research Institute</name>
+      <address>
+        <city>White Plains</city>
+        <state>New York</state>
+        <zip>10605</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Duke University Medical Center</name>
+      <address>
+        <city>Durham</city>
+        <state>North Carolina</state>
+        <zip>27710</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Clinical Pharmaceutical Trials</name>
+      <address>
+        <city>Tulsa</city>
+        <state>Oklahoma</state>
+        <zip>74104-5428</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Butler Hospital, Rhode Island Hospital</name>
+      <address>
+        <city>Providence</city>
+        <state>Rhode Island</state>
+        <zip>02906</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Medical University of South Carolina</name>
+      <address>
+        <city>North Charleston</city>
+        <state>South Carolina</state>
+        <zip>29406</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Eastern Virginia Medical School</name>
+      <address>
+        <city>Norfolk</city>
+        <state>Virginia</state>
+        <zip>23507-1912</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location_countries>
+    <country>United States</country>
+  </location_countries>
+  <reference>
+    <citation>Tang MX, Jacobs D, Stern Y, Marder K, Schofield P, Gurland B, Andrews H, Mayeux R. Effect of oestrogen during menopause on risk and age at onset of Alzheimer's disease. Lancet. 1996 Aug 17;348(9025):429-32.</citation>
+    <PMID>8709781</PMID>
+  </reference>
+  <reference>
+    <citation>Kawas C, Resnick S, Morrison A, Brookmeyer R, Corrada M, Zonderman A, Bacal C, Lingle DD, Metter E. A prospective study of estrogen replacement therapy and the risk of developing Alzheimer's disease: the Baltimore Longitudinal Study of Aging. Neurology. 1997 Jun;48(6):1517-21. Erratum in: Neurology 1998 Aug;51(2):654.</citation>
+    <PMID>9191758</PMID>
+  </reference>
+  <reference>
+    <citation>Jacobs DM, Tang MX, Stern Y, Sano M, Marder K, Bell KL, Schofield P, Dooneief G, Gurland B, Mayeux R. Cognitive function in nondemented older women who took estrogen after menopause. Neurology. 1998 Feb;50(2):368-73.</citation>
+    <PMID>9484355</PMID>
+  </reference>
+  <results_reference>
+    <citation>Aloysi A, Van Dyk K, Sano M. Women's cognitive and affective health and neuropsychiatry. Mt Sinai J Med. 2006 Nov;73(7):967-75. Review.</citation>
+    <PMID>17195882</PMID>
+  </results_reference>
+  <verification_date>November 2010</verification_date>
+  <!-- For several months we've had both old and new date name tags                             -->
+  <!-- Now, the old date names have been dropped.                                               -->
+  <!-- The new date name replacements are:                                                      -->
+  <!--     OLD (gone)                                        NEW (in use)                       -->
+  <!--   lastchanged_date                         becomes   last_update_submitted               -->
+  <!--   firstreceived_date                       becomes   study_first_submitted               -->
+  <!--   firstreceived_results_date               becomes   results_first_submitted             -->
+  <!--   firstreceived_results_disposition_date   becomes   disposition_first_submitted         -->
+  <study_first_submitted>October 29, 1999</study_first_submitted>
+  <study_first_submitted_qc>October 29, 1999</study_first_submitted_qc>
+  <study_first_posted type="Estimate">November 1, 1999</study_first_posted>
+  <last_update_submitted>November 3, 2010</last_update_submitted>
+  <last_update_submitted_qc>November 3, 2010</last_update_submitted_qc>
+  <last_update_posted type="Estimate">November 5, 2010</last_update_posted>
+  <keyword>Alzheimer's disease</keyword>
+  <keyword>memory loss</keyword>
+  <keyword>Estrogen</keyword>
+  <condition_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Alzheimer Disease</mesh_term>
+    <mesh_term>Memory Disorders</mesh_term>
+  </condition_browse>
+  <intervention_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Progesterone</mesh_term>
+    <mesh_term>Estrogens</mesh_term>
+  </intervention_browse>
+  <!-- Results have not yet been posted for this study                                          -->
+</clinical_study>
+

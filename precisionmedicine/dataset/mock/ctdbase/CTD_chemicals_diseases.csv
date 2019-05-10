@@ -1,0 +1,130 @@
+﻿# The Comparative Toxicogenomics Database (CTD) - http://ctdbase.org/,,,,,,,,,
+#   Copyright 2002-2012 MDI Biological Laboratory. All rights reserved.,,,,,,,,,
+#   Copyright 2012-2019 MDI Biological Laboratory & NC State University. All rights reserved.,,,,,,,,,
+#  ,,,,,,,,,
+# ,,,,,,,,,
+# Use is subject to the terms set forth at http://ctdbase.org/about/legal.jsp,,,,,,,,,
+# These terms include:,,,,,,,,,
+# ,,,,,,,,,
+#   1. All forms of publication (e.g., web sites, research papers, databases,,,,,,
+#      software applications, etc.) that use or rely on CTD data must cite CTD.,,,,,,,,
+#      Citation guidelines: http://ctdbase.org/about/publications/#citing,,,,,,,,,
+# ,,,,,,,,,
+#   2. All electronic or online applications must include hyperlinks from ,,,,,,,,,
+#      contexts that use CTD data to the applicable CTD data pages.,,,,,,,,,
+#      Linking instructions: http://ctdbase.org/help/linking.jsp,,,,,,,,,
+# ,,,,,,,,,
+#   3. You must notify CTD, and describe your use of our data:,,,,,,,,
+#      http://ctdbase.org/help/contact.go,,,,,,,,,
+# ,,,,,,,,,
+#   4. For quality control purposes, you must provide CTD with periodic ,,,,,,,,
+#      access to your publication of our data.,,,,,,,,,
+# ,,,,,,,,,
+# More information: http://ctdbase.org/downloads/,,,,,,,,,
+# ,,,,,,,,,
+# Report created: Tue Feb 05 15:23:55 EST 2019,,,,,,,,,
+#,,,,,,,,,
+# Fields:,,,,,,,,,
+# ChemicalName,ChemicalID,CasRN,DiseaseName,DiseaseID,DirectEvidence,InferenceGeneSymbol,InferenceScore,OmimIDs,PubMedIDs
+#,,,,,,,,,
+06-Paris-LA-66 protocol,C046983,,Precursor Cell Lymphoblastic Leukemia-Lymphoma,MESH:D054198,therapeutic,,,,4519131
+10074-G5,C534883,,Adenocarcinoma,MESH:D000230,,MYC,4.41,,26432044
+10074-G5,C534883,,Adenocarcinoma of Lung,MESH:D000077192,,MYC,4.65,,26656844|27602772
+10074-G5,C534883,,Burkitt Lymphoma,MESH:D002051,,MYC,5.45,113970,
+10074-G5,C534883,,Carcinoma,MESH:D002277,,MYC,4.41,,2228319
+10074-G5,C534883,,"Carcinoma, Hepatocellular",MESH:D006528,,MYC,3.95,,12029619|15565109|29698666|9029167
+10074-G5,C534883,,"Carcinoma, Merkel Cell",MESH:D015266,,MYC,6.46,,25277525
+10074-G5,C534883,,"Carcinoma, Non-Small-Cell Lung",MESH:D002289,,MYC,4.61,,24688052
+10074-G5,C534883,,"Carcinoma, Squamous Cell",MESH:D002294,,MYC,4.55,,26432044
+10074-G5,C534883,,"Cardiomyopathy, Hypertrophic",MESH:D002312,,MYC,5.1,,22000973
+10074-G5,C534883,,"Cell Transformation, Neoplastic",MESH:D002471,,MYC,4.37,,2543982|29626521
+10074-G5,C534883,,Chromosome Breakage,MESH:D019457,,MYC,4.76,,25933419
+10074-G5,C534883,,Cleft Lip,MESH:D002971,,MYC,5.35,,24859337
+10074-G5,C534883,,Cleft Palate,MESH:D002972,,MYC,4.96,,24859337
+10074-G5,C534883,,Colonic Neoplasms,MESH:D003110,,MYC,4.36,,12189186|15059925|18283038|21081470
+10074-G5,C534883,,Colorectal Neoplasms,MESH:D015179,,MYC,4.3,,30510241
+10074-G5,C534883,,"Disease Models, Animal",MESH:D004195,,MYC,4.29,,27602772
+10074-G5,C534883,,Disease Progression,MESH:D018450,,MYC,4.66,,22321834|28191284
+10074-G5,C534883,,Endometrial Neoplasms,MESH:D016889,,MYC,4.89,,26656844
+10074-G5,C534883,,Fatty Liver,MESH:D005234,,MYC,4.28,,24210820
+10074-G5,C534883,,Glioblastoma,MESH:D005909,,MYC,4.79,,21127729
+10074-G5,C534883,,Hemangiosarcoma,MESH:D006394,,MYC,5.29,,17569031
+10074-G5,C534883,,"Hypertrophy, Left Ventricular",MESH:D017379,,MYC,4.87,,21472269
+10074-G5,C534883,,"Leukemia, Myeloid, Acute",MESH:D015470,,MYC,4.53,,25956709
+10074-G5,C534883,,"Liver Cirrhosis, Experimental",MESH:D008106,,MYC,3.82,,25380136
+10074-G5,C534883,,Liver Neoplasms,MESH:D008113,,MYC,4.19,,11532874|8807143
+10074-G5,C534883,,"Liver Neoplasms, Experimental",MESH:D008114,,MYC,4.28,,11280770|18560566|9079223
+10074-G5,C534883,,Lung Neoplasms,MESH:D008175,,MYC,4.1,,16289808|28191284
+10074-G5,C534883,,Medulloblastoma,MESH:D008527,,MYC,5.14,,19270706
+10074-G5,C534883,,Myelodysplastic Syndromes,MESH:D009190,,MYC,5.19,,10914558
+10074-G5,C534883,,Neoplasm Metastasis,MESH:D009362,,MYC,4.25,,22321834
+10074-G5,C534883,,Neoplasms,MESH:D009369,,MYC,4.21,,11559025
+10074-G5,C534883,,Neuroblastoma,MESH:D009447,,MYC,5,,8761367
+10074-G5,C534883,,Neuroectodermal Tumors,MESH:D017599,,MYC,6.12,,8761367
+10074-G5,C534883,,Osteosarcoma,MESH:D012516,,MYC,5.09,,24646477
+10074-G5,C534883,,Ovarian Neoplasms,MESH:D010051,,MYC,4.54,,20852632
+10074-G5,C534883,,Pancreatic Neoplasms,MESH:D010190,,MYC,4.57,,25961927
+10074-G5,C534883,,Pheochromocytoma,MESH:D010673,,MAX,6.52,171300,21685915
+10074-G5,C534883,,"Polycystic Kidney, Autosomal Dominant",MESH:D016891,,MYC,6.17,,25877301
+10074-G5,C534883,,Prostatic Neoplasms,MESH:D011471,,MYC,3.89,,17173048|23704919
+10074-G5,C534883,,Stomach Neoplasms,MESH:D013274,,MYC,4.22,,17171786|21173787
+10074-G5,C534883,,Urinary Bladder Neoplasms,MESH:D001749,,MYC,4.4,,2228319
+10074-G5,C534883,,Uterine Cervical Neoplasms,MESH:D002583,,MYC,5.09,,26432044
+10074-G5,C534883,,Wilms Tumor,MESH:D009396,,MAX,6.35,,28825729
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Adenocarcinoma,MESH:D000230,,KCNQ1,4.72,,23975432
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Amphetamine-Related Disorders,MESH:D019969,,FOS,4.1,,19689456
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Amyotrophic lateral sclerosis 1,MESH:C531617,,FOS,4.58,,11796754
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Anxiety Disorders,MESH:D001008,,FOS,3.79,,16488545
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,"Arthritis, Juvenile",MESH:D001171,,FOS,4.08,,19565504
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,"Atrial Fibrillation, Familial, 3",MESH:C563817,,KCNQ1,7.58,607554,
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Beckwith-Wiedemann Syndrome,MESH:D001506,,KCNQ1,6.68,130650,
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Brain Diseases,MESH:D001927,,KCNQ2,4.89,,27602407
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Brain Injuries,MESH:D001930,,FOS,3.86,,9630518
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Breast Neoplasms,MESH:D001943,,FOS,3.16,,16298037
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,"Carcinoma, Hepatocellular",MESH:D006528,,FOS,3.28,,28284560|9029167
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,"Carcinoma, Ovarian Epithelial",MESH:D000077216,,FOS,4.82,,28811376
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,"Cell Transformation, Neoplastic",MESH:D002471,,FOS,3.68,,8777434
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,"Cholestasis, Extrahepatic",MESH:D001651,,FOS,4.69,,28789951
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Cocaine-Related Disorders,MESH:D019970,,FOS,3.53,,17276011|18311559|19533625
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Developmental Disabilities,MESH:D002658,,KCNQ2,5.52,,20805988|27602407
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,"Diabetes Mellitus, Type 2",MESH:D003924,,KCNQ1,4.67,,18711366|18711367|26551672
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,"Disease Models, Animal",MESH:D004195,,FOS,3.6,,27093858
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Endometriosis,MESH:D004715,,FOS,3.95,,23284138
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Epilepsy,MESH:D004827,,FOS,8.93,,15973680
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Epilepsy,MESH:D004827,,KCNQ2,8.93,,16464983|29942082
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,"Epilepsy, Benign Neonatal",MESH:D020936,,KCNQ2,7.3,,19380078|26910900
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,"EPILEPTIC ENCEPHALOPATHY, EARLY INFANTILE, 7",OMIM:613720,,KCNQ2,7.65,613720,
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Fibrous Dysplasia of Bone,MESH:D005357,,FOS,5.67,,7739708
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,"Hearing Loss, Noise-Induced",MESH:D006317,,KCNQ1,5.84,,16823764
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Heat Stroke,MESH:D018883,,FOS,4.79,,24039931
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Hemorrhage,MESH:D006470,,FOS,3.7,,7844257
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Hyperalgesia,MESH:D006930,,FOS,3.44,,27093858
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Hyperkinesis,MESH:D006948,marker/mechanism,,,,19098162
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Hyperkinesis,MESH:D006948,,FOS,3.54,,18355967
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Hypertension,MESH:D006973,,FOS,3.13,,12044476|24039778
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,"Infarction, Middle Cerebral Artery",MESH:D020244,,FOS,4.38,,12374626
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Intestinal Neoplasms,MESH:D007414,,KCNQ1,5.5,,23975432
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Jervell-Lange Nielsen Syndrome,MESH:D029593,,KCNQ1,7.23,220400,
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,"Liver Cirrhosis, Experimental",MESH:D008106,,FOS,3.15,,25380136
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Long QT Syndrome,MESH:D008133,,KCNQ1,4.93,,10868744|14510655|15028050|17467628|18329740|20513597|22910039
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Lung Neoplasms,MESH:D008175,,FOS,3.41,,16289808
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Nervous System Diseases,MESH:D009422,,FOS,8.2,,12890883
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Nervous System Diseases,MESH:D009422,,KCNQ2,8.2,,20805988
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Neurodevelopmental Disorders,MESH:D065886,,KCNQ2,5.34,,29942082
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Neurotoxicity Syndromes,MESH:D020258,,FOS,3.77,,19220411
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Reperfusion Injury,MESH:D015427,,FOS,3.84,,7922267
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Romano-Ward Syndrome,MESH:D029597,,KCNQ1,7.23,192500,15004216
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Seizures,MESH:D012640,marker/mechanism,,,,26348896
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Seizures,MESH:D012640,,FOS,6.27,,11955713|12946577|8923670|9630518
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Seizures,MESH:D012640,,KCNQ2,6.27,,27602407
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,"SEIZURES, BENIGN FAMILIAL NEONATAL, 1",OMIM:121200,,KCNQ2,7.65,121200,
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,"SEIZURES, BENIGN FAMILIAL NEONATAL, 2",OMIM:121201,,KCNQ3,7.82,121201,
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Short QT Syndrome 2,MESH:C566505,,KCNQ1,7.58,609621,
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Status Epilepticus,MESH:D013226,,FOS,3.8,,16696126|18587450|18988310|7984056
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Substance Withdrawal Syndrome,MESH:D013375,,FOS,3.55,,15196791|15196794|18485423
+"10,10-bis(4-pyridinylmethyl)-9(10H)-anthracenone",C112297,,Trigeminal Neuralgia,MESH:D014277,,FOS,4.92,,27093858
+"10,11-dihydro-10,11-dihydroxy-5H-dibenzazepine-5-carboxamide",C004822,35079-97-1,"Abnormalities, Drug-Induced",MESH:D000014,,EPHX1,5.12,,2336087
+"10,11-dihydro-10,11-dihydroxy-5H-dibenzazepine-5-carboxamide",C004822,35079-97-1,Acute Lung Injury,MESH:D055371,,EPHX1,5.47,,26840748
+"10,11-dihydro-10,11-dihydroxy-5H-dibenzazepine-5-carboxamide",C004822,35079-97-1,Amphetamine-Related Disorders,MESH:D019969,,EPHX1,5.41,,19598248
+"10,11-dihydro-10,11-dihydroxy-5H-dibenzazepine-5-carboxamide",C004822,35079-97-1,Carcinoma,MESH:D002277,,EPHX1,5.03,,12376462
+"10,11-dihydro-10,11-dihydroxy-5H-dibenzazepine-5-carboxamide",C004822,35079-97-1,"Carcinoma, Hepatocellular",MESH:D006528,,EPHX1,4.56,,7892276

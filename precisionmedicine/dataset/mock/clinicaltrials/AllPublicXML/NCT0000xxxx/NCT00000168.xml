@@ -1,0 +1,608 @@
+<clinical_study>
+  <!-- This xml conforms to an XML Schema at:
+    https://clinicaltrials.gov/ct2/html/images/info/public.xsd -->
+  <required_header>
+    <download_date>ClinicalTrials.gov processed this data on February 12, 2019</download_date>
+    <link_text>Link to the current ClinicalTrials.gov record.</link_text>
+    <url>https://clinicaltrials.gov/show/NCT00000168</url>
+  </required_header>
+  <id_info>
+    <org_study_id>NEI-71</org_study_id>
+    <secondary_id>5U10EY008057</secondary_id>
+    <nct_id>NCT00000168</nct_id>
+  </id_info>
+  <brief_title>Longitudinal Study of Ocular Complications of AIDS (LSOCA)</brief_title>
+  <acronym>LSOCA</acronym>
+  <official_title>Studies of Ocular Complications of AIDS (SOCA)</official_title>
+  <sponsors>
+    <lead_sponsor>
+      <agency>Johns Hopkins Bloomberg School of Public Health</agency>
+      <agency_class>Other</agency_class>
+    </lead_sponsor>
+    <collaborator>
+      <agency>National Eye Institute (NEI)</agency>
+      <agency_class>NIH</agency_class>
+    </collaborator>
+  </sponsors>
+  <source>Johns Hopkins Bloomberg School of Public Health</source>
+  <oversight_info>
+    <has_dmc>Yes</has_dmc>
+  </oversight_info>
+  <brief_summary>
+    <textblock>
+      To monitor trends over time, in the incidence of CMV retinitis and other ocular complications
+      of AIDS
+
+      To determine the effect of highly active anti-retroviral therapy (HAART)-induced immune
+      status on the risk of developing CMV retinitis and other ocular complications of AIDS
+
+      To determine the characteristics (clinical, virologic, hematologic, and biochemical) of a
+      population at high risk for CMV retinitis and other ocular complications of AIDS
+
+      To evaluate the effects of treatments for CMV retinitis and other ocular complications on
+      visual function, quality of life, and survival.
+    </textblock>
+  </brief_summary>
+  <detailed_description>
+    <textblock>
+      Ocular abnormalities in patients with AIDS were first reported in 1982. The most common
+      finding is a non-infectious &quot;HIV retinopathy&quot;, characterized by cotton wool spots,
+      intraretinal hemorrhages, and/or microaneurysms. These changes occur in approximately 50
+      percent of patients with AIDS. HIV retinopathy alone is not typically associated with
+      clinical loss of vision, but functional deficits in patients with AIDS without other ocular
+      complications may be due to this phenomenon.
+
+      CMV retinitis has had the most clinical importance of all the associated complications of
+      AIDS. It is commonly seen in late stage AIDS, and even when treated has the potential to
+      cause substantial loss of vision. CMV retinitis is also the most costly AIDS-related
+      opportunistic infection; the mean monthly cost of treatment has been estimated at $7,825. The
+      incidence of CMV retinitis has varied with changes in the therapeutic and prophylactic
+      strategies for AIDS and its complications. It has been on the decline in recent years related
+      to the increased use of highly active anti-retroviral therapy (HAART).
+
+      Other ocular complications of AIDS such as ocular toxoplasmosis, herpes zoster retinitis, and
+      pneumocystis choroidopathy occur less frequently than CMV retinitis and HIV retinopathy.
+      Their frequency has also changed over the course of the AIDS epidemic.
+
+      Because the epidemiology of AIDS is rapidly evolving, with HIV becoming more like a chronic
+      disease, new information is needed on the incidence and course of ocular complications. We
+      have little information about the effect of HAART therapy over time on changes in immune
+      status and the risk of ocular complications of AIDS. More information is also needed to
+      determine who is at risk for developing ocular complications of AIDS, and how treatment is
+      affecting their visual function, quality of life, and survival.
+
+      The Longitudinal Study of Ocular Complications of AIDS (LSOCA) is prospective observational
+      study of patients with AIDS. Patients with a prior diagnosis of AIDS according to the 1993
+      Centers for Disease Control and Prevention (CDC) criteria with or without ocular
+      complications will be enrolled over a 4 year period. Approximately 2,000 patients will be
+      enrolled in the study. Enrollment of patients with CMV retinitis at baseline will be between
+      300 and 600 patients. Followup visits for patients without ocular complications will be
+      scheduled every 6 months. Followup visits for patients with ocular complications at baseline
+      or diagnosed during followup will be every 3 months. Followup data will include eye
+      examinations, fundus photographs, visual function testing, medical history, hematology and
+      serum chemistry, and collection of plasma and blood cells for banking. Analysis of banked
+      specimens will include HIV RNA levels and CMV DNA levels.
+    </textblock>
+  </detailed_description>
+  <overall_status>Completed</overall_status>
+  <start_date>August 1998</start_date>
+  <completion_date type="Actual">August 2013</completion_date>
+  <primary_completion_date type="Actual">August 2013</primary_completion_date>
+  <study_type>Observational</study_type>
+  <has_expanded_access>No</has_expanded_access>
+  <study_design_info>
+    <observational_model>Cohort</observational_model>
+    <time_perspective>Prospective</time_perspective>
+  </study_design_info>
+  <primary_outcome>
+    <measure>incidence of CMV retinitis, other ocular complications, mortality.</measure>
+    <time_frame>Until one year after the enrollment of the last patient.</time_frame>
+  </primary_outcome>
+  <secondary_outcome>
+    <measure>incidence of sequelae of AIDS-related eye disease (e.g., retinal detachments), incidence of complications of therapy, and long-term outcomes of ocular complications (e.g., visual function, quality of life).</measure>
+    <time_frame>Until one year after the enrollment of the last patient.</time_frame>
+  </secondary_outcome>
+  <enrollment type="Actual">2392</enrollment>
+  <condition>HIV Infections</condition>
+  <condition>Acquired Immunodeficiency Syndrome</condition>
+  <condition>Cytomegalovirus Retinitis</condition>
+  <biospec_retention>Samples With DNA</biospec_retention>
+  <biospec_descr>
+    <textblock>
+      Laboratory studies will include hematology serum chemistry and lymphocyte subset analysis for
+      all patients. The amount of blood for hematology, serum chemistry, and lymphocyte subset
+      analysis is restricted to no more than a total of 17 mL per draw. Data existing on HIV viral
+      load analysis at the clinic will be collected. If HIV data are not available from medical
+      records within the visit time window, blood should be collected for local HIV viral load
+      determination.
+    </textblock>
+  </biospec_descr>
+  <eligibility>
+    <study_pop>
+      <textblock>
+        Patients with a diagnosis of AIDS according to the 1993 CDC diagnostic criteria for AIDS
+        and diagnosed on or after 01 January 2001 will be eligible for enrollment.
+      </textblock>
+    </study_pop>
+    <sampling_method>Non-Probability Sample</sampling_method>
+    <criteria>
+      <textblock>
+        Inclusion criteria:
+
+          -  A diagnosis of AIDS according to the 1993 Centers for Disease Control and Prevention
+             (CDC) definition (with or without clinical symptoms of CMV retinitis or other ocular
+             complications of AIDS)
+
+          -  Age 13 years or older
+
+          -  Signed consent statement
+
+          -  Patients with newly diagnosed (within 45 days of enrollment) Ocular Opportunistic
+             Infections (OOIs)
+
+          -  Patients without a newly diagnosed Ocular Opportunistic Infection (OOI) diagnosed with
+             AIDS after 1 Jan 2001
+
+        Exclusion criteria:
+
+        - none.
+      </textblock>
+    </criteria>
+    <gender>All</gender>
+    <minimum_age>13 Years</minimum_age>
+    <maximum_age>N/A</maximum_age>
+    <healthy_volunteers>No</healthy_volunteers>
+  </eligibility>
+  <overall_official>
+    <last_name>Doug A Jabs, MD</last_name>
+    <role>Study Chair</role>
+    <affiliation>Icahn School of Medicine at Mount Sinai</affiliation>
+  </overall_official>
+  <location>
+    <facility>
+      <name>University of California, Irvine</name>
+      <address>
+        <city>Irvine</city>
+        <state>California</state>
+        <zip>92697-4375</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Shiley Eye Center, 0946</name>
+      <address>
+        <city>La Jolla</city>
+        <state>California</state>
+        <zip>92093-0946</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Southern California</name>
+      <address>
+        <city>Los Angeles</city>
+        <state>California</state>
+        <zip>90033</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Jules Stein Eye Institute</name>
+      <address>
+        <city>Los Angeles</city>
+        <state>California</state>
+        <zip>90095-7003</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Francis I. Proctor Foundation</name>
+      <address>
+        <city>San Francisco</city>
+        <state>California</state>
+        <zip>94143</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Bascom Palmer Eye Institute</name>
+      <address>
+        <city>Miami</city>
+        <state>Florida</state>
+        <zip>33136</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of South Florida</name>
+      <address>
+        <city>Tampa</city>
+        <state>Florida</state>
+        <zip>33612-4799</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Emory Eye Clinic</name>
+      <address>
+        <city>Atlanta</city>
+        <state>Georgia</state>
+        <zip>30322</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Northwestern University</name>
+      <address>
+        <city>Chicago</city>
+        <state>Illinois</state>
+        <zip>60611</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Division of Infectious Diseases, University of Indiana, Indianapolis</name>
+      <address>
+        <city>Indianapolis</city>
+        <state>Indiana</state>
+        <zip>46202-2879</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>LSU Eye Center</name>
+      <address>
+        <city>New Orleans</city>
+        <state>Louisiana</state>
+        <zip>70112</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>The Wilmer Ophthalmological Institute, The Johns Hopkins University School of Medicine</name>
+      <address>
+        <city>Baltimore</city>
+        <state>Maryland</state>
+        <zip>21287-9217</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>UMDNJ-New Jersey Medical School</name>
+      <address>
+        <city>Newark</city>
+        <state>New Jersey</state>
+        <zip>07103-2499</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Department of Ophthalmology</name>
+      <address>
+        <city>New York</city>
+        <state>New York</state>
+        <zip>10016</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Department of Ophthalmology</name>
+      <address>
+        <city>New York</city>
+        <state>New York</state>
+        <zip>10021</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of North Carolina at Chapel Hill</name>
+      <address>
+        <city>Chapel Hill</city>
+        <state>North Carolina</state>
+        <zip>27599-7040</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Hospital of the University of Pennsylvania</name>
+      <address>
+        <city>Philadelphia</city>
+        <state>Pennsylvania</state>
+        <zip>19104</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Texas Medical Branch</name>
+      <address>
+        <city>Galveston</city>
+        <state>Texas</state>
+        <zip>77555-0835</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Cullen Eye Institute</name>
+      <address>
+        <city>Houston</city>
+        <state>Texas</state>
+        <zip>77030</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location_countries>
+    <country>United States</country>
+  </location_countries>
+  <reference>
+    <citation>Jabs DA, Van Natta ML, Kempen JH, Reed Pavan P, Lim JI, Murphy RL, Hubbard LD. Characteristics of patients with cytomegalovirus retinitis in the era of highly active antiretroviral therapy. Am J Ophthalmol. 2002 Jan;133(1):48-61.</citation>
+    <PMID>11755839</PMID>
+  </reference>
+  <reference>
+    <citation>Kempen JH, Martin BK, Wu AW, Barron B, Thorne JE, Jabs DA; Studies of Ocular Complications of AIDS Researh Group. The effect of cytomegalovirus retinitis on the quality of life of patients with AIDS in the era of highly active antiretroviral therapy. Ophthalmology. 2003 May;110(5):987-95.</citation>
+    <PMID>12750102</PMID>
+  </reference>
+  <reference>
+    <citation>Jacobson MA, Maecker HT, Orr PL, D'Amico R, Van Natta M, Li XD, Pollard RB, Bredt BM; Adult AIDS Clinical Trials Group and the Studies of Ocular Complications of AIDS Research Group. Results of a cytomegalovirus (CMV)-specific CD8+/interferon- gamma+ cytokine flow cytometry assay correlate with clinical evidence of protective immunity in patients with AIDS with CMV retinitis. J Infect Dis. 2004 Apr 15;189(8):1362-73. Epub 2004 Mar 31.</citation>
+    <PMID>15073672</PMID>
+  </reference>
+  <reference>
+    <citation>Jabs DA, Van Natta ML, Thorne JE, Weinberg DV, Meredith TA, Kuppermann BD, Sepkowitz K, Li HK; Studies of Ocular Complications of AIDS Research Group. Course of cytomegalovirus retinitis in the era of highly active antiretroviral therapy: 1. Retinitis progression. Ophthalmology. 2004 Dec;111(12):2224-31.</citation>
+    <PMID>15582078</PMID>
+  </reference>
+  <reference>
+    <citation>Jabs DA, Van Natta ML, Thorne JE, Weinberg DV, Meredith TA, Kuppermann BD, Sepkowitz K, Li HK; Studies of Ocular Complications of AIDS Research Group. Course of cytomegalovirus retinitis in the era of highly active antiretroviral therapy: 2. Second eye involvement and retinal detachment. Ophthalmology. 2004 Dec;111(12):2232-9.</citation>
+    <PMID>15582079</PMID>
+  </reference>
+  <reference>
+    <citation>Weinberg DV, Holbrook JT, Hubbard LD, Davis MD, Jabs DA, Holland GN; Studies of Ocular Complications of AIDS Research Group. Clinician versus reading center assessment of cytomegalovirus retinitis lesion size. Ophthalmology. 2005 Apr;112(4):559-66.</citation>
+    <PMID>15808244</PMID>
+  </reference>
+  <reference>
+    <citation>Jabs DA, Holbrook JT, Van Natta ML, Clark R, Jacobson MA, Kempen JH, Murphy RL; Studies of Ocular Complications of AIDS Research Group. Risk factors for mortality in patients with AIDS in the era of highly active antiretroviral therapy. Ophthalmology. 2005 May;112(5):771-9.</citation>
+    <PMID>15878056</PMID>
+  </reference>
+  <reference>
+    <citation>Semba RD, Martin BK, Kempen JH, Thorne JE, Wu AW; Ocular Complications of AIDS Research Group. The impact of anemia on energy and physical functioning in individuals with AIDS. Arch Intern Med. 2005 Oct 24;165(19):2229-36.</citation>
+    <PMID>16246988</PMID>
+  </reference>
+  <reference>
+    <citation>Kempen JH, Min YI, Freeman WR, Holland GN, Friedberg DN, Dieterich DT, Jabs DA; Studies of Ocular Complications of AIDS Research Group. Risk of immune recovery uveitis in patients with AIDS and cytomegalovirus retinitis. Ophthalmology. 2006 Apr;113(4):684-94.</citation>
+    <PMID>16581429</PMID>
+  </reference>
+  <reference>
+    <citation>Brown DM, Thorne JE, Foster GL, Duncan JL, Brune LM, Muñana A, Meinert CL, Jabs DA. Factors affecting attrition in a longitudinal study of patients with AIDS. AIDS Care. 2006 Oct;18(7):821-9.</citation>
+    <PMID>16971294</PMID>
+  </reference>
+  <reference>
+    <citation>Thorne JE, Jabs DA, Kempen JH, Holbrook JT, Nichols C, Meinert CL; Studies of Ocular Complications of AIDS Research Group. Incidence of and risk factors for visual acuity loss among patients with AIDS and cytomegalovirus retinitis in the era of highly active antiretroviral therapy. Ophthalmology. 2006 Aug;113(8):1432-40. Epub 2006 Jun 12.</citation>
+    <PMID>16766032</PMID>
+  </reference>
+  <reference>
+    <citation>Thorne JE, Jabs DA, Kempen JH, Holbrook JT, Nichols C, Meinert CL; Studies of Ocular Complications of AIDS Research Group. Causes of visual acuity loss among patients with AIDS and cytomegalovirus retinitis in the era of highly active antiretroviral therapy. Ophthalmology. 2006 Aug;113(8):1441-5. Epub 2006 Jun 15.</citation>
+    <PMID>16781775</PMID>
+  </reference>
+  <reference>
+    <citation>Shah KH, Holland GN, Yu F, Van Natta M, Nusinowitz S; Studies of Ocular Complications of AIDS (SOCA) Research Group. Contrast sensitivity and color vision in HIV-infected individuals without infectious retinopathy. Am J Ophthalmol. 2006 Aug;142(2):284-92.</citation>
+    <PMID>16876510</PMID>
+  </reference>
+  <reference>
+    <citation>Sinclair E, Tan QX, Sharp M, Girling V, Poon C, Natta MV, Jabs DA, Inokuma M, Maecker HT, Bredt B, Jacobson MA; Studies of Ocular Complications of AIDS Research Group. Protective immunity to cytomegalovirus (CMV) retinitis in AIDS is associated with CMV-specific T cells that express interferon- gamma and interleukin-2 and have a CD8+ cell early maturational phenotype. J Infect Dis. 2006 Dec 1;194(11):1537-46. Epub 2006 Oct 26.</citation>
+    <PMID>17083038</PMID>
+  </reference>
+  <reference>
+    <citation>Thorne JE, Holbrook JT, Jabs DA, Kempen JH, Nichols C, Meinert CL; Studies of Ocular Complications of AIDS Research Group. Effect of cytomegalovirus retinitis on the risk of visual acuity loss among patients with AIDS. Ophthalmology. 2007 Mar;114(3):591-8. Epub 2006 Nov 22.</citation>
+    <PMID>17123624</PMID>
+  </reference>
+  <reference>
+    <citation>Jabs DA, Van Natta ML, Holbrook JT, Kempen JH, Meinert CL, Davis MD; Studies of the Ocular Complications of AIDS Research Group. Longitudinal study of the ocular complications of AIDS: 1. Ocular diagnoses at enrollment. Ophthalmology. 2007 Apr;114(4):780-6. Epub 2007 Jan 25.</citation>
+    <PMID>17258320</PMID>
+  </reference>
+  <reference>
+    <citation>Jabs DA, Van Natta ML, Holbrook JT, Kempen JH, Meinert CL, Davis MD; Studies of the Ocular Complications of AIDS Research Group. Longitudinal study of the ocular complications of AIDS: 2. Ocular examination results at enrollment. Ophthalmology. 2007 Apr;114(4):787-93. Epub 2007 Jan 8.</citation>
+    <PMID>17210182</PMID>
+  </reference>
+  <reference>
+    <citation>Jacobson MA, Tan QX, Girling V, Poon C, Van Natta M, Jabs DA, Inokuma M, Maecker HT, Bredt B, Sinclair E; Studies of Ocular Complications of AIDS Research Group. Poor predictive value of cytomegalovirus (CMV)-specific T cell assays for the development of CMV retinitis in patients with AIDS. Clin Infect Dis. 2008 Feb 1;46(3):458-66. doi: 10.1086/525853.</citation>
+    <PMID>18173357</PMID>
+  </reference>
+  <reference>
+    <citation>Freeman WR, Van Natta ML, Jabs D, Sample PA, Sadun AA, Thorne J, Shah KH, Holland GN; SOCA Research Group. Vision function in HIV-infected individuals without retinitis: report of the Studies of Ocular Complications of AIDS Research Group. Am J Ophthalmol. 2008 Mar;145(3):453-462. doi: 10.1016/j.ajo.2007.10.013. Epub 2008 Jan 11.</citation>
+    <PMID>18191094</PMID>
+  </reference>
+  <reference>
+    <citation>Jabs DA. AIDS and ophthalmology, 2008. Arch Ophthalmol. 2008 Aug;126(8):1143-6. doi: 10.1001/archopht.126.8.1143.</citation>
+    <PMID>18695113</PMID>
+  </reference>
+  <reference>
+    <citation>Holland GN, Kappel PJ, Van Natta ML, Palella FJ, Lyon AT, Shah KH, Pavan PR, Jabs DA; Studies of the Ocular Complications of AIDS Research Group. Association between abnormal contrast sensitivity and mortality among people with acquired immunodeficiency syndrome. Am J Ophthalmol. 2010 May;149(5):807-16. doi: 10.1016/j.ajo.2009.12.019.</citation>
+    <PMID>20399927</PMID>
+  </reference>
+  <reference>
+    <citation>Hendrickson SL, Jabs DA, Van Natta M, Lewis RA, Wallace DC, O'Brien SJ. Mitochondrial haplogroups are associated with risk of neuroretinal disorder in HIV-positive patients. J Acquir Immune Defic Syndr. 2010 Apr 1;53(4):451-5. doi: 10.1097/QAI.0b013e3181cb8319.</citation>
+    <PMID>20098332</PMID>
+  </reference>
+  <reference>
+    <citation>Sezgin E, Jabs DA, Hendrickson SL, Van Natta M, Zdanov A, Lewis RA, Smith MW, Troyer JL, O'Brien SJ; SOCA Research Group. Effect of host genetics on the development of cytomegalovirus retinitis in patients with AIDS. J Infect Dis. 2010 Aug 15;202(4):606-13. doi: 10.1086/654814.</citation>
+    <PMID>20617924</PMID>
+  </reference>
+  <reference>
+    <citation>Sezgin E, Hendrickson SL, Jabs DA, Van Natta ML, Lewis RA, Troyer JL, O'Brien SJ; SOCA Research Group. Effect of host genetics on incidence of HIV neuroretinal disorder in patients with AIDS. J Acquir Immune Defic Syndr. 2010 Aug;54(4):343-51. doi: 10.1097/QAI.0b013e3181deaf4d.</citation>
+    <PMID>20531015</PMID>
+  </reference>
+  <reference>
+    <citation>Puhan MA, Van Natta ML, Palella FJ, Addessi A, Meinert C; Ocular Complications of AIDS Research Group. Excess mortality in patients with AIDS in the era of highly active antiretroviral therapy: temporal changes and risk factors. Clin Infect Dis. 2010 Oct 15;51(8):947-56. doi: 10.1086/656415.</citation>
+    <PMID>20825306</PMID>
+  </reference>
+  <reference>
+    <citation>Jabs DA, Ahuja A, Van Natta M, Lyon A, Srivastava S, Gangaputra S; Studies of the Ocular Complications of AIDS Research Group. Course of cytomegalovirus retinitis in the era of highly active antiretroviral therapy: five-year outcomes. Ophthalmology. 2010 Nov;117(11):2152-61.e1-2. doi: 10.1016/j.ophtha.2010.03.031. Epub 2010 Jul 29.</citation>
+    <PMID>20673591</PMID>
+  </reference>
+  <reference>
+    <citation>Thorne JE, Van Natta ML, Jabs DA, Duncan JL, Srivastava SK; Studies of Ocular Complications of AIDS Research Group. Visual field loss in patients with cytomegalovirus retinitis. Ophthalmology. 2011 May;118(5):895-901. doi: 10.1016/j.ophtha.2010.09.017. Epub 2010 Dec 13.</citation>
+    <PMID>21146225</PMID>
+  </reference>
+  <reference>
+    <citation>Sezgin E, van Natta ML, Ahuja A, Lyon A, Srivastava S, Troyer JL, O'Brien SJ, Jabs DA; Studies of the Ocular Complications of AIDS Research Group. Association of host genetic risk factors with the course of cytomegalovirus retinitis in patients infected with human immunodeficiency virus. Am J Ophthalmol. 2011 Jun;151(6):999-1006.e4. doi: 10.1016/j.ajo.2010.11.029. Epub 2011 Mar 10.</citation>
+    <PMID>21396623</PMID>
+  </reference>
+  <reference>
+    <citation>Holbrook JT, Colvin R, van Natta ML, Thorne JE, Bardsley M, Jabs DA; Studies of Ocular Complications of AIDS (SOCA) Research Group. Evaluation of the United States public health service guidelines for discontinuation of anticytomegalovirus therapy after immune recovery in patients with cytomegalovirus retinitis. Am J Ophthalmol. 2011 Oct;152(4):628-637.e1. doi: 10.1016/j.ajo.2011.04.007. Epub 2011 Jul 13.</citation>
+    <PMID>21742304</PMID>
+  </reference>
+  <reference>
+    <citation>Puhan MA, Ahuja A, Van Natta ML, Ackatz LE, Meinert C; Studies of Ocular Complications of AIDS Research Group. Interviewer versus self-administered health-related quality of life questionnaires - does it matter? Health Qual Life Outcomes. 2011 May 10;9:30. doi: 10.1186/1477-7525-9-30.</citation>
+    <PMID>21554737</PMID>
+  </reference>
+  <reference>
+    <citation>Gangaputra S, Pak JW, Peng Q, Hubbard LD, Thayer D, Krason Z, Joyce J, Danis RP; Studies of the Ocular Complications of AIDS Research Group. Transition from film to digital fundus photography in the Longitudinal Studies of the Ocular Complications of AIDS. Retina. 2012 Mar;32(3):600-5. doi: 10.1097/IAE.0b013e318221592f.</citation>
+    <PMID>21857393</PMID>
+  </reference>
+  <reference>
+    <citation>Gangaputra S, Kalyani PS, Fawzi AA, Van Natta ML, Hubbard LD, Danis RP, Thorne JE, Holland GN; Studies of the Ocular Complications of AIDS Research Group. Retinal vessel caliber among people with acquired immunodeficiency syndrome: relationships with disease-associated factors and mortality. Am J Ophthalmol. 2012 Mar;153(3):434-444.e1. doi: 10.1016/j.ajo.2011.08.028. Epub 2011 Oct 22.</citation>
+    <PMID>22019225</PMID>
+  </reference>
+  <reference>
+    <citation>Kalyani PS, Fawzi AA, Gangaputra S, van Natta ML, Hubbard LD, Danis RP, Thorne JE, Holland GN; Studies of the Ocular Complications of AIDS Research Group. Retinal vessel caliber among people with acquired immunodeficiency syndrome: relationships with visual function. Am J Ophthalmol. 2012 Mar;153(3):428-433.e1. doi: 10.1016/j.ajo.2011.08.027. Epub 2011 Oct 22.</citation>
+    <PMID>22019221</PMID>
+  </reference>
+  <reference>
+    <citation>Sugar EA, Jabs DA, Ahuja A, Thorne JE, Danis RP, Meinert CL; Studies of the Ocular Complications of AIDS Research Group. Incidence of cytomegalovirus retinitis in the era of highly active antiretroviral therapy. Am J Ophthalmol. 2012 Jun;153(6):1016-24.e5. doi: 10.1016/j.ajo.2011.11.014. Epub 2012 Feb 4.</citation>
+    <PMID>22310076</PMID>
+  </reference>
+  <reference>
+    <citation>Limou S, Delaneau O, van Manen D, An P, Sezgin E, Le Clerc S, Coulonges C, Troyer JL, Veldink JH, van den Berg LH, Spadoni JL, Taing L, Labib T, Montes M, Delfraissy JF, Schachter F, O'Brien SJ, Buchbinder S, van Natta ML, Jabs DA, Froguel P, Schuitemaker H, Winkler CA, Zagury JF. Multicohort genomewide association study reveals a new signal of protection against HIV-1 acquisition. J Infect Dis. 2012 Apr 1;205(7):1155-62. doi: 10.1093/infdis/jis028. Epub 2012 Feb 23.</citation>
+    <PMID>22362864</PMID>
+  </reference>
+  <reference>
+    <citation>Kalyani PS, Holland GN, Fawzi AA, Arantes TE, Yu F, Sadun AA; Studies of the Ocular Complications of AIDS Research Group. Association between retinal nerve fiber layer thickness and abnormalities of vision in people with human immunodeficiency virus infection. Am J Ophthalmol. 2012 Apr;153(4):734-42, 742.e1. doi: 10.1016/j.ajo.2011.09.019. Epub 2012 Jan 15.</citation>
+    <PMID>22245459</PMID>
+  </reference>
+  <reference>
+    <citation>Branch AD, Van Natta ML, Vachon ML, Dieterich DT, Meinert CL, Jabs DA; Studies of the Ocular Complications of AIDS Research Group. Mortality in hepatitis C virus-infected patients with a diagnosis of AIDS in the era of combination antiretroviral therapy. Clin Infect Dis. 2012 Jul;55(1):137-44. doi: 10.1093/cid/cis404. Epub 2012 Apr 24.</citation>
+    <PMID>22534149</PMID>
+  </reference>
+  <reference>
+    <citation>Kempen JH, Sugar EA, Lyon AT, Lewis RA, Jabs DA, Heinemann MH, Dunn JP; Studies of Ocular Complications of AIDS Research Group. Risk of cataract in persons with cytomegalovirus retinitis and the acquired immune deficiency syndrome. Ophthalmology. 2012 Nov;119(11):2343-50. doi: 10.1016/j.ophtha.2012.05.044. Epub 2012 Jul 30.</citation>
+    <PMID>22853972</PMID>
+  </reference>
+  <reference>
+    <citation>Kozak I, Ahuja A, Gangaputra S, Van Natta ML, Thorne JE, Freeman WR. Optic nerve head morphology and visual field function in patients with AIDS and without infectious retinitis. Ocul Immunol Inflamm. 2012 Oct;20(5):342-8. doi: 10.3109/09273948.2012.694552. Epub 2012 Jun 14.</citation>
+    <PMID>22697270</PMID>
+  </reference>
+  <reference>
+    <citation>Gangaputra S, Drye L, Vaidya V, Thorne JE, Jabs DA, Lyon AT; Studies of the Ocular Complications of AIDS (SOCA) Research Group. Non-cytomegalovirus ocular opportunistic infections in patients with acquired immunodeficiency syndrome. Am J Ophthalmol. 2013 Feb;155(2):206-212.e5. doi: 10.1016/j.ajo.2012.07.019. Epub 2012 Oct 12.</citation>
+    <PMID>23068916</PMID>
+  </reference>
+  <reference>
+    <citation>Jabs DA, Ahuja A, Van Natta M, Dunn JP, Yeh S; Studies of the Ocular Complications of AIDS Research Group. Comparison of treatment regimens for cytomegalovirus retinitis in patients with AIDS in the era of highly active antiretroviral therapy. Ophthalmology. 2013 Jun;120(6):1262-70. doi: 10.1016/j.ophtha.2012.11.023. Epub 2013 Feb 16.</citation>
+    <PMID>23419804</PMID>
+  </reference>
+  <reference>
+    <citation>Krauskopf K, Van Natta ML, Danis RP, Gangaputra S, Ackatz L, Addessi A, Federman AD, Branch AD, Meinert CL, Jabs DA; Studies of the Ocular Complications of AIDS Research Group. Correlates of hypertension in patients with AIDS in the era of highly active antiretroviral therapy. J Int Assoc Provid AIDS Care. 2013 Sep-Oct;12(5):325-33.</citation>
+    <PMID>23764503</PMID>
+  </reference>
+  <reference>
+    <citation>Branch AD, Drye LT, Van Natta ML, Sezgin E, Fishman SL, Dieterich DT, Meinert CL, Jabs DA. Evaluation of hepatitis C virus as a risk factor for HIV-associated neuroretinal disorder. Clin Infect Dis. 2013 Dec;57(11):1618-25. doi: 10.1093/cid/cit550. Epub 2013 Sep 30.</citation>
+    <PMID>24081683</PMID>
+  </reference>
+  <reference>
+    <citation>Serrano-Villar S, Sainz T, Lee SA, Hunt PW, Sinclair E, Shacklett BL, Ferre AL, Hayes TL, Somsouk M, Hsue PY, Van Natta ML, Meinert CL, Lederman MM, Hatano H, Jain V, Huang Y, Hecht FM, Martin JN, McCune JM, Moreno S, Deeks SG. HIV-infected individuals with low CD4/CD8 ratio despite effective antiretroviral therapy exhibit altered T cell subsets, heightened CD8+ T cell activation, and increased risk of non-AIDS morbidity and mortality. PLoS Pathog. 2014 May 15;10(5):e1004078. doi: 10.1371/journal.ppat.1004078. eCollection 2014 May.</citation>
+    <PMID>24831517</PMID>
+  </reference>
+  <reference>
+    <citation>Hunt PW, Sinclair E, Rodriguez B, Shive C, Clagett B, Funderburg N, Robinson J, Huang Y, Epling L, Martin JN, Deeks SG, Meinert CL, Van Natta ML, Jabs DA, Lederman MM. Gut epithelial barrier dysfunction and innate immune activation predict mortality in treated HIV infection. J Infect Dis. 2014 Oct 15;210(8):1228-38. doi: 10.1093/infdis/jiu238. Epub 2014 Apr 21.</citation>
+    <PMID>24755434</PMID>
+  </reference>
+  <reference>
+    <citation>Lee SA, Sinclair E, Jain V, Huang Y, Epling L, Van Natta M, Meinert CL, Martin JN, McCune JM, Deeks SG, Lederman MM, Hecht FM, Hunt PW. Low proportions of CD28- CD8+ T cells expressing CD57 can be reversed by early ART initiation and predict mortality in treated HIV infection. J Infect Dis. 2014 Aug 1;210(3):374-82. doi: 10.1093/infdis/jiu109. Epub 2014 Feb 28.</citation>
+    <PMID>24585893</PMID>
+  </reference>
+  <reference>
+    <citation>Kozak I, Vaidya V, Van Natta ML, Pak JW, May KP, Thorne JE; Studies of the Ocular Complications of AIDS Research Group. The prevalence and incidence of epiretinal membranes in eyes with inactive extramacular CMV retinitis. Invest Ophthalmol Vis Sci. 2014 Jun 12;55(7):4304-12. doi: 10.1167/iovs.14-14479.</citation>
+    <PMID>24925880</PMID>
+  </reference>
+  <reference>
+    <citation>Kempen JH, Sugar EA, Varma R, Dunn JP, Heinemann MH, Jabs DA, Lyon AT, Lewis RA; Studies of Ocular Complications of AIDS Research Group. Risk of cataract among subjects with acquired immune deficiency syndrome free of ocular opportunistic infections. Ophthalmology. 2014 Dec;121(12):2317-24. doi: 10.1016/j.ophtha.2014.06.014. Epub 2014 Aug 8.</citation>
+    <PMID>25109932</PMID>
+  </reference>
+  <reference>
+    <citation>Jabs DA, Drye L, Van Natta ML, Thorne JE, Holland GN; Studies of the Ocular Complications of AIDS Research Group. Incidence and long-term outcomes of the human immunodefıciency virus neuroretinal disorder in patients with AIDS. Ophthalmology. 2015 Apr;122(4):760-8. doi: 10.1016/j.ophtha.2014.11.009. Epub 2015 Jan 16.</citation>
+    <PMID>25600199</PMID>
+  </reference>
+  <reference>
+    <citation>Jabs DA, Van Natta ML, Sezgin E, Pak JW, Danis R; Studies of the Ocular Complications of AIDS Research Group. Prevalence of intermediate-stage age-related macular degeneration in patients with acquired immunodeficiency syndrome. Am J Ophthalmol. 2015 Jun;159(6):1115-1122.e1. doi: 10.1016/j.ajo.2015.01.037. Epub 2015 Mar 11.</citation>
+    <PMID>25769246</PMID>
+  </reference>
+  <reference>
+    <citation>Jabs DA, Ahuja A, Van Natta ML, Lyon AT, Yeh S, Danis R; Studies of the Ocular Complications of AIDS Research Group. Long-term Outcomes of Cytomegalovirus Retinitis in the Era of Modern Antiretroviral Therapy: Results from a United States Cohort. Ophthalmology. 2015 Jul;122(7):1452-63. doi: 10.1016/j.ophtha.2015.02.033. Epub 2015 Apr 17.</citation>
+    <PMID>25892019</PMID>
+  </reference>
+  <verification_date>June 2015</verification_date>
+  <!-- For several months we've had both old and new date name tags                             -->
+  <!-- Now, the old date names have been dropped.                                               -->
+  <!-- The new date name replacements are:                                                      -->
+  <!--     OLD (gone)                                        NEW (in use)                       -->
+  <!--   lastchanged_date                         becomes   last_update_submitted               -->
+  <!--   firstreceived_date                       becomes   study_first_submitted               -->
+  <!--   firstreceived_results_date               becomes   results_first_submitted             -->
+  <!--   firstreceived_results_disposition_date   becomes   disposition_first_submitted         -->
+  <study_first_submitted>September 23, 1999</study_first_submitted>
+  <study_first_submitted_qc>September 23, 1999</study_first_submitted_qc>
+  <study_first_posted type="Estimate">September 24, 1999</study_first_posted>
+  <last_update_submitted>June 10, 2015</last_update_submitted>
+  <last_update_submitted_qc>June 10, 2015</last_update_submitted_qc>
+  <last_update_posted type="Estimate">June 12, 2015</last_update_posted>
+  <responsible_party>
+    <responsible_party_type>Principal Investigator</responsible_party_type>
+    <investigator_affiliation>Johns Hopkins Bloomberg School of Public Health</investigator_affiliation>
+    <investigator_full_name>Curtis Meinert</investigator_full_name>
+    <investigator_title>Professor</investigator_title>
+  </responsible_party>
+  <condition_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>HIV Infections</mesh_term>
+    <mesh_term>Immunologic Deficiency Syndromes</mesh_term>
+    <mesh_term>Acquired Immunodeficiency Syndrome</mesh_term>
+    <mesh_term>Retinitis</mesh_term>
+    <mesh_term>Cytomegalovirus Retinitis</mesh_term>
+  </condition_browse>
+  <!-- Results have not yet been posted for this study                                          -->
+</clinical_study>
+

@@ -1,0 +1,150 @@
+<clinical_study>
+  <!-- This xml conforms to an XML Schema at:
+    https://clinicaltrials.gov/ct2/html/images/info/public.xsd -->
+  <required_header>
+    <download_date>ClinicalTrials.gov processed this data on February 12, 2019</download_date>
+    <link_text>Link to the current ClinicalTrials.gov record.</link_text>
+    <url>https://clinicaltrials.gov/show/NCT00000114</url>
+  </required_header>
+  <id_info>
+    <org_study_id>NEI-10</org_study_id>
+    <nct_id>NCT00000114</nct_id>
+  </id_info>
+  <brief_title>Randomized Trial of Vitamin A and Vitamin E Supplementation for Retinitis Pigmentosa</brief_title>
+  <sponsors>
+    <lead_sponsor>
+      <agency>National Eye Institute (NEI)</agency>
+      <agency_class>NIH</agency_class>
+    </lead_sponsor>
+  </sponsors>
+  <source>National Eye Institute (NEI)</source>
+  <brief_summary>
+    <textblock>
+      To determine whether supplements of vitamin A or vitamin E alone or in combination affect the
+      course of retinitis pigmentosa.
+    </textblock>
+  </brief_summary>
+  <detailed_description>
+    <textblock>
+      Retinitis pigmentosa (RP) is a group of inherited retinal degenerations with a worldwide
+      prevalence of about 1 in 4,000. Patients typically report night blindness in adolescence and
+      lose vision in the midperipheral followed by far-peripheral visual field in adulthood due to
+      progressive loss of both rod and cone function. Most patients have reductions in central
+      vision by age 50 to 80 years. Modern-day electroretinograms (ERGs) make it possible to record
+      retinal responses from most patients with remaining vision and thereby monitor objectively
+      the course of their disease.
+
+      While the natural course of retinal degeneration in the common forms of RP was being studied,
+      it was noted that a subgroup of patients aged 18 through 49 who were treating themselves with
+      both vitamin A and vitamin E and other nutritional supplements exhibited less decline in ERG
+      amplitude over a 2-year period. These preliminary findings, as well as the known roles of
+      vitamins A and E in maintaining normal photoreceptor function and structure, prompted this
+      randomized, controlled trial to determine whether these vitamins alone or in combination
+      would halt or slow the progression of the common forms of RP.
+
+      This study was a randomized, controlled double-masked trial with 2 x 2 factorial design and
+      duration of 4 to 6 years. Patients were assigned to one of four treatment groups:
+
+      15,000 IU/day vitamin A
+
+      15,000 IU/day vitamin A + 400 IU/day vitamin E
+
+      trace amounts of both vitamins A and E
+
+      400 IU/day of vitamin E
+
+      The main outcome measure was the 30-Hz cone ERG amplitude. In addition, visual field and
+      visual acuity were measured annually.
+    </textblock>
+  </detailed_description>
+  <overall_status>Completed</overall_status>
+  <start_date>May 1984</start_date>
+  <completion_date type="Actual">June 1987</completion_date>
+  <phase>Phase 3</phase>
+  <study_type>Interventional</study_type>
+  <has_expanded_access>No</has_expanded_access>
+  <study_design_info>
+    <allocation>Randomized</allocation>
+    <intervention_model>Factorial Assignment</intervention_model>
+    <primary_purpose>Treatment</primary_purpose>
+    <masking>Double</masking>
+  </study_design_info>
+  <condition>Retinitis Pigmentosa</condition>
+  <intervention>
+    <intervention_type>Drug</intervention_type>
+    <intervention_name>Vitamin E</intervention_name>
+  </intervention>
+  <intervention>
+    <intervention_type>Drug</intervention_type>
+    <intervention_name>Vitamin A</intervention_name>
+  </intervention>
+  <eligibility>
+    <criteria>
+      <textblock>
+        Men and nonpregnant women between ages 18 and 49 years with common forms of RP were
+        included. All eligible patients had retinal arteriolar attenuation, elevated dark
+        adaptation thresholds, and reduced ERGs. Patients had best corrected Snellen visual acuity
+        of 20/100 or better, central visual field diameter on the Goldman perimeter with V4 e white
+        test light of 8 degrees or greater, and ERG amplitude of 2.5 or greater in response to
+        0.5-Hz white light or of 0.12 ultraviolet light or greater in response to 30-Hz white
+        flickering light in at least one eye. In addition, patients had normal fasting serum
+        retinol and serum liver function profile and weight above the lower fifth percentile for
+        age, sex, and height. All patients had a total estimated pre-trial intake of vitamins A and
+        E from diet plus pills not greater than 11,500 IU/day and 40 IU/day, respectively.
+      </textblock>
+    </criteria>
+    <gender>All</gender>
+    <minimum_age>18 Years</minimum_age>
+    <maximum_age>49 Years</maximum_age>
+  </eligibility>
+  <link>
+    <url>http://www.nei.nih.gov/news/clinicalalerts/alert-rp.asp</url>
+    <description>Clinical Alert-Information for Doctors Who Follow Patients with Retinitis Pigmentosa</description>
+  </link>
+  <link>
+    <url>http://www.nei.nih.gov/news/pressreleases/rppressrelease.asp</url>
+    <description>NEI Press Release-Treatment for Retinitis Pigmentosa Reported</description>
+  </link>
+  <reference>
+    <citation>Berson EL, Rosner B, Sandberg MA, Hayes KC, Nicholson BW, Weigel-DiFranco C, Willett W. A randomized trial of vitamin A and vitamin E supplementation for retinitis pigmentosa. Arch Ophthalmol. 1993 Jun;111(6):761-72.</citation>
+    <PMID>8512476</PMID>
+  </reference>
+  <reference>
+    <citation>Sandberg MA, Weigel-DiFranco C, Rosner B, Berson EL. The relationship between visual field size and electroretinogram amplitude in retinitis pigmentosa. Invest Ophthalmol Vis Sci. 1996 Jul;37(8):1693-8. Review.</citation>
+    <PMID>8675413</PMID>
+  </reference>
+  <verification_date>September 2009</verification_date>
+  <!-- For several months we've had both old and new date name tags                             -->
+  <!-- Now, the old date names have been dropped.                                               -->
+  <!-- The new date name replacements are:                                                      -->
+  <!--     OLD (gone)                                        NEW (in use)                       -->
+  <!--   lastchanged_date                         becomes   last_update_submitted               -->
+  <!--   firstreceived_date                       becomes   study_first_submitted               -->
+  <!--   firstreceived_results_date               becomes   results_first_submitted             -->
+  <!--   firstreceived_results_disposition_date   becomes   disposition_first_submitted         -->
+  <study_first_submitted>September 23, 1999</study_first_submitted>
+  <study_first_submitted_qc>September 23, 1999</study_first_submitted_qc>
+  <study_first_posted type="Estimate">September 24, 1999</study_first_posted>
+  <last_update_submitted>September 16, 2009</last_update_submitted>
+  <last_update_submitted_qc>September 16, 2009</last_update_submitted_qc>
+  <last_update_posted type="Estimate">September 17, 2009</last_update_posted>
+  <keyword>retinitis pigmentosa</keyword>
+  <keyword>vitamin supplements</keyword>
+  <condition_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Retinitis</mesh_term>
+    <mesh_term>Retinitis Pigmentosa</mesh_term>
+  </condition_browse>
+  <intervention_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Vitamins</mesh_term>
+    <mesh_term>Vitamin E</mesh_term>
+    <mesh_term>Tocopherols</mesh_term>
+    <mesh_term>Tocotrienols</mesh_term>
+    <mesh_term>alpha-Tocopherol</mesh_term>
+    <mesh_term>Vitamin A</mesh_term>
+    <mesh_term>Retinol palmitate</mesh_term>
+  </intervention_browse>
+  <!-- Results have not yet been posted for this study                                          -->
+</clinical_study>
+

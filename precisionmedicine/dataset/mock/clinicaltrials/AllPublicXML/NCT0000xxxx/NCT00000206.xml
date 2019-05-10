@@ -1,0 +1,133 @@
+<clinical_study>
+  <!-- This xml conforms to an XML Schema at:
+    https://clinicaltrials.gov/ct2/html/images/info/public.xsd -->
+  <required_header>
+    <download_date>ClinicalTrials.gov processed this data on February 12, 2019</download_date>
+    <link_text>Link to the current ClinicalTrials.gov record.</link_text>
+    <url>https://clinicaltrials.gov/show/NCT00000206</url>
+  </required_header>
+  <id_info>
+    <org_study_id>NIDA-06082-2</org_study_id>
+    <secondary_id>R18DA006082</secondary_id>
+    <secondary_id>R18-06082-2</secondary_id>
+    <nct_id>NCT00000206</nct_id>
+  </id_info>
+  <brief_title>Clinical Rescue Protocol - 2</brief_title>
+  <official_title>Clinical Rescue Protocol</official_title>
+  <sponsors>
+    <lead_sponsor>
+      <agency>University of California, Los Angeles</agency>
+      <agency_class>Other</agency_class>
+    </lead_sponsor>
+    <collaborator>
+      <agency>National Institute on Drug Abuse (NIDA)</agency>
+      <agency_class>NIH</agency_class>
+    </collaborator>
+  </sponsors>
+  <source>University of California, Los Angeles</source>
+  <brief_summary>
+    <textblock>
+      The purpose of this study is to detect increasing medication dose results in heroin cessation
+      for patients still using, to determine if decreasing medication dose in patients unable to
+      tolerate medication dose increases retention, and to determine if blood levels of methadone
+      or buprenorphine correlate with clinical response.
+    </textblock>
+  </brief_summary>
+  <overall_status>Completed</overall_status>
+  <start_date>April 1991</start_date>
+  <primary_completion_date type="Actual">August 2005</primary_completion_date>
+  <phase>Phase 2</phase>
+  <study_type>Interventional</study_type>
+  <has_expanded_access>No</has_expanded_access>
+  <study_design_info>
+    <primary_purpose>Treatment</primary_purpose>
+    <masking>Double</masking>
+  </study_design_info>
+  <primary_outcome>
+    <measure>Retention</measure>
+  </primary_outcome>
+  <primary_outcome>
+    <measure>Opiate use</measure>
+  </primary_outcome>
+  <primary_outcome>
+    <measure>Opiate craving</measure>
+  </primary_outcome>
+  <primary_outcome>
+    <measure>Adverse events</measure>
+  </primary_outcome>
+  <enrollment>0</enrollment>
+  <condition>Opioid-Related Disorders</condition>
+  <intervention>
+    <intervention_type>Drug</intervention_type>
+    <intervention_name>Buprenorphine</intervention_name>
+  </intervention>
+  <eligibility>
+    <criteria>
+      <textblock>
+        Inclusion Criteria:
+
+        M/F ages 21-50. Opiate dependence according to DSM-IV criteria. Self-reported use within
+        the last 30 days. Agreeable to conditions of study and signed informed consent.
+
+        Exclusion Criteria:
+
+        Psychiatric disorder that requires medication therapy. History of seizures. Pregnant and/or
+        nursing women. Dependence on ETOH or benzodiazepines or other sedative-hynotics. Acute
+        hepatitis. Other medical conditions that deem participation to be unsafe.
+      </textblock>
+    </criteria>
+    <gender>All</gender>
+    <minimum_age>21 Years</minimum_age>
+    <maximum_age>50 Years</maximum_age>
+    <healthy_volunteers>No</healthy_volunteers>
+  </eligibility>
+  <overall_official>
+    <last_name>Walter Ling, M.D.</last_name>
+    <role>Principal Investigator</role>
+    <affiliation>Friends Research Institute, Inc.</affiliation>
+  </overall_official>
+  <location>
+    <facility>
+      <name>Friends Research Institute</name>
+      <address>
+        <city>Los Angeles</city>
+        <state>California</state>
+        <zip>90025</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location_countries>
+    <country>United States</country>
+  </location_countries>
+  <reference>
+    <citation>Ling W, Shoptaw S, Wesson D, Rawson RA, Compton M, Klett CJ. Treatment effectiveness score as an outcome measure in clinical trials. NIDA Res Monogr. 1997;175:208-20. Review.</citation>
+    <PMID>9467800</PMID>
+  </reference>
+  <verification_date>November 2016</verification_date>
+  <!-- For several months we've had both old and new date name tags                             -->
+  <!-- Now, the old date names have been dropped.                                               -->
+  <!-- The new date name replacements are:                                                      -->
+  <!--     OLD (gone)                                        NEW (in use)                       -->
+  <!--   lastchanged_date                         becomes   last_update_submitted               -->
+  <!--   firstreceived_date                       becomes   study_first_submitted               -->
+  <!--   firstreceived_results_date               becomes   results_first_submitted             -->
+  <!--   firstreceived_results_disposition_date   becomes   disposition_first_submitted         -->
+  <study_first_submitted>September 20, 1999</study_first_submitted>
+  <study_first_submitted_qc>September 20, 1999</study_first_submitted_qc>
+  <study_first_posted type="Estimate">September 21, 1999</study_first_posted>
+  <last_update_submitted>November 3, 2016</last_update_submitted>
+  <last_update_submitted_qc>November 3, 2016</last_update_submitted_qc>
+  <last_update_posted type="Estimate">November 7, 2016</last_update_posted>
+  <keyword>Opioid</keyword>
+  <condition_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Opioid-Related Disorders</mesh_term>
+  </condition_browse>
+  <intervention_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Buprenorphine</mesh_term>
+  </intervention_browse>
+  <!-- Results have not yet been posted for this study                                          -->
+</clinical_study>
+
