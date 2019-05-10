@@ -58,9 +58,8 @@ jobs:
     steps:
       - checkout
       - bazel_install
-      - bazel_add_rbe_credential
       - bazel:
-          command: bazel test //migrator:migrator-test --test_output=streamed
+          command: bazel test //migrator:assemble-mock-test --test_output=streamed
   test-dists:
     machine: true
     steps:

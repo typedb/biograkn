@@ -44,7 +44,7 @@ assemble_zip(
 )
 
 java_test(
-    name = "migrator-test",
+    name = "assemble-mock-test",
     test_class = "grakn.biograkn.migrator.AssembleMockTest",
     srcs = ["AssembleMockTest.java"],
     deps = [
