@@ -151,14 +151,12 @@ workflows:
               only: master
           requires:
             - build
-            - test
       - test-assembly-mac-full:
           filters:
             branches:
               only: master
           requires:
             - build
-            - test
 #      - test-assembly-windows-full:
 #          filters:
 #            branches:
