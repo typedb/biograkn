@@ -1,0 +1,34 @@
+{
+  "variables": {
+    "gcp_account_file": "{{env `DEPLOY_PACKER_GCP_ACCOUNT_FILE`}}",
+    "version": "{{env `DEPLOY_PACKER_VERSION`}}"
+  },
+  "builders": [
+    {
+      "type": "googlecompute",
+      "account_file": "{{user `gcp_account_file`}}",
+      "project_id": "grakn-public",
+      "source_image_family": "ubuntu-1604-lts",
+      "zone": "europe-west3-a",
+      "ssh_username": "ubuntu",
+      "image_name": "grakn-kgms-{{user `version`}}-byol",
+      "image_licenses": ["projects/grakn-public/global/licenses/grakn-kgms-premium-byol"]
+    }
+  ],
+
+  "provisioners": [
+    {
+      "type": "shell",
+      "inline": [ "mkdir /tmp/deployment" ]
+    },
+    {
+      "type": "file",
+      "source": "files/",
+      "destination": "/tmp/deployment/"
+    },
+    {
+      "type": "shell",
+      "inline": [ "sudo /tmp/deployment/install.sh" ]
+    }
+  ]
+}

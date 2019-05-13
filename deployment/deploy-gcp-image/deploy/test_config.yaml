@@ -1,0 +1,6 @@
+imports:
+  - path: grakn.jinja
+
+resources:
+  - name: grakn
+    type: grakn.jinja
