@@ -132,11 +132,11 @@ workflows:
 #              ignore: biograkn-release-branch
 
       - test-assembly-linux-mock:
-          requires:
-            - build
+#          requires: TODO: uncomment
+#            - build
       - test-assembly-mac-mock:
-          requires:
-            - build
+#          requires: TODO: uncomment
+#            - build
 #      - test-assembly-windows-mock:
 #          filters:
 #            branches:
@@ -150,13 +150,13 @@ workflows:
             branches:
               only: master
           requires:
-            - build
+#            - build TODO: uncomment
       - test-assembly-mac-full:
           filters:
             branches:
               only: master
-          requires:
-            - build
+#          requires: TODO: uncomment
+#            - build
 #      - test-assembly-windows-full:
 #          filters:
 #            branches:
