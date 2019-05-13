@@ -151,14 +151,14 @@ workflows:
           filters:
             branches:
               only: master
-          requires:
-            - build
+#          requires: TODO: uncomment
+#            - build
       - test-assembly-mac-full:
           filters:
             branches:
               only: master
-          requires:
-            - build
+#          requires: TODO: uncomment
+#            - build
 #      - test-assembly-windows-full:
 #          filters:
 #            branches:
