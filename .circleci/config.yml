@@ -126,10 +126,10 @@ jobs:
 workflows:
   biograkn:
     jobs:
-      - build:
-          filters:
-            branches:
-              ignore: biograkn-release-branch
+#      - build: TODO: uncomment
+#          filters:
+#            branches:
+#              ignore: biograkn-release-branch
 
       - test-assembly-linux-mock:
           requires:
