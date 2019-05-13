@@ -132,11 +132,13 @@ workflows:
 #              ignore: biograkn-release-branch
 
       - test-assembly-linux-mock:
-          requires:
-#            - build
+          filters:
+            branches:
+              ignore: biograkn-release-branch
       - test-assembly-mac-mock:
-          requires:
-#            - build
+          filters:
+            branches:
+              ignore: biograkn-release-branch
 #      - test-assembly-windows-mock:
 #          filters:
 #            branches:
