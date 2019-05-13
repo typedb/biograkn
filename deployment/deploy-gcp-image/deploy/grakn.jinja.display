@@ -1,0 +1,150 @@
+description:
+  author:
+    title: Grakn Labs
+    descriptionHtml: 'The Distributed Knowledge Graph Management System'
+    shortDescription: 'The Distributed Knowledge Graph Management System'
+  descriptionHtml: "Grakn is a database in the form of a knowledge graph to organise complex networks of data and make it queryable. Rooted in Knowledge Representation and Automated Reasoning, Grakn provides the knowledge base foundation for cognitive and intelligent systems, by providing an intelligent language for modelling, transactions and analytics.<br /><br />Grakn KGMS is the enterprise Knowledge Graph Management System designed to scale with your enterprise. Whether you have a growing dataset, application workload, or user request, the Grakn KGMS will scale with your business. With all the tools you need to take you from development to production and scale, Grakn KGMS allows you to simplify your data architecture while maintaining full control over your knowledge graph."
+  logo: '@media/grakn_store.png'
+  tagline: The Distributed Knowledge Graph Management System
+  title:  Grakn KGMS
+  url: 'https://grakn.ai/'
+  version: 1.4.3
+  icon: '@media/grakn_small.png'
+  documentations:
+    - title: Getting Started
+      url: 'https://dev.grakn.ai/docs/cloud-deployment/google-cloud'
+      description: Grakn KGMS deployment guide for Google Compute Engine
+      destinations:
+        - DESTINATION_SOLUTION_DETAILS
+        - DESTINATION_POST_DEPLOY
+    - title: Grakn QuickStart
+      url: 'https://dev.grakn.ai/docs/general/quickstart'
+      description: Quick dive into developing with Grakn
+      destinations:
+        - DESTINATION_SOLUTION_DETAILS
+        - DESTINATION_POST_DEPLOY
+    - title: Grakn In Practice
+      url: 'https://dev.grakn.ai/docs/examples/phone-calls-overview'
+      description: End-to-end example of creating a knowledge graph with Grakn
+      destinations:
+        - DESTINATION_SOLUTION_DETAILS
+        - DESTINATION_POST_DEPLOY
+    - title: Grakn Documentation Portal
+      url: 'https://dev.grakn.ai/'
+      description: Comprehensive guide on using Grakn
+      destinations:
+        - DESTINATION_SOLUTION_DETAILS
+        - DESTINATION_POST_DEPLOY
+    - title: Introduction to Grakn Schema
+      url: 'https://dev.grakn.ai/docs/schema/overview'
+      description: Why to use schemas and how to define them with Grakn
+      destinations:
+        - DESTINATION_SOLUTION_DETAILS
+        - DESTINATION_POST_DEPLOY
+    - title: Introduction to Graql Queries
+      url: 'https://dev.grakn.ai/docs/query/overview'
+      description: Everything you need to know about Graql
+      destinations:
+        - DESTINATION_SOLUTION_DETAILS
+        - DESTINATION_POST_DEPLOY
+  support:
+    - title: Grakn Support Portal
+      descriptionHtml: "Deploying Grakn KGMS on Google Cloud comes with our Enterprise Support. Please contact support@grakn.ai with your Support ID immediately after deploying KGMS so we can create your account on our Support Platform."
+      url: https://support.grakn.ai
+  softwareGroups:
+    - type: SOFTWARE_GROUP_OS
+      software:
+        - title: Ubuntu
+          version: 16.04 LTS
+    - type: SOFTWARE_GROUP_TYPE_UNSPECIFIED
+      software:
+        - title: Grakn KGMS
+          version: 1.4.3
+          licenseTitle: Grakn KGMS
+          licenseUrl: 'https://github.com/graknlabs/grakn/blob/master/LICENSE.txt'
+input:
+  properties:
+    - name: zone
+      title: Zone
+    - name: numReplicas
+      title: Cluster node count
+      tooltip: Number of Grakn server nodes in the cluster.
+      validation: Choose a number between 1 and 12.
+    - name: machineType
+      title: Machine type
+    - name: dataDiskType
+      title: Data disk type
+    - name: dataDiskSize
+      title: Data disk size (GB)
+    - name: bootDiskType
+      title: Boot disk type
+      section: BOOT_DISK
+    - name: bootDiskSizeGb
+      title: Boot disk size in GB
+      section: BOOT_DISK
+    - name: network
+      title: Network name
+      section: NETWORKING
+    - name: subnetwork
+      title: Subnetwork name
+      section: NETWORKING
+    - name: externalIP
+      title: External IP
+      tooltip: 'An external IP address associated with this instance. Selecting "None" will result in the instance having no external internet access. <a href="https://cloud.google.com/compute/docs/configure-instance-ip-addresses">Learn more</a>'
+      section: NETWORKING
+      level: 1
+    - name: tcp48555SourceRanges
+      title: Source IP ranges for TCP port 48555 traffic
+      tooltip: 'Traffic is only allowed from sources within these IP address ranges. Use CIDR notation when entering ranges. <a href="https://cloud.google.com/compute/docs/networking#firewalls">Learn more</a>'
+      placeholder: '0.0.0.0/0, 192.169.0.2/24'
+      section: NETWORKING
+      level: 1
+    - name: enableTcp48555
+      title: Allow TCP port 48555 traffic
+      section: NETWORKING
+      boolean_group: FIREWALL
+    - name: ipForward
+      title: IP forwarding
+      tooltip: 'Forwarding allows the instance to help route packets. <a href="https://cloud.google.com/compute/docs/networking#canipforward">Learn more</a>'
+      section: NETWORKING
+      level: 1
+  sections:
+    - name: BOOT_DISK
+      title: Boot Disk
+      tooltip: Each instance requires a disk to boot from.
+    - name: NETWORKING
+      title: Networking
+  boolean_groups:
+    - name: FIREWALL
+      title: Firewall
+      tooltip: 'By default all incoming traffic from outside a network is blocked. Select the type of network traffic you want to allow. <a href="https://cloud.google.com/compute/docs/networking#firewalls">Learn more</a>'
+      subtext: Add tags and firewall rules to allow specific network traffic from the Internet
+runtime:
+  deployingMessage: Deployment can take several minutes to complete.
+  applicationTable:
+    rows:
+      - label: Deployment zone
+        value: '{{ properties().zone }}'
+      - label: Deployment machine type
+        value: '{{ properties().machineType }}'
+      - label: Password for default Grakn user (grakn)
+        value: '{{ outputs().storageUserPassword }}'
+  
+  primaryButton:
+    label: SSH to "{{ outputs().deployment }}-1-vm"
+    type: TYPE_GCE_VM_SSH
+    action: '{{ outputs().vmSelfLink }}'
+  suggestedActions:
+    - heading: Sign up for Grakn's support portal 
+      description: Please contact <a href="mailto:support@grakn.ai">support@grakn.ai</a> with your Support ID so we can create your account on our <a href="https://support.grakn.ai">Support Platform</a>. 
+    - heading: Open gRPC TCP port 48555 traffic
+      description: 'TCP port 48555 is Grakn KGMS gRPC port. It is not available externally by default. To allow specific network traffic from the Internet, create a firewall rule to open gRPC TCP port 48555 traffic for target tag "{{ outputs().deployment }}-tcp-48555". <a href="https://cloud.google.com/compute/docs/networking">Learn more</a><br> If you are using Google Cloud SDK, type the following command in the terminal:'
+      snippet: 'gcloud --project={{ outputs().project }} compute firewall-rules create "{{ outputs().deployment }}-tcp-48555" --network {{ properties().network }} --allow tcp:48555 --target-tags "{{ outputs().deployment }}-tcp-48555"'
+      showIf: '{{ !properties().enableTcp48555 }}'
+    - heading: Assign a static external IP address to your VM instance
+      description: 'An ephemeral external IP address has been assigned to the VM instance. If you require a static external IP address, you may promote the address to static. <a href="https://cloud.google.com/compute/docs/instances-and-network#promote_ephemeral_ip">Learn more</a>'
+      showIf: '{{ properties().externalIP == "Ephemeral" }}'
+annotations:
+  autogenSpecType: MULTI_VM
+  vmImage0: 'https://www.googleapis.com/compute/v1/projects/grakn-public/global/images/grakn-kgms-premium'
+metadata_version: v1
