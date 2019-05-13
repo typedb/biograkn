@@ -18,27 +18,22 @@ import static org.junit.Assert.assertEquals;
 
 public class AssembleMockTest {
 
-    @Test
-    public void exampleTest() {
-        assertEquals("migrator/test", "migrator/test");
-    }
+     @Before
+     public void before() {
+         migratePrecisionMedicine("mock");
+     }
 
-    // @Before
-    // public void before() {
-    //     migratePrecisionMedicine("mock");
-    // }
+     @Test
+     public void assembleMockTest() {
+         GraknClient graknClient = new GraknClient("127.0.0.1:48555");
+         GraknClient.Session session = graknClient.session("precision_medicine");
 
-    // @Test
-    // public void assembleMockTest() {
-    //     GraknClient graknClient = new GraknClient("127.0.0.1:48555");
-    //     GraknClient.Session session = graknClient.session("precision_medicine");
+         GraknClient.Transaction readTransaction = session.transaction().read();
 
-    //     GraknClient.Transaction readTransaction = session.transaction().read();
+         GraqlCompute.Statistics query = Graql.compute().count().in("gene");
 
-    //     GraqlCompute.Statistics query = Graql.compute().count().in("gene");
+         List<Numeric> insertedIds = readTransaction.execute(query);
 
-    //     List<Numeric> insertedIds = readTransaction.execute(query);
-
-    //     System.out.println(insertedIds);
-    // }
+         assertEquals(insertedIds.size(), 200);
+     }
 }
