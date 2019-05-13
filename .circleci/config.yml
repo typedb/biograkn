@@ -134,11 +134,9 @@ workflows:
       - test-assembly-linux-mock:
           requires:
             - build
-            - test
       - test-assembly-mac-mock:
           requires:
             - build
-            - test
 #      - test-assembly-windows-mock:
 #          filters:
 #            branches:
