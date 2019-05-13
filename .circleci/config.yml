@@ -145,20 +145,20 @@ workflows:
 #            - build
 #            - test
 
-#      - test-assembly-linux-full: TODO: uncomment
-#          filters:
-#            branches:
-#              only: master
-#          requires:
-#            - build
-#            - test
-#      - test-assembly-mac-full: TODO: uncomment
-#          filters:
-#            branches:
-#              only: master
-#          requires:
-#            - build
-#            - test
+      - test-assembly-linux-full:
+          filters:
+            branches:
+              only: master
+          requires:
+            - build
+            - test
+      - test-assembly-mac-full:
+          filters:
+            branches:
+              only: master
+          requires:
+            - build
+            - test
 #      - test-assembly-windows-full:
 #          filters:
 #            branches:
