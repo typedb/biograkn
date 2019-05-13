@@ -1,139 +1,256 @@
 version: 2.1
+commands:
+  install-bazel-linux-rbe:
+    steps:
+      - run: curl -OL https://raw.githubusercontent.com/graknlabs/build-tools/master/ci/install-bazel-linux.sh
+      - run: bash ./install-bazel-linux.sh && rm ./install-bazel-linux.sh
+      - run: curl -OL https://raw.githubusercontent.com/graknlabs/build-tools/master/ci/install-bazel-rbe.sh
+      - run: bash ./install-bazel-rbe.sh && rm ./install-bazel-rbe.sh
 
-workflows:
-  ci-pipeline-pr:
-    jobs:
-      - tests:
-          filters:
-            branches:
-              ignore: /master/
-      - test-dists-ubuntu:
-          filters:
-            branches:
-              ignore: /master/
-          requires:
-            - tests
-  ci-pipeline-master:
-    jobs:
-      - tests:
-          filters:
-            branches:
-              only: /master/
-      - test-dists-ubuntu:
-          filters:
-            branches:
-              only: /master/
-          requires:
-            - tests
-      - approve-deploy-github:
-          filters:
-            branches:
-              only: /master/
-          type: approval
-          requires:
-            - test-dists-ubuntu
-      - deploy-github:
-          filters:
-            branches:
-              only: /master/
-          requires:
-            - approve-deploy-github
-      - approve-deploy-all:
-          filters:
-            branches:
-              only: /master/
-          type: approval
-          requires:
-            - deploy-github
-      - deploy-all:
-          filters:
-            branches:
-              only: /master/
-          requires:
-            - approve-deploy-all
+  run-bazel-rbe:
+    parameters:
+      command:
+        type: string
+    steps:
+      - run: bazel run @graknlabs_build_tools//ci:run-bazel-rbe -- << parameters.command >>
+
+  run-grakn-server:
+    steps:
+      - run-bazel-rbe:
+          command: bazel build @graknlabs_grakn_core//:assemble-linux-targz
+      - run: mkdir dist && tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C ./dist/
+      - run: nohup ./dist/grakn-core-all-linux/grakn server start
 
 jobs:
-  tests:
+  build:
     machine: true
+    working_directory: ~/biograkn
     steps:
+      - install-bazel-linux-rbe
       - checkout
-      - bazel_install
-      - bazel:
-          command: bazel test //migrator:assemble-mock-test --test_output=streamed
-  test-dists:
-    machine: true
-    steps:
-      - checkout
-      - bazel_install
-      - bazel_add_rbe_credential
-      - bazel:
-          command: bazel build //...
-  test-dists-ubuntu:
-    machine: true
-    steps:
-      - run: sudo apt-get update
-      - run: sudo apt-get install -y software-properties-common
-      - run: sudo add-apt-repository ppa:openjdk-r/ppa -y
-      - run: sudo apt-get update
-      - run: sudo apt-get install -y sudo gcc build-essential openjdk-8-jdk python-dev unzip curl git
-
-      - checkout
-      - bazel_install
-      - bazel_add_rbe_credential
+#      - run: bazel run @graknlabs_build_tools//checkstyle:test-coverage
       - run: bazel --host_jvm_args=-Xmx16g build //...
+
+  test:
+    machine: true
+    working_directory: ~/biograkn
+    steps:
+      - install-bazel-linux-rbe
+      - checkout
+      - run-bazel-rbe:
+          command: bazel test //migrator:migrator-test --test_output=errors
+
+  test-assembly-linux-mock:
+    machine: true
+    working_directory: ~/biograkn
+    steps:
+      - install-bazel-linux-rbe
+      - checkout
+      - run: bazel build @graknlabs_grakn_core//:assemble-linux-targz
+      - run: mkdir dist && tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C ./dist/
+      - run: nohup ./dist/grakn-core-all-linux/grakn server start
+#      - run: bazel test test-assembly-linux-mock
+      - run: ./dist/grakn-core-all-linux/grakn server stop
+  test-assembly-mac-mock:
+    machine: true
+    working_directory: ~/biograkn
+    steps:
+      - install-bazel-linux-rbe
+      - checkout
+      - run: bazel build @graknlabs_grakn_core//:assemble-mac-zip
+      - run: unzip bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac.zip -d bazel-genfiles/external/graknlabs_grakn_core/
+      - run: nohup bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server start
+#      - run: bazel test test-assembly-mac-mock
+      - run: bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server stop
+  test-assembly-windows-mock:
+    machine: true
+    working_directory: ~/biograkn
+    steps:
+      - run: echo 'CI job placeholder'
+
+  test-assembly-linux-full:
+    machine: true
+    working_directory: ~/biograkn
+    steps:
+      - install-bazel-linux-rbe
+      - checkout
+      - run: bazel build @graknlabs_grakn_core//:assemble-linux-targz
+      - run: mkdir dist && tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C ./dist/
+      - run: nohup ./dist/grakn-core-all-linux/grakn server start
+      #      - run: bazel test test-assembly-linux-full
+      - run: ./dist/grakn-core-all-linux/grakn server stop
+  test-assembly-mac-full:
+    machine: true
+    working_directory: ~/biograkn
+    steps:
+      - install-bazel-linux-rbe
+      - checkout
+      - run: bazel build @graknlabs_grakn_core//:assemble-mac-zip
+      - run: unzip bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac.zip -d bazel-genfiles/external/graknlabs_grakn_core/
+      - run: nohup bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server start
+      #      - run: bazel test test-assembly-mac-full
+      - run: bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server stop
+  test-assembly-windows-full:
+    machine: true
+    working_directory: ~/biograkn
+    steps:
+      - run: echo 'CI job placeholder'
+
+  test-deployment-gcp:
+    machine: true
+    working_directory: ~/biograkn
+    steps:
+      - install-bazel-linux-rbe
+      - checkout
+      - run: pip install google-api-python-client paramiko pyyaml google-auth cryptography==2.4.2
+      - run: GCP_DEPLOY_KEY=$GCP_DEPLOY_KEY_SNAPSHOT test/deployment/gcp.py
+
+  release-approval:
+    machine: true
+    steps:
+      - install-bazel-linux-rbe
+      - checkout
+      - run: |
+          export RELEASE_APPROVAL_TOKEN=$REPO_GITHUB_TOKEN_GRABL
+          bazel run @graknlabs_build_tools//ci:release-approval
 
   deploy-github:
     machine: true
+    working_directory: ~/biograkn
     steps:
-      - checkout
-      - bazel_install
-      - bazel_add_rbe_credential
-      - run: echo test succeeded.
-  deploy-all:
+      - run: echo 'CI job placeholder'
+
+  deploy-gcp:
+    machine: true
+    working_directory: ~/biograkn
+    steps:
+      - run: echo 'CI job placeholder'
+
+  release-cleanup:
     machine: true
     steps:
       - checkout
-      - bazel_install
-      - bazel_add_rbe_credential
-      - run: echo test succeeded.
+      - run: echo 'CI job placeholder'
 
-commands:
-  bazel_install:
-    steps:
-      - run:
-          name: Bazel - Install
-          command: |
-            curl -OL https://github.com/bazelbuild/bazel/releases/download/0.20.0/bazel-0.20.0-installer-linux-x86_64.sh
-            chmod +x bazel-0.20.0-installer-linux-x86_64.sh
-            sudo ./bazel-0.20.0-installer-linux-x86_64.sh
-  bazel_add_rbe_credential:
-    steps:
-      - run:
-          name: Bazel - Add RBE Credential
-          command: |
-            if [[ -n "$BAZEL_RBE_CREDENTIAL" ]]; then
-              BAZEL_RBE_CREDENTIAL_LOCATION=~/.config/gcloud/application_default_credentials.json
-              echo "An RBE credential is found and will be saved to $BAZEL_RBE_CREDENTIAL_LOCATION. Bazel will be executed with RBE support."
-              mkdir -p ~/.config/gcloud/
-              echo $BAZEL_RBE_CREDENTIAL > "$BAZEL_RBE_CREDENTIAL_LOCATION"
-            else
-              echo "No RBE credential found. Bazel will be executed locally without RBE support."
-            fi
+workflows:
+  biograkn:
+    jobs:
+      - build:
+          filters:
+            branches:
+              ignore: biograkn-release-branch
+      - test:
+          filters:
+            branches:
+              ignore: biograkn-release-branch
 
-  bazel:
-    parameters:
-      command:
-          type: string
-    steps:
-      - run:
-          name: Bazel - Execute
-          command: |
-            if [[ -f ~/.config/gcloud/application_default_credentials.json ]]; then
-              echo "Bazel will be executed with RBE support. This means the build is remotely executed and the cache will be re-used by subsequent CI jobs."
-              CMD="<< parameters.command >> --config=rbe"
-            else
-              echo "Bazel will be executed locally (without RBE support)."
-              CMD="<< parameters.command >>"
-            fi
-            echo "Executing $CMD"
-            $CMD
+      - test-assembly-linux-mock:
+          filters:
+            branches:
+              only: master
+          requires:
+            - build
+            - test
+      - test-assembly-mac-mock:
+          filters:
+            branches:
+              only: master
+          requires:
+            - build
+            - test
+#      - test-assembly-windows-mock:
+#          filters:
+#            branches:
+#              only: master
+#          requires:
+#            - build
+#            - test
+
+      - test-assembly-linux-full:
+          filters:
+            branches:
+              only: master
+          requires:
+            - build
+            - test
+      - test-assembly-mac-full:
+          filters:
+            branches:
+              only: master
+          requires:
+            - build
+            - test
+#      - test-assembly-windows-full:
+#          filters:
+#            branches:
+#              only: master
+#          requires:
+#            - build
+#            - test
+
+      - test-deployment-gcp:
+          filters:
+            branches:
+              only: master
+          requires:
+            - test-assembly-linux-mock
+            - test-assembly-mac-mock
+#            - test-assembly-windows-mock
+            - test-assembly-linux-full
+            - test-assembly-mac-full
+#            - test-assembly-windows-full
+      - release-approval:
+          filters:
+            branches:
+              only: master
+          requires:
+            - test-deployment-gcp
+
+  biograkn-release:
+    jobs:
+      - test-assembly-linux-full:
+          filters:
+            branches:
+              only: biograkn-release-branch
+      - test-assembly-mac-full:
+          filters:
+            branches:
+              only: biograkn-release-branch
+#      - test-assembly-windows-full:
+#          filters:
+#            branches:
+#              only: biograkn-release-branch
+
+      - deploy-github:
+          filters:
+            branches:
+              only: biograkn-release-branch
+          requires:
+            - test-assembly-linux-full
+            - test-assembly-mac-full
+#            - test-assembly-windows-full
+      - deploy-approval:
+          type: approval
+          filters:
+            branches:
+              only: biograkn-release-branch
+          requires:
+            - deploy-github
+      - deploy-gcp:
+          filters:
+            branches:
+              only: biograkn-release-branch
+          requires:
+            - deploy-approval
+            - test-assembly-linux-full
+
+      - release-cleanup:
+          filters:
+            branches:
+              only: biograkn-release-branch
+          requires:
+            - test-assembly-linux-full
+            - test-assembly-mac-full
+#            - test-assembly-windows-full
+            - deploy-gcp
+            - deploy-github
