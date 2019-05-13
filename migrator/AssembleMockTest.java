@@ -1,17 +1,15 @@
 package grakn.biograkn.migrator;
 
-import org.junit.Test;
+import grakn.client.GraknClient;
+import grakn.core.concept.answer.Numeric;
+import graql.lang.Graql;
+import graql.lang.query.GraqlCompute;
 import org.junit.Before;
+import org.junit.Test;
+
+import java.util.List;
 
 import static grakn.biograkn.precisionmedicine.migrator.Migrator.migratePrecisionMedicine;
-
-import grakn.client.GraknClient;
-import graql.lang.Graql;
-import java.util.List;
-import grakn.core.concept.answer.ConceptMap;
-import graql.lang.query.GraqlCompute;
-
-import grakn.core.concept.answer.Numeric;
 import static org.junit.Assert.assertEquals;
 
 
@@ -34,6 +32,6 @@ public class AssembleMockTest {
 
          List<Numeric> insertedIds = readTransaction.execute(query);
 
-         assertEquals(insertedIds.size(), 200);
+         assertEquals(insertedIds.get(0).number().intValue(), 200);
      }
 }

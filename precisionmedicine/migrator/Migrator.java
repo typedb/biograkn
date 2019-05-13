@@ -34,16 +34,16 @@ public class Migrator {
 
         // entities
         Gene.migrate(session, dataset);
-        Variant.migrate(session, dataset);
-        Disease.migrate(session, dataset);
-        Drug.migrate(session, dataset);
-        ClinicalTrial.migrate(session, dataset);
+//        Variant.migrate(session, dataset);
+//        Disease.migrate(session, dataset);
+//        Drug.migrate(session, dataset);
+//        ClinicalTrial.migrate(session, dataset);
 
         // relationships
-        GeneDiseaseAssociation.migrate(session, dataset);
-        VariantDiseaseAssociation.migrate(session, dataset);
-        DrugDiseaseAssociation.migrate(session, dataset);
-        ClinicalTrialRelationship.migrate(session);
+//        GeneDiseaseAssociation.migrate(session, dataset);
+//        VariantDiseaseAssociation.migrate(session, dataset);
+//        DrugDiseaseAssociation.migrate(session, dataset);
+//        ClinicalTrialRelationship.migrate(session);
 
         session.close();
         graknClient.close();
