@@ -8,7 +8,7 @@ import static grakn.biograkn.textmining.migrator.Migrator.migrateTextMining;
 public class Migrator {
 
     public static void main(String[] args) {
-        migratePrecisionMedicine("all");
+        migratePrecisionMedicine("precisionmedicine/dataset/all");
         migrateTextMining();
     }
 }

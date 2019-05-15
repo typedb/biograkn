@@ -24,7 +24,7 @@ public class Variant {
     public static void migrate(GraknClient.Session session, String dataset) {
         System.out.print("\tMigrating Variants");
 
-        migrateFromPharmgkb(session, "precisionmedicine/dataset/" + dataset + "/pharmgkb/variants.csv");
+        migrateFromPharmgkb(session, dataset + "/pharmgkb/variants.csv");
 
         System.out.println(" - [DONE]");
     }

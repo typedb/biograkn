@@ -28,8 +28,8 @@ public class GeneDiseaseAssociation {
     public static void migrate(GraknClient.Session session, String dataset) {
         System.out.print("\tMigrating Gene Disease Associations");
 
-        migrateFromDisgenet(session, "precisionmedicine/dataset/" + dataset + "/disgenet/curated_gene_disease_associations.csv");
-        migrateFromClinvar(session, "precisionmedicine/dataset/" + dataset + "/clinvar/gene_condition_source_id.csv");
+        migrateFromDisgenet(session, dataset + "/disgenet/curated_gene_disease_associations.csv");
+        migrateFromClinvar(session, dataset + "/clinvar/gene_condition_source_id.csv");
 
         System.out.println(" - [DONE]");
     }

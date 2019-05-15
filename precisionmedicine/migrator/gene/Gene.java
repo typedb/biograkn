@@ -25,8 +25,8 @@ public class Gene {
     public static void migrate(GraknClient.Session session, String dataset) {
         System.out.print("\tMigrating Genes");
 
-        migrateFromHgnc(session, "precisionmedicine/dataset/" + dataset + "/hgnc/custom.csv");
-        migrateFromCtdbase(session, "precisionmedicine/dataset/" + dataset + "/ctdbase/CTD_genes.csv");
+        migrateFromHgnc(session, dataset + "/hgnc/custom.csv");
+        migrateFromCtdbase(session, dataset + "/ctdbase/CTD_genes.csv");
 
         System.out.println(" - [DONE]");
     }

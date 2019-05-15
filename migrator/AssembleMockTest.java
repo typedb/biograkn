@@ -13,12 +13,12 @@ import static grakn.biograkn.precisionmedicine.migrator.Migrator.migratePrecisio
 import static org.junit.Assert.assertEquals;
 
 
-
+@SuppressWarnings("Duplicates")
 public class AssembleMockTest {
 
      @Before
      public void before() {
-         migratePrecisionMedicine("mock");
+         migratePrecisionMedicine("precisionmedicine/dataset/mock");
      }
 
 

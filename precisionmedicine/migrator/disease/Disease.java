@@ -26,8 +26,8 @@ public class Disease {
     public static void migrate(GraknClient.Session session, String dataset) {
         System.out.print("\tMigrating Diseases");
 
-        migrateFromClinvar(session, "precisionmedicine/dataset/" + dataset + "/clinvar/disease_names.csv");
-        migrateFromCtdbase(session, "precisionmedicine/dataset/" + dataset + "/ctdbase/CTD_diseases.csv");
+        migrateFromClinvar(session, dataset + "/clinvar/disease_names.csv");
+        migrateFromCtdbase(session, dataset + "/ctdbase/CTD_diseases.csv");
 
         System.out.println(" - [DONE]");
     }

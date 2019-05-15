@@ -27,7 +27,7 @@ public class DrugDiseaseAssociation {
         try {
             System.out.print("\tMigrating Drug Disease Associations");
 
-            BufferedReader reader = Files.newBufferedReader(Paths.get("precisionmedicine/dataset/" + dataset + "/ctdbase/CTD_chemicals_diseases.csv"));
+            BufferedReader reader = Files.newBufferedReader(Paths.get(dataset + "/ctdbase/CTD_chemicals_diseases.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
             List<GraqlInsert> insertQueries = new ArrayList<>();
