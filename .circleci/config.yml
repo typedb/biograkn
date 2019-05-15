@@ -135,10 +135,14 @@ workflows:
           filters:
             branches:
               ignore: biograkn-release-branch
+          requires:
+            - build
       - test-assembly-mac-mock:
           filters:
             branches:
               ignore: biograkn-release-branch
+          requires:
+            - build
 #      - test-assembly-windows-mock:
 #          filters:
 #            branches:
@@ -170,7 +174,7 @@ workflows:
       - test-deployment-gcp:
           filters:
             branches:
-              only: master
+              only: test-refactor #change to master
           requires:
             - test-assembly-linux-mock
             - test-assembly-mac-mock
