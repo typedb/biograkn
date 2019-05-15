@@ -23,12 +23,12 @@ import java.util.List;
 @SuppressWarnings("Duplicates")
 public class Drug {
 
-    public static void migrate(GraknClient.Session session) {
+    public static void migrate(GraknClient.Session session, String dataset) {
         System.out.print("\tMigrating Drugs");
 
-        migrateFromDrugsAtFda(session, "precisionmedicine/dataset/drugsatfda/Products.csv");
-        migrateFromPharmgkb(session, "precisionmedicine/dataset/pharmgkb/drugs.csv");
-        migrateFromCtdbase(session, "precisionmedicine/dataset/ctdbase/CTD_chemicals.csv");
+        migrateFromDrugsAtFda(session, dataset + "/drugsatfda/Products.csv");
+        migrateFromPharmgkb(session,  dataset + "/pharmgkb/drugs.csv");
+        migrateFromCtdbase(session, dataset + "/ctdbase/CTD_chemicals.csv");
 
         System.out.println(" - [DONE]");
     }

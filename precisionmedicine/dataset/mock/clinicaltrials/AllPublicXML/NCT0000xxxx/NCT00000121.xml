@@ -1,0 +1,125 @@
+<clinical_study>
+  <!-- This xml conforms to an XML Schema at:
+    https://clinicaltrials.gov/ct2/html/images/info/public.xsd -->
+  <required_header>
+    <download_date>ClinicalTrials.gov processed this data on February 12, 2019</download_date>
+    <link_text>Link to the current ClinicalTrials.gov record.</link_text>
+    <url>https://clinicaltrials.gov/show/NCT00000121</url>
+  </required_header>
+  <id_info>
+    <org_study_id>NEI-20</org_study_id>
+    <nct_id>NCT00000121</nct_id>
+  </id_info>
+  <brief_title>The Prism Adaptation Study (PAS)</brief_title>
+  <sponsors>
+    <lead_sponsor>
+      <agency>National Eye Institute (NEI)</agency>
+      <agency_class>NIH</agency_class>
+    </lead_sponsor>
+  </sponsors>
+  <source>National Eye Institute (NEI)</source>
+  <brief_summary>
+    <textblock>
+      To determine whether the preoperative use of prisms in eyeglasses can improve the outcome of
+      surgery for acquired esotropia, a type of strabismus.
+
+      To determine whether patients who respond to prism adaptation by developing a new stable
+      angle of -deviation have a better surgical result than do patients who do not respond to
+      prism adaptation.
+
+      To determine whether patients who respond to prism adaptation are more accurately corrected
+      by operating for the prism-adapted angle or the original angle of deviation.
+
+      To determine the usefulness of certain input variables (e.g., age at the time of surgery,
+      size of the deviation, visual acuity, binocular function, refractive error) in predicting
+      which patients are more likely to benefit from prism adaptation.
+    </textblock>
+  </brief_summary>
+  <detailed_description>
+    <textblock>
+      Acquired esotropia (crossed eyes that develop after a child reaches the age of 6 months)
+      accounts for 25 percent of all patients with misaligned eyes. Surgery to correct esotropia is
+      done primarily to attain functional use of the two eyes together. The cosmetic aspect of the
+      surgery is secondary. In 40 to 50 percent of cases, more than one operation is needed to
+      accomplish the primary goal, and in some cases even three and four operations are needed.
+
+      Preliminary studies from two eye care centers reported that the use of prisms on eyeglasses
+      for about a month before surgery led to good results after a single operation in more than 90
+      percent of patients. These uncontrolled preliminary studies pointed to the need for a
+      multicenter, randomized, controlled clinical trial designed to prove or disprove
+      scientifically the beneficial effect of prisms.
+
+      The Prism Adaptation Study was a double randomization trial involving 286 patients.
+      Three-fifths of the patients were randomly selected for prism adaptation before surgery. Of
+      the patients who responded to the prisms, one-half were randomly selected to have surgery
+      based on the amount of prism required to stabilize the deviation, and the other half had
+      surgery based on the amount of esotropia originally measured. Patients who did not respond to
+      the prisms also had surgery based on the amount of esotropia measured, as did the two-fifths
+      of the patients who did not undergo prism adaptation.
+
+      Patients were examined postoperatively at 1 week, 1 month, 3 months, 6 months, and 1 year. An
+      independent examiner, masked to the treatment assignment, evaluated the patient at the
+      6-month followup. The results were analyzed to determine whether the outcome was better in
+      patients who underwent prism adaptation or in those who underwent conventional treatment.
+      Because the examiner did not know what type of treatment a patient had received, he or she
+      would have no bias in evaluating the results.
+    </textblock>
+  </detailed_description>
+  <overall_status>Completed</overall_status>
+  <start_date>March 1984</start_date>
+  <completion_date type="Actual">May 1989</completion_date>
+  <phase>Phase 3</phase>
+  <study_type>Interventional</study_type>
+  <has_expanded_access>No</has_expanded_access>
+  <study_design_info>
+    <allocation>Randomized</allocation>
+    <primary_purpose>Treatment</primary_purpose>
+  </study_design_info>
+  <condition>Esotropia</condition>
+  <intervention>
+    <intervention_type>Device</intervention_type>
+    <intervention_name>Prisms in Eyeglasses</intervention_name>
+  </intervention>
+  <eligibility>
+    <criteria>
+      <textblock>
+        An eligible male or female must have been age 3 years or older (adults were included) and
+        must have had esotropia that occurred at age 6 months or older, with no history of previous
+        eye muscle surgery.
+      </textblock>
+    </criteria>
+    <gender>All</gender>
+    <minimum_age>3 Years</minimum_age>
+    <maximum_age>N/A</maximum_age>
+  </eligibility>
+  <reference>
+    <citation>Efficacy of prism adaptation in the surgical management of acquired esotropia. Prism Adaptation Study Research Group. Arch Ophthalmol. 1990 Sep;108(9):1248-56.</citation>
+    <PMID>2100986</PMID>
+  </reference>
+  <reference>
+    <citation>Repka MX, Connett JE, Scott WE. The one-year surgical outcome after prism adaptation for the management of acquired esotropia. Ophthalmology. 1996 Jun;103(6):922-8.</citation>
+    <PMID>8643248</PMID>
+  </reference>
+  <verification_date>September 2009</verification_date>
+  <!-- For several months we've had both old and new date name tags                             -->
+  <!-- Now, the old date names have been dropped.                                               -->
+  <!-- The new date name replacements are:                                                      -->
+  <!--     OLD (gone)                                        NEW (in use)                       -->
+  <!--   lastchanged_date                         becomes   last_update_submitted               -->
+  <!--   firstreceived_date                       becomes   study_first_submitted               -->
+  <!--   firstreceived_results_date               becomes   results_first_submitted             -->
+  <!--   firstreceived_results_disposition_date   becomes   disposition_first_submitted         -->
+  <study_first_submitted>September 23, 1999</study_first_submitted>
+  <study_first_submitted_qc>September 23, 1999</study_first_submitted_qc>
+  <study_first_posted type="Estimate">September 24, 1999</study_first_posted>
+  <last_update_submitted>September 16, 2009</last_update_submitted>
+  <last_update_submitted_qc>September 16, 2009</last_update_submitted_qc>
+  <last_update_posted type="Estimate">September 17, 2009</last_update_posted>
+  <keyword>strabismus</keyword>
+  <condition_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Esotropia</mesh_term>
+  </condition_browse>
+  <!-- Results have not yet been posted for this study                                          -->
+</clinical_study>
+

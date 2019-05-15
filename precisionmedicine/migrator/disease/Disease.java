@@ -23,18 +23,18 @@ import java.util.List;
 @SuppressWarnings("Duplicates")
 public class Disease {
 
-    public static void migrate(GraknClient.Session session) {
+    public static void migrate(GraknClient.Session session, String dataset) {
         System.out.print("\tMigrating Diseases");
 
-        migrateFromClinvar(session);
-        migrateFromCtdbase(session);
+        migrateFromClinvar(session, dataset + "/clinvar/disease_names.csv");
+        migrateFromCtdbase(session, dataset + "/ctdbase/CTD_diseases.csv");
 
         System.out.println(" - [DONE]");
     }
 
-    private static void migrateFromClinvar(GraknClient.Session session) {
+    private static void migrateFromClinvar(GraknClient.Session session, String path) {
         try {
-            BufferedReader reader = Files.newBufferedReader(Paths.get("precisionmedicine/dataset/clinvar/disease_names.csv"));
+            BufferedReader reader = Files.newBufferedReader(Paths.get(path));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
             List<GraqlInsert> insertQueries = new ArrayList<>();
@@ -68,9 +68,9 @@ public class Disease {
         }
     }
 
-    private static void migrateFromCtdbase(GraknClient.Session session) {
+    private static void migrateFromCtdbase(GraknClient.Session session, String path) {
         try {
-            BufferedReader reader = Files.newBufferedReader(Paths.get("precisionmedicine/dataset/ctdbase/CTD_diseases.csv"));
+            BufferedReader reader = Files.newBufferedReader(Paths.get(path));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
             List<GraqlInsert> insertQueries = new ArrayList<>();

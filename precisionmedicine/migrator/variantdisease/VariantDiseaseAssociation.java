@@ -24,11 +24,11 @@ import java.util.List;
 
 @SuppressWarnings("Duplicates")
 public class VariantDiseaseAssociation {
-    public static void migrate(GraknClient.Session session) {
+    public static void migrate(GraknClient.Session session, String dataset) {
         try {
             System.out.print("\tMigrating Variant Disease Association");
 
-            BufferedReader reader = Files.newBufferedReader(Paths.get("precisionmedicine/dataset/disgenet/curated_variant_disease_associations.csv"));
+            BufferedReader reader = Files.newBufferedReader(Paths.get(dataset + "/disgenet/curated_variant_disease_associations.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
             List<GraqlInsert> insertQueries = new ArrayList<>();

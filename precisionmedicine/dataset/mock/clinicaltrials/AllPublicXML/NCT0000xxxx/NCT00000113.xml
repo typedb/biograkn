@@ -1,0 +1,238 @@
+<clinical_study>
+  <!-- This xml conforms to an XML Schema at:
+    https://clinicaltrials.gov/ct2/html/images/info/public.xsd -->
+  <required_header>
+    <download_date>ClinicalTrials.gov processed this data on February 12, 2019</download_date>
+    <link_text>Link to the current ClinicalTrials.gov record.</link_text>
+    <url>https://clinicaltrials.gov/show/NCT00000113</url>
+  </required_header>
+  <id_info>
+    <org_study_id>NEI-9</org_study_id>
+    <secondary_id>U10EY011756</secondary_id>
+    <nct_id>NCT00000113</nct_id>
+  </id_info>
+  <brief_title>Correction of Myopia Evaluation Trial (COMET)</brief_title>
+  <official_title>Correction of Myopia Evaluation Trial (COMET)</official_title>
+  <sponsors>
+    <lead_sponsor>
+      <agency>Stony Brook University</agency>
+      <agency_class>Other</agency_class>
+    </lead_sponsor>
+    <collaborator>
+      <agency>National Eye Institute (NEI)</agency>
+      <agency_class>NIH</agency_class>
+    </collaborator>
+  </sponsors>
+  <source>Stony Brook University</source>
+  <oversight_info>
+    <has_dmc>Yes</has_dmc>
+  </oversight_info>
+  <brief_summary>
+    <textblock>
+      To evaluate whether progressive addition lenses (PALs) slow the rate of progression of
+      juvenile-onset myopia (nearsightedness) when compared with single vision lenses, as measured
+      by cycloplegic autorefraction. An additional outcome measure is axial length, as measured by
+      A-scan ultrasonography.
+
+      To describe the natural history of juvenile-onset myopia in a group of children receiving
+      conventional treatment (single vision lenses).
+    </textblock>
+  </brief_summary>
+  <detailed_description>
+    <textblock>
+      Myopia (nearsightedness) is an important public health problem, which entails substantial
+      societal and personal costs. It is highly prevalent in our society and even more frequent in
+      Asian countries; furthermore, its prevalence may be increasing over time. High myopia
+      contributes to significant loss of vision and blindness. At present, the mechanisms involved
+      in the etiology of myopia are unclear, and there is no way to prevent the condition. Current
+      methods of correction require lifelong use of lenses or surgical treatment, which is
+      expensive and may lead to complications. The rationale for this trial, the Correction of
+      Myopia Evaluation Trial (COMET), arises from the convergence of research involving (1) the
+      link between accommodation and myopia in children and (2) animal models of myopia showing the
+      important role of the visual environment in eye growth. A contribution of this research is
+      that blur is a critical component in the development of myopia. The primary aim of COMET, to
+      evaluate the efficacy of progressive addition lenses, a noninvasive intervention, in slowing
+      the progression of myopia, follows from this line of reasoning. These lenses should provide
+      clear visual input over a range of viewing distances without focusing effort by the child.
+      The comparison of myopia progression in children treated with PALs versus single vision
+      lenses will allow the quantification of the effect of PALs on myopia progression during the
+      followup period.
+
+      The COMET is a multicenter, randomized, double-masked clinical trial to evaluate whether PALs
+      slow the progression of juvenile-onset myopia as compared with single vision lenses. The
+      study is a collaborative effort that involves a Study Chair at the New England College of
+      Optometry; four clinical centers at colleges of optometry in Boston, Birmingham,
+      Philadelphia, and Houston; and a Coordinating Center at the State University of New York at
+      Stony Brook.
+
+      The sample size goal, 450 children with myopia in both eyes who met specific inclusion and
+      exclusion criteria, was attained with the enrollment of 469 children in one year. Children
+      were identified from school screenings, clinic records, and referrals from local
+      practitioners. Eligible children were randomly assigned to receive progressive addition or
+      single vision lenses. Participating children are being examined at 6-month intervals
+      following baseline, for at least 3 years, to measure changes in refractive error and to
+      update prescriptions, according to a specified protocol. A dilated examination to evaluate
+      the study outcome measures is performed at the annual study visits. A standardized, common
+      protocol is used at all centers.
+
+      The primary outcome of the study is progression of myopia, defined as the magnitude of the
+      change relative to baseline in spherical equivalent refraction, determined by cycloplegic
+      autorefraction. The secondary outcome of the study is axial length measured by A-scan
+      ultrasonography.
+    </textblock>
+  </detailed_description>
+  <overall_status>Completed</overall_status>
+  <start_date>September 1997</start_date>
+  <completion_date type="Actual">September 2013</completion_date>
+  <primary_completion_date type="Actual">October 2001</primary_completion_date>
+  <phase>Phase 3</phase>
+  <study_type>Interventional</study_type>
+  <has_expanded_access>No</has_expanded_access>
+  <study_design_info>
+    <allocation>Randomized</allocation>
+    <intervention_model>Parallel Assignment</intervention_model>
+    <primary_purpose>Treatment</primary_purpose>
+    <masking>Triple (Participant, Investigator, Outcomes Assessor)</masking>
+  </study_design_info>
+  <primary_outcome>
+    <measure>Progression of myopia, determined by cycloplegic autorefraction</measure>
+  </primary_outcome>
+  <secondary_outcome>
+    <measure>Axial length measured by A-scan ultrasonography</measure>
+  </secondary_outcome>
+  <number_of_arms>2</number_of_arms>
+  <enrollment type="Actual">469</enrollment>
+  <condition>Myopia</condition>
+  <arm_group>
+    <arm_group_label>Progressive Addition Lenses (PALs)</arm_group_label>
+    <arm_group_type>Experimental</arm_group_type>
+  </arm_group>
+  <arm_group>
+    <arm_group_label>Single Vision Lenses</arm_group_label>
+    <arm_group_type>Active Comparator</arm_group_type>
+  </arm_group>
+  <intervention>
+    <intervention_type>Other</intervention_type>
+    <intervention_name>Progressive Addition Lenses</intervention_name>
+    <description>Varilux comfort with +2.00 addition</description>
+    <arm_group_label>Progressive Addition Lenses (PALs)</arm_group_label>
+  </intervention>
+  <intervention>
+    <intervention_type>Other</intervention_type>
+    <intervention_name>single vision lenses</intervention_name>
+    <arm_group_label>Single Vision Lenses</arm_group_label>
+  </intervention>
+  <eligibility>
+    <criteria>
+      <textblock>
+        Children between the ages of 6 and 12 years with myopia in both eyes (defined as spherical
+        equivalent between -1.25 D and -4.50 D in each eye as measured by cycloplegic
+        autorefraction), astigmatism less than or equal to 1.50 D, and no anisometropia (defined as
+        a difference in spherical equivalent between the two eyes greater than 1.0 D) are eligible
+        for inclusion. Exclusion criteria include visual acuity greater than 20/25, strabismus, use
+        of contact lenses, birth weight less than 1,250 grams, use of bifocal or progressive
+        addition lenses, or any conditions precluding adherence to the protocol.
+      </textblock>
+    </criteria>
+    <gender>All</gender>
+    <minimum_age>6 Years</minimum_age>
+    <maximum_age>12 Years</maximum_age>
+    <healthy_volunteers>No</healthy_volunteers>
+  </eligibility>
+  <overall_official>
+    <last_name>Jane Gwiazda, PhD</last_name>
+    <role>Study Chair</role>
+    <affiliation>New England College of Optometry</affiliation>
+  </overall_official>
+  <overall_official>
+    <last_name>Leslie Hyman, PhD</last_name>
+    <role>Study Director</role>
+    <affiliation>Stony Brook Medicine</affiliation>
+  </overall_official>
+  <location>
+    <facility>
+      <name>University of Alabama-Birmingham, School of Optometry</name>
+      <address>
+        <city>Birmingham</city>
+        <state>Alabama</state>
+        <zip>35294-0010</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>New England College of Optometry</name>
+      <address>
+        <city>Boston</city>
+        <state>Massachusetts</state>
+        <zip>02115</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Pennsylvania College of Optometry</name>
+      <address>
+        <city>Philadelphia</city>
+        <state>Pennsylvania</state>
+        <zip>19141-3399</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Houston, College of Optometry</name>
+      <address>
+        <city>Houston</city>
+        <state>Texas</state>
+        <zip>77204-6052</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location_countries>
+    <country>United States</country>
+  </location_countries>
+  <link>
+    <url>http://www.nei.nih.gov/health/clinicalstudies/</url>
+    <description>NEI Clinical Studies Database</description>
+  </link>
+  <results_reference>
+    <citation>Gwiazda J, Hyman L, Hussein M, Everett D, Norton TT, Kurtz D, Leske MC, Manny R, Marsh-Tootle W, Scheiman M. A randomized clinical trial of progressive addition lenses versus single vision lenses on the progression of myopia in children. Invest Ophthalmol Vis Sci. 2003 Apr;44(4):1492-500.</citation>
+    <PMID>12657584</PMID>
+  </results_reference>
+  <results_reference>
+    <citation>Gwiazda JE, Hyman L, Norton TT, Hussein ME, Marsh-Tootle W, Manny R, Wang Y, Everett D; COMET Grouup. Accommodation and related risk factors associated with myopia progression and their interaction with treatment in COMET children. Invest Ophthalmol Vis Sci. 2004 Jul;45(7):2143-51.</citation>
+    <PMID>15223788</PMID>
+  </results_reference>
+  <results_reference>
+    <citation>Hyman L, Gwiazda J, Hussein M, Norton TT, Wang Y, Marsh-Tootle W, Everett D. Relationship of age, sex, and ethnicity with myopia progression and axial elongation in the correction of myopia evaluation trial. Arch Ophthalmol. 2005 Jul;123(7):977-87.</citation>
+    <PMID>16009841</PMID>
+  </results_reference>
+  <verification_date>April 2016</verification_date>
+  <!-- For several months we've had both old and new date name tags                             -->
+  <!-- Now, the old date names have been dropped.                                               -->
+  <!-- The new date name replacements are:                                                      -->
+  <!--     OLD (gone)                                        NEW (in use)                       -->
+  <!--   lastchanged_date                         becomes   last_update_submitted               -->
+  <!--   firstreceived_date                       becomes   study_first_submitted               -->
+  <!--   firstreceived_results_date               becomes   results_first_submitted             -->
+  <!--   firstreceived_results_disposition_date   becomes   disposition_first_submitted         -->
+  <study_first_submitted>September 23, 1999</study_first_submitted>
+  <study_first_submitted_qc>September 23, 1999</study_first_submitted_qc>
+  <study_first_posted type="Estimate">September 24, 1999</study_first_posted>
+  <last_update_submitted>April 14, 2016</last_update_submitted>
+  <last_update_submitted_qc>April 14, 2016</last_update_submitted_qc>
+  <last_update_posted type="Estimate">April 15, 2016</last_update_posted>
+  <keyword>myopia</keyword>
+  <keyword>nearsightedness</keyword>
+  <condition_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Myopia</mesh_term>
+  </condition_browse>
+  <!-- Results have not yet been posted for this study                                          -->
+</clinical_study>
+

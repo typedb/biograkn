@@ -1,0 +1,295 @@
+<clinical_study>
+  <!-- This xml conforms to an XML Schema at:
+    https://clinicaltrials.gov/ct2/html/images/info/public.xsd -->
+  <required_header>
+    <download_date>ClinicalTrials.gov processed this data on February 12, 2019</download_date>
+    <link_text>Link to the current ClinicalTrials.gov record.</link_text>
+    <url>https://clinicaltrials.gov/show/NCT00000179</url>
+  </required_header>
+  <id_info>
+    <org_study_id>IA0003</org_study_id>
+    <secondary_id>3U01AG010483-08S2</secondary_id>
+    <nct_id>NCT00000179</nct_id>
+  </id_info>
+  <brief_title>Agitation in Alzheimer's Disease</brief_title>
+  <sponsors>
+    <lead_sponsor>
+      <agency>National Institute on Aging (NIA)</agency>
+      <agency_class>NIH</agency_class>
+    </lead_sponsor>
+  </sponsors>
+  <source>National Institute on Aging (NIA)</source>
+  <brief_summary>
+    <textblock>
+      Agitation affects 70 to 90 percent of patients with AD. Signs of agitation include verbal and
+      physical aggressiveness, irritability, wandering, and restlessness. These behaviors often
+      make caring for patients at home very difficult. Trazodone and haldol are two of the most
+      commonly prescribed drugs for agitation in AD patients. Behavior management, a non drug
+      approach, has been effective in reducing signs of agitation. Researchers have yet to compare
+      the effectiveness of drug versus non drug therapy to treat agitation in AD patients and
+      determine which is the best treatment. The Alzheimer's Disease Cooperative Study, with
+      funding from the National Institute on Aging, is conducting an agitation treatment program at
+      21 sites in 16 States. This study will assess which of the above treatments is most
+      effective.
+    </textblock>
+  </brief_summary>
+  <overall_status>Completed</overall_status>
+  <phase>Phase 3</phase>
+  <study_type>Interventional</study_type>
+  <has_expanded_access>No</has_expanded_access>
+  <study_design_info>
+    <allocation>Randomized</allocation>
+    <primary_purpose>Treatment</primary_purpose>
+    <masking>Double</masking>
+  </study_design_info>
+  <condition>Alzheimer Disease</condition>
+  <intervention>
+    <intervention_type>Drug</intervention_type>
+    <intervention_name>Trazodone</intervention_name>
+  </intervention>
+  <intervention>
+    <intervention_type>Drug</intervention_type>
+    <intervention_name>Haloperidol</intervention_name>
+  </intervention>
+  <eligibility>
+    <criteria>
+      <textblock>
+        Inclusion Criteria:
+
+          -  Memory problem consistent with a probable diagnosis of Alzheimer's disease (AD)
+
+          -  Agitation symptoms for at least the past 2 weeks
+
+          -  Patient has caregiver who can participate
+
+          -  Patient lives in the same household as the caregiver
+      </textblock>
+    </criteria>
+    <gender>All</gender>
+    <minimum_age>50 Years</minimum_age>
+    <maximum_age>N/A</maximum_age>
+    <healthy_volunteers>No</healthy_volunteers>
+  </eligibility>
+  <overall_official>
+    <last_name>Leon Thal, MD.</last_name>
+    <role>Principal Investigator</role>
+    <affiliation>University of California, San Diego</affiliation>
+  </overall_official>
+  <location>
+    <facility>
+      <name>University of California, Los Angeles</name>
+      <address>
+        <city>Los Angeles</city>
+        <state>California</state>
+        <zip>90095</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of California, San Diego</name>
+      <address>
+        <city>San Diego</city>
+        <state>California</state>
+        <zip>92093-0949</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Miami</name>
+      <address>
+        <city>Miami</city>
+        <state>Florida</state>
+        <zip>33140</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of South Florida</name>
+      <address>
+        <city>Tampa</city>
+        <state>Florida</state>
+        <zip>33162</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Emory University</name>
+      <address>
+        <city>Atlanta</city>
+        <state>Georgia</state>
+        <zip>30329</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Southern Illinois University</name>
+      <address>
+        <city>Springfield</city>
+        <state>Illinois</state>
+        <zip>62702</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Kansas Medical Center</name>
+      <address>
+        <city>Kansas City</city>
+        <state>Kansas</state>
+        <zip>66160</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Kentucky</name>
+      <address>
+        <city>Lexington</city>
+        <state>Kentucky</state>
+        <zip>40536</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Massachusetts</name>
+      <address>
+        <city>Worcester</city>
+        <state>Massachusetts</state>
+        <zip>01665</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Michigan</name>
+      <address>
+        <city>Ann Arbor</city>
+        <state>Michigan</state>
+        <zip>48109</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Minnesota</name>
+      <address>
+        <city>Minneapolis</city>
+        <state>Minnesota</state>
+        <zip>55455</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>New York University Medical Center</name>
+      <address>
+        <city>New York</city>
+        <state>New York</state>
+        <zip>10016</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Mount Sinai Medical Center</name>
+      <address>
+        <city>New York</city>
+        <state>New York</state>
+        <zip>10029</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Rochester</name>
+      <address>
+        <city>Rochester</city>
+        <state>New York</state>
+        <zip>14620</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University Hospitals of Cleveland</name>
+      <address>
+        <city>Cleveland</city>
+        <state>Ohio</state>
+        <zip>44120</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Oregon Health Sciences University</name>
+      <address>
+        <city>Portland</city>
+        <state>Oregon</state>
+        <zip>97201-3098</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location_countries>
+    <country>United States</country>
+  </location_countries>
+  <results_reference>
+    <citation>Teri L, Logsdon RG, Peskind E, Raskind M, Weiner MF, Tractenberg RE, Foster NL, Schneider LS, Sano M, Whitehouse P, Tariot P, Mellow AM, Auchus AP, Grundman M, Thomas RG, Schafer K, Thal LJ; Alzheimer's Disease Cooperative Study. Treatment of agitation in AD: a randomized, placebo-controlled clinical trial. Neurology. 2000 Nov 14;55(9):1271-8. Erratum in: Neurology 2001 Feb 13;56(3):426.</citation>
+    <PMID>11087767</PMID>
+  </results_reference>
+  <verification_date>March 2005</verification_date>
+  <!-- For several months we've had both old and new date name tags                             -->
+  <!-- Now, the old date names have been dropped.                                               -->
+  <!-- The new date name replacements are:                                                      -->
+  <!--     OLD (gone)                                        NEW (in use)                       -->
+  <!--   lastchanged_date                         becomes   last_update_submitted               -->
+  <!--   firstreceived_date                       becomes   study_first_submitted               -->
+  <!--   firstreceived_results_date               becomes   results_first_submitted             -->
+  <!--   firstreceived_results_disposition_date   becomes   disposition_first_submitted         -->
+  <study_first_submitted>October 29, 1999</study_first_submitted>
+  <study_first_submitted_qc>October 29, 1999</study_first_submitted_qc>
+  <study_first_posted type="Estimate">November 1, 1999</study_first_posted>
+  <last_update_submitted>June 23, 2005</last_update_submitted>
+  <last_update_submitted_qc>June 23, 2005</last_update_submitted_qc>
+  <last_update_posted type="Estimate">June 24, 2005</last_update_posted>
+  <keyword>Alzheimer's disease</keyword>
+  <keyword>Psychomotor agitation</keyword>
+  <keyword>Behavioral symptoms</keyword>
+  <keyword>Haloperidol</keyword>
+  <keyword>Trazodone</keyword>
+  <keyword>Anti-psychotic agents</keyword>
+  <keyword>Anti-depressant agents</keyword>
+  <condition_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Alzheimer Disease</mesh_term>
+  </condition_browse>
+  <intervention_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Haloperidol</mesh_term>
+    <mesh_term>Haloperidol decanoate</mesh_term>
+    <mesh_term>Trazodone</mesh_term>
+  </intervention_browse>
+  <!-- Results have not yet been posted for this study                                          -->
+</clinical_study>
+

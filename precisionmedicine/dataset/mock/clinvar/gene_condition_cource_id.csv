@@ -1,0 +1,101 @@
+﻿#GeneID,AssociatedGenes,RelatedGenes,ConceptID,DiseaseName,SourceName,SourceID,DiseaseMIM,LastUpdated
+2,A2M,,C0002395,Alzheimer's disease,SNOMED CT,26929004,104300,16-Feb-16
+2,A2M,,C3279661,Alpha-2-macroglobulin deficiency,NCBI curation,,614036,16-Feb-16
+144568,A2ML1,,C1833692,"Otitis media, susceptibility to",NCBI curation,,166760,16-Feb-16
+53947,A4GALT,,C3549485,p phenotype,SNOMED CT,24403008,111400,16-Feb-16
+8086,AAAS,,C0271742,Glucocorticoid deficiency with achalasia,SNOMED CT,45414006,231550,16-Feb-16
+79719,AAGAB,,C1835662,Keratosis palmoplantaris papulosa,Office of Rare Diseases,3103,148600,16-Feb-16
+16,AARS,,C2750090,"Charcot-Marie-Tooth disease, type 2N",NCBI curation,,613287,16-Feb-16
+16,AARS,,C4225361,"Epileptic encephalopathy, early infantile, 29",NCBI curation,,616339,16-Feb-16
+16,,AARS,C0007959,Charcot-Marie-Tooth disease,Genetics Home Reference,charcot-marie-tooth-disease,,16-Feb-16
+16,,AARS,C0007959,Charcot-Marie-Tooth disease,Office of Rare Diseases,6034,,16-Feb-16
+16,,AARS,C0007959,Charcot-Marie-Tooth disease,SNOMED CT,50548001,,16-Feb-16
+16,,AARS,C0270914,"Charcot-Marie-Tooth disease, type 2",NCBI curation,,,16-Feb-16
+57505,AARS2,,C3279793,Combined oxidative phosphorylation deficiency 8,NCBI curation,,614096,16-Feb-16
+57505,AARS2,,C4014588,"Leukoencephalopathy, progressive, with ovarian failure",NCBI curation,,615889,16-Feb-16
+10157,AASS,,C0268556,Saccharopinuria,Office of Rare Diseases,314,268700,16-Feb-16
+10157,AASS,,C0268556,Saccharopinuria,SNOMED CT,111397004,268700,16-Feb-16
+10157,AASS,,C0543533,Hyperlysinemia,GeneTests,22217,238700,16-Feb-16
+10157,AASS,,C0543533,Hyperlysinemia,Human Phenotype Ontology,HP:0002161,238700,16-Feb-16
+10157,AASS,,C0543533,Hyperlysinemia,Office of Rare Diseases,2828,238700,16-Feb-16
+10157,AASS,,C0543533,Hyperlysinemia,SNOMED CT,58558003,238700,16-Feb-16
+10157,AASS,,C0543533,Hyperlysinemia,"Undiagnosed Diseases Network,NIH",,238700,16-Feb-16
+18,ABAT,,C0342708,Gamma-aminobutyric acid transaminase deficiency,SNOMED CT,237941007,613163,16-Feb-16
+19,ABCA1,,C0039292,Tangier disease,Genetics Home Reference,tangier-disease,205400,16-Feb-16
+19,ABCA1,,C0039292,Tangier disease,Office of Rare Diseases,7731,205400,16-Feb-16
+19,ABCA1,,C0745103,Familial hypercholesterolemia,SNOMED CT,398036000,143890,16-Feb-16
+19,ABCA1,,C1704429,Familial hypoalphalipoproteinemia,SNOMED CT,15346004,604091,25-May-17
+19,,ABCA1,C0020445,Familial hypercholesterolemias,GeneTests,203801,,16-Feb-16
+19,,ABCA1,C0020476,Hyperlipoproteinemia,Human Phenotype Ontology,HP:0010980,,16-Feb-16
+19,,ABCA1,C0020476,Hyperlipoproteinemia,SNOMED CT,3744001,,16-Feb-16
+26154,ABCA12,,C0598226,Autosomal recessive congenital ichthyosis 4B,NCBI curation,,242500,16-Feb-16
+26154,ABCA12,,C1832550,Autosomal recessive congenital ichthyosis 4A,NCBI curation,,601277,16-Feb-16
+26154,,ABCA12,C0020758,Congenital ichthyosis of skin,SNOMED CT,13059002,,16-Feb-16
+21,ABCA3,,C1970456,"Surfactant metabolism dysfunction, pulmonary, 3",NCBI curation,,610921,16-Feb-16
+21,,ABCA3,C3711368,Pulmonary Surfactant Metabolism Dysfunction,GeneTests,311263,,16-Feb-16
+24,ABCA4,,C1855465,Stargardt disease 1,"UCLA Clinical Genomics Center, UCLA",,248200,16-Feb-16
+24,ABCA4,,C1858806,Cone-rod dystrophy 3,Office of Rare Diseases,10653,604116,16-Feb-16
+24,ABCA4,,C1866422,Retinitis pigmentosa 19,NCBI curation,,601718,16-Feb-16
+24,ABCA4,,C3495438,Age-related macular degeneration 2,GeneTests,290307,153800,16-Feb-16
+24,,ABCA4,C0035334,Retinitis pigmentosa,ADAM,CN038210,268000,16-Feb-16
+24,,ABCA4,C0035334,Retinitis pigmentosa,Office of Rare Diseases,5694,268000,16-Feb-16
+24,,ABCA4,C0035334,Retinitis pigmentosa,SNOMED CT,28835009,268000,16-Feb-16
+24,,ABCA4,C0242383,Age-related macular degeneration,Human Phenotype Ontology,HP:0007868,,16-Feb-16
+24,,ABCA4,C0242383,Age-related macular degeneration,SNOMED CT,267718000,,16-Feb-16
+24,,ABCA4,C0271093,Stargardt disease,Orphanet,827,,27-Oct-16
+23461,ABCA5,,C1851120,Gingival fibromatosis with hypertrichosis,Office of Rare Diseases,2324,135400,16-Feb-16
+10347,ABCA7,,C4282179,"Alzheimer disease, type 9",NCBI curation,,608907,16-Feb-16
+10347,,ABCA7,C0002395,Alzheimer's disease,SNOMED CT,26929004,104300,16-Feb-16
+5243,ABCB1,,C1861502,Colchicine resistance,NCBI curation,,120080,16-Feb-16
+5243,ABCB1,,C2677101,Inflammatory bowel disease 13,NCBI curation,,612244,16-Feb-16
+8647,ABCB11,,C2608083,Benign recurrent intrahepatic cholestasis 2,Office of Rare Diseases,10029,605479,16-Feb-16
+8647,ABCB11,,C3489789,Progressive familial intrahepatic cholestasis 2,Office of Rare Diseases,1288,601847,16-Feb-16
+8647,,ABCB11,CN043628,Low Gamma-GT Familial Intrahepatic Cholestasis,GeneTests,78656,,16-Feb-16
+5244,ABCB4,,C1865643,Progressive familial intrahepatic cholestasis 3,Office of Rare Diseases,1289,602347,16-Feb-16
+5244,ABCB4,,C2609268,Cholecystitis,Human Phenotype Ontology,HP:0001082,600803,16-Feb-16
+5244,ABCB4,,C2609268,Cholecystitis,Office of Rare Diseases,30,600803,16-Feb-16
+5244,ABCB4,,C2609268,Cholecystitis,SNOMED CT,76581006,600803,16-Feb-16
+5244,ABCB4,,C3554241,"Cholestasis, intrahepatic, of pregnancy 3",NCBI curation,,614972,16-Feb-16
+10058,ABCB6,,C1836705,"Pseudohyperkalemia, familial, 2, due to red cell leak",NCBI curation,,609153,16-Feb-16
+10058,ABCB6,,C3276339,Langereis blood group,NCBI curation,,111600,16-Feb-16
+10058,ABCB6,,C3281027,"Microphthalmia, isolated, with coloboma 7",NCBI curation,,614497,16-Feb-16
+10058,ABCB6,,C3809394,Dyschromatosis universalis hereditaria 3,NCBI curation,,615402,16-Feb-16
+22,ABCB7,,C1845028,Anemia sideroblastic and spinocerebellar ataxia,Office of Rare Diseases,668,301310,16-Feb-16
+85320,ABCC11,,C1861696,"Apocrine gland secretion, variation in",NCBI curation,,117800,16-Feb-16
+1244,ABCC2,,C0022350,Dubin-Johnson syndrome,Genetics Home Reference,dubin-johnson-syndrome,237500,16-Feb-16
+1244,ABCC2,,C0022350,Dubin-Johnson syndrome,Office of Rare Diseases,6289,237500,16-Feb-16
+1244,ABCC2,,C0022350,Dubin-Johnson syndrome,SNOMED CT,44553005,237500,16-Feb-16
+368,ABCC6,,C0033847,Pseudoxanthoma elasticum,Office of Rare Diseases,9643,264800,16-Feb-16
+368,ABCC6,,C0033847,Pseudoxanthoma elasticum,SNOMED CT,252246005,264800,16-Feb-16
+368,ABCC6,,C1867450,"Pseudoxanthoma elasticum, forme fruste",Office of Rare Diseases,10104,177850,16-Feb-16
+368,ABCC6,,C3276161,Generalized arterial calcification of infancy 2,NCBI curation,,614473,16-Feb-16
+6833,ABCC8,,C0011860,Diabetes mellitus type 2,Human Phenotype Ontology,HP:0005978,125853,06-Jul-18
+6833,ABCC8,,C0011860,Diabetes mellitus type 2,SNOMED CT,44054006,125853,06-Jul-18
+6833,ABCC8,,C0271714,Leucine-induced hypoglycemia,SNOMED CT,62151007,240800,16-Feb-16
+6833,ABCC8,,C1833104,Permanent neonatal diabetes mellitus,Office of Rare Diseases,10457,606176,16-Feb-16
+6833,ABCC8,,C1835887,Transient neonatal diabetes mellitus 2,NCBI curation,,610374,16-Feb-16
+6833,ABCC8,,C2931832,Persistent hyperinsulinemic hypoglycemia of infancy,SNOMED CT,360339005,256450,16-Feb-16
+6833,,ABCC8,C0158981,Neonatal diabetes mellitus,SNOMED CT,49817004,,16-Feb-16
+6833,,ABCC8,C0342273,Transitory neonatal diabetes mellitus,SNOMED CT,237603002,,16-Feb-16
+6833,,ABCC8,C3888018,Familial hyperinsulinism,Genetic Testing Registry (GTR),GTR000330605,,16-Feb-16
+10060,ABCC9,,C0007193,Primary dilated cardiomyopathy,SNOMED CT,195021004,,16-Feb-16
+10060,ABCC9,,C0007193,Primary dilated cardiomyopathy,"Undiagnosed Diseases Network,NIH",,,16-Feb-16
+10060,ABCC9,,C0795905,Hypertrichotic osteochondrodysplasia,Office of Rare Diseases,8585,239850,16-Feb-16
+10060,ABCC9,,C1837839,Dilated cardiomyopathy 1O,NCBI curation,C1837839,608569,16-Feb-16
+10060,ABCC9,,C3279695,"Atrial fibrillation, familial, 12",NCBI curation,,614050,16-Feb-16
+10060,,ABCC9,C0004238,Atrial fibrillation,EFO,EFO_0000275,,06-Jul-18
+10060,,ABCC9,C0004238,Atrial fibrillation,Human Phenotype Ontology,HP:0005110,,06-Jul-18
+10060,,ABCC9,C0340427,Familial dilated cardiomyopathy,Orphanet,217607,,16-Feb-16
+10060,,ABCC9,C0878544,Cardiomyopathy,"Baylor Miraca Genetics Laboratories,",,,16-Feb-16
+10060,,ABCC9,C0878544,Cardiomyopathy,"GenomeConnect, ClinGen",,,16-Feb-16
+10060,,ABCC9,C0878544,Cardiomyopathy,Human Phenotype Ontology,HP:0001638,,16-Feb-16
+10060,,ABCC9,C0878544,Cardiomyopathy,SNOMED CT,85898001,,16-Feb-16
+215,ABCD1,,C0162309,Adrenoleukodystrophy,Office of Rare Diseases,5758,300100,16-Feb-16
+215,ABCD1,,C0162309,Adrenoleukodystrophy,SNOMED CT,65389002,300100,16-Feb-16
+5825,ABCD3,,C4225390,"Bile acid synthesis defect, congenital, 5",NCBI curation,,616278,16-Feb-16
+5826,ABCD4,,C3553915,"METHYLMALONIC ACIDURIA AND HOMOCYSTINURIA, cblJ TYPE",OMIM,614857,614857,16-Feb-16
+5826,ABCD4,,CN043592,Disorders of Intracellular Cobalamin Metabolism,GeneTests,296703,,16-Feb-16
+9429,ABCG2,,C1841837,"Uric acid concentration, serum, quantitative trait locus 1",NCBI curation,,138900,16-Feb-16
+9429,ABCG2,,C3280986,"Blood group, Junior system",NCBI curation,,614490,16-Feb-16
+64240,ABCG5,,C0342907,Sitosterolemia,GeneTests,3093,210250,16-Feb-16
+64240,ABCG5,,C0342907,Sitosterolemia,Office of Rare Diseases,7653,210250,16-Feb-16

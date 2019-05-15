@@ -1,0 +1,100 @@
+﻿#DiseaseName,SourceName,ConceptID,SourceID,DiseaseMIM,LastModified,Category
+Clinical features observed in this individual,"Institute of Medical Genetics and Genomics,Sir Ganga Ram Hospital",,,,29-Sep-17,Finding
+1-2 finger syndactyly,Human Phenotype Ontology,C4023732,HP:0010704,,16-Feb-16,Finding
+1-2 toe complete cutaneous syndactyly,Human Phenotype Ontology,C4025140,HP:0005767,,16-Feb-16,Finding
+1-2 toe syndactyly,Human Phenotype Ontology,C4023726,HP:0010711,,16-Feb-16,Finding
+1-3 finger syndactyly,Human Phenotype Ontology,C4023730,HP:0010706,,16-Feb-16,Finding
+1-3 toe syndactyly,Human Phenotype Ontology,C4025774,HP:0001459,,16-Feb-16,Finding
+1-4 finger syndactyly,Human Phenotype Ontology,C4023729,HP:0010707,,16-Feb-16,Finding
+1-4 toe syndactyly,Human Phenotype Ontology,C4023725,HP:0010712,,16-Feb-16,Finding
+1-5 finger complete cutaneous syndactyly,Human Phenotype Ontology,C1861357,HP:0006088,,16-Feb-16,Finding
+1-5 finger syndactyly,Human Phenotype Ontology,C4023728,HP:0010708,,16-Feb-16,Finding
+1-5 toe syndactyly,Human Phenotype Ontology,C4021235,HP:0010713,,16-Feb-16,Finding
+1-minute APGAR score of 0,Human Phenotype Ontology,C4476857,HP:0030927,,02-Apr-17,Finding
+1-minute APGAR score of 1,Human Phenotype Ontology,C4476858,HP:0030928,,02-Apr-17,Finding
+1-minute APGAR score of 2,Human Phenotype Ontology,C4476859,HP:0030929,,02-Apr-17,Finding
+1-minute APGAR score of 3,Human Phenotype Ontology,C4476860,HP:0030930,,02-Apr-17,Finding
+1-minute APGAR score of 4,Human Phenotype Ontology,C4476861,HP:0030931,,02-Apr-17,Finding
+1-minute APGAR score of 5,Human Phenotype Ontology,C4476862,HP:0030932,,02-Apr-17,Finding
+1-minute APGAR score of 6,Human Phenotype Ontology,C4476863,HP:0030933,,02-Apr-17,Finding
+10 pairs of ribs,Human Phenotype Ontology,C4022526,HP:0030300,,16-Feb-16,Finding
+10q partial trisomy,Office of Rare Diseases,C0795840,8630,,16-Feb-16,Disease
+11 months growth retardation at 12yrs of age,"Lupski Lab, Baylor-Hopkins CMG,Baylor College of Medicine",CN236311,,,13-Apr-16,Finding
+11 pairs of ribs,Human Phenotype Ontology,C1839731,HP:0000878,,16-Feb-16,Finding
+11 thoracic vertebrae,Human Phenotype Ontology,C4022521,HP:0030306,,16-Feb-16,Finding
+11q partial monosomy syndrome,SNOMED CT,C0795841,4325000,147791,16-Feb-16,Disease
+13q partial monosomy syndrome,SNOMED CT,C3151302,29257000,613884,16-Feb-16,Disease
+15q13.3 microdeletion syndrome,Office of Rare Diseases,C2677613,10296,612001,16-Feb-16,Disease
+16p11.2 deletion syndrome,Office of Rare Diseases,C3150154,10740,611913,16-Feb-16,Disease
+16p13.2-p13.13 microduplication syndrome,"Pediatric Highly Intensive Care Unit,Fondazione IRCCS Ca' Granda Ospedale Maggiore Policlinico",CN239060,,,16-Nov-16,Disease
+16q24.3 microdeletion syndrome,Orphanet,C4304594,261250,,04-Nov-16,Disease
+"17,20-lyase deficiency, isolated, included",NCBI curation,,,,16-Feb-16,Disease
+"17-alpha-hydroxylase/17,20-lyase deficiency, combined complete, included",NCBI curation,,,,16-Feb-16,Disease
+"17-alpha-hydroxylase/17,20-lyase deficiency, combined partial, included",NCBI curation,,,,16-Feb-16,Disease
+17-Beta-Hydroxysteroid Dehydrogenase III Deficiency,"Illumina Clinical Services Laboratory,Illumina",CN239160,232561,,02-Dec-16,Disease
+1q21.1 recurrent microdeletion,Decipher,C2675897,62,612474,16-Feb-16,Disease
+1q21.1 recurrent microdeletion,GeneTests,C2675897,264678,612474,16-Feb-16,Disease
+1q24-q25 microdeletion syndrome,"Rare Disease Group, Clinical Genetics,Karolinska Institutet",CN252652,24-1_SRTD,,02-Aug-18,Disease
+1q24q25 microdeletion syndrome,"Medical Cytogenetics and Molecular Genetics Laboratory,IRCCS Istituto Auxologico Italiano",,,,21-Dec-18,Disease
+"2,4-Dienoyl-CoA reductase deficiency",Office of Rare Diseases,C1857252,10327,616034,16-Feb-16,Disease
+2-3 finger syndactyly,Human Phenotype Ontology,C0432055,HP:0001233,,16-Feb-16,Finding
+2-3 toe cutaneous syndactyly,Human Phenotype Ontology,C0432040,HP:0005709,,16-Feb-16,Finding
+2-3 toe syndactyly,International Standards For Cytogenomic Arrays Consortium (ISCA),C1861383,,,16-Feb-16,Finding
+2-3 toe syndactyly,Human Phenotype Ontology,C1861383,HP:0004691,,16-Feb-16,Finding
+2-4 finger syndactyly,Human Phenotype Ontology,C4021236,HP:0010709,,16-Feb-16,Finding
+2-4 toe cutaneous syndactyly,Human Phenotype Ontology,C4021622,HP:0005768,,16-Feb-16,Finding
+2-4 toe syndactyly,Human Phenotype Ontology,C4021234,HP:0010714,,16-Feb-16,Finding
+2-5 finger syndactyly,Human Phenotype Ontology,C4023736,HP:0010692,,16-Feb-16,Finding
+2-5 toe syndactyly,Human Phenotype Ontology,C4023724,HP:0010715,,16-Feb-16,Finding
+2-aminoadipic 2-oxoadipic aciduria,NCBI curation,C1859817,,204750,24-Aug-16,Disease
+2-hydroxyethyl methacrylate sensitization,Office of Rare Diseases,,8635,,16-Feb-16,Disease
+2-Hydroxyglutaric aciduria,Office of Rare Diseases,,10761,,16-Feb-16,Disease
+2-methyl-3-hydroxybutyric aciduria,Office of Rare Diseases,C3266731,10716,300438,16-Feb-16,Disease
+2-Methylacetoacetyl CoA thiolase deficiency,Office of Rare Diseases,,8382,,16-Feb-16,Disease
+22q11.2 duplication syndrome,Office of Rare Diseases,C2675369,10557,608363,16-Feb-16,Disease
+22q13.3 deletion syndrome,Office of Rare Diseases,C1853490,10130,606232,16-Feb-16,Disease
+22q13.3 deletion syndrome,Genetics Home Reference,C1853490,22q133-deletion-syndrome,606232,16-Feb-16,Disease
+2nd-5th toe middle phalangeal hypoplasia,Human Phenotype Ontology,C1861376,HP:0008083,,16-Feb-16,Finding
+2p15-16.1 microdeletion syndrome,Decipher,C2675875,70,612513,16-Feb-16,Disease
+3 beta-Hydroxysteroid dehydrogenase deficiency,SNOMED CT,C0342471,54470008,201810,16-Feb-16,Disease
+3 Methylcrotonyl-CoA carboxylase 1 deficiency,Office of Rare Diseases,CN028786,5665,210200,16-Feb-16,Disease
+3-4 finger cutaneous syndactyly,Human Phenotype Ontology,C4023115,HP:0011939,,16-Feb-16,Finding
+3-4 finger syndactyly,International Standards For Cytogenomic Arrays Consortium (ISCA),C1856889,,,16-Feb-16,Finding
+3-4 finger syndactyly,Human Phenotype Ontology,C1856889,HP:0006097,,16-Feb-16,Finding
+3-4 toe syndactyly,Human Phenotype Ontology,C1834062,HP:0009779,,16-Feb-16,Finding
+3-5 finger syndactyly,Human Phenotype Ontology,C4023727,HP:0010710,,16-Feb-16,Finding
+3-5 toe syndactyly,Human Phenotype Ontology,C4023723,HP:0010716,,16-Feb-16,Finding
+3-hydroxydicarboxylic aciduria,Human Phenotype Ontology,C4024725,HP:0008160,,16-Feb-16,Finding
+3-Hydroxyisobutyric aciduria,SNOMED CT,C0342737,237957007,236795,16-Feb-16,Disease
+3-Hydroxyisobutyric aciduria,Office of Rare Diseases,C0342737,5662,236795,16-Feb-16,Disease
+3-limbed polydactyly,"Developmental Genetics Unit,King Faisal Specialist Hospital & Research Centre",CN238701,,,19-Oct-16,Finding
+3-MCC Deficiency,"Illumina Clinical Services Laboratory,Illumina",C0268600,33693,,02-Dec-16,Disease
+3-methylcrotonyl CoA carboxylase 2 deficiency,NCBI curation,C1859499,,210210,16-Feb-16,Disease
+3-Methylglutaconic aciduria,Human Phenotype Ontology,C3696376,HP:0003535,,16-Feb-16,Disease
+3-Methylglutaconic aciduria,SNOMED CT,C3696376,237950009,,16-Feb-16,Disease
+3-Methylglutaconic aciduria type 1,NCBI curation,C0342727,,250950,25-Jul-18,Disease
+3-Methylglutaconic aciduria type 2,SNOMED CT,C0574083,297231002,302060,16-Feb-16,Disease
+3-Methylglutaconic aciduria type 3,SNOMED CT,C0574084,297232009,258501,16-Feb-16,Disease
+3-methylglutaconic aciduria type IV,NCBI curation,C1855126,,250951,16-Feb-16,Disease
+3-methylglutaconic aciduria type V,NCBI curation,C1857776,,610198,16-Feb-16,Disease
+"3-methylglutaconic aciduria with cataracts, neurologic involvement, and neutropenia",NCBI curation,C4225393,,616271,16-Feb-16,Disease
+"3-methylglutaconic aciduria with deafness, encephalopathy, and Leigh-like syndrome",NCBI curation,C3553597,,614739,16-Feb-16,Disease
+"3-METHYLGLUTACONIC ACIDURIA, TYPE IX",OMIM,C4540171,617698,617698,05-Oct-17,Disease
+"3-methylglutaconic aciduria, type VIII",NCBI curation,C4310650,,617248,20-Jun-17,Disease
+3-Methylglutaric aciduria,Human Phenotype Ontology,C3151952,HP:0003344,,16-Feb-16,Finding
+3-Oxo-5 alpha-steroid delta 4-dehydrogenase deficiency,SNOMED CT,C0268297,57514000,264600,16-Feb-16,Disease
+3q partial trisomy syndrome,SNOMED CT,C0265401,90866007,,16-Feb-16,Disease
+3q29 microdeletion syndrome,Decipher,C2674949,37,609425,16-Feb-16,Disease
+3q29 microdeletion syndrome,Genetics Home Reference,C2674949,3q29-microdeletion-syndrome,609425,16-Feb-16,Disease
+4-5 finger syndactyly,Human Phenotype Ontology,C4023731,HP:0010705,,16-Feb-16,Finding
+4-5 toe syndactyly,Human Phenotype Ontology,C1837836,HP:0004692,,16-Feb-16,Finding
+4-Alpha-hydroxyphenylpyruvate hydroxylase deficiency,Office of Rare Diseases,C2931042,5668,140350,16-Feb-16,Disease
+4-hydroxyphenylacetic aciduria,Office of Rare Diseases,,8155,,16-Feb-16,Disease
+4-Hydroxyphenylacetic aciduria,Human Phenotype Ontology,C1848680,HP:0003607,,16-Feb-16,Finding
+4-Hydroxyphenylpyruvate dioxygenase deficiency,Office of Rare Diseases,C0268623,10332,276710,16-Feb-16,Disease
+4-Hydroxyphenylpyruvate dioxygenase deficiency,SNOMED CT,C0268623,413356003,276710,16-Feb-16,Disease
+4-Hydroxyphenylpyruvic aciduria,Human Phenotype Ontology,C1848678,HP:0003161,,16-Feb-16,Finding
+"46,XX gonadal dysgenesis","David Buchner Laboratory,Case Western Reserve University",,,,18-Oct-17,Finding
+"46,XX gonadal dysgenesis",Orphanet,C0685837,243,,22-Oct-17,Disease
+"46,XX Gonadal dysgenesis epibulbar dermoid",Office of Rare Diseases,,5671,,16-Feb-16,Disease
+"46,xx gonadal dysgenesis, complete, sry-positive",NCBI curation,CN220534,,,16-Feb-16,Disease

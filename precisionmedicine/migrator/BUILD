@@ -23,37 +23,3 @@ java_library(
         "//precisionmedicine/schema"
     ],
 )
-
-java_test(
-      name = "preicionmedicine-gene-test",
-      test_class = "grakn.biograkn.precisionmedicine.migrator.gene.GeneTest",
-      srcs = ["gene/GeneTest.java"],
-      deps = [
-          "@graknlabs_client_java//:client-java",
-          "@graknlabs_grakn_core//concept:concept",
-          "@graknlabs_grakn_core//common:common",
-          "@graknlabs_graql//java:graql",
-          "@graknlabs_grakn_core//api:api",
-
-          "migrator",
-
-          "//utils:utils"
-      ]
-  )
-
-java_test(
-      name = "preicionmedicine-drug-test",
-      test_class = "grakn.biograkn.precisionmedicine.migrator.drug.DrugTest",
-      srcs = ["drug/DrugTest.java"],
-      deps = [
-          "@graknlabs_client_java//:client-java",
-          "@graknlabs_grakn_core//concept:concept",
-          "@graknlabs_grakn_core//common:common",
-          "@graknlabs_graql//java:graql",
-          "@graknlabs_grakn_core//api:api",
-
-          "migrator",
-
-          "//utils:utils"
-      ]
-  )

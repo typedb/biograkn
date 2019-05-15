@@ -20,9 +20,9 @@ import java.util.List;
 @SuppressWarnings("Duplicates")
 public class ClinicalTrial {
 
-    public static void migrate(GraknClient.Session session) {
+    public static void migrate(GraknClient.Session session, String dataset) {
 
-        File dir = new File("precisionmedicine/dataset/clinicaltrials/AllPublicXML");
+        File dir = new File(dataset + "/clinicaltrials/AllPublicXML");
         File[] directoryListing = dir.listFiles();
 
 

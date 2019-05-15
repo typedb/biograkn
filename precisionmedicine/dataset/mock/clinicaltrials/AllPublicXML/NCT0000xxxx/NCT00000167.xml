@@ -1,0 +1,452 @@
+<clinical_study>
+  <!-- This xml conforms to an XML Schema at:
+    https://clinicaltrials.gov/ct2/html/images/info/public.xsd -->
+  <required_header>
+    <download_date>ClinicalTrials.gov processed this data on February 12, 2019</download_date>
+    <link_text>Link to the current ClinicalTrials.gov record.</link_text>
+    <url>https://clinicaltrials.gov/show/NCT00000167</url>
+  </required_header>
+  <id_info>
+    <org_study_id>NEI-70</org_study_id>
+    <nct_id>NCT00000167</nct_id>
+  </id_info>
+  <brief_title>Complications of Age-Related Macular Degeneration Prevention Trial</brief_title>
+  <acronym>CAPT</acronym>
+  <official_title>Complications of Age-Related Macular Degeneration Prevention Trial (CAPT)</official_title>
+  <sponsors>
+    <lead_sponsor>
+      <agency>National Eye Institute (NEI)</agency>
+      <agency_class>NIH</agency_class>
+    </lead_sponsor>
+  </sponsors>
+  <source>National Eye Institute (NEI)</source>
+  <oversight_info>
+    <has_dmc>Yes</has_dmc>
+  </oversight_info>
+  <brief_summary>
+    <textblock>
+      To determine whether application of low-intensity laser treatment of eyes with drusen in the
+      macula can prevent later complications of age-related macular degeneration and thereby
+      preserve visual function.
+    </textblock>
+  </brief_summary>
+  <detailed_description>
+    <textblock>
+      Complications of age-related macular degeneration (AMD) are the leading cause of severe
+      vision loss among people aged 65 and over in the United States and many Western countries.
+      Most, (approximately 90 percent), of this vision loss is due to the neovascular (or wet) form
+      of AMD. The word neovascular describes the development of new, abnormal blood vessels in the
+      back of the eye. Unfortunately, the majority of these new vessels are not amenable to
+      currently available treatments.
+
+      The first sign that an eye may develop AMD is the presence of drusen, yellowish deposits
+      under the retina. Current data suggests that eyes with large drusen are at increased risk for
+      developing the vision threatening complications of AMD. Since the 1970s investigators have
+      reported consistently that laser photocoagulation causes a reduction in large drusen.
+      However, results of the effects of laser treatment on preventing later complications of AMD
+      have been less consistent and based on relatively small numbers of patients.
+
+      Further study into the ability of a treatment to prevent vision loss from the advanced forms
+      of AMD would have profound public health implications. A treatment that could reduce the risk
+      of developing neovascularization by 30 percent might reduce the risk of blindness from AMD by
+      one half. The Complications of Age-related Macular Degeneration Prevention Trial (CAPT) will
+      assess whether treating drusen by laser photocoagulation reduces the risk of loss of visual
+      acuity.
+
+      The CAPT is a multi-center, prospective, randomized clinical trial designed to assess the
+      safety and effectiveness of low-intensity laser treatment in preventing vision loss among
+      patients with large drusen in both eyes. A total of 1052 participants were enrolled in the
+      study. Participants had one eye randomly assigned to laser treatment performed by a
+      CAPT-certified ophthalmologist. The other eye was not treated. Both eyes were observed
+      carefully for any changes for a period of five years. The effectiveness of the treatment was
+      assessed using the following criteria:
+
+      Change in visual acuity (primary outcome measure of the study)
+
+      Incidence of complications of AMD such as neovascularization, serous detachment of the
+      pigment epithelium, and geographic atrophy
+
+      Changes in contrast threshold and critical print size for reading
+
+      Quality of life assessments for patients, using the Visual Function Questionnaire 25
+      (VFQ-25), were conducted at the time of enrollment and at 5 years.
+
+      STUDY RESULTS:
+
+      Follow-up of patients was excellent; less than 3% of visual acuity examinations were missed.
+      At 5 years, 188 (20.5%) treated eyes and 188 (20.5%) observed eyes had visual acuity scores
+      ≥3 lines worse than at the initial visit (p= 1.00). The cumulative 5-year incidence rates for
+      treated and observed eyes for CNV were 13.3% and 13.3% (p=0.95), respectively; and for GA
+      were 7.4% and 7.8% (p=0.64), respectively. The contrast threshold doubled in 23.9% of treated
+      eyes and in 20.5% of observed eyes (p=0.40). The critical print size doubled in 29.6% of
+      treated eyes and in 28.4% of observed eyes (p=0.70). Seven (0.7%) treated eyes and 14 (1.3%)
+      observed eyes had an adverse event of a ≥6 -line loss in visual acuity in the absence of late
+      age-related macular degeneration or cataract.
+
+      As applied in CAPT, low intensity laser treatment did not demonstrate a clinically
+      significant benefit on vision in eyes of people with bilateral large drusen.
+    </textblock>
+  </detailed_description>
+  <overall_status>Completed</overall_status>
+  <start_date>May 1999</start_date>
+  <completion_date type="Actual">June 2006</completion_date>
+  <phase>Phase 3</phase>
+  <study_type>Interventional</study_type>
+  <has_expanded_access>No</has_expanded_access>
+  <study_design_info>
+    <allocation>Randomized</allocation>
+    <intervention_model>Single Group Assignment</intervention_model>
+    <primary_purpose>Prevention</primary_purpose>
+    <masking>Single (Outcomes Assessor)</masking>
+  </study_design_info>
+  <primary_outcome>
+    <measure>Change in visual acuity (3-line loss)</measure>
+    <time_frame>5 years</time_frame>
+  </primary_outcome>
+  <secondary_outcome>
+    <measure>Incidence of complications of AMD such as neovascularization, serous detachment of the pigment epithelium, and geographic atrophy</measure>
+    <time_frame>5 years</time_frame>
+  </secondary_outcome>
+  <secondary_outcome>
+    <measure>Changes in contrast threshold and critical print size for reading</measure>
+    <time_frame>5 years</time_frame>
+  </secondary_outcome>
+  <number_of_arms>1</number_of_arms>
+  <enrollment type="Actual">1052</enrollment>
+  <condition>Macular Degeneration</condition>
+  <arm_group>
+    <arm_group_label>1</arm_group_label>
+    <arm_group_type>Experimental</arm_group_type>
+    <description>Laser treatment</description>
+  </arm_group>
+  <intervention>
+    <intervention_type>Procedure</intervention_type>
+    <intervention_name>Low-Intensity Laser Treatment</intervention_name>
+    <description>Initial: 60 barely visible burns, grid pattern. Re-treatment at 12 months: 30 barely visible burns, focal treatment.</description>
+    <arm_group_label>1</arm_group_label>
+  </intervention>
+  <eligibility>
+    <criteria>
+      <textblock>
+        Patients eligible for CAPT can be either male or female and meet the following criteria:
+
+        Age at least 50 years old
+
+        Vision in each eye must measure 20/40 or better.
+
+        At least 10 large drusen in each eye
+
+        Available for follow-up examinations for 5 years after enrollment
+
+        Final eligibility is determined through a detailed eye examination by a CAPT-certified
+        ophthalmologist.
+      </textblock>
+    </criteria>
+    <gender>All</gender>
+    <minimum_age>50 Years</minimum_age>
+    <maximum_age>N/A</maximum_age>
+    <healthy_volunteers>No</healthy_volunteers>
+  </eligibility>
+  <overall_official>
+    <last_name>Stuart L Fine, MD</last_name>
+    <role>Study Chair</role>
+    <affiliation>Scheie Eye Institute, The University of Pennsylvania School of Medicine</affiliation>
+  </overall_official>
+  <location>
+    <facility>
+      <name>Retinal Consultants of Arizona, Ltd.</name>
+      <address>
+        <city>Mesa</city>
+        <state>Arizona</state>
+        <zip>85201</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Retinal Consultants of Arizona, Ltd.</name>
+      <address>
+        <city>Peoria</city>
+        <state>Arizona</state>
+        <zip>85351</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>West Coast Retina Medical Group, Inc.</name>
+      <address>
+        <city>San Francisco</city>
+        <state>California</state>
+        <zip>94107</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of South Florida Eye Institute</name>
+      <address>
+        <city>Tampa</city>
+        <state>Florida</state>
+        <zip>33612-4766</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Emory Eye Center</name>
+      <address>
+        <city>Atlanta</city>
+        <state>Georgia</state>
+        <zip>30322</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Northwestern University</name>
+      <address>
+        <city>Chicago</city>
+        <state>Illinois</state>
+        <zip>60611</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Illinois Retina Associates, S.C.</name>
+      <address>
+        <city>Harvey</city>
+        <state>Illinois</state>
+        <zip>60426</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Iowa</name>
+      <address>
+        <city>Iowa City</city>
+        <state>Iowa</state>
+        <zip>55242-1091</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Ophthalmology &amp; Visual Sciences at the University of Louisville, School of Medicine</name>
+      <address>
+        <city>Louisville</city>
+        <state>Kentucky</state>
+        <zip>40202-1594</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>The Johns Hopkins University</name>
+      <address>
+        <city>Baltimore</city>
+        <state>Maryland</state>
+        <zip>21287-9223</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Ophthalmic Consultants of Boston</name>
+      <address>
+        <city>Boston</city>
+        <state>Massachusetts</state>
+        <zip>02114</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Associate Retinal Consultants, P.C.</name>
+      <address>
+        <city>Royal Oak</city>
+        <state>Michigan</state>
+        <zip>48073</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Mayo Clinic</name>
+      <address>
+        <city>Rochester</city>
+        <state>Minnesota</state>
+        <zip>55905</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Barnes Retina Institute</name>
+      <address>
+        <city>St. Louis</city>
+        <state>Missouri</state>
+        <zip>63110</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Retina-Vitreous Center, P.A.</name>
+      <address>
+        <city>Edison</city>
+        <state>New Jersey</state>
+        <zip>08820</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Retina-Vitreous Center, P.A.</name>
+      <address>
+        <city>Lakewood</city>
+        <state>New Jersey</state>
+        <zip>08701</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Southeast Clinical Research Associates</name>
+      <address>
+        <city>Charlotte</city>
+        <state>North Carolina</state>
+        <zip>28204</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Retina Associates of Cleveland</name>
+      <address>
+        <city>Cleveland</city>
+        <state>Ohio</state>
+        <zip>44122</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>The Ohio State University, Department of Ophthalmology</name>
+      <address>
+        <city>Columbus</city>
+        <state>Ohio</state>
+        <zip>43210</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Casey Eye Institute</name>
+      <address>
+        <city>Portland</city>
+        <state>Oregon</state>
+        <zip>97201-4197</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Retina Northwest, P.C.</name>
+      <address>
+        <city>Portland</city>
+        <state>Oregon</state>
+        <zip>97210</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Scheie Eye Institute</name>
+      <address>
+        <city>Philadelphia</city>
+        <state>Pennsylvania</state>
+        <zip>19104</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Texas Retina Associates</name>
+      <address>
+        <city>Dallas</city>
+        <state>Texas</state>
+        <zip>75231</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Wisconsin - Madison, Department of Ophthalmology and Visual Sciences</name>
+      <address>
+        <city>Madison</city>
+        <state>Wisconsin</state>
+        <zip>53705</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location_countries>
+    <country>United States</country>
+  </location_countries>
+  <link>
+    <url>http://www.nei.nih.gov/health/clinicalstudies/</url>
+    <description>NEI Clinical Studies Database</description>
+  </link>
+  <verification_date>December 2007</verification_date>
+  <!-- For several months we've had both old and new date name tags                             -->
+  <!-- Now, the old date names have been dropped.                                               -->
+  <!-- The new date name replacements are:                                                      -->
+  <!--     OLD (gone)                                        NEW (in use)                       -->
+  <!--   lastchanged_date                         becomes   last_update_submitted               -->
+  <!--   firstreceived_date                       becomes   study_first_submitted               -->
+  <!--   firstreceived_results_date               becomes   results_first_submitted             -->
+  <!--   firstreceived_results_disposition_date   becomes   disposition_first_submitted         -->
+  <study_first_submitted>September 23, 1999</study_first_submitted>
+  <study_first_submitted_qc>September 23, 1999</study_first_submitted_qc>
+  <study_first_posted type="Estimate">September 24, 1999</study_first_posted>
+  <last_update_submitted>March 23, 2010</last_update_submitted>
+  <last_update_submitted_qc>March 23, 2010</last_update_submitted_qc>
+  <last_update_posted type="Estimate">March 24, 2010</last_update_posted>
+  <responsible_party>
+    <name_title>Natalie Kurinij</name_title>
+    <organization>NEI</organization>
+  </responsible_party>
+  <keyword>Age-Related Macular Degeneration</keyword>
+  <condition_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Macular Degeneration</mesh_term>
+  </condition_browse>
+  <!-- Results have not yet been posted for this study                                          -->
+</clinical_study>
+

@@ -1,0 +1,175 @@
+<clinical_study>
+  <!-- This xml conforms to an XML Schema at:
+    https://clinicaltrials.gov/ct2/html/images/info/public.xsd -->
+  <required_header>
+    <download_date>ClinicalTrials.gov processed this data on February 12, 2019</download_date>
+    <link_text>Link to the current ClinicalTrials.gov record.</link_text>
+    <url>https://clinicaltrials.gov/show/NCT00000156</url>
+  </required_header>
+  <id_info>
+    <org_study_id>NEI-58</org_study_id>
+    <nct_id>NCT00000156</nct_id>
+  </id_info>
+  <brief_title>The Effects of Light Reduction on Retinopathy of Prematurity (Light-ROP)</brief_title>
+  <sponsors>
+    <lead_sponsor>
+      <agency>National Eye Institute (NEI)</agency>
+      <agency_class>NIH</agency_class>
+    </lead_sponsor>
+  </sponsors>
+  <source>National Eye Institute (NEI)</source>
+  <brief_summary>
+    <textblock>
+      To evaluate the effect of ambient light reduction on the incidence of retinopathy of
+      prematurity (ROP).
+    </textblock>
+  </brief_summary>
+  <detailed_description>
+    <textblock>
+      Despite progress during the past decade in treatment of ROP, this disease still poses a
+      significant (approximately 2.1 percent) risk of blindness to extremely low birth-weight
+      (&lt;1,251 grams) preterm infants. Current estimates indicate that about 27,000 infants of
+      extremely low birth weight are born annually, of which 74 percent will survive. As techniques
+      of managing smaller and less mature preterm infants continue to improve, it is expected that
+      the number of infants at risk for blindness will continue to increase.
+
+      For infants weighing less than 1,251 grams at birth, the Cryotherapy for Retinopathy of
+      Prematurity (CRYO-ROP) Study has shown that the risk of developing severe, acute (threshold)
+      ROP is 6 percent. Although cryotherapy, when applied at the time of threshold ROP, reduces
+      the rate of unfavorable visual outcome, 35 percent of eyes that develop this level of severe,
+      acute disease are blind 1 year after treatment. Moreover, cryotherapy is destructive. Even
+      when cryotherapy prevents progression to retinal detachment, it is associated with peripheral
+      retinal destruction and may, in some cases, be associated with subnormal central vision due
+      to high myopia and/or macular scarring. Corrective surgical treatments for retinal detachment
+      caused by ROP have proven to be of little visual benefit. A preventive treatment for ROP that
+      is safe, efficacious, easily applied, and inexpensive is desirable.
+
+      The investigators hypothesize that reducing the amount of light that reaches the eyes of
+      preterm infants may be effective in preventing ROP. Although previous reports on the use of
+      light reduction to the eyes of preterm infants in the nursery have produced conflicting
+      results, there are sufficient reasons to believe that this strategy may be effective in
+      reducing the incidence and severity of ROP. These reasons center on the role of light in the
+      production of destructive free radicals. Supplemental oxygen produces the same free radicals,
+      and the two mechanisms may be additive.
+
+      In this masked, controlled study, infants weighing less than 1,251 grams at birth were
+      prospectively randomized within 24 hours of birth to wear goggles or not to wear goggles.
+      Goggles contain 97 percent near neutral density filters and were worn until the infant
+      reached either 31 weeks gestational age or 4 weeks postnatal age, whichever was longer. The
+      goggled and nongoggled infants were exposed to the same ambient light conditions within any
+      given Study Center. Eyes of all infants were examined on a prescribed schedule by certified
+      examiners to determine the incidence of any confirmed ROP.
+
+      The primary objective of this study is to answer the following question: Does light reduction
+      to the eyes of extremely low birth-weight infants decrease the incidence of any confirmed ROP
+      (at least 3 contiguous clock hours, any stage, any zone)? The primary end points are
+      therefore ROP or full vascularization.
+
+      The secondary objective of this study is to evaluate the following question: Does light
+      reduction to the eyes of extremely low birth-weight infants decrease the incidence of more
+      severe ROP (prethreshold ROP -- the secondary end point)?
+
+      The study has recruited approximately 400 infants, equally divided into goggle-wearing and
+      control group. Since randomization must occur within 24 hours of birth, the investigators
+      anticipate a mortality rate of between 10 percent and 20 percent of enrollees prior to
+      outcome. The study is in the followup phase with regular ophthalmologic exams until either
+      ROP regression or normal full retinal vascularization is established. A final exam occurs at
+      adjusted age 6 months.
+    </textblock>
+  </detailed_description>
+  <overall_status>Completed</overall_status>
+  <start_date>July 1995</start_date>
+  <phase>Phase 3</phase>
+  <study_type>Interventional</study_type>
+  <has_expanded_access>No</has_expanded_access>
+  <study_design_info>
+    <allocation>Randomized</allocation>
+    <primary_purpose>Treatment</primary_purpose>
+    <masking>Double</masking>
+  </study_design_info>
+  <condition>Retinopathy of Prematurity</condition>
+  <intervention>
+    <intervention_type>Device</intervention_type>
+    <intervention_name>Goggles</intervention_name>
+  </intervention>
+  <intervention>
+    <intervention_type>Procedure</intervention_type>
+    <intervention_name>Ambient Light Reduction</intervention_name>
+  </intervention>
+  <eligibility>
+    <criteria>
+      <textblock>
+        Premature infants weighing less than 1,251 grams at birth and having a gestational age of
+        less than 31 weeks were eligible for randomization. Consent must have been obtained within
+        24 hours of birth. Patients with major congenital anomalies are excluded.
+      </textblock>
+    </criteria>
+    <gender>All</gender>
+    <minimum_age>N/A</minimum_age>
+    <maximum_age>1 Day</maximum_age>
+  </eligibility>
+  <location>
+    <facility>
+      <name>The Children's Hospital of Buffalo</name>
+      <address>
+        <city>Buffalo</city>
+        <state>New York</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>The University of Texas, Southwestern Medical Center at Dallas</name>
+      <address>
+        <city>Dallas</city>
+        <state>Texas</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Texas, Health Science Center, San Antonio</name>
+      <address>
+        <city>San Antonio</city>
+        <state>Texas</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location_countries>
+    <country>United States</country>
+  </location_countries>
+  <link>
+    <url>http://www.nei.nih.gov/news/pressreleases/lightpr.asp</url>
+    <description>NEI Press Release-Light Reduction Does Not Affect Blinding Eye Disease in Premature Infants</description>
+  </link>
+  <reference>
+    <citation>Reynolds JD, Hardy RJ, Kennedy KA, Spencer R, van Heuven WA, Fielder AR. Lack of efficacy of light reduction in preventing retinopathy of prematurity. Light Reduction in Retinopathy of Prematurity (LIGHT-ROP) Cooperative Group. N Engl J Med. 1998 May 28;338(22):1572-6.</citation>
+    <PMID>9603794</PMID>
+  </reference>
+  <verification_date>October 2003</verification_date>
+  <!-- For several months we've had both old and new date name tags                             -->
+  <!-- Now, the old date names have been dropped.                                               -->
+  <!-- The new date name replacements are:                                                      -->
+  <!--     OLD (gone)                                        NEW (in use)                       -->
+  <!--   lastchanged_date                         becomes   last_update_submitted               -->
+  <!--   firstreceived_date                       becomes   study_first_submitted               -->
+  <!--   firstreceived_results_date               becomes   results_first_submitted             -->
+  <!--   firstreceived_results_disposition_date   becomes   disposition_first_submitted         -->
+  <study_first_submitted>September 23, 1999</study_first_submitted>
+  <study_first_submitted_qc>September 23, 1999</study_first_submitted_qc>
+  <study_first_posted type="Estimate">September 24, 1999</study_first_posted>
+  <last_update_submitted>June 2, 2006</last_update_submitted>
+  <last_update_submitted_qc>June 2, 2006</last_update_submitted_qc>
+  <last_update_posted type="Estimate">June 5, 2006</last_update_posted>
+  <condition_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Retinal Diseases</mesh_term>
+    <mesh_term>Premature Birth</mesh_term>
+    <mesh_term>Retinopathy of Prematurity</mesh_term>
+  </condition_browse>
+  <!-- Results have not yet been posted for this study                                          -->
+</clinical_study>
+

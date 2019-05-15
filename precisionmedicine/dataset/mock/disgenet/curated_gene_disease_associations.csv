@@ -1,0 +1,101 @@
+﻿geneId,geneSymbol,DSI,DPI,diseaseId,diseaseName,diseaseType,diseaseClass,diseaseSemanticType,score,EI,YearInitial,YearFinal,NofPmids,NofSnps,source
+1,A1BG,0.857,0.172,C0019209,Hepatomegaly,phenotype,C06;C23,Finding,0.3,,2017,2017,1,0,CTD_human
+1,A1BG,0.857,0.172,C0036341,Schizophrenia,disease,F03,Mental or Behavioral Dysfunction,0.3,,2015,2015,1,0,CTD_human
+2,A2M,0.564,0.724,C0002395,Alzheimer's Disease,disease,C10;F03,Disease or Syndrome,0.4,0.848484848,1998,2016,3,0,CTD_human
+2,A2M,0.564,0.724,C0007102,Malignant tumor of colon,disease,C04;C06,Neoplastic Process,0.3,,2004,2004,1,0,CTD_human
+2,A2M,0.564,0.724,C0009375,Colonic Neoplasms,group,C04;C06,Neoplastic Process,0.3,,2004,2004,1,0,CTD_human
+2,A2M,0.564,0.724,C0011265,Presenile dementia,disease,C10;F03,Mental or Behavioral Dysfunction,0.3,,1998,2004,3,0,CTD_human
+2,A2M,0.564,0.724,C0011570,Mental Depression,disease,F01,Mental or Behavioral Dysfunction,0.31,1,1987,2000,2,0,PSYGENET
+2,A2M,0.564,0.724,C0011581,Depressive disorder,disease,F03,Mental or Behavioral Dysfunction,0.31,1,1987,2000,2,0,PSYGENET
+2,A2M,0.564,0.724,C0019202,Hepatolenticular Degeneration,disease,C06;C10;C16;C18,Disease or Syndrome,0.3,,2013,2013,1,0,CTD_human
+2,A2M,0.564,0.724,C0022660,"Kidney Failure, Acute",disease,C12;C13,Disease or Syndrome,0.3,,2013,2013,1,0,CTD_human
+2,A2M,0.564,0.724,C0023890,Liver Cirrhosis,disease,C06,Disease or Syndrome,0.3,,2016,2016,1,0,CTD_human
+2,A2M,0.564,0.724,C0023893,"Liver Cirrhosis, Experimental",disease,C06,Experimental Model of Disease,0.3,,2015,2015,1,0,CTD_human
+2,A2M,0.564,0.724,C0024115,Lung diseases,group,C08,Disease or Syndrome,0.32,0.5,1983,1989,1,0,CTD_human
+2,A2M,0.564,0.724,C0024121,Lung Neoplasms,group,C04;C08,Neoplastic Process,0.3,,2008,2009,2,0,CTD_human
+2,A2M,0.564,0.724,C0027726,Nephrotic Syndrome,group,C12;C13,Disease or Syndrome,0.51,1,1998,2001,1,0,CTD_human
+2,A2M,0.564,0.724,C0206669,Hepatocellular Adenoma,disease,C04;C06,Neoplastic Process,0.5,,2004,2004,1,0,CTD_human
+2,A2M,0.564,0.724,C0239946,"Fibrosis, Liver",disease,C06,Disease or Syndrome,0.3,,2016,2016,1,0,CTD_human
+2,A2M,0.564,0.724,C0242379,Malignant neoplasm of lung,disease,C04;C08,Neoplastic Process,0.3,,2008,2009,2,0,CTD_human
+2,A2M,0.564,0.724,C0276496,Familial Alzheimer Disease (FAD),disease,C10;F03,Disease or Syndrome,0.3,,1998,2004,3,0,CTD_human
+2,A2M,0.564,0.724,C0494463,"Alzheimer Disease, Late Onset",disease,C10;F03,Mental or Behavioral Dysfunction,0.31,1,1998,2005,3,0,CTD_human
+2,A2M,0.564,0.724,C0546126,Acute Confusional Senile Dementia,disease,C10;F03,Mental or Behavioral Dysfunction,0.3,,1998,2004,3,0,CTD_human
+2,A2M,0.564,0.724,C0750900,"Alzheimer's Disease, Focal Onset",disease,C10;F03,Mental or Behavioral Dysfunction,0.3,,1998,2004,3,0,CTD_human
+2,A2M,0.564,0.724,C0750901,"Alzheimer Disease, Early Onset",disease,C10;F03,Disease or Syndrome,0.3,,1998,2004,3,0,CTD_human
+2,A2M,0.564,0.724,C1527352,Hepatic Form of Wilson Disease,disease,C06;C10;C16;C18,Disease or Syndrome,0.3,,2013,2013,1,0,CTD_human
+2,A2M,0.564,0.724,C1565662,Acute Kidney Insufficiency,disease,C12;C13,Disease or Syndrome,0.3,,2013,2013,1,0,CTD_human
+2,A2M,0.564,0.724,C2239176,Liver carcinoma,disease,C04;C06,Neoplastic Process,0.33,0.666666667,1991,2004,1,0,CTD_human
+2,A2M,0.564,0.724,C2609414,Acute kidney injury,disease,C12;C13,Injury or Poisoning,0.3,,2013,2013,1,0,CTD_human
+2,A2M,0.564,0.724,C3279661,alpha-2-Macroglobulin Deficiency,disease,C08,Disease or Syndrome,0.31,1,1989,1989,0,0,CTD_human
+9,NAT1,0.564,0.724,C0001973,"Alcoholic Intoxication, Chronic",disease,C25;F03,Mental or Behavioral Dysfunction,0.31,1,2000,2000,1,0,PSYGENET
+9,NAT1,0.564,0.724,C0004403,Autosome Abnormalities,group,C23,Cell or Molecular Dysfunction,0.3,,2006,2006,1,0,CTD_human
+9,NAT1,0.564,0.724,C0005684,Malignant neoplasm of urinary bladder,disease,C04;C12;C13,Neoplastic Process,0.4,0.9,1996,2018,1,0,CTD_human
+9,NAT1,0.564,0.724,C0005695,Bladder Neoplasm,group,C04;C12;C13,Neoplastic Process,0.4,0.904761905,1996,2018,1,0,CTD_human
+9,NAT1,0.564,0.724,C0006826,Malignant Neoplasms,group,C04,Neoplastic Process,0.3,,2001,2001,1,0,CTD_human
+9,NAT1,0.564,0.724,C0008625,Chromosome Aberrations,group,C23,Cell or Molecular Dysfunction,0.3,,2006,2006,1,0,CTD_human
+9,NAT1,0.564,0.724,C0013221,Drug toxicity,group,C25,Injury or Poisoning,0.3,,2001,2001,1,0,CTD_human
+9,NAT1,0.564,0.724,C0027651,Neoplasms,group,C04,Neoplastic Process,0.3,,2001,2001,1,0,CTD_human
+9,NAT1,0.564,0.724,C0028796,"Dermatitis, Occupational",disease,C17;C24,Disease or Syndrome,0.3,,2010,2010,1,0,CTD_human
+9,NAT1,0.564,0.724,C0033578,Prostatic Neoplasms,group,C04;C12,Neoplastic Process,0.32,1,2002,2005,1,0,CTD_human
+9,NAT1,0.564,0.724,C0041755,Adverse reaction to drug,group,C25,Pathologic Function,0.3,,2001,2001,1,0,CTD_human
+9,NAT1,0.564,0.724,C0086457,Industrial Dermatosis,disease,C17;C24,Disease or Syndrome,0.3,,2010,2010,1,0,CTD_human
+9,NAT1,0.564,0.724,C0086692,Benign Neoplasm,group,C04,Neoplastic Process,0.3,,2001,2001,1,0,CTD_human
+9,NAT1,0.564,0.724,C0376358,Malignant neoplasm of prostate,disease,C04;C12,Neoplastic Process,0.34,0.75,1999,2010,1,0,CTD_human
+10,NAT2,0.466,0.828,C0005684,Malignant neoplasm of urinary bladder,disease,C04;C12;C13,Neoplastic Process,0.4,0.964285714,1996,2017,5,0,CTD_human
+10,NAT2,0.466,0.828,C0005695,Bladder Neoplasm,group,C04;C12;C13,Neoplastic Process,0.4,0.972972973,1995,2017,5,0,CTD_human
+10,NAT2,0.466,0.828,C0006142,Malignant neoplasm of breast,disease,C04;C17,Neoplastic Process,0.4,0.914285714,1996,2017,1,0,CTD_human
+10,NAT2,0.466,0.828,C0010054,Coronary Arteriosclerosis,disease,C14,Disease or Syndrome,0.3,,2011,2011,1,0,CTD_human
+10,NAT2,0.466,0.828,C0011999,Diastematomyelia,disease,C10;C16,Congenital Abnormality,0.3,,2010,2010,1,0,CTD_human
+10,NAT2,0.466,0.828,C0013182,Drug Allergy,phenotype,C20;C25,Pathologic Function,0.31,1,2010,2013,3,0,CTD_human
+10,NAT2,0.466,0.828,C0013221,Drug toxicity,group,C25,Injury or Poisoning,0.3,,2007,2007,2,0,CTD_human
+10,NAT2,0.466,0.828,C0019193,"Hepatitis, Toxic",disease,C06;C25,Injury or Poisoning,0.3,,2002,2016,4,0,CTD_human
+10,NAT2,0.466,0.828,C0023452,Childhood Acute Lymphoblastic Leukemia,disease,C04;C15;C20,Neoplastic Process,0.32,1,2012,2015,1,0,CTD_human
+10,NAT2,0.466,0.828,C0023453,"Leukemia, Lymphocytic, Acute, L2",disease,C04;C15;C20,Neoplastic Process,0.3,,2012,2012,1,0,CTD_human
+10,NAT2,0.466,0.828,C0023530,Leukopenia,disease,C15,Disease or Syndrome,0.3,,2004,2004,1,0,CTD_human
+10,NAT2,0.466,0.828,C0023903,Liver neoplasms,group,C04;C06,Neoplastic Process,0.3,,2010,2010,1,0,CTD_human
+10,NAT2,0.466,0.828,C0027794,Neural Tube Defects,group,C10;C16,Congenital Abnormality,0.31,1,2010,2010,1,0,CTD_human
+10,NAT2,0.466,0.828,C0027806,Neurenteric Cyst,disease,C10;C16,Congenital Abnormality,0.3,,2010,2010,1,0,CTD_human
+10,NAT2,0.466,0.828,C0028796,"Dermatitis, Occupational",disease,C17;C24,Disease or Syndrome,0.3,,2010,2010,1,0,CTD_human
+10,NAT2,0.466,0.828,C0033578,Prostatic Neoplasms,group,C04;C12,Neoplastic Process,0.33,1,2002,2006,4,0,CTD_human
+10,NAT2,0.466,0.828,C0041755,Adverse reaction to drug,group,C25,Pathologic Function,0.3,,2007,2007,2,0,CTD_human
+10,NAT2,0.466,0.828,C0080218,Tethered Cord Syndrome,disease,C10;C16,Disease or Syndrome,0.3,,2010,2010,1,0,CTD_human
+10,NAT2,0.466,0.828,C0086457,Industrial Dermatosis,disease,C17;C24,Disease or Syndrome,0.3,,2010,2010,1,0,CTD_human
+10,NAT2,0.466,0.828,C0152234,Iniencephaly,disease,C10;C16,Congenital Abnormality,0.3,,2010,2010,1,0,CTD_human
+10,NAT2,0.466,0.828,C0152426,Craniorachischisis,disease,C10;C16,Congenital Abnormality,0.3,,2010,2010,1,0,CTD_human
+10,NAT2,0.466,0.828,C0266453,Exencephaly,disease,C10;C16,Congenital Abnormality,0.3,,2010,2010,1,0,CTD_human
+10,NAT2,0.466,0.828,C0344479,Spinal Cord Myelodysplasia,disease,C10;C16,Congenital Abnormality,0.3,,2010,2010,1,0,CTD_human
+10,NAT2,0.466,0.828,C0345904,Malignant neoplasm of liver,disease,C04;C06,Neoplastic Process,0.3,,2010,2010,1,0,CTD_human
+10,NAT2,0.466,0.828,C0345967,Malignant mesothelioma,disease,C04;C08,Neoplastic Process,0.34,0.5,1995,2009,1,0,CTD_human
+10,NAT2,0.466,0.828,C0376358,Malignant neoplasm of prostate,disease,C04;C12,Neoplastic Process,0.38,0.875,1998,2012,4,0,CTD_human
+10,NAT2,0.466,0.828,C0678222,Breast Carcinoma,disease,C04;C17,Neoplastic Process,0.4,0.918918919,1996,2017,1,0,CTD_human
+10,NAT2,0.466,0.828,C0702169,Acrania,disease,C10;C16,Congenital Abnormality,0.3,,2010,2010,1,0,CTD_human
+10,NAT2,0.466,0.828,C0860207,Drug-Induced Liver Disease,disease,C06;C25,Disease or Syndrome,0.37,1,2002,2016,4,0,CTD_human
+10,NAT2,0.466,0.828,C1257931,"Mammary Neoplasms, Human",group,C04;C17,Neoplastic Process,0.3,,2010,2010,1,0,CTD_human
+10,NAT2,0.466,0.828,C1262760,"Hepatitis, Drug-Induced",disease,C06;C25,Disease or Syndrome,0.33,0.666666667,2002,2016,4,0,CTD_human
+10,NAT2,0.466,0.828,C1458155,Mammary Neoplasms,group,C04;C17,Neoplastic Process,0.38,,2002,2010,1,0,CTD_human
+10,NAT2,0.466,0.828,C1956346,Coronary Artery Disease,disease,C14,Disease or Syndrome,0.3,,2011,2011,1,0,CTD_human
+10,NAT2,0.466,0.828,C1961102,Precursor Cell Lymphoblastic Leukemia Lymphoma,disease,C04;C15;C20,Neoplastic Process,0.3,,2012,2012,1,0,CTD_human
+10,NAT2,0.466,0.828,C3658290,Drug-Induced Acute Liver Injury,disease,C06;C25,Disease or Syndrome,0.3,,2002,2016,4,0,CTD_human
+10,NAT2,0.466,0.828,C4277682,Chemical and Drug Induced Liver Injury,disease,C06;C25,Disease or Syndrome,0.3,,2002,2016,4,0,CTD_human
+10,NAT2,0.466,0.828,C4279912,Chemically-Induced Liver Toxicity,disease,C06;C25,Disease or Syndrome,0.3,,2002,2016,4,0,CTD_human
+12,SERPINA3,0.572,0.69,C0023794,Lipoidosis,disease,C16;C18,Disease or Syndrome,0.3,,2005,2007,3,0,CTD_human
+12,SERPINA3,0.572,0.69,C0033578,Prostatic Neoplasms,group,C04;C12,Neoplastic Process,0.3,,2008,2008,1,0,CTD_human
+12,SERPINA3,0.572,0.69,C0033975,Psychotic Disorders,group,F03,Mental or Behavioral Dysfunction,0.01,0,2002,2002,1,0,PSYGENET
+12,SERPINA3,0.572,0.69,C0349204,Nonorganic psychosis,disease,,Mental or Behavioral Dysfunction,0.01,0,2002,2002,1,0,PSYGENET
+12,SERPINA3,0.572,0.69,C0376358,Malignant neoplasm of prostate,disease,C04;C12,Neoplastic Process,0.32,1,1998,2008,1,0,CTD_human
+13,AADAC,0.713,0.31,C0023893,"Liver Cirrhosis, Experimental",disease,C06,Experimental Model of Disease,0.3,,2015,2015,1,0,CTD_human
+15,AANAT,0.696,0.414,C0005587,"Depression, Bipolar",disease,F03,Mental or Behavioral Dysfunction,0.31,1,2010,2010,1,0,PSYGENET
+15,AANAT,0.696,0.414,C0011570,Mental Depression,disease,F01,Mental or Behavioral Dysfunction,0.3,1,2001,2001,1,0,PSYGENET
+15,AANAT,0.696,0.414,C0011581,Depressive disorder,disease,F03,Mental or Behavioral Dysfunction,0.3,1,2001,2001,1,0,PSYGENET
+15,AANAT,0.696,0.414,C0393770,Delayed Sleep Phase Syndrome,disease,C10;C24;F03,Disease or Syndrome,0.32,1,2003,2007,1,0,CTD_human
+15,AANAT,0.696,0.414,C0494410,Nonorganic Sleep Wake Cycle Disorders,group,C10;C24;F03,Mental or Behavioral Dysfunction,0.3,,2003,2003,1,0,CTD_human
+15,AANAT,0.696,0.414,C0751758,Advanced Sleep Phase Syndrome,disease,C10;C24;F03,Disease or Syndrome,0.3,,2003,2003,1,0,CTD_human
+15,AANAT,0.696,0.414,C0751759,Non-24 Hour Sleep-Wake Disorder,disease,C10;C24;F03,Mental or Behavioral Dysfunction,0.3,,2003,2003,1,0,CTD_human
+15,AANAT,0.696,0.414,C0751760,Shift-Work Sleep Disorder,disease,C10;C24;F03,Mental or Behavioral Dysfunction,0.3,,2003,2003,1,0,CTD_human
+15,AANAT,0.696,0.414,C0877792,"Sleep Disorders, Circadian Rhythm",group,C10;C24;F03,Pathologic Function,0.3,,2003,2003,1,0,CTD_human
+16,AARS,0.667,0.345,C0004138,"Ataxias, Hereditary",group,C10;C16,Disease or Syndrome,0.3,,,,0,0,GENOMICS_ENGLAND
+16,AARS,0.667,0.345,C0007959,Charcot-Marie-Tooth Disease,disease,C10;C16,Disease or Syndrome,0.44,0.75,1993,2016,1,2,GENOMICS_ENGLAND
+16,AARS,0.667,0.345,C0543888,Epileptic encephalopathy,disease,,Disease or Syndrome,0.42,1,2015,2018,0,0,GENOMICS_ENGLAND
+16,AARS,0.667,0.345,C2750090,"Charcot-Marie-Tooth Disease, Axonal, Type 2n",disease,C10;C16,Disease or Syndrome,0.7,,2010,2016,3,2,CTD_human;ORPHANET;UNIPROT
+16,AARS,0.667,0.345,C3714756,Intellectual Disability,group,C10;C23;F01;F03,Mental or Behavioral Dysfunction,0.3,,2015,2015,1,0,GENOMICS_ENGLAND
+16,AARS,0.667,0.345,C4225361,"EPILEPTIC ENCEPHALOPATHY, EARLY INFANTILE, 29",disease,,Disease or Syndrome,0.6,,2015,2018,2,3,CTD_human;UNIPROT
