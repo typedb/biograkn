@@ -24,7 +24,7 @@ import static grakn.biograkn.utils.Utils.loadSchema;
 @SuppressWarnings("Duplicates")
 public class Migrator {
 
-    public static void migratePrecisionMedicine() {
+    public static void migratePrecisionMedicine(String dataset) {
         System.out.println("Migrating Precision Medicine");
 
         GraknClient graknClient = new GraknClient("127.0.0.1:48555");
@@ -33,18 +33,19 @@ public class Migrator {
         loadSchema("precisionmedicine/schema/precision-medicine-schema.gql", session);
 
         // entities
-        Gene.migrate(session);
-        Variant.migrate(session);
-        Disease.migrate(session);
-        Drug.migrate(session);
-        ClinicalTrial.migrate(session);
+        Gene.migrate(session, dataset);
+        Variant.migrate(session, dataset);
+        Disease.migrate(session, dataset);
+        Drug.migrate(session, dataset);
+        ClinicalTrial.migrate(session, dataset);
 
         // relationships
-        GeneDiseaseAssociation.migrate(session);
-        VariantDiseaseAssociation.migrate(session);
-        DrugDiseaseAssociation.migrate(session);
+        GeneDiseaseAssociation.migrate(session, dataset);
+        VariantDiseaseAssociation.migrate(session, dataset);
+        DrugDiseaseAssociation.migrate(session, dataset);
         ClinicalTrialRelationship.migrate(session);
 
         session.close();
+        graknClient.close();
     }
 }

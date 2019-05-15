@@ -1,0 +1,138 @@
+<clinical_study>
+  <!-- This xml conforms to an XML Schema at:
+    https://clinicaltrials.gov/ct2/html/images/info/public.xsd -->
+  <required_header>
+    <download_date>ClinicalTrials.gov processed this data on February 12, 2019</download_date>
+    <link_text>Link to the current ClinicalTrials.gov record.</link_text>
+    <url>https://clinicaltrials.gov/show/NCT00000180</url>
+  </required_header>
+  <id_info>
+    <org_study_id>IA0008</org_study_id>
+    <secondary_id>3U01AG010483-08S2</secondary_id>
+    <nct_id>NCT00000180</nct_id>
+  </id_info>
+  <brief_title>AIT-082 Phase 1B Study</brief_title>
+  <sponsors>
+    <lead_sponsor>
+      <agency>National Institute on Aging (NIA)</agency>
+      <agency_class>NIH</agency_class>
+    </lead_sponsor>
+  </sponsors>
+  <source>National Institute on Aging (NIA)</source>
+  <brief_summary>
+    <textblock>
+      AIT-082 is a novel small molecule that crosses the blood-brain barrier to enhance nerve
+      function by increasing levels of neurotrophic growth factors and encouraging nerve sprouting
+      in the brain. Preclinical studies in animals have shown that AIT-082 improves memory in aged
+      animals and in animals with neurological deficits.
+
+      This study was a double-blind placebo-controlled safety study that was designed to study
+      whether AIT-082 may delay age-related mental decline. Eight healthy older volunteers at two
+      clinical sites were given single, weekly, rising doses of AIT-082 or placebo for 5 weeks;
+      were tested for side effects and absorption; and underwent a battery of neuropsychological
+      memory tests, including word and number recall tests.
+    </textblock>
+  </brief_summary>
+  <overall_status>Completed</overall_status>
+  <completion_date type="Actual">June 2005</completion_date>
+  <primary_completion_date type="Actual">June 2005</primary_completion_date>
+  <phase>Phase 1</phase>
+  <study_type>Interventional</study_type>
+  <has_expanded_access>No</has_expanded_access>
+  <study_design_info>
+    <allocation>Randomized</allocation>
+    <primary_purpose>Treatment</primary_purpose>
+    <masking>Double</masking>
+  </study_design_info>
+  <condition>Memory Disorders</condition>
+  <intervention>
+    <intervention_type>Drug</intervention_type>
+    <intervention_name>AIT-082</intervention_name>
+  </intervention>
+  <eligibility>
+    <gender>All</gender>
+    <minimum_age>N/A</minimum_age>
+    <maximum_age>N/A</maximum_age>
+    <healthy_volunteers>Accepts Healthy Volunteers</healthy_volunteers>
+  </eligibility>
+  <overall_official>
+    <last_name>Michael Grundman, M.D., M.P.H.</last_name>
+    <role>Principal Investigator</role>
+    <affiliation>University of California, San Diego</affiliation>
+  </overall_official>
+  <location>
+    <facility>
+      <name>University of California, San Diego</name>
+      <address>
+        <city>San Diego</city>
+        <state>California</state>
+        <zip>92093-0949</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Indiana University Alzheimer's Center</name>
+      <address>
+        <city>Indianapolis</city>
+        <state>Indiana</state>
+        <zip>46202</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Michigan</name>
+      <address>
+        <city>Ann Arbor</city>
+        <state>Michigan</state>
+        <zip>48109-0322</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Washington University</name>
+      <address>
+        <city>St. Louis</city>
+        <state>Missouri</state>
+        <zip>63110</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location_countries>
+    <country>United States</country>
+  </location_countries>
+  <results_reference>
+    <citation>Grundman M, Capparelli E, Kim HT, Morris JC, Farlow M, Rubin EH, Heidebrink J, Hake A, Ho G, Schultz AN, Schafer K, Houston W, Thomas R, Thal LJ; Alzheimer's Disease Cooperative Study. A multicenter, randomized, placebo controlled, multiple-dose, safety and pharmacokinetic study of AIT-082 (Neotrofin) in mild Alzheimer's disease patients. Life Sci. 2003 Jun 20;73(5):539-53.</citation>
+    <PMID>12770610</PMID>
+  </results_reference>
+  <verification_date>February 2005</verification_date>
+  <!-- For several months we've had both old and new date name tags                             -->
+  <!-- Now, the old date names have been dropped.                                               -->
+  <!-- The new date name replacements are:                                                      -->
+  <!--     OLD (gone)                                        NEW (in use)                       -->
+  <!--   lastchanged_date                         becomes   last_update_submitted               -->
+  <!--   firstreceived_date                       becomes   study_first_submitted               -->
+  <!--   firstreceived_results_date               becomes   results_first_submitted             -->
+  <!--   firstreceived_results_disposition_date   becomes   disposition_first_submitted         -->
+  <study_first_submitted>October 29, 1999</study_first_submitted>
+  <study_first_submitted_qc>October 29, 1999</study_first_submitted_qc>
+  <study_first_posted type="Estimate">November 1, 1999</study_first_posted>
+  <last_update_submitted>December 10, 2009</last_update_submitted>
+  <last_update_submitted_qc>December 10, 2009</last_update_submitted_qc>
+  <last_update_posted type="Estimate">December 11, 2009</last_update_posted>
+  <keyword>Memory</keyword>
+  <keyword>Mild cognitive impairment</keyword>
+  <keyword>Nerve growth factors</keyword>
+  <condition_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Memory Disorders</mesh_term>
+  </condition_browse>
+  <!-- Results have not yet been posted for this study                                          -->
+</clinical_study>
+

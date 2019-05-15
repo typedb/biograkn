@@ -1,0 +1,761 @@
+<clinical_study>
+  <!-- This xml conforms to an XML Schema at:
+    https://clinicaltrials.gov/ct2/html/images/info/public.xsd -->
+  <required_header>
+    <download_date>ClinicalTrials.gov processed this data on February 12, 2019</download_date>
+    <link_text>Link to the current ClinicalTrials.gov record.</link_text>
+    <url>https://clinicaltrials.gov/show/NCT00000125</url>
+  </required_header>
+  <id_info>
+    <org_study_id>NEI-24</org_study_id>
+    <secondary_id>5U10EY009307-16</secondary_id>
+    <secondary_id>5U10EY009341-14</secondary_id>
+    <nct_id>NCT00000125</nct_id>
+  </id_info>
+  <brief_title>Ocular Hypertension Treatment Study (OHTS)</brief_title>
+  <acronym>OHTS</acronym>
+  <official_title>Ocular Hypertension Treatment Study (OHTS)</official_title>
+  <sponsors>
+    <lead_sponsor>
+      <agency>Washington University School of Medicine</agency>
+      <agency_class>Other</agency_class>
+    </lead_sponsor>
+    <collaborator>
+      <agency>National Eye Institute (NEI)</agency>
+      <agency_class>NIH</agency_class>
+    </collaborator>
+  </sponsors>
+  <source>Washington University School of Medicine</source>
+  <oversight_info>
+    <has_dmc>Yes</has_dmc>
+  </oversight_info>
+  <brief_summary>
+    <textblock>
+      To determine whether medical reduction of intraocular pressure prevents or delays the onset
+      of glaucomatous visual field loss and/or optic disc damage in ocular hypertensive
+      participants judged to be at moderate risk for developing open-angle glaucoma.
+
+      To produce natural history data to assist in identifying patients at most risk for developing
+      open-angle glaucoma and those most likely to benefit from early medical treatment.
+
+      To quantify risk factors for developing open-angle glaucoma among ocular hypertensive
+      individuals.
+    </textblock>
+  </brief_summary>
+  <detailed_description>
+    <textblock>
+      OHTS Phase 3 will re-examine study participants 20 plus years after enrollment to document
+      clinical status and the incidence and severity of self-reported functional limitations. The
+      279 participants who developed POAG in OHTS Phase 1 or 2 will have more than 10 years of
+      post-POAG follow-up by Phase 3. The timing of re-examination at 20 years is meaningful
+      because 20 years approaches the median life expectancy of OHT patients in their 60's and 70's
+      and half the median life expectancy of patients in their 40's and 50's. For the first time,
+      patients with ocular hypertension and clinicians will have high quality data about the
+      long-term risk of developing POAG and functional limitations associated with the disease.
+      These data will facilitate patient-centered care so that patients and clinicians can decide
+      on the appropriate frequency of tests and examinations and the potential benefit of
+      preventative treatment.
+
+      Glaucoma is one of the leading causes of blindness in the United States and other
+      industrialized countries. It is estimated that 2 million people in the United States have
+      glaucoma and that 80,000 of these individuals are legally blind from the disease. Among
+      African Americans, glaucoma is now recognized as the leading cause of blindness.
+
+      Elevated intraocular pressure (IOP), a common condition affecting 3 to 6 million people in
+      the United States, is thought to be the leading risk factor for development of open-angle
+      glaucoma. There is no consensus that medical reduction of intraocular pressure prevents or
+      delays the onset of visual field and/or optic nerve damage in ocular hypertensive subjects.
+
+      Despite the lack of convincing evidence for the efficacy of medical treatment in ocular
+      hypertension, approximately 1.5 million glaucoma suspects in the United States are being
+      treated with costly ocular hypotensive medications that carry the potential for serious and
+      even life-threatening side effects.
+
+      Clearly, there is a need for a well-controlled clinical trial to determine whether medical
+      reduction of IOP can prevent or delay the onset of glaucomatous damage in ocular hypertensive
+      subjects. Only then can clinicians and patients make rational choices and health care
+      planners ensure that limited medical resources are being allocated in a safe and
+      cost-effective manner.
+
+      The Ocular Hypertension Treatment Study (OHTS) is a long-term, randomized, controlled
+      multicenter clinical trial. Ocular hypertensive subjects judged to be at moderate risk of
+      developing primary open-angle glaucoma are randomly assigned to either close observation only
+      or a stepped medical regimen. Medical treatment consists of all commercially available
+      topical ocular hypotensive eye drops.
+
+      After completion of baseline measures (IOP, visual fields, disc photos) and randomization,
+      the subjects are followed for a minimum of 5 years with automated threshold central static
+      perimetry (Humphrey program 30-2) twice yearly and stereoscopic optic disc photographs once
+      yearly. Study end points are reproducible visual field loss and/or progressive optic disc
+      damage in either eye of a patient attributed to glaucoma by a Masked Endpoint Committee. All
+      visual fields and optic disc photographs are read in a masked fashion in Reading Centers.
+
+      In the 1991 Baltimore Eye Survey, African Americans were shown to have a prevalence of
+      open-angle glaucoma four to five times higher than whites. Given this high prevalence of
+      glaucoma in the African American population, it is important to recruit and follow an
+      adequate sample of African American subjects in the trial (approximately 25 percent of the
+      total patient sample).
+
+      At the conclusion of this study, practitioners should be able to make reasonable estimates of
+      risk for individual ocular hypertensive patients and to determine which ocular hypertensive
+      individuals are most likely to benefit from early prophylactic medical treatment.
+    </textblock>
+  </detailed_description>
+  <overall_status>Active, not recruiting</overall_status>
+  <start_date>February 1994</start_date>
+  <completion_date type="Anticipated">March 2020</completion_date>
+  <primary_completion_date type="Actual">June 2002</primary_completion_date>
+  <phase>Phase 3</phase>
+  <study_type>Interventional</study_type>
+  <has_expanded_access>No</has_expanded_access>
+  <study_design_info>
+    <allocation>Randomized</allocation>
+    <intervention_model>Parallel Assignment</intervention_model>
+    <primary_purpose>Prevention</primary_purpose>
+    <masking>None (Open Label)</masking>
+  </study_design_info>
+  <primary_outcome>
+    <measure>Incidence of Primary Open-Angle Glaucoma in Hypotensive Patients</measure>
+    <time_frame>5 yrs (OHTS I, June 2002) and 13.0 yrs (completion of both phases of OHTS, March 2009)</time_frame>
+    <description>Comparison of the cumulative proportion of participants who develop primary open-angle glaucoma in the observation and medication groups.</description>
+  </primary_outcome>
+  <number_of_arms>2</number_of_arms>
+  <enrollment type="Actual">1636</enrollment>
+  <condition>Ocular Hypertension</condition>
+  <condition>Glaucoma</condition>
+  <arm_group>
+    <arm_group_label>Observation</arm_group_label>
+    <arm_group_type>No Intervention</arm_group_type>
+    <description>Close Observation.</description>
+  </arm_group>
+  <arm_group>
+    <arm_group_label>Treatment</arm_group_label>
+    <arm_group_type>Other</arm_group_type>
+    <description>Participants treated with commercially available topical ocular hypotensive eye drops.</description>
+  </arm_group>
+  <intervention>
+    <intervention_type>Drug</intervention_type>
+    <intervention_name>Topical ocular hypotensive eye drops.</intervention_name>
+    <description>Topical ocular hypotensive eye drops.</description>
+    <arm_group_label>Treatment</arm_group_label>
+  </intervention>
+  <eligibility>
+    <criteria>
+      <textblock>
+        Men and nonpregnant women between the ages of 40 and 80 with IOP greater than or equal to
+        24 mm Hg but less than or equal to 32 mm Hg in at least one eye and IOP greater than or
+        equal to 21 but less than or equal to 32 mm Hg in the fellow eye, as well as normal visual
+        fields and optic discs are eligible for the trial. Patients presenting with best-corrected
+        visual acuity worse than 20/40 in either eye, previous intraocular surgery, a
+        life-threatening or debilitating disease, secondary causes of elevated IOP, angle-closure
+        glaucoma or anatomically narrow angles, other diseases that can cause visual field loss,
+        background diabetic retinopathy, optic disc abnormalities that can produce visual field
+        loss or obscure the interpretation of the optic disc, or unwillingness to undergo random
+        assignment are excluded from the trial.
+      </textblock>
+    </criteria>
+    <gender>All</gender>
+    <minimum_age>40 Years</minimum_age>
+    <maximum_age>80 Years</maximum_age>
+    <healthy_volunteers>No</healthy_volunteers>
+  </eligibility>
+  <overall_official>
+    <last_name>Michael A Kass, MD</last_name>
+    <role>Study Chair</role>
+    <affiliation>Washington University Department of Ophthalmology and Visual Sciences</affiliation>
+  </overall_official>
+  <link>
+    <url>https://www.nei.nih.gov/glaucomaeyedrops/background</url>
+    <description>RESULTS-Ocular Hypertension Treatment Study.</description>
+  </link>
+  <reference>
+    <citation>Gordon MO, Kass MA. The Ocular Hypertension Treatment Study: design and baseline description of the participants. Arch Ophthalmol. 1999 May;117(5):573-83.</citation>
+    <PMID>10326953</PMID>
+  </reference>
+  <reference>
+    <citation>Keltner JL, Johnson CA, Quigg JM, Cello KE, Kass MA, Gordon MO. Confirmation of visual field abnormalities in the Ocular Hypertension Treatment Study. Ocular Hypertension Treatment Study Group. Arch Ophthalmol. 2000 Sep;118(9):1187-94.</citation>
+    <PMID>10980763</PMID>
+  </reference>
+  <reference>
+    <citation>Piltz J, Gross R, Shin DH, Beiser JA, Dorr DA, Kass MA, Gordon MO. Contralateral effect of topical beta-adrenergic antagonists in initial one-eyed trials in the ocular hypertension treatment study. Am J Ophthalmol. 2000 Oct;130(4):441-53.</citation>
+    <PMID>11024416</PMID>
+  </reference>
+  <reference>
+    <citation>Brandt JD, Beiser JA, Kass MA, Gordon MO. Central corneal thickness in the Ocular Hypertension Treatment Study (OHTS). Ophthalmology. 2001 Oct;108(10):1779-88.</citation>
+    <PMID>11581049</PMID>
+  </reference>
+  <reference>
+    <citation>Feuer WJ, Parrish RK 2nd, Schiffman JC, Anderson DR, Budenz DL, Wells MC, Hess DJ, Kass MA, Gordon MO. The Ocular Hypertension Treatment Study: reproducibility of cup/disk ratio measurements over time at an optic disc reading center. Am J Ophthalmol. 2002 Jan;133(1):19-28.</citation>
+    <PMID>11755836</PMID>
+  </reference>
+  <reference>
+    <citation>Johnson CA, Keltner JL, Cello KE, Edwards M, Kass MA, Gordon MO, Budenz DL, Gaasterland DE, Werner E; Ocular Hypertension Study Group. Baseline visual field characteristics in the ocular hypertension treatment study. Ophthalmology. 2002 Mar;109(3):432-7.</citation>
+    <PMID>11874743</PMID>
+  </reference>
+  <reference>
+    <citation>Kass MA, Heuer DK, Higginbotham EJ, Johnson CA, Keltner JL, Miller JP, Parrish RK 2nd, Wilson MR, Gordon MO. The Ocular Hypertension Treatment Study: a randomized trial determines that topical ocular hypotensive medication delays or prevents the onset of primary open-angle glaucoma. Arch Ophthalmol. 2002 Jun;120(6):701-13; discussion 829-30.</citation>
+    <PMID>12049574</PMID>
+  </reference>
+  <reference>
+    <citation>Gordon MO, Beiser JA, Brandt JD, Heuer DK, Higginbotham EJ, Johnson CA, Keltner JL, Miller JP, Parrish RK 2nd, Wilson MR, Kass MA. The Ocular Hypertension Treatment Study: baseline factors that predict the onset of primary open-angle glaucoma. Arch Ophthalmol. 2002 Jun;120(6):714-20; discussion 829-30.</citation>
+    <PMID>12049575</PMID>
+  </reference>
+  <reference>
+    <citation>Keltner JL, Johnson CA, Cello KE, Edwards MA, Bandermann SE, Kass MA, Gordon MO; Ocular Hypertension Treatment Study Group. Classification of visual field abnormalities in the ocular hypertension treatment study. Arch Ophthalmol. 2003 May;121(5):643-50. Erratum in: Arch Ophthalmol. 2008 Apr;126(4):561.</citation>
+    <PMID>12742841</PMID>
+  </reference>
+  <reference>
+    <citation>Zangwill LM, Weinreb RN, Berry CC, Smith AR, Dirkes KA, Coleman AL, Piltz-Seymour JR, Liebmann JM, Cioffi GA, Trick G, Brandt JD, Gordon MO, Kass MA; Confocal Scanning Laser Ophthalmoscopy Ancillary Study to the Ocular Hypertension Treatment Study. Racial differences in optic disc topography: baseline results from the confocal scanning laser ophthalmoscopy ancillary study to the ocular hypertension treatment study. Arch Ophthalmol. 2004 Jan;122(1):22-8.</citation>
+    <PMID>14718290</PMID>
+  </reference>
+  <reference>
+    <citation>Zangwill LM, Weinreb RN, Berry CC, Smith AR, Dirkes KA, Liebmann JM, Brandt JD, Trick G, Cioffi GA, Coleman AL, Piltz-Seymour JR, Gordon MO, Kass MA; OHTS CSLO Ancillary Study Group. The confocal scanning laser ophthalmoscopy ancillary study to the ocular hypertension treatment study: study design and baseline factors. Am J Ophthalmol. 2004 Feb;137(2):219-27.</citation>
+    <PMID>14962409</PMID>
+  </reference>
+  <reference>
+    <citation>Higginbotham EJ, Gordon MO, Beiser JA, Drake MV, Bennett GR, Wilson MR, Kass MA; Ocular Hypertension Treatment Study Group. The Ocular Hypertension Treatment Study: topical medication delays or prevents primary open-angle glaucoma in African American individuals. Arch Ophthalmol. 2004 Jun;122(6):813-20.</citation>
+    <PMID>15197055</PMID>
+  </reference>
+  <reference>
+    <citation>Coleman AL, Gordon MO, Beiser JA, Kass MA; Ocular Hypertension Treatment Study. Baseline risk factors for the development of primary open-angle glaucoma in the Ocular Hypertension Treatment Study. Am J Ophthalmol. 2004 Oct;138(4):684-5.</citation>
+    <PMID>15488816</PMID>
+  </reference>
+  <reference>
+    <citation>Brandt JD, Beiser JA, Gordon MO, Kass MA; Ocular Hypertension Treatment Study (OHTS) Group. Central corneal thickness and measured IOP response to topical ocular hypotensive medication in the Ocular Hypertension Treatment Study. Am J Ophthalmol. 2004 Nov;138(5):717-22.</citation>
+    <PMID>15531304</PMID>
+  </reference>
+  <reference>
+    <citation>Kass MA, Gordon MO, Kymes SM. Incorporating the results of the Ocular Hypertension Treatment Study into clinical practice. Arch Ophthalmol. 2005 Jul;123(7):1021-2.</citation>
+    <PMID>16009857</PMID>
+  </reference>
+  <reference>
+    <citation>Zangwill LM, Weinreb RN, Beiser JA, Berry CC, Cioffi GA, Coleman AL, Trick G, Liebmann JM, Brandt JD, Piltz-Seymour JR, Dirkes KA, Vega S, Kass MA, Gordon MO. Baseline topographic optic disc measurements are associated with the development of primary open-angle glaucoma: the Confocal Scanning Laser Ophthalmoscopy Ancillary Study to the Ocular Hypertension Treatment Study. Arch Ophthalmol. 2005 Sep;123(9):1188-97.</citation>
+    <PMID>16157798</PMID>
+  </reference>
+  <reference>
+    <citation>Keltner JL, Johnson CA, Levine RA, Fan J, Cello KE, Kass MA, Gordon MO. Normal visual field test results following glaucomatous visual field end points in the Ocular Hypertension Treatment Study. Arch Ophthalmol. 2005 Sep;123(9):1201-6.</citation>
+    <PMID>16157799</PMID>
+  </reference>
+  <reference>
+    <citation>Parrish RK 2nd, Schiffman JC, Feuer WJ, Anderson DR, Budenz DL, Wells-Albornoz MC, Vandenbroucke R, Kass MA, Gordon MO; Ocular Hypertension Treatment Study Group. Test-retest reproducibility of optic disk deterioration detected from stereophotographs by masked graders. Am J Ophthalmol. 2005 Oct;140(4):762-4.</citation>
+    <PMID>16226544</PMID>
+  </reference>
+  <reference>
+    <citation>Kymes SM, Kass MA, Anderson DR, Miller JP, Gordon MO; Ocular Hypertension Treatment Study Group (OHTS). Management of ocular hypertension: a cost-effectiveness approach from the Ocular Hypertension Treatment Study. Am J Ophthalmol. 2006 Jun;141(6):997-1008.</citation>
+    <PMID>16765666</PMID>
+  </reference>
+  <reference>
+    <citation>Levine RA, Demirel S, Fan J, Keltner JL, Johnson CA, Kass MA; Ocular Hypertension Treatment Study Group. Asymmetries and visual field summaries as predictors of glaucoma in the ocular hypertension treatment study. Invest Ophthalmol Vis Sci. 2006 Sep;47(9):3896-903.</citation>
+    <PMID>16936102</PMID>
+  </reference>
+  <reference>
+    <citation>Keltner JL, Johnson CA, Anderson DR, Levine RA, Fan J, Cello KE, Quigley HA, Budenz DL, Parrish RK, Kass MA, Gordon MO; Ocular Hypertension Treatment Study Group. The association between glaucomatous visual fields and optic nerve head features in the Ocular Hypertension Treatment Study. Ophthalmology. 2006 Sep;113(9):1603-12.</citation>
+    <PMID>16949445</PMID>
+  </reference>
+  <reference>
+    <citation>Herman DC, Gordon MO, Beiser JA, Chylack LT Jr, Lamping KA, Schein OD, Soltau JB, Kass MA; Ocular Hypertension Treatment Study (OHTS) Group. Topical ocular hypotensive medication and lens opacification: evidence from the ocular hypertension treatment study. Am J Ophthalmol. 2006 Nov;142(5):800-10.</citation>
+    <PMID>17056362</PMID>
+  </reference>
+  <reference>
+    <citation>Budenz DL, Anderson DR, Feuer WJ, Beiser JA, Schiffman J, Parrish RK 2nd, Piltz-Seymour JR, Gordon MO, Kass MA; Ocular Hypertension Treatment Study Group. Detection and prognostic significance of optic disc hemorrhages during the Ocular Hypertension Treatment Study. Ophthalmology. 2006 Dec;113(12):2137-43. Epub 2006 Sep 25.</citation>
+    <PMID>16996592</PMID>
+  </reference>
+  <reference>
+    <citation>Ocular Hypertension Treatment Study Group; European Glaucoma Prevention Study Group, Gordon MO, Torri V, Miglior S, Beiser JA, Floriani I, Miller JP, Gao F, Adamsons I, Poli D, D'Agostino RB, Kass MA. Validated prediction model for the development of primary open-angle glaucoma in individuals with ocular hypertension. Ophthalmology. 2007 Jan;114(1):10-9. Epub 2006 Nov 7.</citation>
+    <PMID>17095090</PMID>
+  </reference>
+  <reference>
+    <citation>Mansberger SL, Hughes BA, Gordon MO, Spaner SD, Beiser JA, Cioffi GA, Kass MA; Ocular Hypertension Treatment Study Group. Comparison of initial intraocular pressure response with topical beta-adrenergic antagonists and prostaglandin analogues in African American and white individuals in the Ocular Hypertension Treatment Study. Arch Ophthalmol. 2007 Apr;125(4):454-9.</citation>
+    <PMID>17420364</PMID>
+  </reference>
+  <reference>
+    <citation>Keltner JL, Johnson CA, Cello KE, Bandermann SE, Fan J, Levine RA, Kass MA, Gordon MO; Ocular Hypertension Treatment Study Group. Visual field quality control in the Ocular Hypertension Treatment Study (OHTS). J Glaucoma. 2007 Dec;16(8):665-9.</citation>
+    <PMID>18091452</PMID>
+  </reference>
+  <reference>
+    <citation>Gordon MO, Beiser JA, Kass MA; Ocular Hypertension Treatment Study Group. Is a history of diabetes mellitus protective against developing primary open-angle glaucoma? Arch Ophthalmol. 2008 Feb;126(2):280-1. doi: 10.1001/archophthalmol.2007.35.</citation>
+    <PMID>18268230</PMID>
+  </reference>
+  <reference>
+    <citation>Kass MA, Gordon MO; Ocular Hypertension Treatment Study Group. Diabetes and glaucoma. Arch Ophthalmol. 2008 May;126(5):746-7. doi: 10.1001/archopht.126.5.746-b.</citation>
+    <PMID>18474807</PMID>
+  </reference>
+  <reference>
+    <citation>Brandt JD, Gordon MO, Beiser JA, Lin SC, Alexander MY, Kass MA; Ocular Hypertension Treatment Study Group. Changes in central corneal thickness over time: the ocular hypertension treatment study. Ophthalmology. 2008 Sep;115(9):1550-6, 1556.e1. doi: 10.1016/j.ophtha.2008.02.001. Epub 2008 Apr 18.</citation>
+    <PMID>18378313</PMID>
+  </reference>
+  <reference>
+    <citation>Ocular Hypertension Treatment Study Group and the European Glaucoma Prevention Study Group. The accuracy and clinical application of predictive models for primary open-angle glaucoma in ocular hypertensive individuals. Ophthalmology. 2008 Nov;115(11):2030-6. doi: 10.1016/j.ophtha.2008.06.036. Epub 2008 Sep 18.</citation>
+    <PMID>18801578</PMID>
+  </reference>
+  <reference>
+    <citation>Bhorade AM, Gordon MO, Wilson B, Weinreb RN, Kass MA; Ocular Hypertension Treatment Study Group. Variability of intraocular pressure measurements in observation participants in the ocular hypertension treatment study. Ophthalmology. 2009 Apr;116(4):717-24. doi: 10.1016/j.ophtha.2008.12.036. Epub 2009 Feb 25. Erratum in: Ophthalmology. 2009 May;116(5):822. Weinrab, Robert N [corrected to Weinreb, Robert N].</citation>
+    <PMID>19243824</PMID>
+  </reference>
+  <reference>
+    <citation>Barnett EM, Fantin A, Wilson BS, Kass MA, Gordon MO; Ocular Hypertension Treatment Study Group. The incidence of retinal vein occlusion in the ocular hypertension treatment study. Ophthalmology. 2010 Mar;117(3):484-8. doi: 10.1016/j.ophtha.2009.08.022. Epub 2010 Jan 19.</citation>
+    <PMID>20031222</PMID>
+  </reference>
+  <reference>
+    <citation>Kymes SM, Plotzke MR, Kass MA, Boland MV, Gordon MO. Effect of patient's life expectancy on the cost-effectiveness of treatment for ocular hypertension. Arch Ophthalmol. 2010 May;128(5):613-8. doi: 10.1001/archophthalmol.2010.83.</citation>
+    <PMID>20457984</PMID>
+  </reference>
+  <reference>
+    <citation>Weinreb RN, Zangwill LM, Jain S, Becerra LM, Dirkes K, Piltz-Seymour JR, Cioffi GA, Trick GL, Coleman AL, Brandt JD, Liebmann JM, Gordon MO, Kass MA; OHTS CSLO Ancillary Study Group. Predicting the onset of glaucoma: the confocal scanning laser ophthalmoscopy ancillary study to theOcular Hypertension Treatment Study. Ophthalmology. 2010 Sep;117(9):1674-83. doi: 10.1016/j.ophtha.2010.03.044. Epub 2010 Jul 14.</citation>
+    <PMID>20633931</PMID>
+  </reference>
+  <reference>
+    <citation>Bhorade AM, Wilson BS, Gordon MO, Palmberg P, Weinreb RN, Miller E, Chang RT, Kass MA; Ocular Hypertension Treatment Study Group. The utility of the monocular trial: data from the ocular hypertension treatment study. Ophthalmology. 2010 Nov;117(11):2047-54. doi: 10.1016/j.ophtha.2010.02.020. Epub 2010 Aug 12.</citation>
+    <PMID>20619460</PMID>
+  </reference>
+  <reference>
+    <citation>Artes PH, Chauhan BC, Keltner JL, Cello KE, Johnson CA, Anderson DR, Gordon MO, Kass MA; Ocular Hypertension Treatment Study Group. Longitudinal and cross-sectional analyses of visual field progression in participants of the Ocular Hypertension Treatment Study. Arch Ophthalmol. 2010 Dec;128(12):1528-32. doi: 10.1001/archophthalmol.2010.292.</citation>
+    <PMID>21149774</PMID>
+  </reference>
+  <reference>
+    <citation>Gao F, Miller JP, Xiong C, Beiser JA, Gordon M; The Ocular Hypertension Treatment Study (OHTS) Group. A joint-modeling approach to assess the impact of biomarker variability on the risk of developing clinical outcome. Stat Methods Appt. 2011 Mar 1;20(1):83-100.</citation>
+    <PMID>21339862</PMID>
+  </reference>
+  <reference>
+    <citation>Gao F, Miller JP, Miglior S, Beiser JA, Torri V, Kass MA, Gordon MO. A Joint Model for Prognostic Effect of Biomarker Variability on Outcomes: long-term intraocular pressure (IOP) fluctuation on the risk of developing primary open-angle glaucoma (POAG). JP J Biostat. 2011 May 1;5(2):73-96.</citation>
+    <PMID>22180704</PMID>
+  </reference>
+  <reference>
+    <citation>Gordon MO, Gao F, Beiser JA, Miller JP, Kass MA. The 10-year incidence of glaucoma among patients with treated and untreated ocular hypertension. Arch Ophthalmol. 2011 Dec;129(12):1630-1. doi: 10.1001/archophthalmol.2011.337.</citation>
+    <PMID>22159688</PMID>
+  </reference>
+  <reference>
+    <citation>Demirel S, De Moraes CG, Gardiner SK, Liebmann JM, Cioffi GA, Ritch R, Gordon MO, Kass MA; Ocular Hypertension Treatment Study Group. The rate of visual field change in the ocular hypertension treatment study. Invest Ophthalmol Vis Sci. 2012 Jan 25;53(1):224-7. doi: 10.1167/iovs.10-7117.</citation>
+    <PMID>22159015</PMID>
+  </reference>
+  <reference>
+    <citation>Brandt JD, Gordon MO, Gao F, Beiser JA, Miller JP, Kass MA; Ocular Hypertension Treatment Study Group. Adjusting intraocular pressure for central corneal thickness does not improve prediction models for primary open-angle glaucoma. Ophthalmology. 2012 Mar;119(3):437-42. doi: 10.1016/j.ophtha.2011.03.018. Epub 2011 Jun 25.</citation>
+    <PMID>21705084</PMID>
+  </reference>
+  <reference>
+    <citation>De Moraes CG, Demirel S, Gardiner SK, Liebmann JM, Cioffi GA, Ritch R, Gordon MO, Kass MA; Ocular Hypertension Treatment Study Group. Effect of treatment on the rate of visual field change in the ocular hypertension treatment study observation group. Invest Ophthalmol Vis Sci. 2012 Apr 2;53(4):1704-9. doi: 10.1167/iovs.11-8186.</citation>
+    <PMID>22395889</PMID>
+  </reference>
+  <reference>
+    <citation>Kymes SM, Lambert DL, Lee PP, Musch DC, Siegfried CJ, Kotak SV, Stwalley DL, Fain J, Johnson C, Gordon MO. The development of a decision analytic model of changes in mean deviation in people with glaucoma: the COA model. Ophthalmology. 2012 Jul;119(7):1367-74. doi: 10.1016/j.ophtha.2012.01.054. Epub 2012 Apr 25.</citation>
+    <PMID>22537616</PMID>
+  </reference>
+  <reference>
+    <citation>Mansberger SL, Gordon MO, Jampel H, Bhorade A, Brandt JD, Wilson B, Kass MA; Ocular Hypertension Treatment Study Group. Reduction in intraocular pressure after cataract extraction: the Ocular Hypertension Treatment Study. Ophthalmology. 2012 Sep;119(9):1826-31. doi: 10.1016/j.ophtha.2012.02.050. Epub 2012 May 16.</citation>
+    <PMID>22608478</PMID>
+  </reference>
+  <reference>
+    <citation>Gardiner SK, Demirel S, De Moraes CG, Liebmann JM, Cioffi GA, Ritch R, Gordon MO, Kass MA; Ocular Hypertension Treatment Study Group. Series length used during trend analysis affects sensitivity to changes in progression rate in the ocular hypertension treatment study. Invest Ophthalmol Vis Sci. 2013 Feb 15;54(2):1252-9. doi: 10.1167/iovs.12-10218.</citation>
+    <PMID>23349433</PMID>
+  </reference>
+  <reference>
+    <citation>Zangwill LM, Jain S, Dirkes K, He F, Medeiros FA, Trick GL, Brandt JD, Cioffi GA, Coleman AL, Liebmann JM, Piltz-Seymour JR, Gordon MO, Kass MA, Weinreb RN; Confocal Scanning Laser Ophthalmoscopy Ancillary Study to the Ocular Hypertension Treatment Study. The rate of structural change: the confocal scanning laser ophthalmoscopy ancillary study to the ocular hypertension treatment study. Am J Ophthalmol. 2013 Jun;155(6):971-82. doi: 10.1016/j.ajo.2013.01.020. Epub 2013 Mar 14.</citation>
+    <PMID>23497845</PMID>
+  </reference>
+  <reference>
+    <citation>Gardiner SK, Demirel S, Gordon MO, Kass MA; Ocular Hypertension Treatment Study Group. Seasonal changes in visual field sensitivity and intraocular pressure in the ocular hypertension treatment study. Ophthalmology. 2013 Apr;120(4):724-30. doi: 10.1016/j.ophtha.2012.09.056. Epub 2013 Jan 26.</citation>
+    <PMID>23357622</PMID>
+  </reference>
+  <reference>
+    <citation>De Moraes CG, Demirel S, Gardiner SK, Liebmann JM, Cioffi GA, Ritch R, Gordon MO, Kass MA. Rate of visual field progression in eyes with optic disc hemorrhages in the ocular hypertension treatment study. Arch Ophthalmol. 2012 Dec;130(12):1541-6. doi: 10.1001/jamaophthalmol.2013.1137.</citation>
+    <PMID>23229692</PMID>
+  </reference>
+  <reference>
+    <citation>Baratz KH, Nau CB, Winter EJ, McLaren JW, Hodge DO, Herman DC, Bourne WM. Effects of glaucoma medications on corneal endothelium, keratocytes, and subbasal nerves among participants in the ocular hypertension treatment study. Cornea. 2006 Oct;25(9):1046-52.</citation>
+    <PMID>17133051</PMID>
+  </reference>
+  <reference>
+    <citation>Savatovsky E, Mwanza JC, Budenz DL, Feuer WJ, Vandenbroucke R, Schiffman JC, Anderson DR; Ocular Hypertension Treatment Study. Longitudinal changes in peripapillary atrophy in the ocular hypertension treatment study: a case-control assessment. Ophthalmology. 2015 Jan;122(1):79-86. doi: 10.1016/j.ophtha.2014.07.033. Epub 2014 Sep 7.</citation>
+    <PMID>25208858</PMID>
+  </reference>
+  <reference>
+    <citation>Christopher M, Abràmoff MD, Tang L, Gordon MO, Kass MA, Budenz DL, Fingert JH, Scheetz TE. Stereo Photo Measured ONH Shape Predicts Development of POAG in Subjects With Ocular Hypertension. Invest Ophthalmol Vis Sci. 2015 Jul;56(8):4470-9. doi: 10.1167/iovs.14-16142.</citation>
+    <PMID>26193923</PMID>
+  </reference>
+  <reference>
+    <citation>Gao F, Miller JP, Beiser JA, Xiong C, Gordon MO. Predicting Clinical Binary Outcome Using Multivariate Longitudinal Data: Application to Patients with Newly Diagnosed Primary Open-Angle Glaucoma. J Biom Biostat. 2015 Oct;6(4). pii: 254. Epub 2015 Oct 26.</citation>
+    <PMID>26904374</PMID>
+  </reference>
+  <verification_date>May 2018</verification_date>
+  <!-- For several months we've had both old and new date name tags                             -->
+  <!-- Now, the old date names have been dropped.                                               -->
+  <!-- The new date name replacements are:                                                      -->
+  <!--     OLD (gone)                                        NEW (in use)                       -->
+  <!--   lastchanged_date                         becomes   last_update_submitted               -->
+  <!--   firstreceived_date                       becomes   study_first_submitted               -->
+  <!--   firstreceived_results_date               becomes   results_first_submitted             -->
+  <!--   firstreceived_results_disposition_date   becomes   disposition_first_submitted         -->
+  <study_first_submitted>September 23, 1999</study_first_submitted>
+  <study_first_submitted_qc>September 23, 1999</study_first_submitted_qc>
+  <study_first_posted type="Estimate">September 24, 1999</study_first_posted>
+  <results_first_submitted>March 6, 2015</results_first_submitted>
+  <results_first_submitted_qc>March 6, 2015</results_first_submitted_qc>
+  <results_first_posted type="Estimate">March 19, 2015</results_first_posted>
+  <last_update_submitted>May 3, 2018</last_update_submitted>
+  <last_update_submitted_qc>May 3, 2018</last_update_submitted_qc>
+  <last_update_posted type="Actual">June 6, 2018</last_update_posted>
+  <responsible_party>
+    <responsible_party_type>Principal Investigator</responsible_party_type>
+    <investigator_affiliation>Washington University School of Medicine</investigator_affiliation>
+    <investigator_full_name>Michael Kass</investigator_full_name>
+    <investigator_title>Professor, Ophthalmology and Visual Sciences</investigator_title>
+  </responsible_party>
+  <condition_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Hypertension</mesh_term>
+    <mesh_term>Ocular Hypertension</mesh_term>
+  </condition_browse>
+  <intervention_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Ophthalmic Solutions</mesh_term>
+    <mesh_term>Antihypertensive Agents</mesh_term>
+  </intervention_browse>
+
+  <clinical_results>
+
+    <participant_flow>
+      <group_list>
+        <group group_id="P1">
+          <title>Observation</title>
+          <description>Close Observation</description>
+        </group>
+        <group group_id="P2">
+          <title>Treatment</title>
+          <description>Topical ocular hypotensive eye drops.</description>
+        </group>
+      </group_list>
+      <period_list>
+        <period>
+          <title>Overall Study</title>
+          <milestone_list>
+            <milestone>
+              <title>STARTED</title>
+              <participants_list>
+                <participants group_id="P1" count="819"/>
+                <participants group_id="P2" count="817"/>
+              </participants_list>
+            </milestone>
+            <milestone>
+              <title>Completed OHTS Phase I, June 2002</title>
+              <participants_list>
+                <participants group_id="P1" count="706"/>
+                <participants group_id="P2" count="702"/>
+              </participants_list>
+            </milestone>
+            <milestone>
+              <title>COMPLETED</title>
+              <participants_list>
+                <participants group_id="P1" count="580">Completed OHTS Phase 2, through March 2009</participants>
+                <participants group_id="P2" count="579">Completed OHTS Phase 2, through March 2009</participants>
+              </participants_list>
+            </milestone>
+            <milestone>
+              <title>NOT COMPLETED</title>
+              <participants_list>
+                <participants group_id="P1" count="239"/>
+                <participants group_id="P2" count="238"/>
+              </participants_list>
+            </milestone>
+          </milestone_list>
+        </period>
+      </period_list>
+    </participant_flow>
+
+    <baseline>
+      <population>1636 ocular hypertensive patients were randomized to either close observation or ocular hypertensive medication.</population>
+      <group_list>
+        <group group_id="B1">
+          <title>Observation</title>
+          <description>Observation only</description>
+        </group>
+        <group group_id="B2">
+          <title>Treatment</title>
+          <description>Topical Antiglaucoma Agents: Topical Antiglaucoma Agents</description>
+        </group>
+        <group group_id="B3">
+          <title>Total</title>
+          <description>Total of all reporting groups</description>
+        </group>
+      </group_list>
+      <analyzed_list>
+        <analyzed>
+          <units>Participants</units>
+          <scope>Overall</scope>
+          <count_list>
+            <count group_id="B1" value="819"/>
+            <count group_id="B2" value="817"/>
+            <count group_id="B3" value="1636"/>
+          </count_list>
+        </analyzed>
+      </analyzed_list>
+      <measure_list>
+        <measure>
+          <title>Age</title>
+          <units>years</units>
+          <param>Mean</param>
+          <dispersion>Standard Deviation</dispersion>
+          <class_list>
+            <class>
+              <category_list>
+                <category>
+                  <measurement_list>
+                    <measurement group_id="B1" value="55.6" spread="9.7"/>
+                    <measurement group_id="B2" value="55.2" spread="9.5"/>
+                    <measurement group_id="B3" value="55.4" spread="9.6"/>
+                  </measurement_list>
+                </category>
+              </category_list>
+            </class>
+          </class_list>
+        </measure>
+        <measure>
+          <title>Sex: Female, Male</title>
+          <units>Participants</units>
+          <param>Count of Participants</param>
+          <class_list>
+            <class>
+              <category_list>
+                <category>
+                  <title>Female</title>
+                  <measurement_list>
+                    <measurement group_id="B1" value="346"/>
+                    <measurement group_id="B2" value="359"/>
+                    <measurement group_id="B3" value="705"/>
+                  </measurement_list>
+                </category>
+                <category>
+                  <title>Male</title>
+                  <measurement_list>
+                    <measurement group_id="B1" value="473"/>
+                    <measurement group_id="B2" value="458"/>
+                    <measurement group_id="B3" value="931"/>
+                  </measurement_list>
+                </category>
+              </category_list>
+            </class>
+          </class_list>
+        </measure>
+        <measure>
+          <title>Race/Ethnicity, Customized</title>
+          <units>participants</units>
+          <param>Number</param>
+          <class_list>
+            <class>
+              <title>Native American</title>
+              <category_list>
+                <category>
+                  <measurement_list>
+                    <measurement group_id="B1" value="3"/>
+                    <measurement group_id="B2" value="1"/>
+                    <measurement group_id="B3" value="4"/>
+                  </measurement_list>
+                </category>
+              </category_list>
+            </class>
+            <class>
+              <title>Asian</title>
+              <category_list>
+                <category>
+                  <measurement_list>
+                    <measurement group_id="B1" value="10"/>
+                    <measurement group_id="B2" value="4"/>
+                    <measurement group_id="B3" value="14"/>
+                  </measurement_list>
+                </category>
+              </category_list>
+            </class>
+            <class>
+              <title>African American</title>
+              <category_list>
+                <category>
+                  <measurement_list>
+                    <measurement group_id="B1" value="205"/>
+                    <measurement group_id="B2" value="203"/>
+                    <measurement group_id="B3" value="408"/>
+                  </measurement_list>
+                </category>
+              </category_list>
+            </class>
+            <class>
+              <title>Hispanic</title>
+              <category_list>
+                <category>
+                  <measurement_list>
+                    <measurement group_id="B1" value="35"/>
+                    <measurement group_id="B2" value="24"/>
+                    <measurement group_id="B3" value="59"/>
+                  </measurement_list>
+                </category>
+              </category_list>
+            </class>
+            <class>
+              <title>White</title>
+              <category_list>
+                <category>
+                  <measurement_list>
+                    <measurement group_id="B1" value="560"/>
+                    <measurement group_id="B2" value="577"/>
+                    <measurement group_id="B3" value="1137"/>
+                  </measurement_list>
+                </category>
+              </category_list>
+            </class>
+            <class>
+              <title>Other</title>
+              <category_list>
+                <category>
+                  <measurement_list>
+                    <measurement group_id="B1" value="6"/>
+                    <measurement group_id="B2" value="8"/>
+                    <measurement group_id="B3" value="14"/>
+                  </measurement_list>
+                </category>
+              </category_list>
+            </class>
+          </class_list>
+        </measure>
+      </measure_list>
+    </baseline>
+
+    <outcome_list>
+      <outcome>
+        <type>Primary</type>
+        <title>Incidence of Primary Open-Angle Glaucoma in Hypotensive Patients</title>
+        <description>Comparison of the cumulative proportion of participants who develop primary open-angle glaucoma in the observation and medication groups.</description>
+        <time_frame>5 yrs (OHTS I, June 2002) and 13.0 yrs (completion of both phases of OHTS, March 2009)</time_frame>
+        <population>1636 ocular hypertensive participants were randomized to either close observation or treatment with topical hypotensive eyedrops from February 1994 through June 2002. In June 2002 the observation participants were offered treatment with topical hypotensive eyedrops.</population>
+        <group_list>
+          <group group_id="O1">
+            <title>Observation</title>
+            <description>Observation only from February 1994 through June 2002.Observation participants were offered topical antiglaucoma agents after June 2002 through study close out March 2009.</description>
+          </group>
+          <group group_id="O2">
+            <title>Treatment</title>
+            <description>Topical ocular hypotensive eye drops from February 1994 through March 2009.</description>
+          </group>
+        </group_list>
+        <measure>
+          <title>Incidence of Primary Open-Angle Glaucoma in Hypotensive Patients</title>
+          <description>Comparison of the cumulative proportion of participants who develop primary open-angle glaucoma in the observation and medication groups.</description>
+          <population>1636 ocular hypertensive participants were randomized to either close observation or treatment with topical hypotensive eyedrops from February 1994 through June 2002. In June 2002 the observation participants were offered treatment with topical hypotensive eyedrops.</population>
+          <units>percent of participants</units>
+          <param>Number</param>
+          <analyzed_list>
+            <analyzed>
+              <units>Participants</units>
+              <scope>Measure</scope>
+              <count_list>
+                <count group_id="O1" value="819"/>
+                <count group_id="O2" value="817"/>
+              </count_list>
+            </analyzed>
+          </analyzed_list>
+          <class_list>
+            <class>
+              <title>Incidence of glaucoma at 5 yr (OHTS I, June 2002)</title>
+              <category_list>
+                <category>
+                  <measurement_list>
+                    <measurement group_id="O1" value="9.5"/>
+                    <measurement group_id="O2" value="4.4"/>
+                  </measurement_list>
+                </category>
+              </category_list>
+            </class>
+            <class>
+              <title>Incidence of glaucoma 13 yr (OHTS II, March 2009)</title>
+              <category_list>
+                <category>
+                  <measurement_list>
+                    <measurement group_id="O1" value="20.0"/>
+                    <measurement group_id="O2" value="14.1"/>
+                  </measurement_list>
+                </category>
+              </category_list>
+            </class>
+          </class_list>
+        </measure>
+      </outcome>
+    </outcome_list>
+
+    <reported_events>
+      <time_frame>Adverse events collected during OHTS I, from February 1994 to June 2002.</time_frame>
+      <desc>Specific ocular adverse events are unknown because adverse events were only collected with regard to organ system.</desc>
+      <group_list>
+        <group group_id="E1">
+          <title>Observation</title>
+          <description>Observation only from February 1994 to June 2002 .</description>
+        </group>
+        <group group_id="E2">
+          <title>Treatment</title>
+          <description>Topical Antiglaucoma Agents: Topical Antiglaucoma Agents from February 1994 to June 2002.</description>
+        </group>
+      </group_list>
+      <serious_events>
+        <default_assessment>Systematic Assessment</default_assessment>
+        <category_list>
+          <category>
+            <title>Total</title>
+            <event_list>
+              <event>
+                <sub_title>Total, serious adverse events</sub_title>
+                <counts group_id="E1" subjects_affected="12" subjects_at_risk="819"/>
+                <counts group_id="E2" subjects_affected="13" subjects_at_risk="817"/>
+              </event>
+            </event_list>
+          </category>
+          <category>
+            <title>Eye disorders</title>
+            <event_list>
+              <event>
+                <sub_title>Ocular Serious Adverse Events (OHTS I, June 2002)</sub_title>
+                <description>Specific ocular serious adverse events are unknown because they were only collected with regard to organ system.</description>
+                <counts group_id="E1" subjects_affected="12" subjects_at_risk="819"/>
+                <counts group_id="E2" subjects_affected="13" subjects_at_risk="817"/>
+              </event>
+            </event_list>
+          </category>
+        </category_list>
+      </serious_events>
+      <other_events>
+        <frequency_threshold>0</frequency_threshold>
+        <default_assessment>Systematic Assessment</default_assessment>
+        <category_list>
+          <category>
+            <title>Total</title>
+            <event_list>
+              <event>
+                <sub_title>Total, other adverse events</sub_title>
+                <counts group_id="E1" subjects_affected="481" subjects_at_risk="819"/>
+                <counts group_id="E2" subjects_affected="570" subjects_at_risk="817"/>
+              </event>
+            </event_list>
+          </category>
+          <category>
+            <title>Eye disorders</title>
+            <event_list>
+              <event>
+                <sub_title>Ocular Adverse Event (Not Serious)</sub_title>
+                <description>Adverse Events that were not serious.</description>
+                <counts group_id="E1" subjects_affected="481" subjects_at_risk="819"/>
+                <counts group_id="E2" subjects_affected="570" subjects_at_risk="817"/>
+              </event>
+            </event_list>
+          </category>
+        </category_list>
+      </other_events>
+    </reported_events>
+
+    <certain_agreements>
+      <pi_employee>Principal Investigators are NOT employed by the organization sponsoring the study.</pi_employee>
+      <restrictive_agreement>There is NOT an agreement between Principal Investigators and the Sponsor (or its agents) that restricts the PI's rights to discuss or publish trial results after the trial is completed. </restrictive_agreement>
+    </certain_agreements>
+    <point_of_contact>
+      <name_or_title>Michael Kass MD</name_or_title>
+      <organization>Washington University School of Medicine</organization>
+      <phone>314-362-5713</phone>
+      <email>kass@vision.wustl.edu</email>
+    </point_of_contact>
+  </clinical_results>
+</clinical_study>
+

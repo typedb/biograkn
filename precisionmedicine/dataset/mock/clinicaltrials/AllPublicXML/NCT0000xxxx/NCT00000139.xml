@@ -1,0 +1,249 @@
+<clinical_study>
+  <!-- This xml conforms to an XML Schema at:
+    https://clinicaltrials.gov/ct2/html/images/info/public.xsd -->
+  <required_header>
+    <download_date>ClinicalTrials.gov processed this data on February 12, 2019</download_date>
+    <link_text>Link to the current ClinicalTrials.gov record.</link_text>
+    <url>https://clinicaltrials.gov/show/NCT00000139</url>
+  </required_header>
+  <id_info>
+    <org_study_id>NEI-38</org_study_id>
+    <nct_id>NCT00000139</nct_id>
+  </id_info>
+  <brief_title>Herpetic Eye Disease Study (HEDS) II</brief_title>
+  <sponsors>
+    <lead_sponsor>
+      <agency>National Eye Institute (NEI)</agency>
+      <agency_class>NIH</agency_class>
+    </lead_sponsor>
+  </sponsors>
+  <source>National Eye Institute (NEI)</source>
+  <brief_summary>
+    <textblock>
+      To determine whether early treatment (with oral acyclovir) of herpes simplex virus (HSV)
+      ulcerations of the corneal epithelium prevents progression to the blinding complications of
+      stromal keratitis and iridocyclitis.
+
+      To determine the efficacy of low-dose oral acyclovir in preventing recurrent HSV eye
+      infection in patients with previous episodes of herpetic eye disease.
+
+      To determine the role of external factors (such as ultraviolet light or corneal trauma) and
+      behavioral factors (such as life stress) on the induction of ocular recurrences of HSV eye
+      infections and disease.
+    </textblock>
+  </brief_summary>
+  <detailed_description>
+    <textblock>
+      Infection of the eye by herpes simplex virus (HSV) is a leading cause of corneal blindness in
+      the United States and other countries. The infection can lead to corneal scarring and
+      neovascularization, permanent endothelial dysfunction and corneal edema, secondary glaucoma,
+      and cataract. Despite the availability of topical antiviral agents that are highly active
+      against HSV keratitis, there is still no known effective method for reducing the frequency of
+      recurrence or severity of stromal keratitis and iridocyclitis. In addition, the prognosis is
+      poor for recovery of good vision following penetrating keratoplasty for actively inflamed or
+      highly vascularized herpetic corneas.
+
+      On the basis of both animal and human studies, the antiviral agent acyclovir may both treat
+      and prevent recurrence of HSV disease. However, no consensus yet exists on the use of
+      acyclovir in the management and prevention of herpetic eye disease.
+
+      HEDS-II consists of two randomized, placebo-controlled trials that are assessing the role of
+      oral acyclovir in the management of herpetic eye disease and one epidemiologic study that is
+      investigating risk factors, including stress, for the development of ocular recurrences of
+      the disease. The organizational structure consists of a national coordinating center, eight
+      regional coordinating clinical centers, and approximately 60 clinical sites. The clinical
+      sites where patients are enrolled and followed include both university-based and
+      community-based practices.
+
+      Herpes Simplex Virus Epithelial Keratitis Trial: HEDS-EKT evaluated the benefit of oral
+      acyclovir given during treatment of an acute HSV keratitis (dendritic or geographic
+      keratitis) in preventing the occurrence of later blinding complications. Patients entered the
+      trial within 7 days of onset. All patients received standard treatment with a topical
+      antiviral and were randomized to receive either oral acyclovir (400 mg five times a day for
+      21 days) or a placebo. Patients had eight visits within a 12-month followup period. The
+      primary outcome was the time to the first occurrence of stromal keratitis or iridocyclitis in
+      the study eye (eye with epithelial keratitis at time of study entry). The HEDS-EKT
+      recruitment goal was 502 patients.
+
+      Acyclovir Prevention Trial: HEDS-APT evaluated the benefit of long-term acyclovir treatment
+      in patients with a recent history of HSV eye disease but no current active disease. To be
+      eligible, a patient must have experienced any kind of ocular herpes simplex infection
+      (blepharitis, conjunctivitis, keratitis, or iridocyclitis) in the preceding year. The
+      infection must have been inactive and untreated for at least the previous 30 days. Patients
+      were randomized to receive either oral acyclovir (400 mg twice a day) or placebo for 1 year.
+      Five followup visits occurred during the 1-year treatment period and an additional three
+      followup visits during the 6-month post-treatment period. Episodes of recurrent HSV eye
+      disease during the trial were treated with topical corticosteroids and antivirals as
+      indicated, but patients continued to receive the oral acyclovir or placebo for the entire
+      365-day period. The primary outcome was the time to the first recurrence of any type of HSV
+      eye disease in either eye. The recruitment goal was 696 patients.
+
+      Ocular HSV Recurrence Factor Study: HEDS-RFS is evaluating the effect of psychological,
+      environmental, and biological factors on recurrences of herpetic eye disease. Patients
+      recruited into the HEDS-APT trial are eligible to participate in HEDS-RFS if they are 18
+      years or older. At entry, all subjects fill out a questionnaire to estimate the negative
+      affectivity trait measure. Subjects also fill out a short questionnaire every week for 52
+      weeks to track acute and chronic stressors (e.g., illnesses, injuries, menstrual periods, sun
+      exposure, emotional and financial stresses). The investigators ensure patient privacy by the
+      patient's mailing of the weekly logs directly to the HEDS National Coordinating Center.
+    </textblock>
+  </detailed_description>
+  <overall_status>Completed</overall_status>
+  <start_date>October 1992</start_date>
+  <phase>Phase 3</phase>
+  <study_type>Interventional</study_type>
+  <has_expanded_access>No</has_expanded_access>
+  <study_design_info>
+    <allocation>Randomized</allocation>
+    <primary_purpose>Treatment</primary_purpose>
+  </study_design_info>
+  <condition>Keratitis, Herpetic</condition>
+  <condition>Ocular Herpes Simplex</condition>
+  <condition>Herpes Simplex</condition>
+  <intervention>
+    <intervention_type>Behavioral</intervention_type>
+    <intervention_name>Stress</intervention_name>
+  </intervention>
+  <intervention>
+    <intervention_type>Drug</intervention_type>
+    <intervention_name>Acyclovir</intervention_name>
+  </intervention>
+  <eligibility>
+    <criteria>
+      <textblock>
+        Protocol-specific criteria are noted in the description above.
+      </textblock>
+    </criteria>
+    <gender>All</gender>
+    <minimum_age>18 Years</minimum_age>
+    <maximum_age>N/A</maximum_age>
+    <healthy_volunteers>No</healthy_volunteers>
+  </eligibility>
+  <location>
+    <facility>
+      <name>Francis I. Proctor Foundation, University of California, San Francisco</name>
+      <address>
+        <city>San Francisco</city>
+        <state>California</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Emory Eye Center</name>
+      <address>
+        <city>Atlanta</city>
+        <state>Georgia</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Eye Center, University of Illinois, Chicago</name>
+      <address>
+        <city>Chicago</city>
+        <state>Illinois</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Louisiana State University Eye Center</name>
+      <address>
+        <city>New Orleans</city>
+        <state>Louisiana</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Department of Ophthalmology, The Mount Sinai Medical Center</name>
+      <address>
+        <city>New York</city>
+        <state>New York</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Wills Eye Hospital, Cornea Clinic</name>
+      <address>
+        <city>Philadelphia</city>
+        <state>Pennsylvania</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Cullen Eye Institute, Baylor College of Medicine</name>
+      <address>
+        <city>Houston</city>
+        <state>Texas</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>The Eye Institute, Medical College of Wisconsin</name>
+      <address>
+        <city>Milwaukee</city>
+        <state>Wisconsin</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location_countries>
+    <country>United States</country>
+  </location_countries>
+  <link>
+    <url>http://www.nei.nih.gov/news/pressreleases/Hedsii.asp</url>
+    <description>NEI Press Release-Antiviral Drug Sharply Reduces Return of Herpes of the Eye</description>
+  </link>
+  <reference>
+    <citation>Dawson CR, Beck R, Wilhelmus KR, Cohen EJ. Herpetic eye disease study. You can help. Arch Ophthalmol. 1996 Jan;114(1):89-90. Review.</citation>
+    <PMID>8540857</PMID>
+  </reference>
+  <reference>
+    <citation>A controlled trial of oral acyclovir for the prevention of stromal keratitis or iritis in patients with herpes simplex virus epithelial keratitis. The Epithelial Keratitis Trial. The Herpetic Eye Disease Study Group. Arch Ophthalmol. 1997 Jun;115(6):703-12. Erratum in: Arch Ophthalmol 1997 Sep;115(9):1196.</citation>
+    <PMID>9194719</PMID>
+  </reference>
+  <reference>
+    <citation>Acyclovir for the prevention of recurrent herpes simplex virus eye disease. Herpetic Eye Disease Study Group. N Engl J Med. 1998 Jul 30;339(5):300-6.</citation>
+    <PMID>9696640</PMID>
+  </reference>
+  <verification_date>September 2009</verification_date>
+  <!-- For several months we've had both old and new date name tags                             -->
+  <!-- Now, the old date names have been dropped.                                               -->
+  <!-- The new date name replacements are:                                                      -->
+  <!--     OLD (gone)                                        NEW (in use)                       -->
+  <!--   lastchanged_date                         becomes   last_update_submitted               -->
+  <!--   firstreceived_date                       becomes   study_first_submitted               -->
+  <!--   firstreceived_results_date               becomes   results_first_submitted             -->
+  <!--   firstreceived_results_disposition_date   becomes   disposition_first_submitted         -->
+  <study_first_submitted>September 23, 1999</study_first_submitted>
+  <study_first_submitted_qc>September 23, 1999</study_first_submitted_qc>
+  <study_first_posted type="Estimate">September 24, 1999</study_first_posted>
+  <last_update_submitted>March 23, 2010</last_update_submitted>
+  <last_update_submitted_qc>March 23, 2010</last_update_submitted_qc>
+  <last_update_posted type="Estimate">March 24, 2010</last_update_posted>
+  <keyword>Herpes Simplex Stromal Keratitis</keyword>
+  <condition_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Herpes Simplex</mesh_term>
+    <mesh_term>Keratitis</mesh_term>
+    <mesh_term>Keratitis, Herpetic</mesh_term>
+  </condition_browse>
+  <intervention_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Acyclovir</mesh_term>
+  </intervention_browse>
+  <!-- Results have not yet been posted for this study                                          -->
+</clinical_study>
+

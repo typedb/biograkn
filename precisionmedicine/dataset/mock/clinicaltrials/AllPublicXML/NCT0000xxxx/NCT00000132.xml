@@ -1,0 +1,176 @@
+<clinical_study>
+  <!-- This xml conforms to an XML Schema at:
+    https://clinicaltrials.gov/ct2/html/images/info/public.xsd -->
+  <required_header>
+    <download_date>ClinicalTrials.gov processed this data on February 12, 2019</download_date>
+    <link_text>Link to the current ClinicalTrials.gov record.</link_text>
+    <url>https://clinicaltrials.gov/show/NCT00000132</url>
+  </required_header>
+  <id_info>
+    <org_study_id>NEI-31</org_study_id>
+    <nct_id>NCT00000132</nct_id>
+  </id_info>
+  <brief_title>Early Manifest Glaucoma Trial (EMGT)</brief_title>
+  <sponsors>
+    <lead_sponsor>
+      <agency>National Eye Institute (NEI)</agency>
+      <agency_class>NIH</agency_class>
+    </lead_sponsor>
+  </sponsors>
+  <source>National Eye Institute (NEI)</source>
+  <brief_summary>
+    <textblock>
+      The primary purpose is to compare the effect of immediate therapy to lower the intraocular
+      pressure (IOP) versus late or no treatment on the progression of newly detected open-angle
+      glaucoma, as measured by increasing visual field loss and/or optic disc changes.
+
+      The secondary purposes are to determine the extent of IOP reduction attained by treatment, to
+      explore factors that may influence glaucoma progression, and to describe the natural history
+      of newly detected glaucoma.
+    </textblock>
+  </brief_summary>
+  <detailed_description>
+    <textblock>
+      Glaucoma is a common disease in older adults. All present treatment aims at reduction of the
+      intraocular pressure, but indications for therapy are not well defined. Furthermore, it is
+      unclear whether intraocular pressure influences the natural history of glaucoma. Against this
+      background, the primary aim of the study is of central importance to patients with manifest
+      and suspect glaucoma.
+
+      Glaucoma has few subjective symptoms during a long period early in the disease, but damage is
+      irreversible once it occurs. Early diagnosis and rapid detection of progression are of
+      paramount importance in limiting this damage, whether through pressure reduction or in some
+      other way. The effectiveness, if any, of lowering the intraocular pressure in glaucoma
+      requires evaluation by controlled treatment trials.
+
+      The Early Manifest Glaucoma Trial (EMGT) is the first large, controlled, randomized clinical
+      trial to evaluate the effect of lowering the intraocular pressure on the progression of newly
+      detected, open-angle glaucoma. This study will compare glaucoma progression in initially
+      treated versus untreated patients with newly detected open-angle glaucoma and will allow
+      quantification of the effect of immediate IOP-lowering treatment on progression during the
+      followup period.
+
+      The EMGT is a collaborative effort that involves a Clinical Center at the Department of
+      Ophthalmology of Malmo University Hospital at the University of Lund, Sweden, and its
+      Satellite Center in Helsingborg, Sweden; an independent Data Center at the Department of
+      Preventive Medicine, University Medical Center at Stony Brook, New York; and a Disc
+      Photography Reading Center at the Department of Ophthalmology in Lund at the University of
+      Lund. The study was initiated with support from the Swedish Medical Research Council.
+
+      Recruitment for the study has been completed. The 255 patients were identified by an
+      extensive, population-based screening of successive age cohorts as well as by clinical
+      referral. The diagnosis was confirmed through Humphrey perimetry at two postscreening visits
+      to the Clinical Center or Satellite Center. Eligible patients who agreed to participate had
+      two additional visits for collection of baseline data. They were randomized to treatment with
+      the beta blocker Betaxolol and argon laser trabeculoplasty (treated group) or to no initial
+      treatment (control group) with close followup of both groups.
+
+      Patients are followed for a minimum of 4 years to assess the development of glaucoma
+      progression. They are seen every 3 months to collect visual field, IOP, and other data. Disc
+      photographs are taken every 6 months. Technicians and disc photograph graders are masked
+      regarding treatment assignment. Additional followup visits are held to confirm visual field
+      progression and IOP elevation (&gt;25 mm Hg in treated group, &gt;35 mm Hg in control group).
+      Patients in the treated group receive Xalantan whenever IOP exceeds 25 mm Hg at more than one
+      visit; patients in the control group will receive Xalantan whenever IOP reaches 35 mm Hg or
+      higher during the trial. If IOP remains high, individualized treatment is given. All patients
+      continue to be followed to monitor the development of end points and will be analyzed in
+      their originally assigned groups.
+
+      The study outcome is glaucoma progression, which is based on specific criteria derived from
+      analyses of Humphrey visual fields and masked evaluations of disc photographs. The perimetric
+      outcome is defined as statistically significant deterioration (p &lt; 0.05) of the same three or
+      more test points in Pattern Deviation Change Probability Maps in three consecutive C30-2
+      Humphrey fields. Optic disc progression is determined by the following:
+
+        -  The presence of definite change (detected by comparison of followup photographs with
+           baseline) by flicker chronoscopy in two followup photographs from the same visit, with
+           independent confirmation by side-by-side gradings.
+
+        -  Final confirmation of change toward progression, by flicker chronoscopy and by
+           side-by-side gradings, at a different followup visit.
+    </textblock>
+  </detailed_description>
+  <overall_status>Unknown status</overall_status>
+  <last_known_status>Active, not recruiting</last_known_status>
+  <start_date>October 1992</start_date>
+  <phase>Phase 3</phase>
+  <study_type>Interventional</study_type>
+  <has_expanded_access>No</has_expanded_access>
+  <study_design_info>
+    <allocation>Randomized</allocation>
+    <primary_purpose>Treatment</primary_purpose>
+  </study_design_info>
+  <condition>Open-Angle Glaucoma</condition>
+  <intervention>
+    <intervention_type>Drug</intervention_type>
+    <intervention_name>Betaxolol</intervention_name>
+  </intervention>
+  <intervention>
+    <intervention_type>Procedure</intervention_type>
+    <intervention_name>Argon Laser Trabeculoplasty</intervention_name>
+  </intervention>
+  <eligibility>
+    <criteria>
+      <textblock>
+        Men and women between ages 50 and 80 years who have newly detected and untreated chronic
+        open-angle glaucoma with repeatable visual field defects by Humphrey perimetry are eligible
+        for inclusion.
+
+        Exclusion criteria include the following: advanced visual field loss (MD less than or equal
+        to 16 dB) or threat to fixation; mean IOP &gt; 30 mm Hg or any IOP &gt; 35 mm Hg in at least one
+        eye; VA &lt; 0.5 in either eye; or any conditions precluding reliable fields or photos, use of
+        study treatment, or 4-year followup.
+      </textblock>
+    </criteria>
+    <gender>All</gender>
+    <minimum_age>50 Years</minimum_age>
+    <maximum_age>80 Years</maximum_age>
+  </eligibility>
+  <location>
+    <facility>
+      <name>Department of Ophthalmology, Helsingborg Hospital</name>
+      <address>
+        <city>Helsingborg</city>
+        <country>Sweden</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Department of Ophthalmology, Malmo University Hospital, University of Lund</name>
+      <address>
+        <city>Malmo</city>
+        <country>Sweden</country>
+      </address>
+    </facility>
+  </location>
+  <location_countries>
+    <country>Sweden</country>
+  </location_countries>
+  <verification_date>October 2001</verification_date>
+  <!-- For several months we've had both old and new date name tags                             -->
+  <!-- Now, the old date names have been dropped.                                               -->
+  <!-- The new date name replacements are:                                                      -->
+  <!--     OLD (gone)                                        NEW (in use)                       -->
+  <!--   lastchanged_date                         becomes   last_update_submitted               -->
+  <!--   firstreceived_date                       becomes   study_first_submitted               -->
+  <!--   firstreceived_results_date               becomes   results_first_submitted             -->
+  <!--   firstreceived_results_disposition_date   becomes   disposition_first_submitted         -->
+  <study_first_submitted>September 23, 1999</study_first_submitted>
+  <study_first_submitted_qc>September 23, 1999</study_first_submitted_qc>
+  <study_first_posted type="Estimate">September 24, 1999</study_first_posted>
+  <last_update_submitted>June 23, 2005</last_update_submitted>
+  <last_update_submitted_qc>June 23, 2005</last_update_submitted_qc>
+  <last_update_posted type="Estimate">June 24, 2005</last_update_posted>
+  <condition_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Glaucoma</mesh_term>
+    <mesh_term>Glaucoma, Open-Angle</mesh_term>
+  </condition_browse>
+  <intervention_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Betaxolol</mesh_term>
+  </intervention_browse>
+  <!-- Results have not yet been posted for this study                                          -->
+</clinical_study>
+

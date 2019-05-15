@@ -1,0 +1,144 @@
+<clinical_study>
+  <!-- This xml conforms to an XML Schema at:
+    https://clinicaltrials.gov/ct2/html/images/info/public.xsd -->
+  <required_header>
+    <download_date>ClinicalTrials.gov processed this data on February 12, 2019</download_date>
+    <link_text>Link to the current ClinicalTrials.gov record.</link_text>
+    <url>https://clinicaltrials.gov/show/NCT00000159</url>
+  </required_header>
+  <id_info>
+    <org_study_id>NEI-61</org_study_id>
+    <nct_id>NCT00000159</nct_id>
+  </id_info>
+  <brief_title>Sorbinil Retinopathy Trial (SRT)</brief_title>
+  <sponsors>
+    <lead_sponsor>
+      <agency>National Eye Institute (NEI)</agency>
+      <agency_class>NIH</agency_class>
+    </lead_sponsor>
+  </sponsors>
+  <source>National Eye Institute (NEI)</source>
+  <brief_summary>
+    <textblock>
+      To evaluate the safety and efficacy of the investigational drug sorbinil, an aldose reductase
+      inhibitor, in preventing the development of diabetic retinopathy and neuropathy in persons
+      with insulin-dependent diabetes.
+    </textblock>
+  </brief_summary>
+  <detailed_description>
+    <textblock>
+      During the last two decades, vision researchers have studied intensively the role of the
+      enzyme aldose reductase (AR) in diabetic cataract and in other diabetic complications. The
+      potentially damaging effects of AR in diabetes were first discovered in the lens fiber cells.
+      In these cells, the enzyme catalyzes the reduction of high levels of glucose to sorbitol
+      through the polyol pathway and initiates a sequence of events that eventually results in
+      opacification of the lens. Because sorbitol (a sugar alcohol) and fructose (a subsequent
+      product of glucose metabolism) cannot readily diffuse across cell membranes, they become
+      trapped in lens fiber cells. There they accumulate at unusually high levels and exert a
+      significant osmotic stress, causing an influx of water and swelling of the lens fibers. Major
+      electrolytic and osmotic changes then occur that lead to lens opacity.
+
+      More recently, the detection of AR in the pericytes of retinal capillaries -- cells that are
+      involved very early in the evolution of diabetic retinopathy -- suggests that this enzyme may
+      also play a role in the pathogenesis of this disorder. Scientists now know that AR is present
+      in nerve tissue, and they speculate that in diabetes it induces the depletion of myo
+      -inositol, which leads to the lessening of nerve conduction velocity in diabetic neuropathy.
+
+      Chemicals that inhibit aldose reductase have proved effective in preventing damage to the
+      lens, in preventing thickening of retinal capillary basement membranes in diabetic animals,
+      and in improving nerve conduction velocity values in patients with diabetic neuropathy.
+      Therefore, it is possible that AR inhibitors also may be able to prevent, delay, or halt the
+      development or progression of diabetic retinopathy.
+
+      To test this hypothesis, an AR inhibitor developed by Pfizer Inc., sorbinil, was studied in
+      this clinical trial. (Other AR inhibitors underwent study in clinical trials sponsored by
+      Ayerst and Alcon.) Initially, 402 patients were randomized into the double-masked treatment
+      period using a dosage schedule of one 250-mg tablet daily. In 1985, recruitment was
+      voluntarily halted by Pfizer because of several serious hypersensitivity reactions among
+      patients taking sorbinil in clinical trials in the United States and Europe. In November
+      1985, recruitment resumed, using a titrated dosage schedule of 25 mg daily for 2 weeks,
+      followed by 75 mg daily for 2 weeks, then 250 mg daily for the duration. A total of 497
+      patients participated in the study.
+
+      Followup visits were scheduled weekly for the first 4 weeks, monthly for the next 2 months,
+      and every 3 months thereafter. For patients assigned to the titration protocol, additional
+      visits were made at weeks 5 and 6. A complete history was recorded and a physical examination
+      was conducted every 15 months; electrocardiogram was recorded every 6 months. In addition,
+      patients were cautioned to note any signs of hypersensitivity.
+
+      Efficacy visits, scheduled at 9-month intervals after the first visit at 12 months, included
+      fundus photographs, visual acuity examinations according to the Early Treatment Diabetic
+      Retinopathy Study (ETDRS), red blood cell sorbitol measure, and assessment of coronary risk
+      factor classification.
+
+      The Sorbinil Retinopathy Trial (SRT) was a unique collaboration between private industry and
+      the Federal government in designing, funding, and conducting a multicenter, randomized
+      clinical trial. Pfizer Inc. supported 10 of the 11 participating Clinical Centers, provided
+      the medication, and funded the Data Coordinating Center and Fundus Photograph Reading Center.
+      The National Eye Institute funded the Policy, Data, and Safety Monitoring Committee and its
+      own participating Clinical Center.
+    </textblock>
+  </detailed_description>
+  <overall_status>Completed</overall_status>
+  <start_date>August 1983</start_date>
+  <phase>Phase 3</phase>
+  <study_type>Interventional</study_type>
+  <has_expanded_access>No</has_expanded_access>
+  <study_design_info>
+    <allocation>Randomized</allocation>
+    <primary_purpose>Treatment</primary_purpose>
+    <masking>Double</masking>
+  </study_design_info>
+  <condition>Diabetic Retinopathy</condition>
+  <condition>Diabetes Mellitus</condition>
+  <intervention>
+    <intervention_type>Drug</intervention_type>
+    <intervention_name>Sorbinil</intervention_name>
+  </intervention>
+  <eligibility>
+    <criteria>
+      <textblock>
+        Men and women eligible for the SRT had diabetes for 1 to 15 years and were between ages 18
+        and 56 at the time of enrollment. They had begun taking insulin before their 41st birthday.
+        Their hemoglobin A1c value was within the diabetic range. On retinal examination, they
+        showed no evidence of or only very mild retinopathy, with no more than five microaneurysms
+        per eye. Women were postmenopausal, sterile, or had an IUD in place.
+      </textblock>
+    </criteria>
+    <gender>All</gender>
+    <minimum_age>18 Years</minimum_age>
+    <maximum_age>56 Years</maximum_age>
+    <healthy_volunteers>No</healthy_volunteers>
+  </eligibility>
+  <reference>
+    <citation>A randomized trial of sorbinil, an aldose reductase inhibitor, in diabetic retinopathy. Sorbinil Retinopathy Trial Research Group. Arch Ophthalmol. 1990 Sep;108(9):1234-44.</citation>
+    <PMID>2119168</PMID>
+  </reference>
+  <reference>
+    <citation>The sorbinil retinopathy trial: neuropathy results. Sorbinil Retinopathy Trial Research Group. Neurology. 1993 Jun;43(6):1141-9.</citation>
+    <PMID>8170559</PMID>
+  </reference>
+  <verification_date>October 1999</verification_date>
+  <!-- For several months we've had both old and new date name tags                             -->
+  <!-- Now, the old date names have been dropped.                                               -->
+  <!-- The new date name replacements are:                                                      -->
+  <!--     OLD (gone)                                        NEW (in use)                       -->
+  <!--   lastchanged_date                         becomes   last_update_submitted               -->
+  <!--   firstreceived_date                       becomes   study_first_submitted               -->
+  <!--   firstreceived_results_date               becomes   results_first_submitted             -->
+  <!--   firstreceived_results_disposition_date   becomes   disposition_first_submitted         -->
+  <study_first_submitted>September 23, 1999</study_first_submitted>
+  <study_first_submitted_qc>September 23, 1999</study_first_submitted_qc>
+  <study_first_posted type="Estimate">September 24, 1999</study_first_posted>
+  <last_update_submitted>June 23, 2005</last_update_submitted>
+  <last_update_submitted_qc>June 23, 2005</last_update_submitted_qc>
+  <last_update_posted type="Estimate">June 24, 2005</last_update_posted>
+  <condition_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Diabetes Mellitus</mesh_term>
+    <mesh_term>Retinal Diseases</mesh_term>
+    <mesh_term>Diabetic Retinopathy</mesh_term>
+  </condition_browse>
+  <!-- Results have not yet been posted for this study                                          -->
+</clinical_study>
+

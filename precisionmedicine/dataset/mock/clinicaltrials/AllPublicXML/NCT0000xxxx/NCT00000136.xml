@@ -1,0 +1,584 @@
+<clinical_study>
+  <!-- This xml conforms to an XML Schema at:
+    https://clinicaltrials.gov/ct2/html/images/info/public.xsd -->
+  <required_header>
+    <download_date>ClinicalTrials.gov processed this data on February 12, 2019</download_date>
+    <link_text>Link to the current ClinicalTrials.gov record.</link_text>
+    <url>https://clinicaltrials.gov/show/NCT00000136</url>
+  </required_header>
+  <id_info>
+    <org_study_id>NEI-35</org_study_id>
+    <secondary_id>U10EY008057</secondary_id>
+    <nct_id>NCT00000136</nct_id>
+  </id_info>
+  <brief_title>Studies of the Ocular Complications of AIDS (SOCA)--Foscarnet-Ganciclovir CMV Retinitis Trial (FGCRT)</brief_title>
+  <acronym>FGCRT</acronym>
+  <official_title>Foscarnet-Ganciclovir CMV Retinitis Trial</official_title>
+  <sponsors>
+    <lead_sponsor>
+      <agency>Johns Hopkins Bloomberg School of Public Health</agency>
+      <agency_class>Other</agency_class>
+    </lead_sponsor>
+    <collaborator>
+      <agency>National Eye Institute (NEI)</agency>
+      <agency_class>NIH</agency_class>
+    </collaborator>
+    <collaborator>
+      <agency>Johns Hopkins University</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+    <collaborator>
+      <agency>University of Wisconsin, Madison</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+    <collaborator>
+      <agency>Baylor College of Medicine</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+    <collaborator>
+      <agency>Louisiana State University Health Sciences Center in New Orleans</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+    <collaborator>
+      <agency>New York Presbyterian Hospital</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+    <collaborator>
+      <agency>Icahn School of Medicine at Mount Sinai</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+    <collaborator>
+      <agency>New York University School of Medicine</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+    <collaborator>
+      <agency>Northwestern University</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+    <collaborator>
+      <agency>University of California, Los Angeles</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+    <collaborator>
+      <agency>University of California, San Diego</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+    <collaborator>
+      <agency>University of California, San Francisco</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+    <collaborator>
+      <agency>University of Miami</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+    <collaborator>
+      <agency>University of Massachusetts, Worcester</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+    <collaborator>
+      <agency>Memorial Sloan Kettering Cancer Center</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+  </sponsors>
+  <source>Johns Hopkins Bloomberg School of Public Health</source>
+  <oversight_info>
+    <has_dmc>Yes</has_dmc>
+  </oversight_info>
+  <brief_summary>
+    <textblock>
+      To evaluate the relative safety and efficacy of ganciclovir and foscarnet as initial
+      treatment of patients with cytomegalovirus (CMV) retinitis.
+    </textblock>
+  </brief_summary>
+  <detailed_description>
+    <textblock>
+      CMV retinitis is the most common intraocular infection in patients with AIDS and is estimated
+      to affect 35 to 40 percent of patients with AIDS. Untreated CMV retinitis is a progressive
+      disorder, the end result of which is total retinal destruction and blindness. The first two
+      drugs approved by the United States Food and Drug Administration (FDA) for the treatment of
+      CMV retinitis were ganciclovir (Cytovene) and foscarnet (Foscavir). At the time of this
+      trial, both ganciclovir and foscarnet were available only as intravenous formulations. Both
+      drugs were given in a similar two-step fashion: an initial 2-week course of high-dose therapy
+      (induction) to control the infection followed by long-term lower dose therapy to prevent
+      relapse (maintenance). The FGCRT compared foscarnet and ganciclovir as initial therapy for
+      CMV retinitis.
+
+      The FGCRT was a multicenter, randomized, controlled clinical trial comparing foscarnet and
+      ganciclovir as initial therapy for CMV retinitis. Patients with previously untreated CMV
+      retinitis were randomized to therapy with either intravenous ganciclovir or intravenous
+      foscarnet. The outcome measures of this trial were survival, retinitis progression, loss of
+      visual function (visual acuity and visual field), and morbidity.
+    </textblock>
+  </detailed_description>
+  <overall_status>Completed</overall_status>
+  <start_date>March 1990</start_date>
+  <completion_date type="Actual">October 1991</completion_date>
+  <primary_completion_date type="Actual">October 1991</primary_completion_date>
+  <phase>Phase 3</phase>
+  <study_type>Interventional</study_type>
+  <has_expanded_access>No</has_expanded_access>
+  <study_design_info>
+    <allocation>Randomized</allocation>
+    <intervention_model>Parallel Assignment</intervention_model>
+    <primary_purpose>Treatment</primary_purpose>
+    <masking>Single (Outcomes Assessor)</masking>
+  </study_design_info>
+  <primary_outcome>
+    <measure>Mortality</measure>
+    <time_frame>All patients enrolled will be followed until a common study closing date, which was chosen to provide a minimum of 1 year of follow-up for all patients enrolled in the trial.</time_frame>
+  </primary_outcome>
+  <number_of_arms>2</number_of_arms>
+  <enrollment type="Actual">234</enrollment>
+  <condition>HIV Infections</condition>
+  <condition>Cytomegalovirus Retinitis</condition>
+  <arm_group>
+    <arm_group_label>Foscarnet</arm_group_label>
+    <arm_group_type>Experimental</arm_group_type>
+    <description>The induction dose for foscarnet is 60 mg/kg every 8 hours. Full dose maintenance therapy for foscarnet is 90 mg/kg/day</description>
+  </arm_group>
+  <arm_group>
+    <arm_group_label>Ganciclovir</arm_group_label>
+    <arm_group_type>Experimental</arm_group_type>
+    <description>The induction dose for ganciclovir is 5 mg/kg every 12 hours. Full dose maintenance therapy for ganciclovir is 5 mg/kg every 24 hours, 7 days a week.</description>
+  </arm_group>
+  <intervention>
+    <intervention_type>Drug</intervention_type>
+    <intervention_name>Foscarnet</intervention_name>
+    <description>60 mg/kg every 8 hours, 90 mg/kg/day</description>
+    <arm_group_label>Foscarnet</arm_group_label>
+    <arm_group_label>Ganciclovir</arm_group_label>
+    <other_name>Foscavir</other_name>
+  </intervention>
+  <intervention>
+    <intervention_type>Drug</intervention_type>
+    <intervention_name>Ganciclovir</intervention_name>
+    <description>5 mg/kg every 12 hours, 5 mg/kg every 24 hours</description>
+    <arm_group_label>Foscarnet</arm_group_label>
+    <arm_group_label>Ganciclovir</arm_group_label>
+    <other_name>Vitraset</other_name>
+  </intervention>
+  <eligibility>
+    <criteria>
+      <textblock>
+        Inclusion criteria:
+
+          -  CMV retinitis in one or both eyes
+
+          -  At least 1/4 disk are of one CMV lesion photographable
+
+          -  Diagnosis of AIDS as defined by Center for Disease Control criteria or documented HIV
+             infection
+
+          -  Age 13 and greater
+
+          -  Visual acuity ≥ 3/200 in at least one eye diagnosed with CMV retinitis
+
+          -  Absolute neutrophil count ≥ 1,000 cells/µl
+
+          -  Platelet ≥ 25,000 cells/µl
+
+          -  Serum creatinine ≥ 2.0 mg/dl
+
+          -  Karnofsky score ≥ 60
+
+          -  Informed consent
+
+        Exclusion criteria:
+
+          -  Previous treatment of CMV retinitis
+
+          -  Treatment with anti-CMV therapy for an extra-ocular CMV infection currently or in the
+             past 28 days
+
+          -  Known or suspected allergy to study drugs
+
+          -  Pregnant or Lactating
+      </textblock>
+    </criteria>
+    <gender>All</gender>
+    <minimum_age>13 Years</minimum_age>
+    <maximum_age>N/A</maximum_age>
+    <healthy_volunteers>No</healthy_volunteers>
+  </eligibility>
+  <overall_official>
+    <last_name>Curtis Meinert, PhD</last_name>
+    <role>Principal Investigator</role>
+    <affiliation>Johns Hopkins University</affiliation>
+  </overall_official>
+  <link>
+    <url>http://www.nei.nih.gov/NEWS/clinicalalerts/alert-soca-fgcrt.asp</url>
+    <description>http://www.nei.nih.gov/NEWS/clinicalalerts/alert-soca-fgcrt.asp</description>
+  </link>
+  <link>
+    <url>http://www.nei.nih.gov/news/pressreleases/fgcrtpressrelease.asp</url>
+    <description>http://www.nei.nih.gov/news/pressreleases/fgcrtpressrelease.asp</description>
+  </link>
+  <reference>
+    <citation>Studies of ocular complications of AIDS Foscarnet-Ganciclovir Cytomegalovirus Retinitis Trial: 1. Rationale, design, and methods. AIDS Clinical Trials Group (ACTG). Control Clin Trials. 1992 Feb;13(1):22-39.</citation>
+    <PMID>1315661</PMID>
+  </reference>
+  <reference>
+    <citation>Assessment of cytomegalovirus retinitis. Clinical evaluation vs centralized grading of fundus photographs. Studies of Ocular Complications of AIDS Research Group, AIDS Clinical Trials Group. Arch Ophthalmol. 1996 Jul;114(7):791-805.</citation>
+    <PMID>8660161</PMID>
+  </reference>
+  <reference>
+    <citation>Clinical vs photographic assessment of treatment of cytomegalovirus retinitis. Foscarnet-Ganciclovir Cytomegalovirus Retinitis Trial Report 8. Studies of Ocular Complications of AIDS Research Group, AIDS Clinical Trials Group. Arch Ophthalmol. 1996 Jul;114(7):848-55.</citation>
+    <PMID>8660169</PMID>
+  </reference>
+  <reference>
+    <citation>Wu AW, Coleson LC, Holbrook J, Jabs DA. Measuring visual function and quality of life in patients with cytomegalovirus retinitis. Development of a questionnaire. Studies of Ocular Complication of AIDS Research Group. Arch Ophthalmol. 1996 Jul;114(7):841-7.</citation>
+    <PMID>8660168</PMID>
+  </reference>
+  <reference>
+    <citation>Cytomegalovirus (CMV) culture results, drug resistance, and clinical outcome in patients with AIDS and CMV retinitis treated with foscarnet or ganciclovir. Studies of Ocular Complications of AIDS (SOCA) in collaboration with the AIDS Clinical Trial Group. J Infect Dis. 1997 Jul;176(1):50-8.</citation>
+    <PMID>9207349</PMID>
+  </reference>
+  <reference>
+    <citation>Foscarnet-Ganciclovir Cytomegalovirus Retinitis Trial: 5. Clinical features of cytomegalovirus retinitis at diagnosis. Studies of ocular complications of AIDS Research Group in collaboration with the AIDS Clinical Trials Group. Am J Ophthalmol. 1997 Aug;124(2):141-57.</citation>
+    <PMID>9262538</PMID>
+  </reference>
+  <reference>
+    <citation>Rhegmatogenous retinal detachment in patients with cytomegalovirus retinitis: the Foscarnet-Ganciclovir Cytomegalovirus Retinitis Trial. The Studies of Ocular Complications of AIDS (SOCA) Research Group in Collaboration with the AIDS Clinical Trials Group (ACTG). Am J Ophthalmol. 1997 Jul;124(1):61-70.</citation>
+    <PMID>9222234</PMID>
+  </reference>
+  <reference>
+    <citation>Studies of Ocular Complications of AIDS Research Group; AIDS Clinical Trials Group. Mortality in patients with the acquired immunodeficiency syndrome treated with either foscarnet or ganciclovir for cytomegalovirus retinitis. N Engl J Med. 1992 Jan 23;326(4):213-20. Erratum in: N Engl J Med 1992 Apr 23;326(17):1172.</citation>
+    <PMID>1345799</PMID>
+  </reference>
+  <reference>
+    <citation>Foscarnet-Ganciclovir Cytomegalovirus Retinitis Trial. 4. Visual outcomes. Studies of Ocular Complications of AIDS Research Group in collaboration with the AIDS Clinical Trials Group. Ophthalmology. 1994 Jul;101(7):1250-61.</citation>
+    <PMID>8035989</PMID>
+  </reference>
+  <reference>
+    <citation>Antiviral effects of foscarnet and ganciclovir therapy on human immunodeficiency virus p24 antigen in patients with AIDS and cytomegalovirus retinitis. Studies of Ocular Complications of AIDS Research Group in collaboration with AIDS Clinical Trials Group. J Infect Dis. 1995 Sep;172(3):613-21.</citation>
+    <PMID>7658051</PMID>
+  </reference>
+  <reference>
+    <citation>Morbidity and toxic effects associated with ganciclovir or foscarnet therapy in a randomized cytomegalovirus retinitis trial. Studies of ocular complications of AIDS Research Group, in collaboration with the AIDS Clinical Trials Group. Arch Intern Med. 1995 Jan 9;155(1):65-74.</citation>
+    <PMID>7802522</PMID>
+  </reference>
+  <reference>
+    <citation>Wu AW, Revicki DA, Jacobson D, Malitz FE. Evidence for reliability, validity and usefulness of the Medical Outcomes Study HIV Health Survey (MOS-HIV). Qual Life Res. 1997 Aug;6(6):481-93. Review.</citation>
+    <PMID>9330549</PMID>
+  </reference>
+  <reference>
+    <citation>Holbrook JT, Davis MD, Hubbard LD, Martin BK, Holland GN, Jabs DA, Gilpin AK, Meinert C, Reshef DS. Risk factors for advancement of cytomegalovirus retinitis in patients with acquired immunodeficiency syndrome. Studies of Ocular Complications of AIDS Research Group. Arch Ophthalmol. 2000 Sep;118(9):1196-204.</citation>
+    <PMID>10980764</PMID>
+  </reference>
+  <verification_date>July 2015</verification_date>
+  <!-- For several months we've had both old and new date name tags                             -->
+  <!-- Now, the old date names have been dropped.                                               -->
+  <!-- The new date name replacements are:                                                      -->
+  <!--     OLD (gone)                                        NEW (in use)                       -->
+  <!--   lastchanged_date                         becomes   last_update_submitted               -->
+  <!--   firstreceived_date                       becomes   study_first_submitted               -->
+  <!--   firstreceived_results_date               becomes   results_first_submitted             -->
+  <!--   firstreceived_results_disposition_date   becomes   disposition_first_submitted         -->
+  <study_first_submitted>September 23, 1999</study_first_submitted>
+  <study_first_submitted_qc>September 23, 1999</study_first_submitted_qc>
+  <study_first_posted type="Estimate">September 24, 1999</study_first_posted>
+  <results_first_submitted>June 22, 2015</results_first_submitted>
+  <results_first_submitted_qc>September 22, 2015</results_first_submitted_qc>
+  <results_first_posted type="Estimate">October 22, 2015</results_first_posted>
+  <last_update_submitted>September 22, 2015</last_update_submitted>
+  <last_update_submitted_qc>September 22, 2015</last_update_submitted_qc>
+  <last_update_posted type="Estimate">October 22, 2015</last_update_posted>
+  <responsible_party>
+    <responsible_party_type>Sponsor</responsible_party_type>
+  </responsible_party>
+  <condition_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>HIV Infections</mesh_term>
+    <mesh_term>Retinitis</mesh_term>
+    <mesh_term>Cytomegalovirus Retinitis</mesh_term>
+  </condition_browse>
+  <intervention_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Ganciclovir</mesh_term>
+    <mesh_term>Foscarnet</mesh_term>
+    <mesh_term>Phosphonoacetic Acid</mesh_term>
+    <mesh_term>Ganciclovir triphosphate</mesh_term>
+  </intervention_browse>
+
+  <clinical_results>
+
+    <participant_flow>
+      <group_list>
+        <group group_id="P1">
+          <title>Foscarnet</title>
+          <description>The induction dose for foscarnet is 60 mg/kg every 8 hours. Full dose maintenance therapy for foscarnet is 90 mg/kg/day
+Foscarnet: 60 mg/kg every 8 hours, 90 mg/kg/day
+Ganciclovir: 5 mg/kg every 12 hours, 5 mg/kg every 24 hours</description>
+        </group>
+        <group group_id="P2">
+          <title>Ganciclovir</title>
+          <description>The induction dose for ganciclovir is 5 mg/kg every 12 hours. Full dose maintenance therapy for ganciclovir is 5 mg/kg every 24 hours, 7 days a week.
+Foscarnet: 60 mg/kg every 8 hours, 90 mg/kg/day
+Ganciclovir: 5 mg/kg every 12 hours, 5 mg/kg every 24 hours</description>
+        </group>
+      </group_list>
+      <period_list>
+        <period>
+          <title>Overall Study</title>
+          <milestone_list>
+            <milestone>
+              <title>STARTED</title>
+              <participants_list>
+                <participants group_id="P1" count="107"/>
+                <participants group_id="P2" count="127"/>
+              </participants_list>
+            </milestone>
+            <milestone>
+              <title>COMPLETED</title>
+              <participants_list>
+                <participants group_id="P1" count="107"/>
+                <participants group_id="P2" count="127"/>
+              </participants_list>
+            </milestone>
+            <milestone>
+              <title>NOT COMPLETED</title>
+              <participants_list>
+                <participants group_id="P1" count="0"/>
+                <participants group_id="P2" count="0"/>
+              </participants_list>
+            </milestone>
+          </milestone_list>
+        </period>
+      </period_list>
+    </participant_flow>
+
+    <baseline>
+      <group_list>
+        <group group_id="B1">
+          <title>Foscarnet</title>
+          <description>The induction dose for foscarnet is 60 mg/kg every 8 hours. Full dose maintenance therapy for foscarnet is 90 mg/kg/day
+Foscarnet: 60 mg/kg every 8 hours, 90 mg/kg/day
+Ganciclovir: 5 mg/kg every 12 hours, 5 mg/kg every 24 hours</description>
+        </group>
+        <group group_id="B2">
+          <title>Ganciclovir</title>
+          <description>The induction dose for ganciclovir is 5 mg/kg every 12 hours. Full dose maintenance therapy for ganciclovir is 5 mg/kg every 24 hours, 7 days a week.
+Foscarnet: 60 mg/kg every 8 hours, 90 mg/kg/day
+Ganciclovir: 5 mg/kg every 12 hours, 5 mg/kg every 24 hours</description>
+        </group>
+        <group group_id="B3">
+          <title>Total</title>
+          <description>Total of all reporting groups</description>
+        </group>
+      </group_list>
+      <analyzed_list>
+        <analyzed>
+          <units>Participants</units>
+          <scope>Overall</scope>
+          <count_list>
+            <count group_id="B1" value="107"/>
+            <count group_id="B2" value="127"/>
+            <count group_id="B3" value="234"/>
+          </count_list>
+        </analyzed>
+      </analyzed_list>
+      <measure_list>
+        <measure>
+          <title>Age</title>
+          <units>Participants</units>
+          <param>Count of Participants</param>
+          <class_list>
+            <class>
+              <category_list>
+                <category>
+                  <title>&lt;=18 years</title>
+                  <measurement_list>
+                    <measurement group_id="B1" value="0"/>
+                    <measurement group_id="B2" value="0"/>
+                    <measurement group_id="B3" value="0"/>
+                  </measurement_list>
+                </category>
+                <category>
+                  <title>Between 18 and 65 years</title>
+                  <measurement_list>
+                    <measurement group_id="B1" value="107"/>
+                    <measurement group_id="B2" value="127"/>
+                    <measurement group_id="B3" value="234"/>
+                  </measurement_list>
+                </category>
+                <category>
+                  <title>&gt;=65 years</title>
+                  <measurement_list>
+                    <measurement group_id="B1" value="0"/>
+                    <measurement group_id="B2" value="0"/>
+                    <measurement group_id="B3" value="0"/>
+                  </measurement_list>
+                </category>
+              </category_list>
+            </class>
+          </class_list>
+        </measure>
+        <measure>
+          <title>Sex: Female, Male</title>
+          <units>Participants</units>
+          <param>Count of Participants</param>
+          <class_list>
+            <class>
+              <category_list>
+                <category>
+                  <title>Female</title>
+                  <measurement_list>
+                    <measurement group_id="B1" value="9"/>
+                    <measurement group_id="B2" value="11"/>
+                    <measurement group_id="B3" value="20"/>
+                  </measurement_list>
+                </category>
+                <category>
+                  <title>Male</title>
+                  <measurement_list>
+                    <measurement group_id="B1" value="98"/>
+                    <measurement group_id="B2" value="116"/>
+                    <measurement group_id="B3" value="214"/>
+                  </measurement_list>
+                </category>
+              </category_list>
+            </class>
+          </class_list>
+        </measure>
+        <measure>
+          <title>Region of Enrollment</title>
+          <units>participants</units>
+          <param>Number</param>
+          <class_list>
+            <class>
+              <title>United States</title>
+              <category_list>
+                <category>
+                  <measurement_list>
+                    <measurement group_id="B1" value="107"/>
+                    <measurement group_id="B2" value="127"/>
+                    <measurement group_id="B3" value="234"/>
+                  </measurement_list>
+                </category>
+              </category_list>
+            </class>
+          </class_list>
+        </measure>
+      </measure_list>
+    </baseline>
+
+    <outcome_list>
+      <outcome>
+        <type>Primary</type>
+        <title>Mortality</title>
+        <time_frame>All patients enrolled will be followed until a common study closing date, which was chosen to provide a minimum of 1 year of follow-up for all patients enrolled in the trial.</time_frame>
+        <group_list>
+          <group group_id="O1">
+            <title>Foscarnet</title>
+            <description>The induction dose for foscarnet is 60 mg/kg every 8 hours. Full dose maintenance therapy for foscarnet is 90 mg/kg/day
+Foscarnet: 60 mg/kg every 8 hours, 90 mg/kg/day
+Ganciclovir: 5 mg/kg every 12 hours, 5 mg/kg every 24 hours</description>
+          </group>
+          <group group_id="O2">
+            <title>Ganciclovir</title>
+            <description>The induction dose for ganciclovir is 5 mg/kg every 12 hours. Full dose maintenance therapy for ganciclovir is 5 mg/kg every 24 hours, 7 days a week.
+Foscarnet: 60 mg/kg every 8 hours, 90 mg/kg/day
+Ganciclovir: 5 mg/kg every 12 hours, 5 mg/kg every 24 hours</description>
+          </group>
+        </group_list>
+        <measure>
+          <title>Mortality</title>
+          <units>participants</units>
+          <param>Number</param>
+          <analyzed_list>
+            <analyzed>
+              <units>Participants</units>
+              <scope>Measure</scope>
+              <count_list>
+                <count group_id="O1" value="107"/>
+                <count group_id="O2" value="127"/>
+              </count_list>
+            </analyzed>
+          </analyzed_list>
+          <class_list>
+            <class>
+              <category_list>
+                <category>
+                  <measurement_list>
+                    <measurement group_id="O1" value="107"/>
+                    <measurement group_id="O2" value="127"/>
+                  </measurement_list>
+                </category>
+              </category_list>
+            </class>
+          </class_list>
+        </measure>
+      </outcome>
+    </outcome_list>
+
+    <reported_events>
+      <time_frame>1 year, 7 months</time_frame>
+      <group_list>
+        <group group_id="E1">
+          <title>Foscarnet</title>
+          <description>The induction dose for foscarnet is 60 mg/kg every 8 hours. Full dose maintenance therapy for foscarnet is 90 mg/kg/day
+Foscarnet: 60 mg/kg every 8 hours, 90 mg/kg/day
+Ganciclovir: 5 mg/kg every 12 hours, 5 mg/kg every 24 hours</description>
+        </group>
+        <group group_id="E2">
+          <title>Ganciclovir</title>
+          <description>The induction dose for ganciclovir is 5 mg/kg every 12 hours. Full dose maintenance therapy for ganciclovir is 5 mg/kg every 24 hours, 7 days a week.
+Foscarnet: 60 mg/kg every 8 hours, 90 mg/kg/day
+Ganciclovir: 5 mg/kg every 12 hours, 5 mg/kg every 24 hours</description>
+        </group>
+      </group_list>
+      <serious_events>
+        <default_assessment>Systematic Assessment</default_assessment>
+        <category_list>
+          <category>
+            <title>Total</title>
+            <event_list>
+              <event>
+                <sub_title>Total, serious adverse events</sub_title>
+                <counts group_id="E1" subjects_affected="60" subjects_at_risk="107"/>
+                <counts group_id="E2" subjects_affected="73" subjects_at_risk="127"/>
+              </event>
+            </event_list>
+          </category>
+          <category>
+            <title>Immune system disorders</title>
+            <event_list>
+              <event>
+                <sub_title>Opportunistic Infection</sub_title>
+                <counts group_id="E1" events="153" subjects_affected="60" subjects_at_risk="107"/>
+                <counts group_id="E2" events="180" subjects_affected="73" subjects_at_risk="127"/>
+              </event>
+            </event_list>
+          </category>
+        </category_list>
+      </serious_events>
+      <other_events>
+        <frequency_threshold>0</frequency_threshold>
+        <category_list>
+          <category>
+            <title>Total</title>
+            <event_list>
+              <event>
+                <sub_title>Total, other adverse events</sub_title>
+                <counts group_id="E1" subjects_affected="0" subjects_at_risk="107"/>
+                <counts group_id="E2" subjects_affected="0" subjects_at_risk="127"/>
+              </event>
+            </event_list>
+          </category>
+        </category_list>
+      </other_events>
+    </reported_events>
+
+    <certain_agreements>
+      <pi_employee>Principal Investigators are NOT employed by the organization sponsoring the study.</pi_employee>
+      <restrictive_agreement>There is NOT an agreement between Principal Investigators and the Sponsor (or its agents) that restricts the PI's rights to discuss or publish trial results after the trial is completed. </restrictive_agreement>
+    </certain_agreements>
+    <point_of_contact>
+      <name_or_title>Curtis Meinert, PhD</name_or_title>
+      <organization>The Johns Hopkins University</organization>
+      <phone>410-955-8198</phone>
+      <email>cmeinert@jhsph.edu</email>
+    </point_of_contact>
+  </clinical_results>
+</clinical_study>
+

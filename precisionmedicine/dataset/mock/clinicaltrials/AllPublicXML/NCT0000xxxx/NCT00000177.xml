@@ -1,0 +1,388 @@
+<clinical_study>
+  <!-- This xml conforms to an XML Schema at:
+    https://clinicaltrials.gov/ct2/html/images/info/public.xsd -->
+  <required_header>
+    <download_date>ClinicalTrials.gov processed this data on February 12, 2019</download_date>
+    <link_text>Link to the current ClinicalTrials.gov record.</link_text>
+    <url>https://clinicaltrials.gov/show/NCT00000177</url>
+  </required_header>
+  <id_info>
+    <org_study_id>IA0001</org_study_id>
+    <secondary_id>3U01AG010483-08S2</secondary_id>
+    <nct_id>NCT00000177</nct_id>
+  </id_info>
+  <brief_title>Estrogen Hormone Protocol</brief_title>
+  <sponsors>
+    <lead_sponsor>
+      <agency>National Institute on Aging (NIA)</agency>
+      <agency_class>NIH</agency_class>
+    </lead_sponsor>
+  </sponsors>
+  <source>National Institute on Aging (NIA)</source>
+  <brief_summary>
+    <textblock>
+      Estrogen is a hormone that is dominant in the female reproductive system. In women, most
+      estrogen is produced by the ovaries. Men produce estrogen by converting testosterone into
+      estrogen. Because this hormone also has many beneficial effects on brain cells, it currently
+      is being studied as a treatment for Alzheimer's disease. The enzyme that forms the
+      neurotransmitter acetylcholine is promoted in the presence of estrogen. Several very small
+      clinical studies have demonstrated improvement in cognitive function and mood measures in
+      women with Alzheimer's disease who take estrogen.
+    </textblock>
+  </brief_summary>
+  <overall_status>Completed</overall_status>
+  <start_date>October 1995</start_date>
+  <completion_date type="Actual">January 1999</completion_date>
+  <primary_completion_date type="Actual">January 1999</primary_completion_date>
+  <phase>Phase 3</phase>
+  <study_type>Interventional</study_type>
+  <has_expanded_access>No</has_expanded_access>
+  <study_design_info>
+    <allocation>Randomized</allocation>
+    <primary_purpose>Treatment</primary_purpose>
+    <masking>Double</masking>
+  </study_design_info>
+  <enrollment>120</enrollment>
+  <condition>Alzheimer Disease</condition>
+  <intervention>
+    <intervention_type>Drug</intervention_type>
+    <intervention_name>Estrogen</intervention_name>
+  </intervention>
+  <eligibility>
+    <criteria>
+      <textblock>
+        Inclusion Criteria:
+
+          -  Women with a diagnosis of Alzheimer's disease who currently are not taking estrogen
+             replacement therapy, who have had a hysterectomy, and who are in stable general
+             health.
+
+        Exclusion Criteria:
+
+          -  Patients with an uncontrolled health problem, such as untreated high blood pressure or
+             thyroid disease.
+      </textblock>
+    </criteria>
+    <gender>Female</gender>
+    <minimum_age>60 Years</minimum_age>
+    <maximum_age>N/A</maximum_age>
+    <healthy_volunteers>No</healthy_volunteers>
+  </eligibility>
+  <overall_official>
+    <last_name>Leon Thal, MD.</last_name>
+    <role>Principal Investigator</role>
+    <affiliation>University of California, San Diego</affiliation>
+  </overall_official>
+  <location>
+    <facility>
+      <name>University of Alabama, Birmingham</name>
+      <address>
+        <city>Birmingham</city>
+        <state>Alabama</state>
+        <zip>35294-0017</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of California, San Diego</name>
+      <address>
+        <city>San Diego</city>
+        <state>California</state>
+        <zip>92093</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Mayo Clinic Jacksonville</name>
+      <address>
+        <city>Jacksonville</city>
+        <state>Florida</state>
+        <zip>32225</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of South Florida</name>
+      <address>
+        <city>Tampa</city>
+        <state>Florida</state>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Emory University</name>
+      <address>
+        <city>Atlanta</city>
+        <state>Georgia</state>
+        <zip>30329</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Rush Presbyterian St. Luke's Medical Center</name>
+      <address>
+        <city>Chicago</city>
+        <state>Illinois</state>
+        <zip>60612</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Southern Illinois University</name>
+      <address>
+        <city>Springfield</city>
+        <state>Illinois</state>
+        <zip>62702</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Indiana University Medical Center</name>
+      <address>
+        <city>Indianapolis</city>
+        <state>Indiana</state>
+        <zip>46202-5266</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Kansas Medical Center</name>
+      <address>
+        <city>Kansas City</city>
+        <state>Kansas</state>
+        <zip>66160</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Kentucky</name>
+      <address>
+        <city>Lexington</city>
+        <state>Kentucky</state>
+        <zip>40536-0230</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Johns Hopkins University</name>
+      <address>
+        <city>Baltimore</city>
+        <state>Maryland</state>
+        <zip>21224</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Massachusetts General Hospital</name>
+      <address>
+        <city>Boston</city>
+        <state>Massachusetts</state>
+        <zip>02114</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Minnesota</name>
+      <address>
+        <city>Minneapolis</city>
+        <state>Minnesota</state>
+        <zip>55455</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Mayo Clinic</name>
+      <address>
+        <city>Rochester</city>
+        <state>Minnesota</state>
+        <zip>55901-0144</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Washington University</name>
+      <address>
+        <city>St. Louis</city>
+        <state>Missouri</state>
+        <zip>63110</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>New York University Medical Center</name>
+      <address>
+        <city>New York</city>
+        <state>New York</state>
+        <zip>10016</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Mount Sinai School of Medicine</name>
+      <address>
+        <city>New York</city>
+        <state>New York</state>
+        <zip>10029</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Columbia Presbyterian Medical Center</name>
+      <address>
+        <city>New York</city>
+        <state>New York</state>
+        <zip>11032</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Burke Medical Research Institute</name>
+      <address>
+        <city>White Plains</city>
+        <state>New York</state>
+        <zip>10605</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University Hospitals of Cleveland</name>
+      <address>
+        <city>Cleveland</city>
+        <state>Ohio</state>
+        <zip>44120</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Pennsylvania</name>
+      <address>
+        <city>Philadelphia</city>
+        <state>Pennsylvania</state>
+        <zip>19104</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Pittsburgh</name>
+      <address>
+        <city>Pittsburgh</city>
+        <state>Pennsylvania</state>
+        <zip>15213</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Texas</name>
+      <address>
+        <city>Dallas</city>
+        <state>Texas</state>
+        <zip>75235</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Baylor College of Medicine</name>
+      <address>
+        <city>Houston</city>
+        <state>Texas</state>
+        <zip>77030</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Washington</name>
+      <address>
+        <city>Seattle</city>
+        <state>Washington</state>
+        <zip>98195</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location_countries>
+    <country>United States</country>
+  </location_countries>
+  <link>
+    <url>http://www.adcs.org/</url>
+    <description>The Alzheimer's Disease Education and Referral (ADEAR) Center is a service of the National Institute on Aging (NIA).</description>
+  </link>
+  <results_reference>
+    <citation>Mulnard RA, Cotman CW, Kawas C, van Dyck CH, Sano M, Doody R, Koss E, Pfeiffer E, Jin S, Gamst A, Grundman M, Thomas R, Thal LJ. Estrogen replacement therapy for treatment of mild to moderate Alzheimer disease: a randomized controlled trial. Alzheimer's Disease Cooperative Study. JAMA. 2000 Feb 23;283(8):1007-15. Erratum in: JAMA 2000 Nov 22-29;284(20):2597.</citation>
+    <PMID>10697060</PMID>
+  </results_reference>
+  <verification_date>September 2009</verification_date>
+  <!-- For several months we've had both old and new date name tags                             -->
+  <!-- Now, the old date names have been dropped.                                               -->
+  <!-- The new date name replacements are:                                                      -->
+  <!--     OLD (gone)                                        NEW (in use)                       -->
+  <!--   lastchanged_date                         becomes   last_update_submitted               -->
+  <!--   firstreceived_date                       becomes   study_first_submitted               -->
+  <!--   firstreceived_results_date               becomes   results_first_submitted             -->
+  <!--   firstreceived_results_disposition_date   becomes   disposition_first_submitted         -->
+  <study_first_submitted>October 29, 1999</study_first_submitted>
+  <study_first_submitted_qc>October 29, 1999</study_first_submitted_qc>
+  <study_first_posted type="Estimate">November 1, 1999</study_first_posted>
+  <last_update_submitted>December 10, 2009</last_update_submitted>
+  <last_update_submitted_qc>December 10, 2009</last_update_submitted_qc>
+  <last_update_posted type="Estimate">December 11, 2009</last_update_posted>
+  <keyword>Alzheimer's disease</keyword>
+  <keyword>Estrogen</keyword>
+  <condition_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Alzheimer Disease</mesh_term>
+  </condition_browse>
+  <intervention_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Estrogens</mesh_term>
+  </intervention_browse>
+  <!-- Results have not yet been posted for this study                                          -->
+</clinical_study>
+

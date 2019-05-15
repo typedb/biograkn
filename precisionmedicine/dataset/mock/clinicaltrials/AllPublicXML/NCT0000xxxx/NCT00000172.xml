@@ -1,0 +1,750 @@
+<clinical_study>
+  <!-- This xml conforms to an XML Schema at:
+    https://clinicaltrials.gov/ct2/html/images/info/public.xsd -->
+  <required_header>
+    <download_date>ClinicalTrials.gov processed this data on February 12, 2019</download_date>
+    <link_text>Link to the current ClinicalTrials.gov record.</link_text>
+    <url>https://clinicaltrials.gov/show/NCT00000172</url>
+  </required_header>
+  <id_info>
+    <org_study_id>IA0009</org_study_id>
+    <nct_id>NCT00000172</nct_id>
+  </id_info>
+  <brief_title>Evaluation of Galantamine in the Treatment of Alzheimer's Disease</brief_title>
+  <official_title>Placebo Controlled Evaluation of Galantamine in the Treatment of Alzheimer's Disease: Safety and Efficacy Under a Slow-Titration Regimen</official_title>
+  <sponsors>
+    <lead_sponsor>
+      <agency>Janssen, LP</agency>
+      <agency_class>Industry</agency_class>
+    </lead_sponsor>
+  </sponsors>
+  <source>National Institute on Aging (NIA)</source>
+  <brief_summary>
+    <textblock>
+      Galantamine is an experimental drug being evaluated in the United States for the treatment of
+      Alzheimer's disease. Results from previous clinical trials suggest that galantamine may
+      improve cognitive performance in individuals with Alzheimer's disease. It is not a cure for
+      Alzheimer's disease. Nerve cells in the brain responsible for memory and cognitive function
+      communicate using a chemical called acetylcholine. Research has shown that deterioration of
+      cells that produce acetylcholine in the brain affects thought processes. Galantamine is
+      thought to work in two ways to increase the amount of acetylcholine available in the brain.
+      It inhibits an enzyme that breaks down acetylcholine and it also stimulates the nicotinic
+      receptors in the brain to release more acetylcholine.
+    </textblock>
+  </brief_summary>
+  <detailed_description>
+    <textblock>
+      After a 1-month single-blind run in phase, 910 subjects will be titrated, over a period of up
+      to 8 weeks, to target doses of either: 0 (placebo); 24 mg/day galantamine; 16 mg/day
+      galantamine; or 8 mg/day galantamine, in a 2:2:2:1 randomization ratio. Double-blind
+      treatment will continue for a total of 5 months. The change from baseline in ADAS-cog and
+      CIVIC-plus scores at Month 5 will be the primary efficacy endpoints. Tolerability will be
+      evaluated based on adverse event reports, laboratory values, ECG, and vital signs with
+      particular focus on the adverse event rates in the slower titration schedule for 24 mg/day.
+      Efficacy of 24 mg/day and 16 mg/day galantamine will be compared with that of placebo.
+      Information on the dose response relationship of galantamine will be evaluated.
+    </textblock>
+  </detailed_description>
+  <overall_status>Completed</overall_status>
+  <phase>Phase 3</phase>
+  <study_type>Interventional</study_type>
+  <has_expanded_access>No</has_expanded_access>
+  <study_design_info>
+    <allocation>Randomized</allocation>
+    <intervention_model>Parallel Assignment</intervention_model>
+    <primary_purpose>Treatment</primary_purpose>
+    <masking>Double</masking>
+  </study_design_info>
+  <condition>Alzheimer Disease</condition>
+  <intervention>
+    <intervention_type>Drug</intervention_type>
+    <intervention_name>Galantamine</intervention_name>
+  </intervention>
+  <eligibility>
+    <criteria>
+      <textblock>
+        Inclusion Criteria:
+
+          -  Probable Alzheimer's disease
+
+          -  Mini-Mental State Examination (MMSE) 10-22 and ADAS greater than or equal to 18
+
+          -  Alzheimer's Disease Assessment Scale cognitive portion (ADAS-cog-11) score of at least
+             18
+
+          -  Opportunity for Activities of Daily Living
+
+          -  Caregiver
+
+          -  Subjects who live with or have regular daily visits from a responsible caregiver
+             (visit frequency: preferably daily but at least 5 days/week). This includes a friend
+             or relative or paid personnel. The caregiver should be capable of assisting with the
+             subject's medication, prepared to attend with the subject for assessments, and willing
+             to provide information about the subject.
+
+        Exclusion Criteria:
+
+          -  Conditions that could confound diagnosis
+
+          -  Neurodegenerative disorders
+
+          -  Acute cerebral trauma
+
+          -  Psychiatric disease
+
+          -  More than one infarct on CT/MRI scans
+
+          -  History of alcohol or drug abuse
+
+          -  Contradictions for a cholinominetic agent: seizures; ulcers; pulmonary conditions
+             (including severe asthma); unstable angina; Afib; bradycardia less than 50; and AV
+             block.
+      </textblock>
+    </criteria>
+    <gender>All</gender>
+    <minimum_age>N/A</minimum_age>
+    <maximum_age>N/A</maximum_age>
+    <healthy_volunteers>No</healthy_volunteers>
+  </eligibility>
+  <location>
+    <facility>
+      <name>University of Alabama, Birmingham</name>
+      <address>
+        <city>Birmingham</city>
+        <state>Alabama</state>
+        <zip>35294-0017</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>James L. Frey, M.D., Ltd.</name>
+      <address>
+        <city>Scottsdale</city>
+        <state>Arizona</state>
+        <zip>85258</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>East Bay Neurology</name>
+      <address>
+        <city>Berkeley</city>
+        <state>California</state>
+        <zip>94705</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Southern California</name>
+      <address>
+        <city>Los Angeles</city>
+        <state>California</state>
+        <zip>90033-1039</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>N. County Neurology Assoc.</name>
+      <address>
+        <city>Oceanside</city>
+        <state>California</state>
+        <zip>92056</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of California Irvine Medical Center</name>
+      <address>
+        <city>Orange</city>
+        <state>California</state>
+        <zip>92868</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Pacific Research Network (PRN)</name>
+      <address>
+        <city>San Diego</city>
+        <state>California</state>
+        <zip>92103</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Affiliated Research Institute</name>
+      <address>
+        <city>San Diego</city>
+        <state>California</state>
+        <zip>92108</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>INC</name>
+      <address>
+        <city>San Diego</city>
+        <state>California</state>
+        <zip>92122</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>The Denver Center for Medical Research</name>
+      <address>
+        <city>Denver</city>
+        <state>Colorado</state>
+        <zip>80212</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Geriatric and Adult Psychiatry</name>
+      <address>
+        <city>Hamden</city>
+        <state>Connecticut</state>
+        <zip>06518</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Yale University, School of Medicine</name>
+      <address>
+        <city>New Haven</city>
+        <state>Connecticut</state>
+        <zip>06520</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Ocala Neurodiagnostic Center</name>
+      <address>
+        <city>Ocala</city>
+        <state>Florida</state>
+        <zip>34471</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Psychiatric Institute of Florida</name>
+      <address>
+        <city>Orlando</city>
+        <state>Florida</state>
+        <zip>32806</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Neurological Research Institute of Sarasota, PA</name>
+      <address>
+        <city>Sarasota</city>
+        <state>Florida</state>
+        <zip>34239</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Suncoast Neuroscience Associates, Inc.</name>
+      <address>
+        <city>St. Petersburg</city>
+        <state>Florida</state>
+        <zip>33701</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Premiere Research Institute</name>
+      <address>
+        <city>West Palm Beach</city>
+        <state>Florida</state>
+        <zip>33407</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Chicago Center for Clinical Research</name>
+      <address>
+        <city>Chicago</city>
+        <state>Illinois</state>
+        <zip>606104234</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>OSF Center for Senior Health</name>
+      <address>
+        <city>Peoria</city>
+        <state>Illinois</state>
+        <zip>616033089</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Indiana Alzheimer's University Clinic</name>
+      <address>
+        <city>Indianapolis</city>
+        <state>Indiana</state>
+        <zip>46202-5111</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>The Johns Hopkins Hospital</name>
+      <address>
+        <city>Baltimore</city>
+        <state>Maryland</state>
+        <zip>21287</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Brigham Behavioral Neurology Group</name>
+      <address>
+        <city>Boston</city>
+        <state>Massachusetts</state>
+        <zip>02115</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Boston Clinical Research Center</name>
+      <address>
+        <city>Wellesley Hills</city>
+        <state>Massachusetts</state>
+        <zip>02481</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Massachusetts Worcester</name>
+      <address>
+        <city>Worcester</city>
+        <state>Massachusetts</state>
+        <zip>01655</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Oakwood Hospital and Medical Center</name>
+      <address>
+        <city>Dearborn</city>
+        <state>Michigan</state>
+        <zip>48124</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Michigan Medical P.C.</name>
+      <address>
+        <city>Grand Rapids</city>
+        <state>Michigan</state>
+        <zip>49503</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Regions Hospital</name>
+      <address>
+        <city>St. Paul</city>
+        <state>Minnesota</state>
+        <zip>55101</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>St. Louis University School of Medicine</name>
+      <address>
+        <city>St. Louis</city>
+        <state>Missouri</state>
+        <zip>63104</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Washington University</name>
+      <address>
+        <city>St. Louis</city>
+        <state>Missouri</state>
+        <zip>63108</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Nebraska</name>
+      <address>
+        <city>Omaha</city>
+        <state>Nebraska</state>
+        <zip>681985575</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Medicine and Dentistry of New Jersey</name>
+      <address>
+        <city>Piscataway</city>
+        <state>New Jersey</state>
+        <zip>088551392</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Neurology Group of Bergen County</name>
+      <address>
+        <city>Ridgewood</city>
+        <state>New Jersey</state>
+        <zip>07450</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Overlook Hospital</name>
+      <address>
+        <city>Summit</city>
+        <state>New Jersey</state>
+        <zip>07901</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Medwise Center</name>
+      <address>
+        <city>West Long Branch</city>
+        <state>New Jersey</state>
+        <zip>07764</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Neurological Associates of Albany, PC</name>
+      <address>
+        <city>Albany</city>
+        <state>New York</state>
+        <zip>12208</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>East End Neuropsychiatric Associates</name>
+      <address>
+        <city>Centereach</city>
+        <state>New York</state>
+        <zip>11720</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>St. John's Episcopal Hospital</name>
+      <address>
+        <city>Far Rockaway</city>
+        <state>New York</state>
+        <zip>11691</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>NYU Medical Center</name>
+      <address>
+        <city>New York</city>
+        <state>New York</state>
+        <zip>10016</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Rochester</name>
+      <address>
+        <city>Rochester</city>
+        <state>New York</state>
+        <zip>14620</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>SUNY Stony Brook</name>
+      <address>
+        <city>Stony Brook</city>
+        <state>New York</state>
+        <zip>11794-8121</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Ohio State University</name>
+      <address>
+        <city>Columbus</city>
+        <state>Ohio</state>
+        <zip>43210</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Clinical Pharmaceutical Trials</name>
+      <address>
+        <city>Tulsa</city>
+        <state>Oklahoma</state>
+        <zip>741025428</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Oregon Health Sciences University</name>
+      <address>
+        <city>Portland</city>
+        <state>Oregon</state>
+        <zip>97201-3098</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Pacific NW Clinical Research Center</name>
+      <address>
+        <city>Portland</city>
+        <state>Oregon</state>
+        <zip>97201</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Institute for Advanced Clinical Research</name>
+      <address>
+        <city>Elkins Park</city>
+        <state>Pennsylvania</state>
+        <zip>19027</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Neuroscience Center of Westmoreland Neurology</name>
+      <address>
+        <city>Greensburg</city>
+        <state>Pennsylvania</state>
+        <zip>15601</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Brown University</name>
+      <address>
+        <city>Pawtucket</city>
+        <state>Rhode Island</state>
+        <zip>02906</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Alzheimer's Research and Clinical Programs</name>
+      <address>
+        <city>North Charleston</city>
+        <state>South Carolina</state>
+        <zip>294066076</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>University of Texas</name>
+      <address>
+        <city>Dallas</city>
+        <state>Texas</state>
+        <zip>752359070</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Southwestern Vermont Medical Center</name>
+      <address>
+        <city>Bennington</city>
+        <state>Vermont</state>
+        <zip>05201</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Memory Disorder Center of Vermont</name>
+      <address>
+        <city>Colchester</city>
+        <state>Vermont</state>
+        <zip>05446</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Virginia Neuroscience Center</name>
+      <address>
+        <city>Alexandria</city>
+        <state>Virginia</state>
+        <zip>22304</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Prince William Neuroscience Center</name>
+      <address>
+        <city>Manassas</city>
+        <state>Virginia</state>
+        <zip>20010</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>Seattle Clinical Research Center</name>
+      <address>
+        <city>Seattle</city>
+        <state>Washington</state>
+        <zip>98104</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location>
+    <facility>
+      <name>VAPS Health Care System</name>
+      <address>
+        <city>Seattle</city>
+        <state>Washington</state>
+        <zip>98108</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location_countries>
+    <country>United States</country>
+  </location_countries>
+  <reference>
+    <citation>Lilienfeld S, Parys W. Galantamine: additional benefits to patients with Alzheimer's disease. Dement Geriatr Cogn Disord. 2000 Sep;11 Suppl 1:19-27. Review.</citation>
+    <PMID>10971048</PMID>
+  </reference>
+  <verification_date>November 2002</verification_date>
+  <!-- For several months we've had both old and new date name tags                             -->
+  <!-- Now, the old date names have been dropped.                                               -->
+  <!-- The new date name replacements are:                                                      -->
+  <!--     OLD (gone)                                        NEW (in use)                       -->
+  <!--   lastchanged_date                         becomes   last_update_submitted               -->
+  <!--   firstreceived_date                       becomes   study_first_submitted               -->
+  <!--   firstreceived_results_date               becomes   results_first_submitted             -->
+  <!--   firstreceived_results_disposition_date   becomes   disposition_first_submitted         -->
+  <study_first_submitted>October 29, 1999</study_first_submitted>
+  <study_first_submitted_qc>October 29, 1999</study_first_submitted_qc>
+  <study_first_posted type="Estimate">November 1, 1999</study_first_posted>
+  <last_update_submitted>June 23, 2005</last_update_submitted>
+  <last_update_submitted_qc>June 23, 2005</last_update_submitted_qc>
+  <last_update_posted type="Estimate">June 24, 2005</last_update_posted>
+  <keyword>Alzheimer's disease</keyword>
+  <keyword>Cholinergic agents</keyword>
+  <keyword>Cholinergic agonists</keyword>
+  <keyword>Cholinesterase inhibitors</keyword>
+  <condition_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Alzheimer Disease</mesh_term>
+  </condition_browse>
+  <intervention_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Galantamine</mesh_term>
+  </intervention_browse>
+  <!-- Results have not yet been posted for this study                                          -->
+</clinical_study>
+

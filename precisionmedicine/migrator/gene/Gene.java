@@ -22,11 +22,11 @@ import static graql.lang.Graql.var;
 
 @SuppressWarnings("Duplicates")
 public class Gene {
-    public static void migrate(GraknClient.Session session) {
+    public static void migrate(GraknClient.Session session, String dataset) {
         System.out.print("\tMigrating Genes");
 
-        migrateFromHgnc(session, "precisionmedicine/dataset/hgnc/custom.csv");
-        migrateFromCtdbase(session, "precisionmedicine/dataset/ctdbase/CTD_genes.csv");
+        migrateFromHgnc(session, dataset + "/hgnc/custom.csv");
+        migrateFromCtdbase(session, dataset + "/ctdbase/CTD_genes.csv");
 
         System.out.println(" - [DONE]");
     }

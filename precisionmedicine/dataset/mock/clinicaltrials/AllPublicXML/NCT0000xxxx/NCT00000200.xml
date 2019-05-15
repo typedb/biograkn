@@ -1,0 +1,129 @@
+<clinical_study>
+  <!-- This xml conforms to an XML Schema at:
+    https://clinicaltrials.gov/ct2/html/images/info/public.xsd -->
+  <required_header>
+    <download_date>ClinicalTrials.gov processed this data on February 12, 2019</download_date>
+    <link_text>Link to the current ClinicalTrials.gov record.</link_text>
+    <url>https://clinicaltrials.gov/show/NCT00000200</url>
+  </required_header>
+  <id_info>
+    <org_study_id>NIDA-03818-1</org_study_id>
+    <secondary_id>R01-03818-1</secondary_id>
+    <nct_id>NCT00000200</nct_id>
+  </id_info>
+  <brief_title>Cocaine Effects in Humans: Physiology and Behavior - 1</brief_title>
+  <official_title>Cocaine Effects in Humans: Physiology and Behavior</official_title>
+  <sponsors>
+    <lead_sponsor>
+      <agency>National Institute on Drug Abuse (NIDA)</agency>
+      <agency_class>NIH</agency_class>
+    </lead_sponsor>
+    <collaborator>
+      <agency>Columbia University</agency>
+      <agency_class>Other</agency_class>
+    </collaborator>
+  </sponsors>
+  <source>National Institute on Drug Abuse (NIDA)</source>
+  <oversight_info>
+    <has_dmc>Yes</has_dmc>
+  </oversight_info>
+  <brief_summary>
+    <textblock>
+      The purpose of this study is to compare the effects of buprenorphine or methadone maintenance
+      on cocaine taking and on the physiological and subjective effects of cocaine, including
+      cocaine craving, in opiate-dependent cocaine users.
+    </textblock>
+  </brief_summary>
+  <overall_status>Completed</overall_status>
+  <start_date>January 1997</start_date>
+  <completion_date type="Actual">January 1998</completion_date>
+  <primary_completion_date type="Actual">January 1998</primary_completion_date>
+  <phase>Phase 2</phase>
+  <study_type>Interventional</study_type>
+  <has_expanded_access>No</has_expanded_access>
+  <study_design_info>
+    <intervention_model>Single Group Assignment</intervention_model>
+    <primary_purpose>Treatment</primary_purpose>
+    <masking>Double (Participant, Care Provider)</masking>
+  </study_design_info>
+  <primary_outcome>
+    <measure>Interaction of cocaine and meds on cardio</measure>
+    <time_frame>3 hr</time_frame>
+  </primary_outcome>
+  <primary_outcome>
+    <measure>Interaction of cocaine &amp; meds on coc's subjective</measure>
+    <time_frame>3 hr</time_frame>
+  </primary_outcome>
+  <primary_outcome>
+    <measure>Effects of medication on cocaine craving</measure>
+    <time_frame>3 hr</time_frame>
+  </primary_outcome>
+  <enrollment type="Actual">19</enrollment>
+  <condition>Cocaine-Related Disorders</condition>
+  <intervention>
+    <intervention_type>Drug</intervention_type>
+    <intervention_name>Methadone</intervention_name>
+    <description>normal maintenance dose</description>
+  </intervention>
+  <eligibility>
+    <criteria>
+      <textblock>
+        Please contact site for information.
+      </textblock>
+    </criteria>
+    <gender>All</gender>
+    <minimum_age>18 Years</minimum_age>
+    <maximum_age>45 Years</maximum_age>
+    <healthy_volunteers>No</healthy_volunteers>
+  </eligibility>
+  <overall_official>
+    <last_name>Marian Fischman, Ph.D.</last_name>
+    <role>Principal Investigator</role>
+    <affiliation>Columbia University</affiliation>
+  </overall_official>
+  <location>
+    <facility>
+      <name>Columbia University</name>
+      <address>
+        <city>New York</city>
+        <state>New York</state>
+        <zip>10023</zip>
+        <country>United States</country>
+      </address>
+    </facility>
+  </location>
+  <location_countries>
+    <country>United States</country>
+  </location_countries>
+  <results_reference>
+    <citation>Foltin RW, Fischman MW. Effects of methadone or buprenorphine maintenance on the subjective and reinforcing effects of intravenous cocaine in humans. J Pharmacol Exp Ther. 1996 Sep;278(3):1153-64.</citation>
+    <PMID>8819498</PMID>
+  </results_reference>
+  <verification_date>October 2016</verification_date>
+  <!-- For several months we've had both old and new date name tags                             -->
+  <!-- Now, the old date names have been dropped.                                               -->
+  <!-- The new date name replacements are:                                                      -->
+  <!--     OLD (gone)                                        NEW (in use)                       -->
+  <!--   lastchanged_date                         becomes   last_update_submitted               -->
+  <!--   firstreceived_date                       becomes   study_first_submitted               -->
+  <!--   firstreceived_results_date               becomes   results_first_submitted             -->
+  <!--   firstreceived_results_disposition_date   becomes   disposition_first_submitted         -->
+  <study_first_submitted>September 20, 1999</study_first_submitted>
+  <study_first_submitted_qc>September 20, 1999</study_first_submitted_qc>
+  <study_first_posted type="Estimate">September 21, 1999</study_first_posted>
+  <last_update_submitted>January 11, 2017</last_update_submitted>
+  <last_update_submitted_qc>January 11, 2017</last_update_submitted_qc>
+  <last_update_posted type="Estimate">January 12, 2017</last_update_posted>
+  <keyword>self-administration</keyword>
+  <condition_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Cocaine-Related Disorders</mesh_term>
+  </condition_browse>
+  <intervention_browse>
+    <!-- CAUTION:  The following MeSH terms are assigned with an imperfect algorithm            -->
+    <mesh_term>Cocaine</mesh_term>
+    <mesh_term>Methadone</mesh_term>
+  </intervention_browse>
+  <!-- Results have not yet been posted for this study                                          -->
+</clinical_study>
+
