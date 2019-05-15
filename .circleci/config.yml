@@ -182,16 +182,16 @@ workflows:
       - test-assembly-linux-full:
           filters:
             branches:
-              only: biograkn-release-branch
+              only: release-workflow # TODO: change to biograkn-release-branch
       - test-assembly-mac-full:
           filters:
             branches:
-              only: biograkn-release-branch
+              only: release-workflow # TODO: change to biograkn-release-branch
 
       - deploy-github:
           filters:
             branches:
-              only: biograkn-release-branch
+              only: release-workflow # TODO: change to biograkn-release-branch
           requires:
             - test-assembly-linux-full
             - test-assembly-mac-full
@@ -200,14 +200,14 @@ workflows:
           type: approval
           filters:
             branches:
-              only: biograkn-release-branch
+              only: release-workflow # TODO: change to biograkn-release-branch
           requires:
             - deploy-github
 
       - deploy-gcp:
           filters:
             branches:
-              only: biograkn-release-branch
+              only: release-workflow # TODO: change to biograkn-release-branch
           requires:
             - deploy-approval
             - test-assembly-linux-full
@@ -215,7 +215,7 @@ workflows:
       - release-cleanup:
           filters:
             branches:
-              only: biograkn-release-branch
+              only: release-workflow # TODO: change to biograkn-release-branch
           requires:
             - test-assembly-linux-full
             - test-assembly-mac-full
