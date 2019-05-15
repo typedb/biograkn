@@ -150,13 +150,13 @@ workflows:
       - test-assembly-linux-full:
           filters:
             branches:
-              only: master
+              only: test-refactor #change to master
           requires:
             - build
       - test-assembly-mac-full:
           filters:
             branches:
-              only: master
+              only: test-refactor #change to master
           requires:
             - build
 #      - test-assembly-windows-full:
@@ -181,7 +181,7 @@ workflows:
       - release-approval:
           filters:
             branches:
-              only: master
+              only: test-refactor #change to master
           requires:
             - test-deployment-gcp
 
