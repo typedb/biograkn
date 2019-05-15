@@ -68,7 +68,7 @@ jobs:
       - run: bazel build @graknlabs_grakn_core//:assemble-linux-targz
       - run: mkdir dist && tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C ./dist/
       - run: nohup ./dist/grakn-core-all-linux/grakn server start
-      #      - run: bazel test test-assembly-linux-full
+#      - run: bazel test //migrator:assemble-all-test TODO: uncomment
       - run: ./dist/grakn-core-all-linux/grakn server stop
   test-assembly-mac-full:
     machine: true
@@ -79,7 +79,7 @@ jobs:
       - run: bazel build @graknlabs_grakn_core//:assemble-mac-zip
       - run: unzip bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac.zip -d bazel-genfiles/external/graknlabs_grakn_core/
       - run: nohup bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server start
-      #      - run: bazel test test-assembly-mac-full
+#      - run: bazel test //migrator:assemble-all-test TODO: uncomment
       - run: bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server stop
   test-assembly-windows-full:
     machine: true
@@ -124,7 +124,7 @@ jobs:
       - run: echo 'CI job placeholder'
 
 workflows:
-  biograkn:
+  biograkn-commit:
     jobs:
       - build:
           filters:
@@ -143,49 +143,37 @@ workflows:
               ignore: biograkn-release-branch
           requires:
             - build
-#      - test-assembly-windows-mock:
-#          filters:
-#            branches:
-#              only: master
-#          requires:
-#            - build
-#            - test
 
+  biograkn-nightly:
+    triggers:
+      - schedule:
+          cron: "0 20 * * *"
+          filters:
+            branches:
+              only:
+                - test-refactor #TODO: change to master
+    jobs:
       - test-assembly-linux-full:
           filters:
             branches:
-              only: test-refactor #change to master
-          requires:
-            - build
+              only: test-refactor #TODO: change to master
       - test-assembly-mac-full:
           filters:
             branches:
-              only: test-refactor #change to master
-          requires:
-            - build
-#      - test-assembly-windows-full:
-#          filters:
-#            branches:
-#              only: master
-#          requires:
-#            - build
-#            - test
+              only: test-refactor #TODO: change to master
 
       - test-deployment-gcp:
           filters:
             branches:
-              only: test-refactor #change to master
+              only: test-refactor # TODO: change to master
           requires:
-            - test-assembly-linux-mock
-            - test-assembly-mac-mock
-#            - test-assembly-windows-mock
             - test-assembly-linux-full
             - test-assembly-mac-full
-#            - test-assembly-windows-full
+
       - release-approval:
           filters:
             branches:
-              only: test-refactor #change to master
+              only: test-refactor # TODO: change to master
           requires:
             - test-deployment-gcp
 
@@ -199,10 +187,6 @@ workflows:
           filters:
             branches:
               only: biograkn-release-branch
-#      - test-assembly-windows-full:
-#          filters:
-#            branches:
-#              only: biograkn-release-branch
 
       - deploy-github:
           filters:
@@ -211,7 +195,7 @@ workflows:
           requires:
             - test-assembly-linux-full
             - test-assembly-mac-full
-#            - test-assembly-windows-full
+
       - deploy-approval:
           type: approval
           filters:
@@ -219,6 +203,7 @@ workflows:
               only: biograkn-release-branch
           requires:
             - deploy-github
+
       - deploy-gcp:
           filters:
             branches:

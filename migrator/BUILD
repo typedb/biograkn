@@ -57,3 +57,17 @@ java_test(
     ],
   )
 
+java_test(
+    name = "assemble-all-test",
+    test_class = "grakn.biograkn.migrator.AssembleAllTest",
+    srcs = ["AssembleAllTest.java"],
+    deps = [
+        "//precisionmedicine/migrator",
+        "@graknlabs_client_java//:client-java",
+        "@graknlabs_grakn_core//concept:concept",
+        "@graknlabs_grakn_core//common:common",
+        "@graknlabs_graql//java:graql",
+        "@graknlabs_grakn_core//api:api",
+    ],
+  )
+
