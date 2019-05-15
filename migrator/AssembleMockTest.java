@@ -21,7 +21,8 @@ public class AssembleMockTest {
          migratePrecisionMedicine("mock");
      }
 
-     @Test
+
+    @Test
      public void assembleMockTest() {
          GraknClient graknClient = new GraknClient("127.0.0.1:48555");
          GraknClient.Session session = graknClient.session("precision_medicine");
@@ -33,5 +34,33 @@ public class AssembleMockTest {
          List<Numeric> insertedIds = readTransaction.execute(query);
 
          assertEquals(insertedIds.get(0).number().intValue(), 200);
+
+         query = Graql.compute().count().in("variant");
+
+         insertedIds = readTransaction.execute(query);
+
+         assertEquals(insertedIds.get(0).number().intValue(), 100);
+
+         query = Graql.compute().count().in("disease");
+
+         insertedIds = readTransaction.execute(query);
+
+         assertEquals(insertedIds.get(0).number().intValue(), 194);
+
+         query = Graql.compute().count().in("drug");
+
+         insertedIds = readTransaction.execute(query);
+
+         assertEquals(insertedIds.get(0).number().intValue(), 300);
+
+         query = Graql.compute().count().in("clinical-trial");
+
+         insertedIds = readTransaction.execute(query);
+
+         assertEquals(insertedIds.get(0).number().intValue(), 44);
+
+        readTransaction.close();
+        session.close();
+        graknClient.close();
      }
 }
