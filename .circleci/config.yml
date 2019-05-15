@@ -147,7 +147,7 @@ workflows:
   biograkn-nightly:
     triggers:
       - schedule:
-          cron: "0 20 * * *"
+          cron: "35 17 * * *"
           filters:
             branches:
               only:
