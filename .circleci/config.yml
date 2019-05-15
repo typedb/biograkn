@@ -151,21 +151,21 @@ workflows:
           filters:
             branches:
               only:
-                - test-refactor #TODO: change to master
+                - master
     jobs:
       - test-assembly-linux-full:
           filters:
             branches:
-              only: test-refactor #TODO: change to master
+              only: master
       - test-assembly-mac-full:
           filters:
             branches:
-              only: test-refactor #TODO: change to master
+              only: master
 
       - test-deployment-gcp:
           filters:
             branches:
-              only: test-refactor # TODO: change to master
+              only: master
           requires:
             - test-assembly-linux-full
             - test-assembly-mac-full
@@ -173,7 +173,7 @@ workflows:
       - release-approval:
           filters:
             branches:
-              only: test-refactor # TODO: change to master
+              only: master
           requires:
             - test-deployment-gcp
 
