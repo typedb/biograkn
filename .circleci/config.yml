@@ -212,7 +212,7 @@ workflows:
             branches:
               only: release-workflow
           requires:
-            - assembly-linux-mac
+            - assembly-mac-full
 #  biograkn-commit:
 #    jobs:
 #      - build:
