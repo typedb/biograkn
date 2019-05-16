@@ -53,12 +53,6 @@ jobs:
       - run: nohup bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server start
       - run: bazel test //migrator:assemble-mock-test
       - run: bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server stop
-  test-assembly-windows-mock:
-    machine: true
-    working_directory: ~/biograkn
-    steps:
-      - run: echo 'CI job placeholder'
-
 
   assembly-linux-full:
     machine: true
@@ -67,14 +61,14 @@ jobs:
       - install-bazel-linux-rbe
       - checkout
       - run: bazel build @graknlabs_grakn_core//:assemble-linux-targz
-      - run: mkdir dist && tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C ./dist/
-      - run: nohup ./dist/grakn-core-all-linux/grakn server start
+      - run: mkdir dist && tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C dist/
+      - run: nohup dist/grakn-core-all-linux/grakn server start
 #      - run: bazel run //migrator:migrator-bin
-      - run: ./dist/grakn-core-all-linux/grakn server stop
-      - run: mv ./dist/grakn-core-all-linux ./dist/biograkn-linux
-      - run: tar -czf ./dist/biograkn-linux.tar.gz ./dist/biograkn-linux
+      - run: dist/grakn-core-all-linux/grakn server stop
+      - run: mv dist/grakn-core-all-linux dist/biograkn-linux
+      - run: tar -czf dist/biograkn-linux.tar.gz dist/biograkn-linux
       - persist_to_workspace:
-          root: ./dist
+          root: dist
           paths:
             - biograkn-linux.tar.gz
   test-assembly-linux-full:
@@ -84,12 +78,11 @@ jobs:
       - install-bazel-linux-rbe
       - checkout
       - attach_workspace:
-          at: ./dist
-      - run: tar -xvzf ./dist/biograkn-linux.tar.gz
-      - run: nohup ./dist/biograkn-linux/grakn server start
+          at: dist
+      - run: tar -xvzf dist/biograkn-linux.tar.gz
+      - run: nohup dist/biograkn-linux/grakn server start
 #      - run: bazel test //migrator:assemble-all-test TODO: uncomment
-      - run: ./dist/biograkn-linux/grakn server stop
-
+      - run: dist/biograkn-linux/grakn server stop
 
   assembly-mac-full:
     machine: true
@@ -98,17 +91,16 @@ jobs:
       - install-bazel-linux-rbe
       - checkout
       - run: bazel build @graknlabs_grakn_core//:assemble-mac-zip
-      - run: unzip bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac.zip -d bazel-genfiles/external/graknlabs_grakn_core/
-      - run: nohup bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server start
-      #      - run: bazel test //migrator:assemble-all-test TODO: uncomment
-      - run: bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server stop
-      - run: mv bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac bazel-genfiles/external/biograkn-mac
-      - run: zip bazel-genfiles/external/biograkn-mac.zip bazel-genfiles/external/biograkn-mac
+      - run: mkdir dist && unzip bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac.zip -d dist/
+      - run: nohup dist/grakn-core-all-mac/grakn server start
+      #      - run: bazel run //migrator:migrator-bin
+      - run: dist/grakn-core-all-mac/grakn server stop
+      - run: mv dist/grakn-core-all-mac dist/biograkn-mac
+      - run: zip -r dist/biograkn-mac.zip dist/biograkn-mac
       - persist_to_workspace:
-         root: bazel-genfiles/external
-         paths:
-           - biograkn-mac.zip
-
+          root: dist
+          paths:
+            - biograkn-mac.zip
   test-assembly-mac-full:
     machine: true
     working_directory: ~/biograkn
@@ -116,18 +108,13 @@ jobs:
       - install-bazel-linux-rbe
       - checkout
       - attach_workspace:
-          at: bazel-genfiles/external
-      - run: unzip bazel-genfiles/external/biograkn-mac.zip -d bazel-genfiles/external/
-      - run: nohup bazel-genfiles/external/biograkn-mac/grakn server start
-#      - run: bazel test //migrator:assemble-all-test TODO: uncomment
-      - run: bazel-genfiles/external/biograkn-mac/grakn server stop
+          at: dist
+      - run: unzip dist/biograkn-mac.zip
+      - run: nohup dist/biograkn-mac/grakn server start
+      #      - run: bazel test //migrator:assemble-all-test TODO: uncomment
+      - run: dist/biograkn-mac/grakn server stop
 
 
-  test-assembly-windows-full:
-    machine: true
-    working_directory: ~/biograkn
-    steps:
-      - run: echo 'CI job placeholder'
 
   deploy-gcp-snapshot:
     machine: true
