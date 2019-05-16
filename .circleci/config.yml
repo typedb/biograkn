@@ -74,14 +74,9 @@ jobs:
       - run: mv ./dist/grakn-core-all-linux ./dist/biograkn-linux
       - run: tar -czf ./dist/biograkn-linux.tar.gz ./dist/biograkn-linux
       - persist_to_workspace:
-          # Must be an absolute path, or relative path from working_directory. This is a directory on the container which is
-          # taken to be the root directory of the workspace.
           root: ./dist
-          # Must be relative path from root
           paths:
             - biograkn-linux.tar.gz
-
-
   test-assembly-linux-full:
     machine: true
     working_directory: ~/biograkn
@@ -89,7 +84,6 @@ jobs:
       - install-bazel-linux-rbe
       - checkout
       - attach_workspace:
-          # Must be absolute path or relative path from working_directory
           at: ./dist
       - run: tar -xvzf ./dist/biograkn-linux.tar.gz
       - run: nohup ./dist/biograkn-linux/grakn server start
@@ -97,8 +91,7 @@ jobs:
       - run: ./dist/biograkn-linux/grakn server stop
 
 
-
-  test-assembly-mac-full:
+  assembly-mac-full:
     machine: true
     working_directory: ~/biograkn
     steps:
@@ -107,8 +100,29 @@ jobs:
       - run: bazel build @graknlabs_grakn_core//:assemble-mac-zip
       - run: unzip bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac.zip -d bazel-genfiles/external/graknlabs_grakn_core/
       - run: nohup bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server start
-#      - run: bazel test //migrator:assemble-all-test TODO: uncomment
+      #      - run: bazel test //migrator:assemble-all-test TODO: uncomment
       - run: bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server stop
+      - run: mv .bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac .bazel-genfiles/external/biograkn-mac
+      - run: zip .bazel-genfiles/external/biograkn-mac .bazel-genfiles/external/biograkn-mac.zip
+      - persist_to_workspace:
+         root: .bazel-genfiles/external
+         paths:
+           - biograkn-mac.zip
+
+  test-assembly-mac-full:
+    machine: true
+    working_directory: ~/biograkn
+    steps:
+      - install-bazel-linux-rbe
+      - checkout
+      - attach_workspace:
+          at: .bazel-genfiles/external
+      - run: unzip .bazel-genfiles/external/biograkn-mac.zip -d bazel-genfiles/external/
+      - run: nohup bazel-genfiles/external/biograkn-mac/grakn server start
+#      - run: bazel test //migrator:assemble-all-test TODO: uncomment
+      - run: bazel-genfiles/external/biograkn-mac/grakn server stop
+
+
   test-assembly-windows-full:
     machine: true
     working_directory: ~/biograkn
@@ -189,6 +203,16 @@ workflows:
               only: release-workflow
           requires:
             - assembly-linux-full
+      - assembly-mac-full:
+          filters:
+            branches:
+              only: release-workflow
+      - test-assembly-mac-full:
+          filters:
+            branches:
+              only: release-workflow
+          requires:
+            - assembly-linux-mac
 #  biograkn-commit:
 #    jobs:
 #      - build:
