@@ -71,8 +71,16 @@ jobs:
       - run: nohup ./dist/grakn-core-all-linux/grakn server start
 #      - run: bazel run //migrator:migrator-bin
       - run: ./dist/grakn-core-all-linux/grakn server stop
-      - run: mv ./dist/grakn-core-all-linux ./dist/biograkn
-      - run: tar -czf ./dist/biograkn.tar.gz ./dist/biograkn
+      - run: mv ./dist/grakn-core-all-linux ./dist/biograkn-linux
+      - run: tar -czf ./dist/biograkn-linux.tar.gz ./dist/biograkn-linux
+      - persist_to_workspace:
+          # Must be an absolute path, or relative path from working_directory. This is a directory on the container which is
+          # taken to be the root directory of the workspace.
+          root: ./dist
+          # Must be relative path from root
+          paths:
+            - biograkn-linux.tar.gz
+
 
   test-assembly-linux-full:
     machine: true
@@ -80,10 +88,13 @@ jobs:
     steps:
       - install-bazel-linux-rbe
       - checkout
-      - run: mkdir dist && tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C ./dist/
-      - run: nohup ./dist/grakn-core-all-linux/grakn server start
+      - attach_workspace:
+          # Must be absolute path or relative path from working_directory
+          at: ./dist
+      - run: tar -xvzf ./dist/biograkn-linux.tar.gz
+      - run: nohup ./dist/biograkn-linux/grakn server start
 #      - run: bazel test //migrator:assemble-all-test TODO: uncomment
-      - run: ./dist/grakn-core-all-linux/grakn server stop
+      - run: ./dist/biograkn-linux/grakn server stop
 
 
 
@@ -172,6 +183,12 @@ workflows:
           filters:
               branches:
                 only: release-workflow
+      - test-assembly-linux-full:
+          filters:
+            branches:
+              only: release-workflow
+          requires:
+            - assembly-linux-full
 #  biograkn-commit:
 #    jobs:
 #      - build:
@@ -205,7 +222,7 @@ workflows:
 #          filters:
 #            branches:
 #              only: master
-#      - test-assembly-mac-full:
+#      - -assembly-mac-full:
 #          filters:
 #            branches:
 #              only: master
