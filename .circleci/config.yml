@@ -169,9 +169,6 @@ jobs:
 #          export DEPLOY_PACKER_VERSION=$(cat VERSION)
 #          bazel run --config=rbe //:deploy-gcp-release
 
-
-
-
   release-cleanup:
     machine: true
     steps:
