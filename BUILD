@@ -8,6 +8,7 @@ load("@graknlabs_bazel_distribution//gcp:rules.bzl", "assemble_gcp")
 assemble_gcp(
     name = "assemble-gcp-snapshot",
     files = {
+        "//dist:biograkn-linux": "biograkn-linux",
 #        ":assemble-linux-targz": "grakn-kgms-all-linux.tar.gz",
 #        "//deployment/common:cassandra-env.sh" : "cassandra-env.sh",
 #        "//deployment/common:default-grakn-environmentfile" : "default-grakn-environmentfile",

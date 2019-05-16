@@ -54,7 +54,7 @@ jobs:
       - run: bazel test //migrator:assemble-mock-test
       - run: bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server stop
 
-  assembly-linux-full:
+  assembly-linux-all:
     machine: true
     working_directory: ~/biograkn
     steps:
@@ -71,7 +71,7 @@ jobs:
           root: dist
           paths:
             - biograkn-linux.tar.gz
-  test-assembly-linux-full:
+  test-assembly-linux-all:
     machine: true
     working_directory: ~/biograkn
     steps:
@@ -84,7 +84,7 @@ jobs:
 #      - run: bazel test //migrator:assemble-all-test TODO: uncomment
       - run: dist/biograkn-linux/grakn server stop
 
-  assembly-mac-full:
+  assembly-mac-all:
     machine: true
     working_directory: ~/biograkn
     steps:
@@ -101,7 +101,7 @@ jobs:
           root: dist
           paths:
             - biograkn-mac.zip
-  test-assembly-mac-full:
+  test-assembly-mac-all:
     machine: true
     working_directory: ~/biograkn
     steps:
@@ -115,32 +115,7 @@ jobs:
       - run: dist/biograkn-mac/grakn server stop
 
 
-  cache-distribution:
-    machine: true
-    working_directory: ~/biograkn
-    steps:
-      - attach_workspace:
-          at: dist
-      - restore_cache:
-          key: distribution-{{ .Environment.CIRCLE_SHA1 }}
-      - run: |
-          if [ "$(ls -A ~/cache)" ]; then
-            ls ~/cache/
-            mkdir -p dist
-            cp ~/cache/* dist/
-          else
-            ls dist
-            mkdir -p ~/cache
-            cp dist/* ~/cache/
-          fi
-      - save_cache:
-          key: distribution-{{ .Environment.CIRCLE_SHA1 }}
-          paths:
-            - ~/cache
-      - persist_to_workspace:
-          root: dist
-          paths:
-            - ./*
+
 
   deploy-gcp-snapshot:
     machine: true
@@ -148,12 +123,13 @@ jobs:
     steps:
       - install-bazel-linux-rbe
       - checkout
+      - attach_workspace:
+          at: dist
       - run: |
           export DEPLOY_PACKER_GCP_ACCOUNT_FILE=$(mktemp)
           echo $GCP_DEPLOY_KEY_SNAPSHOT > $DEPLOY_PACKER_GCP_ACCOUNT_FILE
           export DEPLOY_PACKER_VERSION=$(git rev-parse HEAD)
           bazel run //:deploy-gcp-snapshot
-
   test-deployment-gcp:
     machine: true
     working_directory: ~/biograkn
@@ -162,6 +138,8 @@ jobs:
       - checkout
       - run: pip install google-api-python-client paramiko pyyaml google-auth cryptography==2.4.2
       - run: GCP_DEPLOY_KEY=$GCP_DEPLOY_KEY_SNAPSHOT test/deployment/gcp.py
+
+
 
   release-approval:
     machine: true
@@ -211,31 +189,18 @@ workflows:
             branches:
               ignore: biograkn-release-branch
 
-      - assembly-linux-full:
+      - test-assembly-linux-mock:
           filters:
             branches:
               ignore: biograkn-release-branch
           requires:
             - build
-      - assembly-mac-full:
+      - test-assembly-mac-mock:
           filters:
             branches:
               ignore: biograkn-release-branch
           requires:
             - build
-
-      - test-assembly-linux-full:
-          filters:
-            branches:
-              ignore: biograkn-release-branch
-          requires:
-            - assembly-linux-full
-      - test-assembly-mac-full:
-          filters:
-            branches:
-              ignore: biograkn-release-branch
-          requires:
-            - assembly-mac-full
 
   biograkn-nightly:
 #    triggers: # TODO: uncomment after testing
@@ -246,31 +211,35 @@ workflows:
 #              only:
 #                - release-workflow #TODO: change to master
     jobs:
-      - cache-distribution:
+      - assembly-linux-all:
+          filters:
+            branches:
+              only: release-workflow #TODO: change to master
+      - assembly-mac-all:
           filters:
             branches:
               only: release-workflow #TODO: change to master
 
-      - test-assembly-linux-full:
+      - test-assembly-linux-all:
           filters:
             branches:
               only: release-workflow #TODO: change to master
           requires:
-            - cache-distribution
-      - test-assembly-mac-full:
+            - assembly-linux-all
+      - test-assembly-mac-all:
           filters:
             branches:
               only: release-workflow #TODO: change to master
           requires:
-            - cache-distribution
+            - assembly-mac-all
 
       - deploy-gcp-snapshot:
           filters:
             branches:
               only: release-workflow #TODO: change to master
           requires:
-            - test-assembly-linux-full
-            - test-assembly-mac-full
+            - test-assembly-linux-all
+            - test-assembly-mac-all
       - test-deployment-gcp:
           filters:
             branches:
@@ -287,11 +256,11 @@ workflows:
 
 #  biograkn-release:
 #    jobs:
-#      - test-assembly-linux-full:
+#      - test-assembly-linux-all:
 #          filters:
 #            branches:
 #              only: release-workflow # TODO: change to biograkn-release-branch
-#      - test-assembly-mac-full:
+#      - test-assembly-mac-all:
 #          filters:
 #            branches:
 #              only: release-workflow # TODO: change to biograkn-release-branch
@@ -301,8 +270,8 @@ workflows:
 #            branches:
 #              only: release-workflow # TODO: change to biograkn-release-branch
 #          requires:
-#            - test-assembly-linux-full
-#            - test-assembly-mac-full
+#            - test-assembly-linux-all
+#            - test-assembly-mac-all
 #
 #      - deploy-approval:
 #          type: approval
@@ -318,15 +287,15 @@ workflows:
 #              only: release-workflow # TODO: change to biograkn-release-branch
 #          requires:
 #            - deploy-approval
-#            - test-assembly-linux-full
+#            - test-assembly-linux-all
 #
 #      - release-cleanup:
 #          filters:
 #            branches:
 #              only: release-workflow # TODO: change to biograkn-release-branch
 #          requires:
-#            - test-assembly-linux-full
-#            - test-assembly-mac-full
-##            - test-assembly-windows-full
+#            - test-assembly-linux-all
+#            - test-assembly-mac-all
+##            - test-assembly-windows-all
 #            - deploy-gcp
 #            - deploy-github
