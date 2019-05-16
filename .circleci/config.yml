@@ -115,6 +115,32 @@ jobs:
       - run: dist/biograkn-mac/grakn server stop
 
 
+  cache-distribution:
+    machine: true
+    working_directory: ~/biograkn
+    steps:
+      - attach_workspace:
+          at: dist
+      - restore_cache:
+          key: distribution-{{ .Environment.CIRCLE_SHA1 }}
+      - run: |
+          if [ "$(ls -A ~/cache)" ]; then
+            ls ~/cache/
+            mkdir -p dist
+            cp ~/cache/* dist/
+          else
+            ls dist
+            mkdir -p ~/cache
+            cp dist/* ~/cache/
+          fi
+      - save_cache:
+          key: distribution-{{ .Environment.CIRCLE_SHA1 }}
+          paths:
+            - ~/cache
+      - persist_to_workspace:
+          root: dist
+          paths:
+            - ./*
 
   deploy-gcp-snapshot:
     machine: true
@@ -178,81 +204,87 @@ jobs:
             biograkn-release-branch
 
 workflows:
-  test: # TODO: remove after test
+  biograkn-commit:
     jobs:
-      - assembly-linux-full:
-          filters:
-              branches:
-                only: release-workflow
-      - test-assembly-linux-full:
+      - build:
           filters:
             branches:
-              only: release-workflow
+              ignore: biograkn-release-branch
+
+      - assembly-linux-full:
+          filters:
+            branches:
+              ignore: biograkn-release-branch
           requires:
-            - assembly-linux-full
+            - build
       - assembly-mac-full:
           filters:
             branches:
-              only: release-workflow
+              ignore: biograkn-release-branch
+          requires:
+            - build
+
+      - test-assembly-linux-full:
+          filters:
+            branches:
+              ignore: biograkn-release-branch
+          requires:
+            - assembly-linux-full
       - test-assembly-mac-full:
           filters:
             branches:
-              only: release-workflow
+              ignore: biograkn-release-branch
           requires:
             - assembly-mac-full
-#  biograkn-commit:
-#    jobs:
-#      - build:
-#          filters:
-#            branches:
-#              ignore: biograkn-release-branch
-#
-#      - test-assembly-linux-mock:
-#          filters:
-#            branches:
-#              ignore: biograkn-release-branch
-#          requires:
-#            - build
-#      - test-assembly-mac-mock:
-#          filters:
-#            branches:
-#              ignore: biograkn-release-branch
-#          requires:
-#            - build
-#
-#  biograkn-nightly:
-#    triggers:
-#      - schedule:
-#          cron: "0 19 * * *" # UTC
-#          filters:
-#            branches:
-#              only:
-#                - master
-#    jobs:
-#      - test-assembly-linux-full:
-#          filters:
-#            branches:
-#              only: master
-#      - -assembly-mac-full:
-#          filters:
-#            branches:
-#              only: master
-#
-#      - test-deployment-gcp:
-#          filters:
-#            branches:
-#              only: master
-#          requires:
-#            - test-assembly-linux-full
-#            - test-assembly-mac-full
-#
-#      - release-approval:
-#          filters:
-#            branches:
-#              only: master
-#          requires:
-#            - test-deployment-gcp
-#
+
+  biograkn-nightly:
+    triggers:
+      - schedule:
+          cron: "0 19 * * *" # UTC
+          filters:
+            branches:
+              only:
+                - release-workflow #TODO: change to master
+    jobs:
+      - cache-distribution:
+          filters:
+            branches:
+              only: release-workflow #TODO: change to master
+
+      - test-assembly-linux-full:
+          filters:
+            branches:
+              only: release-workflow #TODO: change to master
+          requires:
+            - cache-distribution
+      - -test-assembly-mac-full:
+          filters:
+            branches:
+              only: release-workflow #TODO: change to master
+          requires:
+            - cache-distribution
+
+      - deploy-gcp-snapshot:
+          filters:
+            branches:
+              only: release-workflow #TODO: change to master
+          requires:
+            - test-assembly-linux-full
+            - test-assembly-mac-full
+      - test-deployment-gcp:
+          filters:
+            branches:
+              only: release-workflow #TODO: change to master
+          requires:
+            - deploy-gcp-snapshot
+
+      - release-approval:
+          filters:
+            branches:
+              only: release-workflow #TODO: change to master
+          requires:
+            - test-deployment-gcp
+
 #  biograkn-release:
 #    jobs:
 #      - test-assembly-linux-full:
