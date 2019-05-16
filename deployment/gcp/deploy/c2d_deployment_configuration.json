@@ -1,0 +1,7 @@
+{
+  "defaultDeploymentType": "MULTI_VM",
+  "imageName": "grakn-kgms-2018-12-14-1537",
+  "projectId": "grakn-public",
+  "templateName": "grakn",
+  "useSolutionPackage": true
+}

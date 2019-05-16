@@ -59,7 +59,8 @@ jobs:
     steps:
       - run: echo 'CI job placeholder'
 
-  test-assembly-linux-full:
+
+  assembly-linux-full:
     machine: true
     working_directory: ~/biograkn
     steps:
@@ -68,8 +69,24 @@ jobs:
       - run: bazel build @graknlabs_grakn_core//:assemble-linux-targz
       - run: mkdir dist && tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C ./dist/
       - run: nohup ./dist/grakn-core-all-linux/grakn server start
+#      - run: bazel run //migrator:migrator-bin
+      - run: ./dist/grakn-core-all-linux/grakn server stop
+      - run: mv ./dist/grakn-core-all-linux ./dist/biograkn
+      - run: tar -czf ./dist/biograkn.tar.gz ./dist/biograkn
+
+  test-assembly-linux-full:
+    machine: true
+    working_directory: ~/biograkn
+    steps:
+      - install-bazel-linux-rbe
+      - checkout
+      - run: mkdir dist && tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C ./dist/
+      - run: nohup ./dist/grakn-core-all-linux/grakn server start
 #      - run: bazel test //migrator:assemble-all-test TODO: uncomment
       - run: ./dist/grakn-core-all-linux/grakn server stop
+
+
+
   test-assembly-mac-full:
     machine: true
     working_directory: ~/biograkn
@@ -86,6 +103,18 @@ jobs:
     working_directory: ~/biograkn
     steps:
       - run: echo 'CI job placeholder'
+
+  deploy-gcp-snapshot:
+    machine: true
+    working_directory: ~/biograkn
+    steps:
+      - install-bazel-linux-rbe
+      - checkout
+      - run: |
+          export DEPLOY_PACKER_GCP_ACCOUNT_FILE=$(mktemp)
+          echo $GCP_DEPLOY_KEY_SNAPSHOT > $DEPLOY_PACKER_GCP_ACCOUNT_FILE
+          export DEPLOY_PACKER_VERSION=$(git rev-parse HEAD)
+          bazel run //:deploy-gcp-snapshot
 
   test-deployment-gcp:
     machine: true
@@ -115,110 +144,129 @@ jobs:
     machine: true
     working_directory: ~/biograkn
     steps:
-      - run: echo 'CI job placeholder'
+      - install-bazel-linux-rbe
+      - checkout
+#      - run: | # TODO: implement this job
+#          sed -i -e 's/\./-/g' VERSION
+#          export DEPLOY_PACKER_GCP_ACCOUNT_FILE=$(mktemp)
+#          echo $GCP_DEPLOY_KEY_RELEASE > $DEPLOY_PACKER_GCP_ACCOUNT_FILE
+#          export DEPLOY_PACKER_VERSION=$(cat VERSION)
+#          bazel run --config=rbe //:deploy-gcp-release
+
+
+
 
   release-cleanup:
     machine: true
     steps:
       - checkout
-      - run: echo 'CI job placeholder'
+      - run: |
+          git push --delete \
+            "https://$REPO_GITHUB_USERNAME:$REPO_GITHUB_TOKEN@github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git" \
+            biograkn-release-branch
 
 workflows:
-  biograkn-commit:
+  test: # TODO: remove after test
     jobs:
-      - build:
+      - assembly-linux-full:
           filters:
-            branches:
-              ignore: biograkn-release-branch
-
-      - test-assembly-linux-mock:
-          filters:
-            branches:
-              ignore: biograkn-release-branch
-          requires:
-            - build
-      - test-assembly-mac-mock:
-          filters:
-            branches:
-              ignore: biograkn-release-branch
-          requires:
-            - build
-
-  biograkn-nightly:
-    triggers:
-      - schedule:
-          cron: "0 19 * * *" # UTC
-          filters:
-            branches:
-              only:
-                - master
-    jobs:
-      - test-assembly-linux-full:
-          filters:
-            branches:
-              only: master
-      - test-assembly-mac-full:
-          filters:
-            branches:
-              only: master
-
-      - test-deployment-gcp:
-          filters:
-            branches:
-              only: master
-          requires:
-            - test-assembly-linux-full
-            - test-assembly-mac-full
-
-      - release-approval:
-          filters:
-            branches:
-              only: master
-          requires:
-            - test-deployment-gcp
-
-  biograkn-release:
-    jobs:
-      - test-assembly-linux-full:
-          filters:
-            branches:
-              only: release-workflow # TODO: change to biograkn-release-branch
-      - test-assembly-mac-full:
-          filters:
-            branches:
-              only: release-workflow # TODO: change to biograkn-release-branch
-
-      - deploy-github:
-          filters:
-            branches:
-              only: release-workflow # TODO: change to biograkn-release-branch
-          requires:
-            - test-assembly-linux-full
-            - test-assembly-mac-full
-
-      - deploy-approval:
-          type: approval
-          filters:
-            branches:
-              only: release-workflow # TODO: change to biograkn-release-branch
-          requires:
-            - deploy-github
-
-      - deploy-gcp:
-          filters:
-            branches:
-              only: release-workflow # TODO: change to biograkn-release-branch
-          requires:
-            - deploy-approval
-            - test-assembly-linux-full
-
-      - release-cleanup:
-          filters:
-            branches:
-              only: release-workflow # TODO: change to biograkn-release-branch
-          requires:
-            - test-assembly-linux-full
-            - test-assembly-mac-full
-#            - test-assembly-windows-full
-            - deploy-gcp
-            - deploy-github
+              branches:
+                only: release-workflow
+#  biograkn-commit:
+#    jobs:
+#      - build:
+#          filters:
+#            branches:
+#              ignore: biograkn-release-branch
+#
+#      - test-assembly-linux-mock:
+#          filters:
+#            branches:
+#              ignore: biograkn-release-branch
+#          requires:
+#            - build
+#      - test-assembly-mac-mock:
+#          filters:
+#            branches:
+#              ignore: biograkn-release-branch
+#          requires:
+#            - build
+#
+#  biograkn-nightly:
+#    triggers:
+#      - schedule:
+#          cron: "0 19 * * *" # UTC
+#          filters:
+#            branches:
+#              only:
+#                - master
+#    jobs:
+#      - test-assembly-linux-full:
+#          filters:
+#            branches:
+#              only: master
+#      - test-assembly-mac-full:
+#          filters:
+#            branches:
+#              only: master
+#
+#      - test-deployment-gcp:
+#          filters:
+#            branches:
+#              only: master
+#          requires:
+#            - test-assembly-linux-full
+#            - test-assembly-mac-full
+#
+#      - release-approval:
+#          filters:
+#            branches:
+#              only: master
+#          requires:
+#            - test-deployment-gcp
+#
+#  biograkn-release:
+#    jobs:
+#      - test-assembly-linux-full:
+#          filters:
+#            branches:
+#              only: release-workflow # TODO: change to biograkn-release-branch
+#      - test-assembly-mac-full:
+#          filters:
+#            branches:
+#              only: release-workflow # TODO: change to biograkn-release-branch
+#
+#      - deploy-github:
+#          filters:
+#            branches:
+#              only: release-workflow # TODO: change to biograkn-release-branch
+#          requires:
+#            - test-assembly-linux-full
+#            - test-assembly-mac-full
+#
+#      - deploy-approval:
+#          type: approval
+#          filters:
+#            branches:
+#              only: release-workflow # TODO: change to biograkn-release-branch
+#          requires:
+#            - deploy-github
+#
+#      - deploy-gcp:
+#          filters:
+#            branches:
+#              only: release-workflow # TODO: change to biograkn-release-branch
+#          requires:
+#            - deploy-approval
+#            - test-assembly-linux-full
+#
+#      - release-cleanup:
+#          filters:
+#            branches:
+#              only: release-workflow # TODO: change to biograkn-release-branch
+#          requires:
+#            - test-assembly-linux-full
+#            - test-assembly-mac-full
+##            - test-assembly-windows-full
+#            - deploy-gcp
+#            - deploy-github
