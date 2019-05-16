@@ -102,10 +102,10 @@ jobs:
       - run: nohup bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server start
       #      - run: bazel test //migrator:assemble-all-test TODO: uncomment
       - run: bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server stop
-      - run: mv .bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac .bazel-genfiles/external/biograkn-mac
-      - run: zip .bazel-genfiles/external/biograkn-mac .bazel-genfiles/external/biograkn-mac.zip
+      - run: mv bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac bazel-genfiles/external/biograkn-mac
+      - run: zip bazel-genfiles/external/biograkn-mac bazel-genfiles/external/biograkn-mac.zip
       - persist_to_workspace:
-         root: .bazel-genfiles/external
+         root: bazel-genfiles/external
          paths:
            - biograkn-mac.zip
 
@@ -116,8 +116,8 @@ jobs:
       - install-bazel-linux-rbe
       - checkout
       - attach_workspace:
-          at: .bazel-genfiles/external
-      - run: unzip .bazel-genfiles/external/biograkn-mac.zip -d bazel-genfiles/external/
+          at: bazel-genfiles/external
+      - run: unzip bazel-genfiles/external/biograkn-mac.zip -d bazel-genfiles/external/
       - run: nohup bazel-genfiles/external/biograkn-mac/grakn server start
 #      - run: bazel test //migrator:assemble-all-test TODO: uncomment
       - run: bazel-genfiles/external/biograkn-mac/grakn server stop
