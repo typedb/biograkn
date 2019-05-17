@@ -54,7 +54,7 @@ jobs:
       - run: bazel test //migrator:assemble-mock-test
       - run: bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server stop
 
-  assembly-linux-full:
+  assembly-linux-all:
     machine: true
     working_directory: ~/biograkn
     steps:
