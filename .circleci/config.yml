@@ -163,7 +163,6 @@ jobs:
       - checkout
       - run: pip install google-api-python-client paramiko pyyaml google-auth cryptography==2.4.2
       - run: GCP_DEPLOY_KEY=$GCP_DEPLOY_KEY_SNAPSHOT test/deployment/gcp.py
-git
 
   release-approval:
     machine: true
