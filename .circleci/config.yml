@@ -114,7 +114,32 @@ jobs:
       #      - run: bazel test //migrator:assemble-all-test TODO: uncomment
       - run: dist/biograkn-mac/grakn server stop
 
-
+  cache-distribution:
+    machine: true
+    working_directory: ~/biograkn
+    steps:
+      - attach_workspace:
+          at: dist
+      - restore_cache:
+          key: distribution-{{ .Environment.CIRCLE_SHA1 }}
+      - run: |
+          if [ "$(ls -A ~/cache)" ]; then
+            ls ~/cache/
+            mkdir -p dist
+            cp ~/cache/* dist/
+          else
+            ls dist
+            mkdir -p ~/cache
+            cp dist/* ~/cache/
+          fi
+      - save_cache:
+          key: distribution-{{ .Environment.CIRCLE_SHA1 }}
+          paths:
+            - ~/cache
+      - persist_to_workspace:
+          root: dist
+          paths:
+            - ./*
 
 
   deploy-gcp-snapshot:
@@ -138,8 +163,7 @@ jobs:
       - checkout
       - run: pip install google-api-python-client paramiko pyyaml google-auth cryptography==2.4.2
       - run: GCP_DEPLOY_KEY=$GCP_DEPLOY_KEY_SNAPSHOT test/deployment/gcp.py
-
-
+git
 
   release-approval:
     machine: true
@@ -230,6 +254,14 @@ workflows:
           requires:
             - assembly-mac-all
 
+      - cache-distribution:
+          filters:
+            branches:
+              only: master
+          requires:
+            - test-assembly-linux-all
+            - test-assembly-mac-all
+
       - deploy-gcp-snapshot:
           filters:
             branches:
@@ -250,9 +282,15 @@ workflows:
               only: release-workflow #TODO: change to master
           requires:
             - test-deployment-gcp
+            - cache-distribution
 
 #  biograkn-release:
 #    jobs:
+#      - cache-distribution:
+#          filters:
+#            branches:
+#              only: release-workflow # TODO: change to biograkn-release-branch
+#
 #      - test-assembly-linux-all:
 #          filters:
 #            branches:
