@@ -35,8 +35,6 @@ genrule(
     outs = ["biograkn-mac.zip"]
 )
 
-
-
 genrule(
     name = "assemble-mac-mock-zip",
     srcs = [
@@ -62,8 +60,6 @@ genrule(
     """,
     outs = ["biograkn-linux.tar.gz"]
 )
-
-
 
 genrule(
     name = "assemble-linux-mock-tarz",
