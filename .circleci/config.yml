@@ -54,13 +54,19 @@ jobs:
       - run: bazel test //migrator:assemble-mock-test
       - run: bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server stop
 
-  assembly-linux-all:
+  assembly-linux-full:
     machine: true
     working_directory: ~/biograkn
     steps:
       - install-bazel-linux-rbe
       - checkout
-      - run: bazel build //:assemble-linux-tarz
+      - run: bazel build @graknlabs_grakn_core//:assemble-linux-targz
+      - run: mkdir dist && tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C dist/
+      - run: nohup dist/grakn-core-all-linux/grakn server start
+      #      - run: bazel run //migrator:migrator-bin
+      - run: dist/grakn-core-all-linux/grakn server stop
+      - run: mv dist/grakn-core-all-linux dist/biograkn-linux
+      - run: tar -czf dist/biograkn-linux.tar.gz dist/biograkn-linux
       - persist_to_workspace:
           root: dist
           paths:
