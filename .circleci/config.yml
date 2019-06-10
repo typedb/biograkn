@@ -258,7 +258,7 @@ workflows:
       - cache-distribution:
           filters:
             branches:
-              only: master
+              only: release-workflow #TODO: change to master
           requires:
             - test-assembly-linux-all
             - test-assembly-mac-all
