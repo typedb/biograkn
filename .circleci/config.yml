@@ -284,40 +284,40 @@ workflows:
           requires:
             - test-deployment-gcp
             - cache-distribution
-
-  biograkn-release:
-    jobs:
-      - cache-distribution:
-          filters:
-            branches:
-              only: release-workflow # TODO: change to biograkn-release-branch
-
-      - deploy-github:
-          filters:
-            branches:
-              only: release-workflow # TODO: change to biograkn-release-branch
-          requires:
-            - cache-distribution
-
-      - deploy-approval:
-          type: approval
-          filters:
-            branches:
-              only: release-workflow # TODO: change to biograkn-release-branch
-          requires:
-            - deploy-github
-
-      - deploy-gcp:
-          filters:
-            branches:
-              only: release-workflow # TODO: change to biograkn-release-branch
-          requires:
-            - deploy-approval
-
-      - release-cleanup:
-          filters:
-            branches:
-              only: release-workflow # TODO: change to biograkn-release-branch
-          requires:
-            - deploy-gcp
-            - deploy-github
+#
+#  biograkn-release:
+#    jobs:
+#      - cache-distribution:
+#          filters:
+#            branches:
+#              only: release-workflow # TODO: change to biograkn-release-branch
+#
+#      - deploy-github:
+#          filters:
+#            branches:
+#              only: release-workflow # TODO: change to biograkn-release-branch
+#          requires:
+#            - cache-distribution
+#
+#      - deploy-approval:
+#          type: approval
+#          filters:
+#            branches:
+#              only: release-workflow # TODO: change to biograkn-release-branch
+#          requires:
+#            - deploy-github
+#
+#      - deploy-gcp:
+#          filters:
+#            branches:
+#              only: release-workflow # TODO: change to biograkn-release-branch
+#          requires:
+#            - deploy-approval
+#
+#      - release-cleanup:
+#          filters:
+#            branches:
+#              only: release-workflow # TODO: change to biograkn-release-branch
+#          requires:
+#            - deploy-gcp
+#            - deploy-github
