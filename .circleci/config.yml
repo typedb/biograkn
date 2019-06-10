@@ -285,53 +285,43 @@ workflows:
             - test-deployment-gcp
             - cache-distribution
 
-#  biograkn-release:
-#    jobs:
-#      - cache-distribution:
-#          filters:
-#            branches:
-#              only: release-workflow # TODO: change to biograkn-release-branch
-#
-#      - test-assembly-linux-all:
-#          filters:
-#            branches:
-#              only: release-workflow # TODO: change to biograkn-release-branch
-#      - test-assembly-mac-all:
-#          filters:
-#            branches:
-#              only: release-workflow # TODO: change to biograkn-release-branch
-#
-#      - deploy-github:
-#          filters:
-#            branches:
-#              only: release-workflow # TODO: change to biograkn-release-branch
-#          requires:
-#            - test-assembly-linux-all
-#            - test-assembly-mac-all
-#
-#      - deploy-approval:
-#          type: approval
-#          filters:
-#            branches:
-#              only: release-workflow # TODO: change to biograkn-release-branch
-#          requires:
-#            - deploy-github
-#
-#      - deploy-gcp:
-#          filters:
-#            branches:
-#              only: release-workflow # TODO: change to biograkn-release-branch
-#          requires:
-#            - deploy-approval
-#            - test-assembly-linux-all
-#
-#      - release-cleanup:
-#          filters:
-#            branches:
-#              only: release-workflow # TODO: change to biograkn-release-branch
-#          requires:
-#            - test-assembly-linux-all
-#            - test-assembly-mac-all
-##            - test-assembly-windows-all
-#            - deploy-gcp
-#            - deploy-github
+  biograkn-release:
+    jobs:
+      - cache-distribution:
+          filters:
+            branches:
+              only: release-workflow # TODO: change to biograkn-release-branch
+
+      - deploy-github:
+          filters:
+            branches:
+              only: release-workflow # TODO: change to biograkn-release-branch
+          requires:
+            - cache-distribution
+
+      - deploy-approval:
+          type: approval
+          filters:
+            branches:
+              only: release-workflow # TODO: change to biograkn-release-branch
+          requires:
+            - deploy-github
+
+      - deploy-gcp:
+          filters:
+            branches:
+              only: release-workflow # TODO: change to biograkn-release-branch
+          requires:
+            - deploy-approval
+            - test-assembly-linux-all
+
+      - release-cleanup:
+          filters:
+            branches:
+              only: release-workflow # TODO: change to biograkn-release-branch
+          requires:
+            - test-assembly-linux-all
+            - test-assembly-mac-all
+#            - test-assembly-windows-all
+            - deploy-gcp
+            - deploy-github
