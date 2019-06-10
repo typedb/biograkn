@@ -313,15 +313,11 @@ workflows:
               only: release-workflow # TODO: change to biograkn-release-branch
           requires:
             - deploy-approval
-            - test-assembly-linux-all
 
       - release-cleanup:
           filters:
             branches:
               only: release-workflow # TODO: change to biograkn-release-branch
           requires:
-            - test-assembly-linux-all
-            - test-assembly-mac-all
-#            - test-assembly-windows-all
             - deploy-gcp
             - deploy-github
