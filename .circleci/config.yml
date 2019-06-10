@@ -268,8 +268,7 @@ workflows:
             branches:
               only: release-workflow #TODO: change to master
           requires:
-            - test-assembly-linux-all
-            - test-assembly-mac-all
+            - cache-distribution
       - test-deployment-gcp:
           filters:
             branches:
@@ -283,7 +282,6 @@ workflows:
               only: release-workflow #TODO: change to master
           requires:
             - test-deployment-gcp
-            - cache-distribution
 #
 #  biograkn-release:
 #    jobs:
