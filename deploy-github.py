@@ -2,6 +2,9 @@
 
 import os
 import subprocess as sp
+import sys
+import tempfile
+
 
 credential = os.getenv('GCP_CREDENTIAL')
 project = 'grakn-dev'
@@ -20,3 +23,25 @@ sp.check_call(['gsutil', 'defacl', 'ch', '-u', 'AllUsers:READER', 'gs://biograkn
 sp.check_call(['gsutil', 'rsync', '-R', './biograkn/dist/', 'gs://biograkn'])
 
 
+sp.check_call(['curl', '-L', 'https://github.com/tcnksm/ghr/releases/download/v0.10.2/ghr_v0.10.2_linux_386.tar.gz', '-o', 'ghr_v0.10.2_linux_386.tar.gz'])
+
+sp.check_call(['tar', '-xvzf', 'ghr_v0.10.2_linux_386.tar.gz'])
+
+target_commit_id = sys.argv[1]
+
+with open('VERSION') as version_file:
+    github_tag = version_file.read().strip()
+
+directory_to_upload = tempfile.mkdtemp()
+
+github_token = os.getenv('DEPLOY_GITHUB_TOKEN')
+
+exit_code = sp.call([
+    'ghr_v0.10.2_linux_386.tar.gz/ghr',
+    '-u', 'graknlabs',
+    '-r', 'biograkn',
+    '-b', 'hello world',
+    '-c', target_commit_id,
+    '-delete', '-draft', github_tag, # TODO: tag must reference the current commit
+    directory_to_upload
+], env={'GITHUB_TOKEN': github_token})
