@@ -37,7 +37,7 @@ directory_to_upload = tempfile.mkdtemp()
 github_token = os.getenv('DEPLOY_GITHUB_TOKEN')
 
 exit_code = sp.call([
-    'ghr_v0.10.2_linux_386.tar.gz/ghr',
+    'ghr_v0.10.2_linux_386/ghr',
     '-u', 'graknlabs',
     '-r', 'biograkn',
     '-b', 'hello world',
