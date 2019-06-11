@@ -180,7 +180,8 @@ jobs:
     machine: true
     working_directory: ~/biograkn
     steps:
-      - run: echo 'CI job placeholder'
+      - install-bazel-linux-rbe
+      - checkout
 
   deploy-gcp:
     machine: true
