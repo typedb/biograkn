@@ -184,7 +184,7 @@ jobs:
       - checkout
       - attach_workspace:
           at: dist
-      - run: deploy-github.py
+      - run: ./deploy-github.py
 
   deploy-gcp:
     machine: true
