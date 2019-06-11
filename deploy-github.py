@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import os
 import subprocess as sp
 
@@ -11,8 +13,10 @@ with open(credential_file, 'w') as f:
 sp.check_call(['gcloud', 'auth', 'activate-service-account', '--key-file', credential_file])
 sp.check_call(['gcloud', 'config', 'set', 'project', project])
 
+# if this file is not removed gsutil throws an error and wont run
 sp.check_call(['sudo', 'rm', '-f', '/etc/boto.cfg'])
 
 sp.check_call(['gsutil', 'defacl', 'ch', '-u', 'AllUsers:READER', 'gs://biograkn'])
 sp.check_call(['gsutil', 'rsync', '-R', './biograkn/dist/', 'gs://biograkn'])
+
 
