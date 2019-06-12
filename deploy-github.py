@@ -4,6 +4,7 @@ import os
 import subprocess as sp
 import sys
 import tempfile
+import shutil
 
 
 credential = os.getenv('GCP_CREDENTIAL')
@@ -36,12 +37,15 @@ directory_to_upload = tempfile.mkdtemp()
 
 github_token = os.getenv('DEPLOY_GITHUB_TOKEN')
 
-exit_code = sp.call([
-    'ghr_v0.10.2_linux_386/ghr',
-    '-u', 'graknlabs',
-    '-r', 'biograkn',
-    '-b', 'hello world',
-    '-c', target_commit_id,
-    '-delete', '-draft', github_tag, # TODO: tag must reference the current commit
-    directory_to_upload
-], env={'GITHUB_TOKEN': github_token})
+try:
+    exit_code = sp.call([
+        'ghr_v0.10.2_linux_386/ghr',
+        '-u', 'graknlabs',
+        '-r', 'biograkn',
+        '-b', 'hello world',
+        '-c', target_commit_id,
+        '-delete', '-draft', github_tag, # TODO: tag must reference the current commit
+        directory_to_upload
+    ], env={'GITHUB_TOKEN': github_token})
+finally:
+    shutil.rmtree(directory_to_upload)
