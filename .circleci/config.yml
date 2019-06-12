@@ -185,7 +185,7 @@ jobs:
       - attach_workspace:
           at: dist
       - run: export DEPLOY_GITHUB_TOKEN=$REPO_GITHUB_TOKEN
-      - run: ./deploy-github.py
+      - run: ./deploy-github.py $CIRCLE_SHA1
 
   deploy-gcp:
     machine: true
