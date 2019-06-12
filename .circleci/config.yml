@@ -239,6 +239,11 @@ workflows:
 #              only:
 #                - release-workflow #TODO: change to master
     jobs:
+      - deploy-github: # remove after testing
+          filters:
+            branches:
+              only: release-workflow #TODO: change to master
+
       - assembly-linux-all:
           filters:
             branches:

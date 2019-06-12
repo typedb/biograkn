@@ -20,7 +20,7 @@ sp.check_call(['gcloud', 'config', 'set', 'project', project])
 sp.check_call(['sudo', 'rm', '-f', '/etc/boto.cfg'])
 
 sp.check_call(['gsutil', 'defacl', 'ch', '-u', 'AllUsers:READER', 'gs://biograkn'])
-sp.check_call(['gsutil', 'rsync', '-R', './biograkn/dist/', 'gs://biograkn'])
+sp.check_call(['gsutil', 'rsync', '-R', './dist/', 'gs://biograkn'])
 
 
 sp.check_call(['curl', '-L', 'https://github.com/tcnksm/ghr/releases/download/v0.10.2/ghr_v0.10.2_linux_386.tar.gz', '-o', 'ghr_v0.10.2_linux_386.tar.gz'])
