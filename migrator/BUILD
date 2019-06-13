@@ -27,6 +27,14 @@ java_binary(
     classpath_resources = ["//conf:logback"]
 )
 
+# For mock assembly
+java_binary(
+    name = "migrator-mock",
+    runtime_deps = [":migrator"],
+    main_class = "grakn.biograkn.migrator.MigratorMock",
+    classpath_resources = ["//conf:logback"]
+)
+
 java_deps(
     name = "distribution-structure",
     target = ":migrator-bin",

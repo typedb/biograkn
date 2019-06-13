@@ -25,7 +25,7 @@ def init(data_path):
 
             with open(data_path) as data:
                 for first_line, sequence in SimpleFastaParser(data):
-                    # extra relevant data from first_line of each fasta (protein)
+                    # extra relevant edata from first_line of each fasta (protein)
                     protein_details = re.split(',| OS=| OX=', first_line.replace(' ', ',', 1))
                     identifier = protein_details[0].split("|")[1]
                     name = protein_details[1]

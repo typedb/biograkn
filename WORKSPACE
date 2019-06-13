@@ -154,6 +154,10 @@ test_example_pip_install()
 load("@graknlabs_bazel_distribution//github:dependencies.bzl", "github_dependencies_for_deployment")
 github_dependencies_for_deployment()
 
+load("@graknlabs_bazel_distribution//packer:dependencies.bzl", "deploy_packer_dependencies")
+deploy_packer_dependencies()
+
+
 #####################################
 # Load Bazel common workspace rules #
 #####################################

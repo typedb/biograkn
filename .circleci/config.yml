@@ -53,38 +53,102 @@ jobs:
       - run: nohup bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server start
       - run: bazel test //migrator:assemble-mock-test
       - run: bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server stop
-  test-assembly-windows-mock:
-    machine: true
-    working_directory: ~/biograkn
-    steps:
-      - run: echo 'CI job placeholder'
 
-  test-assembly-linux-full:
+  assembly-linux-all:
     machine: true
     working_directory: ~/biograkn
     steps:
       - install-bazel-linux-rbe
       - checkout
       - run: bazel build @graknlabs_grakn_core//:assemble-linux-targz
-      - run: mkdir dist && tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C ./dist/
-      - run: nohup ./dist/grakn-core-all-linux/grakn server start
+      - run: mkdir dist &&aiai tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C dist/
+      - run: nohup dist/grakn-core-all-linux/grakn server start
+      #      - run: bazel run //migrator:migrator-bin TODO: uncomment
+      - run: dist/grakn-core-all-linux/grakn server stop
+      - run: mv dist/grakn-core-all-linux dist/biograkn-linux
+      - run: tar -czf dist/biograkn-linux.tar.gz dist/biograkn-linux
+      - persist_to_workspace:
+          root: dist
+          paths:
+            - biograkn-linux.tar.gz
+  test-assembly-linux-all:
+    machine: true
+    working_directory: ~/biograkn
+    steps:
+      - install-bazel-linux-rbe
+      - checkout
+      - attach_workspace:
+          at: dist
+      - run: tar -xvzf dist/biograkn-linux.tar.gz
+      - run: nohup dist/biograkn-linux/grakn server start
 #      - run: bazel test //migrator:assemble-all-test TODO: uncomment
-      - run: ./dist/grakn-core-all-linux/grakn server stop
-  test-assembly-mac-full:
+      - run: dist/biograkn-linux/grakn server stop
+
+  assembly-mac-all:
     machine: true
     working_directory: ~/biograkn
     steps:
       - install-bazel-linux-rbe
       - checkout
       - run: bazel build @graknlabs_grakn_core//:assemble-mac-zip
-      - run: unzip bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac.zip -d bazel-genfiles/external/graknlabs_grakn_core/
-      - run: nohup bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server start
-#      - run: bazel test //migrator:assemble-all-test TODO: uncomment
-      - run: bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server stop
-  test-assembly-windows-full:
+      - run: mkdir dist && unzip bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac.zip -d dist/
+      - run: nohup dist/grakn-core-all-mac/grakn server start
+      #      - run: bazel run //migrator:migrator-bin TODO: uncomment
+      - run: dist/grakn-core-all-mac/grakn server stop
+      - run: mv dist/grakn-core-all-mac dist/biograkn-mac
+      - run: zip -r dist/biograkn-mac.zip dist/biograkn-mac
+      - persist_to_workspace:
+          root: dist
+          paths:
+            - biograkn-mac.zip
+  test-assembly-mac-all:
     machine: true
     working_directory: ~/biograkn
     steps:
+      - install-bazel-linux-rbe
+      - checkout
+      - attach_workspace:
+          at: dist
+      - run: unzip dist/biograkn-mac.zip
+      - run: nohup dist/biograkn-mac/grakn server start
+      #      - run: bazel test //migrator:assemble-all-test TODO: uncomment
+      - run: dist/biograkn-mac/grakn server stop
+
+  cache-distribution:
+    machine: true
+    working_directory: ~/biograkn
+    steps:
+      - attach_workspace:
+          at: dist
+      - restore_cache:
+          key: distribution-{{ .Environment.CIRCLE_SHA1 }}
+      - run: |
+          if [ "$(ls -A ~/cache)" ]; then
+            ls ~/cache/
+            mkdir -p dist
+            cp ~/cache/* dist/
+          else
+            ls dist
+            mkdir -p ~/cache
+            cp dist/* ~/cache/
+          fi
+      - save_cache:
+          key: distribution-{{ .Environment.CIRCLE_SHA1 }}
+          paths:
+            - ~/cache
+      - persist_to_workspace:
+          root: dist
+          paths:
+            - ./*
+
+  deploy-gcp-snapshot:
+    machine: true
+    working_directory: ~/biograkn
+    steps:
+      - install-bazel-linux-rbe
+      - checkout
+      - attach_workspace:
+          at: dist
       - run: echo 'CI job placeholder'
 
   test-deployment-gcp:
@@ -93,8 +157,7 @@ jobs:
     steps:
       - install-bazel-linux-rbe
       - checkout
-      - run: pip install google-api-python-client paramiko pyyaml google-auth cryptography==2.4.2
-      - run: GCP_DEPLOY_KEY=$GCP_DEPLOY_KEY_SNAPSHOT test/deployment/gcp.py
+      - run: echo 'CI job placeholder'
 
   release-approval:
     machine: true
@@ -102,26 +165,38 @@ jobs:
       - install-bazel-linux-rbe
       - checkout
       - run: |
-          export RELEASE_APPROVAL_TOKEN=$REPO_GITHUB_TOKEN_GRABL
+          export RELEASE_APPROVAL_USERNAME=$REPO_GITHUB_USERNAME
+          export RELEASE_APPROVAL_TOKEN=$REPO_GITHUB_TOKEN
           bazel run @graknlabs_build_tools//ci:release-approval
 
   deploy-github:
     machine: true
     working_directory: ~/biograkn
     steps:
-      - run: echo 'CI job placeholder'
+      - install-bazel-linux-rbe
+      - checkout
+      - attach_workspace:
+          at: dist
+      - run: |
+          export DEPLOY_GITHUB_TOKEN=$REPO_GITHUB_TOKEN
+          ./deploy-github.py $CIRCLE_SHA1
 
   deploy-gcp:
     machine: true
     working_directory: ~/biograkn
     steps:
+      - install-bazel-linux-rbe
+      - checkout
       - run: echo 'CI job placeholder'
 
   release-cleanup:
     machine: true
     steps:
       - checkout
-      - run: echo 'CI job placeholder'
+      - run: |
+          git push --delete \
+            "https://$REPO_GITHUB_USERNAME:$REPO_GITHUB_TOKEN@github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git" \
+            biograkn-release-branch
 
 workflows:
   biograkn-commit:
@@ -145,30 +220,56 @@ workflows:
             - build
 
   biograkn-nightly:
-    triggers:
-      - schedule:
-          cron: "0 19 * * *" # UTC
-          filters:
-            branches:
-              only:
-                - master
+#    triggers: # TODO: uncomment after testing
+#      - schedule:
+#          cron: "0 19 * * *" # UTC
+#          filters:
+#            branches:
+#              only:
+#                - release-workflow #TODO: change to master
     jobs:
-      - test-assembly-linux-full:
+      - assembly-linux-all:
           filters:
             branches:
               only: master
-      - test-assembly-mac-full:
+      - assembly-mac-all:
           filters:
             branches:
               only: master
 
+      - test-assembly-linux-all:
+          filters:
+            branches:
+              only: master
+          requires:
+            - assembly-linux-all
+      - test-assembly-mac-all:
+          filters:
+            branches:
+              only: master
+          requires:
+            - assembly-mac-all
+
+      - cache-distribution:
+          filters:
+            branches:
+              only: master
+          requires:
+            - test-assembly-linux-all
+            - test-assembly-mac-all
+
+      - deploy-gcp-snapshot:
+          filters:
+            branches:
+              only: master
+          requires:
+            - cache-distribution
       - test-deployment-gcp:
           filters:
             branches:
               only: master
           requires:
-            - test-assembly-linux-full
-            - test-assembly-mac-full
+            - deploy-gcp-snapshot
 
       - release-approval:
           filters:
@@ -179,11 +280,7 @@ workflows:
 
   biograkn-release:
     jobs:
-      - test-assembly-linux-full:
-          filters:
-            branches:
-              only: biograkn-release-branch
-      - test-assembly-mac-full:
+      - cache-distribution:
           filters:
             branches:
               only: biograkn-release-branch
@@ -193,8 +290,7 @@ workflows:
             branches:
               only: biograkn-release-branch
           requires:
-            - test-assembly-linux-full
-            - test-assembly-mac-full
+            - cache-distribution
 
       - deploy-approval:
           type: approval
@@ -210,15 +306,11 @@ workflows:
               only: biograkn-release-branch
           requires:
             - deploy-approval
-            - test-assembly-linux-full
 
       - release-cleanup:
           filters:
             branches:
               only: biograkn-release-branch
           requires:
-            - test-assembly-linux-full
-            - test-assembly-mac-full
-#            - test-assembly-windows-full
             - deploy-gcp
             - deploy-github
