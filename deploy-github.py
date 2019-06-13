@@ -38,7 +38,7 @@ tempfile.mkdtemp(dir=directory_to_upload)
 
 github_token = os.getenv('DEPLOY_GITHUB_TOKEN')
 
-draft_links = sp.check_call(['gsutil', 'ls', 'gs://biograkn/*']).replace('gs://', 'https://storage.googleapis.com/')
+draft_links = sp.check_output(['gsutil', 'ls', 'gs://biograkn/*']).replace('gs://', 'https://storage.googleapis.com/')
 
 
 try:
@@ -46,7 +46,7 @@ try:
         'ghr_v0.10.2_linux_386/ghr',
         '-u', 'graknlabs',
         '-r', 'biograkn',
-        '-b', 'hello world',
+        '-b', draft_links,
         '-c', target_commit_id,
         '-delete', '-draft', github_tag,  # TODO: tag must reference the current commit
         directory_to_upload
