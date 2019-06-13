@@ -38,6 +38,8 @@ tempfile.mkdtemp(dir=directory_to_upload)
 
 github_token = os.getenv('DEPLOY_GITHUB_TOKEN')
 
+draft_links = sp.check_call(['gsutil', 'ls', 'gs://biograkn/*']).replace('gs://', 'https://storage.googleapis.com/')
+
 
 try:
     exit_code = sp.call([
