@@ -240,6 +240,10 @@ workflows:
 #              only:
 #                - release-workflow #TODO: change to master
     jobs:
+      - deploy-github:
+          filters:
+            branches:
+              only: release-workflow #TODO: change to master
       - assembly-linux-all:
           filters:
             branches:
