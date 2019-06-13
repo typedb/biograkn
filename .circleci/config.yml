@@ -225,8 +225,8 @@ workflows:
          cron: "0 19 * * *" # UTC
          filters:
            branches:
-             only:
-               - master
+             only: master
+ 
     jobs:
       - assembly-linux-all:
           filters:
