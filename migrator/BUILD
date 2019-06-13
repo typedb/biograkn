@@ -27,7 +27,6 @@ java_binary(
     classpath_resources = ["//conf:logback"]
 )
 
-
 # For mock assembly
 java_binary(
     name = "migrator-mock",

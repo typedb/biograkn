@@ -61,9 +61,9 @@ jobs:
       - install-bazel-linux-rbe
       - checkout
       - run: bazel build @graknlabs_grakn_core//:assemble-linux-targz
-      - run: mkdir dist && tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C dist/
+      - run: mkdir dist &&aiai tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C dist/
       - run: nohup dist/grakn-core-all-linux/grakn server start
-      #      - run: bazel run //migrator:migrator-bin
+      #      - run: bazel run //migrator:migrator-bin TODO: uncomment
       - run: dist/grakn-core-all-linux/grakn server stop
       - run: mv dist/grakn-core-all-linux dist/biograkn-linux
       - run: tar -czf dist/biograkn-linux.tar.gz dist/biograkn-linux
@@ -93,7 +93,7 @@ jobs:
       - run: bazel build @graknlabs_grakn_core//:assemble-mac-zip
       - run: mkdir dist && unzip bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac.zip -d dist/
       - run: nohup dist/grakn-core-all-mac/grakn server start
-      #      - run: bazel run //migrator:migrator-bin
+      #      - run: bazel run //migrator:migrator-bin TODO: uncomment
       - run: dist/grakn-core-all-mac/grakn server stop
       - run: mv dist/grakn-core-all-mac dist/biograkn-mac
       - run: zip -r dist/biograkn-mac.zip dist/biograkn-mac
@@ -141,7 +141,6 @@ jobs:
           paths:
             - ./*
 
-
   deploy-gcp-snapshot:
     machine: true
     working_directory: ~/biograkn
@@ -151,11 +150,7 @@ jobs:
       - attach_workspace:
           at: dist
       - run: echo 'CI job placeholder'
-#      - run: | # TODO: uncomment later
-#      export DEPLOY_PACKER_GCP_ACCOUNT_FILE=$(mktemp)
-#      echo $GCP_DEPLOY_KEY_SNAPSHOT > $DEPLOY_PACKER_GCP_ACCOUNT_FILE
-#      export DEPLOY_PACKER_VERSION=$(git rev-parse HEAD)
-#      bazel run //:deploy-gcp-snapshot
+
   test-deployment-gcp:
     machine: true
     working_directory: ~/biograkn
@@ -163,8 +158,6 @@ jobs:
       - install-bazel-linux-rbe
       - checkout
       - run: echo 'CI job placeholder'
-#      - run: pip install google-api-python-client paramiko pyyaml google-auth cryptography==2.4.2 TODO: uncomment later
-#      - run: GCP_DEPLOY_KEY=$GCP_DEPLOY_KEY_SNAPSHOT test/deployment/gcp.py
 
   release-approval:
     machine: true
@@ -194,12 +187,7 @@ jobs:
     steps:
       - install-bazel-linux-rbe
       - checkout
-#      - run: | # TODO: implement this job
-#          sed -i -e 's/\./-/g' VERSION
-#          export DEPLOY_PACKER_GCP_ACCOUNT_FILE=$(mktemp)
-#          echo $GCP_DEPLOY_KEY_RELEASE > $DEPLOY_PACKER_GCP_ACCOUNT_FILE
-#          export DEPLOY_PACKER_VERSION=$(cat VERSION)
-#          bazel run --config=rbe //:deploy-gcp-release
+      - run: echo 'CI job placeholder'
 
   release-cleanup:
     machine: true
@@ -243,29 +231,29 @@ workflows:
       - assembly-linux-all:
           filters:
             branches:
-              only: release-workflow #TODO: change to master
+              only: master
       - assembly-mac-all:
           filters:
             branches:
-              only: release-workflow #TODO: change to master
+              only: master
 
       - test-assembly-linux-all:
           filters:
             branches:
-              only: release-workflow #TODO: change to master
+              only: master
           requires:
             - assembly-linux-all
       - test-assembly-mac-all:
           filters:
             branches:
-              only: release-workflow #TODO: change to master
+              only: master
           requires:
             - assembly-mac-all
 
       - cache-distribution:
           filters:
             branches:
-              only: release-workflow #TODO: change to master
+              only: master
           requires:
             - test-assembly-linux-all
             - test-assembly-mac-all
@@ -273,20 +261,20 @@ workflows:
       - deploy-gcp-snapshot:
           filters:
             branches:
-              only: release-workflow #TODO: change to master
+              only: master
           requires:
             - cache-distribution
       - test-deployment-gcp:
           filters:
             branches:
-              only: release-workflow #TODO: change to master
+              only: master
           requires:
             - deploy-gcp-snapshot
 
       - release-approval:
           filters:
             branches:
-              only: release-workflow #TODO: change to master
+              only: master
           requires:
             - test-deployment-gcp
 
@@ -295,12 +283,12 @@ workflows:
       - cache-distribution:
           filters:
             branches:
-              only: biograkn-release-branch # TODO: change to biograkn-release-branch
+              only: biograkn-release-branch
 
       - deploy-github:
           filters:
             branches:
-              only: biograkn-release-branch # TODO: change to biograkn-release-branch
+              only: biograkn-release-branch
           requires:
             - cache-distribution
 
@@ -308,21 +296,21 @@ workflows:
           type: approval
           filters:
             branches:
-              only: biograkn-release-branch # TODO: change to biograkn-release-branch
+              only: biograkn-release-branch
           requires:
             - deploy-github
 
       - deploy-gcp:
           filters:
             branches:
-              only: biograkn-release-branch # TODO: change to biograkn-release-branch
+              only: biograkn-release-branch
           requires:
             - deploy-approval
 
       - release-cleanup:
           filters:
             branches:
-              only: biograkn-release-branch # TODO: change to biograkn-release-branch
+              only: biograkn-release-branch
           requires:
             - deploy-gcp
             - deploy-github

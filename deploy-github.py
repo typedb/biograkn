@@ -23,7 +23,6 @@ sp.check_call(['sudo', 'rm', '-f', '/etc/boto.cfg'])
 sp.check_call(['gsutil', 'defacl', 'ch', '-u', 'AllUsers:READER', 'gs://biograkn'])
 sp.check_call(['gsutil', 'rsync', '-R', './dist/', 'gs://biograkn'])
 
-
 sp.check_call(['curl', '-L', 'https://github.com/tcnksm/ghr/releases/download/v0.10.2/ghr_v0.10.2_linux_386.tar.gz', '-o', 'ghr_v0.10.2_linux_386.tar.gz'])
 
 sp.check_call(['tar', '-xvzf', 'ghr_v0.10.2_linux_386.tar.gz'])
@@ -39,7 +38,6 @@ tempfile.mkdtemp(dir=directory_to_upload)
 github_token = os.getenv('DEPLOY_GITHUB_TOKEN')
 
 draft_links = sp.check_output(['gsutil', 'ls', 'gs://biograkn/*']).replace('gs://', 'https://storage.googleapis.com/')
-
 
 try:
     exit_code = sp.call([
