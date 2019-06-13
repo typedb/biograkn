@@ -34,10 +34,10 @@ with open('VERSION') as version_file:
     github_tag = version_file.read().strip()
 
 directory_to_upload = tempfile.mkdtemp()
+tempfile.mkdtemp(dir=directory_to_upload)
 
 github_token = os.getenv('DEPLOY_GITHUB_TOKEN')
 
-tempfile.mkdtemp(dir=directory_to_upload)
 
 try:
     exit_code = sp.call([
