@@ -37,20 +37,6 @@ directory_to_upload = tempfile.mkdtemp()
 
 github_token = os.getenv('DEPLOY_GITHUB_TOKEN')
 
-print('----------')
-print(target_commit_id)
-print('----------')
-
-print(github_tag)
-print('----------')
-
-print(directory_to_upload)
-print('----------')
-
-print(github_token)
-print('----------')
-
-
 try:
     exit_code = sp.call([
         'ghr_v0.10.2_linux_386/ghr',
