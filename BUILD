@@ -1,4 +1,4 @@
-
+exports_files(["VERSION"])
 
 
 
