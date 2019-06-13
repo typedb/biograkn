@@ -61,7 +61,7 @@ jobs:
       - install-bazel-linux-rbe
       - checkout
       - run: bazel build @graknlabs_grakn_core//:assemble-linux-targz
-      - run: mkdir dist &&aiai tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C dist/
+      - run: mkdir dist && tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C dist/
       - run: nohup dist/grakn-core-all-linux/grakn server start
       #      - run: bazel run //migrator:migrator-bin TODO: uncomment
       - run: dist/grakn-core-all-linux/grakn server stop
@@ -220,13 +220,14 @@ workflows:
             - build
 
   biograkn-nightly:
-#    triggers: # TODO: uncomment after testing
-#      - schedule:
-#          cron: "0 19 * * *" # UTC
-#          filters:
-#            branches:
-#              only:
-#                - release-workflow #TODO: change to master
+    triggers:
+      - schedule:
+          cron: "0 19 * * *" # UTC
+          filters:
+            branches:
+              only:
+                - master
+ 
     jobs:
       - assembly-linux-all:
           filters:
