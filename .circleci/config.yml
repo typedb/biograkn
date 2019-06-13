@@ -220,13 +220,13 @@ workflows:
             - build
 
   biograkn-nightly:
-#    triggers: # TODO: uncomment after testing
-#      - schedule:
-#          cron: "0 19 * * *" # UTC
-#          filters:
-#            branches:
-#              only:
-#                - release-workflow #TODO: change to master
+   triggers: 
+     - schedule:
+         cron: "0 19 * * *" # UTC
+         filters:
+           branches:
+             only:
+               - master
     jobs:
       - assembly-linux-all:
           filters:
