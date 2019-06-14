@@ -16,8 +16,8 @@ BIOGRAKN_DISTRIBUTION="biograkn-linux"
 #    chown grakn:grakn /var/log/grakn && \
 #    chmod 755 /var/log/grakn
 
-tar -xf /tmp/deployment/"BIOGRAKN_DISTRIBUTION".tar.gz -C /tmp/deployment && \
-    cp -r /tmp/deployment/"BIOGRAKN_DISTRIBUTION" /opt/biograkn
+tar -xf /tmp/deployment/"$BIOGRAKN_DISTRIBUTION".tar.gz -C /tmp/deployment && \
+    cp -r /tmp/deployment/dist/"$BIOGRAKN_DISTRIBUTION" /opt/biograkn
 
 #
 #     && \
