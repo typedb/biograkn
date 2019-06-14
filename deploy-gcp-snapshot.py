@@ -4,7 +4,7 @@ import subprocess as sp
 import shutil
 import os
 
-sp.check_call(['curl', '-L', 'https://releases.hashicorp.com/packer/1.4.0/packer_1.4.0_darwin_amd64.zip', '-o', 'packer.zip'])
+sp.check_call(['curl', '-L', 'https://releases.hashicorp.com/packer/1.4.0/packer_1.4.0_linux_amd64.zip', '-o', 'packer.zip'])
 
 sp.check_call(['unzip', 'packer.zip'])
 
