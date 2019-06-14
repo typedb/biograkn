@@ -13,6 +13,5 @@ shutil.copy('./startup-script.sh', './dist')
 sp.check_call([
     './packer',
     'build',
-    '-debug',
     'packer-config.json'
 ], env=os.environ)
