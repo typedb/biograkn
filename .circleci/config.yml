@@ -149,7 +149,11 @@ jobs:
       - checkout
       - attach_workspace:
           at: dist
-      - run: echo 'CI job placeholder'
+      - run: |
+          export DEPLOY_PACKER_GCP_ACCOUNT_FILE=$(mktemp)
+          echo $GCP_DEPLOY_KEY_SNAPSHOT > $DEPLOY_PACKER_GCP_ACCOUNT_FILE
+          export DEPLOY_PACKER_VERSION=$(git rev-parse HEAD)
+          ./deploy-gcp-snapshot.py
 
   test-deployment-gcp:
     machine: true
