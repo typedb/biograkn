@@ -16,7 +16,7 @@ def gcloud_instances_create(instance):
         'compute',
         'instances',
         'create',
-        'instance',
+        instance,
         '--image',
         'grakn-biograkn-snapshot-test',
         '--machine-type',
@@ -24,42 +24,6 @@ def gcloud_instances_create(instance):
         '--zone=europe-west1-b',
         '--project=grakn-dev'
     ])
-
-
-def gcloud_ssh(instance, command):
-    sp.check_call([
-        'gcloud',
-        'compute',
-        'ssh',
-        instance,
-        '--command=' + command,
-        '--zone=europe-west1-b',
-        '--project=grakn-dev'
-    ])
-
-def gcloud_scp(instance, local, remote):
-    sp.check_call([
-        'gcloud',
-        'compute',
-        'scp',
-        local,
-        instance + ':' + remote,
-        '--zone=europe-west1-b',
-        '--project=grakn-dev'
-    ])
-
-
-def gcloud_scp_from_remote(instance, remote, local):
-    sp.call([
-        'gcloud',
-        'compute',
-        'scp',
-        instance + ':' + remote,
-        local,
-        '--zone=europe-west1-b',
-        '--project=grakn-dev'
-    ])
-
 
 def gcloud_instances_delete(instance):
     sp.check_call([
@@ -72,7 +36,6 @@ def gcloud_instances_delete(instance):
         '--delete-disks=all',
         '--zone=europe-west1-b'
     ])
-
 
 # TODO: exit if CIRCLE_BUILD_NUM and $GCP_CREDENTIAL aren't present
 credential = os.getenv('GCP_CREDENTIAL')
@@ -88,34 +51,9 @@ try:
     sp.check_call(['gcloud', 'config', 'set', 'project', project])
     sp.check_call(['ssh-keygen', '-t', 'rsa', '-b', '4096', '-N', '', '-f', os.path.expanduser('~/.ssh/google_compute_engine')])
 
-    lprint('Creating a biograkn instance "' + instance + '"')
+    lprint('Creating a BioGrakn instance "' + instance + '"')
     gcloud_instances_create(instance)
 
-    # lprint('Installing dependencies')
-    # gcloud_ssh(instance, 'sudo yum install -y http://opensource.wandisco.com/centos/7/git/x86_64/wandisco-git-release-7-2.noarch.rpm')
-    # gcloud_ssh(instance, 'sudo yum update -y')
-    # gcloud_ssh(instance, 'sudo yum install -y sudo procps which gcc gcc-c++ python-devel unzip git java-1.8.0-openjdk-devel rpm-build yum-utils')
-    # gcloud_ssh(instance, 'curl -OL https://github.com/bazelbuild/bazel/releases/download/0.20.0/bazel-0.20.0-installer-linux-x86_64.sh')
-    # gcloud_ssh(instance, 'chmod +x bazel-0.20.0-installer-linux-x86_64.sh')
-    # gcloud_ssh(instance, 'sudo ./bazel-0.20.0-installer-linux-x86_64.sh')
-
-    lprint('Copying grakn distribution from CircleCI job into "' + instance + '"')
-
-    sp.check_call(['cat', 'VERSION'])
-    sp.check_call(['zip', '-r', 'grakn.zip', '.'])
-    gcloud_scp(instance, local='grakn.zip', remote='~')
-    gcloud_ssh(instance, 'unzip grakn.zip')
-
-    lprint('Installing RPM packages. Grakn will be available system-wide')
-    gcloud_ssh(instance, 'sudo yum-config-manager --add-repo https://repo.grakn.ai/repository/meta/rpm-snapshot.repo')
-    gcloud_ssh(instance, 'sudo yum -y update')
-    gcloud_ssh(instance, 'sudo yum -y install grakn-core-all-$(cat VERSION)')
-
-    gcloud_ssh(instance, 'grakn server start')
-    gcloud_ssh(instance, 'grakn server stop')
 finally:
-    lprint('Copying logs from CentOS instance')
-    gcloud_scp_from_remote(instance, remote='/opt/grakn/core/logs/grakn.log', local='./grakn.log')
-    gcloud_scp_from_remote(instance, remote='/opt/grakn/core/logs/cassandra.log', local='./cassandra.log')
-    lprint('Deleting the CentOS instance')
+    lprint('Deleting the BioGrakn instance')
     gcloud_instances_delete(instance)
