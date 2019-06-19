@@ -7,7 +7,7 @@ BIOGRAKN_DISTRIBUTION="biograkn-linux"
 tar -xf /tmp/deployment/"$BIOGRAKN_DISTRIBUTION".tar.gz -C /tmp/deployment && \
     cp -r /tmp/deployment/dist/"$BIOGRAKN_DISTRIBUTION" /opt/biograkn
 
-sudo apt install openjdk-8-jdk
+apt-get install -y openjdk-8-jdk
 
 mkdir /opt/c2d && \
     cp /tmp/deployment/startup-script.sh /opt/c2d/ && \
