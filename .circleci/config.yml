@@ -162,8 +162,7 @@ jobs:
     steps:
       - install-bazel-linux-rbe
       - checkout
-#      - run: pip install google-api-python-client paramiko pyyaml google-auth
-#      - run: GCP_DEPLOY_KEY=$GCP_DEPLOY_KEY_SNAPSHOT test/deployment/gcp/gcp.py
+      - run: test/deployment/gcp/gcp.py
 
   release-approval:
     machine: true
