@@ -192,7 +192,12 @@ jobs:
     steps:
       - install-bazel-linux-rbe
       - checkout
-      - run: echo 'CI job placeholder'
+      - run: |
+          export GCP_DEPLOY_KEY_SNAPSHOT=$GCP_CREDENTIAL
+          export DEPLOY_PACKER_GCP_ACCOUNT_FILE=$(mktemp)
+          echo $GCP_DEPLOY_KEY_SNAPSHOT > $DEPLOY_PACKER_GCP_ACCOUNT_FILE
+          export DEPLOY_PACKER_VERSION=$(git rev-parse HEAD)
+          ./deploy-gcp.py
 
   release-cleanup:
     machine: true

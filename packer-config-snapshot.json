@@ -7,7 +7,7 @@
     {
       "type": "googlecompute",
       "account_file": "{{user `gcp_account_file`}}",
-      "project_id": "grakn-public",
+      "project_id": "grakn-dev",
       "source_image_family": "ubuntu-1604-lts",
       "zone": "europe-west1-b",
       "ssh_username": "ubuntu",
