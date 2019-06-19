@@ -88,7 +88,7 @@ try:
     sp.check_call(['gcloud', 'config', 'set', 'project', project])
     sp.check_call(['ssh-keygen', '-t', 'rsa', '-b', '4096', '-N', '', '-f', os.path.expanduser('~/.ssh/google_compute_engine')])
 
-    lprint('Creating a CentOS instance "' + instance + '"')
+    lprint('Creating a biograkn instance "' + instance + '"')
     gcloud_instances_create(instance)
 
     # lprint('Installing dependencies')
