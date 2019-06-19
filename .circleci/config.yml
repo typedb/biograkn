@@ -192,6 +192,8 @@ jobs:
     steps:
       - install-bazel-linux-rbe
       - checkout
+      - attach_workspace:
+          at: dist
       - run: |
           export GCP_DEPLOY_KEY_SNAPSHOT=$GCP_CREDENTIAL
           export DEPLOY_PACKER_GCP_ACCOUNT_FILE=$(mktemp)
