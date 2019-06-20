@@ -56,18 +56,20 @@ try:
     lprint('Creating a BioGrakn instance "' + instance + '"')
     gcloud_instances_create(instance)
 
-    external_ip = sp.check_output(['gcloud', 'compute', 'instances', 'describe', instance, "--format='get(networkInterfaces[0].accessConfigs[0].natIP)'", '--zone', '--zone europe-west1-b'])[:-2]
+    external_ip = sp.check_output(['gcloud', 'compute', 'instances', 'describe', instance, '--format=get(networkInterfaces[0].accessConfigs[0].natIP)', '--zone', 'europe-west1-b'])[:-1]
 
     uri = external_ip + ':48555'
 
     time.sleep(180)
 
+
     with GraknClient(uri=uri) as client:
         with client.session(keyspace="grakn") as session:
-            ## session is open
-            pass
-        ## session is closed
-    ## client is closed
+            ## creating a write transaction
+
+            ## creating a read transaction
+            with session.transaction().read() as read_transaction:
+                answer_iterator = read_transaction.query("match $x isa thing; get;")
 
 
 finally:
