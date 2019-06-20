@@ -12,22 +12,7 @@ sp.check_call(['unzip', 'packer.zip'])
 shutil.copy('./install.sh', './dist')
 shutil.copy('./shutdown-script.sh', './dist')
 shutil.copy('./startup-script.sh', './dist')
-
-
-def filecopy(src, dest, owner=None, mode=None):
-    shutil.copy(src, dest)
-    if owner:
-        owner_pwnam = getpwnam(owner)
-        os.chown(dest, owner_pwnam.pw_uid, owner_pwnam.pw_gid)
-    if mode:
-        os.chmod(dest, mode)
-
-filecopy(
-    os.path.join('/tmp/deployment/', 'rc.local'),
-    '/etc/rc.local',
-    'root',
-    0o755
-)
+shutil.copy('./rc.local', './dist')
 
 sp.check_call([
     './packer',
