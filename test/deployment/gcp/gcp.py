@@ -2,6 +2,8 @@
 
 import os
 import subprocess as sp
+import time
+from grakn.client import GraknClient
 
 
 def lprint(msg):
@@ -53,6 +55,20 @@ try:
 
     lprint('Creating a BioGrakn instance "' + instance + '"')
     gcloud_instances_create(instance)
+
+    external_ip = sp.check_output(['gcloud', 'compute', 'instances', 'describe', instance, "--format='get(networkInterfaces[0].accessConfigs[0].natIP)'", '--zone', '--zone europe-west1-b'])[:-2]
+
+    uri = external_ip + ':48555'
+
+    time.sleep(180)
+
+    with GraknClient(uri=uri) as client:
+        with client.session(keyspace="grakn") as session:
+            ## session is open
+            pass
+        ## session is closed
+    ## client is closed
+
 
 finally:
     lprint('Deleting the BioGrakn instance')

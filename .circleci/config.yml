@@ -162,7 +162,9 @@ jobs:
     steps:
       - install-bazel-linux-rbe
       - checkout
-      - run: test/deployment/gcp/gcp.py
+      - run: |
+          pip install grakn-client
+          test/deployment/gcp/gcp.py
 
   release-approval:
     machine: true
