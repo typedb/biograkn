@@ -42,7 +42,7 @@ def gcloud_instances_delete(instance):
     ])
 
 # TODO: exit if CIRCLE_BUILD_NUM and $GCP_CREDENTIAL aren't present
-credential = os.getenv('GCP_CREDENTIAL')
+credential = os.getenv('GCP_DEPLOY_KEY_SNAPSHOT')
 project = 'grakn-dev'
 instance = 'circleci-' + os.getenv('CIRCLE_PROJECT_REPONAME') + '-' + os.getenv('CIRCLE_JOB') + '-' + os.getenv('CIRCLE_BUILD_NUM')
 
