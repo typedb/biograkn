@@ -11,7 +11,7 @@
       "source_image_family": "ubuntu-1604-lts",
       "zone": "europe-west1-b",
       "ssh_username": "ubuntu",
-      "image_name": "grakn-biograkn-snapshot-test",
+      "image_name": "grakn-biograkn-snapshot-{{env `DEPLOY_PACKER_VERSION`}}",
       "image_licenses": ["projects/grakn-public/global/licenses/grakn-kgms-premium"]
     }
   ],
