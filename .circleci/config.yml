@@ -150,7 +150,6 @@ jobs:
       - attach_workspace:
           at: dist
       - run: |
-          export GCP_DEPLOY_KEY_SNAPSHOT=$GCP_CREDENTIAL
           export DEPLOY_PACKER_GCP_ACCOUNT_FILE=$(mktemp)
           echo $GCP_DEPLOY_KEY_SNAPSHOT > $DEPLOY_PACKER_GCP_ACCOUNT_FILE
           export DEPLOY_PACKER_VERSION=$(git rev-parse HEAD)
@@ -197,9 +196,8 @@ jobs:
       - attach_workspace:
           at: dist
       - run: |
-          export GCP_DEPLOY_KEY_SNAPSHOT=$GCP_CREDENTIAL
           export DEPLOY_PACKER_GCP_ACCOUNT_FILE=$(mktemp)
-          echo $GCP_DEPLOY_KEY_SNAPSHOT > $DEPLOY_PACKER_GCP_ACCOUNT_FILE
+          echo $GCP_DEPLOY_KEY_RELEASE > $DEPLOY_PACKER_GCP_ACCOUNT_FILE
           export DEPLOY_PACKER_VERSION=$(git rev-parse HEAD)
           deployment/gcp/deploy-gcp.py
 
