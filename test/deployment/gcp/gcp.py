@@ -20,7 +20,7 @@ def gcloud_instances_create(instance):
         'create',
         instance,
         '--image',
-        'grakn-biograkn-snapshot-test',
+        'biograkn-snapshot-' + os.getenv('CIRCLE_SHA1'),
         '--machine-type',
         'n1-standard-4',
         '--zone=europe-west1-b',
