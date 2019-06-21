@@ -65,16 +65,15 @@ try:
     client = None
     while client is None:
         try:
+
             client = GraknClient(uri=uri)
+            with client.session(keyspace="grakn") as session:
+                with session.transaction().read() as read_transaction:
+                    answer_iterator = read_transaction.query("match $x isa thing; get;")
+            client.close()
+
         except Exception:
             time.sleep(60)
-
-    with client.session(keyspace="grakn") as session:
-        ## creating a read transaction
-        with session.transaction().read() as read_transaction:
-            answer_iterator = read_transaction.query("match $x isa thing; get;")
-
-    client.close()
 
 finally:
     lprint('Deleting the BioGrakn instance')
