@@ -290,8 +290,8 @@ workflows:
           filters:
             branches:
               only: gcp-deployment #TODO: change to master
-          requires:
-            - test-deployment-gcp
+#          requires:
+#            - test-deployment-gcp
 
   biograkn-release:
     jobs:
@@ -327,5 +327,5 @@ workflows:
             branches:
               only: biograkn-release-branch
           requires:
-            - deploy-gcp
+#            - deploy-gcp
             - deploy-github
