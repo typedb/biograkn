@@ -60,15 +60,19 @@ try:
 
     uri = external_ip + ':48555'
 
-    # TODO: run query after data is migrated
+    client = None
+    while client is None:
+        try:
+            client = GraknClient(uri=uri)
+        except Exception:
+            time.sleep(120)
 
-    # time.sleep(180)
-    #
-    # with GraknClient(uri=uri) as client:
-    #     with client.session(keyspace="grakn") as session:
-    #         ## creating a read transaction
-    #         with session.transaction().read() as read_transaction:
-    #             answer_iterator = read_transaction.query("match $x isa thing; get;")
+    with client.session(keyspace="grakn") as session:
+        ## creating a read transaction
+        with session.transaction().read() as read_transaction:
+            answer_iterator = read_transaction.query("match $x isa thing; get;")
+
+    client.close()
 
 
 finally:
