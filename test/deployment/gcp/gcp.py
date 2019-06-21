@@ -24,7 +24,9 @@ def gcloud_instances_create(instance):
         '--machine-type',
         'n1-standard-4',
         '--zone=europe-west1-b',
-        '--project=grakn-dev'
+        '--project=grakn-dev',
+        '--tags',
+        'grakn-grpc-port'
     ])
 
 def gcloud_instances_delete(instance):

@@ -273,25 +273,25 @@ workflows:
             - test-assembly-linux-all
             - test-assembly-mac-all
 
-#      - deploy-gcp-snapshot:
-#          filters:
-#            branches:
-#              only: master
-#          requires:
-#            - cache-distribution
-#      - test-deployment-gcp:
-#          filters:
-#            branches:
-#              only: master
-#          requires:
-#            - deploy-gcp-snapshot
+      - deploy-gcp-snapshot:
+          filters:
+            branches:
+              only: gcp-deployment #TODO: change to master
+          requires:
+            - cache-distribution
+      - test-deployment-gcp:
+          filters:
+            branches:
+              only: gcp-deployment #TODO: change to master
+          requires:
+            - deploy-gcp-snapshot
 
       - release-approval:
           filters:
             branches:
               only: gcp-deployment #TODO: change to master
-#          requires:
-#            - test-deployment-gcp
+          requires:
+            - test-deployment-gcp
 
   biograkn-release:
     jobs:
@@ -315,17 +315,17 @@ workflows:
           requires:
             - deploy-github
 
-#      - deploy-gcp:
-#          filters:
-#            branches:
-#              only: biograkn-release-branch
-#          requires:
-#            - deploy-approval
+      - deploy-gcp:
+          filters:
+            branches:
+              only: biograkn-release-branch
+          requires:
+            - deploy-approval
 
       - release-cleanup:
           filters:
             branches:
               only: biograkn-release-branch
           requires:
-#            - deploy-gcp
+            - deploy-gcp
             - deploy-github
