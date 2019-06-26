@@ -149,7 +149,11 @@ jobs:
       - checkout
       - attach_workspace:
           at: dist
-      - run: echo 'CI job placeholder'
+      - run: |
+          export DEPLOY_PACKER_GCP_ACCOUNT_FILE=$(mktemp)
+          echo $GCP_DEPLOY_KEY_SNAPSHOT > $DEPLOY_PACKER_GCP_ACCOUNT_FILE
+          export DEPLOY_PACKER_VERSION=$(git rev-parse HEAD)
+          deployment/gcp/deploy-gcp-snapshot.py
 
   test-deployment-gcp:
     machine: true
@@ -157,7 +161,9 @@ jobs:
     steps:
       - install-bazel-linux-rbe
       - checkout
-      - run: echo 'CI job placeholder'
+      - run: |
+          pip install grakn-client
+          test/deployment/gcp/gcp.py
 
   release-approval:
     machine: true
@@ -179,7 +185,7 @@ jobs:
           at: dist
       - run: |
           export DEPLOY_GITHUB_TOKEN=$REPO_GITHUB_TOKEN
-          ./deploy-github.py $CIRCLE_SHA1
+          deployment/github/deploy-github.py $CIRCLE_SHA1
 
   deploy-gcp:
     machine: true
@@ -187,7 +193,13 @@ jobs:
     steps:
       - install-bazel-linux-rbe
       - checkout
-      - run: echo 'CI job placeholder'
+      - attach_workspace:
+          at: dist
+      - run: |
+          export DEPLOY_PACKER_GCP_ACCOUNT_FILE=$(mktemp)
+          echo $GCP_DEPLOY_KEY_RELEASE > $DEPLOY_PACKER_GCP_ACCOUNT_FILE
+          export DEPLOY_PACKER_VERSION=$(git rev-parse HEAD)
+          deployment/gcp/deploy-gcp.py
 
   release-cleanup:
     machine: true

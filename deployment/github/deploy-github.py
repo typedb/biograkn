@@ -7,7 +7,7 @@ import tempfile
 import shutil
 
 
-credential = os.getenv('GCP_CREDENTIAL')
+credential = os.getenv('GCP_DEPLOY_KEY_SNAPSHOT')
 project = 'grakn-dev'
 
 credential_file = '/tmp/gcp-credential.json'
