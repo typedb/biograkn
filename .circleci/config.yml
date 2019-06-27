@@ -232,41 +232,41 @@ workflows:
             - build
 
   biograkn-nightly:
-    triggers:
-      - schedule:
-          cron: "0 19 * * *" # UTC
-          filters:
-            branches:
-              only:
-                - master
+#    triggers:
+#      - schedule:
+#          cron: "0 19 * * *" # UTC
+#          filters:
+#            branches:
+#              only:
+#                - master
  
     jobs:
       - assembly-linux-all:
           filters:
             branches:
-              only: master
+              only: test-after-migration # TODO: update to master
       - assembly-mac-all:
           filters:
             branches:
-              only: master
+              only: test-after-migration # TODO: update to master
 
       - test-assembly-linux-all:
           filters:
             branches:
-              only: master
+              only: test-after-migration # TODO: update to master
           requires:
             - assembly-linux-all
       - test-assembly-mac-all:
           filters:
             branches:
-              only: master
+              only: test-after-migration # TODO: update to master
           requires:
             - assembly-mac-all
 
       - cache-distribution:
           filters:
             branches:
-              only: master
+              only: test-after-migration # TODO: update to master
           requires:
             - test-assembly-linux-all
             - test-assembly-mac-all
@@ -274,20 +274,20 @@ workflows:
       - deploy-gcp-snapshot:
           filters:
             branches:
-              only: master
+              only: test-after-migration # TODO: update to master
           requires:
             - cache-distribution
       - test-deployment-gcp:
           filters:
             branches:
-              only: master
+              only: test-after-migration # TODO: update to master
           requires:
             - deploy-gcp-snapshot
 
       - release-approval:
           filters:
             branches:
-              only: master
+              only: test-after-migration # TODO: update to master
           requires:
             - test-deployment-gcp
 
