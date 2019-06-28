@@ -22,11 +22,12 @@ workspace(name = "grakn_biograkn")
 # Grakn Labs dependencies #
 ###########################
 
-load("//dependencies/graknlabs:dependencies.bzl", "graknlabs_grakn_core", "graknlabs_build_tools", "graknlabs_client_java", "graknlabs_client_python")
+load("//dependencies/graknlabs:dependencies.bzl", "graknlabs_grakn_core", "graknlabs_build_tools", "graknlabs_client_java", "graknlabs_client_python", "graknlabs_protocol")
 graknlabs_grakn_core()
 graknlabs_build_tools()
 graknlabs_client_java()
 graknlabs_client_python()
+graknlabs_protocol()
 
 load("@graknlabs_grakn_core//dependencies/graknlabs:dependencies.bzl", "graknlabs_graql")
 graknlabs_graql()
