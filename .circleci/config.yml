@@ -66,7 +66,7 @@ jobs:
       - run: git clone $CIRCLE_REPOSITORY_URL .
       - run: bazel build @graknlabs_grakn_core//:assemble-linux-targz
       - run: mkdir dist && tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C dist/
-      - run: nohup SERVER_JAVAOPTS=“-Xms2G -Xmx4G” dist/grakn-core-all-linux/grakn server start
+      - run: SERVER_JAVAOPTS=“-Xms2G -Xmx4G” nohup dist/grakn-core-all-linux/grakn server start
       - run:
           command: bazel run //migrator:migrator-bin
           no_output_timeout: 6h
@@ -102,7 +102,7 @@ jobs:
       - run: git clone $CIRCLE_REPOSITORY_URL .
       - run: bazel build @graknlabs_grakn_core//:assemble-mac-zip
       - run: mkdir dist && unzip bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac.zip -d dist/
-      - run: nohup SERVER_JAVAOPTS=“-Xms2G -Xmx4G” dist/grakn-core-all-mac/grakn server start grakn server start
+      - run: SERVER_JAVAOPTS=“-Xms2G -Xmx4G” nohup dist/grakn-core-all-mac/grakn server start
       - run:
           command: bazel run //migrator:migrator-bin
           no_output_timeout: 6h
