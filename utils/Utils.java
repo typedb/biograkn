@@ -21,9 +21,9 @@ public class Utils {
 
     public static void executeQueriesConcurrently(GraknClient.Session session, List<GraqlInsert>  insertQueries) {
         try {
-            List<List<GraqlInsert>> queryLists = splitList(insertQueries, 8);
+            List<List<GraqlInsert>> queryLists = splitList(insertQueries, 16);
 
-            ExecutorService executorService = Executors.newFixedThreadPool(8);
+            ExecutorService executorService = Executors.newFixedThreadPool(16);
 
             List<CompletableFuture<Void>> asyncInsertions = new ArrayList<>();
 
