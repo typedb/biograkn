@@ -58,21 +58,7 @@ jobs:
     machine: true
     working_directory: ~/biograkn
     steps:
-      - install-bazel-linux-rbe
-      - run: sudo apt-get install git
-      - run: curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
-      - run: sudo apt-get install git-lfs
-      - run: git lfs install
-      - run: git clone $CIRCLE_REPOSITORY_URL .
-      - run: bazel build @graknlabs_grakn_core//:assemble-linux-targz
-      - run: mkdir dist && tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C dist/
-      - run: SERVER_JAVAOPTS="-Xms2G -Xmx4G" nohup dist/grakn-core-all-linux/grakn server start
-      - run:
-          command: bazel run //migrator:migrator-bin
-          no_output_timeout: 48h
-      - run: dist/grakn-core-all-linux/grakn server stop
-      - run: mv dist/grakn-core-all-linux dist/biograkn-linux
-      - run: tar -czf dist/biograkn-linux.tar.gz dist/biograkn-linux
+      - run: bash /assembly/assemble-linux-all.sh $CIRCLE_REPOSITORY_URL
       - persist_to_workspace:
           root: dist
           paths:
