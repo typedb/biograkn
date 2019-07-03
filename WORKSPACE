@@ -28,9 +28,6 @@ graknlabs_build_tools()
 graknlabs_client_java()
 graknlabs_client_python()
 
-load("@graknlabs_grakn_core//dependencies/graknlabs:dependencies.bzl", "graknlabs_graql")
-graknlabs_graql()
-
 load("@graknlabs_build_tools//distribution:dependencies.bzl", "graknlabs_bazel_distribution")
 graknlabs_bazel_distribution()
 
@@ -89,7 +86,9 @@ java_grpc_compile()
 # Load Grakn Core dependencies #
 ################################
 
-load("@graknlabs_grakn_core//dependencies/graknlabs:dependencies.bzl", "graknlabs_benchmark")
+load("@graknlabs_grakn_core//dependencies/graknlabs:dependencies.bzl", "graknlabs_graql", "graknlabs_protocol", "graknlabs_benchmark")
+graknlabs_graql()
+graknlabs_protocol()
 graknlabs_benchmark()
 
 load("@graknlabs_grakn_core//dependencies/maven:dependencies.bzl",
