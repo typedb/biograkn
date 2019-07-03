@@ -1,10 +1,12 @@
 #!/bin/bash
 
-REPO_URL=$1
-
 INSTANCE_NAME="assemble-biograkn-linux"
 LOG=~/logs/launch_executor_$INSTANCE_NAME.log
 ZONE="us-east1-b"
+
+export GCP_ACCOUNT_FILE=$(mktemp)
+echo $GCP_DEPLOY_KEY_SNAPSHOT >> /tmp/gcp-credential.json
+gcloud auth activate-service-account --key-file /tmp/gcp-credential.json
 
 echo "Creating google cloud compute instance $INSTANCE_NAME..." | tee -a $LOG
 
@@ -40,7 +42,7 @@ echo "Installing lfs..." | tee -a $LOG
 gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command='git lfs install' 2>&1 | tee -a $LOG
 
 echo "Cloning BioGrakn..." | tee -a $LOG
-gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="git clone $REPO_URL ." 2>&1 | tee -a $LOG
+gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="git clone $CIRCLE_REPOSITORY_URL ." 2>&1 | tee -a $LOG
 
 echo "Building Grakn core..." | tee -a $LOG
 gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="bazel build @graknlabs_grakn_core//:assemble-linux-targz" 2>&1 | tee -a $LOG
