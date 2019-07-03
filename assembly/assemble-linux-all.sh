@@ -1,12 +1,18 @@
 #!/bin/bash
 
 INSTANCE_NAME="assemble-biograkn-linux"
-LOG=~/logs/launch_executor_$INSTANCE_NAME.log
 ZONE="us-east1-b"
 
+mkdir ~/logs
+LOG=~/logs/launch_executor_$INSTANCE_NAME.log
+
+
 export GCP_ACCOUNT_FILE=$(mktemp)
-echo $GCP_DEPLOY_KEY_SNAPSHOT >> /tmp/gcp-credential.json
-gcloud auth activate-service-account --key-file /tmp/gcp-credential.json
+echo $GCP_DEPLOY_KEY_SNAPSHOT >> $GCP_ACCOUNT_FILE
+gcloud auth activate-service-account --key-file $GCP_ACCOUNT_FILE
+
+gcloud config set project 'grakn-dev'
+
 
 echo "Creating google cloud compute instance $INSTANCE_NAME..." | tee -a $LOG
 
