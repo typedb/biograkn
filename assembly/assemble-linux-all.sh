@@ -20,7 +20,7 @@ echo "Creating google cloud compute instance $INSTANCE_NAME..." | tee -a $LOG
 #for now it will keep trying to Updating project ssh metadata... and fail every time we try to ssh in it
 gcloud compute instances create $INSTANCE_NAME     \
     --image benchmark-executor-image-2             \
-    --image-project grakn-dev                      \
+    --image-project 'grakn-dev'                      \
     --machine-type n1-standard-16                  \
     --zone=$ZONE                                   \
     2>&1 | tee -a $LOG
