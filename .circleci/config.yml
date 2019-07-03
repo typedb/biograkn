@@ -58,7 +58,8 @@ jobs:
     machine: true
     working_directory: ~/biograkn
     steps:
-      - run: bash /assembly/assemble-linux-all.sh $CIRCLE_REPOSITORY_URL
+      - checkout
+      - run: bash assembly/assemble-linux-all.sh $CIRCLE_REPOSITORY_URL
       - persist_to_workspace:
           root: dist
           paths:
