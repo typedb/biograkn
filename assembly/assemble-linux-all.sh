@@ -20,7 +20,7 @@ echo "Creating google cloud compute instance $INSTANCE_NAME..." | tee -a $LOG
 #for now it will keep trying to Updating project ssh metadata... and fail every time we try to ssh in it
 gcloud compute instances create $INSTANCE_NAME     \
     --image benchmark-executor-image-2             \
-    --image-project 'grakn-dev'                      \
+    --image-project 'grakn-dev'                    \
     --machine-type n1-standard-16                  \
     --zone=$ZONE                                   \
     2>&1 | tee -a $LOG
@@ -35,6 +35,10 @@ while [ $RET -ne 0 ]; do
     RET=$?; # collect return code
 done
 
+#If the boot hasnt finished apt-get will fail
+echo "Waiting for boot to finish..." | tee -a $LOG
+gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command='while [[ ! -f /var/lib/cloud/instance/boot-finished ]]; do; echo -n . && sleep 2; done;' 2>&1 | tee -a $LOG
+
 echo "Installing git..." | tee -a $LOG
 gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command='sudo apt-get install git' 2>&1 | tee -a $LOG
 
@@ -45,10 +49,13 @@ echo "Installing git-lfs..." | tee -a $LOG
 gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command='sudo apt-get install git-lfs' 2>&1 | tee -a $LOG
 
 echo "Installing lfs..." | tee -a $LOG
-gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command='git lfs install' 2>&1 | tee -a $LOG
+gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command='git lfs install --skip-smudge' 2>&1 | tee -a $LOG
 
 echo "Cloning BioGrakn..." | tee -a $LOG
-gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="git clone $CIRCLE_REPOSITORY_URL ." 2>&1 | tee -a $LOG
+gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="git clone https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME" 2>&1 | tee -a $LOG
+
+echo "Cloning BioGrakn..." | tee -a $LOG
+gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="cd biograkn" 2>&1 | tee -a $LOG
 
 echo "Building Grakn core..." | tee -a $LOG
 gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="bazel build @graknlabs_grakn_core//:assemble-linux-targz" 2>&1 | tee -a $LOG
@@ -72,4 +79,4 @@ echo "Taring BioGrakn.." | tee -a $LOG
 gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="tar -czf dist/biograkn-linux.tar.gz dist/biograkn-linux" 2>&1 | tee -a $LOG
 
 echo "Moving BioGrakn to ciclec ci.." | tee -a $LOG
-gcloud compute scp --recurse ubuntu@$INSTANCE_NAME:"~/dist" ~/
+gcloud compute scp --recurse ubuntu@$INSTANCE_NAME:"~/dist" --zone=$ZONE ~/
