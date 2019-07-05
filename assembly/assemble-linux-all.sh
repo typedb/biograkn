@@ -37,7 +37,7 @@ done
 
 #If the boot hasnt finished apt-get will fail
 echo "Waiting for boot to finish..." | tee -a $LOG
-gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command='while [[ ! -f /var/lib/cloud/instance/boot-finished ]]; do; echo -n . && sleep 2; done;' 2>&1 | tee -a $LOG
+gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command='while [[ ! -f /var/lib/cloud/instance/boot-finished ]]; do echo -n . && sleep 2; done;' 2>&1 | tee -a $LOG
 
 echo "Installing git..." | tee -a $LOG
 gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command='sudo apt-get install git' 2>&1 | tee -a $LOG
@@ -49,12 +49,12 @@ echo "Installing git-lfs..." | tee -a $LOG
 gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command='sudo apt-get install git-lfs' 2>&1 | tee -a $LOG
 
 echo "Installing lfs..." | tee -a $LOG
-gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command='git lfs install --skip-smudge' 2>&1 | tee -a $LOG
+gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command='git lfs install' 2>&1 | tee -a $LOG
 
 echo "Cloning BioGrakn..." | tee -a $LOG
 gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="git clone https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME" 2>&1 | tee -a $LOG
 
-echo "Cloning BioGrakn..." | tee -a $LOG
+echo "cd biograkn..." | tee -a $LOG
 gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="cd biograkn" 2>&1 | tee -a $LOG
 
 echo "Building Grakn core..." | tee -a $LOG
