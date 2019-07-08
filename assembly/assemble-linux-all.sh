@@ -32,31 +32,15 @@ while [ $RET -ne 0 ]; do
     RET=$?; # collect return code
 done
 
-
-#If the boot hasnt finished apt-get will fail
-echo "Waiting for boot to finish..."
-#gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command='while [[ ! -f /var/lib/cloud/instance/boot-finished ]]; do echo -n . && sleep 2; done;'
-
-
-#
-#gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command='systemctl stop apt-daily.service'
-#
-#
-#gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command='systemctl kill --kill-who=all apt-daily.service'
-#gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="while ! (systemctl list-units --all apt-daily.service | egrep -q '(dead|failed)'); do sleep 1; done;"
-
-
-
-
 sleep 120;
-
-echo "lalallala"
-
-
-gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="ps aux | grep -i apt"
 
 echo "Installing git..."
 gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command='sudo apt-get install git'
+
+
+echo "Cloning BioGrakn..."
+gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="git clone https://github.com/graknlabs/biograkn"
+
 
 echo "Downloading git-lfs..."
 gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command='curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash'
@@ -66,19 +50,7 @@ gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command='sudo apt-get in
 
 echo "Installing lfs..."
 gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command='git lfs install'
-
-echo "Cloning BioGrakn..."
-gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="git clone https://github.com/graknlabs/biograkn"
-
-gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="ls -la"
-
-
-echo "cd biograkn..."
-gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="cd biograkn/"
-
 gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="cd biograkn/ && git lfs pull"
-
-
 
 echo "Building Grakn core..."
 gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="cd biograkn/ && bazel build @graknlabs_grakn_core//:assemble-linux-targz"
