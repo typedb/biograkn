@@ -7,9 +7,9 @@ mkdir ~/logs
 LOG=~/logs/launch_executor_$INSTANCE_NAME.log
 
 
-#export GCP_ACCOUNT_FILE=$(mktemp)
-#echo $GCP_DEPLOY_KEY_SNAPSHOT >> $GCP_ACCOUNT_FILE
-gcloud auth activate-service-account --key-file ~/Desktop/gcp_credential.json
+export GCP_ACCOUNT_FILE=$(mktemp)
+echo $GCP_DEPLOY_KEY_SNAPSHOT >> $GCP_ACCOUNT_FILE
+gcloud auth activate-service-account --key-file $GCP_ACCOUNT_FILE
 
 gcloud config set project 'grakn-dev'
 
