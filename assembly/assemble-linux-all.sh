@@ -40,7 +40,6 @@ gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command='sudo apt-get in
 echo "Cloning BioGrakn..."
 gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="git clone https://${REPO_GITHUB_TOKEN}@github.com/graknlabs/biograkn"
 
-
 echo "Downloading git-lfs..."
 gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command='curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash'
 
