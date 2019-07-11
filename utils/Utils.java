@@ -20,31 +20,56 @@ import java.util.concurrent.Executors;
 public class Utils {
 
     public static void executeQueriesConcurrently(GraknClient.Session session, List<GraqlInsert>  insertQueries) {
-        try {
-            List<List<GraqlInsert>> queryLists = splitList(insertQueries, 16);
 
-            ExecutorService executorService = Executors.newFixedThreadPool(16);
+        int counter = 0;
+        GraknClient.Transaction writeTransaction = session.transaction().write();
 
-            List<CompletableFuture<Void>> asyncInsertions = new ArrayList<>();
-
-            queryLists.forEach((queryList) -> {
-                CompletableFuture<Void> asyncInsert = CompletableFuture.supplyAsync(() -> {
-
-                    for (GraqlInsert insertQuery : queryList) {
-                        GraknClient.Transaction writeTransaction = session.transaction().write();
-                        List<ConceptMap> insertedIds = writeTransaction.execute(insertQuery);
-                        writeTransaction.commit();
-                    }
-                    return null;
-                }, executorService);
-
-                asyncInsertions.add(asyncInsert);
-            });
-
-            CompletableFuture.allOf(asyncInsertions.toArray(new CompletableFuture[]{})).get();
-        } catch (InterruptedException | ExecutionException e) {
-            e.printStackTrace();
+        for (GraqlInsert insertQuery : insertQueries) {
+            if (counter % 500 == 0) {
+                writeTransaction.commit();
+                writeTransaction = session.transaction().write();
+            }
+            List<ConceptMap> insertedIds = writeTransaction.execute(insertQuery);
+            System.out.print(counter + '-');
+            counter++;
         }
+        writeTransaction.commit();
+
+
+
+//        try {
+//            List<List<GraqlInsert>> queryLists = splitList(insertQueries, 8);
+//
+//            ExecutorService executorService = Executors.newFixedThreadPool(8);
+//
+//            List<CompletableFuture<Void>> asyncInsertions = new ArrayList<>();
+//
+//            queryLists.forEach((queryList) -> {
+//                CompletableFuture<Void> asyncInsert = CompletableFuture.supplyAsync(() -> {
+//
+//                    int counter = 0;
+//                    GraknClient.Transaction writeTransaction = session.transaction().write();
+//
+//                    for (GraqlInsert insertQuery : queryList) {
+//                        if (counter % 500 == 0) {
+//                            writeTransaction.commit();
+//                            writeTransaction = session.transaction().write();
+//                        }
+//                        List<ConceptMap> insertedIds = writeTransaction.execute(insertQuery);
+//                        counter++;
+//                    }
+//                    writeTransaction.commit();
+//
+//                    return null;
+//                }, executorService);
+//
+//                asyncInsertions.add(asyncInsert);
+//            });
+//
+//            CompletableFuture.allOf(asyncInsertions.toArray(new CompletableFuture[]{})).get();
+//        } catch (InterruptedException | ExecutionException e) {
+//            e.printStackTrace();
+//        }
     }
 
     private static <T> List<List<T>> splitList(List<T> list, final int L) {
