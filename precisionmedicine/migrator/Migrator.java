@@ -30,20 +30,20 @@ public class Migrator {
         GraknClient graknClient = new GraknClient("127.0.0.1:48555");
         GraknClient.Session session = graknClient.session("precision_medicine");
 
-        loadSchema("precisionmedicine/schema/precision-medicine-schema.gql", session);
+        // loadSchema("precisionmedicine/schema/precision-medicine-schema.gql", session);
 
         // entities
-        Gene.migrate(session, dataset);
-        Variant.migrate(session, dataset);
-        Disease.migrate(session, dataset);
-        Drug.migrate(session, dataset);
+        // Gene.migrate(session, dataset);
+        // Variant.migrate(session, dataset);
+        // Disease.migrate(session, dataset);
+        // Drug.migrate(session, dataset);
         ClinicalTrial.migrate(session, dataset);
 
         // relationships
-        GeneDiseaseAssociation.migrate(session, dataset);
-        VariantDiseaseAssociation.migrate(session, dataset);
-        DrugDiseaseAssociation.migrate(session, dataset);
-        ClinicalTrialRelationship.migrate(session);
+        // GeneDiseaseAssociation.migrate(session, dataset);
+        // VariantDiseaseAssociation.migrate(session, dataset);
+        // DrugDiseaseAssociation.migrate(session, dataset);
+        // ClinicalTrialRelationship.migrate(session);
 
         session.close();
         graknClient.close();

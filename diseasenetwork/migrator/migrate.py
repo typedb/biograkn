@@ -6,16 +6,16 @@ client = GraknClient(uri="localhost:48555")
 session = client.session(keyspace="disease_network")
 
 # Parameters to set how much data to load from each dataset
-nUni = 1
-nInt = 1
-nRea = 1
-nDis = 1
-nHPA = 0
-nKan = 0
-nGEO = 0
-nDGI = 0
-nTis = 0
-sim = 0
+nUni = 10000000
+nInt = 10000000
+nRea = 10000000
+nDis = 10000000
+nHPA = 10000000
+nKan = 10000000
+nGEO = 10000000
+nDGI = 10000000
+nTis = 10000000
+sim = 10000000
 
 # -------
 # 1. START UniProt
@@ -179,6 +179,9 @@ if nDis is not 0:
 			if counter is not 1 and counter < nDis:
 				print('Preprocessing disease data: ' + str(counter))
 				d = {}
+
+				row = row[0].split(',')
+
 				d['geneId'] = row[0]
 				d['gene-symbol'] = row[1]
 				d['diseaseId'] = row[2]
@@ -219,7 +222,7 @@ if nDis is not 0:
 	counter = 0
 	for i in page:
 		counter = counter + 1
-		uniprotid = i[2].decode("utf-8")
+		uniprotid = i[1].decode("utf-8")
 		entrez = i[0].decode("utf-8")
 
 		# check if gene has already been inserted
@@ -572,7 +575,7 @@ if nGEO is not 0:
 		for row in page:
 			l = []
 			l.append(row[0].decode("utf-8"))
-			l.append(' ' + row[2].decode("utf-8"))
+			l.append(' ' + row[1].decode("utf-8"))
 			csv.writer(csvfile).writerow(l)
 
 	with open('../dataset/ncbi/GEO-comparison-api-data.csv','rt', encoding='utf-8') as csvfile:
