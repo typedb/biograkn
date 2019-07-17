@@ -58,15 +58,8 @@ jobs:
     machine: true
     working_directory: ~/biograkn
     steps:
-      - install-bazel-linux-rbe
       - checkout
-      - run: bazel build @graknlabs_grakn_core//:assemble-linux-targz
-      - run: mkdir dist && tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C dist/
-      - run: nohup dist/grakn-core-all-linux/grakn server start
-      #      - run: bazel run //migrator:migrator-bin TODO: uncomment
-      - run: dist/grakn-core-all-linux/grakn server stop
-      - run: mv dist/grakn-core-all-linux dist/biograkn-linux
-      - run: tar -czf dist/biograkn-linux.tar.gz dist/biograkn-linux
+      - run: bash assembly/assemble-linux.sh
       - persist_to_workspace:
           root: dist
           paths:
@@ -81,7 +74,7 @@ jobs:
           at: dist
       - run: tar -xvzf dist/biograkn-linux.tar.gz
       - run: nohup dist/biograkn-linux/grakn server start
-#      - run: bazel test //migrator:assemble-all-test TODO: uncomment
+     - run: bazel test //migrator:assemble-all-test
       - run: dist/biograkn-linux/grakn server stop
 
   assembly-mac-all:
@@ -93,7 +86,7 @@ jobs:
       - run: bazel build @graknlabs_grakn_core//:assemble-mac-zip
       - run: mkdir dist && unzip bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac.zip -d dist/
       - run: nohup dist/grakn-core-all-mac/grakn server start
-      #      - run: bazel run //migrator:migrator-bin TODO: uncomment
+          #  - run: bazel run //migrator:migrator-bin TODO: uncomment
       - run: dist/grakn-core-all-mac/grakn server stop
       - run: mv dist/grakn-core-all-mac dist/biograkn-mac
       - run: zip -r dist/biograkn-mac.zip dist/biograkn-mac
@@ -111,7 +104,7 @@ jobs:
           at: dist
       - run: unzip dist/biograkn-mac.zip
       - run: nohup dist/biograkn-mac/grakn server start
-      #      - run: bazel test //migrator:assemble-all-test TODO: uncomment
+      - run: bazel test //migrator:assemble-all-test
       - run: dist/biograkn-mac/grakn server stop
 
   cache-distribution:
@@ -232,41 +225,41 @@ workflows:
             - build
 
   biograkn-nightly:
-    triggers:
-      - schedule:
-          cron: "0 19 * * *" # UTC
-          filters:
-            branches:
-              only:
-                - master
+    # triggers:
+    #   - schedule:
+    #       cron: "0 19 * * *" # UTC
+    #       filters:
+    #         branches:
+    #           only:
+    #             - master
  
     jobs:
       - assembly-linux-all:
           filters:
             branches:
-              only: master
+              only: refactor-ci # TODO: change to master
       - assembly-mac-all:
           filters:
             branches:
-              only: master
+              only: refactor-ci # TODO: change to master
 
       - test-assembly-linux-all:
           filters:
             branches:
-              only: master
+              only: refactor-ci # TODO: change to master
           requires:
             - assembly-linux-all
       - test-assembly-mac-all:
           filters:
             branches:
-              only: master
+              only: refactor-ci # TODO: change to master
           requires:
             - assembly-mac-all
 
       - cache-distribution:
           filters:
             branches:
-              only: master
+              only: refactor-ci # TODO: change to master
           requires:
             - test-assembly-linux-all
             - test-assembly-mac-all
@@ -274,20 +267,20 @@ workflows:
       - deploy-gcp-snapshot:
           filters:
             branches:
-              only: master
+              only: refactor-ci # TODO: change to master
           requires:
             - cache-distribution
       - test-deployment-gcp:
           filters:
             branches:
-              only: master
+              only: refactor-ci # TODO: change to master
           requires:
             - deploy-gcp-snapshot
 
       - release-approval:
           filters:
             branches:
-              only: master
+              only: refactor-ci # TODO: change to master
           requires:
             - test-deployment-gcp
 
