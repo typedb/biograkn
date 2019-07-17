@@ -30,13 +30,23 @@ public class DrugDiseaseAssociation {
             BufferedReader reader = Files.newBufferedReader(Paths.get(dataset + "/ctdbase/CTD_chemicals_diseases.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
-            List<GraqlInsert> insertQueries = new ArrayList<>();
+            // List<GraqlInsert> insertQueries = new ArrayList<>();
+
+            GraknClient.Transaction writeTransaction = session.transaction().write();
+
+            int counter = 0;
+
 
             for (CSVRecord csvRecord : csvParser) {
 
                 // skip header
                 if (csvRecord.getRecordNumber() < 30) {
                     continue;
+                }
+
+                if (counter % 300 == 0) {
+                    writeTransaction.commit();
+                    writeTransaction = session.transaction().write();
                 }
 
                 String drugMeshId = csvRecord.get(1);
@@ -46,8 +56,14 @@ public class DrugDiseaseAssociation {
                         var("dr").isa("drug").has("mesh-id", drugMeshId),
                         var("di").isa("disease").has("mesh-id", diseaseMeshId))
                         .insert(var("dda").isa("drug-disease-association").rel("associated-drug", "dr").rel("associated-disease", "di"));
+                
+                System.out.println(graqlInsert);
+                List<ConceptMap> insertedIds = writeTransaction.execute(graqlInsert);
 
-                insertQueries.add(graqlInsert);
+
+
+
+                // insertQueries.add(graqlInsert);
 
 //                 if (insertedIds.isEmpty()) {
 //                     List<Class> prereqs = Arrays.asList(Drug.class, Disease.class);
@@ -55,7 +71,10 @@ public class DrugDiseaseAssociation {
 //                             "\nA prerequisite dataset may have not been loaded. This dataset requires: " + prereqs.toString());
 //                 }
             }
-            Utils.executeQueriesConcurrently(session, insertQueries);
+
+            writeTransaction.commit();
+
+            // Utils.executeQueriesConcurrently(session, insertQueries);
             System.out.println(" - [DONE]");
         } catch (IOException e) {
             e.printStackTrace();

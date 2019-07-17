@@ -115,13 +115,13 @@ def insert_new_proteins_n_alignments(session, target_sequence, record):
 
             # insert protein-ownership relationship (if it doesn't already exist)
             q_get_protein_ownership = (
-                'match $sp id "' + species_id + '"; ' +
+                'match $sp id ' + species_id + '; ' +
                 '$pr id ' + protein_id + '; ' +
                 '$pr-ownership (species-owner: $sp, owned-protein: $pr) isa protein-ownership;' +
                 'get $pr-ownership;'
             )
             q_insert_protein_ownership = (
-                'match $sp id "' + species_id + '"; ' +
+                'match $sp id ' + species_id + '; ' +
                 '$pr id ' + protein_id + '; ' +
                 'insert $pr-ownership (species-owner: $sp, owned-protein: $pr) isa protein-ownership;'
             )
