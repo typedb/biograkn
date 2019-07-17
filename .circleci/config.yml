@@ -74,7 +74,7 @@ jobs:
           at: dist
       - run: tar -xvzf dist/biograkn-linux.tar.gz
       - run: nohup dist/biograkn-linux/grakn server start
-     - run: bazel test //migrator:assemble-all-test
+      - run: bazel test //migrator:assemble-all-test
       - run: dist/biograkn-linux/grakn server stop
 
   assembly-mac-all:
