@@ -45,9 +45,9 @@ gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command='curl -s https:/
 
 echo "Installing git-lfs..."
 gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command='sudo apt-get install git-lfs'
-
-echo "Installing lfs..."
 gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command='git lfs install'
+
+echo "Pulling lfs objects..."
 gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="cd biograkn/ && git lfs pull"
 
 echo "Building Grakn core..."

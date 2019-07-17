@@ -59,7 +59,9 @@ jobs:
     working_directory: ~/biograkn
     steps:
       - checkout
-      - run: bash assembly/assemble-linux.sh
+      - run: 
+          command: bash assembly/assemble-linux.sh
+          no_output_timeout: 5h
       - persist_to_workspace:
           root: dist
           paths:
