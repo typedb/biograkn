@@ -56,8 +56,6 @@ public class VariantDiseaseAssociation {
                 // }
 
                 insertQueries.add(graqlInsert);
-
-                System.out.println(" - [DONE]");
             }
             Utils.executeQueriesConcurrently(session, insertQueries);
         } catch (IOException e) {
