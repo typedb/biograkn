@@ -59,11 +59,11 @@ gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="cd biograkn/ &&
 echo "Starting Grakn..."
 gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="cd biograkn/ && nohup dist/grakn-core-all-linux/grakn server start"
 
-# echo "Migrating BioGrakn..."
-# gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="cd biograkn/ && bazel run //migrator:migrator-bin"
+ echo "Migrating BioGrakn..."
+ gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="cd biograkn/ && bazel run //migrator:migrator-bin"
 
-# echo "Stoping Grakn..."
-# gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="cd biograkn/ && dist/grakn-core-all-linux/grakn server stop"
+ echo "Stoping Grakn..."
+ gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="cd biograkn/ && dist/grakn-core-all-linux/grakn server stop"
 
 # echo "Renaming.."
 # gcloud compute ssh ubuntu@$INSTANCE_NAME --zone=$ZONE --command="cd biograkn/ && mv dist/grakn-core-all-linux dist/biograkn-linux"
