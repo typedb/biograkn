@@ -37,8 +37,8 @@ public class Utils {
                         if (counter % 300 == 0) {
                             writeTransaction.commit();
                             writeTransaction = session.transaction().write();
+                            System.out.print('.');
                         }
-                        System.out.println(insertQuery);
                         List<ConceptMap> insertedIds = writeTransaction.execute(insertQuery);
                         counter++;
                     }
