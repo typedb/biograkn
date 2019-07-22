@@ -1,7 +1,7 @@
 package grakn.biograkn.precisionmedicine.migrator.clinicaltrial;
 
 
-
+import grakn.biograkn.utils.Utils;
 import grakn.client.GraknClient;
 import grakn.core.concept.answer.ConceptMap;
 import graql.lang.Graql;
@@ -16,6 +16,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.List;
+import java.util.ArrayList;
 
 @SuppressWarnings("Duplicates")
 public class ClinicalTrial {
