@@ -21,10 +21,12 @@ import java.util.List;
 public class ClinicalTrial {
 
     public static void migrate(GraknClient.Session session, String dataset) {
+        System.out.print("\tMigrating Clinical Trials");
 
         File dir = new File(dataset + "/clinicaltrials/AllPublicXML");
         File[] directoryListing = dir.listFiles();
 
+        List<GraqlInsert> insertQueries = new ArrayList<>();
 
         for (File subDir : directoryListing) {
 
@@ -159,11 +161,12 @@ public class ClinicalTrial {
                                 .has("nct-id", nctId)
                                 .has("gender", gender));
 
-                        List<ConceptMap> insertedId = writeTransaction.execute(graqlInsert);
+                        insertQueries.add(graqlInsert);
 
-                        System.out.println("Inserted a clinical trial at file: " + clinicalTrial);
-
-                        writeTransaction.commit();
+                        if (insertQueries.size() % 100000 == 0) {
+                            Utils.executeQueriesConcurrently(session, insertQueries);
+                            insertQueries = new ArrayList<>();
+                        }
                     }
 
                 } catch (Exception e) {
@@ -171,6 +174,8 @@ public class ClinicalTrial {
                 }
             }
         }
-        System.out.println("-----clinical trials have been loaded-----");
+
+        Utils.executeQueriesConcurrently(session, insertQueries);
+        System.out.println("- [DONE]");
     }
 }

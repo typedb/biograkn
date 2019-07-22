@@ -33,25 +33,24 @@ public class Migrator {
         loadSchema("precisionmedicine/schema/precision-medicine-schema.gql", session);
 
         // entities
-//        Gene.migrate(session, dataset);
-
+        Gene.migrate(session, dataset);
         Variant.migrate(session, dataset);
         Disease.migrate(session, dataset);
         Drug.migrate(session, dataset);
 
         session.close();
         session = graknClient.session("precision_medicine");
-        
+
         ClinicalTrial.migrate(session, dataset);
 
         session.close();
         session = graknClient.session("precision_medicine");
 
         // relationships
-         GeneDiseaseAssociation.migrate(session, dataset);
-         VariantDiseaseAssociation.migrate(session, dataset);
-         DrugDiseaseAssociation.migrate(session, dataset);
-        // ClinicalTrialRelationship.migrate(session);
+        GeneDiseaseAssociation.migrate(session, dataset);
+        VariantDiseaseAssociation.migrate(session, dataset);
+        DrugDiseaseAssociation.migrate(session, dataset);
+        ClinicalTrialRelationship.migrate(session);
 
         session.close();
         graknClient.close();

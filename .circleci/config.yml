@@ -61,7 +61,7 @@ jobs:
       - checkout
       - run: 
           command: bash assembly/assemble-linux.sh
-          no_output_timeout: 5h
+          no_output_timeout: 48h
       - persist_to_workspace:
           root: dist
           paths:

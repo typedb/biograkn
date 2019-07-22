@@ -63,10 +63,14 @@ public class Gene {
                         .has("ncbi-id", ncbiId));
 
                 insertQueries.add(graqlInsert);
+
+                if (insertQueries.size() % 100000 == 0) {
+                    Utils.executeQueriesConcurrently(session, insertQueries);
+                    insertQueries = new ArrayList<>();
+                }
             }
 
             Utils.executeQueriesConcurrently(session, insertQueries);
-            System.out.println("-------------Migrating from hgnc is done-------------");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -74,7 +78,6 @@ public class Gene {
 
      static void migrateFromCtdbase(GraknClient.Session session, String path) {
 
-        System.out.println("-------------Migrating from CTDBase-------------");
         try {
             BufferedReader reader = Files.newBufferedReader(Paths.get(path));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
@@ -94,11 +97,9 @@ public class Gene {
 
                 GraknClient.Transaction readTransaction = session.transaction().read();
 
-                System.out.println("-------------Check if gene exists in grakn-------------");
                 GraqlGet graqlGet = Graql.match(
                         var("g").isa("gene").has("ncbi-id", ncbiId)).get();
 
-                System.out.println("-------------Finish Checking if gene exists in grakn-------------");
 
                 List<ConceptMap> getIds = readTransaction.execute(graqlGet);
 
@@ -111,12 +112,13 @@ public class Gene {
                             .has("name", name)
                             .has("ncbi-id", ncbiId));
 
-                    System.out.println("-------------Add insert Query to list-------------");
                     insertQueries.add(graqlInsert);
                 }
+                if (insertQueries.size() % 100000 == 0) {
+                    Utils.executeQueriesConcurrently(session, insertQueries);
+                    insertQueries = new ArrayList<>();
+                }
             }
-            System.out.println("------------Insert Genes concurrently-------------");
-            System.out.println("------------number of insert queries=====" + insertQueries.size());
 
             Utils.executeQueriesConcurrently(session, insertQueries);
         } catch (IOException e) {
