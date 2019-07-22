@@ -232,14 +232,6 @@ workflows:
             - build
 
   biograkn-nightly:
-    triggers:
-      - schedule:
-          cron: "0 19 * * *" # UTC
-          filters:
-            branches:
-              only:
-                - master
- 
     jobs:
       - assembly-linux-all:
           filters:
