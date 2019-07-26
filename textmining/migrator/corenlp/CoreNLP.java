@@ -239,11 +239,12 @@ public class CoreNLP {
 
             List<ConceptMap> insertedIds = writeTransaction.execute(graqlInsert);
 
+            writeTransaction.commit();
+
             if (insertedIds.isEmpty()) {
                 throw new IllegalStateException("entity-mention and mention insertion failed");
             }
-
-            defineAndMigrateType(entityMentioned, entityType, writeTransaction, abstractId);
+            defineAndMigrateType(entityMentioned, entityType, session, abstractId);
 
             writeTransaction = session.transaction().write();
 
@@ -270,13 +271,16 @@ public class CoreNLP {
         System.out.println("Inserted mentions");
     }
 
-    private static void defineAndMigrateType(String entityMentioned, String entityType, GraknClient.Transaction  writeTransaction, String abstractId) {
+    private static void defineAndMigrateType(String entityMentioned, String entityType, GraknClient.Session session, String abstractId) {
+        GraknClient.Transaction writeTransaction = session.transaction().write();
+
 
         GraqlGet getMentionedEntityType = Graql.match(var("x").type(entityType)).get();
 
-        List<ConceptMap> getEntityType = writeTransaction.execute(getMentionedEntityType);
-
-        if (getEntityType.isEmpty()) {
+        try {
+            List<ConceptMap> getEntityType = writeTransaction.execute(getMentionedEntityType);
+        } catch (Exception e) {
+            writeTransaction = session.transaction().write();
             GraqlDefine defineType;
             defineType = Graql.define(type(entityType).sub("entity").has("value").plays("extracted-entity"));
             writeTransaction.execute(defineType);
