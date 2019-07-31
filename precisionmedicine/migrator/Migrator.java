@@ -39,16 +39,18 @@ public class Migrator {
 //        Gene.migrate(session, dataset); // 1
 //        System.out.println("Gene.migrate(session, dataset) took " + (System.currentTimeMillis() - start) + "ms");
 
-        start = System.currentTimeMillis();
-        Variant.migrate(session, dataset); // 2
-        Disease.migrate(session, dataset); // 2
-        Drug.migrate(session, dataset); // 2
-        System.out.println("{Variant,Disease,Drug}.migrate(session, dataset) took " + (System.currentTimeMillis() - start) + "ms");
+//        start = System.currentTimeMillis();
+//        Variant.migrate(session, dataset); // 2
+//        Disease.migrate(session, dataset); // 2
+//        Drug.migrate(session, dataset); // 2
+//        System.out.println("{Variant,Disease,Drug}.migrate(session, dataset) took " + (System.currentTimeMillis() - start) + "ms");
 
-//        session.close();
-//        session = graknClient.session("precision_medicine");
-//
-//        ClinicalTrial.migrate(session, dataset); // 3
+        session.close();
+        session = graknClient.session("precision_medicine");
+
+        start = System.currentTimeMillis();
+        ClinicalTrial.migrate(session, dataset); // 3
+        System.out.println("ClinicalTrial.migrate(session, dataset) took " + (System.currentTimeMillis() - start) + "ms");
 //
 //        session.close();
 //        session = graknClient.session("precision_medicine");

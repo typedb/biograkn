@@ -27,8 +27,8 @@ public class ClinicalTrial {
         File dir = new File(dataset + "/clinicaltrials/AllPublicXML");
         File[] directoryListing = dir.listFiles();
 
-        List<GraqlInsert> insertQueries = new ArrayList<>();
-
+        int counter = 0;
+        GraknClient.Transaction tx = session.transaction().write();
         for (File subDir : directoryListing) {
 
             if (subDir.toString().contains("Store")){
@@ -147,7 +147,6 @@ public class ClinicalTrial {
                     }
 
                     if(!url.equals("") && !briefTitle.equals("") && !nctId.equals("") && !officialTitle.equals("") && !interventionName.equals("") && !interventionType.equals("") && !condition.equals("") && !status.equals("") && min_age != -2 & max_age != -2 && !gender.equals("")) {
-                        GraknClient.Transaction writeTransaction = session.transaction().write();
 
                         GraqlInsert graqlInsert = Graql.insert(var("ct").isa("clinical-trial")
                                 .has("url", url)
@@ -162,21 +161,23 @@ public class ClinicalTrial {
                                 .has("nct-id", nctId)
                                 .has("gender", gender));
 
-                        insertQueries.add(graqlInsert);
-
-                        if (insertQueries.size() % 100000 == 0) {
-                            Utils.executeQueriesConcurrently(session, insertQueries);
-                            insertQueries = new ArrayList<>();
+                        tx.execute(graqlInsert);
+                        System.out.print(".");
+                        if (counter % 50 == 0) {
+                            tx.commit();
+                            System.out.println("committed!");
+                            tx = session.transaction().write();
                         }
+                        counter++;
                     }
 
                 } catch (Exception e) {
                     e.printStackTrace();
+                    tx = session.transaction().write();
                 }
             }
         }
-
-        Utils.executeQueriesConcurrently(session, insertQueries);
+        tx.commit();
         System.out.println("- [DONE]");
     }
 }
