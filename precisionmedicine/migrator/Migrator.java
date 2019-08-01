@@ -37,30 +37,31 @@ public class Migrator {
         // entities
 //        start = System.currentTimeMillis();
 //        Gene.migrate(session, dataset); // 1
-//        System.out.println("Gene.migrate(session, dataset) took " + (System.currentTimeMillis() - start) + "ms");
+//        System.out.println("Gene.migrate(...) took " + (System.currentTimeMillis() - start) + "ms");
 
 //        start = System.currentTimeMillis();
 //        Variant.migrate(session, dataset); // 2
 //        Disease.migrate(session, dataset); // 2
 //        Drug.migrate(session, dataset); // 2
-//        System.out.println("{Variant,Disease,Drug}.migrate(session, dataset) took " + (System.currentTimeMillis() - start) + "ms");
+//        System.out.println("{Variant,Disease,Drug}.migrate(...) took " + (System.currentTimeMillis() - start) + "ms");
 
-        session.close();
-        session = graknClient.session("precision_medicine");
-
-        start = System.currentTimeMillis();
-        ClinicalTrial.migrate(session, dataset); // 3
-        System.out.println("ClinicalTrial.migrate(session, dataset) took " + (System.currentTimeMillis() - start) + "ms");
-//
 //        session.close();
 //        session = graknClient.session("precision_medicine");
 //
-//        // relationships
-//        GeneDiseaseAssociation.migrate(session, dataset); // 4
-//        VariantDiseaseAssociation.migrate(session, dataset); // 4
-//        DrugDiseaseAssociation.migrate(session, dataset); // 4
-//        ClinicalTrialRelationship.migrate(session); // 4
+//        start = System.currentTimeMillis();
+//        ClinicalTrial.migrate(session, dataset); // 3
+//        System.out.println("ClinicalTrial.migrate(...) took " + (System.currentTimeMillis() - start) + "ms");
+//
+//        session.close();
+        session = graknClient.session("precision_medicine");
 
+        // relationships
+        start = System.currentTimeMillis();
+        GeneDiseaseAssociation.migrate(session, dataset); // 4
+        VariantDiseaseAssociation.migrate(session, dataset); // 4
+        DrugDiseaseAssociation.migrate(session, dataset); // 4
+        ClinicalTrialRelationship.migrate(session); // 4
+        System.out.println("{GeneDiseaseAssociation,VariantDiseaseAssociation,DrugDiseaseAssociation,ClinicalTrialRelationship}.migrate(...) took " + (System.currentTimeMillis() - start) + "ms");
         session.close();
         graknClient.close();
     }

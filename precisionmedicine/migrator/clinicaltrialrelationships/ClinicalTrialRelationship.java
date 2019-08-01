@@ -60,7 +60,7 @@ public class ClinicalTrialRelationship {
 
                             GraknClient.Transaction writeTransaction = session.transaction().write();
                             List<ConceptMap> insertedIds = writeTransaction.execute(GraqlInsert);
-
+                            System.out.println("committed!");
                             writeTransaction.commit();
                         }
                     }
@@ -79,7 +79,7 @@ public class ClinicalTrialRelationship {
 
                             GraknClient.Transaction writeTransaction = session.transaction().write();
                             List<ConceptMap> insertedIds = writeTransaction.execute(GraqlInsert);
-
+                            System.out.println("committed!");
                             writeTransaction.commit();
                         }
                     }
