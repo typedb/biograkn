@@ -28,7 +28,7 @@ jobs:
     steps:
       - install-bazel-linux-rbe
       - checkout
-#      - run: bazel run @graknlabs_build_tools//checkstyle:test-coverage
+      #      - run: bazel run @graknlabs_build_tools//checkstyle:test-coverage
       - run: bazel --host_jvm_args=-Xmx16g build //...
 
   test-assembly-linux-mock:
@@ -59,7 +59,7 @@ jobs:
     working_directory: ~/biograkn
     steps:
       - checkout
-      - run: 
+      - run:
           command: bash assembly/assemble-linux.sh
           no_output_timeout: 48h
       - persist_to_workspace:
@@ -88,7 +88,7 @@ jobs:
       - run: bazel build @graknlabs_grakn_core//:assemble-mac-zip
       - run: mkdir dist && unzip bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac.zip -d dist/
       - run: nohup dist/grakn-core-all-mac/grakn server start
-          #  - run: bazel run //migrator:migrator-bin TODO: uncomment
+        #  - run: bazel run //migrator:migrator-bin TODO: uncomment
       - run: dist/grakn-core-all-mac/grakn server stop
       - run: mv dist/grakn-core-all-mac dist/biograkn-mac
       - run: zip -r dist/biograkn-mac.zip dist/biograkn-mac
@@ -226,65 +226,65 @@ workflows:
           requires:
             - build
 
- biograkn-nightly:
-   # triggers:
-   #   - schedule:
-   #       cron: "0 19 * * *" # UTC
-   #       filters:
-   #         branches:
-   #           only:
-   #             - master
+  biograkn-nightly:
+    # triggers:
+    #   - schedule:
+    #       cron: "0 19 * * *" # UTC
+    #       filters:
+    #         branches:
+    #           only:
+    #             - master
 
-   jobs:
-     - assembly-linux-all:
-         filters:
-           branches:
-             only: refactor-ci # TODO: change to master
-     - assembly-mac-all:
-         filters:
-           branches:
-             only: refactor-ci # TODO: change to master
+    jobs:
+      - assembly-linux-all:
+          filters:
+            branches:
+              only: refactor-ci # TODO: change to master
+      - assembly-mac-all:
+          filters:
+            branches:
+              only: refactor-ci # TODO: change to master
 
-     - test-assembly-linux-all:
-         filters:
-           branches:
-             only: refactor-ci # TODO: change to master
-         requires:
-           - assembly-linux-all
-     - test-assembly-mac-all:
-         filters:
-           branches:
-             only: refactor-ci # TODO: change to master
-         requires:
-           - assembly-mac-all
+      - test-assembly-linux-all:
+          filters:
+            branches:
+              only: refactor-ci # TODO: change to master
+          requires:
+            - assembly-linux-all
+      - test-assembly-mac-all:
+          filters:
+            branches:
+              only: refactor-ci # TODO: change to master
+          requires:
+            - assembly-mac-all
 
-     - cache-distribution:
-         filters:
-           branches:
-             only: refactor-ci # TODO: change to master
-         requires:
-           - test-assembly-linux-all
-           - test-assembly-mac-all
+      - cache-distribution:
+          filters:
+            branches:
+              only: refactor-ci # TODO: change to master
+          requires:
+            - test-assembly-linux-all
+            - test-assembly-mac-all
 
-     - deploy-gcp-snapshot:
-         filters:
-           branches:
-             only: refactor-ci # TODO: change to master
-         requires:
-           - cache-distribution
-     - test-deployment-gcp:
-         filters:
-           branches:
-             only: refactor-ci # TODO: change to master
-         requires:
-           - deploy-gcp-snapshot
+      - deploy-gcp-snapshot:
+          filters:
+            branches:
+              only: refactor-ci # TODO: change to master
+          requires:
+            - cache-distribution
+      - test-deployment-gcp:
+          filters:
+            branches:
+              only: refactor-ci # TODO: change to master
+          requires:
+            - deploy-gcp-snapshot
 
-     - release-approval:
-         filters:
-           branches:
-             only: refactor-ci # TODO: change to master
-         requires:
-           - test-deployment-gcp
+      - release-approval:
+          filters:
+            branches:
+              only: refactor-ci # TODO: change to master
+          requires:
+            - test-deployment-gcp
 
   biograkn-release:
     jobs:
