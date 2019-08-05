@@ -41,10 +41,18 @@ if nUni is not 0:
 
 	# Insert proteins
 	tx = session.transaction().write()
+	counter = 0
 	for q in uniprotdb: 
+		counter = counter + 1
 		graql = 'insert $a isa protein, has uniprot-id "' + q['uniprot-id'] +'", has uniprot-name "' + q['protein-name'] +'";'
 		print(graql)
 		tx.query(graql)
+		if counter % 100 == 0:
+			tx.commit()
+			print('committed!')
+			tx = session.transaction().write()
+			print(counter)
+	print('committed!')
 	tx.commit()
 
 # END Uniprot
@@ -76,16 +84,18 @@ if nInt is not 0:
 	tx = session.transaction().write()
 	counter = 0
 	for p in ppi:
-		counter = counter + 1 
+		counter = counter + 1
 		graql = 'match $a isa protein, has uniprot-id "' + p['protein-a'].replace('"', '') + '"; $b isa protein, has uniprot-id "' + p['protein-b'].replace('"', '') + '"; insert (interacting-protein: $a, interacting-protein: $b) isa protein-protein-interaction;'
 		tx.query(graql)
+		print('execute ' + graql)
 		if counter % 100 == 0:
 			tx.commit()
+			print('committed!')
 			tx = session.transaction().write()
 			print(counter)
 
 	tx.commit()
-
+	print('committed!')
 
 # END IntAct PPIs
 # ----------
