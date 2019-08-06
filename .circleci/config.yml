@@ -226,99 +226,99 @@ workflows:
           requires:
             - build
 
-  biograkn-nightly:
-    # triggers:
-    #   - schedule:
-    #       cron: "0 19 * * *" # UTC
-    #       filters:
-    #         branches:
-    #           only:
-    #             - master
+  # biograkn-nightly:
+  #   triggers:
+  #     - schedule:
+  #         cron: "0 19 * * *" # UTC
+  #         filters:
+  #           branches:
+  #             only:
+  #               - master
 
-    jobs:
-      - assembly-linux-all:
-          filters:
-            branches:
-              only: refactor-ci # TODO: change to master
-      - assembly-mac-all:
-          filters:
-            branches:
-              only: refactor-ci # TODO: change to master
+  #   jobs:
+  #     - assembly-linux-all:
+  #         filters:
+  #           branches:
+  #             only: refactor-ci # TODO: change to master
+  #     - assembly-mac-all:
+  #         filters:
+  #           branches:
+  #             only: refactor-ci # TODO: change to master
 
-      - test-assembly-linux-all:
-          filters:
-            branches:
-              only: refactor-ci # TODO: change to master
-          requires:
-            - assembly-linux-all
-      - test-assembly-mac-all:
-          filters:
-            branches:
-              only: refactor-ci # TODO: change to master
-          requires:
-            - assembly-mac-all
+  #     - test-assembly-linux-all:
+  #         filters:
+  #           branches:
+  #             only: refactor-ci # TODO: change to master
+  #         requires:
+  #           - assembly-linux-all
+  #     - test-assembly-mac-all:
+  #         filters:
+  #           branches:
+  #             only: refactor-ci # TODO: change to master
+  #         requires:
+  #           - assembly-mac-all
 
-      - cache-distribution:
-          filters:
-            branches:
-              only: refactor-ci # TODO: change to master
-          requires:
-            - test-assembly-linux-all
-            - test-assembly-mac-all
+  #     - cache-distribution:
+  #         filters:
+  #           branches:
+  #             only: refactor-ci # TODO: change to master
+  #         requires:
+  #           - test-assembly-linux-all
+  #           - test-assembly-mac-all
 
-      - deploy-gcp-snapshot:
-          filters:
-            branches:
-              only: refactor-ci # TODO: change to master
-          requires:
-            - cache-distribution
-      - test-deployment-gcp:
-          filters:
-            branches:
-              only: refactor-ci # TODO: change to master
-          requires:
-            - deploy-gcp-snapshot
+  #     - deploy-gcp-snapshot:
+  #         filters:
+  #           branches:
+  #             only: refactor-ci # TODO: change to master
+  #         requires:
+  #           - cache-distribution
+  #     - test-deployment-gcp:
+  #         filters:
+  #           branches:
+  #             only: refactor-ci # TODO: change to master
+  #         requires:
+  #           - deploy-gcp-snapshot
 
-      - release-approval:
-          filters:
-            branches:
-              only: refactor-ci # TODO: change to master
-          requires:
-            - test-deployment-gcp
+  #     - release-approval:
+  #         filters:
+  #           branches:
+  #             only: refactor-ci # TODO: change to master
+  #         requires:
+  #           - test-deployment-gcp
 
-  biograkn-release:
-    jobs:
-      - cache-distribution:
-          filters:
-            branches:
-              only: biograkn-release-branch
+  # biograkn-release:
+  #   jobs:
+  #     - cache-distribution:
+  #         filters:
+  #           branches:
+  #             only: biograkn-release-branch
 
-      - deploy-github:
-          filters:
-            branches:
-              only: biograkn-release-branch
-          requires:
-            - cache-distribution
+  #     - deploy-github:
+  #         filters:
+  #           branches:
+  #             only: biograkn-release-branch
+  #         requires:
+  #           - cache-distribution
 
-      - deploy-approval:
-          type: approval
-          filters:
-            branches:
-              only: biograkn-release-branch
-          requires:
-            - deploy-github
+  #     - deploy-approval:
+  #         type: approval
+  #         filters:
+  #           branches:
+  #             only: biograkn-release-branch
+  #         requires:
+  #           - deploy-github
 
-      - deploy-gcp:
-          filters:
-            branches:
-              only: biograkn-release-branch
-          requires:
-            - deploy-approval
+  #     - deploy-gcp:
+  #         filters:
+  #           branches:
+  #             only: biograkn-release-branch
+  #         requires:
+  #           - deploy-approval
 
-      - release-cleanup:
-          filters:
-            branches:
-              only: biograkn-release-branch
-          requires:
-            - deploy-gcp
-            - deploy-github
+  #     - release-cleanup:
+  #         filters:
+  #           branches:
+  #             only: biograkn-release-branch
+  #         requires:
+  #           - deploy-gcp
+  #           - deploy-github
