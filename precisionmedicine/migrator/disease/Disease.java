@@ -112,9 +112,9 @@ public class Disease {
                     }
                     counter++;
                 }
-                tx.commit();
-                System.out.println("committed!");
             }
+            tx.commit();
+            System.out.println("committed!");
         } catch (IOException e) {
             e.printStackTrace();
         }
