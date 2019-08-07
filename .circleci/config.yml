@@ -28,7 +28,7 @@ jobs:
     steps:
       - install-bazel-linux-rbe
       - checkout
-#      - run: bazel run @graknlabs_build_tools//checkstyle:test-coverage
+      #      - run: bazel run @graknlabs_build_tools//checkstyle:test-coverage
       - run: bazel --host_jvm_args=-Xmx16g build //...
 
   test-assembly-linux-mock:
@@ -40,7 +40,7 @@ jobs:
       - run: bazel build @graknlabs_grakn_core//:assemble-linux-targz
       - run: mkdir dist && tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C ./dist/
       - run: nohup ./dist/grakn-core-all-linux/grakn server start
-      - run: bazel test //migrator:assemble-mock-test
+      - run: bazel test --test_output=streamed //migrator:assemble-mock-test
       - run: ./dist/grakn-core-all-linux/grakn server stop
   test-assembly-mac-mock:
     machine: true
@@ -51,22 +51,17 @@ jobs:
       - run: bazel build @graknlabs_grakn_core//:assemble-mac-zip
       - run: unzip bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac.zip -d bazel-genfiles/external/graknlabs_grakn_core/
       - run: nohup bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server start
-      - run: bazel test //migrator:assemble-mock-test
+      - run: bazel test --test_output=streamed //migrator:assemble-mock-test
       - run: bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac/grakn server stop
 
   assembly-linux-all:
     machine: true
     working_directory: ~/biograkn
     steps:
-      - install-bazel-linux-rbe
       - checkout
-      - run: bazel build @graknlabs_grakn_core//:assemble-linux-targz
-      - run: mkdir dist && tar -xvzf bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-linux.tar.gz -C dist/
-      - run: nohup dist/grakn-core-all-linux/grakn server start
-      #      - run: bazel run //migrator:migrator-bin TODO: uncomment
-      - run: dist/grakn-core-all-linux/grakn server stop
-      - run: mv dist/grakn-core-all-linux dist/biograkn-linux
-      - run: tar -czf dist/biograkn-linux.tar.gz dist/biograkn-linux
+      - run:
+          command: bash assembly/assemble-linux.sh
+          no_output_timeout: 48h
       - persist_to_workspace:
           root: dist
           paths:
@@ -81,7 +76,7 @@ jobs:
           at: dist
       - run: tar -xvzf dist/biograkn-linux.tar.gz
       - run: nohup dist/biograkn-linux/grakn server start
-#      - run: bazel test //migrator:assemble-all-test TODO: uncomment
+      - run: bazel test //migrator:assemble-all-test
       - run: dist/biograkn-linux/grakn server stop
 
   assembly-mac-all:
@@ -93,7 +88,7 @@ jobs:
       - run: bazel build @graknlabs_grakn_core//:assemble-mac-zip
       - run: mkdir dist && unzip bazel-genfiles/external/graknlabs_grakn_core/grakn-core-all-mac.zip -d dist/
       - run: nohup dist/grakn-core-all-mac/grakn server start
-      #      - run: bazel run //migrator:migrator-bin TODO: uncomment
+        #  - run: bazel run //migrator:migrator-bin TODO: uncomment
       - run: dist/grakn-core-all-mac/grakn server stop
       - run: mv dist/grakn-core-all-mac dist/biograkn-mac
       - run: zip -r dist/biograkn-mac.zip dist/biograkn-mac
@@ -111,7 +106,7 @@ jobs:
           at: dist
       - run: unzip dist/biograkn-mac.zip
       - run: nohup dist/biograkn-mac/grakn server start
-      #      - run: bazel test //migrator:assemble-all-test TODO: uncomment
+      - run: bazel test //migrator:assemble-all-test
       - run: dist/biograkn-mac/grakn server stop
 
   cache-distribution:
@@ -231,91 +226,99 @@ workflows:
           requires:
             - build
 
-  biograkn-nightly:
-    jobs:
-      - assembly-linux-all:
-          filters:
-            branches:
-              only: master
-      - assembly-mac-all:
-          filters:
-            branches:
-              only: master
+  # biograkn-nightly:
+  #   triggers:
+  #     - schedule:
+  #         cron: "0 19 * * *" # UTC
+  #         filters:
+  #           branches:
+  #             only:
+  #               - master
 
-      - test-assembly-linux-all:
-          filters:
-            branches:
-              only: master
-          requires:
-            - assembly-linux-all
-      - test-assembly-mac-all:
-          filters:
-            branches:
-              only: master
-          requires:
-            - assembly-mac-all
+  #   jobs:
+  #     - assembly-linux-all:
+  #         filters:
+  #           branches:
+  #             only: refactor-ci # TODO: change to master
+  #     - assembly-mac-all:
+  #         filters:
+  #           branches:
+  #             only: refactor-ci # TODO: change to master
 
-      - cache-distribution:
-          filters:
-            branches:
-              only: master
-          requires:
-            - test-assembly-linux-all
-            - test-assembly-mac-all
+  #     - test-assembly-linux-all:
+  #         filters:
+  #           branches:
+  #             only: refactor-ci # TODO: change to master
+  #         requires:
+  #           - assembly-linux-all
+  #     - test-assembly-mac-all:
+  #         filters:
+  #           branches:
+  #             only: refactor-ci # TODO: change to master
+  #         requires:
+  #           - assembly-mac-all
 
-      - deploy-gcp-snapshot:
-          filters:
-            branches:
-              only: master
-          requires:
-            - cache-distribution
-      - test-deployment-gcp:
-          filters:
-            branches:
-              only: master
-          requires:
-            - deploy-gcp-snapshot
+  #     - cache-distribution:
+  #         filters:
+  #           branches:
+  #             only: refactor-ci # TODO: change to master
+  #         requires:
+  #           - test-assembly-linux-all
+  #           - test-assembly-mac-all
 
-      - release-approval:
-          filters:
-            branches:
-              only: master
-          requires:
-            - test-deployment-gcp
+  #     - deploy-gcp-snapshot:
+  #         filters:
+  #           branches:
+  #             only: refactor-ci # TODO: change to master
+  #         requires:
+  #           - cache-distribution
+  #     - test-deployment-gcp:
+  #         filters:
+  #           branches:
+  #             only: refactor-ci # TODO: change to master
+  #         requires:
+  #           - deploy-gcp-snapshot
 
-  biograkn-release:
-    jobs:
-      - cache-distribution:
-          filters:
-            branches:
-              only: biograkn-release-branch
+  #     - release-approval:
+  #         filters:
+  #           branches:
+  #             only: refactor-ci # TODO: change to master
+  #         requires:
+  #           - test-deployment-gcp
 
-      - deploy-github:
-          filters:
-            branches:
-              only: biograkn-release-branch
-          requires:
-            - cache-distribution
+  # biograkn-release:
+  #   jobs:
+  #     - cache-distribution:
+  #         filters:
+  #           branches:
+  #             only: biograkn-release-branch
 
-      - deploy-approval:
-          type: approval
-          filters:
-            branches:
-              only: biograkn-release-branch
-          requires:
-            - deploy-github
+  #     - deploy-github:
+  #         filters:
+  #           branches:
+  #             only: biograkn-release-branch
+  #         requires:
+  #           - cache-distribution
 
-      - deploy-gcp:
-          filters:
-            branches:
-              only: biograkn-release-branch
-          requires:
-            - deploy-approval
+  #     - deploy-approval:
+  #         type: approval
+  #         filters:
+  #           branches:
+  #             only: biograkn-release-branch
+  #         requires:
+  #           - deploy-github
 
-      - release-cleanup:
-          filters:
-            branches:
-              only: biograkn-release-branch
-          requires:
-            - deploy-gcp
-            - deploy-github
+  #     - deploy-gcp:
+  #         filters:
+  #           branches:
+  #             only: biograkn-release-branch
+  #         requires:
+  #           - deploy-approval
+
+  #     - release-cleanup:
+  #         filters:
+  #           branches:
+  #             only: biograkn-release-branch
+  #         requires:
+  #           - deploy-gcp
+  #           - deploy-github

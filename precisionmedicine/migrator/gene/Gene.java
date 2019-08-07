@@ -36,7 +36,8 @@ public class Gene {
             BufferedReader reader = Files.newBufferedReader(Paths.get(path));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
-            List<GraqlInsert> insertQueries = new ArrayList<>();
+            GraknClient.Transaction tx = session.transaction().write();
+            int counter = 0;
 
             for (CSVRecord csvRecord : csvParser) {
 
@@ -61,23 +62,29 @@ public class Gene {
                         .has("locus-group", locusGroup)
                         .has("ensembl-id", ensemblId)
                         .has("ncbi-id", ncbiId));
-
-                insertQueries.add(graqlInsert);
+                tx.execute(graqlInsert);
+                System.out.print(".");
+                if (counter % 50 == 0) {
+                    tx.commit();
+                    System.out.println("committed!");
+                    tx = session.transaction().write();
+                }
+                counter++;
             }
-
-            Utils.executeQueriesConcurrently(session, insertQueries);
+            tx.commit();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
      static void migrateFromCtdbase(GraknClient.Session session, String path) {
+
         try {
             BufferedReader reader = Files.newBufferedReader(Paths.get(path));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
-            List<GraqlInsert> insertQueries = new ArrayList<>();
-
+            int counter = 0;
+            GraknClient.Transaction tx = session.transaction().write();
             for (CSVRecord csvRecord : csvParser) {
 
                 // skip header
@@ -94,6 +101,7 @@ public class Gene {
                 GraqlGet graqlGet = Graql.match(
                         var("g").isa("gene").has("ncbi-id", ncbiId)).get();
 
+
                 List<ConceptMap> getIds = readTransaction.execute(graqlGet);
 
                 readTransaction.close();
@@ -104,12 +112,17 @@ public class Gene {
                             .has("symbol", symbol)
                             .has("name", name)
                             .has("ncbi-id", ncbiId));
-
-                    insertQueries.add(graqlInsert);
+                    System.out.print(".");
+                    tx.execute(graqlInsert);
+                    if (counter % 50 == 0) {
+                        tx.commit();
+                        System.out.println("committed!");
+                        tx = session.transaction().write();
+                    }
+                    counter++;
                 }
             }
-
-            Utils.executeQueriesConcurrently(session, insertQueries);
+            tx.commit();
         } catch (IOException e) {
             e.printStackTrace();
         }

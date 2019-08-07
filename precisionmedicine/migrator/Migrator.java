@@ -1,8 +1,6 @@
 package grakn.biograkn.precisionmedicine.migrator;
 
-
 import grakn.biograkn.precisionmedicine.migrator.clinicaltrial.ClinicalTrial;
-import grakn.biograkn.precisionmedicine.migrator.clinicaltrialrelationships.ClinicalTrialRelationship;
 import grakn.biograkn.precisionmedicine.migrator.disease.Disease;
 import grakn.biograkn.precisionmedicine.migrator.drug.Drug;
 import grakn.biograkn.precisionmedicine.migrator.drugdisease.DrugDiseaseAssociation;
@@ -11,13 +9,6 @@ import grakn.biograkn.precisionmedicine.migrator.genedisease.GeneDiseaseAssociat
 import grakn.biograkn.precisionmedicine.migrator.variant.Variant;
 import grakn.biograkn.precisionmedicine.migrator.variantdisease.VariantDiseaseAssociation;
 import grakn.client.GraknClient;
-import graql.lang.Graql;
-import graql.lang.query.GraqlQuery;
-
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 import static grakn.biograkn.utils.Utils.loadSchema;
 
@@ -32,20 +23,41 @@ public class Migrator {
 
         loadSchema("precisionmedicine/schema/precision-medicine-schema.gql", session);
 
-        // entities
-        Gene.migrate(session, dataset);
-        Variant.migrate(session, dataset);
-        Disease.migrate(session, dataset);
-        Drug.migrate(session, dataset);
-        ClinicalTrial.migrate(session, dataset);
+        long start;
 
-        // relationships
-        GeneDiseaseAssociation.migrate(session, dataset);
-        VariantDiseaseAssociation.migrate(session, dataset);
-        DrugDiseaseAssociation.migrate(session, dataset);
-        ClinicalTrialRelationship.migrate(session);
+        // entities
+        start = System.currentTimeMillis();
+        Gene.migrate(session, dataset); // 1
+        System.out.println("Gene.migrate(...) took " + (System.currentTimeMillis() - start) + "ms");
+
+        start = System.currentTimeMillis();
+        Variant.migrate(session, dataset); // 2
+        Disease.migrate(session, dataset); // 2
+        Drug.migrate(session, dataset); // 2
+        System.out.println("{Variant,Disease,Drug}.migrate(...) took " + (System.currentTimeMillis() - start) + "ms");
 
         session.close();
-        graknClient.close();
+        session = graknClient.session("precision_medicine");
+
+        start = System.currentTimeMillis();
+        ClinicalTrial.migrate(session, dataset); // 3
+        System.out.println("ClinicalTrial.migrate(...) took " + (System.currentTimeMillis() - start) + "ms");
+
+        session.close();
+
+        // relationships
+        session = graknClient.session("precision_medicine");
+        start = System.currentTimeMillis();
+        GeneDiseaseAssociation.migrate(session, dataset); // 4
+        VariantDiseaseAssociation.migrate(session, dataset); // 4
+        DrugDiseaseAssociation.migrate(session, dataset); // 4
+        System.out.println("{GeneDiseaseAssociation,VariantDiseaseAssociation,DrugDiseaseAssociation}.migrate(...) took " + (System.currentTimeMillis() - start) + "ms");
+        session.close();
+
+//        session = graknClient.session("precision_medicine");
+//        start = System.currentTimeMillis();
+//        ClinicalTrialRelationship.migrate(session); // 5
+//        System.out.println("{ClinicalTrialRelationship}.migrate(...) took " + (System.currentTimeMillis() - start) + "ms");
+//        graknClient.close();
     }
 }
