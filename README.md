@@ -40,7 +40,7 @@ While inside the unzipped folder, via terminal or command prompt, run: `./grakn 
 ### Via Grakn Clients
 Grakn Clients are available for [Java](https://github.com/graknlabs/grakn/tree/master/client-java), [Node.js](https://github.com/graknlabs/grakn/tree/master/client-nodejs) and [Python](https://github.com/graknlabs/grakn/tree/master/client_python). Using these clients, you will be able to perform read and write operations over BioGrakn.
 
-See an example of how this is done in the [Grakn <> BLAST integration example](./examples/blast/analysis.py), using the [Python](https://github.com/graknlabs/grakn/tree/master/client_python) client.
+See an example of how this is done in the [Grakn <> BLAST integration example](./blast/queries.py), using the [Python](https://github.com/graknlabs/grakn/tree/master/client_python) client.
 
 ### Via Grakn Workbase
 Download the [latest release of Grakn Workbase](https://github.com/graknlabs/grakn/releases), install and run it.
