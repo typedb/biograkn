@@ -21,12 +21,9 @@ BioGrakn is a collection of knowledge graphs of biomedical data demonstrating th
 
 BioGrakn provides an intuitive way to query interconnected and heterogeneous biomedical data in one single place. The schema that models the underlying knowledge graph alongside the descriptive query language, Graql, makes writing complex queries an extremely straightforward and intuitive process. Furthermore, the automated reasoning capability of Grakn, allows BioGrakn to become an intelligent database of biomedical data that infers implicit knowledge based on the explicitly stored data. BioGrakn can understand biological facts, infer based on new findings and enforce research constraints, all at query (run) time.
 
-## Download
-[Download BioGrakn](https://storage.googleapis.com/biograkn/grakn-core-1.5.0-biograkn-0.2.zip)
-
 ## Quickstart
 
-1. [Download](#download) BioGrakn
+1. [Download](https://storage.googleapis.com/biograkn/grakn-core-1.5.0-biograkn-0.2.zip) BioGrakn
 2. Unzip the downloaded file.
 3. `cd` into the unzipped folder, via terminal or command prompt.
 4. run `./grakn server start`
@@ -38,11 +35,11 @@ Queries can be run over BioGrakn, via Graql Console, Grakn Clients and Grakn Wor
 While inside the unzipped folder, via terminal or command prompt, run: `./grakn console -k keyspace_name`. The console is now ready to answer your queries.
 
 ### Via Grakn Clients
-Grakn Clients are available for [Java](https://github.com/graknlabs/grakn/tree/master/client-java), [Node.js](https://github.com/graknlabs/grakn/tree/master/client-nodejs) and [Python](https://github.com/graknlabs/grakn/tree/master/client_python). Using these clients, you will be able to perform read and write operations over BioGrakn.
+Grakn Clients are available for [Java](https://github.com/graknlabs/client-java), [Node.js](https://github.com/graknlabs/client-nodejs) and [Python](https://github.com/graknlabs/client-python). Using these clients, you will be able to perform read and write operations over BioGrakn.
 
-See an example of how this is done in the [Grakn <> BLAST integration example](./blast/queries.py), using the [Python](https://github.com/graknlabs/grakn/tree/master/client_python) client.
+See an example of how this is done in the [Grakn <> BLAST integration example](./blast/queries.py), using the [Python](https://github.com/graknlabs/client-python) client.
 
 ### Via Grakn Workbase
-Download the [latest release of Grakn Workbase](https://github.com/graknlabs/grakn/releases), install and run it.
+Download the [latest release of Grakn Workbase](https://github.com/graknlabs/workbase/releases), install and run it.
 
 Read the [documentation on Workbase](https://dev.grakn.ai/docs/workbase/overview) or watch a short series of videos about [using workbase with the Grakn <> BLAST integration example](https://www.youtube.com/watch?v=pHIer5roF4c&list=PLtEF8_xCPklaTR4RaB3ng9V3Ov7n980cQ).
