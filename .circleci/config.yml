@@ -170,6 +170,15 @@ jobs:
           export RELEASE_APPROVAL_TOKEN=$REPO_GITHUB_TOKEN
           bazel run @graknlabs_build_tools//ci:release-approval
 
+  release-validate:
+    machine: true
+    steps:
+      - install-bazel-linux-rbe
+      - checkout
+      - run: |
+          bazel run @graknlabs_build_tools//ci:release-validate-deps -- \
+            graknlabs_grakn_core
+
   deploy-github:
     machine: true
     working_directory: ~/biograkn
@@ -201,9 +210,7 @@ jobs:
     steps:
       - checkout
       - run: |
-          git push --delete \
-            "https://$REPO_GITHUB_USERNAME:$REPO_GITHUB_TOKEN@github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git" \
-            biograkn-release-branch
+          git push --delete https://$REPO_GITHUB_TOKEN@github.com/graknlabs/biograkn $CIRCLE_BRANCH
 
 workflows:
   biograkn-commit:
@@ -288,11 +295,18 @@ workflows:
 
   # biograkn-release:
   #   jobs:
+  #      - release-validate:
+  #        filters:
+  #          branches:
+  #            only: biograkn-release-branch
+
   #     - cache-distribution:
   #         filters:
   #           branches:
   #             only: biograkn-release-branch
-
+  #           requires:
+  #             - release-validate
+  
   #     - deploy-github:
   #         filters:
   #           branches:
