@@ -34,8 +34,8 @@ public class Variant {
             BufferedReader reader = Files.newBufferedReader(Paths.get(path));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
-            List<GraqlInsert> insertQueries = new ArrayList<>();
-
+            int counter = 0;
+            GraknClient.Transaction tx = session.transaction().write();
             for (CSVRecord csvRecord : csvParser) {
 
                 // skip header
@@ -55,10 +55,16 @@ public class Variant {
                         .has("gene-symbols", geneSymbols)
                         .has("location", location));
 
-                insertQueries.add(graqlInsert);
+                tx.execute(graqlInsert);
+                System.out.print(".");
+                if (counter % 50 == 0) {
+                    tx.commit();
+                    System.out.println("committed!");
+                    tx = session.transaction().write();
+                }
+                counter++;
             }
-
-            Utils.executeQueriesConcurrently(session, insertQueries);
+            tx.commit();
         } catch (IOException e) {
             e.printStackTrace();
         }

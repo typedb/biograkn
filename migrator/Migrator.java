@@ -9,6 +9,6 @@ public class Migrator {
 
     public static void main(String[] args) {
         migratePrecisionMedicine("precisionmedicine/dataset/all");
-        migrateTextMining();
+         migrateTextMining();
     }
 }

@@ -20,3 +20,6 @@
 
 # Bazel
 bazel-*
+
+# Biograkn's large datasets that are too large for Git and Git LFS
+diseasenetwork/dataset/intact/PPIs.csv

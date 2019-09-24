@@ -31,8 +31,8 @@ public class VariantDiseaseAssociation {
             BufferedReader reader = Files.newBufferedReader(Paths.get(dataset + "/disgenet/curated_variant_disease_associations.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
-            List<GraqlInsert> insertQueries = new ArrayList<>();
-
+            int counter = 0;
+            GraknClient.Transaction tx = session.transaction().write();
             for (CSVRecord csvRecord: csvParser) {
 
                 // skip header
@@ -55,11 +55,16 @@ public class VariantDiseaseAssociation {
                 //             "\nA prerequisite dataset may have not been loaded. This dataset requires: " + prereqs.toString());
                 // }
 
-                insertQueries.add(graqlInsert);
-
-                System.out.println(" - [DONE]");
+                tx.execute(graqlInsert);
+                System.out.print(".");
+                if (counter % 50 == 0) {
+                    tx.commit();
+                    System.out.println("committed!");
+                    tx = session.transaction().write();
+                }
+                counter++;
             }
-            Utils.executeQueriesConcurrently(session, insertQueries);
+            tx.commit();
         } catch (IOException e) {
             e.printStackTrace();
         }

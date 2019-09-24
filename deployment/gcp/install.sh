@@ -4,8 +4,7 @@ set -ex
 
 BIOGRAKN_DISTRIBUTION="biograkn-linux"
 
-tar -xf /tmp/deployment/"$BIOGRAKN_DISTRIBUTION".tar.gz -C /tmp/deployment && \
-    cp -r /tmp/deployment/dist/"$BIOGRAKN_DISTRIBUTION" /opt/biograkn
+tar -xf /tmp/deployment/"$BIOGRAKN_DISTRIBUTION".tar.gz -C /opt/biograkn --strip-components=1
 
 chmod -R a+rwX /opt/biograkn/
 

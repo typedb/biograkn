@@ -7,6 +7,7 @@ import graql.lang.query.GraqlGet;
 import graql.lang.query.GraqlInsert;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 import static graql.lang.Graql.var;
 
@@ -20,17 +21,17 @@ public class ClinicalTrialRelationship {
             GraknClient.Transaction readTransaction = session.transaction().read();
 
             GraqlGet graqlGet = Graql.match(var("ct").isa("clinical-trial").has("intervention-name", var("i")).has("condition", var("c")).has("brief-title", var("b")).has("official-title", var("o"))).get();
-            List<ConceptMap> clinicalTrialConcepts = readTransaction.execute(graqlGet);
+            Stream<ConceptMap> clinicalTrialConcepts = readTransaction.stream(graqlGet);
 
             System.out.println("loaded clinical-trials");
 
             graqlGet = Graql.match(var("d").isa("drug").has("name", var("n"))).get("n");
-            List<ConceptMap> drugNameConcepts = readTransaction.execute(graqlGet);
+            Stream<ConceptMap> drugNameConcepts = readTransaction.stream(graqlGet);
 
             System.out.println("loaded drugs");
 
             graqlGet = Graql.match(var("d").isa("disease").has("name", var("n"))).get("n");
-            List<ConceptMap> diseaseNameConcepts = readTransaction.execute(graqlGet);
+            Stream<ConceptMap> diseaseNameConcepts = readTransaction.stream(graqlGet);
 
             System.out.println("loaded diseases");
 
@@ -40,15 +41,14 @@ public class ClinicalTrialRelationship {
 //
 //            System.out.println("loaded genes");
 
-
-            for (ConceptMap clinicalTrial : clinicalTrialConcepts) {
+            clinicalTrialConcepts.forEach(clinicalTrial -> {
                 String interventionName = clinicalTrial.get("i").asAttribute().value().toString();
                 String condition = clinicalTrial.get("c").asAttribute().value().toString();
                 String briefTitle = clinicalTrial.get("b").asAttribute().value().toString();
                 String officialTitle = clinicalTrial.get("o").asAttribute().value().toString();
 
                 if (interventionName.length() > 0) {
-                    for (ConceptMap map : drugNameConcepts) {
+                    drugNameConcepts.forEach(map -> {
                         String drugName = map.get("n").asAttribute().value().toString();
 
                         if (drugName.length() > 0 && interventionName.contains(drugName)) {
@@ -60,14 +60,14 @@ public class ClinicalTrialRelationship {
 
                             GraknClient.Transaction writeTransaction = session.transaction().write();
                             List<ConceptMap> insertedIds = writeTransaction.execute(GraqlInsert);
-
+                            System.out.println("committed!");
                             writeTransaction.commit();
                         }
-                    }
+                    });
                 }
 
                 if (condition.length() > 0) {
-                    for (ConceptMap map : diseaseNameConcepts) {
+                    diseaseNameConcepts.forEach(map -> {
                         String diseaseName = map.get("n").asAttribute().value().toString();
 
                         if (diseaseName.length() > 0 && condition.contains(diseaseName)) {
@@ -79,10 +79,10 @@ public class ClinicalTrialRelationship {
 
                             GraknClient.Transaction writeTransaction = session.transaction().write();
                             List<ConceptMap> insertedIds = writeTransaction.execute(GraqlInsert);
-
+                            System.out.println("committed!");
                             writeTransaction.commit();
                         }
-                    }
+                    });
                 }
 
 //                if (briefTitle.length() > 0 || officialTitle.length() > 0) {
@@ -114,7 +114,7 @@ public class ClinicalTrialRelationship {
 //                        }
 //                    }
 //                }
-            }
+            });
             System.out.println("inserted trial relationships");
             readTransaction.close();
         }

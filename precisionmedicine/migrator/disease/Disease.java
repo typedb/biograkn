@@ -36,9 +36,8 @@ public class Disease {
         try {
             BufferedReader reader = Files.newBufferedReader(Paths.get(path));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
-
-            List<GraqlInsert> insertQueries = new ArrayList<>();
-
+            int counter = 0;
+            GraknClient.Transaction tx = session.transaction().write();
             for (CSVRecord csvRecord : csvParser) {
 
                 // skip header
@@ -59,10 +58,16 @@ public class Disease {
                         .has("source-id", sourceId)
                         .has("category", category));
 
-                insertQueries.add(graqlInsert);
+                tx.execute(graqlInsert);
+                System.out.print(".");
+                if (counter % 50 == 0) {
+                    tx.commit();
+                    System.out.println("committed!");
+                    tx = session.transaction().write();
+                }
+                counter++;
             }
-
-            Utils.executeQueriesConcurrently(session, insertQueries);
+            tx.commit();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -73,8 +78,8 @@ public class Disease {
             BufferedReader reader = Files.newBufferedReader(Paths.get(path));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
-            List<GraqlInsert> insertQueries = new ArrayList<>();
-
+            int counter = 0;
+            GraknClient.Transaction tx = session.transaction().write();
             for (CSVRecord csvRecord : csvParser) {
 
                 // skip header
@@ -98,12 +103,18 @@ public class Disease {
                     GraqlInsert graqlInsert = Graql.insert(var("d").isa("disease")
                             .has("name", name)
                             .has("mesh-id", meshId));
-
-                    insertQueries.add(graqlInsert);
+                    tx.execute(graqlInsert);
+                    System.out.print(".");
+                    if (counter % 50 == 0) {
+                        tx.commit();
+                        System.out.println("committed!");
+                        tx = session.transaction().write();
+                    }
+                    counter++;
                 }
             }
-
-            Utils.executeQueriesConcurrently(session, insertQueries);
+            tx.commit();
+            System.out.println("committed!");
         } catch (IOException e) {
             e.printStackTrace();
         }

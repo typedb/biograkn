@@ -38,8 +38,8 @@ public class Drug {
             BufferedReader reader = Files.newBufferedReader(Paths.get(path));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
-            List<GraqlInsert> insertQueries = new ArrayList<>();
-
+            int counter = 0;
+            GraknClient.Transaction tx = session.transaction().write();
             for (CSVRecord csvRecord : csvParser) {
 
                 // skip header
@@ -62,11 +62,16 @@ public class Drug {
                         .has("strength", strength)
                         .has("name", name)
                         .has("active-ingredient", activeIngredient));
-
-                insertQueries.add(graqlInsert);
+                tx.execute(graqlInsert);
+                System.out.print(".");
+                if (counter % 50 == 0) {
+                    tx.commit();
+                    System.out.println("committed!");
+                    tx = session.transaction().write();
+                }
+                counter++;
             }
-
-            Utils.executeQueriesConcurrently(session, insertQueries);
+            tx.commit();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -77,8 +82,8 @@ public class Drug {
             BufferedReader reader = Files.newBufferedReader(Paths.get(path));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
-            List<GraqlInsert> insertQueries = new ArrayList<>();
-
+            int counter = 0;
+            GraknClient.Transaction tx = session.transaction().write();
             for (CSVRecord csvRecord : csvParser) {
 
                 // skip header
@@ -102,12 +107,17 @@ public class Drug {
                     GraqlInsert graqlInsert = Graql.insert(var("dr").isa("drug")
                             .has("pharmgkb-id", pharmgkbId)
                             .has("name", name));
-
-                    insertQueries.add(graqlInsert);
+                    tx.execute(graqlInsert);
+                    System.out.print(".");
+                    if (counter % 50 == 0) {
+                        tx.commit();
+                        System.out.println("committed!");
+                        tx = session.transaction().write();
+                    }
+                    counter++;
                 }
             }
-
-            Utils.executeQueriesConcurrently(session, insertQueries);
+            tx.commit();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -118,8 +128,8 @@ public class Drug {
             BufferedReader reader = Files.newBufferedReader(Paths.get(path));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
-            List<GraqlInsert> insertQueries = new ArrayList<>();
-
+            int counter = 0;
+            GraknClient.Transaction tx = session.transaction().write();
             for (CSVRecord csvRecord : csvParser) {
 
                 // skip header
@@ -144,11 +154,18 @@ public class Drug {
                             .has("name", name)
                             .has("mesh-id", meshId));
 
-                    insertQueries.add(graqlInsert);
+                    tx.execute(graqlInsert);
+                    System.out.print(".");
+                    if (counter % 50 == 0) {
+                        tx.commit();
+                        System.out.println("committed!");
+                        tx = session.transaction().write();
+                    }
+                    counter++;
                 }
             }
+            tx.commit();
 
-            Utils.executeQueriesConcurrently(session, insertQueries);
         } catch (IOException e) {
             e.printStackTrace();
         }

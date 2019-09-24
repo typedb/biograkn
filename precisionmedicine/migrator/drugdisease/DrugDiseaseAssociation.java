@@ -30,8 +30,8 @@ public class DrugDiseaseAssociation {
             BufferedReader reader = Files.newBufferedReader(Paths.get(dataset + "/ctdbase/CTD_chemicals_diseases.csv"));
             CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT);
 
-            List<GraqlInsert> insertQueries = new ArrayList<>();
-
+            int counter = 0;
+            GraknClient.Transaction tx = session.transaction().write();
             for (CSVRecord csvRecord : csvParser) {
 
                 // skip header
@@ -47,15 +47,16 @@ public class DrugDiseaseAssociation {
                         var("di").isa("disease").has("mesh-id", diseaseMeshId))
                         .insert(var("dda").isa("drug-disease-association").rel("associated-drug", "dr").rel("associated-disease", "di"));
 
-                insertQueries.add(graqlInsert);
-
-//                 if (insertedIds.isEmpty()) {
-//                     List<Class> prereqs = Arrays.asList(Drug.class, Disease.class);
-//                     throw new IllegalStateException("Nothing was inserted for: " + GraqlInsert.toString() +
-//                             "\nA prerequisite dataset may have not been loaded. This dataset requires: " + prereqs.toString());
-//                 }
+                tx.execute(graqlInsert);
+                System.out.print(".");
+                if (counter % 300 == 0) {
+                    tx.commit();
+                    System.out.println("committed!");
+                    tx = session.transaction().write();
+                }
+                counter++;
             }
-            Utils.executeQueriesConcurrently(session, insertQueries);
+            tx.commit();
             System.out.println(" - [DONE]");
         } catch (IOException e) {
             e.printStackTrace();

@@ -30,11 +30,19 @@ public class Utils {
             queryLists.forEach((queryList) -> {
                 CompletableFuture<Void> asyncInsert = CompletableFuture.supplyAsync(() -> {
 
+                    int counter = 0;
+                    GraknClient.Transaction writeTransaction = session.transaction().write();
+
                     for (GraqlInsert insertQuery : queryList) {
-                        GraknClient.Transaction writeTransaction = session.transaction().write();
+                        if (counter % 300 == 0) {
+                            writeTransaction.commit();
+                            writeTransaction = session.transaction().write();
+                            System.out.print('.');
+                        }
                         List<ConceptMap> insertedIds = writeTransaction.execute(insertQuery);
-                        writeTransaction.commit();
+                        counter++;
                     }
+                    writeTransaction.commit();
                     return null;
                 }, executorService);
 
