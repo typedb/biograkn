@@ -206,9 +206,7 @@ jobs:
     steps:
       - checkout
       - run: |
-          git push --delete \
-            "https://$REPO_GITHUB_USERNAME:$REPO_GITHUB_TOKEN@github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME.git" \
-            biograkn-release-branch
+          git push --delete https://$REPO_GITHUB_TOKEN@github.com/graknlabs/biograkn $CIRCLE_BRANCH
 
 workflows:
   biograkn-commit:
