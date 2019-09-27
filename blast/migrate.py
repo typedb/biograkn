@@ -15,7 +15,7 @@ def init(data_path):
             - protein <> database relationship
     """
     with GraknClient(uri="localhost:48555") as client:
-        with client.session(keyspace="blast") as session:
+        with client.session(keyspace="proteins") as session:
             # insert the database entity
             q_get_database = 'match $db isa database, has name "uniprot"; get $db;'
             q_insert_database = 'insert $db isa database, has name "uniprot";'

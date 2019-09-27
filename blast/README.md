@@ -1,6 +1,6 @@
 ## Importing BLAST results into a Grakn Knowledge Graph - an Example
 
-This examples illustrates how a Grakn Knowledge Graph can be used to simplify a bioinformatician's workflow with BLAST.
+This example illustrates how a Grakn Knowledge Graph can be used to simplify a bioinformatician's workflow with BLAST.
 
 ## Quick Start
 
@@ -12,10 +12,10 @@ This examples illustrates how a Grakn Knowledge Graph can be used to simplify a 
 
 - Type in `git clone git@github.com:graknlabs/biograkn.git`, press enter and wait for the cloning to complete.
 - Type in `cd biograkn/examples/blast` and press enter.
-- [Download Grakn](http://dev.grakn.ai/docs/running-grakn/install-and-run).
-- Unzip the downloaded file.
+- [Download **the LATEST version** of Grakn](http://dev.grakn.ai/docs/running-grakn/install-and-run).
+- Unzip the downloaded file. (if you use a package installer such as brew, you'll have access to the `grakn` command from anywhere in terminal).
 - Type in `path-to-the-unzipped-folder/grakn server start`, press enter and wait for the Grakn Server to start.
-- Type in `path-to-the-unzipped-folder/grakn console --keyspace blast --file schema.gql`, press enter and wait for the schema to be loaded into the `blast` keyspace.
+- Type in `path-to-the-unzipped-folder/grakn console --keyspace proteins --file path-to-the-blast-folder/schema.gql`, press enter and wait for the schema to be loaded into the `proteins` keyspace.
 - Download and Install Python3:
   - [On Windows](https://www.ics.uci.edu/~pattis/common/handouts/pythoneclipsejava/python.html)
   - [On Mac OS X](http://osxdaily.com/2018/06/13/how-install-update-python-3x-mac/)
@@ -41,12 +41,12 @@ The query to extract target sequences is placed as the value of `q_match_target_
 
 ### Importing your own protein sequences
 
-If you have already gone through the **Quick Start** section, first you need to clean the `blast` keyspace:
+If you have already gone through the **Quick Start** section, first you need to clean the `proteins` keyspace:
 
-- 1. Enter the keyspace via Grakn Console: `path-to-grakn-dist-directory(the unzipped folder)/grakn console --keyspace blast`
+- 1. Enter the keyspace via Grakn Console: `path-to-grakn-dist-directory(the unzipped folder)/grakn console --keyspace proteins`
 - 2. Remove both the schema definitions and data instances: `clean`
 - 3. `confirm`
-- 4. Reload the schema: `path-to-grakn-dist-directory(the unzipped folder)/grakn console --keyspace blast --file path-to-cloned-biograkn-repository/examples/blast/schema.gql`
+- 4. Reload the schema: `path-to-grakn-dist-directory(the unzipped folder)/grakn console --keyspace proteins --file path-to-cloned-biograkn-repository/examples/blast/schema.gql`
 
 Next, you need to modify the `migrate.py` file to specify the title the file that contains the proteins and their sequences. The current code reads from a `.fasta` file exported from UniProt.
 For migrating data in a different format, check out the [migration examples](http://github.com/graknlabs/examples)
