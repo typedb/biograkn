@@ -16,7 +16,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
 
-workspace(name = "grakn_biograkn")
+workspace(name = "graknlabs_biograkn")
 
 ###########################
 # Grakn Labs dependencies #
@@ -150,8 +150,8 @@ test_example_pip_install()
 ##################################
 
 # TODO: rename the macro we load here to deploy_github_dependencies
-load("@graknlabs_bazel_distribution//github:dependencies.bzl", "github_dependencies_for_deployment")
-github_dependencies_for_deployment()
+load("@graknlabs_bazel_distribution//github:dependencies.bzl", "tcnksm_ghr")
+tcnksm_ghr()
 
 load("@graknlabs_bazel_distribution//packer:dependencies.bzl", "deploy_packer_dependencies")
 deploy_packer_dependencies()
