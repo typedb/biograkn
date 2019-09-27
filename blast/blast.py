@@ -132,7 +132,7 @@ def insert_new_proteins_n_alignments(session, target_sequence, record):
 
 def init(blast_output_path):
     with GraknClient(uri="localhost:48555") as client:
-        with client.session(keyspace="blast") as session:
+        with client.session(keyspace="proteins") as session:
             print("Connected to the proteins knowledge graph.")
             print("- - - - - - - - - - - - - - - - - - - - -")
             target_sequences = query_target_sequences(session)

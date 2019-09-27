@@ -152,7 +152,7 @@ if __name__ == "__main__":
 
     # open/close client, session and transaction to talk to the blast keyspace
     with GraknClient(uri="localhost:48555") as client:
-        with client.session(keyspace="blast") as session:
+        with client.session(keyspace="proteins") as session:
             with session.transaction().read() as transaction:
                 # execute the query for the selected question
                 if qs_number == 0:
