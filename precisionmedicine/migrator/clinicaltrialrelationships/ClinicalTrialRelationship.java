@@ -1,7 +1,7 @@
 package grakn.biograkn.precisionmedicine.migrator.clinicaltrialrelationships;
 
 import grakn.client.GraknClient;
-import grakn.core.concept.answer.ConceptMap;
+import grakn.client.answer.ConceptMap;
 import graql.lang.Graql;
 import graql.lang.query.GraqlGet;
 import graql.lang.query.GraqlInsert;
