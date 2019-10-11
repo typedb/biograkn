@@ -9,7 +9,6 @@ java_library(
         "@graknlabs_grakn_core//concept:concept",
         "@graknlabs_grakn_core//common:common",
         "@graknlabs_graql//java:graql",
-        "@graknlabs_grakn_core//api:api",
 
         "//dependencies/maven/artifacts/org/apache/poi:poi-ooxml",
         "//dependencies/maven/artifacts/org/apache/commons:commons-csv",
