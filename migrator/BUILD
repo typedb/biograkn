@@ -7,7 +7,6 @@ java_library(
     srcs = glob(["**/*.java"], exclude = ["**/test/**", "*Test.java"]),
     deps = [
         "@graknlabs_client_java//:client-java",
-        "@graknlabs_grakn_core//concept:concept",
         "@graknlabs_grakn_core//common:common",
         "@graknlabs_graql//java:graql",
 
@@ -57,7 +56,6 @@ java_test(
     deps = [
         "//precisionmedicine/migrator",
         "@graknlabs_client_java//:client-java",
-        "@graknlabs_grakn_core//concept:concept",
         "@graknlabs_grakn_core//common:common",
         "@graknlabs_graql//java:graql",
     ],
@@ -70,7 +68,6 @@ java_test(
     deps = [
         "//precisionmedicine/migrator",
         "@graknlabs_client_java//:client-java",
-        "@graknlabs_grakn_core//concept:concept",
         "@graknlabs_grakn_core//common:common",
         "@graknlabs_graql//java:graql",
     ],
