@@ -30,6 +30,7 @@ jobs:
       - checkout
       #      - run: bazel run @graknlabs_build_tools//checkstyle:test-coverage
       - run: bazel build //...
+      - run: bazel run @graknlabs_build_tools//unused_deps -- list
 
   test-assembly-linux-mock:
     machine: true
