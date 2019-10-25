@@ -61,6 +61,9 @@ load("@graknlabs_build_tools_ci_pip//:requirements.bzl",
 graknlabs_build_tools_ci_pip_install = "pip_install")
 graknlabs_build_tools_ci_pip_install()
 
+load("@graknlabs_build_tools//unused_deps:dependencies.bzl", "unused_deps_dependencies")
+unused_deps_dependencies()
+
 #####################################
 # Load Java dependencies from Maven #
 #####################################
