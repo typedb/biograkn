@@ -23,11 +23,11 @@ BioGrakn provides an intuitive way to query interconnected and heterogeneous bio
 
 ## Quickstart
 
-1. [Download BioGrakn](https://storage.googleapis.com/biograkn/grakn-core-1.5.0-biograkn-0.2.zip)
+1. [Download BioGrakn](https://storage.googleapis.com/biograkn/grakn-core-1.5.7-biograkn-0.2.zip)
 2. Unzip the downloaded file.
 3. `cd` into the unzipped folder, via terminal or command prompt.
 4. run `./grakn server start`
-5. [Download Grakn Workbase 1.2.0](https://github.com/graknlabs/workbase/releases/tag/1.2.0) (note that, at the moment, newer versions of Grakn Workbase are not yet compatible with BioGrakn)
+5. [Download Grakn Workbase 1.2.2](https://github.com/graknlabs/workbase/releases/tag/1.2.2) (note that, at the moment, newer versions of Grakn Workbase are not yet compatible with BioGrakn)
 
 ## Interacting With BioGrakn
 Queries can be run over BioGrakn, via Graql Console, Grakn Clients and Grakn Workbase.
