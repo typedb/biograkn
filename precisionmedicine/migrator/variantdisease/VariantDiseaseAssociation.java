@@ -3,7 +3,7 @@ package grakn.biograkn.precisionmedicine.migrator.variantdisease;
 import grakn.biograkn.utils.Utils;
 import grakn.client.GraknClient;import graql.lang.Graql;
 import graql.lang.query.GraqlInsert;
-import grakn.core.concept.answer.ConceptMap;
+import grakn.client.answer.ConceptMap;
 
 import static graql.lang.Graql.var;
 

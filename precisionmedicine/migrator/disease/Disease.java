@@ -5,7 +5,7 @@ import grakn.client.GraknClient;
 import graql.lang.Graql;
 import graql.lang.query.GraqlInsert;
 import graql.lang.query.GraqlGet;
-import grakn.core.concept.answer.ConceptMap;
+import grakn.client.answer.ConceptMap;
 
 import static graql.lang.Graql.var;
 

@@ -1,7 +1,7 @@
 package grakn.biograkn.migrator;
 
 import grakn.client.GraknClient;
-import grakn.core.concept.answer.Numeric;
+import grakn.client.answer.Numeric;
 import graql.lang.Graql;
 import graql.lang.query.GraqlCompute;
 import org.junit.Before;

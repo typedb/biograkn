@@ -29,7 +29,10 @@ jobs:
       - install-bazel-linux-rbe
       - checkout
       #      - run: bazel run @graknlabs_build_tools//checkstyle:test-coverage
-      - run: bazel --host_jvm_args=-Xmx16g build //...
+      - run: bazel build //...
+      - run:
+          command: bazel run @graknlabs_build_tools//unused_deps -- list
+          no_output_timeout: 30m
 
   test-assembly-linux-mock:
     machine: true

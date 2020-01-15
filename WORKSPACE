@@ -16,7 +16,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
 
-workspace(name = "grakn_biograkn")
+workspace(name = "graknlabs_biograkn")
 
 ###########################
 # Grakn Labs dependencies #
@@ -61,6 +61,9 @@ load("@graknlabs_build_tools_ci_pip//:requirements.bzl",
 graknlabs_build_tools_ci_pip_install = "pip_install")
 graknlabs_build_tools_ci_pip_install()
 
+load("@graknlabs_build_tools//unused_deps:dependencies.bzl", "unused_deps_dependencies")
+unused_deps_dependencies()
+
 #####################################
 # Load Java dependencies from Maven #
 #####################################
@@ -86,9 +89,13 @@ java_grpc_compile()
 # Load Grakn Core dependencies #
 ################################
 
-load("@graknlabs_grakn_core//dependencies/graknlabs:dependencies.bzl", "graknlabs_graql", "graknlabs_protocol", "graknlabs_benchmark")
+load("@graknlabs_grakn_core//dependencies/graknlabs:dependencies.bzl",
+"graknlabs_graql", "graknlabs_protocol", "graknlabs_common",
+"graknlabs_console", "graknlabs_benchmark")
 graknlabs_graql()
 graknlabs_protocol()
+graknlabs_common()
+graknlabs_console()
 graknlabs_benchmark()
 
 load("@graknlabs_grakn_core//dependencies/maven:dependencies.bzl",
@@ -150,8 +157,11 @@ test_example_pip_install()
 ##################################
 
 # TODO: rename the macro we load here to deploy_github_dependencies
-load("@graknlabs_bazel_distribution//github:dependencies.bzl", "github_dependencies_for_deployment")
-github_dependencies_for_deployment()
+load("@graknlabs_bazel_distribution//github:dependencies.bzl", "tcnksm_ghr")
+tcnksm_ghr()
+
+load("@graknlabs_bazel_distribution//common:dependencies.bzl", "bazelbuild_rules_pkg")
+bazelbuild_rules_pkg()
 
 load("@graknlabs_bazel_distribution//packer:dependencies.bzl", "deploy_packer_dependencies")
 deploy_packer_dependencies()
